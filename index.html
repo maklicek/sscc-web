@@ -40,6 +40,41 @@
       background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
     .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
       background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700}
+    /* === Titulky & fonty (pevnější, technický look) === */
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+h1, h2, .brand-title, .nav a, .btn { font-family: Manrope, Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+
+h1 { font-weight: 800; letter-spacing: .1px; }
+h2 { font-weight: 700; letter-spacing: .2px; }
+.brand-title { font-weight: 800; font-size: clamp(1.1rem, 1.2rem + .6vw, 1.6rem); }
+
+/* Slogan trošku menší a uhlazenější */
+.slogan { font-weight: 700; font-size: .88rem; opacity: .95; }
+
+/* Hlavička – více „pro“ feeling */
+header {
+  position: sticky; top: 0; z-index: 60;
+  background: linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.55));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
+.nav { padding: .9rem 0; gap: .6rem; }
+.nav a { font-weight: 700; padding: .55rem .8rem; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); }
+.nav a:hover { transform: translateY(-1px); opacity: .92; }
+
+/* Tlačítka/CTA o chlup výraznější */
+.btn { font-weight: 800; letter-spacing: .2px; }
+
+/* Čitelnost textu */
+.lead { color: #b6c2d1; }
+
+/* Mobilní ladění */
+@media (max-width: 860px) {
+  .brand-title { font-size: 1.1rem; }
+  .nav { padding: .7rem 0; }
+}
+
     /* --- Vylepšený vzhled --- */
 body { line-height: 1.6; }
 h1, h2 { letter-spacing: .2px; }
