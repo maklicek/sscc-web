@@ -1,69 +1,37 @@
-<nav class="nav-lang" style="position:fixed;top:12px;right:12px;display:flex;gap:8px;">
-  <a href="/index.html" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a>
-  <a href="/index-en.html" lang="en" hreflang="en" aria-label="English">EN</a>
-</nav>
-<style>
-  .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none}
-  .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334; }
-</style>
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>SolarSpace Carbon Cycle (SSCC)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <title>SolarSpace Carbon Cycle – SSCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- OG / Twitter (můžeš upravit texty) -->
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/logos/sscc_logo_symbol.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="SolarSpace Carbon Cycle (SSCC)">
   <meta property="og:description" content="Decentralized synthesis of green NH₃ for CO₂ capture and utilization.">
   <meta property="og:image" content="/obrazky/og-cover.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- i18n links -->
+  <link rel="alternate" hreflang="cs" href="https://TVUJ-DOMEN.cz/">
+  <link rel="alternate" hreflang="en" href="https://TVUJ-DOMEN.cz/index-en.html">
+  <link rel="canonical" href="https://TVUJ-DOMEN.cz/index-en.html">
+
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;background:#0b1320;color:#e6edf3}
-    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px}
-    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:10}
-    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none;color:#e6edf3}
-    .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334}
-    .hero h1{font-size:40px;margin:24px 0 8px}
-    .grid{display:grid;grid-template-columns:1fr;gap:24px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{border:1px solid #223047;border-radius:14px;padding:24px;background:#0f1a2a}
-    .btn{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:12px;background:linear-gradient(90deg,#244b61,#e6d27b);color:#0b1320;text-decoration:none;font-weight:600}
-    footer{opacity:.7;margin-top:60px}
-  </style>
-</head>
-<body>
-
-  <!-- Language switch -->
-  <nav class="nav-lang">
-    <a href="/index.html" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a>
-    <a href="/index-en.html" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a>
-  </nav>
-
-  <div class="wrap">
-    <header class="hero">
-      <h1>Welcome to SSCC</h1>
-      <p>Decentralized synthesis of green NH₃ for CO₂ capture and utilization. Pilot 2 kW → 1.5 kg NH₃/day, target efficiency &gt;80%, CO₂ capture &gt;90%.</p>
-    </header>
-
-    <section class="grid">
-      <div class="card">
-        <h2>SSCC Project</h2>
-        <p>Abstract, goals, methodology, charts and process diagram. PDF datasheet to download.</p>
-        <a class="btn" href="/project-sscc.html">Open project →</a>
-      </div>
-
-      <div class="card">
-        <h2>Education</h2>
-        <p>How the flow works: Sun → electricity → H₂ → NH₃. Mini calculator: “How much NH₃ can PV produce?”.</p>
-        <a class="btn" href="/education.html">Open education →</a>
-      </div>
-    </section>
-
-    <footer>© SSCC</footer>
-  </div>
-</body>
-</html>
+    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--radius:16px}
+    *{box-sizing:border-box}
+    body{
+      margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif
+    }
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(15,23,42,.6);
+      backdrop-filter:
 
