@@ -1,164 +1,90 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>SolarSpace Carbon Cycle – SSCC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Favicons (ponech cesty tak, jak je máš v repu) -->
-  <link rel="icon" type="image/svg+xml" href="assets/logos/sscc_logo_symbol.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicons/favicon-48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
-
-  <!-- Open Graph / Twitter -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicons (podle tvé struktury) -->
+  <link rel="icon" href="favicons/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="favicons/favicon-180.png" sizes="180x180">
+  <!-- OG (necháme relativní cesty; klidně později upravíme) -->
   <meta property="og:title" content="SolarSpace Carbon Cycle (SSCC)">
   <meta property="og:description" content="Decentralizovaná syntéza zeleného NH₃ pro záchyt a využití CO₂.">
-  <meta property="og:image" content="/obrazky/og-cover.png"><!-- uprav cestu, pokud máš jinde -->
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- i18n (až budeš mít doménu, nahraď TVUJ-DOMEN.cz) -->
-  <!-- Na Netlify domeně dočasně klidně vynech nebo dej netlify.app URL -->
-  <link rel="alternate" hreflang="cs" href="https://TVUJ-DOMEN.cz/">
-  <link rel="alternate" hreflang="en" href="https://TVUJ-DOMEN.cz/index-en.html">
-  <link rel="canonical" href="https://TVUJ-DOMEN.cz/">
-
   <style>
     :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--radius:16px}
     *{box-sizing:border-box}
-    body{
-      margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
-      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif
-    }
-    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
-    header{
-      position:sticky;top:0;z-index:50;background:rgba(15,23,42,.6);
-      backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)
-    }
+    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06)}
     .container{width:min(1100px,92%);margin-inline:auto}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
-    .brand{display:flex;align-items:center;gap:.8rem}
-    .logo{width:56px;height:56px}
-    .brand-title{font-weight:700;line-height:1}
-    .slogan{
-      font-weight:600;font-size:.9rem;letter-spacing:.02em;line-height:1.2;
-      background:linear-gradient(90deg,#f2c94c,#6fe7dd,#8ec5ff);
-      -webkit-background-clip:text;background-clip:text;color:transparent;opacity:.95
-    }
+    .brand{display:flex;align-items:center;gap:.8rem;font-weight:700}
+    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
+    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a}
+    .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334}
     main section{padding:2.4rem 0;border-top:1px solid rgba(255,255,255,.06)}
     h1{font-size:clamp(1.6rem,2.6vw+1rem,2.6rem);margin:.4rem 0 0}
     h2{font-size:1.6rem;margin:.2rem 0 .6rem}
     .lead{color:var(--muted)}
     .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     @media (max-width:860px){.cols-2{grid-template-columns:1fr}}
-    .card{
-      padding:1rem;border:1px solid rgba(255,255,255,.09);
-      border-radius:var(--radius);
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))
-    }
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    @media (max-width:860px){.gallery{grid-template-columns:1fr}}
-    .btn{
-      display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
-      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700
-    }
-    .back{
-      display:inline-flex;gap:.5rem;align-items:center;padding:.55rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12)
-    }
-    * jazykový přepínač *
-    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
-    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none}
-    .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334}
-  <style>
-<head>
+    .card{padding:1rem;border:1px solid rgba(255,255,255,.09);border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
+      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700}
+  </style>
+</head>
 <body>
-
-  <!-- Jazykový přepínač MUSÍ být v body -->
-<nav class="nav-lang">
-  <a href="index.html" lang="cs" hreflang="cs" aria-current="page">CZ</a>
-  <a href="index-en.html" lang="en" hreflang="en">EN</a>
-<nav>
+  <!-- Přepínač jazyků – relativní odkazy -->
+  <nav class="nav-lang">
+    <a href="index.html" aria-current="page">CZ</a>
+    <a href="index-en.html">EN</a>
+  </nav>
 
   <header>
     <div class="container nav">
-    <!-- logo/domů -->
-<a class="brand" href="index.html">
-
-<!-- přepínač jazyků -->
-<nav class="nav-lang">
-  <a href="index.html" lang="cs" hreflang="cs" aria-current="page">CZ<a>
-  <a href="index-en.html" lang="en" hreflang="en">EN<a>
-<nav>
-
-        <!-- logo SVG zůstává beze změn -->
-        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
-          <defs>
-            <radialGradient id="glow" cx="50%" cy="50%" r="60%">
-              <stop offset="0%" stop-color="#fff7e6">
-              <stop offset="60%" stop-color="#f5d37a" stop-opacity=".6">
-              <stop offset="100%" stop-color="#91e6da" stop-opacity="0">
-            <radialGradient>
-            <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f2c94c"><stop offset="50%" stop-color="#6fe7dd"><stop offset="100%" stop-color="#8ec5ff">
-            <linearGradient>
-          <defs>
-          <circle cx="60" cy="60" r="34" fill="url(#glow)">
-          <path d="M20,60 a40,40 0 1,1 80,0" fill="none" stroke="url(#ring)" stroke-width="6" stroke-linecap="round">
-          <path d="M100,60 a40,40 0 0,1 -10,26" fill="none" stroke="url(#ring)" stroke-width="6" stroke-linecap="round" opacity=".7">
-          <path d="M25,72 C45,100 75,100 95,72" fill="none" stroke="url(#ring)" stroke-width="2" opacity=".6">
-          <circle cx="84" cy="75" r="2.8" fill="#6fe7dd"><circle cx="75" cy="85" r="2.2" fill="#f2c94c"/><circle cx="93" cy="84" r="2.2" fill="#8ec5ff">
-        <svg>
-        <span style="display:flex;flex-direction:column">
-          <span class="brand-title">SolarSpace Carbon Cycle</span>
-          <span class="slogan">Energy from Carbon, Cycled by Sun</span>
-        <span>
-      <a>
+      <a class="brand" href="index.html">SolarSpace Carbon Cycle</a>
       <nav>
-        <a href="projekt-sscc.html" class="back">Projekt SSCC<a>
-        <a href="edukace.html" class="back">Edukace<a>
-      <nav>
-    <div>
-  <header>
+        <!-- Odkazy na existující stránky v repu -->
+        <a href="projekt-sscc.html" style="margin-right:.5rem">Projekt SSCC</a>
+        <a href="edukace.html">Edukace</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <section>
       <div class="container">
-        <h1>Vítejte v SSCC<h1>
-        <p class="lead">Decentralizovaná syntéza zeleného NH₃ pro <strong>záchyt<strong> a využití CO₂. Pilot 2 kW → 1,5 kg NH₃/den, cíl účinnosti &gt;80 %, záchyt CO₂ &gt;90 %.</p>
-      <div>
-    <section>
+        <h1>Vítejte v SSCC</h1>
+        <p class="lead">Decentralizovaná syntéza zeleného NH₃ pro záchyt a využití CO₂. Pilot 2 kW → 1,5 kg NH₃/den, cíl účinnosti &gt;80 %, záchyt CO₂ &gt;90 %.</p>
+      </div>
+    </section>
 
     <section>
       <div class="container cols-2" style="align-items:start">
         <div class="card">
           <h2>Projekt SSCC</h2>
-          <p>Abstrakt, cíle, metodologie, grafy a procesní diagram. Ke stažení PDF datasheet.<p>
-          <p><a class="btn" href="projekt-sscc.html">Otevřít projekt →<a><p>
-        <div>
+          <p>Abstrakt, cíle, metodologie, grafy a procesní diagram. Ke stažení PDF datasheet.</p>
+          <p><a class="btn" href="projekt-sscc.html">Otevřít projekt →</a></p>
+        </div>
         <div class="card">
           <h2>Edukace</h2>
-          <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Mini kalkulačka „kolik NH₃ vyrobí FVE“.<p>
-          <p><a class="btn" href="edukace.html">Otevřít edukaci →<a><p>
-        <div>
-      <div>
-    <section>
-  <main>
+          <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Mini kalkulačka „kolik NH₃ vyrobí FVE“.</p>
+          <p><a class="btn" href="edukace.html">Otevřít edukaci →</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
-      <span>© SSCC<span>
-    <div>
-  <footer>
-<body>
-<html>
-    <a class="brand" href="index.html">
-<nav class="nav-lang">
-  <a href="index.html" aria-current="page">CZ<a>
-  <a href="index-en.html">EN<a>
-<nav>
-<!-- redeploy -->
-
-
-
+      <span>© SSCC</span>
+    </div>
+  </footer>
+</body>
+</html>
 
