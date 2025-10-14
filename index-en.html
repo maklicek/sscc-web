@@ -34,6 +34,24 @@
       background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
     .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
       background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700}
+    /* --- Vylepšený vzhled --- */
+body { line-height: 1.6; }
+h1, h2 { letter-spacing: .2px; }
+.lead { color: #b6c2d1; }
+
+.nav a, .nav-lang a { transition: transform .12s ease, background .12s ease, opacity .12s ease; }
+.nav-lang a:hover, .nav a:hover { transform: translateY(-1px); opacity: .9; }
+.nav-lang a[aria-current="page"] { font-weight: 700; outline: 1px solid #334; box-shadow: 0 0 0 3px rgba(255,255,255,.04) inset; }
+
+.card { box-shadow: 0 6px 18px rgba(0,0,0,.22); }
+.btn { box-shadow: 0 6px 16px rgba(0,0,0,.28); }
+.btn:hover { transform: translateY(-1px); filter: saturate(1.05); }
+
+@media (max-width: 860px) {
+  main section { padding: 2rem 0; }
+  .nav { padding: .7rem 0; }
+}
+
   </style>
 </head>
 <body>
