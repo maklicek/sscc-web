@@ -69,15 +69,15 @@ remove index-cs (replaced with index-en)
     .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
     .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none}
     .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334}
-  </style>
-</head>
+  <style>
+<head>
 <body>
 
   <!-- Language switch -->
   <nav class="nav-lang">
     <a href="index.html" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a>
     <a href="index-en.html" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a>
-  </nav>
+  <nav>
 
   <header>
     <div class="container nav">
@@ -88,36 +88,36 @@ remove index-cs (replaced with index-en)
               <stop offset="0%" stop-color="#fff7e6"/>
               <stop offset="60%" stop-color="#f5d37a" stop-opacity=".6"/>
               <stop offset="100%" stop-color="#91e6da" stop-opacity="0"/>
-            </radialGradient>
+            <radialGradient>
             <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#f2c94c"/><stop offset="50%" stop-color="#6fe7dd"/><stop offset="100%" stop-color="#8ec5ff"/>
-            </linearGradient>
-          </defs>
+            <linearGradient>
+          <defs>
           <circle cx="60" cy="60" r="34" fill="url(#glow)"/>
           <path d="M20,60 a40,40 0 1,1 80,0" fill="none" stroke="url(#ring)" stroke-width="6" stroke-linecap="round"/>
           <path d="M100,60 a40,40 0 0,1 -10,26" fill="none" stroke="url(#ring)" stroke-width="6" stroke-linecap="round" opacity=".7"/>
           <path d="M25,72 C45,100 75,100 95,72" fill="none" stroke="url(#ring)" stroke-width="2" opacity=".6"/>
           <circle cx="84" cy="75" r="2.8" fill="#6fe7dd"/><circle cx="75" cy="85" r="2.2" fill="#f2c94c"/><circle cx="93" cy="84" r="2.2" fill="#8ec5ff"/>
-        </svg>
+        <svg>
         <span style="display:flex;flex-direction:column">
           <span class="brand-title">SolarSpace Carbon Cycle</span>
           <span class="slogan">Energy from Carbon, Cycled by Sun</span>
-        </span>
-      </a>
+        <span>
+      <a>
       <nav>
         <a href="project-sscc.html" class="back">SSCC Project</a>
         <a href="education.html" class="back">Education</a>
-      </nav>
-    </div>
-  </header>
+      <nav>
+    <div>
+  <header>
 
   <main>
     <section>
       <div class="container">
         <h1>Welcome to SSCC</h1>
         <p class="lead">Decentralized synthesis of green NH₃ for CO₂ capture and utilization. Pilot 2 kW → 1.5 kg NH₃/day, target efficiency &gt; 80 %, CO₂ capture &gt; 90 %.</p>
-      </div>
-    </section>
+      <div>
+    <section>
 
     <section>
       <div class="container cols-2" style="align-items:start">
@@ -125,21 +125,21 @@ remove index-cs (replaced with index-en)
           <h2>SSCC Project</h2>
           <p>Abstract, goals, methodology, charts and process diagram. Downloadable PDF datasheet.</p>
           <p><a class="btn" href="project-sscc.html">Open project →</a></p>
-        </div>
+        <div>
         <div class="card">
           <h2>Education</h2>
           <p>Learn how the flow works: Sun → electricity → H₂ → NH₃. Try our mini calculator “How much NH₃ can your PV produce?”.</p>
           <p><a class="btn" href="education.html">Open education →</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <div>
+      <div>
+    <section>
+  <main>
 
   <footer>
     <div class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
       <span>© SSCC</span>
-    </div>
-  </footer>
-</body>
-</html>
+    <div>
+  <footer>
+<body>
+<html>
 
