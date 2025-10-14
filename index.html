@@ -36,14 +36,32 @@
       background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
     .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
       background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700}
-  </style>
-</head>
+    /* --- Vylepšený vzhled --- */
+body { line-height: 1.6; }
+h1, h2 { letter-spacing: .2px; }
+.lead { color: #b6c2d1; }
+
+.nav a, .nav-lang a { transition: transform .12s ease, background .12s ease, opacity .12s ease; }
+.nav-lang a:hover, .nav a:hover { transform: translateY(-1px); opacity: .9; }
+.nav-lang a[aria-current="page"] { font-weight: 700; outline: 1px solid #334; box-shadow: 0 0 0 3px rgba(255,255,255,.04) inset; }
+
+.card { box-shadow: 0 6px 18px rgba(0,0,0,.22); }
+.btn { box-shadow: 0 6px 16px rgba(0,0,0,.28); }
+.btn:hover { transform: translateY(-1px); filter: saturate(1.05); }
+
+@media (max-width: 860px) {
+  main section { padding: 2rem 0; }
+  .nav { padding: .7rem 0; }
+}
+
+  <style>
+<head>
 <body>
   <!-- Přepínač jazyků – relativní odkazy -->
   <nav class="nav-lang">
     <a href="index.html" aria-current="page">CZ</a>
     <a href="index-en.html">EN</a>
-  </nav>
+  <nav>
 
   <header>
     <div class="container nav">
@@ -52,39 +70,40 @@
         <!-- Odkazy na existující stránky v repu -->
         <a href="projekt-sscc.html" style="margin-right:.5rem">Projekt SSCC</a>
         <a href="edukace.html">Edukace</a>
-      </nav>
-    </div>
-  </header>
+      <nav>
+    <div>
+  <header>
 
   <main>
     <section>
       <div class="container">
-        <h1>Vítejte v SSCC</h1>
+        <h1>Vítejte v SSCC<h1>
         <p class="lead">Decentralizovaná syntéza zeleného NH₃ pro záchyt a využití CO₂. Pilot 2 kW → 1,5 kg NH₃/den, cíl účinnosti &gt;80 %, záchyt CO₂ &gt;90 %.</p>
-      </div>
-    </section>
+      <div>
+    <section>
 
     <section>
       <div class="container cols-2" style="align-items:start">
         <div class="card">
-          <h2>Projekt SSCC</h2>
+          <h2>Projekt SSCC<h2>
           <p>Abstrakt, cíle, metodologie, grafy a procesní diagram. Ke stažení PDF datasheet.</p>
-          <p><a class="btn" href="projekt-sscc.html">Otevřít projekt →</a></p>
-        </div>
+          <p><a class="btn" href="projekt-sscc.html">Otevřít projekt →<a><p>
+        <div>
         <div class="card">
-          <h2>Edukace</h2>
+          <h2>Edukace<h2>
           <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Mini kalkulačka „kolik NH₃ vyrobí FVE“.</p>
           <p><a class="btn" href="edukace.html">Otevřít edukaci →</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <div>
+      <div>
+    <section>
+  <main>
 
   <footer>
     <div class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
       <span>© SSCC</span>
-    </div>
-  </footer>
-</body>
-</html>
+    <div>
+  <footer>
+<body>
+
+<html>
 
