@@ -2,96 +2,73 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
-  <title>SolarSpace Carbon Cycle – SSCC</title>
+  <title>Edukace — SSCC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <meta property="og:title" content="SolarSpace Carbon Cycle (SSCC)">
-  <meta property="og:description" content="Decentralizovaná syntéza zeleného NH₃ pro záchyt a využití CO₂.">
-  <meta property="og:image" content="images/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image">
-
   <style>
-    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--radius:16px}
+    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8}
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
-      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
     a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;z-index:60;background:linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.55));
-      backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(0,0,0,.25)}
-    .container{width:min(1100px,92%);margin-inline:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:.6rem}
-    .brand{display:flex;align-items:center;gap:.8rem;font-weight:700}
-    .nav a,.nav-lang a{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      font-weight:700;padding:.55rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12);
-      transition:transform .12s ease,opacity .12s ease}
-    .nav a:hover,.nav-lang a:hover{transform:translateY(-1px);opacity:.92}
-    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
-    .nav-lang a[aria-current="page"]{outline:1px solid #334;box-shadow:0 0 0 3px rgba(255,255,255,.04) inset}
-    main section{padding:2.4rem 0;border-top:1px solid rgba(255,255,255,.06)}
+    header{position:sticky;top:0;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .nav a{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-weight:700;padding:.5rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
     h1{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:800;
-      letter-spacing:.1px;font-size:clamp(1.6rem,2.6vw+1rem,2.6rem);margin:.4rem 0 0}
-    h2{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:700;
-      letter-spacing:.2px;font-size:1.6rem;margin:.2rem 0 .6rem}
+      font-size:clamp(1.6rem,2.6vw+1rem,2.2rem);margin:18px 0 8px}
+    h2{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:700;margin:18px 0 8px}
     .lead{color:#b6c2d1}
-    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    @media (max-width:860px){.cols-2{grid-template-columns:1fr}}
-    .card{padding:1rem;border:1px solid rgba(255,255,255,.09);border-radius:16px;
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));box-shadow:0 6px 18px rgba(0,0,0,.22)}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
-      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:800;letter-spacing:.2px;
-      box-shadow:0 6px 16px rgba(0,0,0,.28)}
-    .btn:hover{transform:translateY(-1px);filter:saturate(1.05)}
+    .card{margin-top:16px;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800}
   </style>
 </head>
 <body>
-  <nav class="nav-lang">
-    <a href="index.html" aria-current="page">CZ</a>
-    <a href="index-en.html">EN</a>
-  </nav>
-
   <header>
-    <div class="container nav">
-      <a class="brand" href="index.html">SolarSpace Carbon Cycle</a>
+    <div class="wrap nav">
+      <a href="index.html">← Domů</a>
       <nav>
         <a href="projekt-sscc.html" style="margin-right:.5rem">Projekt SSCC</a>
-        <a href="edukace.html">Edukace</a>
+        <a href="edukace.html" aria-current="page">Edukace</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section>
-      <div class="container">
-        <h1>Vítejte v SSCC</h1>
-        <p class="lead">Decentralizovaná syntéza zeleného NH₃ pro záchyt a využití CO₂. Pilot 2 kW → 1,5 kg NH₃/den, cíl účinnosti &gt;80 %, záchyt CO₂ &gt;90 %.</p>
-      </div>
-    </section>
+  <main class="wrap">
+    <h1>Edukace</h1>
+    <p class="lead">Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Zde bude jednoduché vysvětlení a mini kalkulačka.</p>
 
-    <section>
-      <div class="container cols-2" style="align-items:start">
-        <div class="card">
-          <h2>Projekt SSCC</h2>
-          <p>Abstrakt, cíle, metodologie, grafy a procesní diagram. Ke stažení PDF datasheet.</p>
-          <p><a class="btn" href="projekt-sscc.html">Otevřít projekt →</a></p>
-        </div>
-        <div class="card">
-          <h2>Edukace</h2>
-          <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Mini kalkulačka „kolik NH₃ vyrobí FVE“.</p>
-          <p><a class="btn" href="edukace.html">Otevřít edukaci →</a></p>
-        </div>
-      </div>
+    <div class="grid">
+      <section class="card">
+        <h2>1) Od slunce k elektřině</h2>
+        <p>Fotovoltaika převádí sluneční záření na elektrickou energii. Účinnost moderních panelů 20–23 %.</p>
+      </section>
+      <section class="card">
+        <h2>2) Elektrolýza → H₂</h2>
+        <p>Pro 1 kg H₂ je typicky potřeba ~50–55 kWh (LHV).</p>
+      </section>
+      <section class="card">
+        <h2>3) Syntéza NH₃</h2>
+        <p>Vodík reaguje s dusíkem (N₂) → amoniak (NH₃), nosič energie a médium pro CCU.</p>
+      </section>
+      <section class="card">
+        <h2>4) CCU / využití CO₂</h2>
+        <p>NH₃ může podporovat zachycení a využití CO₂ v decentralizovaných aplikacích.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Ke stažení</h2>
+      <p><a class="btn" href="pdf/your-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a></p>
     </section>
   </main>
-
-  <footer>
-    <div class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
-      <span>© SSCC</span>
-    </div>
-  </footer>
 </body>
 </html>
-
