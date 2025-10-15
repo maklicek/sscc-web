@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Education — SSCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8}
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
+      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .nav a{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-weight:700;padding:.5rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
+    h1{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      font-weight:800;font-size:clamp(1.6rem,2.6vw+1rem,2.2rem);margin:18px 0 8px}
+    h2{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:700;margin:18px 0 8px}
+    .lead{color:#b6c2d1}
+    .card{margin-top:16px;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a href="index-en.html">← Home</a>
+      <nav>
+        <a href="project-sscc.html" style="margin-right:.5rem">SSCC Project</a>
+        <a href="education.html" aria-current="page">Education</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Education</h1>
+    <p class="lead">Flow overview: Sun → electricity → H₂ → NH₃. Quick explanation and (later) a mini calculator.</p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>1) From sun to electricity</h2>
+        <p>PV converts sunlight to electric power. Modern panels reach 20–23% efficiency.</p>
+      </section>
+      <section class="card">
+        <h2>2) Electrolysis → H₂</h2>
+        <p>Water electrolysis produces hydrogen; ~50–55 kWh per 1 kg H₂ (LHV).</p>
+      </section>
+      <section class="card">
+        <h2>3) NH₃ synthesis</h2>
+        <p>Hydrogen reacts with nitrogen (N₂) → ammonia (NH₃), an energy carrier and CCU medium.</p>
+      </section>
+      <section class="card">
+        <h2>4) CCU / CO₂ utilization</h2>
+        <p>NH₃ can support capture & utilization of CO₂ in decentralized applications.</p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Downloads</h2>
+      <p><a class="btn" href="pdf/your-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a></p>
+    </section>
+  </main>
+</body>
+</html>
