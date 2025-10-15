@@ -1,115 +1,61 @@
 <!doctype html>
 <html lang="en">
-  <a href="edukacion.html">Edukace</a>
-
 <head>
-  <meta charset="utf-8" />
-  <title>SSCC Project — SolarSpace Carbon Cycle</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <title>Project SSCC — SolarSpace Carbon Cycle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--radius:16px}
+    :root{--bg:#0f172a;--text:#e5e7eb}
     *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;z-index:60;background:linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.55));
-      backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(0,0,0,.25)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:.6rem}
-    .nav a{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      font-weight:700;padding:.55rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12);transition:transform .12s ease,opacity .12s ease}
-    .nav a:hover{transform:translateY(-1px);opacity:.92}
-    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
-    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a}
-    .nav-lang a[aria-current="page"]{outline:1px solid #334;box-shadow:0 0 0 3px rgba(255,255,255,.04) inset;font-weight:700}
-    h1{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:800;letter-spacing:.1px;
-      font-size:clamp(1.6rem,2.6vw+1rem,2.4rem);margin:10px 0 8px}
-    h2{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:700;letter-spacing:.2px;font-size:1.5rem;margin:22px 0 8px}
-    .lead{color:#b6c2d1}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-    .card{padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));box-shadow:0 6px 18px rgba(0,0,0,.22)}
-    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .kpi .box{padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:14px;text-align:center}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
-      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:800;letter-spacing:.2px;box-shadow:0 6px 16px rgba(0,0,0,.28)}
-    .btn:hover{transform:translateY(-1px);filter:saturate(1.05)}
-    .muted{color:var(--muted)}
-    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace}
+    body{margin:0;background:#0f172a;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    main{max-width:1000px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    h1,h2{font-family:Manrope,Inter,system-ui}
+    a{color:#8ec5ff;text-decoration:none}
+    ul{line-height:1.7}
+    .card{padding:14px;border:1px solid rgba(255,255,255,.09);border-radius:12px}
+    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:10}
+    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none}
+    .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334;}
   </style>
 </head>
 <body>
-  <!-- Language switch for project page (EN active) -->
   <nav class="nav-lang">
-    <a href="projekt-sscc.html">CZ</a>
-    <a href="project-sscc.html" aria-current="page">EN</a>
+    <a href="projekt-sscc.html" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a>
+    <a href="project-sscc.html" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a>
   </nav>
 
-  <header>
-    <div class="wrap nav">
-      <a href="index-en.html">← Home</a>
-      <nav>
-        <a href="project-sscc.html" aria-current="page" style="margin-right:.5rem">SSCC Project</a>
-        <a href="education.html">Education</a>
-      </nav>
-    </div>
-  </header>
+  <main>
+    <h1>SSCC Pilot Project</h1>
+    <p>The <strong>SolarSpace Carbon Cycle (SSCC)</strong> project demonstrates decentralized synthesis of green ammonia (NH₃) with CO₂ capture and utilization.</p>
 
-  <main class="wrap">
-    <h1>SSCC Project</h1>
-    <p class="lead">Decentralized synthesis of green NH₃ for CO₂ capture and utilization. Pilot 2 kW → 1.5 kg NH₃/day, target efficiency &gt; 80 %, CO₂ capture &gt; 90 %.</p>
-
-    <section class="card">
-      <h2>Overview</h2>
-      <p>The goal is to validate a pilot line for NH₃ production and CCU in decentralized settings with a focus on safety, energy balance and economics.</p>
-      <div class="kpi" style="margin-top:12px">
-        <div class="box"><div class="mono">2 kW</div><div class="muted">pilot power</div></div>
-        <div class="box"><div class="mono">1.5 kg/day</div><div class="muted">NH₃ (pilot)</div></div>
-        <div class="box"><div class="mono">&gt;80 %</div><div class="muted">target efficiency</div></div>
-      </div>
+    <section class="card" style="margin-top:16px">
+      <h2>Key Objectives</h2>
+      <ul>
+        <li>Develop a 2 kW pilot unit producing 1.5 kg NH₃ per day.</li>
+        <li>Achieve energy efficiency above 80 %.</li>
+        <li>CO₂ capture efficiency exceeding 90 %.</li>
+        <li>Integration with photovoltaic or hybrid renewable systems.</li>
+      </ul>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Methodology</h2>
-        <ul>
-          <li>PV → DC/AC → electrolysis → H₂ separation → NH₃ synthesis → storage → CCU/use</li>
-          <li>Safety & monitoring (pressure, temperature, flow, H₂ detection)</li>
-          <li>Calibration & validation scenarios</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Process diagram</h2>
-        <p>Put your process scheme image here (<code>obrazky/proces-sscc.png</code>):</p>
-        <p><img src="obrazky/proces-sscc.png" alt="SSCC process diagram"></p>
-      </div>
+    <section class="card" style="margin-top:16px">
+      <h2>Concept Summary</h2>
+      <p>Solar energy is converted into electricity, which drives the electrolysis of water to hydrogen (H₂).  
+      Hydrogen reacts with captured CO₂ and N₂ in a closed loop reactor to produce ammonia (NH₃) — a dense, carbon-neutral energy carrier.</p>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Timeline</h2>
-        <ol>
-          <li>Hardware & safety preparation</li>
-          <li>No-load tests & power baselines</li>
-          <li>Integrated runs & tuning</li>
-        </ol>
-      </div>
-      <div class="card">
-        <h2>Downloads</h2>
-        <p><a class="btn" href="pdf/your-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a></p>
-        <p class="muted">Replace with your actual PDF in <code>pdf/</code>.</p>
-      </div>
+    <section class="card" style="margin-top:16px">
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">Pilot Datasheet (PDF)</a></li>
+        <li><a href="pdf/sscc-process-diagram-en.pdf" target="_blank" rel="noopener">Process Diagram (PDF)</a></li>
+      </ul>
     </section>
 
-    <section class="card">
-      <h2>FAQ</h2>
-      <p><strong>Is NH₃ safe?</strong> With proper design and leak detection, yes; see „Education“ for safety basics.</p>
-      <p><strong>Where are the main losses?</strong> DC/AC conversion, electrolysis efficiency, heat, compression and NH₃ synthesis.</p>
-    </section>
+    <p style="margin-top:20px"><a href="index.html">← Back to Home</a></p>
   </main>
 </body>
 </html>
-
