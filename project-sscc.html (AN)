@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Project SSCC — SolarSpace Carbon Cycle</title>
+  <title>SSCC Pilot Project — SolarSpace Carbon Cycle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +11,21 @@
     :root{--bg:#0f172a;--text:#e5e7eb}
     *{box-sizing:border-box}
     body{margin:0;background:#0f172a;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    main{max-width:1000px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+    main{max-width:1000px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:14px;
+         background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
     h1,h2{font-family:Manrope,Inter,system-ui}
     a{color:#8ec5ff;text-decoration:none}
     ul{line-height:1.7}
     .card{padding:14px;border:1px solid rgba(255,255,255,.09);border-radius:12px}
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+         background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
     .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:10}
     .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a;text-decoration:none}
     .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334;}
   </style>
 </head>
 <body>
+  <!-- Language switch -->
   <nav class="nav-lang">
     <a href="projekt-sscc.html" lang="cs" hreflang="cs" aria-label="Čeština">CZ</a>
     <a href="project-sscc.html" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a>
@@ -29,22 +33,22 @@
 
   <main>
     <h1>SSCC Pilot Project</h1>
-    <p>The <strong>SolarSpace Carbon Cycle (SSCC)</strong> project demonstrates decentralized synthesis of green ammonia (NH₃) with CO₂ capture and utilization.</p>
+    <p>The <strong>SolarSpace Carbon Cycle (SSCC)</strong> pilot demonstrates decentralized synthesis of green ammonia (NH₃) with CO₂ capture & utilization.</p>
 
     <section class="card" style="margin-top:16px">
       <h2>Key Objectives</h2>
       <ul>
-        <li>Develop a 2 kW pilot unit producing 1.5 kg NH₃ per day.</li>
-        <li>Achieve energy efficiency above 80 %.</li>
-        <li>CO₂ capture efficiency exceeding 90 %.</li>
-        <li>Integration with photovoltaic or hybrid renewable systems.</li>
+        <li>Develop a <strong>2 kW</strong> pilot unit producing <strong>~1.5 kg NH₃/day</strong>.</li>
+        <li>Reach energy efficiency <strong>&gt; 80 %</strong>.</li>
+        <li>CO₂ capture efficiency <strong>&gt; 90 %</strong>.</li>
+        <li>Integration with PV or hybrid renewable systems.</li>
       </ul>
     </section>
 
     <section class="card" style="margin-top:16px">
       <h2>Concept Summary</h2>
-      <p>Solar energy is converted into electricity, which drives the electrolysis of water to hydrogen (H₂).  
-      Hydrogen reacts with captured CO₂ and N₂ in a closed loop reactor to produce ammonia (NH₃) — a dense, carbon-neutral energy carrier.</p>
+      <p>Solar power → electricity → water electrolysis (H₂). Hydrogen reacts with nitrogen (N₂) in a controlled loop to synthesize ammonia (NH₃),
+         enabling compact energy storage and supporting CCU pathways.</p>
     </section>
 
     <section class="card" style="margin-top:16px">
@@ -53,9 +57,13 @@
         <li><a href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">Pilot Datasheet (PDF)</a></li>
         <li><a href="pdf/sscc-process-diagram-en.pdf" target="_blank" rel="noopener">Process Diagram (PDF)</a></li>
       </ul>
+      <p style="opacity:.8">Tip: put files into the <code>pdf/</code> folder with the names above (or change the links).</p>
     </section>
 
-    <p style="margin-top:20px"><a href="index.html">← Back to Home</a></p>
+    <p style="margin-top:20px">
+      <a class="btn" href="index-en.html">← Back to Home (EN)</a>
+      <a style="margin-left:8px" href="index.html">CZ Home</a>
+    </p>
   </main>
 </body>
 </html>
