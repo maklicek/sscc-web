@@ -1,106 +1,35 @@
 <!doctype html>
 <html lang="en">
-  <a href="education.html">Education</a>
-
 <head>
   <meta charset="utf-8">
-  <title>SolarSpace Carbon Cycle – SSCC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicons/favicon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="favicons/favicon-180.png" sizes="180x180">
-  <meta property="og:title" content="SolarSpace Carbon Cycle (SSCC)">
-  <meta property="og:description" content="Decentralized synthesis of green NH₃ for CO₂ capture and utilization.">
-  <meta property="og:image" content="images/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <style> 
-    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8;--radius:16px}
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
-      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.06)}
-    .container{width:min(1100px,92%);margin-inline:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
-    .brand{display:flex;align-items:center;gap:.8rem;font-weight:700}
-    .nav-lang{position:fixed;top:12px;right:12px;display:flex;gap:8px;z-index:100}
-    .nav-lang a{padding:6px 10px;border-radius:10px;background:#0d1b2a}
-    .nav-lang a[aria-current="page"]{font-weight:700;outline:1px solid #334}
-    main section{padding:2.4rem 0;border-top:1px solid rgba(255,255,255,.06)}
-    h1{font-size:clamp(1.6rem,2.6vw+1rem,2.6rem);margin:.4rem 0 0}
-    h2{font-size:1.6rem;margin:.2rem 0 .6rem}
-    .lead{color:var(--muted)}
-    .cols-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-    @media (max-width:860px){.cols-2{grid-template-columns:1fr}}
-    .card{padding:1rem;border:1px solid rgba(255,255,255,.09);border-radius:var(--radius);
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
-    .btn{display:inline-flex;align-items:center;gap:.6rem;border:1px solid rgba(255,255,255,.1);
-      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;padding:.8rem 1rem;border-radius:12px;font-weight:700}
-    /* --- Vylepšený vzhled --- */
-body { line-height: 1.6; }
-h1, h2 { letter-spacing: .2px; }
-.lead { color: #b6c2d1; }
-
-.nav a, .nav-lang a { transition: transform .12s ease, background .12s ease, opacity .12s ease; }
-.nav-lang a:hover, .nav a:hover { transform: translateY(-1px); opacity: .9; }
-.nav-lang a[aria-current="page"] { font-weight: 700; outline: 1px solid #334; box-shadow: 0 0 0 3px rgba(255,255,255,.04) inset; }
-
-.card { box-shadow: 0 6px 18px rgba(0,0,0,.22); }
-.btn { box-shadow: 0 6px 16px rgba(0,0,0,.28); }
-.btn:hover { transform: translateY(-1px); filter: saturate(1.05); }
-
-@media (max-width: 860px) {
-  main section { padding: 2rem 0; }
-  .nav { padding: .7rem 0; }
-}
-
+  <title>Education — SSCC</title>
+  <style>
+    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
+    .wrap{max-width:1000px;margin:32px auto;padding:16px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    .card{padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
+    a{color:#8ec5ff;text-decoration:none}
+    .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
   </style>
 </head>
 <body>
-  <nav class="nav-lang">
-    <a href="index.html">CZ</a>
-    <a href="index-en.html" aria-current="page">EN</a>
-  </nav>
+  <main class="wrap">
+    <h1>Education</h1>
+    <p>Solar → electricity → H₂ → NH₃. A simplified overview of the SSCC flow.</p>
 
-  <header>
-    <div class="container nav">
-      <a class="brand" href="index.html">SolarSpace Carbon Cycle</a>
-      <nav>
-        <!-- dočasně odkazujeme na existující soubory, ať není 404 -->
-        <a href="projekt-sscc.html" style="margin-right:.5rem">SSCC Project</a>
-        <a href="education.html">Education</a>
-      </nav>
+    <div class="grid" style="margin-top:12px">
+      <section class="card"><h2>1) Solar → Electricity</h2><p>PV ~20–23% efficiency.</p></section>
+      <section class="card"><h2>2) Electrolysis → H₂</h2><p>≈50–55 kWh per kg H₂ (LHV).</p></section>
+      <section class="card"><h2>3) NH₃ synthesis</h2><p>H₂ + N₂ → NH₃ — energy carrier & CCU medium.</p></section>
+      <section class="card"><h2>4) CCU</h2><p>NH₃ enables CO₂ capture & utilization.</p></section>
     </div>
-  </header>
 
-  <main>
-    <section>
-      <div class="container">
-        <h1>Welcome to SSCC</h1>
-        <p class="lead">Decentralized synthesis of green NH₃ for CO₂ capture and utilization. Pilot 2 kW → 1.5 kg NH₃/day, target efficiency &gt;80 %, CO₂ capture &gt;90 %.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container cols-2" style="align-items:start">
-        <div class="card">
-          <h2>SSCC Project</h2>
-          <p>Abstract, goals, methodology, charts and process diagram. Downloadable PDF datasheet.</p>
-          <p><a class="btn" href="projekt-sscc.html">Open project →</a></p>
-        </div>
-        <div class="card">
-          <h2>Education</h2>
-          <p>How the flow works: Sun → electricity → H₂ → NH₃. Mini calculator “How much NH₃ can PV produce?”.</p>
-          <p><a class="btn" href="education.html">Open education →</a></p>
-        </div>
-      </div>
-    </section>
+    <p style="margin-top:14px">
+      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet</a>
+      <a style="margin-left:12px" href="index-en.html">← Back to home</a>
+    </p>
   </main>
-
-  <footer>
-    <div class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
-      <span>© SSCC</span>
-    </div>
-  </footer>
 </body>
 </html>
