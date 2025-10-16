@@ -1,78 +1,36 @@
 <!doctype html>
 <html lang="cs">
-  <a class="btn" href="pdf/datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a>
 <head>
   <meta charset="utf-8">
-  <title>Edukace — SSCC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Edukace — SSCC</title>
   <style>
-    :root{--bg:#0f172a;--text:#e5e7eb;--muted:#94a3b8}
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#0b1224,#0f172a 30%,#0b1224);
-      color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    header{position:sticky;top:0;background:rgba(15,23,42,.6);backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0}
-    .wrap{max-width:1000px;margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .nav a{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      font-weight:700;padding:.5rem .8rem;border-radius:10px;border:1px solid rgba(255,255,255,.12)}
-    h1{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      font-weight:800;font-size:clamp(1.6rem,2.6vw+1rem,2.2rem);margin:18px 0 8px}
-    h2{font-family:Manrope,Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-weight:700;margin:18px 0 8px}
-    .lead{color:#b6c2d1}
-    .card{margin-top:16px;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;
-      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
+    .wrap{max-width:1000px;margin:32px auto;padding:16px}
+    .grid{display:grid;gap:14px}
     @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
-    .btn{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);
-      background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800}
-  <style>
-<head>
+    .card{padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
+    a{color:#8ec5ff;text-decoration:none}
+    .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
+  </style>
+</head>
 <body>
-  <header>
-    <div class="wrap nav">
-  <a href="./index.html" style="color:inherit;text-decoration:none;font-weight:700">
-  ← Domů
-<a href="./index.html" style="color:inherit;text-decoration:none;font-weight:700">
-  ← Domů
-      <nav>
-        <a href="projekt-sscc.html" style="margin-right:.5rem">Projekt SSCC</a>
-        <a href="edukace.html" aria-current="page">Edukace</a>
-      <nav>
-    <div>
-  <header>
-
   <main class="wrap">
-    <h1>Edukace<h1>
-    <p class="lead">Jak funguje tok: Slunce → elektřina → H₂ → NH₃. Zde bude jednoduché vysvětlení a mini kalkulačka.</p>
+    <h1>Edukace</h1>
+    <p>Slunce → elektřina → H₂ → NH₃. Stručné vysvětlení + odkaz (zatím dočasný).</p>
 
-    <div class="grid">
-      <section class="card">
-        <h2>1) Od slunce k elektřině<h2>
-        <p>Fotovoltaika převádí sluneční záření na elektrickou energii. Účinnost moderních panelů 20–23 %.</p>
-      <section>
-      <section class="card">
-        <h2>2) Elektrolýza → H₂<h2>
-        <p>Pro 1 kg H₂ je typicky potřeba ~50–55 kWh (LHV).<p>
-      <section>
-      <section class="card">
-        <h2>3) Syntéza NH₃<h2>
-        <p>Vodík reaguje s dusíkem (N₂) → amoniak (NH₃), nosič energie a médium pro CCU.</p>
-      <section>
-      <section class="card">
-        <h2>4) CCU / využití CO₂<h2>
-        <p>NH₃ může podporovat zachycení a využití CO₂ v decentralizovaných aplikacích.</p>
-      <section>
-    <div>
+    <div class="grid" style="margin-top:12px">
+      <section class="card"><h2>1) Slunce → elektřina</h2><p>PV ~20–23 %.</p></section>
+      <section class="card"><h2>2) Elektrolýza → H₂</h2><p>≈50–55 kWh/kg H₂ (LHV).</p></section>
+      <section class="card"><h2>3) Syntéza NH₃</h2><p>H₂ + N₂ → NH₃ (nosič energie, CCU).</p></section>
+      <section class="card"><h2>4) CCU</h2><p>NH₃ podporuje zachycení a využití CO₂.</p></section>
+    </div>
 
-    <section class="card">
-      <h2>Ke stažení<h2>
-      <p><a class="btn" href="pdf/your-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet<a><p>
-    <section>
-  <main>
-<body>
-<html>
+    <!-- Dočasně zzz.html, ať víš, že klik funguje -->
+    <p style="margin-top:14px">
+      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet</a>
+      <a style="margin-left:12px" href="index.html">← Domů</a>
+    </p>
+  </main>
+</body>
+</html>
