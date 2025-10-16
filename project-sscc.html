@@ -59,15 +59,42 @@
       margin-top: 10px;
     }
   </style>
+  .navchips a{
+  display:inline-block; padding:8px 12px; margin:4px;
+  border-radius:10px; border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.06); cursor:pointer; color:#e6e6e6;
+  text-decoration:none; font-weight:600
+}
+.navchips a:hover{background:rgba(255,255,255,.12)}
+.card{position:relative; z-index:1} /* pojistka proti překryvům */
+
 </head>
+  <script>
+  // Hladký scroll + pojistka proti „nic se nestane“
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+        history.replaceState(null,'', '#'+id);
+      }
+    });
+  });
+</script>
+
 <body>
   <h1>SolarSpace Carbon Cycle (EN)</h1>
   <p>This section presents the <b>English version</b> of the SSCC pilot project. Below you can explore the concept, objectives, current progress, and available downloads.</p>
 
-  <div class="card">
-    <h2>Concept</h2>
-    <p>The SSCC (SolarSpace Carbon Cycle) project explores the decentralised synthesis of green ammonia (NH₃) using solar energy as a carrier for carbon capture and storage in chemical form.</p>
-  </div>
+ <nav class="navchips" style="margin:14px 0; position:relative; z-index:2">
+  <a href="#concept">Concept</a>
+  <a href="#objectives">Objectives</a>
+  <a href="#progress">Progress</a>
+  <a href="#downloads">Downloads</a>
+</nav>
+
 
   <div class="card">
     <h2>Objectives</h2>
