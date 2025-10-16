@@ -3,119 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project SSCC – SolarSpace Carbon Cycle (EN)</title>
+  <title>SSCC Pilot — EN</title>
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, sans-serif;
-      background: radial-gradient(circle at top, #0a0f1a 0%, #1e2835 100%);
-      color: #e6e6e6;
-      text-align: center;
-      padding: 40px;
-    }
-    h1 {
-      color: #ffd55a;
-      font-size: 2.2em;
-      margin-bottom: 0.5em;
-    }
-    h2 {
-      color: #ffdf80;
-      font-size: 1.4em;
-      margin-top: 2em;
-      text-decoration: underline;
-    }
-    p {
-      max-width: 800px;
-      margin: 0.5em auto;
-      line-height: 1.6;
-    }
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 1.5em;
-      margin: 1.5em auto;
-      width: min(90%, 800px);
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-    a {
-      color: #66aaff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    a:hover { text-decoration: underline; }
-    footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(90deg,#0f3a4a,#f4d36a);
-      color: #00131a;
-      font-weight: bold;
-      padding: 10px 16px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
+    .wrap{max-width:900px;margin:32px auto;padding:16px}
+    h1{margin:0 0 12px;color:#ffd55a}
+    .chips a{display:inline-block;margin:4px 6px 0 0;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.25);text-decoration:none;color:#e5e7eb;background:rgba(255,255,255,.06)}
+    .card{margin:14px 0;padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
+    a{color:#8ec5ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
   </style>
-  .navchips a{
-  display:inline-block; padding:8px 12px; margin:4px;
-  border-radius:10px; border:1px solid rgba(255,255,255,.2);
-  background:rgba(255,255,255,.06); cursor:pointer; color:#e6e6e6;
-  text-decoration:none; font-weight:600
-}
-.navchips a:hover{background:rgba(255,255,255,.12)}
-.card{position:relative; z-index:1} /* pojistka proti překryvům */
-
 </head>
-  <script>
-  // Hladký scroll + pojistka proti „nic se nestane“
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const id = a.getAttribute('href').slice(1);
-      const el = document.getElementById(id);
-      if(el){
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-        history.replaceState(null,'', '#'+id);
-      }
-    });
-  });
-</script>
-
 <body>
-  <h1>SolarSpace Carbon Cycle (EN)</h1>
-  <p>This section presents the <b>English version</b> of the SSCC pilot project. Below you can explore the concept, objectives, current progress, and available downloads.</p>
+  <main class="wrap">
 
- <nav class="navchips" style="margin:14px 0; position:relative; z-index:2">
-  <a href="#concept">Concept</a>
-  <a href="#objectives">Objectives</a>
-  <a href="#progress">Progress</a>
-  <a href="#downloads">Downloads</a>
-</nav>
+    <!-- TEST links (safety) -->
+    <p>
+      <a href="projekty.html">CZ Projects</a> •
+      <a href="index-en.html">EN Home</a> •
+      <a href="zzz.html">Test ZZZ</a>
+    </p>
 
+    <h1>SolarSpace Carbon Cycle — Pilot (EN)</h1>
+    <p>Concept, objectives, progress, and a placeholder download.</p>
 
-  <div class="card">
-    <h2>Objectives</h2>
-    <p>• Demonstrate a compact 2 kW pilot system with production capacity of ~1.5 kg NH₃/day.<br>
-       • Achieve overall energy efficiency above 80 %.<br>
-       • Integrate CO₂ capture efficiency exceeding 90 %.<br>
-       • Enable modular scaling for agricultural and industrial use.</p>
-  </div>
+    <p class="chips">
+      <a href="#concept">Concept</a>
+      <a href="#objectives">Objectives</a>
+      <a href="#progress">Progress</a>
+      <a href="#downloads">Downloads</a>
+    </p>
 
-  <div class="card">
-    <h2>Progress</h2>
-    <p>System design and validation are underway. The control unit and reactor modules are in development for field testing planned in Q3 2025.</p>
-  </div>
+    <section id="concept" class="card">
+      <h2>Concept</h2>
+      <p>Decentralized synthesis of green NH₃ powered by renewables; compact storage & CCU use-cases.</p>
+    </section>
 
-  <div class="card">
-    <h2>Downloads</h2>
-    <p><a class="btn" href="pdf/sscc-datasheet.pdf" target="_blank" rel="noopener">📄 Open PDF Datasheet</a></p>
-  </div>
+    <section id="objectives" class="card">
+      <h2>Objectives</h2>
+      <p>2 kW pilot (~1.5 kg NH₃/day), overall efficiency &gt;80%, CO₂ capture &gt;90%, modular scaling.</p>
+    </section>
 
-  <p><a href="index-en.html">← Back to EN homepage</a></p>
+    <section id="progress" class="card">
+      <h2>Progress</h2>
+      <p>Design & validation ongoing; field tests targeted Q3/2025.</p>
+    </section>
 
-  <footer>© SSCC Initiative — 2025</footer>
+    <section id="downloads" class="card">
+      <h2>Downloads</h2>
+      <!-- Dočasně na zzz.html; až bude PDF, změň na pdf/sscc-datasheet-en.pdf -->
+      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a>
+    </section>
+
+    <p><a href="index-en.html">← Back to EN Home</a></p>
+  </main>
 </body>
 </html>
