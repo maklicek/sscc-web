@@ -2,49 +2,52 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <title>Projekty — SSCC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Projekt SSCC – Solární uhlíkový cyklus</title>
   <style>
-    :root{--bg:#0f172a;--text:#e5e7eb}
+    :root{--bg1:#0a0f1a;--bg2:#1e2835;--text:#e6e6e6;--accent:#ffd55a}
     *{box-sizing:border-box}
-    body{margin:0;background:#0f172a;color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    main{max-width:1000px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
-    h1,h2{font-family:Manrope,Inter,system-ui}
-    a{color:#8ec5ff;text-decoration:none}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
-    .card{padding:14px;border:1px solid rgba(255,255,255,.09);border-radius:12px}
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
+    body{margin:0;font-family:system-ui, sans-serif;background:radial-gradient(circle at top,var(--bg1) 0%,var(--bg2) 100%);color:var(--text);padding:32px;text-align:center}
+    h1{color:var(--accent);margin:.2em 0 .5em}
+    h2{color:#ffdf80;margin:1.6em 0 .6em;text-decoration:underline}
+    p{max-width:860px;margin:.4em auto;line-height:1.65}
+    .card{width:min(90%,860px);margin:16px auto;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
+    a{color:#66aaff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800}
   </style>
 </head>
 <body>
-  <main>
-    <h1>Projekty SSCC</h1>
-    <p class="lead">Přehled běžících i připravovaných projektů. Krátké anotace a odkazy na detail / konzultaci.</p>
+  <h1>Solární uhlíkový cyklus — Pilot (CZ)</h1>
+  <p>Tato stránka popisuje pilotní projekt SSCC. Níže najdete koncept, cíle, postup a ke stažení.</p>
 
-    <section class="grid" style="margin-top:16px">
+  <nav style="margin:14px 0">
+    <a href="#koncept">Koncept</a> ·
+    <a href="#cile">Cíle</a> ·
+    <a href="#postup">Postup</a> ·
+    <a href="#stazeni">Ke stažení</a>
+  </nav>
 
-      <!-- Projekt 1: pilot -->
-      <article class="card">
-        <h2>Pilot: SSCC (NH₃ &amp; CCU)</h2>
-        <p>Decentralizovaná syntéza NH₃, pilot 2 kW → 1,5 kg/den, cíl účinnosti &gt;80 %.</p>
-        <a class="btn" href="projekt-sscc.html">Detail CZ →</a>
-        <a style="margin-left:8px" href="project-sscc.html">EN</a>
-      </article>
+  <section id="koncept" class="card">
+    <h2>Koncept</h2>
+    <p>SSCC zkoumá decentralizovanou syntézu zeleného amoniaku (NH₃) poháněnou obnovitelnými zdroji jako médium pro CCU aplikace.</p>
+  </section>
 
-      <!-- Projekt 2: zástupný -->
-      <article class="card">
-        <h2>Další projekt (výzkum)</h2>
-        <p>Zástupný projekt – příprava konceptu, dokumentace a podkladů pro validaci.</p>
-        <a class="btn" href="brzy.html">Brzy →</a>
-      </article>
+  <section id="cile" class="card">
+    <h2>Cíle</h2>
+    <p>• Pilot 2 kW s produkcí ≈ 1,5 kg NH₃/den • Celková účinnost &gt; 80 % • Zachycení CO₂ &gt; 90 % • Modulární škálování.</p>
+  </section>
 
-    </section>
+  <section id="postup" class="card">
+    <h2>Postup</h2>
+    <p>Probíhá návrh a validace; polní testování plánováno na Q3 2025.</p>
+  </section>
 
-    <p style="margin-top:20px"><a href="index.html">← Zpět na úvod</a></p>
-  </main>
+  <section id="stazeni" class="card">
+    <h2>Ke stažení</h2>
+    <p><a class="btn" href="pdf/sscc-datasheet.pdf" target="_blank" rel="noopener">📄 PDF datasheet</a></p>
+  </section>
+
+  <p style="margin-top:18px"><a href="projekty.html">← Zpět na projekty</a></p>
 </body>
 </html>
