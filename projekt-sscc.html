@@ -3,76 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projekt SSCC – Solární uhlíkový cyklus</title>
+  <title>Pilot SSCC — CZ</title>
   <style>
-    :root{--bg1:#0a0f1a;--bg2:#1e2835;--text:#e6e6e6;--accent:#ffd55a}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui, sans-serif;background:radial-gradient(circle at top,var(--bg1) 0%,var(--bg2) 100%);color:var(--text);padding:32px;text-align:center}
-    h1{color:var(--accent);margin:.2em 0 .5em}
-    h2{color:#ffdf80;margin:1.6em 0 .6em;text-decoration:underline}
-    p{max-width:860px;margin:.4em auto;line-height:1.65}
-    .card{width:min(90%,860px);margin:16px auto;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05)}
-    a{color:#66aaff;text-decoration:none}
+    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
+    .wrap{max-width:900px;margin:32px auto;padding:16px}
+    h1{margin:0 0 12px;color:#ffd55a}
+    .chips a{display:inline-block;margin:4px 6px 0 0;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.25);text-decoration:none;color:#e5e7eb;background:rgba(255,255,255,.06)}
+    .card{margin:14px 0;padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
+    a{color:#8ec5ff;text-decoration:none}
     a:hover{text-decoration:underline}
-    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800}
+    .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
   </style>
-  .navchips a{
-  display:inline-block; padding:8px 12px; margin:4px;
-  border-radius:10px; border:1px solid rgba(255,255,255,.2);
-  background:rgba(255,255,255,.06); cursor:pointer; color:#e6e6e6;
-  text-decoration:none; font-weight:600
-}
-.navchips a:hover{background:rgba(255,255,255,.12)}
-.card{position:relative; z-index:1} /* pojistka proti překryvům */
-
 </head>
-  <script>
-  // Hladký scroll + pojistka proti „nic se nestane“
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const id = a.getAttribute('href').slice(1);
-      const el = document.getElementById(id);
-      if(el){
-        e.preventDefault();
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-        history.replaceState(null,'', '#'+id);
-      }
-    });
-  });
-</script>
-
 <body>
-  <h1>Solární uhlíkový cyklus — Pilot (CZ)</h1>
-  <p>Tato stránka popisuje pilotní projekt SSCC. Níže najdete koncept, cíle, postup a ke stažení.</p>
+  <main class="wrap">
 
- <nav class="navchips" style="margin:14px 0; position:relative; z-index:2">
-  <a href="#koncept">Koncept</a>
-  <a href="#cile">Cíle</a>
-  <a href="#postup">Postup</a>
-  <a href="#stazeni">Ke stažení</a>
-</nav>
+    <!-- TEST odkazy (pojistka, že klikání funguje) -->
+    <p>
+      <a href="projekty.html">← Zpět na projekty</a> •
+      <a href="zzz.html">Test odkaz na ZZZ</a>
+    </p>
 
+    <h1>Solární uhlíkový cyklus — Pilot (CZ)</h1>
+    <p>Tato stránka: koncept, cíle, postup a PDF.</p>
 
-  <section id="koncept" class="card">
-    <h2>Koncept</h2>
-    <p>SSCC zkoumá decentralizovanou syntézu zeleného amoniaku (NH₃) poháněnou obnovitelnými zdroji jako médium pro CCU aplikace.</p>
-  </section>
+    <!-- Jednoduché in-page kotvy (bez JS) -->
+    <p class="chips">
+      <a href="#koncept">Koncept</a>
+      <a href="#cile">Cíle</a>
+      <a href="#postup">Postup</a>
+      <a href="#stazeni">Ke stažení</a>
+    </p>
 
-  <section id="cile" class="card">
-    <h2>Cíle</h2>
-    <p>• Pilot 2 kW s produkcí ≈ 1,5 kg NH₃/den • Celková účinnost &gt; 80 % • Zachycení CO₂ &gt; 90 % • Modulární škálování.</p>
-  </section>
+    <section id="koncept" class="card">
+      <h2>Koncept</h2>
+      <p>SSCC: decentralizovaná syntéza zeleného NH₃ poháněná obnovitelnými zdroji jako médium pro CCU.</p>
+    </section>
 
-  <section id="postup" class="card">
-    <h2>Postup</h2>
-    <p>Probíhá návrh a validace; polní testování plánováno na Q3 2025.</p>
-  </section>
+    <section id="cile" class="card">
+      <h2>Cíle</h2>
+      <p>2 kW pilot (~1,5 kg NH₃/den), účinnost &gt;80 %, záchyt CO₂ &gt;90 %, modulární škálování.</p>
+    </section>
 
-  <section id="stazeni" class="card">
-    <h2>Ke stažení</h2>
-    <p><a class="btn" href="pdf/sscc-datasheet.pdf" target="_blank" rel="noopener">📄 PDF datasheet</a></p>
-  </section>
+    <section id="postup" class="card">
+      <h2>Postup</h2>
+      <p>Návrh + validace; polní testy cíl Q3/2025.</p>
+    </section>
 
-  <p style="margin-top:18px"><a href="projekty.html">← Zpět na projekty</a></p>
+    <section id="stazeni" class="card">
+      <h2>Ke stažení</h2>
+      <!-- Dočasně směřuji na zzz.html, ať je vidět, že klik funguje.
+           Až nahraješ PDF, změň href na pdf/sscc-datasheet.pdf -->
+      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet</a>
+    </section>
+
+    <p><a href="projekty.html">← Zpět na projekty</a> • <a href="index.html">Domů</a></p>
+  </main>
 </body>
 </html>
