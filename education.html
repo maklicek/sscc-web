@@ -1,106 +1,15 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Education — SSCC</title>
-  <style>
-    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
-    .wrap{max-width:1000px;margin:32px auto;padding:16px}
-    .grid{display:grid;gap:14px}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
-    .card{padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
-    a{color:#8ec5ff;text-decoration:none}
-    .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
-    /* --- click-safety patch --- */
-header, footer { position: sticky; top: 0; z-index: 2147483647; } /* header bude „nad vším“ */
-footer { position: relative; z-index: 2147483647; top: auto; }   /* a footer taky */
-a, .btn, nav a {
-  position: relative;
-  z-index: 2147483000;
-  pointer-events: auto !important;
-  cursor: pointer;
-}
-main { position: relative; z-index: 1; }
-/* pokud máš někde dekorativní „hero/overlay“, vypneme mu kliky: */
-.hero, .overlay, .cover, [data-decorative="true"] { pointer-events: none !important; }
-
-  <style>
-<head>
-<body>
-  <header id="site-header" style="background:linear-gradient(180deg,#0e1a25,#0d2233);padding:12px 30px;border-bottom:1px solid #1f3348;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2147483647">
-  <a href="index-en.html" style="color:#ffd65c;text-decoration:none;font-weight:700;position:relative;z-index:2147483000">← Back to home</a>
-  <nav style="display:flex;gap:18px">
-    <a href="projects.html"  style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Projects</a>
-    <a href="education.html" style="color:#ffd65c;font-weight:700;text-shadow:0 0 8px rgba(255,214,92,.4);position:relative;z-index:2147483000">Education</a>
-    <a href="ideas.html"     style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Ideas</a>
-    <a href="consortium.html"style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Consortium</a>
-  <nav>
-  <div><a href="index.html" style="color:#ffd65c;text-decoration:none;position:relative;z-index:2147483000">CZ</a> | <a href="index-en.html" style="color:#ffd65c;text-decoration:none;position:relative;z-index:2147483000">EN</a></div>
-<header>
-<!-- TEST odkaz, můžeš klidně smazat po ověření -->
-<p style="margin:10px 30px 0"><a href="index-en.html" style="color:#ffd65c;font-weight:700">TEST: Back to home</a></p>
-
-  <header style="
-  background: linear-gradient(180deg, #0e1a25, #0d2233);
-  color: #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  border-bottom: 1px solid #1f3348;
-  font-family: system-ui, sans-serif;
-">
-  <div>
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none; font-weight:600;">← Home</a>
-  <div>
-  <nav style="display:flex; gap:18px;">
-    <a href='projects.html' style="color:#fff; text-decoration:none;">Projects</a>
-    <a href='education.html' style="color:#fff; text-decoration:none;">Education</a>
-    <a href='ideas.html' style="color:#fff; text-decoration:none;">Ideas</a>
-    <a href='consortium.html' style="color:#fff; text-decoration:none;">Consortium</a>
-  <nav>
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none;">CZ</a> |
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">EN</a>
-  <div>
-</header>
-
-  <main class="wrap">
-    <h1>Education</h1>
-    <p>Solar → electricity → H₂ → NH₃. A simplified explanation of the SSCC process.</p>
-
-    <div class="grid" style="margin-top:12px">
-      <section class="card"><h2>1) Solar → Electricity</h2><p>Photovoltaics with ~20–23 % efficiency.</p></section>
-      <section class="card"><h2>2) Electrolysis → H₂</h2><p>≈50–55 kWh per kg of H₂ (LHV).</p></section>
-      <section class="card"><h2>3) Synthesis of NH₃</h2><p>H₂ + N₂ → NH₃ – a carbon-free energy carrier for CCU use.</p></section>
-      <section class="card"><h2>4) CCU</h2><p>Ammonia enables capture and reuse of CO₂ in industrial systems.</p></section>
-    <div>
-
-    <!-- zatím placeholder -->
-    <p style="margin-top:14px">
-      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet</a>
-      <a style="margin-left:12px" href="index-en.html">← Back to home</a>
-    <p>
-  <main>
-  <footer style="
-  background:#0d1a26;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-family:system-ui, sans-serif;
-  font-size:0.9em;
-  border-top:1px solid #1f3348;
-">
-  <div>
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">← Back to home</a>
-  <div>
-  <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-<footer>
-<footer id="site-footer" style="background:#0d1a26;color:#aaa;text-align:center;padding:20px;border-top:1px solid #1f3348;position:relative;z-index:2147483647">
-  <a href="index-en.html" style="color:#ffd65c;text-decoration:none;font-weight:700;position:relative;z-index:2147483000">← Back to home</a>
-  <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-<footer>
-
-<body>
-<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education — SSCC</title>
+<style>
+  body{margin:0;background:#0f172a;color:#e5e7eb;font:16px/1.6 system-ui}
+  .wrap{max-width:900px;margin:32px auto;padding:16px}
+  a{color:#ffd65c;text-decoration:none}
+</style>
+<div class="wrap">
+  <p><a href="index-en.html">← Back to home</a></p>
+  <h1>EDUCATION — TEST</h1>
+  <p>Pokud tohle vidíš, stránka se renderuje správně. Tady bude EN edukace.</p>
+  <p><a href="index-en.html">← Back to home</a></p>
+</div>
