@@ -1,26 +1,72 @@
 <!doctype html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects — SSCC</title>
-<style>
-  body{margin:0;background:#0f172a;color:#e5e7eb;font:16px/1.6 system-ui}
-  .wrap{max-width:900px;margin:32px auto;padding:16px}
-  a{color:#ffd65c;text-decoration:none}
-  .card{margin:12px 0;padding:12px;border:1px solid rgba(255,255,255,.15);border-radius:10px;background:rgba(255,255,255,.05)}
-  .btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:#e5e7eb}
-</style>
-<div class="wrap">
-  <p><a href="index-en.html">← Back to home</a></p>
-  <h1>PROJECTS — TEST</h1>
-  <div class="card">
-    <h2>Pilot: SSCC</h2>
-    <p>EN overview. Klik test níže:</p>
-    <a class="btn" href="project-sscc.html">Open pilot detail →</a>
-  </div>
-  <div class="card">
-    <h2>Upcoming</h2>
-    <p>Placeholder page.</p>
-    <a class="btn" href="coming-soon.html">Coming soon →</a>
-  </div>
-  <p><a href="index-en.html">← Back to home</a></p>
-</div>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — SSCC</title>
+  <style>
+    :root{--bg:#0f172a;--text:#e5e7eb}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui}
+    a{color:#ffd65c;text-decoration:none}
+
+    header, footer{position:relative; z-index:20}
+    main{position:relative; z-index:1}
+    .no-click{pointer-events:none !important}
+
+    .card{padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.04)}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+
+    .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:var(--text)}
+
+    .bar{background:linear-gradient(180deg,#0e1a25,#0d2233);border-bottom:1px solid #1f3348;
+         display:flex;justify-content:space-between;align-items:center;padding:12px 30px}
+    .nav{display:flex;gap:18px}
+    .foot{background:#0d1a26;border-top:1px solid #1f3348;text-align:center;padding:20px;color:#aaa}
+  </style>
+</head>
+<body>
+  <header class="bar">
+    <a href="index-en.html" style="font-weight:700">← Home</a>
+    <nav class="nav">
+      <a href="projects.html" style="color:#ffd65c;font-weight:700;text-shadow:0 0 8px rgba(255,214,92,.4)">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="ideas.html">Ideas</a>
+      <a href="consortium.html">Consortium</a>
+    </nav>
+    <div><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></div>
+  </header>
+
+  <div class="no-click" style="height:12px;background:linear-gradient(90deg,rgba(242,201,76,.15),rgba(142,197,255,.15))"></div>
+
+  <main style="max-width:1000px;margin:48px auto;padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))">
+    <p><a href="index-en.html">← Back to home</a></p>
+    <h1>Projects</h1>
+    <p class="lead">Overview of running and upcoming initiatives.</p>
+
+    <section class="grid" style="margin-top:16px">
+      <!-- Project 1: Pilot -->
+      <article class="card">
+        <h2>Pilot: SSCC (NH₃ &amp; CCU)</h2>
+        <p>Decentralized green NH₃ synthesis. Pilot 2 kW → ~1.5 kg/day. Target efficiency &gt;80%.</p>
+        <a class="btn" href="project-sscc.html">Detail EN →</a>
+        <a style="margin-left:8px" href="projekt-sscc.html">CZ</a>
+      </article>
+
+      <!-- Project 2: Upcoming -->
+      <article class="card">
+        <h2>Upcoming research</h2>
+        <p>Concept preparation, documentation and validation groundwork.</p>
+        <a class="btn" href="coming-soon.html">Coming soon →</a>
+      </article>
+    </section>
+
+    <p style="margin-top:20px"><a href="index-en.html">← Back to home</a></p>
+  </main>
+
+  <footer class="foot">
+    <a href="index-en.html" style="font-weight:700">← Back to home</a>
+    <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
+  </footer>
+</body>
+</html>
