@@ -1,38 +1,49 @@
-<header style="
-  background: linear-gradient(180deg, #0e1a25, #0d2233);
-  color: #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  border-bottom: 1px solid #1f3348;
-  font-family: system-ui, sans-serif;
-">
-  <div>
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none; font-weight:600;">← Home</a>
-  </div>
-  <nav style="display:flex; gap:18px;">
-    <a href='projects.html' style="color:#fff; text-decoration:none;">Projects</a>
-    <a href='education.html' style="color:#fff; text-decoration:none;">Education</a>
-    <a href='ideas.html' style="color:#fff; text-decoration:none;">Ideas</a>
-    <a href='consortium.html' style="color:#fff; text-decoration:none;">Consortium</a>
-  </nav>
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none;">CZ</a> |
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">EN</a>
-  </div>
-</header>
-<footer style="
-  background:#0d1a26;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-family:system-ui, sans-serif;
-  font-size:0.9em;
-  border-top:1px solid #1f3348;
-">
-  <div>
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">← Back to home</a>
-  </div>
-  <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-</footer>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ideas — SSCC</title>
+  <style>
+    body{margin:0;font:16px/1.6 system-ui;background:#0f172a;color:#e5e7eb}
+    .wrap{max-width:1000px;margin:32px auto;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02))}
+    a{color:#8ec5ff;text-decoration:none}
+    .grid{display:grid;gap:14px}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr}}
+    .card{padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
+    header{background:linear-gradient(180deg,#0e1a25,#0d2233);color:#eee;padding:12px 30px;border-bottom:1px solid #1f3348;display:flex;justify-content:space-between;align-items:center}
+    header nav{display:flex;gap:18px}
+    footer{background:#0d1a26;color:#aaa;text-align:center;padding:20px;border-top:1px solid #1f3348}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index-en.html" style="color:#ffd65c;text-decoration:none;font-weight:700">← Home</a>
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="ideas.html" style="color:#ffd65c;font-weight:700;text-shadow:0 0 8px rgba(255,214,92,.4)">Ideas</a>
+      <a href="consortium.html">Consortium</a>
+    </nav>
+    <div><a href="index.html" style="color:#ffd65c">CZ</a> | <a href="index-en.html" style="color:#ffd65c">EN</a></div>
+  </header>
+
+  <main class="wrap">
+    <h1>Concepts & Theoretical Ideas</h1>
+    <p>Exploratory thoughts and research directions still in theoretical stage.</p>
+
+    <div class="grid" style="margin-top:12px">
+      <section class="card"><h2>Wireless orbital energy transfer</h2><p>Microwave or laser-based power beaming from orbital platforms.</p></section>
+      <section class="card"><h2>Pyramid resonance hypothesis</h2><p>Potential use of pyramids as seismic dampers or electromagnetic amplifiers.</p></section>
+      <section class="card"><h2>Yellowstone project</h2><p>Geothermal energy and possible cooling stabilization models.</p></section>
+      <section class="card"><h2>Future concepts</h2><p>Plasma transfer, bio-solar interfaces, and beyond.</p></section>
+    </div>
+
+    <p style="margin-top:14px"><a href="index-en.html">← Back to home</a></p>
+  </main>
+
+  <footer>
+    <a href="index-en.html" style="color:#ffd65c;text-decoration:none">← Back to home</a>
+    <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
+  </footer>
+</body>
+</html>
