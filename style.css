@@ -129,3 +129,29 @@ footer {
 
 /* === CLICK SAFETY === */
 .no-click { pointer-events: none !important; }
+/* === CLICK SAFETY (globální) === */
+header, footer {
+  position: relative;
+  z-index: 1000;              /* nad dekoracemi i obsahem */
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+a, .btn, nav a, .btn-back {
+  position: relative;
+  z-index: 1001;              /* odkazy vždy „navrchu“ */
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* cokoliv dekorativního nesmí brát kliky */
+.no-click, .decor, .divider, .hero, .overlay, [data-decorative="true"] {
+  pointer-events: none !important;
+}
+
+/* pro jistotu: každý přímý potomek body je relativní vrstva */
+body > * { position: relative; }
+
