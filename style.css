@@ -154,4 +154,7 @@ a, .btn, nav a, .btn-back {
 
 /* pro jistotu: každý přímý potomek body je relativní vrstva */
 body > * { position: relative; }
+/* skryje případné „back“ odkazy přímo v obsahu, ponechá jen footer */
+main > p > a[href$="index.html"],
+main > p > a[href$="index-en.html"] { display:none; }
 
