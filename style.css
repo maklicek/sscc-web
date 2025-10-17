@@ -259,4 +259,24 @@ html {
   text-shadow: 0 0 15px rgba(255,214,92,.3);
 }
 .hero .lead{ color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5em; }
+.hero{
+  position: relative;
+  background-image: url('https://maklicek.github.io/sscc-web/ChatGPT%20Image%2017.%2010.%202025%2021_59_53.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  text-align: center;
+  padding: 80px 20px 100px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 320px;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.85));
+  pointer-events:none;
+}
+
 
