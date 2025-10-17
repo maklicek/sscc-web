@@ -18,6 +18,19 @@
     header{background:linear-gradient(180deg,#0e1a25,#0d2233);color:#eee;padding:12px 30px;border-bottom:1px solid #1f3348;display:flex;justify-content:space-between;align-items:center}
     header nav{display:flex;gap:18px}
     footer{background:#0d1a26;color:#aaa;text-align:center;padding:20px;border-top:1px solid #1f3348}
+    /* --- click-safety patch --- */
+header, footer { position: sticky; top: 0; z-index: 2147483647; } /* header bude „nad vším“ */
+footer { position: relative; z-index: 2147483647; top: auto; }   /* a footer taky */
+a, .btn, nav a {
+  position: relative;
+  z-index: 2147483000;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+main { position: relative; z-index: 1; }
+/* pokud máš někde dekorativní „hero/overlay“, vypneme mu kliky: */
+.hero, .overlay, .cover, [data-decorative="true"] { pointer-events: none !important; }
+
   </style>
 </head>
 <body>
