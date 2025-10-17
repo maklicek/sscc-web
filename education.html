@@ -12,6 +12,19 @@
     .card{padding:14px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.04)}
     a{color:#8ec5ff;text-decoration:none}
     .btn{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
+    /* --- click-safety patch --- */
+header, footer { position: sticky; top: 0; z-index: 2147483647; } /* header bude „nad vším“ */
+footer { position: relative; z-index: 2147483647; top: auto; }   /* a footer taky */
+a, .btn, nav a {
+  position: relative;
+  z-index: 2147483000;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+main { position: relative; z-index: 1; }
+/* pokud máš někde dekorativní „hero/overlay“, vypneme mu kliky: */
+.hero, .overlay, .cover, [data-decorative="true"] { pointer-events: none !important; }
+
   </style>
 </head>
 <body>
