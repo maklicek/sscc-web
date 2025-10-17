@@ -157,4 +157,57 @@ body > * { position: relative; }
 /* skryje případné „back“ odkazy přímo v obsahu, ponechá jen footer */
 main > p > a[href$="index.html"],
 main > p > a[href$="index-en.html"] { display:none; }
+/* ========== SSCC — JEMNÉ VIZUÁLNÍ VYLEPŠENÍ ========== */
+
+/* === 1) Hover efekt tlačítka ZPĚT === */
+.btn-back {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 10px;
+  color: var(--accent);
+  background: rgba(255,255,255,.05);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-back:hover {
+  background: linear-gradient(90deg, #0f3a4a, #f4d36a);
+  color: #00131a;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255,214,92,.5);
+}
+
+/* === 2) Stejný vzhled HLAVIČKY a PATIČKY === */
+header, footer {
+  background: linear-gradient(180deg, #0b1728, #0d2233);
+  border-color: rgba(255,255,255,.08);
+  box-shadow: 0 0 20px rgba(0,0,0,.4);
+}
+
+/* === 3) Přechod při přepnutí jazyka (fade in/out) === */
+html {
+  animation: fadeIn .7s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.99); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* === Bonus: zvýraznění přepínače jazyka === */
+.nav-lang a {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  transition: all .25s ease;
+}
+.nav-lang a:hover {
+  background: var(--accent);
+  color: #00131a;
+}
+.nav-lang a[aria-current="page"] {
+  background: var(--accent);
+  color: #00131a;
+  font-weight: 700;
+}
 
