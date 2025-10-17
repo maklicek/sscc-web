@@ -15,21 +15,17 @@
     .card{padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.04)}
     .btn{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(90deg,#0f3a4a,#f4d36a);color:#00131a;font-weight:800;text-decoration:none}
     /* header/footer */
-    header{background:linear-gradient(180deg,#0e1a25,#0d2233);color:#eee;padding:12px 30px;border-bottom:1px solid #1f3348;display:flex;justify-content:space-between;align-items:center}
-    header nav{display:flex;gap:18px}
-    footer{background:#0d1a26;color:#aaa;text-align:center;padding:20px;border-top:1px solid #1f3348}
-    /* --- click-safety patch --- */
-header, footer { position: sticky; top: 0; z-index: 2147483647; } /* header bude „nad vším“ */
-footer { position: relative; z-index: 2147483647; top: auto; }   /* a footer taky */
-a, .btn, nav a {
-  position: relative;
-  z-index: 2147483000;
-  pointer-events: auto !important;
-  cursor: pointer;
-}
-main { position: relative; z-index: 1; }
-/* pokud máš někde dekorativní „hero/overlay“, vypneme mu kliky: */
-.hero, .overlay, .cover, [data-decorative="true"] { pointer-events: none !important; }
+   <header id="site-header" style="background:linear-gradient(180deg,#0e1a25,#0d2233);padding:12px 30px;border-bottom:1px solid #1f3348;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:2147483647">
+  <a href="index-en.html" style="color:#ffd65c;text-decoration:none;font-weight:700;position:relative;z-index:2147483000">← Home</a>
+  <nav style="display:flex;gap:18px">
+    <a href="projects.html"  style="color:#ffd65c;font-weight:700;text-shadow:0 0 8px rgba(255,214,92,.4);position:relative;z-index:2147483000">Projects</a>
+    <a href="education.html" style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Education</a>
+    <a href="ideas.html"     style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Ideas</a>
+    <a href="consortium.html"style="color:#fff;text-decoration:none;position:relative;z-index:2147483000">Consortium</a>
+  </nav>
+  <div><a href="index.html" style="color:#ffd65c;text-decoration:none;position:relative;z-index:2147483000">CZ</a> | <a href="index-en.html" style="color:#ffd65c;text-decoration:none;position:relative;z-index:2147483000">EN</a></div>
+</header>
+<p style="margin:10px 30px 0"><a href="coming-soon.html" style="color:#ffd65c;font-weight:700">TEST: Coming soon</a></p>
 
   </style>
 </head>
