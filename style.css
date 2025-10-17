@@ -278,5 +278,13 @@ html {
   background: linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.85));
   pointer-events:none;
 }
+/* === Globální styl pro pozadí stránky === */
+body {
+  background: url('assets/hero-bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #e6e6e6;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
 
 
