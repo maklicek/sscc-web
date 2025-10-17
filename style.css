@@ -211,39 +211,23 @@ html {
   font-weight: 700;
 }
 /* === ÚVODNÍ BANNER (HERO) === */
-.hero {
+.hero{
   position: relative;
-  background: linear-gradient(180deg, rgba(15,23,42,0.85), rgba(15,23,42,1)),
-              url('assets/hero-bg.jpg') center/cover no-repeat;
+  background-image: url('https://maklicek.github.io/sscc-web/assets/hero-bg.jpg'); /* nebo /hero-bg.jpg dle kroku 1 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--text);
   text-align: center;
   padding: 80px 20px 100px;
   border-radius: var(--radius);
   overflow: hidden;
+  min-height: 320px; /* pojistka, ať je oblast vidět */
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 40%, rgba(255,214,92,.1), transparent 70%);
-  pointer-events: none;
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.85));
+  pointer-events:none;
 }
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.hero h1 {
-  font-size: clamp(2rem, 3vw + 1rem, 3.2rem);
-  margin-bottom: .3em;
-  color: var(--accent);
-  text-shadow: 0 0 15px rgba(255,214,92,.3);
-}
-.hero .lead {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 1.5em;
-}
-
-
+.hero-inner{ position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
