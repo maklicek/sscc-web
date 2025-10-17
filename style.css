@@ -283,11 +283,40 @@ html {
 }
 /* === Globální styl pro pozadí stránky === */
 body {
-  background: url('assets/hero-bg.png') no-repeat center center fixed;
+.hero{
+  position: relative;
+  background-image: url('assets/hero-bg.png');
   background-size: cover;
-  color: #e6e6e6;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  text-align: center;
+  padding: 80px 20px 100px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 320px;
+  margin-bottom: 24px;      /* trochu místa pod hero */
 }
-
-
+html, body{
+.hero{
+  position: relative;
+  background-image: url('assets/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text);
+  text-align: center;
+  padding: 80px 20px 100px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 320px;
+  margin-bottom: 24px;      /* trochu místa pod hero */
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(15,23,42,.55), rgba(15,23,42,.85));
+  pointer-events:none;
+}
+.hero h1{ font-size: clamp(2rem, 3vw + 1rem, 3.2rem); margin-bottom:.3em; color: var(--accent); }
+.hero .lead{ color: var(--muted); font-size: 1.1rem; margin-bottom: 1.5em; }
