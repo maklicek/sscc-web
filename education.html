@@ -3,54 +3,26 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Education — SSCC</title>
- <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="bar">
-    <a href="index-en.html" style="font-weight:700">← Home</a>
-    <nav class="nav">
-      <a href="projects.html">Projects</a>
-      <a href="education.html" style="color:#ffd65c;font-weight:700;text-shadow:0 0 8px rgba(255,214,92,.4)">Education</a>
-      <a href="ideas.html">Ideas</a>
-      <a href="consortium.html">Consortium</a>
-    </nav>
-    <div><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></div>
-  </header>
+<header><div class="container nav">
+  <a class="brand" href="index-en.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projects.html">Projects</a><a aria-current="page" href="education.html">Education</a>
+    <a href="ideas.html">Ideas</a><a href="consortium.html">Consortium</a>
+    <span class="lang"><a href="index.html">CZ</a> | <a aria-current="page" href="index-en.html">EN</a></span>
+  </nav>
+</div></header>
 
-  <!-- Dekorativní blok (není klikací) -->
-  <div class="no-click" style="height:12px;background:linear-gradient(90deg,rgba(242,201,76,.15),rgba(142,197,255,.15))"></div>
-
-  <main style="max-width:1000px;margin:32px auto;padding:16px">
-    <p><a href="index-en.html">← Back to home</a></p>
+<main class="container">
+  <p><a class="back" href="index-en.html">← Back to home</a></p>
+  <article class="card">
     <h1>Education</h1>
-    <p>Solar → electricity → H₂ → NH₃. A simplified overview of the SSCC flow.</p>
+    <p>How the flow works: Sun → electricity → H₂ → NH₃, CO₂ capture.</p>
+    <p><a class="btn" href="pdf/sscc-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a></p>
+  </article>
+</main>
 
-    <div class="grid" style="margin-top:12px">
-      <section class="card"><h2>1) Solar → Electricity</h2><p>Photovoltaics ~20–23% efficiency; output depends on irradiance.</p></section>
-      <section class="card"><h2>2) Electrolysis → H₂</h2><p>≈50–55 kWh per kg H₂ (LHV) depending on stack & balance-of-plant.</p></section>
-      <section class="card"><h2>3) NH₃ synthesis</h2><p>H₂ + N₂ → NH₃ — carbon-free energy carrier & CCU medium.</p></section>
-      <section class="card"><h2>4) CCU</h2><p>NH₃ enables CO₂ capture & utilization in decentralized use-cases.</p></section>
-    </div>
-
-    <p style="margin-top:14px">
-      <a href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a>
-    </p>
-
-    <p><a href="index-en.html">← Back to home</a></p>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="foot">
-  
-    <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-  </footer>
-  <footer class="site-footer">
-  <a class="btn-back" href="index-en.html">← Back to home</a>
-  <div style="margin-top:8px;color:#aaa">© SSCC Initiative — 2025</div>
-</footer>
-
-</body>
-</html>
+<footer><div class="container">© SSCC Initiative — 2025</div></footer>
+</body></html>
