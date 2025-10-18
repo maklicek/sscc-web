@@ -1,74 +1,28 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <link rel="stylesheet" href="style.css">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Edukace — SSCC</title>
-
-<head>
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
 <body>
-  <header style="
-  background: linear-gradient(180deg, #0e1a25, #0d2233);
-  color: #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  border-bottom: 1px solid #1f3348;
-  font-family: system-ui, sans-serif;
-">
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none; font-weight:600;">← Domů</a>
-  <div>
-  <nav style="display:flex; gap:18px;">
-    <a href='projekty.html' style="color:#fff; text-decoration:none;">Projekty</a>
-    <a href='edukace.html' style="color:#fff; text-decoration:none;">Edukace</a>
-    <a href='napady.html' style="color:#fff; text-decoration:none;">Nápady</a>
-    <a href='konsorcium.html' style="color:#fff; text-decoration:none;">Konsorcium</a>
-  <nav>
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none;">CZ</a> |
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">EN</a>
-  <div>
-<header>
+<header><div class="container nav">
+  <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projekty.html">Projekty</a><a aria-current="page" href="edukace.html">Edukace</a>
+    <a href="napady.html">Nápady</a><a href="konsorcium.html">Konsorcium</a>
+    <span class="lang"><a aria-current="page" href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+  </nav>
+</div></header>
 
-  <main class="wrap">
+<main class="container">
+  <p><a class="back" href="index.html">← Zpět na úvod</a></p>
+  <article class="card">
     <h1>Edukace</h1>
-    <p>Slunce → elektřina → H₂ → NH₃. Stručné vysvětlení + odkaz (zatím dočasný).</p>
+    <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃, zachyt CO₂.</p>
+    <p><a class="btn" href="pdf/sscc-datasheet.pdf" target="_blank" rel="noopener">PDF datasheet</a></p>
+  </article>
+</main>
 
-    <div class="grid" style="margin-top:12px">
-      <section class="card"><h2>1) Slunce → elektřina</h2><p>PV ~20–23 %.</p></section>
-      <section class="card"><h2>2) Elektrolýza → H₂</h2><p>≈50–55 kWh/kg H₂ (LHV).</p></section>
-      <section class="card"><h2>3) Syntéza NH₃</h2><p>H₂ + N₂ → NH₃ (nosič energie, CCU).</p></section>
-      <section class="card"><h2>4) CCU</h2><p>NH₃ podporuje zachycení a využití CO₂.</p></section>
-    <div>
-
-    <!-- Dočasně zzz.html, ať víš, že klik funguje -->
-    <p style="margin-top:14px">
-      <a class="btn" href="zzz.html" target="_blank" rel="noopener">📄 PDF datasheet</a>
-      <a style="margin-left:12px" href="index.html">← Domů</a>
-    <p>
-  <main>
-  <footer style="
-  background:#0d1a26;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-family:system-ui, sans-serif;
-  font-size:0.9em;
-  border-top:1px solid #1f3348;
-">
-  <div>
-   
-  <div>
-  <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-<footer>
-<footer class="site-footer">
-  <a class="btn-back" href="index.html">← Zpět na úvod</a>
-  <div style="margin-top:8px;color:#aaa">© SSCC Initiative — 2025</div>
-</footer>
-
-<body>
-<html>
+<footer><div class="container">© SSCC Initiative — 2025</div></footer>
+</body></html>
