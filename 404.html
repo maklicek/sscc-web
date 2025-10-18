@@ -1,1 +1,40 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Stránka nenalezena | SSCC</title>
+  <link rel="stylesheet" href="style.css?v=10">
+  <style>
+    main{max-width:800px;margin:60px auto;padding:32px}
+    .code{opacity:.7;font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+      <nav class="menu">
+        <a href="projekty.html">Projekty</a><a href="edukace.html">Edukace</a>
+        <a href="napady.html">Nápady</a><a href="konsorcium.html">Konsorcium</a>
+        <span class="lang"><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container card">
+    <h1>404 — Stránka nenalezena</h1>
+    <p>Adresa, kterou jste zadali, na tomto webu neexistuje.</p>
+    <p class="code">URL: <span id="path"></span></p>
+    <p>
+      <a class="btn" href="index.html">← Zpět na úvod (CZ)</a>
+      <a class="btn secondary" href="index-en.html">Home (EN) →</a>
+    </p>
+  </main>
+
+  <footer><div class="container">© SSCC Initiative — 2025</div></footer>
+
+  <script>document.getElementById('path').textContent = location.pathname;</script>
+</body>
+</html>
 
