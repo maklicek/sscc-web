@@ -60,22 +60,6 @@ Projekt **SSCC – SolarSpace Carbon Cycle** představuje iniciativu zaměřenou
 
 ---
 
-## 🧩 **Další soubory**
-- `style.css` — hlavní styl webu  
-- `assets/` — obrázky, loga, pozadí  
-- `pdf/` — datasheety a doprovodné dokumenty  
-- `404.html` — stránka pro nenalezené odkazy  
-- `robots.txt`, `sitemap.xml` — pro vyhledávače  
-- `_redirects` — (používá se pouze u Netlify hostingu)
-
----
-
-## ⚙️ **Nasazení**
-Web je hostován na **GitHub Pages**  
-a automaticky se aktualizuje po každém commitu do větve `main`.
-
-Pokud budeš chtít nasadit také na **Netlify**,  
-soubor `_redirects` a `sitemap.xml` jsou již připravené.
 
 ---
 
