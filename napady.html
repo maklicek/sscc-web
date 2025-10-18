@@ -1,70 +1,31 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <link rel="stylesheet" href="style.css">
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nápady — SSCC</title>
-
-<head>
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
 <body>
-  <header style="
-  background: linear-gradient(180deg, #0e1a25, #0d2233);
-  color: #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 30px;
-  border-bottom: 1px solid #1f3348;
-  font-family: system-ui, sans-serif;
-">
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none; font-weight:600;">← Domů</a>
-  <div>
-  <nav style="display:flex; gap:18px;">
-    <a href='projekty.html' style="color:#fff; text-decoration:none;">Projekty</a>
-    <a href='edukace.html' style="color:#fff; text-decoration:none;">Edukace</a>
-    <a href='napady.html' style="color:#fff; text-decoration:none;">Nápady</a>
-    <a href='konsorcium.html' style="color:#fff; text-decoration:none;">Konsorcium</a>
-  /nav>
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none;">CZ</a> |
-    <a href='index-en.html' style="color:#ffd65c; text-decoration:none;">EN</a>
-  <div>
-<header>
+<header><div class="container nav">
+  <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projekty.html">Projekty</a><a href="edukace.html">Edukace</a>
+    <a aria-current="page" href="napady.html">Nápady</a><a href="konsorcium.html">Konsorcium</a>
+    <span class="lang"><a aria-current="page" href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+  </nav>
+</div></header>
 
-  <main class="wrap">
-    <h1>Nápady a teoretické projekty</h1>
-    <p>Zde budou uvedeny nápady, hypotézy a směry, které jsou zatím v konceptuální fázi.</p>
+<main class="container">
+  <p><a class="back" href="index.html">← Zpět na úvod</a></p>
+  <article class="card">
+    <h1>Nápady &amp; vize</h1>
+    <ul class="list">
+      <li>Energie ze satelitu → přenos na pozemní rectenny</li>
+      <li>Mitigace supervulkánu (Yellowstone) — teoretické úvahy</li>
+      <li>Hypotéza „energetických“ pyramid — zemní rezonance</li>
+    </ul>
+  </article>
+</main>
 
-    <div class="grid" style="margin-top:12px">
-      <section class="card"><h2>Energie ze satelitu</h2><p>Přenos bezdrátové energie z orbity na Zemi (pilotní studie).</p></section>
-      <section class="card"><h2>Pyramidy jako rezonátory</h2><p>Hypotéza, že pyramidy mohly mít energetickou funkci nebo tlumit rázy země.</p></section>
-      <section class="card"><h2>Yellowstone</h2><p>Možnosti řízeného chlazení magmatické komory nebo monitoringu tlaku.</p></section>
-      <section class="card"><h2>Další koncepty</h2><p>Např. přenos energie plazmovým paprskem, bio-solární články aj.</p></section>
-    <div>
-
-    <p style="margin-top:14px"><a href="index.html">← Zpět na úvod</a></p>
-  <main>
-  <footer style="
-  background:#0d1a26;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-  font-family:system-ui, sans-serif;
-  font-size:0.9em;
-  border-top:1px solid #1f3348;
-">
-  <div>
-    <a href='index.html' style="color:#ffd65c; text-decoration:none;">← Zpět na úvod</a>
-  <div>
-  <div style="margin-top:8px;">© SSCC Initiative — 2025</div>
-<footer>
-<footer class="site-footer">
-  <a class="btn-back" href="index.html">← Zpět na úvod</a>
-  <div style="margin-top:8px;color:#aaa">© SSCC Initiative — 2025</div>
-</footer>
-
-<body>
-<html>
+<footer><div class="container">© SSCC Initiative — 2025</div></footer>
+</body></html>
