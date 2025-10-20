@@ -111,3 +111,37 @@ footer{border-top:1px solid var(--stroke);color:var(--muted);padding:24px 0;marg
 /* === DROBNOSTI === */
 .back{display:inline-flex;gap:.5rem;align-items:center;padding:.55rem .8rem;border-radius:10px;border:1px solid var(--stroke)}
 .list{margin:.6rem 0 0 1rem}
+/* ====== Tiles (rozcestník) – robustní layout ====== */
+.tiles{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+@media (max-width:900px){
+  .tiles{ grid-template-columns:1fr; }
+}
+.tile{
+  display:grid;
+  grid-template-columns:1fr 180px;
+  align-items:center;
+  padding:20px;
+  border-radius:16px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+}
+.tile-body h3{
+  margin:0 0 8px;
+  font-size:22px;
+}
+.tile-body p{
+  margin:0;
+  color:var(--muted,#94a3b8);
+}
+.tile-thumb{
+  width:180px;
+  height:120px;
+  border-radius:12px;
+  background-size:cover;
+  background-position:center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
