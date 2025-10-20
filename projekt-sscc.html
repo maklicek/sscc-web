@@ -39,6 +39,26 @@
 
   <link rel="stylesheet" href="style.css?v=10">
   <style>
+  /* Aby bylo co vidět, a aby pravidlo určitě platilo */
+  section.section {
+    position: relative;
+    min-height: 360px;           /* jistíme výšku */
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    background:
+      linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+      url('https://maklicek.github.io/sscc-web/assets/hub-projekty.jpg') center/cover no-repeat,
+      rgba(255,255,255,0.03);
+  }
+
+  section.section h2 { color: #ffd75e; text-shadow: 0 0 8px rgba(0,0,0,0.6); }
+  section.section p  { color: #e6e6e6; }
+</style>
+
+  <style>
   /* Pozadí a vzhled sekcí pro stránku Projekt SSCC */
   section.section {
     position: relative;
