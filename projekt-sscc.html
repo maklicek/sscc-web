@@ -25,29 +25,27 @@
 
   <link rel="stylesheet" href="style.css?v=10">
   <style>
-    <style>
-  /* --- Jemné pozadí pro kartu projektu --- */
+  <style>
+  /* --- Jemné vrstvené pozadí přímo na kartě --- */
   article.card {
     position: relative;
-    background: rgba(255,255,255,0.03);
     border-radius: 16px;
+    overflow: hidden; /* zaoblení bude platit i pro pozadí */
     padding: 2rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    overflow: hidden;
+
+    /* vrstvy: 1) ztmavovací film (nahoře), 2) fotka, 3) fallback barva */
+    background:
+      linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+      url('aktiva/obrazek/hub-projekty.jpg?v=1') center/cover no-repeat,
+      rgba(255,255,255,0.03);
   }
 
-  article.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('aktiva/obrazek/hub-projekty.jpg') center/cover no-repeat;
-    opacity: 0.15;        /* průhlednost pozadí */
-    z-index: 0;
-  }
-
-  article.card * {
-    position: relative;
-    z-index: 1;
+  /* pro jistotu, ať nic nepřebíjí layout */
+  main {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 24px;
   }
 </style>
 
