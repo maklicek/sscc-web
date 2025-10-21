@@ -1,16 +1,44 @@
 /* ========== SSCC GLOBAL STYLE ========== */
 
 /* === ZÁKLADNÍ PROMĚNNÉ === */
+/* === TÓNY / PROMĚNNÉ === */
 :root{
-  --bg:#0f172a;         /* tmavé pozadí */
-  --bg-soft:#111b34;
-  --text:#e5e7eb;
+  --bg:#0e1420;        /* tmavé pozadí – o chlup světlejší než dřív */
+  --bg-soft:#141d2d;   /* pruh hlavičky a boxy */
+  --text:#e6e6e6;
   --muted:#9aa7bd;
-  --accent:#ffd65c;     /* zlatá */
-  --accent-2:#6fe7dd;   /* tyrkys */
+  --accent:#ffd55a;    /* „zlatá“ */
   --stroke:rgba(255,255,255,.08);
   --radius:16px;
-  --shadow:0 12px 40px rgba(0,0,0,.35);
+  --shadow:0 0 20px rgba(0,0,0,.25);
+}
+
+/* Základ */
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+
+/* Hlavička / top bar sladíme se stránkou */
+header, .topbar{
+  background:linear-gradient(0deg, rgba(0,0,0,.0), rgba(255,255,255,.02));
+  backdrop-filter:saturate(120%) blur(6px);
+  border-bottom:1px solid var(--stroke);
+}
+
+/* Kontejner obsahu */
+.container{width:min(1120px, 92vw); margin-inline:auto; padding:24px}
+
+/* --- ROZCESTNÍK (dlaždice) --- */
+.hub { padding:32px 0 }
+.hub-grid{ display:grid; gap:38px; grid-template-columns:repeat(2,minmax(380px, 520px)); justify-content:center }
+.tile{
+  position:relative; height:220px; border-radius:var(--radius);
+  background:rgba(255,255,255,.03); box-shadow:var(--shadow); overflow:hidden;
+}
+.tile-body{ padding:22px }
+.tile-thumb{
+  position:absolute; right:16px; bottom:16px; width:160px; height:120px;
+  background-size:cover; background-position:center; border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,.35);
 }
 
 /* === RESET + TYPO === */
