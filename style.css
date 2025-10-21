@@ -272,6 +272,14 @@ section.section{
   background: rgba(255,255,255,.03);
   box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
-
+/* HERO (úvodní pás s názvem) – volitelné */
+.hero{
+  background:
+    radial-gradient(900px 400px at 50% -200px, rgba(255,213,90,.35), transparent 60%),
+    url('assets/hero-bg.png') center/cover no-repeat,
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.35));
+  border-bottom:1px solid var(--stroke);
 }
+.brand img{ height:24px; vertical-align:middle }
+
 
