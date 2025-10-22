@@ -388,5 +388,63 @@ header {
   background: rgba(14,18,27,.85);
   backdrop-filter: blur(8px);
 }
+/* ------------- Fix layout & univerzální jističe ------------- */
+
+/* univerzál: obrázky se nikdy nerozjedou */
+img { max-width: 100%; height: auto; display: block; }
+
+/* max šířka obsahu + vycentrování */
+main { width: min(1100px, 92%); margin: 0 auto; }
+
+/* dlaždice rozcestníku – 2 sloupce na desktopu */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 32px;
+}
+.tile { display: block; text-decoration: none; }
+.tile-body { padding: 18px 18px 0; }
+.tile-thumb {
+  height: 160px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+/* „karta“ (card) se stínem */
+.card, .section {
+  background: rgba(255,255,255,.03);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+/* tlačítka – konzistentní vzhled */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #113b4a, #2b4250);
+  color: #e6e6e6;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.btn:hover { filter: brightness(1.06); }
+
+/* hrdina/hero obrázek (pokud ho používáš) */
+.hero {
+  min-height: 360px; /* jistota */
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28)),
+    url('assets/img/hub-projekty.jpg') center/cover no-repeat; /* libovolný hero */
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+/* responsivita */
+@media (max-width: 860px) {
+  .tiles { grid-template-columns: 1fr; }
+}
 
 
