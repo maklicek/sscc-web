@@ -32,17 +32,26 @@ header, .topbar{
 
 
 /* Kontejner obsahu */
-.container{width:min(1120px, 92vw); margin-inline:auto; padding:24px}
+/* Kontejner hlavního obsahu na detailech */
+main{ max-width: 1100px; margin: 0 auto; padding: 24px; }
 
-/* --- ROZCESTNÍK (dlaždice) --- */
-/* Rozcestník: grid + dlaždice */
-.hub-grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(320px, 1fr));
-  gap:28px;
-  max-width: 1100px;
-  margin: 0 auto;                 /* vycentrování */
-  padding: 8px 12px 28px;
+/* Box s obsahem (vpravo) a jeho karty */
+.section{ position:relative; }
+.card{
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  padding: 22px;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+/* malé karty ve sloupci vpravo */
+.card .card{ margin-top: 14px; }
+
+/* „obří“ podkladový obrázek nahoře – nechť nepřetéká */
+.hero-figure img, .section img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
 }
 
 .tile{
