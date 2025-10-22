@@ -35,18 +35,39 @@ header, .topbar{
 .container{width:min(1120px, 92vw); margin-inline:auto; padding:24px}
 
 /* --- ROZCESTNÍK (dlaždice) --- */
-.hub { padding:32px 0 }
-.hub-grid{ display:grid; gap:38px; grid-template-columns:repeat(2,minmax(380px, 520px)); justify-content:center }
+/* Rozcestník: grid + dlaždice */
+.hub-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap:28px;
+  max-width: 1100px;
+  margin: 0 auto;                 /* vycentrování */
+  padding: 8px 12px 28px;
+}
+
 .tile{
-  position:relative; height:220px; border-radius:var(--radius);
-  background:rgba(255,255,255,.03); box-shadow:var(--shadow); overflow:hidden;
+  display:block;
+  position:relative;
+  min-height: 210px;
+  border-radius:16px;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  overflow:hidden;
+  transition: transform .15s ease;
 }
-.tile-body{ padding:22px }
+.tile:hover{ transform: translateY(-2px); }
+
+.tile-body{ padding:22px; max-width: 60ch; }
 .tile-thumb{
-  position:absolute; right:16px; bottom:16px; width:160px; height:120px;
-  background-size:cover; background-position:center; border-radius:12px;
-  box-shadow:0 8px 24px rgba(0,0,0,.35);
+  position:absolute; right:16px; bottom:16px;
+  width: 220px; height: 140px;
+  border-radius:12px;
+  background-size: cover; background-position: center;
+  opacity:.92;
 }
+
+/* konzistence horní lišty – bez světlejšího pásu */
+header{ background: transparent; box-shadow: none; }
 
 /* === RESET + TYPO === */
 *{box-sizing:border-box}
