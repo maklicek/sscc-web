@@ -297,5 +297,63 @@ section.section{
   border-bottom:1px solid var(--stroke);
 }
 .brand img{ height:24px; vertical-align:middle }
+/* --- Obrázky vždy responzivně --- */
+img { max-width: 100%; height: auto; }
+
+/* --- Rozcestník / dlaždice --- */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 28px;
+}
+.tile {
+  display: block;
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  text-decoration: none;
+}
+.tile-body h3 { margin: 0 0 8px; }
+.tile-thumb {
+  margin-top: 12px;
+  height: 160px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Hero pás na úvodu (slunce) --- */
+.hero {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% -10%, rgba(255,208,64,.25), rgba(0,0,0,0) 65%),
+    url('assets/hero-bg.png') center/cover no-repeat,
+    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28));
+}
+
+/* --- Detail projektu: jemný panel a pozadí stránky --- */
+.page-project main .section {
+  position: relative;
+  border-radius: 16px;
+  padding: 24px;
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+.page-project {
+  background:
+    url('assets/img/hub-projekty.jpg') center/cover no-repeat fixed,
+    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28));
+}
+
+/* --- Navigace / header jemně tmavší než zbytek --- */
+header {
+  background: rgba(14,18,27,.85);
+  backdrop-filter: blur(8px);
+}
 
 
