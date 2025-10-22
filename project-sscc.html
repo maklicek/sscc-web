@@ -1,81 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project SSCC — NH₃ & CCU</title>
-  <link rel="icon" href="assets/favicons/favicon-32.png">
-  <link rel="stylesheet" href="style.css">
+  <title>Projekt SSCC — Pilot (NH₃ & CCU)</title>
+
+  <!-- sdílené styly -->
+  <link rel="stylesheet" href="style.css?v=12">
+
+  <!-- lokální CSS pro detail projektu (POZOR: uvnitř <head>) -->
   <style>
-  /* Pozadí a vzhled karty projektu SSCC */
- 
-</style>
-<!-- … ostatní <meta> a <link> … -->
-<link rel="stylesheet" href="style.css?v=11">
-
-<style>
-  /* základ rozložení detailu */
-  main{ max-width:1120px; margin:0 auto; padding:24px }
-  section.section{
-    position:relative; margin:24px 0; padding:24px;
-    background:rgba(255,255,255,.03); border-radius:16px;
-    box-shadow:0 0 20px rgba(0,0,0,.25);
-  }
-  /* decentní fotka v pozadí, ale text zůstane čitelný */
-  section.section::before{
-    content:""; position:absolute; inset:0; border-radius:16px; z-index:0;
-    background:
-      radial-gradient(180px 140px at 85% 85%, rgba(0,0,0,.55), transparent 70%),
-      linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.15)),
-      url('assets/img/hub-projekty.jpg') center/cover no-repeat;
-  }
-  section.section > *{ position:relative; z-index:1 }
-  .section ul{ margin:0 0 0 1.25rem; padding:0 }
-  .section li{ margin:.35rem 0 }
-</style>
+    main{max-width:1120px;margin:0 auto;padding:24px}
+    .back{display:inline-block;margin:8px 0 0 0}
+    section.section{
+      position:relative;margin:24px 0;padding:24px;
+      background:rgba(255,255,255,.03);border-radius:16px;
+      box-shadow:0 0 20px rgba(0,0,0,.25);
+    }
+    section.section::before{
+      content:"";position:absolute;inset:0;border-radius:16px;z-index:0;
+      background:
+        radial-gradient(200px 160px at 85% 90%, rgba(0,0,0,.55), transparent 70%),
+        linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.15)),
+        url('assets/img/hub-projekty.jpg') center / cover no-repeat;
+      filter:saturate(.9);
+    }
+    section.section > *{position:relative;z-index:1}
+    .section h1{color:#ffd75e;text-shadow:0 0 8px rgba(0,0,0,.6);margin:0 0 12px}
+    .section p{color:#e6e6e6}
+    .section ul{margin:0 0 0 1.2rem;padding:0}
+    .section li{margin:.4rem 0}
+    .btn{display:inline-block;margin-top:12px}
+  </style>
 </head>
 
-</head>
 <body>
-<header class="container nav">
-  <a class="back" href="index-en.html">← Home</a>
-  <nav style="margin-left:auto;">
-    <a class="back" href="project-sscc.html">CZ</a>
-    <a class="back" href="project-sscc-en.html" aria-current="page">EN</a>
-  </nav>
-</header>
+  <header class="container nav">
+    <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+    <nav class="menu" style="margin-left:auto;">
+      <a href="projekty.html">Projekty</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="napady.html">Nápady</a>
+      <a href="konsorcium.html">Konsorcium</a>
+      <span class="lang"><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+    </nav>
+  </header>
 
-<main>
-  <section class="section">
-    <h2>SSCC Pilot — NH₃ &amp; CCU</h2>
-    <p>
-      Decentralized production of green ammonia with integrated carbon capture.  
-      Pilot unit 2 kW → 1.5 kg NH₃/day, efficiency &gt; 80 %.
-    </p>
-    <img src="assets/img/hub-projekty.jpg" alt="SSCC pilot unit">
-  </section>
+  <main>
+    <p><a class="back" href="projekty.html">← Zpět na projekty</a></p>
 
-  <section class="section">
-    <h2>Objectives</h2>
-    <p>
-      Develop a scalable module for local energy systems, combining green ammonia
-      production and CO₂ utilization. Modular, decentralized, EU-ready.
-    </p>
-  </section>
+    <section class="section">
+      <h1>Projekt SSCC — Pilot (NH₃ & CCU)</h1>
+      <p>Koncept, cíle, milníky, parametry pilotu…</p>
+      <ul>
+        <li>2 kW → 1,5 kg NH₃/den</li>
+        <li>Účinnost &gt;80 %, záchyt CO₂ &gt;90 %</li>
+        <li>Modulární a decentralizovatelný</li>
+      </ul>
 
-  <section class="section">
-    <h2>Datasheet</h2>
-    <p>
-      We are preparing a concise PDF datasheet. For now, a temporary test link:
-    </p>
-    <p>
-      <a class="btn" href="pdf/datasheet.pdf" target="_blank" rel="noopener">📄 PDF datasheet</a>
-    </p>
-  </section>
-</main>
+      <p>
+        <a class="btn" href="pdf/sscc-datasheet-cz.pdf" target="_blank" rel="noopener">📄 PDF datasheet (CZ)</a>
+        <a class="btn" href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a>
+      </p>
+    </section>
+  </main>
 
-<footer class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
-  <span>© SSCC Initiative — 2025</span>
-</footer>
+  <footer class="container" style="padding:20px 24px">
+    © SSCC Initiative — 2025
+  </footer>
 </body>
 </html>
