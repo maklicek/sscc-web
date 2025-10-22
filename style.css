@@ -12,8 +12,11 @@
   --radius:16px;
   --shadow:0 0 20px rgba(0,0,0,.25);
   <a class="brand" href="index.html"><img src="assets/logo-sscc.svg" alt="SSCC"> SolarSpace Carbon Cycle</a>
-
 }
+<a class="brand" href="index.html">
+  <img src="assets/sscc-logo.svg" alt="SSCC" style="height:22px;vertical-align:middle;margin-right:8px;">
+  <strong>SSCC</strong><span>SolarSpace Carbon Cycle</span>
+</a>
 
 /* Základ */
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
