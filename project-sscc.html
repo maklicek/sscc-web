@@ -3,35 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projekt SSCC — Pilot (NH₃ & CCU)</title>
+  <title>SSCC — SolarSpace Carbon Cycle</title>
 
-  <!-- sdílené styly -->
-  <link rel="stylesheet" href="style.css?v=12">
+  <!-- favicona (ponecháš, pokud ji už máš) -->
+  <link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
 
-  <!-- lokální CSS pro detail projektu (POZOR: uvnitř <head>) -->
-  <style>
-    main{max-width:1120px;margin:0 auto;padding:24px}
-    .back{display:inline-block;margin:8px 0 0 0}
-    section.section{
-      position:relative;margin:24px 0;padding:24px;
-      background:rgba(255,255,255,.03);border-radius:16px;
-      box-shadow:0 0 20px rgba(0,0,0,.25);
-    }
-    section.section::before{
-      content:"";position:absolute;inset:0;border-radius:16px;z-index:0;
-      background:
-        radial-gradient(200px 160px at 85% 90%, rgba(0,0,0,.55), transparent 70%),
-        linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.15)),
-        url('assets/img/hub-projekty.jpg') center / cover no-repeat;
-      filter:saturate(.9);
-    }
-    section.section > *{position:relative;z-index:1}
-    .section h1{color:#ffd75e;text-shadow:0 0 8px rgba(0,0,0,.6);margin:0 0 12px}
-    .section p{color:#e6e6e6}
-    .section ul{margin:0 0 0 1.2rem;padding:0}
-    .section li{margin:.4rem 0}
-    .btn{display:inline-block;margin-top:12px}
-  </style>
+  <!-- JEDINÉ globální CSS (číslo za ?v= je jen na promazání cache) -->
+  <link rel="stylesheet" href="style.css?v=14" />
+</head>
+
 </head>
 
 <body>
