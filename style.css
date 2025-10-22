@@ -1,449 +1,147 @@
-/* ========== SSCC GLOBAL STYLE ========== */
+/* ========== SSCC – ČISTÝ ZÁKLAD ========== */
 
-/* === ZÁKLADNÍ PROMĚNNÉ === */
-/* === TÓNY / PROMĚNNÉ === */
+/* Proměnné (barvy, radiusy) */
 :root{
-  --bg:#0e1420;        /* tmavé pozadí – o chlup světlejší než dřív */
-  --bg-soft:#141d2d;   /* pruh hlavičky a boxy */
-  --text:#e6e6e6;
-  --muted:#9aa7bd;
-  --accent:#ffd55a;    /* „zlatá“ */
+  --bg:#0f172a;           /* temné pozadí */
+  --bg-soft:#111c34;      /* mírně světlejší */
+  --panel:#0f2135;        /* povrch karet */
+  --text:#e6e6e6;         /* hlavní text */
+  --muted:#9aa7bd;        /* sekundární text */
+  --gold:#ffd75e;         /* akcent (nadpisy, prvky) */
+  --accent:#4fd1c5;       /* doplňkový akcent (linky, hover) */
   --stroke:rgba(255,255,255,.08);
+  --shadow: 0 12px 40px rgba(0,0,0,.35);
   --radius:16px;
-  --shadow:0 0 20px rgba(0,0,0,.25);
-  <a class="brand" href="index.html"><img src="assets/logo-sscc.svg" alt="SSCC"> SolarSpace Carbon Cycle</a>
-}
-<a class="brand" href="index.html">
-  <img src="assets/sscc-logo.svg" alt="SSCC" style="height:22px;vertical-align:middle;margin-right:8px;">
-  <strong>SSCC</strong><span>SolarSpace Carbon Cycle</span>
-</a>
-
-/* Základ */
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--accent);text-decoration:none}
-
-/* Hlavička / top bar sladíme se stránkou */
-header, .topbar{
-/* příklad – hero s „vycházejícím sluncem“ */
-.hero{
-  position:relative; padding:120px 0 80px;
-  background:
-    radial-gradient(240px 180px at 20% 35%, rgba(255,180,60,.65), rgba(255,180,60,0) 70%),
-    linear-gradient(180deg, rgba(255,255,255,.18), rgba(0,0,0,.20)),
-    url('assets/hero-bg.png') center/cover no-repeat;
 }
 
-
-/* Kontejner obsahu */
-/* Kontejner hlavního obsahu na detailech */
-main{ max-width: 1100px; margin: 0 auto; padding: 24px; }
-
-/* Box s obsahem (vpravo) a jeho karty */
-.section{ position:relative; }
-.card{
-  background: rgba(255,255,255,.03);
-  border-radius:16px;
-  padding: 22px;
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
-}
-
-/* malé karty ve sloupci vpravo */
-.card .card{ margin-top: 14px; }
-
-/* „obří“ podkladový obrázek nahoře – nechť nepřetéká */
-.hero-figure img, .section img{
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.tile{
-  display:block;
-  position:relative;
-  min-height: 210px;
-  border-radius:16px;
-  background: rgba(255,255,255,0.03);
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
-  overflow:hidden;
-  transition: transform .15s ease;
-}
-.tile:hover{ transform: translateY(-2px); }
-
-.tile-body{ padding:22px; max-width: 60ch; }
-.tile-thumb{
-  position:absolute; right:16px; bottom:16px;
-  width: 220px; height: 140px;
-  border-radius:12px;
-  background-size: cover; background-position: center;
-  opacity:.92;
-}
-
-/* konzistence horní lišty – bez světlejšího pásu */
-header{ background: transparent; box-shadow: none; }
-
-/* === RESET + TYPO === */
+/* Reset + typografie */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
+  background: radial-gradient(1000px 500px at 50% -400px, #1c2944 0%, #0c1324 40%, var(--bg) 70%);
   color:var(--text);
   font:16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+
+/* Obecně */
 a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
 img{max-width:100%;display:block}
 
-/* === LAYOUT === */
-.container{width:min(1080px,92%);margin-inline:auto}
-section{padding:28px 0}
+/* Kontejner */
+.container{width:min(1100px,92%);margin:0 auto;padding:24px}
 
-/* === HEADER === */
-header{
-  position:sticky;top:0;z-index:40;
-  background:rgba(15,23,42,.65); backdrop-filter: blur(8px);
+/* Hlavička (nav) */
+header{position:sticky;top:0;z-index:40;backdrop-filter: blur(8px)}
+header .bar{
+  display:flex;gap:24px;align-items:center;justify-content:space-between;
   border-bottom:1px solid var(--stroke);
+  background:rgba(15,23,42,.35);
 }
-.nav{display:flex;gap:18px;align-items:center;justify-content:space-between;padding:10px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
-.brand span{display:block;font-size:.84rem;color:var(--muted)}
-.menu{display:flex;gap:18px;align-items:center}
-.menu a{padding:7px 10px;border-radius:10px}
-.menu a:hover{background:rgba(255,255,255,.05)}
-.lang{display:flex;gap:8px;color:var(--muted)}
-.lang a[aria-current="page"]{color:var(--text);font-weight:700}
+.brand{display:flex;gap:10px;align-items:center;padding:14px 24px}
+.brand strong{font-weight:800;letter-spacing:.5px}
+.brand span{color:var(--muted)}
+.menu{display:flex;gap:22px;align-items:center;padding-right:24px}
+.menu a{opacity:.85}
+.menu a[aria-current="page"]{color:var(--gold);opacity:1}
+.lang a{opacity:.7}
+.lang a[aria-current="page"]{opacity:1}
 
-/* === HERO (jen zde má obrázek) === */
-.hero{
-  position:relative; overflow:hidden;
-  min-height:340px; border-radius:var(--radius); box-shadow:var(--shadow);
-  background-image:url('assets/hero-bg.png');
-  background-size:cover; background-position:center; background-repeat:no-repeat;
-  text-align:center; padding:80px 16px 100px;
+/* Hero na titulce (pokud použiješ) */
+.hero{padding:64px 0}
+.hero h1{
+  font-size:clamp(28px,4.2vw,44px);
+  color:var(--gold);
+  margin:0 0 10px 0;
+  text-shadow:0 0 8px rgba(0,0,0,.6);
 }
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.35),rgba(15,23,42,.85))}
-.hero>/* příklad – hero s „vycházejícím sluncem“ */
-.hero{
-  position:relative; padding:120px 0 80px;
-  background:
-    radial-gradient(240px 180px at 20% 35%, rgba(255,180,60,.65), rgba(255,180,60,0) 70%),
-    linear-gradient(180deg, rgba(255,255,255,.18), rgba(0,0,0,.20)),
-    url('assets/hero-bg.png') center/cover no-repeat;
-}
+.hero p{color:#e6e6e6;margin:0 0 24px 0}
 
-  *{position:relative;z-index:1}
-.hero h1{font-size:clamp(2rem,3vw+1rem,3.2rem);margin:.2em 0 .3em;color:var(--accent);text-shadow:0 6px 32px rgba(255,214,92,.25)}
-.hero-img {
-  width: 100%;
-  max-width: 980px;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+/* Karty/sekce */
+.section{padding:24px;margin-block:12px}
+.card, .section .card{
+  background:linear-gradient(0deg, rgba(0,0,0,.18), rgba(0,0,0,.18));
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow);
 }
-
-.lead{color:var(--muted);font-size:1.08rem}
-
-/* === KARTY === */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media (max-width:860px){.grid{grid-template-columns:1fr}}
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
-  border:1px solid var(--stroke); border-radius:var(--radius);
-  padding:18px; box-shadow:var(--shadow)
+.section h2, .card h2{
+  color:var(--gold);
+  margin:0 0 10px 0;
+  text-shadow:0 0 8px rgba(0,0,0,.4);
 }
-.card h2{margin:.2em 0 .4em}
+.section p{color:#e6e6e6}
 
-/* === BUTTON === */
-.btn{
-  display:inline-flex;align-items:center;gap:.6rem;
-  border:1px solid rgba(255,255,255,.12);
-  background:linear-gradient(90deg,#0f3a4a,#f4d36a);
-  color:#00131a; font-weight:700; padding:.8rem 1.05rem;border-radius:12px
-}
-.btn.secondary{
-  background:linear-gradient(90deg,#0c355e,#6fe7dd);color:#00131a
-}
-
-/* === FOOTER === */
-footer{border-top:1px solid var(--stroke);color:var(--muted);padding:24px 0;margin-top:28px}
-/* === ROZCESTNÍK / HUB === */
-.hub{margin-top:16px}
+/* Dlaždice rozcestníku */
+.hub{padding:8px 0 24px}
 .hub-grid{
-  display:grid; gap:16px;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-}
-@media (max-width:860px){ .hub-grid{ grid-template-columns:1fr; } }
-
-.tile{
-  display:block; position:relative; overflow:hidden;
-  border-radius:16px; border:1px solid var(--stroke);
-  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));
-  box-shadow: var(--shadow);
-  min-height:160px; padding:18px;
-  transition: transform .15s ease, border-color .15s ease;
-}
-.tile:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.18); }
-
-.tile h3{ margin:0 0 6px; font-size:1.15rem; }
-.tile p{ margin:0; color:var(--muted); }
-
-.tile .thumb{
-  position:absolute; inset:auto 10px 10px auto; 
-  width:98px; height:98px; opacity:.9; border-radius:12px;
-  border:1px solid var(--stroke); overflow:hidden;
-}
-.tile .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-
-/* === DROBNOSTI === */
-.back{display:inline-flex;gap:.5rem;align-items:center;padding:.55rem .8rem;border-radius:10px;border:1px solid var(--stroke)}
-.list{margin:.6rem 0 0 1rem}
-/* ====== Tiles (rozcestník) – robustní layout ====== */
-.tiles{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:repeat(2, minmax(0,1fr));
   gap:24px;
 }
-@media (max-width:900px){
-  .tiles{ grid-template-columns:1fr; }
+@media (max-width:820px){
+  .hub-grid{grid-template-columns:1fr}
 }
+
 .tile{
-  display:grid;
-  grid-template-columns:1fr 180px;
-  align-items:center;
-  padding:20px;
-  border-radius:16px;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-}
-.tile-body h3{
-  margin:0 0 8px;
-  font-size:22px;
-}
-.tile-body p{
-  margin:0;
-  color:var(--muted,#94a3b8);
-}
-.tile-thumb{
-  width:180px;
-  height:120px;
-  border-radius:12px;
-  background-size:cover;
-  background-position:center;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
-}
-/* === Jednotný vzhled sekcí (projekty, edukace, nápady, konsorcium) === */
-.section {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-  padding: 32px;
-  margin: 40px auto;
-  max-width: 960px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(0,0,0,.3);
-}
-.section h2 {
-  color: #ffd86b;
-  font-size: 26px;
-  margin-bottom: 16px;
-}
-.section p {
-  line-height: 1.6;
-  color: var(--muted, #a0aec0);
-}
-
-/* === Obrázky v sekcích === */
-.section img {
-  width: 100%;
-  border-radius: 14px;
-  margin-top: 18px;
-  transition: opacity 0.2s ease;
-}
-.section img:hover {
-  opacity: 0.9;
-  /* ===== Hub / Rozcestník ===== */
-.hub .tiles{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap:24px;
-  margin-block:24px;
-}
-a.tile{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:24px;
-  border-radius:16px;
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 0 20px rgba(0,0,0,.20);
-  text-decoration:none;
-  position:relative;
-  z-index:0;
-}
-.tile-body{ flex:1; min-width:0; }
-.tile h3{ margin:0 0 .25rem; }
-.tile-thumb{
-  flex:0 0 160px;
-  height:110px;
-  border-radius:12px;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  box-shadow: 0 0 12px rgba(0,0,0,.25) inset;
-}
-
-/* obrázky nikdy nepřetečou */
-img, .card img, .content img{
-  max-width:100%;
-  height:auto;
   display:block;
-}
-
-/* univerzální zarovnání obsahu stránky */
-main{
-  width:min(1100px, 92%);
-  margin:0 auto;
-  padding:24px;
-}
-
-/* společný vzhled sekcí s kartou/pozadím */
-section.section{
-  position:relative;
-  border-radius:16px;
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
   overflow:hidden;
-  padding:2rem;
-  margin:0 0 2rem;
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  position:relative;
+  min-height:180px;
+  transition:transform .15s ease, box-shadow .15s ease;
 }
-/* HERO (úvodní pás s názvem) – volitelné */
-.hero{
-  background:
-    radial-gradient(900px 400px at 50% -200px, rgba(255,213,90,.35), transparent 60%),
-    url('assets/hero-bg.png') center/cover no-repeat,
-    linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.35));
-  border-bottom:1px solid var(--stroke);
-}
-.brand img{ height:24px; vertical-align:middle }
-/* --- Obrázky vždy responzivně --- */
-img { max-width: 100%; height: auto; }
-
-/* --- Rozcestník / dlaždice --- */
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 28px;
-}
-.tile {
-  display: block;
-  border-radius: 16px;
-  padding: 24px;
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
-  text-decoration: none;
-}
-.tile-body h3 { margin: 0 0 8px; }
-.tile-thumb {
-  margin-top: 12px;
-  height: 160px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.tile:hover{transform:translateY(-2px); box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.tile-body{padding:22px 22px 18px 22px;width:60%}
+.tile h3{margin:0 0 6px 0;color:#fff;font-weight:800}
+.tile p{margin:0;color:var(--muted)}
+.tile-thumb{
+  position:absolute; inset:auto 0 0 auto; right:0; top:0; bottom:0;
+  width:40%;
+  background:rgba(255,255,255,.03);
+  background-size:cover; background-position:center;
+  filter:saturate(.9) contrast(.95);
+  border-left:1px solid var(--stroke);
 }
 
-/* --- Hero pás na úvodu (slunce) --- */
-.hero {
-  min-height: 360px;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  background:
-    radial-gradient(ellipse at 50% -10%, rgba(255,208,64,.25), rgba(0,0,0,0) 65%),
-    url('assets/hero-bg.png') center/cover no-repeat,
-    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28));
+/* Tlačítka */
+.btn{
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding:.66rem 1rem;
+  color:#0c1424; font-weight:700;
+  background: linear-gradient(180deg, #ffe07a, #f0c74a);
+  border-radius:10px;
+  border:1px solid rgba(0,0,0,.2);
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  transition: transform .1s ease, filter .1s ease;
+}
+.btn:hover{transform:translateY(-1px); filter:saturate(1.05)}
+
+/* „Zpět“ */
+.back{display:inline-block;opacity:.85;margin-bottom:10px}
+.back:hover{opacity:1}
+
+/* Obrázky v článku/sekci */
+figure{margin:0;padding:0}
+figure img{border-radius:12px;border:1px solid var(--stroke);box-shadow:var(--shadow)}
+figcaption{color:var(--muted);font-size:.95rem;margin-top:6px}
+
+/* Detail projektu (malý layout fix, ať to neskáče doprava) */
+.project-article{
+  display:grid; gap:24px;
+  grid-template-columns: 1fr minmax(340px, 420px);
+}
+@media (max-width:980px){
+  .project-article{grid-template-columns:1fr}
 }
 
-/* --- Detail projektu: jemný panel a pozadí stránky --- */
-.page-project main .section {
-  position: relative;
-  border-radius: 16px;
-  padding: 24px;
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
-}
-.page-project {
-  background:
-    url('assets/img/hub-projekty.jpg') center/cover no-repeat fixed,
-    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28));
-}
+/* Patička */
+footer{border-top:1px solid var(--stroke); padding:24px; color:var(--muted); text-align:center;}
 
-/* --- Navigace / header jemně tmavší než zbytek --- */
-header {
-  background: rgba(14,18,27,.85);
-  backdrop-filter: blur(8px);
-}
-/* ------------- Fix layout & univerzální jističe ------------- */
-
-/* univerzál: obrázky se nikdy nerozjedou */
-img { max-width: 100%; height: auto; display: block; }
-
-/* max šířka obsahu + vycentrování */
-main { width: min(1100px, 92%); margin: 0 auto; }
-
-/* dlaždice rozcestníku – 2 sloupce na desktopu */
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 32px;
-}
-.tile { display: block; text-decoration: none; }
-.tile-body { padding: 18px 18px 0; }
-.tile-thumb {
-  height: 160px;
-  border-radius: 12px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 12px 40px rgba(0,0,0,.35);
-}
-
-/* „karta“ (card) se stínem */
-.card, .section {
-  background: rgba(255,255,255,.03);
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
-}
-
-/* tlačítka – konzistentní vzhled */
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #113b4a, #2b4250);
-  color: #e6e6e6;
-  text-decoration: none;
-  box-shadow: 0 6px 20px rgba(0,0,0,.25);
-}
-.btn:hover { filter: brightness(1.06); }
-
-/* hrdina/hero obrázek (pokud ho používáš) */
-.hero {
-  min-height: 360px; /* jistota */
-  background:
-    linear-gradient(0deg, rgba(0,0,0,.28), rgba(0,0,0,.28)),
-    url('assets/img/hub-projekty.jpg') center/cover no-repeat; /* libovolný hero */
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-}
-
-/* responsivita */
-@media (max-width: 860px) {
-  .tiles { grid-template-columns: 1fr; }
-}
-
-
+/* Utility */
+.muted{color:var(--muted)}
+.center{text-align:center}
