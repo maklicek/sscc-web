@@ -1,75 +1,51 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-
-  <!-- favicona (ponecháš, pokud ji už máš) -->
-  <link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
-
-  <!-- JEDINÉ globální CSS (číslo za ?v= je jen na promazání cache) -->
-<link rel="preload" href="style.css?v=16" as="style">
-<link rel="stylesheet" href="style.css?v=13">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekt SSCC — Pilot (NH₃ & CCU)</title>
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
+<body>
 
-<body class="wrap">
 <header class="container nav">
-  <a class="back" href="index.html">← Domů</a>
-  <nav style="margin-left:auto">
-    <a class="back" href="projects.html">EN</a>
+  <a class="brand" href="index.html"><strong>SSCC</strong><span> SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projekty.html" aria-current="page">Projekty</a>
+    <a href="edukace.html">Edukace</a>
+    <a href="napady.html">Nápady</a>
+    <a href="konsorcium.html">Konsorcium</a>
+    <span class="lang"><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
   </nav>
 </header>
 
-<main>
-  <section class="section">
-    <h2>Pilot SSCC — NH₃ &amp; CCU</h2>
-    <p>Decentralizovaná syntéza zeleného NH₃ (pilot 2 kW → 1,5 kg/den), cíl účinnosti &gt; 80 %.</p>
+<section class="hero">
+  <h1>Projekt SSCC — Pilot (NH₃ & CCU)</h1>
+  <p>Decentralizovaná syntéza zeleného amoniaku (2 kW → 1,5 kg NH₃/den) s účinností > 80 % a záchytem CO₂ > 90 %.</p>
+</section>
 
-    <div class="tiles" style="margin-top:16px">
-      <!-- Detail CZ -->
-      <a class="tile" href="projekt-sscc.html">
-        <div class="tile-body">
-          <h3>Detail projektu (CZ)</h3>
-          <p>Koncept, cíle, progres, schémata.</p>
-        </div>
-        <div class="tile-thumb" style="background-image:url('aktiva/obrazek/hub-projekty.jpg');"></div>
-      </a>
-
-      <!-- Datasheet CZ -->
-      <a class="tile" href="pdf/sscc-datasheet-cz.pdf" target="_blank" rel="noopener">
-        <div class="tile-body">
-          <h3>PDF datasheet (CZ)</h3>
-          <p>Souhrnné parametry a schéma.</p>
-        </div>
-        <div class="tile-thumb" style="background-image:url('aktiva/obrazek/hub-projekty.jpg');"></div>
-      </a>
-
-      <!-- Detail EN -->
-      <a class="tile" href="project-sscc.html">
-        <div class="tile-body">
-          <h3>Project details (EN)</h3>
-          <p>Concept, objectives, progress.</p>
-        </div>
-        <div class="tile-thumb" style="background-image:url('aktiva/obrazek/hub-projekty.jpg');"></div>
-      </a>
-
-      <!-- Datasheet EN -->
-      <a class="tile" href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">
-        <div class="tile-body">
-          <h3>PDF datasheet (EN)</h3>
-          <p>Specs &amp; process overview.</p>
-        </div>
-        <div class="tile-thumb" style="background-image:url('aktiva/obrazek/hub-projekty.jpg');"></div>
-      </a>
+<main class="hub container">
+  <article class="tile">
+    <div class="tile-body">
+      <h3>Detail projektu (CZ)</h3>
+      <p>Koncept, cíle, pokrok, schémata.</p>
+      <p><a class="btn" href="pdf/sscc-datasheet-cz.pdf" target="_blank" rel="noopener">📄 PDF datasheet (CZ)</a></p>
     </div>
-  </section>
+  </article>
+
+  <article class="tile">
+    <div class="tile-body">
+      <h3>Project details (EN)</h3>
+      <p>Concept, objectives, progress.</p>
+      <p><a class="btn" href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a></p>
+    </div>
+  </article>
 </main>
 
-<footer class="container" style="padding:2rem 0;color:#9ca3af;border-top:1px solid rgba(255,255,255,.06)">
-  <span>© SSCC</span>
+<footer>
+  <p>© SSCC Initiative — 2025</p>
 </footer>
+
 </body>
 </html>
+
