@@ -1,44 +1,50 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-
-  <!-- favicona (ponecháš, pokud ji už máš) -->
-  <link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
-
-  <!-- JEDINÉ globální CSS (číslo za ?v= je jen na promazání cache) -->
- <link rel="preload" href="style.css?v=16" as="style">
-<link rel="stylesheet" href="style.css?v=13">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edukace — SSCC</title>
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
-
 <body>
-<header><div class="container nav">
-<a class="btn" href="pdf/sscc-datasheet-cz.pdf" target="_blank" rel="noopener">📄 PDF datasheet (CZ)</a>
-<a class="btn" href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a>
 
-    <a href="projekty.html">Projekty</a><a aria-current="page" href="edukace.html">Edukace</a>
-    <a href="napady.html">Nápady</a><a href="konsorcium.html">Konsorcium</a>
-    <span class="lang"><a aria-current="page" href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+<header class="container nav">
+  <a class="brand" href="index.html"><strong>SSCC</strong><span> SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projekty.html">Projekty</a>
+    <a href="edukace.html" aria-current="page">Edukace</a>
+    <a href="napady.html">Nápady</a>
+    <a href="konsorcium.html">Konsorcium</a>
+    <span class="lang"><a href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
   </nav>
-</div></header>
+</header>
 
-<main class="container">
-  <p><a class="back" href="index.html">← Zpět na úvod</a></p>
-  <article class="card">
-    <h1>Edukace</h1>
-    <p>Jak funguje tok: Slunce → elektřina → H₂ → NH₃, zachyt CO₂.</p>
-    <p><section class="materials">
-  <h2>Edukační materiály</h2>
-      <a class="btn" href="pdf/sscc-datasheet-cz.pdf" target="_blank" rel="noopener">📄 PDF datasheet (CZ)</a>
-<a class="btn" href="pdf/sscc-datasheet-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a>
-
+<section class="hero">
+  <h1>Edukace</h1>
+  <p>Jak funguje cyklus SSCC: Slunce → H₂ → NH₃ → CCU → CO₂.</p>
 </section>
+
+<main class="hub container">
+  <article class="tile">
+    <div class="tile-body">
+      <h3>Edukační materiály (CZ)</h3>
+      <p>Infografiky, prezentace a datasheety pro školy a univerzity.</p>
+      <p><a class="btn" href="pdf/sscc-edu-cz.pdf" target="_blank" rel="noopener">📄 PDF datasheet (CZ)</a></p>
+    </div>
+  </article>
+
+  <article class="tile">
+    <div class="tile-body">
+      <h3>Educational materials (EN)</h3>
+      <p>Overview of educational datasheets and infographics.</p>
+      <p><a class="btn" href="pdf/sscc-edu-en.pdf" target="_blank" rel="noopener">📄 PDF datasheet (EN)</a></p>
+    </div>
   </article>
 </main>
-<footer><div class="container">© SSCC Initiative — 2025</div></footer>
+
+<footer>
+  <p>© SSCC Initiative — 2025</p>
+</footer>
+
 </body>
 </html>
