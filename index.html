@@ -1,39 +1,37 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SSCC — SolarSpace Carbon Cycle</title>
-
-  <!-- favicona (ponecháš, pokud ji už máš) -->
-  <link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
-
-  <!-- JEDINÉ globální CSS (číslo za ?v= je jen na promazání cache) -->
-<link rel="preload" href="style.css?v=16" as="style">
-<link rel="stylesheet" href="style.css?v=13">
-
+  <link rel="icon" href="assets/favicons/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
-
 <body>
-  <header>
-  <div class="bar container">
-    <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
-    <nav class="menu">
-      <a href="projekty.html">Projekty</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="napady.html">Nápady</a>
-      <a href="konsorcium.html">Konsorcium</a>
-      <span class="lang"><a href="index.html" aria-current="page">CZ</a> | <a href="index-en.html">EN</a></span>
-    </nav>
-  </div>
-</header>
-  <section class="hero">
-   <main class="container">
-  <!-- HERO může zůstat nad tímto blokem -->
 
- <section class="hub container">
-  <div class="hub-grid">
+<header class="container nav">
+  <a class="brand" href="index.html"><strong>SSCC</strong><span>SolarSpace Carbon Cycle</span></a>
+  <nav class="menu">
+    <a href="projekty.html">Projekty</a>
+    <a href="edukace.html">Edukace</a>
+    <a href="napady.html">Nápady</a>
+    <a href="konsorcium.html">Konsorcium</a>
+    <span class="lang"><a aria-current="page" href="index.html">CZ</a> | <a href="index-en.html">EN</a></span>
+  </nav>
+</header>
+
+<!-- Hero (klidná verze bez těžkého obrázku) -->
+<section class="hero">
+  <main class="container">
+    <h1>SolarSpace Carbon Cycle</h1>
+    <p>Decentralizovaná syntéza zeleného amoniaku a zachytávání CO₂.<br>Energie z uhlíku, cyklovaná Sluncem.</p>
+  </main>
+</section>
+
+<!-- Rozcestník -->
+<section class="hub container">
+  <div class="tiles">
 
     <a class="tile" href="projekty.html">
       <div class="tile-body">
@@ -43,36 +41,36 @@
       <div class="tile-thumb" style="background-image:url('assets/img/hub-projekty.jpg')"></div>
     </a>
 
-    <!-- další dlaždice, jen vyměnit text a obrázek -->
+    <a class="tile" href="edukace.html">
+      <div class="tile-body">
+        <h3>Edukace</h3>
+        <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
+      </div>
+      <div class="tile-thumb" style="background-image:url('assets/img/hub-edukace.jpg')"></div>
+    </a>
+
+    <a class="tile" href="napady.html">
+      <div class="tile-body">
+        <h3>Nápady</h3>
+        <p>Vize a teoretické směry k diskusi.</p>
+      </div>
+      <div class="tile-thumb" style="background-image:url('assets/img/hub-napady.jpg')"></div>
+    </a>
+
+    <a class="tile" href="konsorcium.html">
+      <div class="tile-body">
+        <h3>Konsorcium</h3>
+        <p>Uzavřené materiály pro partnery.</p>
+      </div>
+      <div class="tile-thumb" style="background-image:url('assets/img/hub-konsorcium.jpg')"></div>
+    </a>
+
   </div>
 </section>
-  <a class="tile" href="edukace.html">
-    <div class="tile-body">
-      <h3>Edukace</h3>
-      <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
-    </div>
-   <div class="tile-thumb" style="background-image:url('assets/img/hub-edukace.jpg');"></div>
 
-  <a class="tile" href="napady.html">
-    <div class="tile-body">
-      <h3>Nápady</h3>
-      <p>Vize a teoretické směry k diskusi.</p>
-    </div>
-   <div class="tile-thumb" style="background-image:url('assets/img/hub-napady.jpg');"></div>
-
-  <a class="tile" href="konsorcium.html">
-    <div class="tile-body">
-      <h3>Konsorcium</h3>
-      <p>Uzavřené materiály pro partnery.</p>
-    </div>
-   <div class="tile-thumb" style="background-image:url('assets/img/hub-konsorcium.jpg');"></div>
-</div>
-
-  </section>
-</main>
-
-<footer>
-  <div class="container">© SSCC Initiative — 2025</div>
+<footer class="container">
+  <p>© SSCC Initiative — 2025</p>
 </footer>
+
 </body>
 </html>
