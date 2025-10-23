@@ -426,5 +426,25 @@ main .container {
   vertical-align: middle;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4));
 }
+/* ==== Logo a hlavička ==== */
+
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-logo {
+  height: 38px;              /* zvětšeno z ~22px */
+  width: auto;
+  object-fit: contain;
+  margin-top: -2px;          /* drobná optická korekce */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.06);    /* jemné zvětšení po přejetí */
+}
 
 
