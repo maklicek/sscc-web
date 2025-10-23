@@ -156,4 +156,9 @@ footer {
   .hero h1 {
     font-size: 1.6rem;
   }
+nav.menu a[aria-current="page"] {
+  color: #ffd75e;
+  font-weight: 600;
+  text-decoration: underline;
 }
+
