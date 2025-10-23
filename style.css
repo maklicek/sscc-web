@@ -300,4 +300,63 @@ header .menu a:hover {
   color: #f0f0f0;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+/* === Animace hero sekce (východ slunce) === */
+
+/* 1) Plynulý náběh obsahu */
+.hero-content {
+  opacity: 0;
+  transform: translateY(16px) scale(0.985);
+  animation: heroFadeUp 1.2s ease-out 0.2s both;
+}
+
+/* 2) Jemný „zářivý“ efekt titulku */
+.hero h1 {
+  animation: heroGlow 2.2s ease-out 0.7s both;
+}
+
+/* 3) Puls sluneční záře přes overlay */
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  pointer-events: none;
+  /* teplá záře + jemný odlesk u horizontu */
+  background:
+    radial-gradient(circle at 28% 62%, rgba(255, 190, 70, .35), rgba(255,190,70,0) 35%),
+    radial-gradient(circle at 50% 100%, rgba(255,255,255,.05), rgba(0,0,0,0) 65%);
+  filter: blur(10px);
+  opacity: .55;
+  animation: sunPulse 5.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* --- Klíčové snímky --- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(16px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);     }
+}
+
+@keyframes heroGlow {
+  0%   { text-shadow: 0 0 0 rgba(255,200,60,0); }
+  60%  { text-shadow: 0 0 26px rgba(255,200,60,.55); }
+  100% { text-shadow: 0 0 14px rgba(255,200,60,.35); }
+}
+
+@keyframes sunPulse {
+  0%   { opacity: .45; transform: scale(1); }
+  50%  { opacity: .70; transform: scale(1.03); }
+  100% { opacity: .45; transform: scale(1); }
+}
+
+/* Respekt pro uživatele s omezenými animacemi */
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero h1,
+  .hero-overlay::after {
+    animation: none !important;
+    transform: none !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+}
 
