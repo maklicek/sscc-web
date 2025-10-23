@@ -218,4 +218,43 @@ footer.footer a:hover {
   font-size: 0.85rem;
   margin-top: 0.8rem;
 }
+/* === Horní lišta / Header === */
+header.container.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  background: rgba(255, 255, 255, 0.08); /* světlejší průhledná */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
 
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+header .brand img {
+  height: 42px;
+  width: auto;
+  filter: drop-shadow(0 0 6px rgba(255, 215, 94, 0.5));
+}
+
+header .menu a {
+  color: #e6e6e6;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+header .menu a:hover {
+  color: #ffd75e;
+}
