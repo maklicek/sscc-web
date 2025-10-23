@@ -446,5 +446,64 @@ main .container {
 .brand-logo:hover {
   transform: scale(1.06);    /* jemné zvětšení po přejetí */
 }
+/* === Logo dominantní vlevo === */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(25, 34, 54, 0.65); /* mírně světlejší lišta */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.6rem 1.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-logo {
+  height: 68px;                /* větší logo */
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.6rem;
+  margin-left: 0;
+  transform-origin: left center;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.45));
+  transition: transform 0.25s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.08);
+}
+
+.brand strong {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  display: block;
+  line-height: 1.2;
+}
+
+.brand span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #d0d8e0;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Při zmenšení obrazovky logo trochu zmenšíme */
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 48px;
+  }
+  .brand strong {
+    font-size: 1.2rem;
+  }
+}
 
 
