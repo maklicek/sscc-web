@@ -435,7 +435,7 @@ main .container {
 }
 
 .brand-logo {
-  height: 38px;              /* zvětšeno z ~22px */
+  height: 42px;              /* zvětšeno z ~22px */
   width: auto;
   object-fit: contain;
   margin-top: -2px;          /* drobná optická korekce */
