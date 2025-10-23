@@ -358,5 +358,65 @@ header .menu a:hover {
     text-shadow: none !important;
     opacity: 1 !important;
   }
+/* === NAVBAR: lehce světlejší + sklo efekt === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(20, 28, 45, 0.60);    /* světlejší než pozadí */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
+.site-header .brand { display: inline-flex; align-items: center; gap: .5rem; }
+.site-header .brand-logo {
+  height: 22px;
+  width: auto;
+  display: inline-block;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,.4));
+}
+
+/* === HERO: slunce v pozadí + méně prázdného místa === */
+/* Platí pro horní úvodní sekci na indexu (má class="hero") */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 46vh;          /* méně prázdna, ale pořád vzdušné */
+  padding: 70px 0 40px;      /* menší svislé odsazení */
+  isolation: isolate;        /* aby overlay nezalézal mimo */
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(7,14,24,.45) 50%, rgba(7,14,24,.85) 100%),
+    url("assets/img/hero-sun.jpg") center 32% / cover no-repeat;
+  transform: scale(1.02);
+  z-index: -1;
+}
+.hero .container,
+main .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Trochu kontrastu pro hero titulky */
+.hero h1, .hero h2, .hero p {
+  text-shadow: 0 1px 10px rgba(0,0,0,.5);
+}
+
+/* === Drobné vyhlazení dlaždic (= vycentrovanější a „plnější“) === */
+.tiles { 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .hero { min-height: 42vh; padding: 56px 0 32px; }
+  .tiles { grid-template-columns: 1fr; }
+}
+
 
