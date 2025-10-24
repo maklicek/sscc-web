@@ -934,6 +934,107 @@ body { scroll-padding-top: 76px; }
   .brand-text em {
     font-size: .8rem;
   }
+/* ===== HEADER BAR ===== */
+
+.site-header {
+  background: #111827; /* tmavý pruh nahoře */
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: #fff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.site-header .bar {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: .75rem 1rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: .5rem 1rem;
+}
+
+/* LEVÁ STRANA = značka + název */
+.brand {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(255,200,80,.3); /* hezký jemný glow */
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  color: #fff;
+}
+.brand-text strong {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+}
+.brand-text em {
+  font-style: normal;
+  font-size: .8rem;
+  color: #92a0c6; /* tenčené šedavé modré */
+}
+
+/* PRAVÁ STRANA = navigace */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* mezery mezi odkazy */
+  gap: 1rem 1.25rem;
+
+  font-size: .9rem;
+  color: #fff;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: #ffd75e;               /* žluto-zlaté odkazy */
+  line-height: 1.3;
+}
+.site-nav a:hover {
+  color: #fff;
+}
+
+/* blok "CZ | EN" v navigaci */
+.lang-group {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-left: .5rem;
+  padding-left: .75rem;
+  border-left: 1px solid rgba(255,255,255,.2);
+  color: #fff;
+}
+.lang-group .sep {
+  color: rgba(255,255,255,.4);
+}
+.lang-group .lang {
+  color: #ffd75e;
+  text-decoration: none;
+}
+.lang-group .lang:hover {
+  color: #fff;
+}
+.lang-group .lang.active {
+  color: #fff;
+  font-weight: 600;
+}
 
 
 
