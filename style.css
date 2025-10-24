@@ -650,6 +650,147 @@ body { scroll-padding-top: 76px; }
   .site-nav { gap: 12px; }
   .site-nav a { font-size: 14px; }
 }
+/* ===== HLAVIČKA (top bar) ===== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(15, 20, 30, 0.85);       /* temně modrá skoro černá */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 2px 14px rgba(0,0,0,.6);
+  color: #fff;
+  font-family: inherit;
+}
+
+.site-header .bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* nedovolí zalomení do druhé řádky */
+}
+
+/* LEVÁ STRANA: logo + název */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+  min-width: 0;
+}
+
+.brand-logo {
+  height: 56px;             /* >>> tady zvětšujeme logo <<< */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(255, 210, 80, 0.4),
+              0 0 20px rgba(255, 200, 120, 0.2);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.brand-text strong {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: .03em;
+}
+
+.brand-text em {
+  font-style: normal;
+  font-size: .9rem;
+  font-weight: 400;
+  color: #d5d9e9;
+}
+
+/* PRAVÁ STRANA: navigace */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  font-size: .95rem;
+}
+
+.site-nav a {
+  color: #dfe6f5;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: color .2s ease;
+}
+
+.site-nav a:hover {
+  color: #fff;
+}
+
+.lang-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: #dfe6f5;
+}
+
+.lang-group .sep {
+  color: #999;
+}
+
+.lang-group .lang {
+  font-size: .9rem;
+  opacity: .9;
+}
+
+.lang-group .lang:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+/* RESPONSIVE (mobil) */
+@media (max-width: 700px) {
+  .site-header .bar {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    font-size: .9rem;
+  }
+
+  .brand-logo {
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 1.05rem;
+  }
+
+  .brand-text em {
+    font-size: .8rem;
+  }
+}
 
 
 
