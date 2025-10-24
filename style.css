@@ -1035,6 +1035,51 @@ body { scroll-padding-top: 76px; }
   color: #fff;
   font-weight: 600;
 }
+/* --- doladění hlavičky --- */
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255,190,60,.6));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.brand-text em {
+  font-size: .8rem;
+  font-style: normal;
+  color: #9ca3af;
+}
+
+/* menu v headeru */
+.site-nav a {
+  color: #fff2a8;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: #ffe27a;
+  text-shadow: 0 0 8px rgba(255,215,80,.6);
+}
+
+/* slabý svislý oddělovač mezi CZ a EN */
+.site-nav .sep {
+  color: #fff2a8;
+  opacity: .4;
+  padding: 0 .5rem;
+}
 
 
 
