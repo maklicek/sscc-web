@@ -1127,16 +1127,33 @@ body { scroll-padding-top: 76px; }
 }
 /* Kontejner hlavní oblasti obsahu */
 .hub {
+  padding: 2rem 1rem 4rem;
   max-width: 1400px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1rem;
+  margin: 0 auto;
 }
 
-/* GRID layout pro karty */
 .tiles-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* od 700px — dvě karty vedle sebe */
+@media (min-width: 700px) {
+  .tiles-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* od 1200px — čtyři vedle sebe */
+@media (min-width: 1200px) {
+  .tiles-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* Jednotlivá karta */
