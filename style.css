@@ -1125,13 +1125,14 @@ body { scroll-padding-top: 76px; }
   box-shadow: 0 12px 32px rgba(0,0,0,0.7);
   border: 1px solid rgba(255,255,255,0.05);
 }
-/* Kontejner hlavní oblasti obsahu */
+/* Kontejner pro hlavní obsah */
 .hub {
   padding: 2rem 1rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
+/* Grid pro karty */
 .tiles-row {
   display: grid;
   gap: 2rem;
@@ -1142,69 +1143,50 @@ body { scroll-padding-top: 76px; }
   max-width: 1200px;
 }
 
-/* od 700px — dvě karty vedle sebe */
+/* od 700px šířky: 2 sloupce */
 @media (min-width: 700px) {
   .tiles-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* od 1200px — čtyři vedle sebe */
+/* od 1200px šířky: 4 sloupce */
 @media (min-width: 1200px) {
   .tiles-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Jednotlivá karta */
-.tile {
-  background: rgba(10,10,20,0.6);
-  border-radius: 12px;
-  border: 1px solid rgba(255,221,96,0.07);
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.8),
-    0 0 80px rgba(255,221,96,0.06) inset;
-  padding: 1.5rem 1.5rem 2rem;
-  color: #cfd3dc;
-  line-height: 1.5;
+/* Styl dlaždice */
+.card {
+  background: var(--panel-bg, rgba(28,34,46,0.9));
+  border-radius: 0.75rem;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6), 0 2px 4px rgba(255,255,255,0.05) inset;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(255,255,255,0.07);
+  color: var(--text-primary, #fff);
+  max-width: 360px; /* drží příjemnou šířku */
 }
 
-/* Nadpis na kartě */
-.tile h2 {
-  margin: 0 0 0.75rem;
-  color: #ffdf5a;
-  font-size: 1.3rem;
+.card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent, #ffe082);
+  margin: 0 0 0.5rem 0;
 }
 
-/* Text pod nadpisem */
-.tile p {
-  margin: 0 0 1rem;
-  color: #cfd3dc;
-  font-size: 0.95rem;
+.card p {
+  margin: 0 0 0.75rem 0;
+  color: var(--text-muted, #bbc3cf);
+  line-height: 1.4;
 }
 
-/* Obrázek vevnitř karty */
-.tile img {
-  display: block;
+.card img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 1rem;
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.7);
+  border-radius: 0.5rem;
+  display: block;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.8);
 }
-
-/* Hover efekt karty */
-.tile:hover {
-  box-shadow:
-    0 24px 70px rgba(0,0,0,0.9),
-    0 0 100px rgba(255,221,96,0.12) inset;
-  border-color: rgba(255,221,96,0.18);
-  transition: box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
-
-
-
 
