@@ -1125,59 +1125,62 @@ body { scroll-padding-top: 76px; }
   box-shadow: 0 12px 32px rgba(0,0,0,0.7);
   border: 1px solid rgba(255,255,255,0.05);
 }
-/* Kontejner pro hlavní obsah */
+/* Kontejner hlavního obsahu */
 .hub {
   padding: 2rem 1rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
+  /* aby se obsah držel pěkně na středu */
 }
 
-/* Grid pro karty */
+/* Grid s kartami */
 .tiles-row {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;           /* mobil: 1 sloupec */
   justify-content: center;
   align-items: start;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1200px;                     /* aby se to nezbláznilo na obřím monitoru */
 }
 
-/* od 700px šířky: 2 sloupce */
+/* Od ~tablet šířky chceme 2 vedle sebe */
 @media (min-width: 700px) {
   .tiles-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* od 1200px šířky: 4 sloupce */
+/* Od velké šířky 4 vedle sebe */
 @media (min-width: 1200px) {
   .tiles-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Styl dlaždice */
+/* Styl jedné karty */
 .card {
-  background: var(--panel-bg, rgba(28,34,46,0.9));
+  background: rgba(28,34,46,0.9); /* můžeš si nechat svůj var(--panel-bg) */
   border-radius: 0.75rem;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.6), 0 2px 4px rgba(255,255,255,0.05) inset;
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.6),
+    0 2px 4px rgba(255,255,255,0.05) inset;
   padding: 1.25rem 1.5rem;
   border: 1px solid rgba(255,255,255,0.07);
-  color: var(--text-primary, #fff);
-  max-width: 360px; /* drží příjemnou šířku */
+  color: #fff;
+  max-width: 360px;
 }
 
 .card h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--accent, #ffe082);
+  color: #ffe082; /* tvůj accent */
   margin: 0 0 0.5rem 0;
 }
 
 .card p {
   margin: 0 0 0.75rem 0;
-  color: var(--text-muted, #bbc3cf);
+  color: #bbc3cf;
   line-height: 1.4;
 }
 
@@ -1189,4 +1192,3 @@ body { scroll-padding-top: 76px; }
   border: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 8px 24px rgba(0,0,0,0.8);
 }
-
