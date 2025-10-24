@@ -561,7 +561,96 @@ main .container {
   .brand strong {
     font-size: 1.2rem;
   }
+/* === HLAVIČKA / HORNÍ LIŠTA =================================== */
+.site-header {
+  position: sticky;           /* drží se nahoře při scrollu */
+  top: 0;
+  z-index: 1000;
+  background: rgba(25, 34, 54, 0.72); /* lehce světlejší než pozadí */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
+.site-header .bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 68px;              /* ➜ větší logo */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));
+  transition: transform .25s ease;
+}
+
+.brand-logo:hover { transform: scale(1.06); }
+
+.brand-text strong {
+  display: block;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .02em;
+  font-size: 22px;           /* nadpis vedle loga */
+  line-height: 1.1;
+}
+
+.brand-text em {
+  display: block;
+  color: #cbd6e2;
+  font-style: normal;
+  font-size: 13.5px;         /* podtitul vedle loga */
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.site-nav a {
+  color: #d8e1ea;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.site-nav a:hover { color: #fff; }
+
+.site-nav .lang { margin-left: 6px; opacity: .85; }
+
+/* Mírné odsazení obsahu pod sticky hlavičkou (jen když by překrývala) */
+body { scroll-padding-top: 76px; }
+
+/* Responsivní úpravy */
+@media (max-width: 900px) {
+  .brand-logo { height: 56px; }
+  .brand-text strong { font-size: 18px; }
+  .brand-text em { font-size: 12px; }
+  .site-nav { gap: 16px; }
+}
+
+@media (max-width: 640px) {
+  .brand-logo { height: 48px; }
+  .site-nav { gap: 12px; }
+  .site-nav a { font-size: 14px; }
+}
+
 
 
 
