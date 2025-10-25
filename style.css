@@ -1129,38 +1129,37 @@ body { scroll-padding-top: 76px; }
 .hub {
   padding: 2rem 1rem 4rem;
   max-width: 1400px;
-  margin: 0 auto;
-  /* aby se obsah držel pěkně na středu */
+  margin: 0 auto; /* vystředí obsah */
 }
 
-/* Grid s kartami */
+/* Mřížka karet */
 .tiles-row {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr;           /* mobil: 1 sloupec */
+  grid-template-columns: 1fr; /* mobil - jedna karta na řádek */
   justify-content: center;
   align-items: start;
   margin: 0 auto;
-  max-width: 1200px;                     /* aby se to nezbláznilo na obřím monitoru */
+  max-width: 1200px;
 }
 
-/* Od ~tablet šířky chceme 2 vedle sebe */
+/* Od ~700px šířky (tablet+) dvě vedle sebe */
 @media (min-width: 700px) {
   .tiles-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Od velké šířky 4 vedle sebe */
+/* Od ~1200px šířky čtyři vedle sebe */
 @media (min-width: 1200px) {
   .tiles-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Styl jedné karty */
+/* Samotná karta */
 .card {
-  background: rgba(28,34,46,0.9); /* můžeš si nechat svůj var(--panel-bg) */
+  background: rgba(28,34,46,0.9); /* tmavý panel */
   border-radius: 0.75rem;
   box-shadow:
     0 16px 40px rgba(0,0,0,0.6),
@@ -1168,22 +1167,25 @@ body { scroll-padding-top: 76px; }
   padding: 1.25rem 1.5rem;
   border: 1px solid rgba(255,255,255,0.07);
   color: #fff;
-  max-width: 360px;
+  max-width: 360px; /* drží kartu rozumně úzkou */
 }
 
+/* Nadpis v kartě */
 .card h2 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffe082; /* tvůj accent */
+  color: #ffe082; /* zlatavý akcent */
   margin: 0 0 0.5rem 0;
 }
 
+/* Popisek */
 .card p {
   margin: 0 0 0.75rem 0;
   color: #bbc3cf;
   line-height: 1.4;
 }
 
+/* Obrázek */
 .card img {
   width: 100%;
   border-radius: 0.5rem;
