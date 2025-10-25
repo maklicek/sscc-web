@@ -1,256 +1,110 @@
-s/<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
   <title>SSCC — SolarSpace Carbon Cycle</title>
 
-  <style>
-    /* === ZÁKLADNÍ TMA === */
-    :root {
-      --bg-main: #0f1621;
-      --panel-bg: rgba(28,34,46,0.9);
-      --text-main: #fff;
-      --text-dim: #bbc3cf;
-      --accent-gold: #ffe082;
-      --border-panel: rgba(255,255,255,0.07);
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      line-height: 1.4;
-    }
-
-    /* === HLAVIČKA / NAVBAR === */
-    header.site-header {
-      background: rgba(15,22,33,0.8);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 1rem 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 1rem 2rem;
-      color: var(--text-main);
-    }
-
-    /* blok s logem + názvem */
-    .brand {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      min-width: max-content;
-    }
-
-    .brand-logo {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-      border-radius: 4px;
-      background-color: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.8);
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .brand-text strong {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    .brand-text em {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      font-style: normal;
-    }
-
-    /* navigace */
-    nav.site-nav {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      column-gap: 1rem;
-      row-gap: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    nav.site-nav a {
-      color: var(--accent-gold);
-      text-decoration: none;
-    }
-
-    nav.site-nav a.lang {
-      color: var(--text-main);
-      text-decoration: none;
-    }
-
-    nav.site-nav .sep {
-      color: var(--text-main);
-      opacity: 0.4;
-    }
-
-    /* === HLAVNÍ OBSAH WRAPPER === */
-    main.hub {
-      padding: 2rem 1rem 4rem;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    /* mřížka karet */
-    .tiles-row {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr; /* mobil default */
-      justify-content: center;
-      align-items: start;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
-
-    /* 2 sloupce od ~700px */
-    @media (min-width: 700px) {
-      .tiles-row {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-    }
-
-    /* 4 sloupce od ~1200px */
-    @media (min-width: 1200px) {
-      .tiles-row {
-        grid-template-columns: repeat(4, minmax(0,1fr));
-      }
-    }
-
-    /* samotná karta */
-    .card {
-      background: var(--panel-bg);
-      border-radius: 0.75rem;
-      box-shadow:
-        0 16px 40px rgba(0,0,0,0.6),
-        0 2px 4px rgba(255,255,255,0.05) inset;
-      padding: 1.25rem 1.5rem;
-      border: 1px solid var(--border-panel);
-      color: var(--text-main);
-      max-width: 360px;
-    }
-
-    .card h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--accent-gold);
-      margin: 0 0 0.5rem 0;
-    }
-
-    .card p {
-      margin: 0 0 0.75rem 0;
-      color: var(--text-dim);
-      line-height: 1.4;
-      font-size: 0.95rem;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 0.5rem;
-      display: block;
-      background: rgba(0,0,0,0.2);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.8);
-    }
-
-    /* === PATIČKA (volitelné) === */
-    footer.site-footer {
-      color: var(--text-dim);
-      font-size: 0.8rem;
-      text-align: center;
-      padding: 2rem 1rem 4rem;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      background: rgba(15,22,33,0.4);
-    }
-
-    footer.site-footer a {
-      color: var(--accent-gold);
-      text-decoration: none;
-    }
-  </style>
+  <link rel="icon" href="assets/img/sscc-logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <!--
+    POZNÁMKA:
+    style.css očekává základní styly pro hlavičku, karty, tmavé pozadí atd.
+    Pokud v repu používáš jiné jméno (třeba style-v13.css),
+    přejmenuj ho na assets/style.css nebo tady uprav href.
+  -->
 </head>
 
 <body>
-<header class="site-header">
-  <div class="brand">
-    <img class="brand-logo"
-         src="assets/img/sscc-logo.jpg"
-         alt="SSCC logo">
-    <div class="brand-text">
-      <strong>SSCC</strong>
-      <em>SolarSpace Carbon Cycle</em>
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="brand">
+      <!-- logo -->
+      <img class="brand-logo" src="assets/img/sscc-logo.jpg" alt="SSCC logo" />
+      <div class="brand-text">
+        <strong>SSCC</strong>
+        <em>SolarSpace Carbon Cycle</em>
+      </div>
     </div>
-  </div>
 
-  <nav class="site-nav">
-    <a href="projekty.html">Projekty</a>
-    <a href="edukace.html">Edukace</a>
-    <a href="napady.html">Nápady</a>
-    <a href="konsorcium.html">Konsorcium</a>
+    <nav class="site-nav">
+      <a href="projekty.html">Projekty</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="napady.html">Nápady</a>
+      <a href="konsorcium.html">Konsorcium</a>
 
-    <a href="index.html" class="lang">CZ</a>
-    <span class="sep">|</span>
-    <a href="index-en.html" class="lang">EN</a>
-  </nav>
-</header>
+      <a class="lang" href="index.html">CZ</a>
+      <span class="sep">|</span>
+      <a class="lang" href="index-en.html">EN</a>
+    </nav>
+  </header>
 
+  <!-- HLAVNÍ OBSAH -->
+  <main class="hub">
+    <section class="tiles-row">
+      <!-- Karta: Projekty -->
+      <article class="card">
+        <h2>Projekty</h2>
+        <p>Přehled pilotů a konceptů SSCC.</p>
+        <div class="card-img-frame">
+          <img
+            src="assets/img/hub_projekty.jpg"
+            alt="Schéma pilotní jednotky SSCC"
+          />
+        </div>
+      </article>
 
-<main class="hub">
-  <section class="tiles-row">
+      <!-- Karta: Edukace -->
+      <article class="card">
+        <h2>Edukace</h2>
+        <p>
+          Principy: Slunce → H₂ → NH₃ → CCU.
+        </p>
+        <div class="card-img-frame">
+          <img
+            src="assets/img/cyklus-sscc.jpg"
+            alt="Schéma cyklu SSCC"
+          />
+        </div>
+      </article>
 
-    <!-- Karta: Projekty -->
-    <article class="card">
-      <h2>Projekty</h2>
-      <p>Přehled pilotů a konceptů SSCC.</p>
-      <img src="assets/img/pilotni-jednotka.jpg"
-           alt="Schéma pilotní jednotky SSCC">
-    </article>
+      <!-- Karta: Nápady -->
+      <article class="card">
+        <h2>Nápady</h2>
+        <p>Vize a teoretické směry k diskuzi.</p>
+        <div class="card-img-frame">
+          <img
+            src="assets/img/hub_napady.jpg"
+            alt="Koncepční hypotézy"
+          />
+        </div>
+      </article>
 
-    <!-- Karta: Edukace -->
-    <article class="card">
-      <h2>Edukace</h2>
-      <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
-      <img src="assets/img/cyclus-sscc.jpg"
-           alt="Schéma cyklu SSCC">
-    </article>
-
-    <!-- Karta: Nápady -->
-    <article class="card">
-      <h2>Nápady</h2>
-      <p>Vize a teoretické směry k diskuzi.</p>
-      <img src="assets/img/hypotezy.jpg"
-           alt="Koncepční hypotézy">
-    </article>
-
-    <!-- Karta: Konsorcium -->
-    <article class="card">
-      <h2>Konsorcium</h2>
-      <p>Uzavřené materiály pro partnery.</p>
-      <img src="assets/img/partneri.jpg"
-           alt="Partnerské materiály">
-    </article>
-
-  </section>
-</main>
+      <!-- Karta: Konsorcium -->
+      <article class="card">
+        <h2>Konsorcium</h2>
+        <p>Uzavřené materiály pro partnery.</p>
+        <div class="card-img-frame">
+          <img
+            src="assets/img/partneri.jpg"
+            alt="Partnerské materiály"
+          />
+        </div>
+      </article>
+    </section>
+  </main>
 
   <!-- PATIČKA -->
   <footer class="site-footer">
-    © 2025 SolarSpace Carbon Cycle (SSCC) Initiative<br>
-    Navrhl a spravuje SSCC Consortium · Powered by clean energy ☀
+    <p>
+      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
+    </p>
+    <p>
+      Navrhl a spravuje SSCC Consortium · Powered by clean energy ✷
+    </p>
   </footer>
-
 </body>
 </html>
