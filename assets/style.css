@@ -60,13 +60,29 @@ body {
 </header>
 
 }
-
 .brand {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 12px;
 }
 
+.brand-text {
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.brand-text em {
+  display: block;
+  font-style: normal;
+  color: #c9d4e4;
+  font-size: .8rem;
+  opacity: 0.8;
+}
 .brand-logo {
   width: 70px;
   height: auto;
