@@ -18,87 +18,99 @@ body {
 
 /* --- HLAVIČKA -------------------------------------------------- */
 
+/* celá hlavička */
 .site-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(15, 21, 29, 0.9);
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  gap: 1rem;
+  background: transparent;        /* zatím necháváme tmavý podklad stránky visible */
+  padding: 12px 20px 16px;
   position: relative;
-  z-index: 10;
+  z-index: 200;
 }
 
-.brand {
+/* vnitřní flex řádek */
+.header-inner {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.brand-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 0 20px rgba(255,225,120,0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+/* levá část */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
+/* název značky vlevo */
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-}
-
-.brand-text strong {
   color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.brand-name {
+  font-size: 16px;
   font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
+  color: #fff;
 }
 
-.brand-text em {
-  color: #9ca7bb;
-  font-style: normal;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  max-width: 12rem;
-  white-space: nowrap;
+.brand-tagline {
+  font-size: 13px;
+  font-weight: 400;
+  color: #dcdcdc;
 }
 
-/* NAV */
-
+/* navigace (řádek s odkazy) */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-left: auto;
   align-items: center;
-  font-size: 0.9rem;
+  gap: 14px;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .site-nav a {
+  color: #fff;
   text-decoration: none;
-  color: #d8dde6;
-  transition: color 0.15s ease;
+  font-weight: 400;
 }
 
 .site-nav a:hover {
-  color: #ffe278;
+  color: #ffe89a; /* jemný zlatý hover aby to souznělo se zlatým motivem */
 }
 
 .site-nav .lang {
   font-weight: 500;
-  color: #fff;
 }
 
 .site-nav .sep {
-  color: #4b556a;
-  font-size: 0.8rem;
-  margin: 0 0.25rem;
-  user-select: none;
+  color: #888;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0 4px;
+}
+
+/* pravá část – logo */
+.header-right {
+  flex-shrink: 0;          /* ať se to nezmenšuje */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* samotné logo */
+.main-logo {
+  display: block;
+  width: 64px;            /* tady nastavíme velikost loga */
+  height: 64px;
+  border-radius: 8px;     /* pokud chceš ostře hranatý čtverec, dej 0 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  object-fit: cover;      /* ořízne přetékání dovnitř rámečku bez zdeformování */
+  background: #000;       /* fallback, kdyby se logo nenačetlo */
 }
 
 /* --- LAYOUT HLAVNÍ OBSAH -------------------------------------- */
