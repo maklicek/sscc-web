@@ -18,99 +18,100 @@ body {
 
 /* --- HLAVIČKA -------------------------------------------------- */
 
-/* celá hlavička */
+/* === HLAVIČKA =================================================== */
+
 .site-header {
-  background: transparent;        /* zatím necháváme tmavý podklad stránky visible */
-  padding: 12px 20px 16px;
+  background: #0f1217;         /* stejné tmavé, jako zbytek */
+  padding: 16px 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.8);
   position: relative;
-  z-index: 200;
+  z-index: 500;
+  /* fix top? necháme zatím ne-fixed, ať neplave při scrollu */
 }
 
-/* vnitřní flex řádek */
 .header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  max-width: 1400px;
-  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
-/* levá část */
+/* LEVÁ STRANA HLAVIČKY */
 .header-left {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-/* název značky vlevo */
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+  min-width: 0; /* pro jistotu, aby se to nelámalo */
   color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+/* název značky */
+.brand-block {
+  line-height: 1.2;
+  color: #fff;
+}
 .brand-name {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
 }
-
 .brand-tagline {
   font-size: 13px;
   font-weight: 400;
-  color: #dcdcdc;
+  color: #cfcfcf;
+  margin-top: 2px;
 }
 
-/* navigace (řádek s odkazy) */
+/* navigační menu pod názvem (vlevo) */
 .site-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  column-gap: 14px;
+  row-gap: 4px;
+
   font-size: 14px;
   line-height: 1.4;
 }
-
 .site-nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
 }
-
 .site-nav a:hover {
-  color: #ffe89a; /* jemný zlatý hover aby to souznělo se zlatým motivem */
+  color: #ffe69a;
 }
-
 .site-nav .lang {
   font-weight: 500;
 }
-
 .site-nav .sep {
-  color: #888;
+  color: #777;
   font-size: 14px;
   line-height: 1;
   margin: 0 4px;
 }
 
-/* pravá část – logo */
+/* PRAVÁ STRANA HLAVIČKY: logo */
 .header-right {
-  flex-shrink: 0;          /* ať se to nezmenšuje */
+  flex-shrink: 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
 }
 
-/* samotné logo */
+/* malé logo vpravo */
 .main-logo {
   display: block;
-  width: 64px;            /* tady nastavíme velikost loga */
+  width: 64px;
   height: 64px;
-  border-radius: 8px;     /* pokud chceš ostře hranatý čtverec, dej 0 */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-  object-fit: cover;      /* ořízne přetékání dovnitř rámečku bez zdeformování */
-  background: #000;       /* fallback, kdyby se logo nenačetlo */
+  border-radius: 8px;          /* nebo 0 pokud chceš tvrdý čtverec */
+  object-fit: cover;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+  background: #000;            /* fallback */
 }
 
 /* --- LAYOUT HLAVNÍ OBSAH -------------------------------------- */
