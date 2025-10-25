@@ -92,15 +92,16 @@ body {
 
 
 /* Text vedle loga */
-.brand-text {
+.brand {
   display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+  align-items: center;
+  gap: 10px; /* bylo 12px, lehce ztáhneme */
+  min-width: 0;
 }
 
 .brand-title {
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1rem;        /* bylo 1.05rem */
   font-weight: 600;
   letter-spacing: 0.03em;
   text-shadow: 0 0 8px rgba(255,226,120,0.4);
@@ -108,10 +109,12 @@ body {
 
 .brand-sub {
   color: #9ca7bb;
-  font-size: 0.8rem;
+  font-size: 0.75rem;     /* bylo 0.8rem */
   font-weight: 400;
   opacity: 0.9;
+  line-height: 1.25;
 }
+
 
 /* navigace vpravo */
 .site-nav {
