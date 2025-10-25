@@ -29,6 +29,36 @@ body {
   gap: 1rem;
   position: relative;
   z-index: 10;
+  .site-header {
+  background: linear-gradient(to right, rgba(10,10,15,0.7), rgba(10,10,15,0));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* DŮLEŽITÉ pro srovnání na výšku */
+  flex-wrap: wrap;
+  gap: 16px;
+}
+<header class="site-header">
+  <div class="brand">
+    <img class="brand-logo" src="assets/img/sscc-logo.jpg" alt="SSCC logo">
+    <div class="brand-text">
+      <strong>SSCC</strong>
+      <em>SolarSpace Carbon Cycle</em>
+    </div>
+
+  <nav class="site-nav">
+    <a href="projekty.html">Projekty</a>
+    <a href="edukace.html">Edukace</a>
+    <a href="napady.html">Nápady</a>
+    <a href="konsorcium.html">Konsorcium</a>
+    <a href="index.html" class="lang">CZ</a>
+    <span class="sep">|</span>
+    <a href="index-en.html" class="lang">EN</a>
+  </nav>
+</header>
+
 }
 
 .brand {
