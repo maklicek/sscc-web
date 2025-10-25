@@ -62,28 +62,34 @@ body {
 
 /* LOGO – tady ho zvětšujeme */
 .brand-logo {
-  height: 64px;       /* zvětšeno z ~40px na 64px */
-  width: 64px;
+  height: 56px;
+  width: 56px;
+  flex-shrink: 0;
+
+  /* zobraz obrázek tak jak je, ale my ho ořízneme */
   object-fit: cover;
-  border-radius: 10px;
 
-  /* žádný bílý rámeček kolem */
-  background: radial-gradient(
-    circle at 30% 30%,
-    #ffe9a8 0%,
-    #c0a040 60%,
-    #403000 100%
-  );
+  /* uděláme z toho kulatý badge */
+  border-radius: 50%;
 
-  padding: 8px;
+  /* pryč vlastní podklad, ať tam není ten náš žluto-hnědý gradient */
+  background: none;
 
-  /* jemný glow aby to působilo "energeticky" */
+  /* žádné extra polstrování, ať ten bílý rámeček už není vidět */
+  padding: 0;
+  border: none;
+
+  /* jemné světlo kolem */
   box-shadow:
     0 12px 30px rgba(0,0,0,0.9),
-    0 0 32px rgba(255, 226, 120, 0.4),
-    0 0 4px rgba(255,255,255,0.4) inset;
+    0 0 24px rgba(255, 226, 120, 0.35),
+    0 0 4px rgba(255,255,255,0.35);
+
+  /* když má obrázek bílé pozadí, tohle aspoň udělá dojem "pečetě" */
+  background-color: rgba(20,20,20,0.4);
   border: 1px solid rgba(255,255,255,0.12);
 }
+
 
 /* Text vedle loga */
 .brand-text {
