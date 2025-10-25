@@ -29,6 +29,7 @@ body {
   gap: 1rem;
   position: relative;
   z-index: 10;
+  
   .site-header {
   background: linear-gradient(to right, rgba(10,10,15,0.7), rgba(10,10,15,0));
   backdrop-filter: blur(6px);
