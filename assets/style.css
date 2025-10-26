@@ -1,520 +1,157 @@
-/* Reset + základní barvy */
-* {
-  box-sizing: border-box;
+/* ========== ZÁKLADNÍ NASTAVENÍ ========== */
+body {
+  background-color: #0b0f14;
+  color: #ddd;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: #0f151d;            /* velmi tmavá modročerná */
-  color: #d8dde6;                        /* světle šedý text */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
 }
 
-/* --- HLAVIČKA -------------------------------------------------- */
-
+/* ========== HLAVIČKA ========== */
 .site-header {
+  background-color: #0f141b;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(15, 21, 29, 0.9);
-  color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  gap: 1rem;
-  position: relative;
-  z-index: 10;
-/* ===== HLAVIČKA / NAVBAR ===== */
-
-.site-header {
-  background: rgba(20, 26, 36, 0.9); /* o chlup světlejší než zbytek stránky */
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
-  position: relative;
-  z-index: 100;
-  backdrop-filter: blur(6px);
-}
-
-.site-header-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 12px 16px;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between; /* brand vlevo, nav vpravo */
-  gap: 16px;
-}
-/* logo + název vlevo */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0; /* prevence přetékání */
-}
-
-/* LOGO – tady ho zvětšujeme */
-.brand-logo {
-  height: 56px;
-  width: 56px;
-  flex-shrink: 0;
-
-  /* zobraz obrázek tak jak je, ale my ho ořízneme */
-  object-fit: cover;
-
-  /* uděláme z toho kulatý badge */
-  border-radius: 50%;
-
-  /* pryč vlastní podklad, ať tam není ten náš žluto-hnědý gradient */
-  background: none;
-
-  /* žádné extra polstrování, ať ten bílý rámeček už není vidět */
-  padding: 0;
-  border: none;
-
-  /* jemné světlo kolem */
-  box-shadow:
-    0 12px 30px rgba(0,0,0,0.9),
-    0 0 24px rgba(255, 226, 120, 0.35),
-    0 0 4px rgba(255,255,255,0.35);
-
-  /* když má obrázek bílé pozadí, tohle aspoň udělá dojem "pečetě" */
-  background-color: rgba(20,20,20,0.4);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-
-/* Text vedle loga */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* bylo 12px, lehce ztáhneme */
-  min-width: 0;
-}
-
-.brand-title {
-  color: #fff;
-  font-size: 1rem;        /* bylo 1.05rem */
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 8px rgba(255,226,120,0.4);
-}
-
-.brand-sub {
-  color: #9ca7bb;
-  font-size: 0.75rem;     /* bylo 0.8rem */
-  font-weight: 400;
-  opacity: 0.9;
-  line-height: 1.25;
-}
-
-
-/* navigace vpravo */
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem 1.25rem;
-  font-size: 0.9rem;
-}
-
-.site-nav a {
-  color: #d8dde6;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color .15s ease, text-shadow .15s ease;
-}
-
-.site-nav a:hover {
-  color: #ffe278;
-  text-shadow: 0 0 8px rgba(255,226,120,0.6);
-}
-
-.lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-left: 0.5rem;
-  padding-left: 0.75rem;
-  border-left: 1px solid rgba(255,255,255,0.12); /* oddělovač od menu */
-}
-
-.lang {
-  color: #cfd5e6;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
-}
-
-.lang.active {
-  color: #fff;
-  font-weight: 600;
-  text-shadow: 0 0 8px rgba(255,226,120,0.6);
-}
-
-.sep {
-  color: #4b556a;
-  font-size: 0.8rem;
-  user-select: none;
-}
-
-/* responsive pro úzké obrazovky, aby se to nezlomilo hnusně */
-@media (max-width: 520px) {
-  .site-header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .site-nav {
-    row-gap: 0.5rem;
-    font-size: 0.85rem;
-    padding-left: 4px;
-  }
-
-  .brand-logo {
-    height: 56px;
-    width: 56px;
-  }
-
-  .brand-title {
-    font-size: 0.95rem;
-  }
-
-  .brand-sub {
-    font-size: 0.7rem;
-  }
-}
-  
-
-}
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-text {
-  line-height: 1.2;
-}
-
-.brand-text strong {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.brand-text em {
-  display: block;
-  font-style: normal;
-  color: #c9d4e4;
-  font-size: .8rem;
-  opacity: 0.8;
-}
-.brand-logo {
-  width: 99px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  padding:6px
-  box-shadow: 0 0 20px rgba(255,225,120,0.4);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-text strong {
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-}
-
-.brand-text em {
-  color: #9ca7bb;
-  font-style: normal;
-  font-size: 0.8rem;
-  line-height: 1.2;
-  max-width: 12rem;
-  white-space: nowrap;
-}
-
-/* NAV */
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-left: auto;
-  align-items: center;
-  font-size: 0.9rem;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: #d8dde6;
-  transition: color 0.15s ease;
-}
-
-.site-nav a:hover {
-  color: #ffe278;
-}
-
-.site-nav .lang {
-  font-weight: 500;
-  color: #fff;
-}
-
-.site-nav .sep {
-  color: #4b556a;
-  font-size: 0.8rem;
-  margin: 0 0.25rem;
-  user-select: none;
-}
-
-/* --- LAYOUT HLAVNÍ OBSAH -------------------------------------- */
-
-.hub {
-  width: 100%;
-  max-width: 1400px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1rem 4rem 1rem;
-  flex: 1 0 auto;
-}
-
-.tiles-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-  gap: 1.5rem;
-  width: 100%;
-}
-
-/* --- KARTIČKY -------------------------------------------------- */
-
-.card {
-  background: radial-gradient(
-      circle at 0% 0%,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(15, 21, 29, 0) 60%
-    ),
-    #1a222f;
-  border-radius: 10px;
-  padding: 1.25rem 1.25rem 1rem;
-  box-shadow:
-    0 30px 60px -10px rgba(0, 0, 0, 0.9),
-    0 8px 20px rgba(0, 0, 0, 0.6),
-    0 0 60px rgba(255, 226, 120, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  display: flex;
-  flex-direction: column;
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* jemný lesk nahoře */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 20% 0%,
-    rgba(255, 255, 255, 0.14) 0%,
-    rgba(15, 21, 29, 0) 60%
-  );
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.card h2 {
-  color: #ffe278;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 8px rgba(255, 226, 120, 0.4);
-  position: relative;
-  z-index: 2;
-}
-
-.card p {
-  color: #c8cedd;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* Obrázkový box uvnitř karty */
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  background-color: #0f151d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.9),
-    0 0 40px rgba(255, 226, 120, 0.07);
-  position: relative;
-  z-index: 2;
-}
-
-/* --- PATIČKA --------------------------------------------------- */
-
-footer {
-  text-align: center;
-  color: #9ca7bb;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  padding: 2rem 1rem 3rem;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(255, 226, 120, 0.07) 0%,
-    rgba(15, 21, 29, 0) 70%
-  );
-}
-
-footer a {
-  color: #ffe278;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .dot {
-  color: #4b556a;
-  margin: 0 0.4rem;
-  user-select: none;
-}
-
-/* jemná hvězdička */
-.spark {
-  color: #ffe278;
-  text-shadow: 0 0 6px rgba(255, 226, 120, 0.8), 0 0 20px rgba(255, 226, 120, 0.4);
-  font-size: 0.9em;
-}
-
-/* --- RESPONSIVE TWEAKS ---------------------------------------- */
-
-@media (max-width: 480px) {
-  .site-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem 1rem;
-    margin-left: 0;
-    font-size: 0.85rem;
-  }
-
-  .brand-logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .brand-text strong {
-    font-size: 0.9rem;
-  }
-
-  .brand-text em {
-    font-size: 0.7rem;
-  }
-
-  .card {
-    min-height: auto;
-  }
-/* Header bar */
-.site-header {
-  background: #0f131a;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  padding: 12px 24px;
-  color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid #1f252e;
 }
 
 .header-inner {
-  max-width: 1400px;
-  margin: 0 auto;
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
-}
-
-/* Levý blok: název + menu */
-.header-left {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  width: 100%;
 }
 
 .brand-block {
+  display: flex;
+  flex-direction: column;
   line-height: 1.2;
 }
 
 .brand-name {
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 1.2rem;
   color: #fff;
 }
 
 .brand-tagline {
-  font-size: 12px;
-  color: #9ea7b7;
+  font-size: 0.9rem;
+  color: #bbb;
 }
 
-/* Navigace */
+/* ========== MENU ========== */
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 13px;
+  gap: 1.2rem;
+  margin-left: 2rem;
 }
 
 .site-nav a {
-  color: #fff;
-  text-decoration: none;
+  color: #ccc;
   font-weight: 500;
 }
 
-.site-nav a.lang {
-  color: #9ea7b7;
-  font-weight: 400;
+.site-nav a:hover {
+  color: #fff;
 }
 
-.site-nav .sep {
-  color: #9ea7b7;
-  font-weight: 300;
-  user-select: none;
+.lang {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-/* Pravý blok: logo */
-.header-right {
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
+/* ========== LOGO V HLAVIČCE ========== */
 .main-logo {
-  width: 72px;         /* můžeš upravit klidně na 64px nebo 80px */
+  width: 90px;
   height: auto;
   border-radius: 8px;
-  display: block;
+  object-fit: contain;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
+/* ========== HLAVNÍ ODDÍL ========== */
+.hub {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tiles-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+/* ========== KARTY ========== */
+.card {
+  background: radial-gradient(circle at top left, #202531, #11151c);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 260px;
+  color: #eee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #f2c94c;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.8rem;
+}
+
+/* ========== PATIČKA ========== */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #1f252e;
+  margin-top: 2rem;
+}
+
+/* ========== RESPONSIVITA ========== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tiles-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-logo {
+    margin-top: 1rem;
+  }
+}
