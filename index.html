@@ -2,23 +2,103 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SSCC — SolarSpace Carbon Cycle</title>
 
-  <!-- Styl -->
+  <!-- Favicon (volitelné; můžeš nahrát např. assets/img/sscc-logo.jpg jako ico) -->
+  <link rel="icon" href="assets/img/sscc-logo.jpg">
+
+  <!-- Hlavní styly -->
   <link rel="stylesheet" href="assets/style.css">
-</head>
+<head>
 
 <body>
-  <header>
-    <h1>Test hlavičky</h1>
-    <p>Pokud tohle vidíš, GitHub Pages už funguje správně ✅</p>
+
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Levá část: název + menu -->
+      <div class="header-left">
+        <div class="brand-block">
+          <div class="brand-name">SSCC</div>
+          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        <div>
+
+        <nav class="site-nav">
+          <a href="projekty.html">Projekty</a>
+          <a href="edukace.html">Edukace</a>
+          <a href="napady.html">Nápady</a>
+          <a href="konsorcium.html">Konsorcium</a>
+
+          <a href="index.html" class="lang">CZ</a>
+          <span class="sep">|</span>
+          <a href="index-en.html" class="lang">EN</a>
+        <nav>
+      <div>
+
+      <!-- Pravá část: logo -->
+      <div class="header-right">
+        <!-- Pokud chceš menší logo v hlavičce → nechej to.
+             Pokud chceš mít logo jen jednou dole na stránce,
+             můžeš tenhle <img> klidně celé smazat. -->
+        <img
+          class="main-logo"
+          src="assets/img/sscc-logo.jpg"
+          alt="SolarSpace Carbon Cycle logo">
+      <div>
+
+    </div> <!-- /header-inner -->
   </header>
 
+  <!-- HLAVNÍ OBSAH -->
+  <main class="hub">
+    <section class="tiles-row">
+
+      <!-- Karta: Projekty -->
+      <article class="card">
+        <h2>Projekty</h2>
+        <p>Přehled pilotů a konceptů SSCC.</p>
+        <img
+          src="assets/img/pilotni-jednotka.jpg"
+          alt="Pilotní jednotka SSCC">
+      <article>
+
+      <!-- Karta: Edukace -->
+      <article class="card">
+        <h2>Edukace</h2>
+        <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
+        <img
+          src="assets/img/cyclus-sscc.jpg"
+          alt="Schéma cyklu SSCC">
+      <article>
+
+      <!-- Karta: Nápady -->
+      <article class="card">
+        <h2>Nápady</h2>
+        <p>Vize a teoretické směry k diskuzi.</p>
+        <img
+          src="assets/img/hypotezy.jpg"
+          alt="Koncepční hypotézy">
+      <article>
+
+      <!-- Karta: Konsorcium -->
+      <article class="card">
+        <h2>Konsorcium</h2>
+        <p>Uzavřené materiály pro partnery.</p>
+        <img
+          src="assets/img/partneri.jpg"
+          alt="Partnerské materiály">
+      <article>
+
+    <section>
   <main>
-    <p>Toto je testovací text. Když ho uvidíš na <a href="https://maklicek.github.io/sscc-web/">svém webu</a>, 
-    víme, že se načítá správný index.html.</p>
-  </main>
-</body>
-</html>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+    <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+  <footer>
+
+<body>
+<html>
