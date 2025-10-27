@@ -115,21 +115,30 @@ body {
 }
 
 .main-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
   object-fit: cover;
-  background: #0f141b;
+  display: block;
+
+  background: none;
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0;
+
   box-shadow:
-    0 10px 24px rgba(0,0,0,0.7),
-    0 0 20px rgba(255, 215, 90, 0.4);
-  border: 1px solid rgba(255, 215, 90, 0.4);
-  padding: 6px;
-  transition: transform 0.18s ease;
+    0 4px 14px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(255, 215, 90, 0.35);
+  border: 1px solid rgba(255, 215, 90, 0.35);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .main-logo:hover {
-  transform: scale(1.07);
+  transform: scale(1.06);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.7),
+    0 0 22px rgba(255, 220, 100, 0.5);
 }
 
 /* PRAVÁ STRANA HLAVIČKY: logo */
