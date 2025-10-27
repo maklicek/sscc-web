@@ -119,7 +119,7 @@ a:hover {
 
 /* ========== HLAVNÍ ODDÍL ========== */
 .hub {
-  padding: 2rem;
+  padding: 2rem 2rem 4rem;
   display: flex;
   justify-content: center;
 }
@@ -128,9 +128,10 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem 2rem;
   max-width: 1200px;
 }
+
 
 /* ========== KARTY ========== */
 .card {
