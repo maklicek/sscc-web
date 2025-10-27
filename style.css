@@ -170,11 +170,52 @@ body {
 }
 
 .tiles-row {
+  max-width: 1500px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-  gap: 1.5rem;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px,100%), 1fr));
+  gap: 2rem;
 }
+
+.card {
+  background: radial-gradient(circle at 0% 0%, #2a2e31 0%, #151617 70%);
+  border-radius: 12px;
+  border: 1px solid rgba(255,215,90,0.18);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.8),
+    0 0 60px rgba(0,0,0,0.9) inset;
+  padding: 1.5rem 1.5rem 2rem;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  color: rgb(255,215,90);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+
+.card p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+.card img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+  margin-top: 0.5rem;
+}
+
 
 /* --- KARTIČKY -------------------------------------------------- */
 
