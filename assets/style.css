@@ -104,14 +104,15 @@ a:hover {
   color: var(--text-main);
 }
 .brand-name {
-  font-size: 1.3rem;          /* větší název */
+  font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
 }
 .brand-tagline {
-  font-size: 1rem;            /* větší podtitulek */
+  font-size: 1rem;
   color: var(--text-soft);
 }
+
 
 /* LOGO vpravo */
 .header-right {
