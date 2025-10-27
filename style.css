@@ -369,3 +369,63 @@ footer .dot {
   transform: scale(1.05);
   transition: box-shadow 0.18s ease, transform 0.18s ease;
 }
+.site-header {
+  background: radial-gradient(circle at 20% 0%, #5a4b24 0%, #1a1c1d 60%);
+  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header-inner {
+  display: flex;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-block .brand-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.brand-block .brand-tagline {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: rgb(255,215,90);
+}
+
+.site-nav .sep {
+  color: rgba(255,255,255,0.4);
+  font-weight: 300;
+}
