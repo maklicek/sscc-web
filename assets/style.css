@@ -210,3 +210,15 @@ a:hover {
     width: 80px;
   }
 }
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Tohle potřebujeme: */
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
