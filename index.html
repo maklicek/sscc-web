@@ -5,34 +5,44 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SSCC — SolarSpace Carbon Cycle</title>
 
-  <!-- Favicon (volitelné) -->
-  <link rel="icon" href="assets/img/sscc-logo.jpg">
-
-  <!-- hlavní styly -->
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/img/sscc-logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
+  <div class="container header-inner">
 
-    <div class="brand-block">
+    <!-- Levý blok: značka -->
+    <a class="brand-block" href="index.html">
       <div class="brand-name">SSCC</div>
       <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-    </div>
+    </a>
 
+    <!-- Burger tlačítko (mobil) -->
+    <button class="nav-toggle" aria-label="Zobrazit menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <!-- Navigace -->
     <nav class="site-nav">
-      <a href="projekty.html">Projekty</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="napady.html">Nápady</a>
-      <a href="konsorcium.html">Konsorcium</a>
-
-      <a href="index.html" class="lang">CZ</a>
-      <span class="sep">|</span>
-      <a href="index-en.html" class="lang">EN</a>
+      <ul>
+        <li><a href="projekty.html">Projekty</a></li>
+        <li><a href="edukace.html">Edukace</a></li>
+        <li><a href="napady.html">Nápady</a></li>
+        <li><a href="konsorcium.html">Konsorcium</a></li>
+        <li class="lang-switch">
+          <a href="index.html" class="lang active">CZ</a>
+          <span class="sep">|</span>
+          <a href="index-en.html" class="lang">EN</a>
+        </li>
+      </ul>
     </nav>
 
+    <!-- Pravý blok: logo -->
     <div class="header-right">
       <img
         class="main-logo"
@@ -44,50 +54,75 @@
   </div>
 </header>
 
-  <!-- HLAVNÍ OBSAH -->
-  <main class="hub">
-    <section class="tiles-row">
 
-      <article class="card">
-        <h2>Projekty</h2>
-        <p>Přehled pilotů a konceptů SSCC.</p>
-        <img
-          src="assets/img/pilotni-jednotka.jpg"
-          alt="Pilotní jednotka SSCC">
-      </article>
+<main class="hub">
 
-      <article class="card">
-        <h2>Edukace</h2>
-        <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
-        <img
-          src="assets/img/cyclus-sscc.jpg"
-          alt="Schéma cyklu SSCC">
-      </article>
+  <!-- Hero / úvod (volitelné; můžeš klidně smazat pokud nechceš text nahoře) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+      <p class="hero-lead">
+        SSCC (SolarSpace Carbon Cycle) propojuje orbitální solární zdroje,
+        vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+        Cíl: energeticky soběstačné, škálovatelné a ziskové odstraňování CO₂.
+      </p>
+    </div>
+  </section>
 
-      <article class="card">
-        <h2>Nápady</h2>
-        <p>Vize a teoretické směry k diskuzi.</p>
-        <img
-          src="assets/img/hypotezy.jpg"
-          alt="Koncepční hypotézy">
-      </article>
+  <!-- 4 karty -->
+  <section class="tiles-row container">
 
-      <article class="card">
-        <h2>Konsorcium</h2>
-        <p>Uzavřené materiály pro partnery.</p>
-        <img
-          src="assets/img/partneri.jpg"
-          alt="Partnerské materiály">
-      </article>
+    <article class="card">
+      <h2>Projekty</h2>
+      <p>Přehled pilotů a konceptů SSCC.</p>
+      <img
+        src="assets/img/pilotni-jednotka.jpg"
+        alt="Pilotní jednotka SSCC">
+    </article>
 
-    </section>
-  </main>
+    <article class="card">
+      <h2>Edukace</h2>
+      <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
+      <img
+        src="assets/img/cyclus-sscc.jpg"
+        alt="Schéma cyklu SSCC">
+    </article>
 
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
-    <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
-  </footer>
+    <article class="card">
+      <h2>Nápady</h2>
+      <p>Vize a teoretické směry k diskuzi.</p>
+      <img
+        src="assets/img/hypotezy.jpg"
+        alt="Koncepční hypotézy">
+    </article>
 
+    <article class="card">
+      <h2>Konsorcium</h2>
+      <p>Uzavřené materiály pro partnery.</p>
+      <img
+        src="assets/img/partneri.jpg"
+        alt="Partnerské materiály">
+    </article>
+
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+      <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+    </div>
+    <div class="footer-right">
+      <a href="projekty.html">Projekty</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="napady.html">Nápady</a>
+      <a href="konsorcium.html">Konsorcium</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
