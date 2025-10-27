@@ -20,6 +20,164 @@
   --shadow-card-img: 0 12px 30px rgba(0,0,0,0.7);
   --shadow-header: 0 10px 30px rgba(0,0,0,0.8);
 }
+:root {
+  --header-height: 64px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-panel);
+  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
+  box-shadow: var(--shadow-header);
+  backdrop-filter: blur(8px);
+}
+
+.header-inner {
+  height: var(--header-height);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* LEVÁ STRANA */
+.brand-combo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+.brand-tagline {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.2;
+}
+
+/* PRAVÁ STRANA */
+.header-rightside {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* MENU */
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav a {
+  color: var(--text-dim);
+  font-weight: 400;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+}
+.site-nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* JAZYK */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lang-switch .sep {
+  color: var(--text-fade);
+  font-weight: 300;
+}
+.lang-switch .lang {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.lang-switch .lang.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(255,215,90,0.07);
+}
+
+/* BURGER (mobil) */
+.nav-toggle {
+  display: none;
+  background: rgba(0,0,0,0.4);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+  margin: 4px 0;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+  .site-nav {
+    position: absolute;
+    right: var(--container-pad);
+    top: calc(var(--header-height) + 0.5rem);
+    background: #1a1c1d;
+    border: 1px solid rgba(255,215,90,0.28);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+    padding: 1rem 1.25rem;
+    min-width: 200px;
+
+    display: none;
+  }
+
+  .site-nav.open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
 
 /* ========== RESET / BASE ========== */
 *,
