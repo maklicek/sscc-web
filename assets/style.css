@@ -120,19 +120,19 @@ a:hover {
 .main-logo {
   width: 48px;
   height: 48px;
-  object-fit: contain;
-  display: block;
+  border-radius: 6px;
 
-  background: transparent;
+  /* klíčové: */
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+  flex-shrink: 0;
   border: none;
   box-shadow: none;
-  border-radius: 0;
-
-  flex-shrink: 0;
-  transition: transform 0.25s ease;
-}
-.main-logo:hover {
-  transform: scale(1.05);
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 .brand-block {
