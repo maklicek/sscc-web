@@ -1,41 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projekt SSCC — Pilot (NH₃ & CCU)</title>
-  <link rel="stylesheet" href="style.css?v=13">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projekty — SSCC</title>
+
+  <link rel="icon" href="assets/img/sscc-logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
- <header class="site-header">
-  <div class="bar">
-    <!-- VLEVO: značka / logo -->
-    <a href="index.html" class="brand">
-      <img class="brand-logo" src="img/sscc-logo.jpg" alt="SSCC logo">
-      <span class="brand-text">
-        <strong>SSCC</strong>
-        <em>SolarSpace Carbon Cycle</em>
-      </span>
-    </a>
 
-    <!-- VPRAVO: navigace -->
-    <nav class="site-nav">
-      <a href="projekty.html">Projekty</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="napady.html">Nápady</a>
-      <a href="konsorcium.html">Konsorcium</a>
+  <!-- stejná hlavička jako na indexu -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="assets/img/sscc-logo.jpg" alt="SolarSpace Carbon Cycle" />
+        <div class="brand-block">
+          <div class="brand-name">SSCC</div>
+          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        </div>
+      </a>
 
-      <span class="lang-group">
-        <a href="index.html" class="lang">CZ</a>
-        <span class="sep">|</span>
-        <a href="index-en.html" class="lang">EN</a>
-      </span>
-    </nav>
-  </div>
-</header>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="projekty.html" class="active-link">Projekty</a></li>
+          <li><a href="edukace.html">Edukace</a></li>
+          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="konsorcium.html">Konsorcium</a></li>
+        </ul>
+      </nav>
 
-</footer>
+      <div class="header-ctrl">
+        <div class="lang-switch">
+          <a href="index.html" class="lang active">CZ</a>
+          <span class="sep">|</span>
+          <a href="index-en.html" class="lang">EN</a>
+        </div>
+        <button class="nav-toggle" aria-label="Zobrazit menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
+  <main class="section-page">
+    <section class="container section-intro">
+      <h1>Projekty SSCC</h1>
+      <p class="section-lead">
+        Přehled pilotních a koncepčních řešení. Záměr: využít solární energii 
+        mimo atmosféru, zpracovat ji do chemicky uložené formy a dodat ji zpět
+        na Zemi způsobem s negativní uhlíkovou bilancí.
+      </p>
+    </section>
+
+    <section class="container project-list">
+
+      <article class="project-block">
+        <h2>Orbitální solární energie → bezdrátový přenos</h2>
+        <p>
+          Koncept SBSP (Space-Based Solar Power): sběr energie mimo atmosféru,
+          konverze na mikrovlnný svazek a bezpečný příjem v pozemní stanici. 
+          Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+        </p>
+        <img src="assets/img/pilotni-jednotka.jpg" alt="Schéma pilotní jednotky přenosu energie">
+      </article>
+
+      <article class="project-block">
+        <h2>CO₂ jako teplo pro domácnosti a města</h2>
+        <p>
+          Lokální cirkulace CO₂ jako tepelného média pro nízkoteplotní rozvody.
+          Cíl: nahradit část klasického fosilního tepla cirkulovaným pracovním
+          médiem s minimální ztrátou uhlíku.
+        </p>
+      </article>
+
+      <article class="project-block">
+        <h2>Uhlíkově negativní amoniak (NH₃)</h2>
+        <p>
+          Využití obnovitelné energie k výrobě vodíku a následné syntéze NH₃.
+          Amoniak potom funguje jako nosič energie i jako surovina pro
+          průmyslové vstupy, které dnes závisí na fosilních zdrojích.
+        </p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+        <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+      </div>
+      <div class="footer-right">
+        <a href="projekty.html">Projekty</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="napady.html">Nápady</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
 </body>
 </html>
-
