@@ -86,44 +86,40 @@ a:hover {
   box-shadow: var(--shadow-header);
   backdrop-filter: blur(8px);
 }
+/* ========== HLAVIČKA ========== */
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-panel);
+  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
+  box-shadow: var(--shadow-header);
+  backdrop-filter: blur(8px);
+}
+
+/* tři bloky: vlevo brand, uprostřed nav, vpravo jazyk/burger */
 .header-inner {
   height: var(--header-height);
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
-  position: relative; /* kvůli absolutnímu menu na mobilu */
+  position: relative;
 }
 
-/* značka vlevo */
-.brand-block {
+/* LEVÁ ČÁST: logo + text */
+.brand-combo {
   display: flex;
-  flex-direction: column;
-  line-height: 1.2;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
   color: var(--text-main);
 }
-.brand-name {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #fff;
-}
-.brand-tagline {
-  font-size: 1rem;
-  color: var(--text-soft);
-}
 
-
-/* LOGO vpravo */
-.header-right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-shrink: 0;
-}
 .main-logo {
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   display: block;
 
@@ -132,24 +128,32 @@ a:hover {
   box-shadow: none;
   border-radius: 0;
 
+  flex-shrink: 0;
   transition: transform 0.25s ease;
 }
-
 .main-logo:hover {
   transform: scale(1.05);
 }
 
-
-.main-logo:hover {
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.9),
-    0 0 32px rgba(255, 220, 100, 0.32);
-  transform: translateY(-1px) scale(1.02);
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.brand-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.brand-tagline {
+  font-size: 0.8rem;
+  color: var(--text-soft);
 }
 
-/* NAV desktop */
+/* STŘED: hlavní horizontální menu */
 .site-nav {
   display: flex;
+  justify-content: center;
 }
 .site-nav ul {
   display: flex;
@@ -176,6 +180,13 @@ a:hover {
   border-color: var(--accent);
 }
 
+/* PRAVO: jazyk + burger */
+.header-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* jazykový přepínač */
 .lang-switch {
   display: flex;
@@ -192,6 +203,8 @@ a:hover {
   padding: 0.35rem 0.5rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
+  color: var(--text-dim);
+  text-decoration: none;
 }
 .lang-switch .lang.active {
   color: var(--accent);
@@ -199,7 +212,7 @@ a:hover {
   background: rgba(255,215,90,0.07);
 }
 
-/* BURGER tlačítko - defaultně skryté na desktopu */
+/* burger tlačítko */
 .nav-toggle {
   display: none;
   background: rgba(0,0,0,0.4);
@@ -216,6 +229,46 @@ a:hover {
   border-radius: 2px;
   margin: 4px 0;
 }
+
+/* RESPONSIVE: mobilní rozbalovací menu */
+@media (max-width: 800px) {
+  /* na mobilu menu nebude uprostřed na řádku, ale vyskočí jako panel */
+  .site-nav {
+    position: absolute;
+    right: var(--container-pad);
+    top: calc(var(--header-height) + 0.5rem);
+    background: #1a1c1d;
+    border: 1px solid rgba(255,215,90,0.28);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+    padding: 1rem 1.25rem;
+    min-width: 200px;
+
+    display: none;
+    justify-content: flex-start;
+  }
+
+  .site-nav.open {
+    display: block;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  /* burger se ukáže napravo */
+  .nav-toggle {
+    display: block;
+  }
+}
+
 
 /* ========== RESPONSIVE NAVIGATION ========== */
 @media (max-width: 800px) {
