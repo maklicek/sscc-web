@@ -120,17 +120,20 @@ a:hover {
 .main-logo {
   width: 48px;
   height: 48px;
-  border-radius: 6px;
 
-  /* klíčové: */
+  /* klíčové věci pro oříznutí přebytečného bílého okraje */
   object-fit: cover;
   object-position: center;
 
   display: block;
   flex-shrink: 0;
+
+  /* jistota že nevracíme ty dočasné dekorace */
+  background: none;
   border: none;
   box-shadow: none;
-  background: none;
+  border-radius: 6px;
+
   padding: 0;
   margin: 0;
 }
