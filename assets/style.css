@@ -121,19 +121,23 @@ a:hover {
   flex-shrink: 0;
 }
 .main-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-md);
-  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   display: block;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 6px;
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.8),
-    0 0 24px rgba(255, 215, 90, 0.2);
-  border: 1px solid var(--border-soft);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+
+  transition: transform 0.25s ease;
 }
+
+.main-logo:hover {
+  transform: scale(1.05);
+}
+
 
 .main-logo:hover {
   box-shadow:
