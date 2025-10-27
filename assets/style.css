@@ -134,6 +134,7 @@ a:hover {
   border: 1px solid var(--border-soft);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
+
 .main-logo:hover {
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.9),
