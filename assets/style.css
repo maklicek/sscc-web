@@ -14,16 +14,13 @@ a {
 a:hover {
   color: #fff;
 }
-
-/* ========== HLAVIČKA (SOLAR GRADIENT) ========== */
+/* === HLAVIČKA (solar gradient + flex zarovnání) === */
 .site-header {
-  background: linear-gradient(to bottom, rgba(255, 208, 89, 0.22), #0f141b 85%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 2.4rem;
+  background: radial-gradient(circle at 50% -20%, rgba(255, 215, 90, 0.4) 0%, rgba(15,20,27,0) 60%),
+              linear-gradient(to bottom, rgba(255, 208, 89, 0.18) 0%, #0f141b 70%);
   border-bottom: 1px solid rgba(255, 215, 90, 0.25);
   box-shadow: 0 2px 12px rgba(255, 205, 80, 0.12);
+  padding: 0.8rem 2rem 1rem;
   position: relative;
   z-index: 10;
 }
@@ -31,73 +28,93 @@ a:hover {
 .header-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  align-items: flex-start;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/* ========== LEVÁ ČÁST: ZNAČKA ========== */
-.brand-block {
+/* Levý blok brand + menu */
+.header-left {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Název nahoře */
+.brand-block {
   line-height: 1.2;
 }
 
 .brand-name {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   color: #fff;
   letter-spacing: 0.3px;
 }
 
 .brand-tagline {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #f0e4b4;
+  opacity: 0.9;
 }
 
-/* ========== MENU ========== */
+/* Navigace pod značkou */
 .site-nav {
   display: flex;
-  gap: 1.5rem;
-  margin-left: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+  font-size: 0.9rem;
 }
 
 .site-nav a {
   color: #ddd;
   font-weight: 500;
   letter-spacing: 0.2px;
-  transition: color 0.2s ease;
+  transition: color 0.18s ease;
 }
 
 .site-nav a:hover {
   color: #ffda70;
+  text-shadow: 0 0 6px rgba(255, 221, 120, 0.45);
+}
+
+.site-nav .sep {
+  color: #777;
+  font-size: 0.8rem;
+  margin: 0 -0.4rem;
 }
 
 .lang {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  color: #fff;
 }
 
-/* ========== LOGO V HLAVIČCE ========== */
+/* Pravá část: logo */
 .header-right {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
+  min-width: 90px;
 }
 
 .main-logo {
-  width: 95px;
-  height: auto;
+  width: 72px;
+  height: 72px;
   border-radius: 10px;
-  margin-left: 1.5rem;
-  margin-top: -4px;
-  object-fit: contain;
-  background: none;
-  box-shadow: none;
-  transition: transform 0.2s ease;
+  object-fit: cover;
+  background: #fff; /* lehký rámeček místo velké bílé plochy */
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.5),
+    0 0 20px rgba(255, 215, 90, 0.35);
+  border: 1px solid rgba(255, 215, 90, 0.4);
+  padding: 6px;
+  transition: transform 0.18s ease;
 }
 
 .main-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* ========== HLAVNÍ ODDÍL ========== */
