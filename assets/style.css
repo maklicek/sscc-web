@@ -762,3 +762,31 @@ a:hover {
   background: rgba(0,0,0,0.2);
   box-shadow: 0 12px 30px rgba(0,0,0,0.7);
 }
+@media (max-width: 600px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .logo-frame {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-inner {
+    grid-template-columns: auto 1fr;
+    row-gap: 0.5rem;
+    /* header zůstává kompaktní */
+  }
+
+  .header-rightside {
+    gap: 1rem;
+  }
+
+  .lang-switch .lang {
+    padding: 0.3rem 0.45rem;
+  }
+}
