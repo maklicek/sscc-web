@@ -513,33 +513,43 @@ a:hover {
   }
 }
 
-/* ========== HERO BLOK ========== */
-/* ========== HERO BLOK ========== */
+/* ========== HERO BLOK (zlaté globální světlo) ========== */
+
 .hero {
   position: relative;
-  background: radial-gradient(circle at 20% 0%, rgba(255,215,90,0.07) 0%, rgba(0,0,0,0) 60%);
   border-bottom: 1px solid rgba(255,215,90,0.18);
   box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+  /* základní jemné zlaté nahoře vlevo */
+  background: radial-gradient(
+    circle at 20% 0%,
+    rgba(255,215,90,0.07) 0%,
+    rgba(0,0,0,0) 60%
+  );
+
   overflow: hidden;
   min-height: 180px;
 }
 
-/* sluneční záře doprava */
+/* velká záře přes celou šířku, hlavně doprava */
 .hero::after {
   content: "";
   position: absolute;
-  top: -60px;
+  top: -120px;
   right: -200px;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
+
   background: radial-gradient(
-    circle at 50% 50%,
+    circle at 50% 40%,
     rgba(255,215,90,0.4) 0%,
     rgba(0,0,0,0) 70%
   );
-  filter: blur(60px);
+
+  filter: blur(80px);
   opacity: 0.45;
   pointer-events: none;
 }
@@ -547,7 +557,7 @@ a:hover {
 .hero-inner {
   position: relative;
   max-width: 900px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-inner h1 {
@@ -565,6 +575,7 @@ a:hover {
   margin: 0;
   max-width: 70ch;
 }
+
 
 /* ========== GRID KARET (hlavní hub) ========== */
 .tiles-row {
