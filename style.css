@@ -470,4 +470,77 @@ footer .dot {
   color: rgba(255,255,255,0.4);
   font-weight: 300;
 }
- 
+ /* === NOVÁ PATIČKA (dvousloupcová) ============================= */
+
+.site-footer {
+  background-color: #0f151d;
+  border-top: 1px solid rgba(255, 215, 90, 0.25);
+  box-shadow:
+    0 -20px 60px rgba(0,0,0,0.8),
+    0 0 60px rgba(255, 215, 90, 0.07) inset;
+  padding: 2rem 1.5rem 3rem;
+  margin-top: 3rem;
+  color: #c8cedd;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-left p {
+  margin: 0 0 0.5rem;
+  color: #c8cedd;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.footer-left strong {
+  color: #ffe278;
+  font-weight: 600;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 140px;
+}
+
+.footer-right a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
+}
+
+.footer-right a:hover {
+  color: #ffe278;
+  text-shadow: 0 0 8px rgba(255, 226, 120, 0.45);
+}
+
+/* responzivně: menší patička pod sebou */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .footer-right a {
+    font-size: 0.85rem;
+  }
+}
+
