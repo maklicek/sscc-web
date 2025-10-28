@@ -592,5 +592,39 @@ footer .dot {
     font-size: 0.85rem;
   }
 }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(280px, 480px);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: #d8dde6;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 0 12px rgba(255,215,90,0.2);
+  margin: 0 0 1rem;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.8);
+  max-width: 48ch;
+}
+
+.hero-art img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(255,215,90,0.25);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.9),
+    0 0 40px rgba(255,215,90,0.15);
+  background: rgba(0,0,0,0.3);
+}
 
 
