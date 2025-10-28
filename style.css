@@ -4,7 +4,6 @@ css/* Reset + základní barvy */
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #0f151d;            /* velmi tmavá modročerná */
   color: #d8dde6;                        /* světle šedý text */
