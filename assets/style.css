@@ -33,6 +33,10 @@
   box-shadow: var(--shadow-header);
   backdrop-filter: blur(8px);
 }
+.site-nav a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 .header-inner {
   height: var(--header-height);
