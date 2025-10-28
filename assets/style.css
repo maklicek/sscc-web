@@ -669,8 +669,10 @@ a:hover {
   color: var(--accent);
 }
 .section-page {
-  background-color: var(--bg-page);
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .section-intro {
