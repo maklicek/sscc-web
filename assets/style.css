@@ -85,20 +85,18 @@ body {
 .site-nav a {
   color: rgba(255,255,255,0.8);
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 500;            /* pevná váha pro všechny */
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
-.site-nav a:hover {
-  color: rgb(255,215,90);
-  border-color: rgb(255,215,90);
-}
+
 .site-nav a.active {
   color: rgb(255,215,90);
   border-color: rgb(255,215,90);
-  font-weight: 600;
+  /* font-weight: 600;   <-- TOTO SMAZAT, ať se nehnou */
 }
+
 
 /* PRAVÁ STRANA – jazykový přepínač */
 .lang-switch {
