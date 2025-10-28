@@ -1,4 +1,4 @@
-/* Reset + základní barvy */
+css/* Reset + základní barvy */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -575,7 +575,7 @@ footer .dot {
 .footer-right a:hover {
   color: #ffe278;
   text-shadow: 0 0 8px rgba(255, 226, 120, 0.45);
-}
+} 
 
 /* responzivně: menší patička pod sebou */
 @media (max-width: 600px) {
