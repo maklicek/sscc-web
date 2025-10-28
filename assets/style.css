@@ -646,4 +646,14 @@ footer .dot {
   background: rgba(0,0,0,0.3);
 }
 
+a,
+a:visited {
+  color: #9da0ff;        /* nebo jiná tvoje světlá barva */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffe278;
+  text-shadow: 0 0 8px rgba(255, 226, 120, 0.45);
+}
 
