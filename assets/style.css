@@ -46,8 +46,8 @@ body {
 }
 
 .main-logo {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid rgba(255,215,90,0.4);
