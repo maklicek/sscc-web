@@ -626,5 +626,8 @@ footer .dot {
     0 0 40px rgba(255,215,90,0.15);
   background: rgba(0,0,0,0.3);
 }
+.extra-space {
+  margin-top: 2rem;
+}
 
 
