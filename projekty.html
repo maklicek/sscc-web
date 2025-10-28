@@ -12,39 +12,52 @@
 <body>
 
   <!-- stejná hlavička jako na indexu -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="assets/img/sscc-logo.jpg" alt="SolarSpace Carbon Cycle" />
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
-      </a>
+ <header class="site-header">
+  <div class="container header-inner">
 
+    <!-- LEVÁ STRANA: logo + název -->
+    <a class="brand-combo" href="index.html">
+      <div class="logo-frame">
+        <img
+          class="main-logo"
+          src="assets/img/sscc-logo.jpg"
+          alt="SSCC logo"
+        />
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-name">SSCC</div>
+        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+      </div>
+    </a>
+
+    <!-- PRAVÁ STRANA: menu + jazyk -->
+    <div class="header-rightside">
       <nav class="site-nav">
         <ul>
-          <li><a href="projekty.html" class="active-link">Projekty</a></li>
+          <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
           <li><a href="napady.html">Nápady</a></li>
           <li><a href="konsorcium.html">Konsorcium</a></li>
         </ul>
       </nav>
 
-      <div class="header-ctrl">
-        <div class="lang-switch">
-          <a href="index.html" class="lang active">CZ</a>
-          <span class="sep">|</span>
-          <a href="index-en.html" class="lang">EN</a>
-        </div>
-        <button class="nav-toggle" aria-label="Zobrazit menu">
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+      <div class="lang-switch">
+        <a href="index.html" class="lang active">CZ</a>
+        <span class="sep">|</span>
+        <a href="index-en.html" class="lang">EN</a>
       </div>
+
+      <button class="nav-toggle" aria-label="Menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
-  </header>
+
+  </div>
+</header>
+
 
   <main class="section-page">
     <section class="container section-intro">
