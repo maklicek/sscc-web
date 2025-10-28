@@ -15,95 +15,146 @@ body {
   display: flex;
   flex-direction: column;
 }
-/* === HLAVIČKA =================================================== */
-
-/* HLAVIČKA */
+/* HLAVIČKA WEBU – jednotné pro všechny stránky */
 .site-header {
-  background:
-    radial-gradient(circle at 20% -30%, rgba(255, 218, 120, 0.45) 0%, rgba(15,20,27,0) 60%),
-    linear-gradient(to bottom, rgba(255, 210, 90, 0.22) 0%, #0f141b 70%);
-  border-bottom: 1px solid rgba(255, 215, 90, 0.25);
-  box-shadow:
-    0 2px 12px rgba(255, 205, 80, 0.12),
-    0 30px 60px rgba(0,0,0,0.8);
-  padding: 0.8rem 1.5rem 1rem;
+  background: linear-gradient(90deg, #7d6625, #222);
+  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  padding: 1rem 1.5rem;
   position: relative;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .header-inner {
   max-width: 1400px;
   margin: 0 auto;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
+  /* tři zóny v jedné řadě */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
 }
 
-/* levá strana = název + nav stacked */
-.brand-side {
+/* LEVÁ STRANA – logo + text */
+.brand-combo {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid rgba(255,215,90,0.4);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.8),
+    0 0 24px rgba(255,215,90,0.25);
+  background: #000;
 }
 
 .brand-block {
   line-height: 1.2;
+  display: flex;
+  flex-direction: column;
 }
-
 .brand-name {
-  font-weight: 700;
   font-size: 1rem;
+  font-weight: 600;
   color: #fff;
-  letter-spacing: 0.3px;
 }
-
 .brand-tagline {
   font-size: 0.8rem;
-  color: #f0e4b4;
-  opacity: 0.9;
+  color: rgba(255,255,255,0.7);
 }
 
-/* navigace */
-.site-nav {
+/* STŘED – horizontální menu */
+.site-nav ul {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem 1.4rem;
+  row-gap: 0.5rem;
+  column-gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-nav a {
+  color: rgba(255,255,255,0.8);
   font-size: 0.9rem;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.site-nav a:hover {
+  color: rgb(255,215,90);
+  border-color: rgb(255,215,90);
+}
+.site-nav a.active {
+  color: rgb(255,215,90);
+  border-color: rgb(255,215,90);
+  font-weight: 600;
 }
 
-.site-nav a {
-  color: #ddd;
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  transition: color 0.18s ease;
+/* PRAVÁ STRANA – jazykový přepínač */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+.lang-switch .sep {
+  color: rgba(255,255,255,0.4);
+}
+.lang-switch .lang {
+  color: rgba(255,255,255,0.8);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
   text-decoration: none;
 }
-
-.site-nav a:hover {
-  color: #ffda70;
-  text-shadow: 0 0 6px rgba(255, 221, 120, 0.45);
+.lang-switch .lang.active {
+  color: rgb(255,215,90);
+  border: 1px solid rgb(255,215,90);
+  background: rgba(255,215,90,0.07);
 }
 
-.site-nav a.active {
-  color: #ffda70;
-  text-shadow: 0 0 8px rgba(255, 221, 120, 0.6);
-  font-weight: 600;
+/* mobil: menu může jít pod sebe */
+@media (max-width: 800px) {
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand lang"
+      "nav nav";
+    row-gap: 1rem;
+    align-items: start;
+  }
+
+  .brand-combo {
+    grid-area: brand;
+  }
+
+  .site-nav {
+    grid-area: nav;
+  }
+
+  .lang-switch {
+    grid-area: lang;
+    justify-self: end;
+  }
+
+  .main-logo {
+    width: 56px;
+    height: 56px;
+  }
 }
 
-.site-nav .sep {
-  color: #777;
-  font-size: 0.8rem;
-  margin: 0 -0.4rem;
-}
-
-.lang {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #fff;
-}
 
 /* pravá strana - logo */
 .header-right {
