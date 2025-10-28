@@ -596,5 +596,20 @@ footer .dot {
 .extra-space {
   margin-top: 2rem;
 }
+.section-contents {
+  margin-top: 2rem;
+}
+
+.section-contents h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffe278;
+  margin-bottom: 0.5rem;
+}
+
+.section-contents ul {
+  margin-left: 1.25rem;
+  line-height: 1.5;
+}
 
 
