@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SSCC — SolarSpace Carbon Cycle</title>
+  <title>Projekty — SSCC</title>
 
-  <!-- tady je ten JEDINÝ CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- jednotný CSS -->
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 
       <!-- navigace -->
       <nav class="site-nav">
-        <a href="projekty.html">Projekty</a>
+        <a href="projekty.html" class="active">Projekty</a>
         <a href="edukace.html">Edukace</a>
         <a href="napady.html">Nápady</a>
         <a href="konsorcium.html">Konsorcium</a>
@@ -44,59 +44,72 @@
       </div>
     </div>
   </header>
-  <!-- HLAVNÍ OBSAH STRÁNKY -->
+
+
+  <!-- ====== HLAVNÍ OBSAH STRÁNKY ====== -->
   <main class="section-page">
 
-  <!-- HLAVNÍ OBSAH -->
- <main class="section-page">
-  <section class="container section-intro">
-    <h1>Projekty</h1>
-    <p class="section-lead">
-      Pilotní jednotky, technologické koncepty a aplikace SSCC.
-      Od orbitálního sběru energie po lokální využití CO₂ a uhlíkově negativní amoniak.
-    </p>
-  </section>
-
-  <section class="container project-list">
-    <article class="project-block">
-      <h2>Orbitální solární farma → přenos energie dolů</h2>
-      <p>
-        Konverze sluneční energie mimo atmosféru na mikrovlnný nebo laserový svazek
-        a bezpečný příjem v pozemní stanici.
+    <!-- Úvod sekce -->
+    <section class="container section-intro">
+      <h1>Projekty</h1>
+      <p class="section-lead">
+        Pilotní jednotky, technologické koncepty a aplikace SSCC.
+        Od orbitálního sběru energie po lokální využití CO₂ a uhlíkově negativní amoniak.
       </p>
-    </article>
+    </section>
 
-    <article class="project-block">
-      <h2>CO₂ jako pracovní médium pro teplo</h2>
-      <p>
-        Testovací jednotky pro přímé využití CO₂ jako cirkulačního média
-        s vysokou účinností přenosu tepla.
-      </p>
-    </article>
+    <!-- Seznam projektů -->
+    <section class="container project-list">
 
-    <article class="project-block">
-      <h2>Uhlíkově negativní amoniak</h2>
-      <p>
-        Amoniak vyrobený z vodíku (elektrolýza) a CO₂-capture cyklů.
-        Úložiště energie a fixace uhlíku.
-      </p>
-    </article>
-  </section>
-</main>
+      <article class="project-block">
+        <h2>Orbitální solární farma → přenos energie dolů</h2>
+        <p>
+          Konverze sluneční energie mimo atmosféru na mikrovlnný nebo laserový svazek
+          a bezpečný příjem v pozemní stanici. Cíl: stabilní čistý výkon nezávislý
+          na denní době a počasí.
+        </p>
+      </article>
 
-  <!-- PATIČKA (jen jedna, tady dole) -->
-<footer class="site-footer">
+      <article class="project-block">
+        <h2>CO₂ jako pracovní médium pro teplo</h2>
+        <p>
+          Testovací jednotky pro přímé využití CO₂ jako cirkulačního média
+          s vysokou účinností přenosu tepla.
+        </p>
+      </article>
+
+      <article class="project-block">
+        <h2>Uhlíkově negativní amoniak</h2>
+        <p>
+          Amoniak vyrobený z vodíku (elektrolýza) a CO₂-capture cyklů.
+          Místní úložiště energie a zároveň fixace uhlíku. Možná náhrada plynu
+          pro vytápění domů, obcí a měst.
+        </p>
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- ====== PATIČKA ====== -->
   <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
-      <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+        <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="projekty.html">Projekty</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="napady.html">Nápady</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </div>
+
     </div>
-  </div>
-</footer>
-
-
-
+  </footer>
 
 </body>
 </html>
