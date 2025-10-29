@@ -651,4 +651,25 @@ a:hover {
   font-size: 0.9rem;
   margin: 0.5rem 0 0.75rem 0;
 }
+/* === DOLADĚNÍ EDUKACE === */
+
+/* přidáme více prostoru nahoře pod hlavičkou */
+.page-education {
+  margin-top: 4rem;
+}
+
+/* zmenšíme podnadpisy a dáme jim decentnější barvu */
+.edu-section-title {
+  font-size: 1.05rem;
+  color: #f0cf70;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 6px rgba(255,215,90,0.25);
+}
+
+/* nadpis stránky ještě trochu zvýrazníme */
+.edu-page-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
 
