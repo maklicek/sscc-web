@@ -1022,3 +1022,115 @@ a:hover {
   background: #ffcc33;
   transform: scale(1.05);
 }
+/* =========================
+   HEADER – větší logo + text
+   ========================= */
+.site-header { min-height: 80px; }
+.main-logo {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 10px !important;
+}
+.brand-name { font-size: 1.15rem; }
+.brand-tagline { font-size: 0.9rem; }
+
+/* =========================
+   LAYOUT – jistota "sticky" patičky
+   ========================= */
+html, body { height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;            /* už máš, nechávám pro jistotu */
+}
+
+/* jakýkoli hlavní obsah stránky bude vyplňovat výšku.
+   (stránky používají různé classy, tak je pokrývám všechny) */
+main,
+.section-page,
+.projects-page,
+.page-education,
+.page-edu,
+.page-education .edu-wrapper,
+.page-consortium,
+.page-ideas {
+  flex: 1 0 auto;
+}
+
+/* sjednocená patička – vždy dole, bez „rozjetí“ */
+.site-footer,
+footer.site-footer {
+  margin-top: auto;
+  background-color: #0f151d;
+  border-top: 1px solid rgba(255, 215, 90, 0.25);
+  box-shadow: none;
+}
+
+/* vnitřek patičky – zarovnání, aby se nikdy "nerozlilo" */
+.site-footer .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.site-footer .footer-links {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* linky v patičce hezky do řady */
+.site-footer .footer-links a {
+  color: #c8cedd;
+  text-decoration: none;
+}
+.site-footer .footer-links a:hover {
+  color: #ffe278;
+  text-decoration: underline;
+}
+
+/* =========================
+   HOMEPAGE (index.html)
+   – posunout hero výš a „Co tu najdete“ níž
+   ========================= */
+
+/* obal nad hero (pokud máš .hero) – míň top mezery */
+.hero,
+.section-hero-home {
+  margin-top: 1.25rem !important;   /* výš k headeru */
+}
+
+/* text hero zhutnit */
+.hero-text h1 { margin-bottom: .75rem !important; }
+.hero-text p  { margin-top: 0 !important; }
+
+/* část "Co tu najdete" – větší mezera NAD ní */
+.home-links,
+.section-contents.home-links {
+  margin-top: 2.5rem !important;      /* víc prostoru od hero */
+}
+
+/* a drobně víc prostoru pod ní, na oddělení od patičky */
+.home-links + .site-footer,
+.home-links { margin-bottom: 1rem; }
+
+/* =========================
+   PROJEKTY – jistota mezery nad patičkou
+   ========================= */
+.projects-page { padding-bottom: 2.5rem; }
+.projects-list  { gap: 2rem; }
+
+/* =========================
+   KONSORCIUM / NÁPADY – stabilní spodek
+   ========================= */
+.page-consortium,
+.page-ideas {
+  max-width: 1200px;
+  margin: 2rem auto 3rem auto;
+  padding: 0 1.5rem;
+}
