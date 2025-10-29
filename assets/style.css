@@ -601,4 +601,54 @@ a:hover {
   color: #ffe278;
   text-shadow: 0 0 8px rgba(255, 226, 120, 0.45);
 }
+/* ===== EDUKACE (stránka edukace.html) ===== */
+
+/* Kontejner celé stránky (hlavní obsah pod headerem) */
+.page-education {
+  max-width: 1100px;
+  margin: 2rem auto 4rem auto;   /* nahoře 2rem, dole 4rem kvůli patičce */
+  padding: 0 1.5rem;             /* aby text nelepil na okraj displeje */
+  color: #d8dde6;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Každý tematický blok (spolupráce, průmysl, studenti...) */
+.edu-block {
+  margin-bottom: 2rem;           /* mezera mezi bloky */
+}
+
+/* Nadpis stránky "Edukace & spolupráce" */
+.edu-page-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px rgba(255,215,90,0.25);
+}
+
+/* Podnadpisy sekcí (Spolupráce na vědeckém výzkumu…) */
+.edu-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(255,215,90);
+  margin: 1.5rem 0 0.75rem 0;
+  line-height: 1.4;
+  text-shadow: 0 0 8px rgba(255,215,90,0.4);
+}
+
+/* Běžný odstavec v rámci bloku */
+.edu-text {
+  margin: 0 0 0.75rem 0;
+  color: #d8dde6;
+  font-weight: 400;
+}
+
+/* drobný zvýrazněný řádek typu "Pro koho je to:" apod. */
+.edu-note {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0.75rem 0;
+}
 
