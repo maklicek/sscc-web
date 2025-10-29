@@ -768,4 +768,13 @@ a:hover {
 .page-edu {
   padding-top: 2rem;
 }
+.project-block {
+  margin-bottom: 2.5rem; /* větší rozestup mezi projekty */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* decentní oddělení */
+}
 
+.project-block h2 {
+  color: #ffcc33; /* jemné zlaté zvýraznění titulku */
+  margin-bottom: 0.8rem;
+}
