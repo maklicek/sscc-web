@@ -974,3 +974,40 @@ a:hover {
   color: #fff;
   border-radius: 1rem;
 }
+.section-trust {
+  margin-top: 4rem;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 215, 90, 0.15);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  color: #e6e9f0;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.section-trust h2 {
+  color: #ffe278;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.trust-text {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.trust-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.trust-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 215, 90, 0.1);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
