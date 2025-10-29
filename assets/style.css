@@ -1,1136 +1,166 @@
-css/* Reset + základní barvy */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ========== ROOT & RESET ========== */
+:root{
+  --header-h: 84px;
+  --footer-h: 120px;
+  --gold: #ffd75a;
+  --bg: #0f151d;
+  --text: #d8dde6;
 }
 
-body {
-  background-color: #0f151d;            /* velmi tmavá modročerná */
-  color: #d8dde6;                        /* světle šedý text */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.5;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-/* HLAVIČKA WEBU – jednotné pro všechny stránky */
-.site-header {
-  background: linear-gradient(90deg, #7d6625, #222);
-  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-  padding: 1rem 1.5rem;
-  position: relative;
-  z-index: 1000;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:#0f151d;
+  color:var(--text);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  line-height:1.5;
+  display:flex;flex-direction:column;min-height:100vh;
 }
 
-.header-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-
-  /* tři zóny v jedné řadě */
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  column-gap: 2rem;
+/* ========== PAGE WRAPPER (sticky footer) ========== */
+main.page{
+  width:100%;max-width:1400px;
+  margin:2rem auto 0; padding:0 1.5rem 3rem;
+  min-height:calc(100vh - var(--header-h) - var(--footer-h));
 }
 
-/* LEVÁ STRANA – logo + text */
-.brand-combo {
-  display: flex;
-  align-items: center;
-  gap: 1.0rem;
-  text-decoration: none;
-  color: #fff;
-}
-
-.main-logo {
-  width: 72px !important;
-  height: 72px !important;
-  border-radius: 10px !important;
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.8),
-    0 0 22px rgba(255, 215, 90, 0.35) !important;
-}
-
-.brand-block {
-  line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-}
-.brand-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-}
-.brand-tagline {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.7);
-}
-
-/* STŘED – horizontální menu */
-.site-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.5rem;
-  column-gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.site-nav a {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.9rem;
-  font-weight: 500;            /* pevná váha pro všechny */
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.site-nav a.active {
-  color: rgb(255,215,90);
-  border-color: rgb(255,215,90);
-  /* font-weight: 600;   <-- TOTO SMAZAT, ať se nehnou */
-}
-
-
-/* PRAVÁ STRANA – jazykový přepínač */
-.lang-switch {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.8rem;
-  line-height: 1;
-}
-.lang-switch .sep {
-  color: rgba(255,255,255,0.4);
-}
-.lang-switch .lang {
-  color: rgba(255,255,255,0.8);
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  text-decoration: none;
-}
-.lang-switch .lang.active {
-  color: rgb(255,215,90);
-  border: 1px solid rgb(255,215,90);
-  background: rgba(255,215,90,0.07);
-}
-
-/* mobil: menu může jít pod sebe */
-@media (max-width: 800px) {
-  .header-inner {
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "brand lang"
-      "nav nav";
-    row-gap: 1rem;
-    align-items: start;
-  }
-
-  .brand-combo {
-    grid-area: brand;
-  }
-
-  .site-nav {
-    grid-area: nav;
-  }
-
-  .lang-switch {
-    grid-area: lang;
-    justify-self: end;
-  }
-
-  .main-logo {
-    width: 56px;
-    height: 56px;
-  }
-}
-
-
-/* pravá strana - logo */
-.header-right {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding-top: 0.2rem;
-  flex-shrink: 0;
-}
-
-.main-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-
-  /* decentní glow, ne bílej čtverec */
-  background: rgba(0, 0, 0, 0.4);            /* jemný tmavý podklad, zaoblenej */
-  padding: 6px;
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.8),
-    0 0 24px rgba(255, 215, 90, 0.2);
-  border: 1px solid rgba(255, 215, 90, 0.28);
-
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.main-logo:hover {
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.9),
-    0 0 32px rgba(255, 215, 90, 0.32);
-  transform: translateY(-1px) scale(1.02);
-}
-
-
-/* PRAVÁ STRANA HLAVIČKY: logo */
-.header-right {
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
-/* malé logo vpravo */
-.main-logo {
-  display: block;
-  width: 64px;
-  height: 64px;
-  border-radius: 8px;          /* nebo 0 pokud chceš tvrdý čtverec */
-  object-fit: cover;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.7);
-  background: #000;            /* fallback */
-}
-
-/* --- LAYOUT HLAVNÍ OBSAH -------------------------------------- */
-
-.hub {
-  width: 100%;
-  max-width: 1400px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1rem 4rem 1rem;
-  flex: 1 0 auto;
-}
-
-.tiles-row {
-  max-width: 1500px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(420px,100%), 1fr));
-  gap: 2rem;
-}
-
-.card {
-  background: radial-gradient(circle at 0% 0%, #2a2e31 0%, #151617 70%);
-  border-radius: 12px;
-  border: 1px solid rgba(255,215,90,0.18);
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.8),
-    0 0 60px rgba(0,0,0,0.9) inset;
-  padding: 1.5rem 1.5rem 2rem;
-  min-height: 260px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card h2 {
-  color: rgb(255,215,90);
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.75rem;
-}
-
-.card p {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin: 0 0 1rem;
-}
-
-.card img {
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.2);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.7);
-  margin-top: 0.5rem;
-}
-
-
-/* --- KARTIČKY -------------------------------------------------- */
-
-.card {
-  background: radial-gradient(
-      circle at 0% 0%,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(15, 21, 29, 0) 60%
-    ),
-    #1a222f;
-  border-radius: 10px;
-  padding: 1.25rem 1.25rem 1rem;
-  box-shadow:
-    0 30px 60px -10px rgba(0, 0, 0, 0.9),
-    0 8px 20px rgba(0, 0, 0, 0.6),
-    0 0 60px rgba(255, 226, 120, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  display: flex;
-  flex-direction: column;
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* jemný lesk nahoře */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 20% 0%,
-    rgba(255, 255, 255, 0.14) 0%,
-    rgba(15, 21, 29, 0) 60%
-  );
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.card h2 {
-  color: #ffe278;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 8px rgba(255, 226, 120, 0.4);
-  position: relative;
-  z-index: 2;
-}
-
-.card p {
-  color: #c8cedd;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* Obrázkový box uvnitř karty */
-.card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  background-color: #0f151d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.9),
-    0 0 40px rgba(255, 226, 120, 0.07);
-  position: relative;
-  z-index: 2;
-}
-
-/* --- PATIČKA --------------------------------------------------- */
-
-footer {
-  text-align: center;
-  color: #9ca7bb;
-  font-size: 0.8rem;
-  line-height: 1.4;
-  padding: 2rem 1rem 3rem;
-  margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(255, 226, 120, 0.07) 0%,
-    rgba(15, 21, 29, 0) 70%
-  );
-}
-
-footer a {
-  color: #ffe278;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer .dot {
-  color: #4b556a;
-  margin: 0 0.4rem;
-  user-select: none;
-}
-
-/* jemná hvězdička */
-.spark {
-  color: #ffe278;
-  text-shadow: 0 0 6px rgba(255, 226, 120, 0.8), 0 0 20px rgba(255, 226, 120, 0.4);
-  font-size: 0.9em;
-}
-
-/* --- RESPONSIVE TWEAKS ---------------------------------------- */
-
-@media (max-width: 480px) {
-  .site-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem 1rem;
-    margin-left: 0;
-    font-size: 0.85rem;
-  }
-
-  .brand-logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .brand-text strong {
-    font-size: 0.9rem;
-  }
-
-  .brand-text em {
-    font-size: 0.7rem;
-  }
-
-  .card {
-    min-height: auto;
-  }
-}
-/* === HEADER LOGO FINAL OVERRIDE === */
-
-.header-right {
-  /* layout */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  /* žádné podivné rohy/rámečky/stíny */
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  flex-shrink: 0 !important;
-
-  /* žádný bílý panel, žádné zářící pole */
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-.main-logo {
-  /* samotné logo */
-  width: 56px !important;
-  height: 56px !important;
-  display: block !important;
-  object-fit: cover !important;
-
-  /* čisté rohy, vlastní jemná aureola */
-  background: transparent !important;
-  border: 1px solid rgba(255, 215, 90, 0.3) !important;
-  border-radius: 8px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-
-  /* decentní glow – ne bílej čtverec */
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.6),
-    0 0 16px rgba(255, 215, 90, 0.35) !important;
-
-  outline: none !important;
-  background-clip: padding-box !important;
-}
-
-.header-right:hover .main-logo,
-.main-logo:hover {
-  box-shadow:
-    0 6px 18px rgba(0, 0, 0, 0.7),
-    0 0 22px rgba(255, 220, 100, 0.5) !important;
-  transform: scale(1.05);
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
-}
-.site-header {
+/* ========== HEADER (jediná verze) ========== */
+.site-header{
+  position:sticky; top:0; z-index:1000;
   background: radial-gradient(circle at 20% 0%, #5a4b24 0%, #1a1c1d 60%);
-  border-bottom: 1px solid rgba(255, 215, 90, 0.3);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  border-bottom:1px solid rgba(255,215,90,.3);
+  box-shadow:0 10px 30px rgba(0,0,0,.8);
+  min-height:var(--header-h);
+  display:flex; align-items:center;
+  padding:.75rem 1.5rem;
+}
+.header-inner{
+  display:grid; grid-template-columns:auto 1fr auto;
+  align-items:center; gap:1.25rem;
+  width:100%; max-width:1500px; margin:0 auto;
+}
+.brand-combo{display:flex;align-items:center;gap:1rem;color:#fff;text-decoration:none}
+.main-logo{
+  width:72px; height:72px; border-radius:10px; object-fit:cover; display:block;
+  border:1px solid rgba(255,215,90,.3);
+  box-shadow:0 6px 18px rgba(0,0,0,.7), 0 0 16px rgba(255,215,90,.3);
+  background:transparent;
+}
+.brand-block{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:.2px}
+.brand-tagline{font-size:.9rem;color:rgba(255,255,255,.75)}
+.site-nav ul{display:flex;flex-wrap:wrap;gap:1.5rem .75rem;list-style:none}
+.site-nav a{color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;border-bottom:2px solid transparent;transition:.15s}
+.site-nav a:hover,.site-nav a.active{color:var(--gold);border-color:var(--gold)}
+.lang-switch{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:rgba(255,255,255,.8)}
+.lang-switch .lang{padding:.35rem .6rem;border-radius:6px;border:1px solid transparent;color:inherit;text-decoration:none}
+.lang-switch .lang.active{color:var(--gold);border-color:var(--gold);background:rgba(255,215,90,.07)}
+
+@media (max-width:800px){
+  .header-inner{grid-template-columns:1fr auto;grid-template-areas:"brand lang" "nav nav";row-gap:.75rem;align-items:start}
+  .brand-combo{grid-area:brand}
+  .site-nav{grid-area:nav}
+  .lang-switch{grid-area:lang;justify-self:end}
+  .main-logo{width:56px;height:56px}
+}
+
+/* ========== HERO – TITULKA ========== */
+.hero-landing{
+  position:relative; min-height:64vh;
+  background-size:cover; background-position:60% center; background-repeat:no-repeat;
+  border-bottom:1px solid rgba(255,215,90,.2);
+  box-shadow:inset 0 -80px 120px rgba(0,0,0,.45);
+}
+.hero-landing::after{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(120% 100% at 20% 30%, rgba(0,0,0,.45) 0%, rgba(0,0,0,.65) 50%, rgba(0,0,0,.75) 100%);
+}
+.hero-overlay{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:6rem 1.5rem 4rem}
+.hero-overlay h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15;color:#fff;margin:0 0 1rem;text-shadow:0 0 18px rgba(0,0,0,.4)}
+.hero-overlay p{font-size:1.05rem;max-width:56ch;color:rgba(255,255,255,.9)}
+.home-sections{margin-top:2.5rem;padding-bottom:2rem}
+
+/* ========== OBECNÉ BLOKY / KARTY ========== */
+.hub{width:100%;max-width:1400px;margin:2rem auto 4rem;padding:0 1rem 4rem}
+.tiles-row{max-width:1500px;margin:2rem auto 4rem;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:2rem}
+
+.card{
+  position:relative; overflow:hidden;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255,255,255,.08) 0%, rgba(15,21,29,0) 60%),
+    #1a222f;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;
+  box-shadow:0 30px 60px -10px rgba(0,0,0,.9), 0 8px 20px rgba(0,0,0,.6), 0 0 60px rgba(255,226,120,.06);
+  padding:1.25rem 1.25rem 1rem; min-height:260px; display:flex; flex-direction:column;
+}
+.card h2{color:#ffe278;font-size:1.2rem;font-weight:600;margin-bottom:.5rem;letter-spacing:.02em;text-shadow:0 0 8px rgba(255,226,120,.4)}
+.card p{color:#c8cedd;font-size:.95rem;line-height:1.45;margin-bottom:1rem}
+.card img{display:block;width:100%;max-height:180px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.12);background:#0f151d;box-shadow:0 15px 40px rgba(0,0,0,.9),0 0 40px rgba(255,226,120,.07)}
+
+/* ========== PROJEKTY ========== */
+.projects-page{max-width:1200px;margin:2rem auto 4rem;padding:0 1.5rem 2.5rem;color:var(--text)}
+.projects-intro{margin-bottom:2rem}
+.projects-intro h1{font-size:2rem;font-weight:600;color:#fff;margin:0 0 .75rem;text-shadow:0 0 8px rgba(255,215,90,.3)}
+.projects-lead{max-width:60ch;font-size:1rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.projects-list{display:grid;gap:2rem}
+.project-card{
+  background:linear-gradient(180deg, rgba(255,255,255,.03) 0%, rgba(0,0,0,.2) 100%);
+  border:1px solid rgba(255,215,90,.25); border-radius:12px; padding:1.5rem;
+  transition:transform .2s ease, box-shadow .2s ease, border-color .3s ease;
+}
+.project-card:hover{transform:translateY(-4px);border-color:rgba(255,215,90,.45);box-shadow:0 8px 25px rgba(255,215,90,.08)}
+.project-title{color:#ffd85e;font-weight:600;margin-bottom:.6rem}
+.project-desc{color:rgba(255,255,255,.85)}
+
+/* ========== EDUKACE ========== */
+.page-education{max-width:1100px;margin:4rem auto 4rem;padding:0 1.5rem;color:var(--text);font-size:.95rem}
+.edu-block{margin-bottom:2rem}
+.edu-page-title{font-size:1.8rem;font-weight:600;color:#fff;margin:0 0 2rem;text-shadow:0 0 12px rgba(255,215,90,.25)}
+.edu-section-title{font-size:1.05rem;font-weight:600;color:#f0cf70;margin:1.5rem 0 .75rem;text-shadow:0 0 6px rgba(255,215,90,.25)}
+.edu-text{margin:0 0 .75rem;color:var(--text)}
+.edu-note{color:rgba(255,255,255,.7);font-size:.9rem;margin:.5rem 0 .75rem}
+
+/* ========== SPOLUPRÁCE – karty, CTA ========== */
+.section-hero{text-align:center;padding:4rem 2rem;background:linear-gradient(180deg,#222 0%,#111 100%);color:#fff;border-radius:1rem}
+.section-hero .lead{font-size:1.25rem;max-width:800px;margin:1rem auto 0;line-height:1.6}
+.coop-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:2rem}
+.coop-card{background:#ffffff10;border:1px solid #ffffff20;border-radius:1rem;padding:1.5rem;backdrop-filter:blur(4px);transition:.3s}
+.coop-card:hover{background:#ffffff20;transform:translateY(-5px)}
+.coop-card h3{font-size:1.2rem;margin-bottom:.5rem}
+.coop-card p{line-height:1.5}
+.coop-card .note{font-size:.9rem;color:#ccc;margin-top:.5rem}
+.btn-primary,.cta-btn{display:inline-block;background:#ffaa00;color:#000;padding:.75rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;transition:.2s}
+.btn-primary:hover,.cta-btn:hover{background:#ffcc33;transform:scale(1.05)}
+.section-cta{text-align:center;padding:3rem 2rem;background:linear-gradient(180deg,#111 0%,#222 100%);color:#fff;border-radius:1rem;margin-top:4rem}
+.section-trust{margin-top:4rem;padding:2.5rem 2rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,215,90,.15);border-radius:1rem;backdrop-filter:blur(6px);color:#e6e9f0;text-shadow:0 0 8px rgba(0,0,0,.6)}
+.section-trust h2{color:#ffe278;margin-bottom:1rem;text-align:center}
+.trust-text{color:rgba(255,255,255,.8);text-align:center;max-width:800px;margin:0 auto 1.5rem}
+.trust-list{list-style:none;padding:0;max-width:700px;margin:0 auto}
+.trust-list li{padding:.6rem 0;border-bottom:1px solid rgba(255,215,90,.1);text-align:center;color:rgba(255,255,255,.85)}
+
+/* ========== ODKAZY ========== */
+a,a:visited{color:#9da0ff;text-decoration:none}
+a:hover{color:#ffe278;text-shadow:0 0 8px rgba(255,226,120,.45)}
+
+/* ========== FOOTER (jediná verze) ========== */
+.site-footer{
+  margin-top:auto; min-height:var(--footer-h);
+  background:var(--bg);
+  border-top:1px solid rgba(255,215,90,.25);
+  color:#c8cedd; font-size:.9rem; line-height:1.4;
+  padding:1.5rem 1rem 2.5rem;
+}
+.site-footer .footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;
+}
+.site-footer .footer-links{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+.site-footer .footer-links a{color:#c8cedd}
+.site-footer .footer-links a:hover{color:#ffe278;text-decoration:underline}
+
+@media (max-width:480px){
+  .site-nav{flex-direction:column;align-items:flex-start;gap:.5rem}
+  .card{min-height:auto}
 }
 
-.header-inner {
-  display: flex;
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.brand-block {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-block .brand-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.brand-block .brand-tagline {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.6);
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-  align-items: flex-start;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.8);
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: rgba(255,255,255,0.8);
-  transition: color 0.15s ease;
-}
-
-.site-nav a:hover {
-  color: rgb(255,215,90);
-}
-
-.site-nav .sep {
-  color: rgba(255,255,255,0.4);
-  font-weight: 300;
-}
- /* === NOVÁ PATIČKA (dvousloupcová) ============================= */
-
-.site-footer {
-  background-color: #0f151d;
-  border-top: 1px solid rgba(255, 215, 90, 0.25);
-  box-shadow: none;                /* důležité: zruší ten masivní závoj */
-  padding: 2rem 1.5rem 3rem;
-  margin-top: 3rem;
-  color: #c8cedd;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  background-image: none;          /* pokud tam byl radial-gradient nebo něco */
-}
-
-body {
-  background-color: #0f151d;       /* čisté pozadí stránky */
-  background-image: none;          /* pro jistotu, jestli tam nebyl ten spodní přechod definován na body */
-}
-
-.extra-space {
-  margin-top: 2rem;
-}
-.section-contents {
-  margin-top: 2rem;
-}
-
-.section-contents h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffe278;
-  margin-bottom: 0.5rem;
-}
-
-.section-contents ul {
-  margin-left: 1.25rem;
-  line-height: 1.5;
-}
-.hero {
-  display: grid;
-  grid-template-columns: minmax(300px, 1fr) minmax(280px, 480px);
-  gap: 2rem;
-  align-items: start;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  color: #d8dde6;
-}
-
-.hero-text h1 {
-  font-size: 2rem;
-  line-height: 1.3;
-  color: #fff;
-  text-shadow: 0 0 12px rgba(255,215,90,0.2);
-  margin: 0 0 1rem;
-}
-
-.hero-text p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.8);
-  max-width: 48ch;
-}
-
-.hero-art img {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid rgba(255,215,90,0.25);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.9),
-    0 0 40px rgba(255,215,90,0.2);
-  background: rgba(0,0,0,0.3);
-}
-
-a,
-a:visited {
-  color: #9da0ff;        /* nebo jiná tvoje světlá barva */
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffe278;
-  text-shadow: 0 0 8px rgba(255, 226, 120, 0.45);
-}
-/* ===== EDUKACE (stránka edukace.html) ===== */
-
-/* Kontejner celé stránky (hlavní obsah pod headerem) */
-.page-education {
-  max-width: 1100px;
-  margin: 2rem auto 4rem auto;   /* nahoře 2rem, dole 4rem kvůli patičce */
-  padding: 0 1.5rem;             /* aby text nelepil na okraj displeje */
-  color: #d8dde6;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-/* Každý tematický blok (spolupráce, průmysl, studenti...) */
-.edu-block {
-  margin-bottom: 2rem;           /* mezera mezi bloky */
-}
-
-/* Nadpis stránky "Edukace & spolupráce" */
-.edu-page-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px rgba(255,215,90,0.25);
-}
-
-/* Podnadpisy sekcí (Spolupráce na vědeckém výzkumu…) */
-.edu-section-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgb(255,215,90);
-  margin: 1.5rem 0 0.75rem 0;
-  line-height: 1.4;
-  text-shadow: 0 0 8px rgba(255,215,90,0.4);
-}
-
-/* Běžný odstavec v rámci bloku */
-.edu-text {
-  margin: 0 0 0.75rem 0;
-  color: #d8dde6;
-  font-weight: 400;
-}
-
-/* drobný zvýrazněný řádek typu "Pro koho je to:" apod. */
-.edu-note {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.9rem;
-  margin: 0.5rem 0 0.75rem 0;
-}
-/* === DOLADĚNÍ EDUKACE === */
-
-/* přidáme více prostoru nahoře pod hlavičkou */
-.page-education {
-  margin-top: 4rem;
-}
-
-/* zmenšíme podnadpisy a dáme jim decentnější barvu */
-.edu-section-title {
-  font-size: 1.05rem;
-  color: #f0cf70;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 6px rgba(255,215,90,0.25);
-}
-
-/* nadpis stránky ještě trochu zvýrazníme */
-.edu-page-title {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-/* EDUKACE STRÁNKA ---------------------------------- */
-
-.edu-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem 4rem;
-  color: #d8dde6;
-  line-height: 1.5;
-}
-
-.edu-wrapper h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 1.5rem;
-  line-height: 1.2;
-  text-shadow: 0 0 12px rgba(255,215,90,0.3);
-}
-
-.edu-wrapper h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgb(255,215,90);
-  margin: 2rem 0 0.75rem;
-  line-height: 1.4;
-  text-shadow: 0 0 8px rgba(255,215,90,0.4);
-}
-
-.edu-wrapper p {
-  font-size: 0.95rem;
-  margin: 0 0 1rem;
-  color: #c8cedd;
-}
-
-.edu-wrapper p strong {
-  color: #fff;
-  font-weight: 600;
-}
-
-.edu-wrapper .for-who {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-/* --- EDUKACE & SPOLUPRÁCE ---------------------------------- */
-
-/* celá stránka obsahu edu */
-.edu-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1rem 4rem;
-  color: #d8dde6;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-/* hlavní velký nadpis stránky */
-.edu-wrapper h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 1.5rem;
-  line-height: 1.2;
-  text-shadow: 0 0 12px rgba(255,215,90,0.3);
-}
-
-/* nadpisy jednotlivých sekcí (Spolupráce..., Průmyslové...) */
-.edu-wrapper h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: rgb(255,215,90); /* jemné zlaté */
-  margin: 2rem 0 0.5rem;
-  line-height: 1.4;
-  text-shadow: 0 0 8px rgba(255,215,90,0.4);
-}
-
-/* normální odstavce s vysvětlením */
-.edu-wrapper p {
-  margin: 0 0 1rem;
-  color: #c8cedd;
-}
-
-/* řádek "Pro: ..." aby byl trochu tišší */
-.edu-wrapper p.for-who {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.7);
-  margin-top: -0.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-/* horní odsazení od hlavičky pro celou stránku edukace */
-.page-edu {
-  padding-top: 2rem;
-}
-.project-block {
-  margin-bottom: 2.5rem; /* větší rozestup mezi projekty */
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* decentní oddělení */
-}
-
-.project-block h2 {
-  color: #ffcc33; /* jemné zlaté zvýraznění titulku */
-  margin-bottom: 0.8rem;
-}
-/* Stránka projektů */
-.projects-page {
-  max-width: 1200px;
-  margin: 2rem auto 4rem auto;
-  padding: 0 1.5rem 4rem 1.5rem;
-  color: #d8dde6;
-}
-
-.projects-intro {
-  margin-bottom: 2rem;
-}
-
-.projects-intro h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 0.75rem 0;
-  text-shadow: 0 0 8px rgba(255,215,90,0.3);
-}
-
-.projects-lead {
-  max-width: 60ch;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.75);
-}
-
-.projects-list {
-  display: grid;
-  gap: 2rem;
-}
-
-/* jednotlivý projekt */
-.project-card {
-  background: radial-gradient(
-    circle at 0% 0%,
-    rgba(255,255,255,0.05) 0%,
-    rgba(15,21,29,0) 60%
-  );
-  border: 1px solid rgba(255,215,90,0.18);
-  border-radius: 10px;
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.8),
-    0 0 60px rgba(0,0,0,0.9) inset;
-  padding: 1.25rem 1.5rem 1rem;
-  color: #d8dde6;
-}
-
-.project-title {
-  color: rgb(255,215,90);
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.3;
-  margin: 0 0 0.5rem;
-  text-shadow: 0 0 8px rgba(255,215,90,0.4);
-}
-
-.project-desc {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.95rem;
-  line-height: 1.45;
-  margin: 0 0 0.75rem;
-  max-width: 80ch;
-}
-.project-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.2) 100%);
-  border: 1px solid rgba(255,215,90,0.25);
-  border-radius: 12px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,215,90,0.45);
-  box-shadow: 0 8px 25px rgba(255,215,90,0.08);
-}
-
-.project-title {
-  color: #ffd85e;
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-}
-
-.project-desc {
-  color: rgba(255,255,255,0.85);
-}
-/* === Spolupráce === */
-
-.section-hero {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.section-hero .lead {
-  font-size: 1.25rem;
-  max-width: 800px;
-  margin: 1rem auto 0;
-  line-height: 1.6;
-}
-
-/* Karty spolupráce */
-.coop-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.coop-card {
-  background: #ffffff10;
-  border: 1px solid #ffffff20;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  backdrop-filter: blur(4px);
-  transition: all 0.3s ease;
-}
-
-.coop-card:hover {
-  background: #ffffff20;
-  transform: translateY(-5px);
-}
-
-.coop-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.coop-card p {
-  line-height: 1.5;
-}
-
-.coop-card .note {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
-
-/* Tlačítko */
-.btn-primary {
-  display: inline-block;
-  background: #ffaa00;
-  color: #000;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #ffcc33;
-  transform: scale(1.05);
-}
-
-/* CTA sekce */
-.section-cta {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(180deg, #111 0%, #222 100%);
-  color: #fff;
-  border-radius: 1rem;
-  margin-top: 4rem;
-}
-
-/* Reference sekce */
-.section-trust {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: #f8f8f8;
-  border-radius: 1rem;
-}
-
-.trust-text {
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-  text-align: center;
-}
-
-.trust-list {
-  max-width: 700px;
-  margin: 0 auto;
-  list-style: none;
-  padding: 0;
-}
-
-.trust-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-.section-hero {
-  background: linear-gradient(180deg, #222 0%, #111 100%);
-  color: #fff;
-  border-radius: 1rem;
-}
-.section-trust {
-  margin-top: 4rem;
-  padding: 2.5rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 215, 90, 0.15);
-  border-radius: 1rem;
-  backdrop-filter: blur(6px);
-  color: #e6e9f0;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-}
-
-.section-trust h2 {
-  color: #ffe278;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.trust-text {
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
-}
-
-.trust-list {
-  list-style: none;
-  padding: 0;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.trust-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 215, 90, 0.1);
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-}
-.cta-btn {
-  display: inline-block;
-  background: #ffaa00;
-  color: #000;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-.cta-btn:hover {
-  background: #ffcc33;
-  transform: scale(1.05);
-}
-/* =========================
-   HEADER – větší logo + text
-   ========================= */
-.site-header { min-height: 80px; }
-.main-logo {
-  width: 80px !important;
-  height: 80px !important;
-  border-radius: 10px !important;
-}
-.brand-name { font-size: 1.15rem; }
-.brand-tagline { font-size: 0.9rem; }
-
-/* =========================
-   LAYOUT – jistota "sticky" patičky
-   ========================= */
-html, body { height: 100%; }
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;            /* už máš, nechávám pro jistotu */
-}
-
-/* jakýkoli hlavní obsah stránky bude vyplňovat výšku.
-   (stránky používají různé classy, tak je pokrývám všechny) */
-main,
-.section-page,
-.projects-page,
-.page-education,
-.page-edu,
-.page-education .edu-wrapper,
-.page-consortium,
-.page-ideas {
-  flex: 1 0 auto;
-}
-
-/* sjednocená patička – vždy dole, bez „rozjetí“ */
-.site-footer,
-footer.site-footer {
-  margin-top: auto;
-  background-color: #0f151d;
-  border-top: 1px solid rgba(255, 215, 90, 0.25);
-  box-shadow: none;
-}
-
-/* vnitřek patičky – zarovnání, aby se nikdy "nerozlilo" */
-.site-footer .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.25rem 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.site-footer .footer-links {
-  display: flex;
-  gap: .75rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* linky v patičce hezky do řady */
-.site-footer .footer-links a {
-  color: #c8cedd;
-  text-decoration: none;
-}
-.site-footer .footer-links a:hover {
-  color: #ffe278;
-  text-decoration: underline;
-}
-
-/* =========================
-   HOMEPAGE (index.html)
-   – posunout hero výš a „Co tu najdete“ níž
-   ========================= */
-
-/* obal nad hero (pokud máš .hero) – míň top mezery */
-.hero,
-.section-hero-home {
-  margin-top: 1.25rem !important;   /* výš k headeru */
-}
-
-/* text hero zhutnit */
-.hero-text h1 { margin-bottom: .75rem !important; }
-.hero-text p  { margin-top: 0 !important; }
-
-/* část "Co tu najdete" – větší mezera NAD ní */
-.home-links,
-.section-contents.home-links {
-  margin-top: 2.5rem !important;      /* víc prostoru od hero */
-}
-
-/* a drobně víc prostoru pod ní, na oddělení od patičky */
-.home-links + .site-footer,
-.home-links { margin-bottom: 1rem; }
-
-/* =========================
-   PROJEKTY – jistota mezery nad patičkou
-   ========================= */
-.projects-page { padding-bottom: 2.5rem; }
-.projects-list  { gap: 2rem; }
-
-/* =========================
-   KONSORCIUM / NÁPADY – stabilní spodek
-   ========================= */
-.page-consortium,
-.page-ideas {
-  max-width: 1200px;
-  margin: 2rem auto 3rem auto;
-  padding: 0 1.5rem;
-}
