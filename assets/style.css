@@ -672,4 +672,49 @@ a:hover {
   font-size: 1.8rem;
   margin-bottom: 2rem;
 }
+/* EDUKACE STRÁNKA ---------------------------------- */
+
+.edu-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: #d8dde6;
+  line-height: 1.5;
+}
+
+.edu-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 0 12px rgba(255,215,90,0.3);
+}
+
+.edu-wrapper h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(255,215,90);
+  margin: 2rem 0 0.75rem;
+  line-height: 1.4;
+  text-shadow: 0 0 8px rgba(255,215,90,0.4);
+}
+
+.edu-wrapper p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  color: #c8cedd;
+}
+
+.edu-wrapper p strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.edu-wrapper .for-who {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
 
