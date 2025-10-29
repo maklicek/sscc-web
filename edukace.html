@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SSCC — SolarSpace Carbon Cycle</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edukace — SSCC</title>
 
-  <!-- tady je ten JEDINÝ CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- stejné CSS jako všude -->
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
 
-
-  <!-- ====== HLAVIČKA ====== -->
+  <!-- 1. HLAVIČKA: přesně ta samá, jakou už máš na ostatních stránkách -->
   <header class="site-header">
     <div class="header-inner">
 
       <!-- logo vlevo -->
-      <a href="index.html" class="brand-combo">
+      <a class="brand-combo" href="index.html">
         <img
+          class="main-logo"
           src="assets/img/logo-sscc.png"
           alt="SSCC logo"
-          class="main-logo"
         />
         <div class="brand-block">
           <div class="brand-name">SSCC</div>
@@ -29,10 +28,10 @@
         </div>
       </a>
 
-      <!-- navigace -->
+      <!-- hlavní menu -->
       <nav class="site-nav">
         <a href="projekty.html">Projekty</a>
-        <a href="edukace.html">Edukace</a>
+        <a href="edukace.html" class="active">Edukace</a>
         <a href="napady.html">Nápady</a>
         <a href="konsorcium.html">Konsorcium</a>
       </nav>
@@ -43,47 +42,99 @@
         <span class="sep">|</span>
         <a href="#" class="lang">EN</a>
       </div>
+
     </div>
   </header>
 
-  <!-- HLAVNÍ OBSAH STRÁNKY -->
-  <main class="section-page">
+  <!-- 2. HLAVNÍ OBSAH STRÁNKY -->
+  <main class="section-page container">
 
- 
-  <main class="section-page">
-    <section class="container section-intro">
-      <h1>Edukace</h1>
+    <header class="section-intro">
+      <h1>Edukace & spolupráce</h1>
       <p class="section-lead">
-        Vzdělávací projekty, popularizace vědy, spolupráce s univerzitami a odborníky.
+        SSCC není jen technologie. Je to otevřená platforma pro výzkum,
+        průmysl a studenty. Chceme, aby lidé mohli přispět — a zároveň se učit
+        na reálných problémech energetiky a cirkulace uhlíku.
+      </p>
+    </header>
+
+    <!-- BLOK 1 -->
+    <section class="edu-block">
+      <h2>1. Spolupráce na vědeckém výzkumu</h2>
+      <p>
+        Hledáme partnery pro teoretické modelování, simulace a validaci
+        procesů v oblastech jako je přenos energie, vodíková chemie,
+        syntéza amoniaku, cirkulace CO₂ a tepelné cykly.
+      </p>
+      <p>
+        Vhodné pro: výzkumné týmy, univerzitní laboratoře, doktorandy,
+        postdoky a akademická pracoviště, která chtějí řešit konkrétní
+        otázky spojené s energií mimo atmosféru a s uzavřenými uhlíkovými
+        cykly na Zemi.
       </p>
     </section>
 
-    <section class="container project-list">
-      <article class="project-block">
-        <h2>Workshopy a semináře</h2>
-        <p>Tematické semináře o energetice, emisích a technologických trendech.</p>
-      </article>
-
-      <article class="project-block">
-        <h2>Studentské programy</h2>
-        <p>Spolupráce se školami na projektech v oblasti obnovitelných zdrojů.</p>
-      </article>
+    <!-- BLOK 2 -->
+    <section class="edu-block">
+      <h2>2. Průmyslové a technické partnerství</h2>
+      <p>
+        Spolupracujeme s výrobci technologických zařízení na vývoji a testování
+        pilotních jednotek. Cílem je přetavit koncepty do funkčních modulů:
+        přenos energie, vysokoteplotní okruhy s CO₂, vodíkové systémy,
+        syntéza amoniaku.
+      </p>
+      <p>
+        Vhodné pro: firmy, inženýrské společnosti, výrobce komponent a
+        průmyslové partnery, kteří chtějí být u prvních prototypů (a mít u toho
+        svoji stopu).
+      </p>
     </section>
+
+    <!-- BLOK 3 -->
+    <section class="edu-block">
+      <h2>3. Zapojení studentů a mladých týmů</h2>
+      <p>
+        Nabízíme možnost pracovat přímo na existujících projektech SSCC —
+        jako součást semestrálních prací, diplomových prací nebo stážových
+        týmů. Nejde o „školní cvičení“, jde o rozšíření skutečných řešení:
+        lepší účinnost přenosu energie, bezpečnostní protokoly,
+        optimalizace procesů s CO₂.
+      </p>
+      <p>
+        Vhodné pro: studenty technických a přírodovědných oborů,
+        motivované jednotlivce i celé studentské týmy, které chtějí řešit něco,
+        co může opravdu skončit v prototypu.
+      </p>
+    </section>
+
+    <!-- KONTAKT / VÝZVA -->
+    <section class="edu-block">
+      <h2>Chci se zapojit</h2>
+      <p>
+        Pokud váš tým, firma nebo fakulta chce spolupracovat na výzkumu,
+        konstrukci zařízení nebo studenstkém projektu, kontaktujte nás
+        přes SSCC Consortium. Pomůžeme vybrat oblast, kterou zvládnete
+        rozvíjet — a kde to zároveň okamžitě dává smysl.
+      </p>
+    </section>
+
   </main>
 
+  <!-- 3. PATIČKA (stejná jako všude, bez duší navíc) -->
   <footer class="site-footer">
- <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
-      <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+        <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+      </div>
+      <div class="footer-right">
+        <a href="projekty.html">Projekty</a>
+        <a href="edukace.html" class="active">Edukace</a>
+        <a href="napady.html">Nápady</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </div>
     </div>
-  </div>
-</footer>
-
-
-   
-  
+  </footer>
 
 </body>
 </html>
