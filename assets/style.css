@@ -717,4 +717,55 @@ a:hover {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
+/* --- EDUKACE & SPOLUPRÁCE ---------------------------------- */
+
+/* celá stránka obsahu edu */
+.edu-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+  color: #d8dde6;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* hlavní velký nadpis stránky */
+.edu-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 0 12px rgba(255,215,90,0.3);
+}
+
+/* nadpisy jednotlivých sekcí (Spolupráce..., Průmyslové...) */
+.edu-wrapper h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(255,215,90); /* jemné zlaté */
+  margin: 2rem 0 0.5rem;
+  line-height: 1.4;
+  text-shadow: 0 0 8px rgba(255,215,90,0.4);
+}
+
+/* normální odstavce s vysvětlením */
+.edu-wrapper p {
+  margin: 0 0 1rem;
+  color: #c8cedd;
+}
+
+/* řádek "Pro: ..." aby byl trochu tišší */
+.edu-wrapper p.for-who {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+/* horní odsazení od hlavičky pro celou stránku edukace */
+.page-edu {
+  padding-top: 2rem;
+}
 
