@@ -865,3 +865,107 @@ a:hover {
 .project-desc {
   color: rgba(255,255,255,0.85);
 }
+/* === Spolupráce === */
+
+.section-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.section-hero .lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+}
+
+/* Karty spolupráce */
+.coop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.coop-card {
+  background: #ffffff10;
+  border: 1px solid #ffffff20;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.coop-card:hover {
+  background: #ffffff20;
+  transform: translateY(-5px);
+}
+
+.coop-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.coop-card p {
+  line-height: 1.5;
+}
+
+.coop-card .note {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* Tlačítko */
+.btn-primary {
+  display: inline-block;
+  background: #ffaa00;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ffcc33;
+  transform: scale(1.05);
+}
+
+/* CTA sekce */
+.section-cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #111 0%, #222 100%);
+  color: #fff;
+  border-radius: 1rem;
+  margin-top: 4rem;
+}
+
+/* Reference sekce */
+.section-trust {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #f8f8f8;
+  border-radius: 1rem;
+}
+
+.trust-text {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.trust-list {
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.trust-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
