@@ -1,96 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projekty — SSCC</title>
-
-  <!-- jednotný CSS -->
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
 
-  <!-- ====== HLAVIČKA ====== -->
-<main class="projects-page">
-  <section class="projects-intro">
-    <h1>Projekty</h1>
-    <p class="projects-lead">
-      Pilotní jednotky, technologické koncepty a aplikace SSCC.
-      Od orbitálního sběru energie po lokální využití CO₂ a uhlíkově negativní amoniak.
-    </p>
-  </section>
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="header-inner">
 
-  <section class="projects-list">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo" />
+        <div class="brand-block">
+          <div class="brand-name">SSCC</div>
+          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        </div>
+      </a>
 
-    <!-- PROJEKT 1 -->
-    <article class="project-card">
-      <h2 class="project-title">Orbitální solární farma → přenos energie dolů</h2>
-      <p class="project-desc">
-        Konverze sluneční energie mimo atmosféru na mikrovlnný nebo laserový svazek
-        a bezpečný příjem v pozemní stanici. Cíl: stabilní čistý výkon nezávislý
-        na denní době a počasí.
+      <div class="site-nav">
+        <a href="projekty.html" class="active">Projekty</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="napady.html">Nápady</a>
+        <a href="konsorcium.html">Konsorcium</a>
+        <a href="spoluprace.html">Spolupráce</a>
+      </div>
+
+      <div class="lang-switch">
+        <a href="#" class="lang active">CZ</a>
+        <span class="sep">|</span>
+        <a href="#" class="lang">EN</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HLAVNÍ OBSAH -->
+  <main class="projects-page">
+    <section class="projects-intro">
+      <h1>Projekty</h1>
+      <p class="projects-lead">
+        Pilotní jednotky, technologické koncepty a aplikace SSCC.
+        Od orbitálního sběru energie po lokální využití CO₂ a uhlíkově negativní amoniak.
       </p>
-    </article>
+    </section>
 
-    <!-- PROJEKT 2 -->
-    <article class="project-card">
-      <h2 class="project-title">CO₂ jako pracovní médium pro teplo</h2>
-      <p class="project-desc">
-        Testovací jednotky pro přímé využití CO₂ jako cirkulačního média
-        s vysokou účinností přenosu tepla.
-      </p>
-    </article>
+    <section class="projects-list">
 
-    <!-- PROJEKT 3 -->
-    <article class="project-card">
-      <h2 class="project-title">Uhlíkově negativní amoniak</h2>
-      <p class="project-desc">
-        Amoniak vyrobený z vodíku (elektrolýza) a CO₂-capture cyklů.
-        Místní úložiště energie a zároveň fixace uhlíku. Možná náhrada plynu
-        pro vytápění domů, obcí a měst.
-      </p>
-    </article>
+      <!-- příklad jedné karty -->
+      <article class="project-card">
+        <h2 class="project-title">
+          Orbitální solární farma → přenos energie dolů
+        </h2>
+        <p class="project-desc">
+          Konverze sluneční energie mimo atmosféru na mikrovlnný nebo laserový svazek
+          a bezpečný příjem v pozemní stanici. Cíl: stabilní čistý výkon
+          nezávislý na denní době a počasí.
+        </p>
+      </article>
 
-    <!-- PROJEKT 4 -->
-    <article class="project-card">
-      <h2 class="project-title">Komunitní energetický uzel — DAC & NH₃</h2>
-      <p class="project-desc">
-        Projekt pro obce a menší města zaměřený na zachytávání CO₂ z okolního vzduchu
-        (Direct Air Capture) a jeho využití pro syntézu uhlíkově negativního amoniaku (NH₃).
-        Cílem je vytvořit lokální zdroj čisté energie a tepla, který snižuje závislost
-        na plynu a umožňuje komunitám hospodařit s vlastní energií.
-      </p>
-      <p class="project-desc">
-        Řešení používá kombinaci obnovitelných zdrojů, především solární a odpadní teplo,
-        a je navrženo tak, aby bylo provozně a ekonomicky zvládnutelné pro obce
-        od 500 do 10&nbsp;000 obyvatel. Projekt vytváří nový model pro energetickou
-        soběstačnost komunit v rámci SSCC.
-      </p>
-    </article>
-
-  </section>
-</main>
-
+      <!-- další karty ... -->
+    </section>
   </main>
 
-
-  <!-- ====== PATIČKA ====== -->
+  <!-- PATIČKA (pokud tam už máš .site-footer, nech stejné jako na ostatních stránkách) -->
   <footer class="site-footer">
     <div class="footer-inner">
-
       <div class="footer-left">
         <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
         <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
       </div>
-
-      <div class="footer-right">
-        <a href="projekty.html">Projekty</a>
-        <a href="edukace.html">Edukace</a>
-        <a href="napady.html">Nápady</a>
-        <a href="konsorcium.html">Konsorcium</a>
-      </div>
-
     </div>
   </footer>
 
