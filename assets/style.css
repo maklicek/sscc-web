@@ -778,3 +778,67 @@ a:hover {
   color: #ffcc33; /* jemné zlaté zvýraznění titulku */
   margin-bottom: 0.8rem;
 }
+/* Stránka projektů */
+.projects-page {
+  max-width: 1200px;
+  margin: 2rem auto 4rem auto;
+  padding: 0 1.5rem 4rem 1.5rem;
+  color: #d8dde6;
+}
+
+.projects-intro {
+  margin-bottom: 2rem;
+}
+
+.projects-intro h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.75rem 0;
+  text-shadow: 0 0 8px rgba(255,215,90,0.3);
+}
+
+.projects-lead {
+  max-width: 60ch;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.75);
+}
+
+.projects-list {
+  display: grid;
+  gap: 2rem;
+}
+
+/* jednotlivý projekt */
+.project-card {
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(255,255,255,0.05) 0%,
+    rgba(15,21,29,0) 60%
+  );
+  border: 1px solid rgba(255,215,90,0.18);
+  border-radius: 10px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.8),
+    0 0 60px rgba(0,0,0,0.9) inset;
+  padding: 1.25rem 1.5rem 1rem;
+  color: #d8dde6;
+}
+
+.project-title {
+  color: rgb(255,215,90);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 0 8px rgba(255,215,90,0.4);
+}
+
+.project-desc {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0 0 0.75rem;
+  max-width: 80ch;
+}
