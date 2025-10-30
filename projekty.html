@@ -3,19 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projekty — SSCC</title>
+  <title>Název stránky | SSCC</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
-  <!-- HLAVIČKA -->
-<body>
-  <header class="site-header">…</header>
 
-  <main class="section-page">   <!-- JEDEN main obal -->
-    … obsah stránky …
+  <!-- HLAVIČKA – jedna na stránku -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
+        <span class="brand-block">
+          <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
+          <span class="brand-tagline">Initiative</span>
+        </span>
+      </a>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="projekty.html">Projekty</a></li>
+          <li><a href="edukace.html">Edukace</a></li>
+          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="konsorcium.html">Konsorcium</a></li>
+          <li><a href="spoluprace.html">Spolupráce</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <a class="lang active" href="#" aria-current="page">CS</a> /
+        <a class="lang" href="#">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBSAH – vždy uvnitř .page kvůli sticky footeru -->
+  <main class="page">
+    <h1>PROJEKTY</h1>
+    <p class="lead">Úvodní odstavec…</p>
+    <!-- … zbytek konkrétního obsahu … -->
   </main>
 
+  <!-- PATIČKA – jedna na stránku -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
@@ -30,57 +58,6 @@
       </nav>
     </div>
   </footer>
-</body>
-
-  <!-- HLAVNÍ OBSAH -->
-  <main class="projects-page">
-    <section class="projects-intro">
-      <h1>Projekty</h1>
-      <p class="projects-lead">
-        Pilotní jednotky, technologické koncepty a aplikace SSCC.
-        Od orbitálního sběru energie po lokální využití CO₂ a uhlíkově negativní amoniak.
-      </p>
-    </section>
-
-    <section class="projects-list">
-
-      <!-- příklad jedné karty -->
-      <article class="project-card">
-        <h2 class="project-title">
-          Orbitální solární farma → přenos energie dolů
-        </h2>
-        <p class="project-desc">
-          Konverze sluneční energie mimo atmosféru na mikrovlnný nebo laserový svazek
-          a bezpečný příjem v pozemní stanici. Cíl: stabilní čistý výkon
-          nezávislý na denní době a počasí.
-        </p>
-      </article>
-
-      <!-- další karty ... -->
-    </section>
-  </main>
-
-  <!-- PATIČKA (pokud tam už máš .site-footer, nech stejné jako na ostatních stránkách) -->
- 
- <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
-      </div>
-      <nav class="footer-links" aria-label="Odkazy v patičce">
-        <a href="projekty.html">Projekty</a>
-        <span class="dot">·</span>
-        <a href="edukace.html">Edukace</a>
-        <span class="dot">·</span>
-        <a href="napady.html">Nápady</a>
-        <span class="dot">·</span>
-        <a href="konsorcium.html">Konsorcium</a>
-        <span class="dot">·</span>
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-
 
 </body>
 </html>
