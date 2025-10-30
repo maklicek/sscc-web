@@ -451,3 +451,48 @@ html, body { overflow-x: hidden; }
   color: var(--gold);
   border-bottom: 2px solid var(--gold);
 }
+/* — Rozcestník pod hero — */
+.home-links{
+  max-width: 1200px;
+  margin: 2.5rem auto 2rem;
+  padding: 0 1.5rem;
+}
+.tiles-row{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.card-link{
+  display: block;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255,255,255,.06) 0%, rgba(15,21,29,0) 60%),
+    #111823;
+  border: 1px solid rgba(255,215,90,.18);
+  border-radius: 12px;
+  padding: 1.1rem 1.1rem .95rem;
+  color: #d8dde6;
+  text-decoration: none;
+  box-shadow: 0 22px 40px -14px rgba(0,0,0,.55), 0 0 36px rgba(255,215,90,.05);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card-link h3{
+  color: #ffe278;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 .4rem;
+  text-shadow: 0 0 8px rgba(255,215,90,.35);
+}
+.card-link p{
+  margin: 0;
+  color: rgba(255,255,255,.85);
+  line-height: 1.45;
+  font-size: .95rem;
+}
+.card-link:hover{
+  transform: translateY(-3px);
+  border-color: rgba(255,215,90,.38);
+  box-shadow: 0 26px 52px -16px rgba(0,0,0,.6), 0 0 42px rgba(255,215,90,.09);
+}
+
+/* drobná rezerva nad “Nadpis stránky”, ať se sekce nelepí */
+.home-links + .page{ margin-top: .5rem; }
