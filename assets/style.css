@@ -411,3 +411,29 @@ html, body { overflow-x: hidden; }
   .btn-hero{ transition: none; }
   .sscc-hero__glow{ filter: blur(18px); }
 }
+/* --- HERO: doladění pro titulku --- */
+
+/* posun fotky (klidně si jen vyměň čísla Y = výška) */
+.sscc-hero__bg img{
+  object-position: 60% 35%;   /* X%  Y%  → víc doprava, trochu výš */
+}
+
+/* čitelnost záhlaví – mírně slabší velum nahoře, silnější uprostřed */
+.sscc-hero__veil{
+  background:
+    radial-gradient(120% 80% at 30% 20%, rgba(0,0,0,.42) 0%, rgba(0,0,0,.78) 62%, rgba(0,0,0,.88) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.55) 100%);
+}
+
+/* vertikální pozice a tempo na velkých displejích */
+@media (min-width: 1200px){
+  .sscc-hero{ min-height: 78vh; }
+  .sscc-hero__inner{ padding-top: 9vh; padding-bottom: 9vh; }
+}
+
+/* jemný přechod mezi herem a obsahem (bez ostré hrany) */
+.sscc-hero::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:90px;
+  background: linear-gradient(to bottom, rgba(15,21,29,0) 0%, rgba(15,21,29,.7) 70%, rgba(15,21,29,1) 100%);
+  z-index: 0;
+}
