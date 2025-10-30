@@ -394,7 +394,7 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
   max-width: none !important;
   height: clamp(520px, 78vh, 900px) !important;
   object-fit: cover !important;
-  object-position: 50% 38% !important;  /* POSUN VÝŠ – sniž/zimvyš procento Y */
+  object-position: 60% 30% !important;  /* POSUN VÝŠ – sniž/zimvyš procento Y */
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
