@@ -1,52 +1,30 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
- <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spolupráce | SSCC</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
-
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
   <!-- ====== HLAVIČKA ====== -->
-<body>
   <header class="site-header">…</header>
 
-  <main class="section-page">   <!-- JEDEN main obal -->
-    … obsah stránky …
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
-      </div>
-      <nav class="footer-links">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-</body>
-
-
   <!-- ====== HERO BLOK ====== -->
-<section class="hero hero--bg" style="--hero-img: url('img/space-sun.jpg')">
-  <div class="hero-text">
-    <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-    <p>SSCC propojuje orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
-  </div>
-</section>
+  <section id="home-hero" class="hero hero--bg" style="--hero-img: url('img/space-sun.jpg')">
+    <div class="hero-text">
+      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+      <p>
+        SSCC propojuje orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a
+        cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+      </p>
+    </div>
+  </section>
 
-
-  <!-- ====== ROZCESTNÍK / OBSAH ====== -->
-  <main class="container portal-simple">
+  <!-- ====== OBSAH STRÁNKY ====== -->
+  <main class="section-page">
+    <!-- pokud chceš mít rozcestník vlevo, ponech ho uvnitř stejného main -->
     <aside class="portal-simple-nav">
       <div class="nav-block">
         <div class="nav-block-title">Obsah</div>
@@ -68,31 +46,26 @@
         </p>
       </div>
     </aside>
+
+    <!-- … další obsah stránky … -->
   </main>
 
-  <!-- ====== PATIČKA ====== -->
-<footer class="site-footer">
-  <div class="footer-inner">
-
-    <div class="footer-left">
-      <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
-      <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+  <!-- ====== PATIČKA (jediná) ====== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
+        <br />
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
     </div>
-
-    <div class="footer-nav">
-      <a href="projekty.html">Projekty</a>
-      <span class="dot">·</span>
-      <a href="edukace.html">Edukace</a>
-      <span class="dot">·</span>
-      <a href="napady.html">Nápady</a>
-      <span class="dot">·</span>
-      <a href="konsorcium.html">Konsorcium</a>
-      <span class="dot">·</span>
-      <a href="spoluprace.html">Spolupráce</a>
-    </div>
-
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
