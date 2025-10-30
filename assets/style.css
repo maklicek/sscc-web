@@ -223,25 +223,22 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
 
 /* FULL-BLEED BACKGROUND varianta */
 .hero--bg{
-  position: relative;           /* ukotví ::before do sekce */
-  min-height: clamp(420px, 60vh, 760px);
+  position: relative;
+  min-height: clamp(520px, 75vh, 880px);  /* vyšší sekce */
   margin: 0 !important;
   border-radius: 0 !important;
-  overflow: hidden;             /* odstřihne přesahy pozadí */
+  overflow: hidden;
 }
 .hero--bg::before{
   content:"";
   position:absolute; inset:0;
   background:
-    radial-gradient(ellipse at 50% 10%, rgba(0,0,0,0) 0%,
-                    rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
-    var(--hero-img) center 70% / cover no-repeat;
+    radial-gradient(ellipse at 50% 20%, rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,.35) 55%, rgba(0,0,0,.6) 100%),
+    var(--hero-img) center 60% / cover no-repeat;  /* posun obrázku výš */
   z-index: 0;
 }
-.hero--bg > *{
-  position: relative;
-  z-index: 1;                   /* text nad obrázkem */
-}
+
 
 /* Doporučené: trochu typografie pro nadpis/odstavec na hero */
 .hero-text { max-width: 60ch; padding: 2rem 1.5rem; }
