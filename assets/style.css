@@ -292,4 +292,28 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
 /* sjednocení barev linků v patičce */
 .site-footer .footer-links a { color:#c8cedd; text-decoration:none; }
 .site-footer .footer-links a:hover { color:#ffe278; text-decoration:underline; }
+/* HERO – full-bleed background */
+.section-hero-home { margin-top: 1.25rem !important; }
+
+.hero--bg{
+  position: relative;
+  min-height: clamp(420px, 60vh, 760px);
+  margin: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+.hero--bg::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
+    var(--hero-img) center 70% / cover no-repeat;
+  z-index: 0;
+}
+.hero--bg > *{ position: relative; z-index: 1; }
+
+.hero-text { max-width: 60ch; padding: 2rem 1.5rem; }
+.hero-text h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; margin: 0 0 .75rem; }
+.hero-text p  { font-size: clamp(1rem, 1.6vw, 1.15rem); margin: 0; opacity: .92; }
 
