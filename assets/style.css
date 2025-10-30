@@ -437,3 +437,12 @@ html, body { overflow-x: hidden; }
   background: linear-gradient(to bottom, rgba(15,21,29,0) 0%, rgba(15,21,29,.7) 70%, rgba(15,21,29,1) 100%);
   z-index: 0;
 }
+/* žluté tlačítko více „klikací“ a tmavé trochu světlejší text */
+.btn-hero{
+  box-shadow: 0 14px 28px rgba(0,0,0,.35), 0 0 18px rgba(255,215,90,.28) inset;
+}
+.btn-hero--ghost{
+  color: rgba(255,255,255,.92);
+  border-color: rgba(255,215,90,.5);
+}
+.btn-hero--ghost:hover{ background: rgba(255,215,90,.10); }
