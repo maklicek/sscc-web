@@ -36,24 +36,35 @@
   </div>
 </header>
 
-<!-- HERO – jen JEDEN blok a mimo <header> -->
-<section class="sscc-hero" style="--hero-img:url('img/hero-space.jpg')">
-  <div class="sscc-hero__veil"></div>
+<!-- HERO (index.html only) -->
+<section class="sscc-hero" aria-labelledby="hero-title">
+  <!-- Background image via <picture> for AVIF/WebP/JPG -->
+  <picture class="sscc-hero__bg" aria-hidden="true">
+    <source srcset="img/hero-space.avif" type="image/avif">
+    <source srcset="img/hero-space.webp" type="image/webp">
+    <img src="img/hero-space.jpg" alt="" loading="eager" decoding="async">
+  </picture>
+
+  <!-- Veil & glow are presentational -->
+  <div class="sscc-hero__veil" aria-hidden="true"></div>
+  <div class="sscc-hero__glow" aria-hidden="true"></div>
+
   <div class="sscc-hero__inner">
-    <h1 class="sscc-hero__title">
+    <h1 id="hero-title" class="sscc-hero__title">
       Solární energie mimo atmosféru.<br>
       Uhlíkový dopad pod nulou.
     </h1>
+
     <p class="sscc-hero__lead">
       Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
       Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
     </p>
+
     <div class="sscc-hero__cta">
-      <a href="projekty.html" class="btn-hero">Projekty</a>
+      <a href="#projects" class="btn-hero">Projekty</a>
       <a href="spoluprace.html" class="btn-hero btn-hero--ghost">Spolupráce</a>
     </div>
   </div>
-  <div class="sscc-hero__glow"></div>
 </section>
 
 <!-- OBSAH -->
