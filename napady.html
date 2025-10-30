@@ -1,91 +1,59 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-
-  <!-- tady je ten JEDINÝ CSS -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Název stránky | SSCC</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
-  <!-- ====== HLAVIČKA ====== -->
-<header class="site-header">
-  <div class="header-inner">
 
-    <!-- LEVÁ: logo + značka -->
-    <a href="index.html" class="brand-combo">
-      <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" width="80" height="80">
-      <div class="brand-block">
-        <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
-        <span class="brand-tagline">Initiative</span>
+  <!-- HLAVIČKA – jedna na stránku -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
+        <span class="brand-block">
+          <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
+          <span class="brand-tagline">Initiative</span>
+        </span>
+      </a>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="projekty.html">Projekty</a></li>
+          <li><a href="edukace.html">Edukace</a></li>
+          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="konsorcium.html">Konsorcium</a></li>
+          <li><a href="spoluprace.html">Spolupráce</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <a class="lang active" href="#" aria-current="page">CS</a> /
+        <a class="lang" href="#">EN</a>
       </div>
-    </a>
-
-    <!-- STŘED: navigace -->
-    <nav class="site-nav">
-      <ul>
-        <li><a href="projekty.html">Projekty</a></li>
-        <li><a href="edukace.html">Edukace</a></li>
-        <li><a href="napady.html">Nápady</a></li>
-        <li><a href="konsorcium.html">Konsorcium</a></li>
-        <li><a href="spoluprace.html">Spolupráce</a></li>
-      </ul>
-    </nav>
-
-    <!-- PRAVÁ: jazyk (klidně nech prázdné / nebo skryj) -->
-    <div class="lang-switch">
-      <a class="lang active" href="#">CS</a>
-      <span class="sep">/</span>
-      <a class="lang" href="#">EN</a>
     </div>
+  </header>
 
-  </div>
-</header>
-
-</body>
-
-  <!-- HLAVNÍ OBSAH STRÁNKY -->
-  <main class="section-page">
-
-
-
-  <main class="section-page">
-    <section class="container section-intro">
-      <h1>Nápady a vize</h1>
-      <p class="section-lead">Koncepty a návrhy pro udržitelnou budoucnost.</p>
-    </section>
-
-    <section class="container project-list">
-      <article class="project-block">
-        <h2>Energie z vesmíru</h2>
-        <p>Koncepty přenosu sluneční energie z orbitálních platforem.</p>
-      </article>
-
-      <article class="project-block">
-        <h2>CO₂ jako topivo</h2>
-        <p>Myšlenky na přeměnu zachyceného CO₂ na palivo a teplo pro domácnosti.</p>
-      </article>
-    </section>
+  <!-- OBSAH – vždy uvnitř .page kvůli sticky footeru -->
+  <main class="page">
+    <h1>NÁPADY</h1>
+    <p class="lead">Úvodní odstavec…</p>
+    <!-- … zbytek konkrétního obsahu … -->
   </main>
 
-    
-  <!-- Patička -->
- <footer class="site-footer" role="contentinfo">
+  <!-- PATIČKA – jedna na stránku -->
+  <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
         © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
       </div>
-      <nav class="footer-links" aria-label="Odkazy v patičce">
-        <a href="projekty.html">Projekty</a>
-        <span class="dot">·</span>
-        <a href="edukace.html">Edukace</a>
-        <span class="dot">·</span>
-        <a href="napady.html">Nápady</a>
-        <span class="dot">·</span>
-        <a href="konsorcium.html">Konsorcium</a>
-        <span class="dot">·</span>
+      <nav class="footer-links">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
         <a href="spoluprace.html">Spolupráce</a>
       </nav>
     </div>
