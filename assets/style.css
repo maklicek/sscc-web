@@ -145,3 +145,5 @@ a:hover { color: var(--gold); text-shadow: 0 0 8px rgba(255,226,120,.45); }
 
 /* ========== DROBNOsti ========== */
 html, body { overflow-x: hidden; } /* prevence horizontálního scrollu */
+/* TEMP: kdyby omylem vznikly duplicitní footery na stránce */
+.site-footer ~ .site-footer { display: none !important; }
