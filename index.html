@@ -2,110 +2,234 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Název stránky | SSCC</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SolarSpace Carbon Cycle (SSCC)</title>
+  <style>
+    /* ===== Root & Reset ===== */
+    :root{
+      --header-h: 84px;
+      --footer-h: 120px;
+      --gold: #ffd75a;
+      --bg: #0f151d;
+      --ink: #d8dde6;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      min-height:100vh; display:flex; flex-direction:column;
+      background:var(--bg); color:var(--ink);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+    a{color:#9da0ff; text-decoration:none}
+    a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
+
+    /* ===== Header ===== */
+    .site-header{
+      position:sticky; top:0; z-index:1000;
+      background: radial-gradient(120% 120% at 0% 0%, #5a4b24 0%, #1a1c1d 60%);
+      border-bottom:1px solid rgba(255,215,90,.3);
+      box-shadow:0 10px 30px rgba(0,0,0,.8);
+      min-height:var(--header-h);
+      display:flex; align-items:center;
+      padding:.75rem 1.25rem;
+    }
+    .header-inner{
+      width:100%; max-width:1500px; margin:0 auto;
+      display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:1rem;
+    }
+    .brand-combo{display:flex;align-items:center;gap:1rem;color:#fff}
+    .main-logo{
+      width:72px; height:72px; border-radius:10px; object-fit:cover; display:block;
+      border:1px solid rgba(255,215,90,.3);
+      box-shadow:0 6px 18px rgba(0,0,0,.8), 0 0 22px rgba(255,215,90,.35);
+      background:transparent;
+    }
+    .brand-block{display:flex;flex-direction:column;line-height:1.2}
+    .brand-name{font-weight:700;color:#fff;letter-spacing:.2px}
+    .brand-tagline{font-size:.9rem;color:rgba(255,255,255,.8)}
+    .site-nav ul{display:flex;flex-wrap:wrap;gap:1.25rem .75rem;list-style:none}
+    .site-nav a{color:rgba(255,255,255,.85);font-weight:500;border-bottom:2px solid transparent;transition:.15s}
+    .site-nav a:hover,.site-nav a.active{color:var(--gold);border-color:var(--gold)}
+    .lang-switch{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:rgba(255,255,255,.8)}
+    .lang{padding:.35rem .6rem;border-radius:6px;border:1px solid transparent}
+    .lang.active{color:var(--gold);border-color:var(--gold);background:rgba(255,215,90,.07)}
+
+    @media (max-width:800px){
+      .header-inner{grid-template-columns:1fr auto;grid-template-areas:"brand lang" "nav nav";row-gap:.6rem;align-items:start}
+      .brand-combo{grid-area:brand}
+      .site-nav{grid-area:nav}
+      .lang-switch{grid-area:lang;justify-self:end}
+      .main-logo{width:56px;height:56px}
+    }
+
+    /* ===== Hero (full-bleed) ===== */
+    .hero-wrap{
+      position:relative; width:100vw; left:50%; margin-left:-50vw;
+      background: radial-gradient(120% 120% at 0% 0%, rgba(255,215,90,.06) 0%, rgba(0,0,0,0) 60%),
+                  url('img/hero-space.jpg') center 45% / cover no-repeat;
+      border-bottom:1px solid rgba(255,215,90,.2);
+      box-shadow:inset 0 -80px 120px rgba(0,0,0,.45);
+    }
+    .hero-inner{
+      max-width:1200px; margin:0 auto;
+      padding: clamp(28px, 8vh, 96px) 1.5rem clamp(24px, 7vh, 72px);
+    }
+
+    /* ==== Rozcestník + Hero text na gridu ==== */
+    .home-links{
+      position:relative;
+      display:grid; grid-template-columns: 1fr 1.3fr;
+      align-items:center; gap:2.5rem;
+      max-width:1200px; margin:0 auto;
+      padding: 0 1.5rem clamp(12px, 3vh, 24px);
+    }
+    .tiles-row{display:flex;flex-direction:column;gap:1rem}
+    .card-link{
+      background: rgba(20,25,35,.86);
+      border:1px solid rgba(255,215,90,.2);
+      border-radius:14px;
+      padding:1rem 1.25rem;
+      box-shadow:0 12px 28px rgba(0,0,0,.45);
+      transition:.2s ease;
+    }
+    .card-link:hover{transform:translateY(-3px);border-color:rgba(255,215,90,.45);box-shadow:0 18px 40px rgba(0,0,0,.55)}
+    .card-link h3{color:var(--gold);margin:0 0 .25rem}
+    .card-link p{margin:0;color:rgba(255,255,255,.85);font-size:.95rem}
+
+    .hero-copy h1{
+      font-size: clamp(2rem, 1.25rem + 3.2vw, 3.2rem);
+      line-height:1.15; color:#fff; margin:0 0 .75rem;
+      text-shadow:0 0 18px rgba(0,0,0,.35);
+    }
+    .hero-copy p{max-width:60ch;color:rgba(255,255,255,.9)}
+    .cta-row{display:flex;gap:.75rem;margin-top:1rem}
+
+    .btn-hero{
+      display:inline-block; padding:.8rem 1.1rem; border-radius:999px;
+      background: var(--gold); color:#000; font-weight:700;
+      border:1px solid transparent; box-shadow:0 8px 22px rgba(0,0,0,.35);
+      transition:.2s;
+    }
+    .btn-hero:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.45)}
+    .btn-ghost{
+      background:transparent; color:#fff; border-color:rgba(255,215,90,.5);
+      box-shadow:0 8px 22px rgba(0,0,0,.2);
+    }
+    .btn-ghost:hover{background:rgba(255,215,90,.08)}
+
+    @media (max-width:900px){
+      .home-links{grid-template-columns:1fr; gap:1.25rem; padding: 0 1rem 1.25rem}
+      .hero-inner{padding: clamp(20px, 6vh, 60px) 1rem 1rem}
+    }
+
+    /* ===== Page container (sticky footer spacing) ===== */
+    main.page{
+      width:100%; max-width:1200px; margin:0 auto; padding:2rem 1.5rem 3rem;
+      min-height:calc(100vh - var(--header-h) - var(--footer-h));
+    }
+    main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; margin-bottom:.5rem; color:#fff}
+    .lead{color:rgba(255,255,255,.85); max-width:60ch}
+
+    /* ===== Footer ===== */
+    .site-footer{
+      margin-top:auto; min-height:var(--footer-h);
+      background:var(--bg);
+      border-top:1px solid rgba(255,215,90,.25);
+      color:#c8cedd; font-size:.92rem; line-height:1.4;
+      padding:1.5rem 1rem 2.2rem;
+    }
+    .footer-inner{
+      max-width:1200px;margin:0 auto;
+      display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;
+    }
+    .footer-links{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+    .footer-links a{color:#c8cedd}
+    .footer-links a:hover{color:var(--gold); text-decoration:underline}
+  </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
+        <span class="brand-block">
+          <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
+          <span class="brand-tagline">Initiative</span>
+        </span>
+      </a>
 
-<!-- HLAVIČKA – jedna na stránku -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand-combo" href="index.html">
-      <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
-      <span class="brand-block">
-        <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
-        <span class="brand-tagline">Initiative</span>
-      </span>
-    </a>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="projekty.html">Projekty</a></li>
+          <li><a href="edukace.html">Edukace</a></li>
+          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="konsorcium.html">Konsorcium</a></li>
+          <li><a href="spoluprace.html">Spolupráce</a></li>
+        </ul>
+      </nav>
 
-    <nav class="site-nav">
-      <ul>
-        <li><a href="projekty.html">Projekty</a></li>
-        <li><a href="edukace.html">Edukace</a></li>
-        <li><a href="napady.html">Nápady</a></li>
-        <li><a href="konsorcium.html">Konsorcium</a></li>
-        <li><a href="spoluprace.html">Spolupráce</a></li>
-      </ul>
-    </nav>
-
-    <div class="lang-switch">
-      <a class="lang active" href="#" aria-current="page">CS</a> /
-      <a class="lang" href="#">EN</a>
+      <div class="lang-switch">
+        <a class="lang active" href="#" aria-current="page">CS</a> /
+        <a class="lang" href="#">EN</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- HERO (index.html only) -->
-<section class="sscc-hero" aria-labelledby="hero-title">
-  <section class="home-links" aria-label="Hlavní odkazy">
-  <div class="tiles-row">
-    <a class="card-link" href="projekty.html">
-      <h3>Projekty</h3>
-      <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
-    </a>
+  <!-- ===== Hero (full-bleed background) ===== -->
+  <section class="hero-wrap" role="banner">
+    <div class="hero-inner">
+      <div class="home-links">
+        <!-- Levý rozcestník -->
+        <div class="tiles-row" aria-label="Rozcestník">
+          <a class="card-link" href="projekty.html">
+            <h3>Projekty</h3>
+            <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
+          </a>
+          <a class="card-link" href="edukace.html">
+            <h3>Edukace</h3>
+            <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
+          </a>
+          <a class="card-link" href="napady.html">
+            <h3>Nápady</h3>
+            <p>Návrhy a myšlenky vhodné pro experiment či simulaci.</p>
+          </a>
+          <a class="card-link" href="konsorcium.html">
+            <h3>Konsorcium</h3>
+            <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
+          </a>
+        </div>
 
-    <a class="card-link" href="edukace.html">
-      <h3>Edukace</h3>
-      <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
-    </a>
-
-    <a class="card-link" href="napady.html">
-      <h3>Nápady</h3>
-      <p>Návrhy a myšlenky, které stojí za experiment či simulaci.</p>
-    </a>
-
-    <a class="card-link" href="konsorcium.html">
-      <h3>Konsorcium</h3>
-      <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
-    </a>
-  </div>
-</section>
-
-  <!-- Background image via <picture> for AVIF/WebP/JPG -->
-  <picture class="sscc-hero__bg" aria-hidden="true">
-    <source srcset="img/hero-space.avif" type="image/avif">
-    <source srcset="img/hero-space.webp" type="image/webp">
-    <img src="img/hero-space.jpg" alt="" loading="eager" decoding="async">
-  </picture>
-
-  <!-- Veil & glow are presentational -->
-  <div class="sscc-hero__veil" aria-hidden="true"></div>
-  <div class="sscc-hero__glow" aria-hidden="true"></div>
-
-  <div class="sscc-hero__inner">
-    <h1 id="hero-title" class="sscc-hero__title">
-      Solární energie mimo atmosféru.<br>
-      Uhlíkový dopad pod nulou.
-    </h1>
-
-    <p class="sscc-hero__lead">
-      Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-      Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
-    </p>
-
-    <div class="sscc-hero__cta">
-      <a href="#projects" class="btn-hero">Projekty</a>
-      <a href="spoluprace.html" class="btn-hero btn-hero--ghost">Spolupráce</a>
+        <!-- Pravý hero text + CTA -->
+        <div class="hero-copy">
+          <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+          <p>Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+            Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
+          <div class="cta-row">
+            <a href="projekty.html" class="btn-hero">Projekty</a>
+            <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OBSAH -->
-<main class="page">
-  <h1>Nadpis stránky</h1>
-  <p class="lead">Úvodní odstavec…</p>
-  <!-- … -->
-</main>
+  <!-- ===== Page content (placeholder) ===== -->
+  <main class="page">
+    <h1>Nadpis stránky</h1>
+    <p class="lead">Úvodní odstavec…</p>
+  </main>
 
-
-  <!-- PATIČKA – jedna na stránku -->
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
       </div>
-      <nav class="footer-links">
+      <nav class="footer-links" aria-label="Spodní navigace">
         <a href="projekty.html">Projekty</a> ·
         <a href="edukace.html">Edukace</a> ·
         <a href="napady.html">Nápady</a> ·
@@ -114,6 +238,5 @@
       </nav>
     </div>
   </footer>
-
 </body>
 </html>
