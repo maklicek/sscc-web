@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Název stránky | SSCC</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nápady | SSCC</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
-  <!-- HLAVIČKA – jedna na stránku -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
+        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
@@ -23,41 +21,33 @@
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
-          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="napady.html" class="active" aria-current="page">Nápady</a></li>
           <li><a href="konsorcium.html">Konsorcium</a></li>
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
       </nav>
 
       <div class="lang-switch">
-        <a class="lang active" href="#" aria-current="page">CS</a> /
+        <a class="lang active" href="#">CS</a> /
         <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
 
-  <!-- OBSAH – vždy uvnitř .page kvůli sticky footeru -->
   <main class="page">
-    <h1>NÁPADY</h1>
-    <p class="lead">Úvodní odstavec…</p>
-    <!-- … zbytek konkrétního obsahu … -->
+    <h1>Nápady</h1>
+    <p class="lead">Návrhy a myšlenky, které stojí za experiment či simulaci.</p>
+
+    <section>
+      <h2>Experimentální návrhy</h2>
+      <p>Sem mohou přijít záznamy projektů, teoretické směry nebo návrhy nových systémů.</p>
+    </section>
   </main>
 
-  <!-- PATIČKA – jedna na stránku -->
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
-      </div>
-      <nav class="footer-links">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
+      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Powered by clean energy ✶
     </div>
   </footer>
-
 </body>
 </html>
