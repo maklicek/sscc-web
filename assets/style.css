@@ -496,3 +496,8 @@ html, body { overflow-x: hidden; }
 
 /* drobná rezerva nad “Nadpis stránky”, ať se sekce nelepí */
 .home-links + .page{ margin-top: .5rem; }
+.btn-hero--ghost{
+  color: rgba(255,255,255,.92);
+  border-color: rgba(255,215,90,.5);
+}
+.btn-hero--ghost:hover{ background: rgba(255,215,90,.10); }
