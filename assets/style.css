@@ -446,3 +446,7 @@ html, body { overflow-x: hidden; }
   border-color: rgba(255,215,90,.5);
 }
 .btn-hero--ghost:hover{ background: rgba(255,215,90,.10); }
+.site-nav a[aria-current="page"]{
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
