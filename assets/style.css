@@ -239,8 +239,8 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
 
 /* === Full-bleed slunce na titulce (varianta s IMG) ===
    Stačí dát úvodní obrázek do .hero-art img (na indexu) */
-.hero-art { width: 100vw; margin-left: 50%; transform: translateX(-50%); }
-.hero-art img{
+.hero-art { width: 100vw; margin-left: 50%; transform: translateX(-50%); } zakomentovano
+.hero-art img{  zakomentovano
   display:block;
   width: 100vw;               /* přes celou šířku okna */
   max-width: none;            /* zrušit max-width:100% z dřívějška */
