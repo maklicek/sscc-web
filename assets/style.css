@@ -163,4 +163,93 @@ a:hover{color:#ffe278;text-shadow:0 0 8px rgba(255,226,120,.45)}
   .site-nav{flex-direction:column;align-items:flex-start;gap:.5rem}
   .card{min-height:auto}
 }
+/* =========================
+   SSCC hot-fix overrides
+   ========================= */
+
+/* --- typografie nadpisů --- */
+h1, .projects-intro h1, .edu-page-title, .edu-wrapper h1 {
+  font-size: clamp(2rem, 1.2rem + 2.2vw, 3rem) !important;
+  line-height: 1.2 !important;
+}
+
+/* --- logo v hlavičce (jedna verze, zbytek přepíšeme) --- */
+.main-logo {
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,.8), 0 0 22px rgba(255,215,90,.35) !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* --- layout: sticky footer & jistoty --- */
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas { flex: 1 0 auto; }
+
+.site-footer, footer.site-footer {
+  margin-top: auto !important;
+  background-color: #0f151d;
+  border-top: 1px solid rgba(255,215,90,.25);
+  box-shadow: none;
+}
+
+/* patičková navigace jednotně zarovnaná */
+.site-footer .footer-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+  display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; justify-content:center;
+}
+.site-footer .footer-links{ display:flex; flex-wrap:wrap; gap:.75rem; justify-content:center; }
+
+/* --- ÚVODNÍ STRÁNKA: hero výš, „co tu najdete“ níž --- */
+.hero, .section-hero-home { margin-top: 1.25rem !important; }
+.home-links, .section-contents.home-links { margin-top: 2.5rem !important; }
+
+/* === Full-bleed slunce na titulce (varianta s IMG) ===
+   Stačí dát úvodní obrázek do .hero-art img (na indexu) */
+.hero-art { width: 100vw; margin-left: 50%; transform: translateX(-50%); }
+.hero-art img{
+  display:block;
+  width: 100vw;               /* přes celou šířku okna */
+  max-width: none;            /* zrušit max-width:100% z dřívějška */
+  height: clamp(420px, 60vh, 760px);
+  object-fit: cover;
+  object-position: center 70%;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* (volitelně) varianta s backgroundem místo IMG:
+   pokud použiješ <section class="hero hero--bg" style="--hero-img:url('img/space-sun.jpg')"> */
+.hero--bg{
+  position: relative;
+  min-height: clamp(420px, 60vh, 760px);
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+.hero--bg::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(0,0,0,0) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
+    var(--hero-img) center 70% / cover no-repeat;
+  z-index: 0;
+}
+.hero--bg > * { position:relative; z-index:1; }
+
+/* --- Stránky Projekty / Nápady / Konsorcium – jistota mezer --- */
+.projects-page { padding: 2rem 1.5rem 3rem !important; max-width: 1200px; margin: 2rem auto; }
+.page-ideas, .page-consortium { max-width: 1200px; margin: 2rem auto 3rem; padding: 0 1.5rem; }
+
+/* --- drobnosti --- */
+/* schovej případný pomocný řádek „… obsah stránky …“ */
+.skiplink, .dev-note, .top-helper { position:absolute !important; left:-9999px !important; }
+
+/* sjednocení barev linků v patičce */
+.site-footer .footer-links a { color:#c8cedd; text-decoration:none; }
+.site-footer .footer-links a:hover { color:#ffe278; text-decoration:underline; }
 
