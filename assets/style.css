@@ -6,7 +6,7 @@
   --bg: #0f151d;
   --text: #d8dde6;
 }
-
+ 
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{
@@ -341,6 +341,7 @@ html, body { overflow-x: hidden; }
 /* sjednocení barev linků v patičce */
 .site-footer .footer-links a { color:#c8cedd; text-decoration:none; }
 .site-footer .footer-links a:hover { color:#ffe278; text-decoration:underline; }
+
 /* HERO – full-bleed background */
 .section-hero-home { margin-top: 1.25rem !important; }
 
@@ -483,45 +484,7 @@ html, body { overflow-x: hidden; }
 
 /* prevence horizontálního scrollu */
 html, body { overflow-x: hidden; }
-<!DOCTYPE html>
-<html lang="cs">
-<head>
- <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spolupráce | SSCC</title>
-  <link rel="stylesheet" href="assets/style.css">
-</head>
 
-</head>
-
-<body>
-  <!-- ====== HLAVIČKA ====== -->
-<body>
-  <header class="site-header">…</header>
-
-  <main class="section-page">   <!-- JEDEN main obal -->
-    … obsah stránky …
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative
-      </div>
-      <nav class="footer-links">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-</body>
-
-
-  <!-- ====== HERO BLOK ====== -->
 <section class="hero hero--bg" style="--hero-img: url('img/space-sun.jpg')">
   <div class="hero-text">
     <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
