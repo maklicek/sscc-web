@@ -1,10 +1,10 @@
-/* ====== Root & Reset ====== */
+/* ====== ROOT & RESET ====== */
 :root{
   --header-h: 84px;
   --footer-h: 120px;
-  --gold: #ffd75a;
   --bg: #0f151d;
   --text: #d8dde6;
+  --gold: #ffd75a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
@@ -17,7 +17,7 @@ body{
   line-height:1.5;
 }
 
-/* ====== Header (jediná verze) ====== */
+/* ====== HEADER ====== */
 .site-header{
   position:sticky; top:0; z-index:1000;
   min-height:var(--header-h);
@@ -34,3 +34,103 @@ body{
 .brand-combo{display:flex;align-items:center;gap:1rem;color:#fff;text-decoration:none}
 .main-logo{
   width:80px; height:80px; border-radius:10px;
+  border:1px solid rgba(255,215,90,.3);
+  box-shadow:0 6px 18px rgba(0,0,0,.8), 0 0 18px rgba(255,215,90,.3);
+  object-fit:cover; background:transparent;
+}
+.brand-block{display:flex;flex-direction:column;line-height:1.2}
+.brand-name{font-size:1.15rem;font-weight:700;color:#fff}
+.brand-tagline{font-size:.9rem;color:rgba(255,255,255,.75)}
+
+.site-nav ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none}
+.site-nav a{
+  color:rgba(255,255,255,.85); text-decoration:none; font-weight:500;
+  border-bottom:2px solid transparent; transition:.15s;
+}
+.site-nav a:hover,.site-nav a.active{color:var(--gold);border-color:var(--gold)}
+
+.lang-switch{display:flex;gap:.5rem;align-items:center;font-size:.85rem;color:rgba(255,255,255,.85)}
+.lang-switch .lang{padding:.35rem .6rem;border-radius:6px;border:1px solid transparent;text-decoration:none;color:inherit}
+.lang-switch .lang.active{color:var(--gold);border-color:var(--gold);background:rgba(255,215,90,.07)}
+
+@media (max-width:800px){
+  .header-inner{grid-template-columns:1fr auto;grid-template-areas:"brand lang" "nav nav";row-gap:.75rem}
+  .brand-combo{grid-area:brand}
+  .site-nav{grid-area:nav}
+  .lang-switch{grid-area:lang;justify-self:end}
+  .main-logo{width:64px;height:64px}
+}
+
+/* ====== HERO – FULL-BLEED BACKGROUND ====== */
+/* Použij: <section class="hero hero--bg" style="--hero-img: url('img/space-sun.jpg')">… */
+.hero,
+.section-hero-home{ margin-top:0; padding-top:0; }
+
+.hero--bg{
+  position:relative;
+  width:100vw; max-width:100vw;
+  left:50%; margin-left:-50vw;      /* full-bleed trik */
+  min-height:clamp(520px, 78vh, 900px);
+  border:0; border-radius:0; overflow:hidden;
+  box-shadow:none;
+}
+.hero--bg::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 50% 8%, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 55%),
+    var(--hero-img) center 38% / cover no-repeat;
+  z-index:0;
+}
+.hero--bg::after{
+  content:""; position:absolute; left:0; right:0; bottom:-1px; height:90px;
+  background:linear-gradient(to bottom, rgba(15,21,29,0) 0%, rgba(15,21,29,.7) 70%, rgba(15,21,29,1) 100%);
+  z-index:1;
+}
+.hero .hero-text{
+  position:relative; z-index:2;
+  max-width:1100px; margin:0 auto;
+  padding:clamp(24px, 7vh, 84px) 1.5rem clamp(16px, 5vh, 64px);
+}
+.hero .hero-text h1{
+  font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1.15; color:#fff; margin:0 0 .75rem;
+  text-shadow:0 0 12px rgba(0,0,0,.35);
+}
+.hero .hero-text p{
+  font-size:clamp(1rem,1.6vw,1.15rem); opacity:.92;
+}
+
+/* ====== OBSAH / KONTEJNERY ====== */
+.section-page,
+.container,
+.projects-page,
+.page-education,
+.page-consortium,
+.page-ideas{
+  flex:1 0 auto;
+  width:100%; max-width:1200px;
+  margin:2rem auto 3rem; padding:0 1.5rem;
+}
+
+/* Karty/styly můžeš doplnit později – tohle je minimum */
+
+/* ====== ODKAZY ====== */
+a,a:visited{color:#9da0ff;text-decoration:none}
+a:hover{color:#ffd75a;text-shadow:0 0 8px rgba(255,215,90,.45)}
+
+/* ====== FOOTER (sticky) ====== */
+.site-footer{
+  margin-top:auto; min-height:var(--footer-h);
+  background:var(--bg);
+  border-top:1px solid rgba(255,215,90,.25);
+  color:#c8cedd; font-size:.9rem; line-height:1.4;
+  padding:1.5rem 1rem 2.5rem;
+}
+.site-footer .footer-inner{
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:center;
+  gap:1rem; flex-wrap:wrap;
+}
+.site-footer .footer-links{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+.site-footer .footer-links a{color:#c8cedd}
+.site-footer .footer-links a:hover{color:#ffd75a;text-decoration:underline}
