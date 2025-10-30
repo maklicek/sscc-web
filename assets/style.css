@@ -63,6 +63,17 @@ main.page{
   .lang-switch{grid-area:lang;justify-self:end}
   .main-logo{width:56px;height:56px}
 }
+<section
+  class="hero hero--bg section-hero-home"
+  style="--hero-img: url('img/space-sun.jpg');"
+>
+  <div class="hero-text">
+    <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+    <p>SSCC propojuje orbitální solární zdroje, vodíkovou chemii a cirkulaci CO₂…
+    </p>
+  </div>
+</section>
+
 
 /* ========== HERO – TITULKA ========== */
 .hero-landing{
