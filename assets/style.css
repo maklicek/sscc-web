@@ -72,10 +72,6 @@ a:hover { color: var(--gold); text-shadow: 0 0 8px rgba(255,226,120,.45); }
   transition: color .15s ease, border-color .15s ease;
 }
 .site-nav a:hover,
-.site-nav a[aria-current="page"]{
-  color: var(--gold);
-  border-color: var(--gold);
-}
 
 /* Jazykový přepínač */
 .lang-switch{ display:flex; align-items:center; gap:.5rem; color: rgba(255,255,255,.85); font-size: .85rem; }
