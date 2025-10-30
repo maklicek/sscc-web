@@ -240,53 +240,56 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
   border-radius: 0 !important;
   overflow: hidden;
 }
-
+Hero blok
 /* Obrázek + ztmavení; POSUN VÝŠ + víc doprava přes cover se vyplní sám */
+/* ==== FULL-BLEED HERO (background varianta) – konečný override ==== */
+.hero,
+.section-hero-home { margin-top: 0 !important; padding-top: 0 !important; }
+
+.hero--bg{
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  left: 50% !important;
+  margin-left: -50vw !important;
+  min-height: clamp(520px, 78vh, 900px) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+/* samotné pozadí */
 .hero--bg::before{
-  content:"";
-  position:absolute; inset:0;
+  content: "";
+  position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse at 50% 22%,
-      rgba(0,0,0,0) 0%,
-      rgba(0,0,0,.34) 55%,
-      rgba(0,0,0,.62) 100%),
-    var(--hero-img) center 42% / cover no-repeat; /* ↑ posuneme výš (42 %) */
+    /* jemný horní fade, aby text byl čitelný */
+    radial-gradient(ellipse at 50% 8%, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 55%) ,
+    var(--hero-img) center 38% / cover no-repeat;
   z-index: 0;
 }
 
-/* Text uvnitř – ať není nalepený nahoře a drží se středu stránky */
-.hero--bg .hero-text{
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;          /* nebo tvoje .hub */
-  margin: 0 auto;
-  padding: clamp(12px, 6vh, 72px) 1.5rem clamp(12px, 4vh, 48px);
-}
-
-/* příjemný fade do další sekce (volitelné) */
+/* dolní stmavení aby to hezky navazovalo do obsahu */
 .hero--bg::after{
-  content:"";
-  position:absolute; left:0; right:0; bottom:-1px; height:80px;
-  background: linear-gradient(to bottom,
-    rgba(15,21,29,0) 0%,
-    rgba(15,21,29,0.6) 60%,
-    rgba(15,21,29,1) 100%);
-  z-index: 0;
+  content: "";
+  position: absolute; left:0; right:0; bottom: -1px; height: 90px;
+  background: linear-gradient(to bottom, rgba(15,21,29,0) 0%, rgba(15,21,29,.7) 70%, rgba(15,21,29,1) 100%);
+  z-index: 1;
 }
 
-/* na menších šířkách hero trochu nižší a obrázek o chlup níž,
-   ať není „přepálený“ */
-@media (max-width: 900px){
-  .hero--bg{ min-height: clamp(480px, 75vh, 820px); }
-  .hero--bg::before{
-    background:
-      radial-gradient(ellipse at 50% 28%,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,.36) 58%,
-        rgba(0,0,0,.62) 100%),
-      var(--hero-img) center 50% / cover no-repeat;
-  }
+.hero .hero-text{
+  position: relative; z-index: 2;
+  max-width: 1100px; margin: 0 auto;
+  padding: clamp(24px, 7vh, 84px) 1.5rem clamp(16px, 5vh, 64px);
 }
+
+/* kdyby na stránce zároveň zůstal starý <div class="hero-art"><img...>,
+   radši ho úplně skryjeme, ať se nic netluče */
+.hero-art, .hero-art img { display: none !important; }
+
+/* prevence horizontálního scrollu */
+html, body { overflow-x: hidden; }
 
 
 /* Doporučené: trochu typografie pro nadpis/odstavec na hero */
