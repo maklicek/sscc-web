@@ -104,8 +104,8 @@ a:hover { color: var(--gold); text-shadow: 0 0 8px rgba(255,226,120,.45); }
 .page{
   width: 100%;
   max-width: 1200px;
-  margin: 2rem auto 0;
-  padding: 0 1.25rem 3rem;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem 3rem;
   flex: 1 0 auto; /* sticky patička vždy dolů */
 }
 
