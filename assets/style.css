@@ -207,6 +207,35 @@ main, .projects-page, .page-education, .page-edu, .page-consortium, .page-ideas 
 /* --- ÚVODNÍ STRÁNKA: hero výš, „co tu najdete“ níž --- */
 .hero, .section-hero-home { margin-top: 1.25rem !important; }
 .home-links, .section-contents.home-links { margin-top: 2.5rem !important; }
+/* Jednoduché odsazení hrdiny na domovské */
+.section-hero-home { margin-top: 1.25rem !important; }
+
+/* FULL-BLEED BACKGROUND varianta */
+.hero--bg{
+  position: relative;           /* ukotví ::before do sekce */
+  min-height: clamp(420px, 60vh, 760px);
+  margin: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden;             /* odstřihne přesahy pozadí */
+}
+.hero--bg::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%),
+    var(--hero-img) center 70% / cover no-repeat;
+  z-index: 0;
+}
+.hero--bg > *{
+  position: relative;
+  z-index: 1;                   /* text nad obrázkem */
+}
+
+/* Doporučené: trochu typografie pro nadpis/odstavec na hero */
+.hero-text { max-width: 60ch; padding: 2rem 1.5rem; }
+.hero-text h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.15; margin: 0 0 .75rem; }
+.hero-text p  { font-size: clamp(1rem, 1.6vw, 1.15rem); margin: 0; opacity: .92; }
 
 /* === Full-bleed slunce na titulce (varianta s IMG) ===
    Stačí dát úvodní obrázek do .hero-art img (na indexu) */
