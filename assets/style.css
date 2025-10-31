@@ -72,6 +72,27 @@ a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
   background:radial-gradient(ellipse at 60% 60%, rgba(0,0,0,.1) 0%, rgba(0,0,0,.65) 90%);
   pointer-events:none;
 }
+/* HERO rozložení – rozcestník vlevo, text vpravo */
+.home-links{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;  /* víc místa pro text vpravo */
+  align-items:center;
+  gap:2rem;
+}
+
+/* Menší, klidnější nadpis + kratší svislé mezery */
+.hero-inner{ padding: clamp(18px, 5vh, 48px) 1.25rem clamp(10px, 3vh, 18px); }
+.hero-copy h1{
+  font-size: clamp(1.8rem, 1.1rem + 2.2vw, 2.6rem);
+  line-height:1.15;
+  letter-spacing:.2px;
+  font-weight:800;
+  margin: 0 0 .6rem;
+}
+.hero-copy p{ margin:0 0 .75rem; }
+
+/* aby nebyl obří tmavý „polštář“ nad patičkou */
+main.page{ padding-top: 1.25rem; padding-bottom: 1.5rem; }
 
 }
 .hero-inner{
