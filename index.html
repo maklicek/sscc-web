@@ -1,122 +1,113 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SolarSpace Carbon Cycle (SSCC)</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <head>
+    <!-- 🎨 STYL: jediný externí CSS soubor -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SolarSpace Carbon Cycle (SSCC)</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
 
-</head>
-<body>
-  <!-- hned za <body> -->
-<a class="skip-link" href="#main">Přeskočit na obsah</a>
+  <body>
+    <!-- 🧩 HLAVIČKA WEBU (všude stejná) -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+          <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
+          <span class="brand-block">
+            <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
+            <span class="brand-tagline">Initiative</span>
+          </span>
+        </a>
 
-  <!-- ===== Header ===== -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
-        <span class="brand-block">
-          <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
-          <span class="brand-tagline">Initiative</span>
-        </span>
-      </a>
+        <nav class="site-nav" aria-label="Hlavní navigace">
+          <ul>
+            <li><a href="projekty.html">Projekty</a></li>
+            <li><a href="edukace.html">Edukace</a></li>
+            <li><a href="napady.html">Nápady</a></li>
+            <li><a href="konsorcium.html">Konsorcium</a></li>
+            <li><a href="spoluprace.html">Spolupráce</a></li>
+          </ul>
+        </nav>
 
-      <nav class="site-nav" aria-label="Hlavní navigace">
-        <ul>
-          <li><a href="projekty.html">Projekty</a></li>
-          <li><a href="edukace.html">Edukace</a></li>
-          <li><a href="napady.html">Nápady</a></li>
-          <li><a href="konsorcium.html">Konsorcium</a></li>
-          <li><a href="spoluprace.html">Spolupráce</a></li>
-        </ul>
-      </nav>
-
-      <div class="lang-switch">
-        <a class="lang active" href="#" aria-current="page">CS</a> /
-        <a class="lang" href="#">EN</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== Hero (full-bleed background) ===== -->
-  <section class="hero-wrap" role="banner">
-    <div class="hero-inner">
-      <div class="home-links">
-        <!-- Levý rozcestník -->
-        <div class="tiles-row" aria-label="Rozcestník">
-          <a class="card-link" href="projekty.html">
-            <h3>Projekty</h3>
-            <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
-          </a>
-          <a class="card-link" href="edukace.html">
-            <h3>Edukace</h3>
-            <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
-          </a>
-          <a class="card-link" href="napady.html">
-            <h3>Nápady</h3>
-            <p>Návrhy a myšlenky vhodné pro experiment či simulaci.</p>
-          </a>
-          <a class="card-link" href="konsorcium.html">
-            <h3>Konsorcium</h3>
-            <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
-          </a>
+        <div class="lang-switch" aria-label="Výběr jazyka">
+          <a class="lang active" href="#" aria-current="page">CS</a>
+          <span class="sep">/</span>
+          <a class="lang" href="#">EN</a>
         </div>
+      </div>
+    </header>
 
-        <!-- Pravý hero text + CTA -->
-        <div class="hero-copy">
-          <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-          <p>Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-            Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
-          <div class="cta-row">
-            <a href="projekty.html" class="btn-hero">Projekty</a>
-            <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+    <!-- 🧩 TITULNÍ HERO (full-bleed) -->
+    <section class="hero-wrap" style="--hero-img: url('img/hero-space.jpg')">
+      <div class="hero-inner">
+        <div class="home-grid">
+          <!-- Levý rozcestník -->
+          <div class="tiles-column" aria-label="Rozcestník">
+            <a class="card-link" href="projekty.html">
+              <h3>Projekty</h3>
+              <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
+            </a>
+            <a class="card-link" href="edukace.html">
+              <h3>Edukace</h3>
+              <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
+            </a>
+            <a class="card-link" href="napady.html">
+              <h3>Nápady</h3>
+              <p>Návrhy a myšlenky vhodné pro experiment či simulaci.</p>
+            </a>
+            <a class="card-link" href="konsorcium.html">
+              <h3>Konsorcium</h3>
+              <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
+            </a>
+          </div>
+
+          <!-- Pravý headline + CTA -->
+          <div class="hero-copy">
+            <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+            <p>Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+              Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
+            <div class="cta-row">
+              <a href="projekty.html" class="btn-hero">Projekty</a>
+              <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
- 
-  <!-- ===== Page content (placeholder) ===== -->
-  <main class="page">
-    <h1>Nadpis stránky</h1>
-    <p class="lead">Úvodní odstavec…</p>
-    <main id="main" class="page">
-  …
-</main>
+    </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+    <!-- 🧩 HLAVNÍ OBSAH STRÁNKY (placeholder) -->
+    <main class="page" role="main">
+      <h1>Nadpis stránky</h1>
+      <p class="lead">Úvodní odstavec…</p>
+    </main>
+
+    <!-- 🧩 PATIČKA (sticky, všude stejná) -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-inner">
+        <div class="footer-left">
+          © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+          Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+        </div>
+        <nav class="footer-links" aria-label="Spodní navigace">
+          <a href="projekty.html">Projekty</a> ·
+          <a href="edukace.html">Edukace</a> ·
+          <a href="napady.html">Nápady</a> ·
+          <a href="konsorcium.html">Konsorcium</a> ·
+          <a href="spoluprace.html">Spolupráce</a>
+        </nav>
       </div>
-      <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-  <!-- vložte těsně před </body> na všech stránkách -->
-<script>
-(() => {
-  const here = location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href) return;
-    const same = (href === here) || (here === 'index.html' && href === 'index.html');
-    if (same) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
-})();
-</script>
+    </footer>
 
-</body>
+    <!-- ⚙️ JS (volitelné) – před zavíracím </body> -->
+    <script>
+      // ⚙️ Příklad drobnosti: přidej class na <html>?capture=1
+      (() => {
+        const url = new URL(location.href);
+        if (url.searchParams.get('capture') === '1') {
+          document.documentElement.classList.add('capture-mode');
+        }
+      })();
+    </script>
+  </body>
 </html>
