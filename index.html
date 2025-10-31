@@ -35,90 +35,58 @@
       </div>
     </div>
   </header>
-
-<!-- ===== HERO (titulka) ===== -->
-<section class="hero hero--sun">
-  <div class="hero__grid">
-    <!-- Levý sloupec: rozcestník -->
-    <aside class="home-accordion" aria-label="Rozcestník">
-      <details open>
-        <summary>Projekty</summary>
-        <ul>
-          <li><a href="projekty.html">Všechny projekty</a></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Edukace</summary>
-        <ul>
-          <li><a href="edukace.html">Texty, diagramy, přehledy</a></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Nápady</summary>
-        <ul>
-          <li><a href="napady.html">Náměty pro experiment či simulaci</a></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Konsorcium</summary>
-        <ul>
-          <li><a href="konsorcium.html">Instituce a týmy</a></li>
-        </ul>
-      </details>
-      <details>
-        <summary>Spolupráce</summary>
-        <ul>
-          <li><a href="spoluprace.html">Jak se zapojit</a></li>
-        </ul>
-      </details>
+<!-- HERO (2 sloupce: vlevo rozcestník, vpravo text) -->
+<section class="home">
+  <div class="home__grid">
+    <!-- VLEVO: rozcestník (ponechte váš obsah/akordeon uvnitř) -->
+    <aside class="toc">
+      <!-- tady nechávám vaši stávající strukturu (Projekty/Edukace/…) -->
+      <!-- ... váš akordeon ... -->
     </aside>
 
-    <!-- Pravý sloupec: titulek + text + CTA -->
-    <div class="hero__copy">
-      <h1 class="hero__title">
-        Solární energie mimo atmosféru.<br>
-        Uhlíkový dopad pod nulou.
-      </h1>
-      <p class="hero__lead">
-        Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu
-        amoniaku a cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+    <!-- VPRAVO: hero text -->
+    <div class="hero-copy">
+      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+      <p>
+        Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+        Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
       </p>
-      <div class="hero__cta">
-        <a class="btn btn--gold" href="projekty.html">Projekty</a>
-        <a class="btn btn--ghost" href="spoluprace.html">Spolupráce</a>
+      <div class="cta-row">
+        <a href="projekty.html" class="btn-hero">Projekty</a>
+        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
       </div>
     </div>
   </div>
 </section>
-<!-- ===== /HERO ===== -->
-<!-- ===== TŘI KROKY: Smog → Přeměna → Čisté ovzduší ===== -->
-<section class="triptych">
-  <div class="triptych__row">
 
-    <div class="step">
-      <div class="step__icon">🌫️</div>
-      <h3 class="step__title">Smog ve městě</h3>
-      <p class="step__text">Znečištěné ovzduší a emise CO₂.</p>
+<!-- JEDEN přehledný pruh (smog → přeměna → čisté ovzduší) -->
+<section class="flow">
+  <div class="flow__row">
+    <div class="flow__card">
+      <div class="flow__icon">🌫️</div>
+      <h3>Smog ve městě</h3>
+      <p>Znečištěné ovzduší a emise CO₂.</p>
     </div>
 
-    <div class="step step--arrow" aria-hidden="true">→</div>
+    <div class="flow__arrow">→</div>
 
-    <div class="step">
-      <div class="step__icon">⚗️</div>
-      <h3 class="step__title">Přeměna CO₂ → NH₃</h3>
-      <p class="step__text">Využití zachyceného CO₂ k výrobě amoniaku.</p>
+    <div class="flow__card">
+      <div class="flow__icon">⚗️</div>
+      <h3>Přeměna CO₂ → NH₃</h3>
+      <p>Využití zachyceného CO₂ k výrobě amoniaku.</p>
     </div>
 
-    <div class="step step--arrow" aria-hidden="true">→</div>
+    <div class="flow__arrow">→</div>
 
-    <div class="step">
-      <div class="step__icon">🌳</div>
-      <h3 class="step__title">Čisté ovzduší</h3>
-      <p class="step__text">Nižší emise a zdravější prostředí.</p>
+    <div class="flow__card">
+      <div class="flow__icon">🌳</div>
+      <h3>Čisté ovzduší</h3>
+      <p>Nižší emise a zdravější prostředí.</p>
     </div>
-
   </div>
 </section>
+
+
 <!-- ===== /TŘI KROKY ===== -->
 
 <!-- Hlavní obsah na titulce nechceme – skryjeme (ponecháváme kvůli struktuře) -->
