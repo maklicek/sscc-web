@@ -4,16 +4,152 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SolarSpace Carbon Cycle (SSCC)</title>
-  <link rel="stylesheet" href="assets/style.css" />
+
+  <!-- ====== VLOŽENÉ STYLY (můžeš kdykoli přesunout do assets/style.css) ====== -->
+  <style>
+    :root{
+      --bg:#0c1219;
+      --panel:#111823;
+      --panel-2:#0e141d;
+      --text:#e9eef5;
+      --muted:#aeb6c3;
+      --accent:#ffd75a;
+      --accent-soft:#ffeaa0;
+      --brand-outline:#f0cc54;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--accent)}
+    a:hover{opacity:.9}
+
+    /* ===== HEADER ===== */
+    .site-header{
+      position:sticky; top:0; z-index:100;
+      background:linear-gradient(180deg,#0e141d 0%, #0c1219 100%);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      backdrop-filter: blur(6px);
+    }
+    .header-inner{
+      max-width:1200px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; gap:18px;
+    }
+    .brand-combo{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .main-logo{height:44px; width:auto; border-radius:10px; border:1px solid rgba(255,215,90,.35); background:#141b26; padding:6px}
+    .brand-block{display:flex; flex-direction:column}
+    .brand-name{font-weight:700}
+    .brand-tagline{font-size:.9rem; color:var(--muted)}
+
+    .site-nav{margin-left:auto}
+    .site-nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    .site-nav a{color:var(--text); text-decoration:none}
+    .site-nav a:hover{color:var(--accent)}
+
+    .lang-switch{margin-left:16px; color:var(--muted)}
+    .lang-switch .lang{text-decoration:none; color:var(--muted)}
+    .lang-switch .active{color:#222; background:var(--accent); border-radius:6px; padding:2px 6px}
+
+    /* ===== HERO (grid: TOC vlevo + text vpravo) ===== */
+    .home{position:relative}
+    .hero-sun{
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(10,14,20,.85) 0%, rgba(10,14,20,.88) 60%, rgba(10,14,20,.95) 100%),
+        url("assets/img/hero-sun.jpg") center 20% / cover no-repeat fixed;
+      overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .home__grid{
+      max-width:1200px; margin:0 auto; padding:36px 16px 0 16px;
+      display:grid; grid-template-columns: 360px 1fr; gap:32px;
+    }
+    .hero-sun__inner{position:relative; z-index:2; padding-bottom:10px}
+
+    .toc .accordion details{
+      background:linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;
+      margin-bottom:16px;
+      overflow:hidden;
+    }
+    .toc summary{
+      cursor:pointer; padding:14px 16px; list-style:none; user-select:none;
+      font-weight:700;
+    }
+    .toc details[open] summary{border-bottom:1px solid rgba(255,255,255,.06)}
+    .toc ul{margin:0; padding:10px 16px; list-style:disc; color:var(--muted)}
+    .toc a{color:var(--text); text-decoration:none}
+    .toc a:hover{color:var(--accent)}
+
+    /* NADPIS – menší a měkčí */
+    .hero-title{
+      font-size:clamp(26px, 4.5vw, 44px);
+      line-height:1.15;
+      margin:4px 0 14px 0;
+      font-weight:800;
+      color:#f7f1dc;                 /* teplý off-white, ne „křičící“ */
+      text-shadow:0 1px 0 rgba(0,0,0,.4);
+    }
+    .hero-tag{
+      display:inline-block;
+      font-size:clamp(16px, 2.5vw, 22px);
+      color:#ffeab0;
+      margin:0 0 8px 0;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .lead{color:var(--text); font-size:1.05rem; margin:12px 0 8px 0}
+    .hero-abstract{color:var(--muted); margin:8px 0 16px 0}
+    .cta-row{display:flex; gap:12px; margin:14px 0 6px 0}
+    .btn-hero{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 16px; border-radius:28px; text-decoration:none; font-weight:700;
+      border:1px solid rgba(255,255,255,.12); background:#17202b; color:var(--text);
+    }
+    .btn-hero.btn-primary{
+      background:var(--accent); color:#1a1a1a; border-color:#f7d259;
+    }
+    .btn-hero:hover{transform:translateY(-1px); filter:brightness(1.03)}
+
+    /* ===== OSTRAVA SILUETA ===== */
+    .ostrava-silhouette{position:relative; z-index:1; margin-top:12px}
+    .ostrava-silhouette svg{display:block; width:100%; height:240px}
+    .ostrava-silhouette .edge{
+      stroke: rgba(255, 215, 90, .16);
+      stroke-width: 2;
+      vector-effect: non-scaling-stroke;
+    }
+    @keyframes glowPulse{0%,100%{opacity:.22} 50%{opacity:.45}}
+    .ostrava-silhouette .sunGlow{animation: glowPulse 6s ease-in-out infinite}
+
+    /* ===== FOOTER ===== */
+    .site-footer{border-top:1px solid rgba(255,255,255,.06); padding:14px 0; margin-top:6px}
+    .footer-inner{max-width:1200px; margin:0 auto; padding:0 16px; display:flex; gap:16px; flex-wrap:wrap; align-items:center; color:var(--muted)}
+    .footer-links a{color:var(--muted); text-decoration:none}
+    .footer-links a:hover{color:var(--accent)}
+
+    /* RWD */
+    @media (max-width:960px){
+      .home__grid{grid-template-columns:1fr; gap:22px}
+      .toc{order:2}
+      .hero-sun__inner{order:1}
+    }
+  </style>
 </head>
 <body>
 
   <!-- ===== HLAVIČKA ===== -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-combo" href="index.html">
-   <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-
+      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo" />
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
@@ -31,110 +167,170 @@
       </nav>
 
       <div class="lang-switch">
-        <a class="lang active" href="#" aria-current="page">CS</a> /
+        <a class="lang active" href="#" aria-current="true">CS</a> /
         <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
- 
-<section class="hero-sun" role="banner" aria-label="Pilotní projekt SSCC">
-  <div class="hero-sun__inner">
-    <div class="hero-sun__grid">
 
-      <!-- VLEVO: rozcestník -->
-      <aside class="toc" aria-label="Rozcestník">
-        <a class="toc-card" href="projekty.html">
-          <h3>Projekty</h3>
-          <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
-        </a>
-        <a class="toc-card" href="edukace.html">
-          <h3>Edukace</h3>
-          <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
-        </a>
-        <a class="toc-card" href="napady.html">
-          <h3>Nápady</h3>
-          <p>Návrhy vhodné pro experiment či simulaci.</p>
-        </a>
-        <a class="toc-card" href="konsorcium.html">
-          <h3>Konsorcium</h3>
-          <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
-        </a>
-        <a class="toc-card" href="spoluprace.html">
-          <h3>Spolupráce</h3>
-          <p>Hledáme partnery z průmyslu, výzkumu i municipality.</p>
-        </a>
+  <!-- ===== HERO: rozcestník + text ===== -->
+  <section class="home hero-sun">
+    <div class="home__grid">
+
+      <!-- VLEVO: rozcestník (akordeon) -->
+      <aside class="toc">
+        <div class="accordion" aria-label="Rychlá navigace">
+          <details open>
+            <summary>Projekty</summary>
+            <ul>
+              <li><a href="projekty.html">Všechny projekty</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary>Edukace</summary>
+            <ul>
+              <li><a href="edukace.html">Úvod</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary>Nápady</summary>
+            <ul>
+              <li><a href="napady.html">Koncepty a návrhy</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary>Konsorcium</summary>
+            <ul>
+              <li><a href="konsorcium.html">Členové a partneři</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary>Spolupráce</summary>
+            <ul>
+              <li><a href="spoluprace.html">Zapojení & kontakty</a></li>
+            </ul>
+          </details>
+        </div>
       </aside>
 
       <!-- VPRAVO: text -->
-      <div class="hero-copy">
-        <h1>Pilotní projekt SSCC – z emisí na energii</h1>
+      <div class="hero-sun__inner">
+        <div class="hero-tag">Pilotní průmyslový projekt</div>
+        <h1 class="hero-title">SSCC: ze škodlivého na užitečné</h1>
 
+        <!-- Úvodní delší text – můžeš libovolně měnit -->
         <p class="lead">
-          <strong>Pilotní projekt SolarSpace Carbon Cycle (SSCC)</strong> řeší klíčové výzvy dekarbonizace těžkého průmyslu v České republice, zejména v regionu Ostravska.
-          Cílem je vytvořit decentralizovaný systém pro výrobu zeleného amoniaku (NH₃), který slouží jako nosič uhlíku a energie.
-          V souladu s EU Green Deal a Vodíkovou strategií ČR 2024 projekt propojuje obnovitelné zdroje energie (solární PV + bateriové úložiště)
-          s technologií zachytávání CO₂ (CCUS) a elektrolýzou.
-          <br><br>
-          SSCC přetváří zachycené emise CO₂ z oceláren, cementáren nebo tepláren na užitečný produkt – amoniak, který lze dále využít
-          pro vytápění, výrobu elektřiny nebo hnojiva. Tento proces umožňuje zachytit více než 90 % uhlíku a uzavřít jeho cyklus v místě vzniku:
-          <strong>emise → přeměna → využití → čistší ovzduší</strong>.
-          <br><br>
-          Pro Ostravsko to znamená čistší vzduch, udržitelná pracovní místa, nižší náklady na emise a novou perspektivu pro těžký průmysl.
-          SSCC ukazuje, že dekarbonizace nemusí znamenat útlum – ale obnovu průmyslu na nových principech: z kouře na energii.
+          Projekt SSCC reaguje na existenční tlak emisních povolenek a rostoucí ceny energií,
+          které ohrožují těžký průmysl v ČR – zejména ostravské hutě. Nabízíme pragmatickou
+          cestu: <strong>zachytit CO₂ z komínů</strong>, spojit jej s <strong>vodíkem vyrobeným
+          z obnovitelných zdrojů</strong> a převést na <strong>amoniak (NH₃)</strong>.
+          Ten může sloužit jako palivo pro vysokoteplotní procesy, jako zásobník energie
+          nebo surovina pro hnojiva.
         </p>
-
-        <p class="motto"><em>Nezavíráme fabriky – měníme způsob, jak dýchají.</em></p>
-
+        <p class="hero-abstract">
+          Systém SSCC integruje fotovoltaiku (s akumulací), technologii zachytávání CO₂ (CCUS)
+          a elektrolýzu tak, aby <strong>lokálně snižoval emise o více než 90 %</strong>
+          a zároveň poskytoval průmyslu <em>použitelný produkt</em>. Pro region to znamená
+          čistější vzduch, zachování kvalifikovaných pracovních míst a menší závislost na
+          dovozu „špinavé“ oceli ze zahraničí. Pro podniky to jsou <strong>nižší provozní
+          náklady na emise</strong> a technická cesta, jak zvládnout Green Deal bez útlumu výroby.
+        </p>
         <div class="cta-row">
-          <a href="projekty.html" class="btn-hero">Projekty</a>
-          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+          <a href="projekty.html" class="btn-hero btn-primary">Projekty</a>
+          <a href="spoluprace.html" class="btn-hero">Spolupráce</a>
+        </div>
+
+        <!-- Silueta Ostravy se „svitem energie“ -->
+        <div class="ostrava-silhouette" aria-hidden="true">
+          <svg viewBox="0 0 1600 240" preserveAspectRatio="none" role="img" aria-label="Silueta Ostravy se sluneční energií">
+            <defs>
+              <linearGradient id="bgGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%"  stop-color="#0b1016"/>
+                <stop offset="100%" stop-color="#121821"/>
+              </linearGradient>
+              <radialGradient id="sunGrad" cx="50%" cy="50%" r="42%">
+                <stop offset="0%"  stop-color="#ffeaa0" stop-opacity=".95"/>
+                <stop offset="40%" stop-color="#ffd75a" stop-opacity=".45"/>
+                <stop offset="75%" stop-color="#ffd75a" stop-opacity=".10"/>
+                <stop offset="100%" stop-color="#ffd75a" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="smoke" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%"  stop-color="#bfc5cf" stop-opacity=".28"/>
+                <stop offset="100%" stop-color="#bfc5cf" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6"/>
+              </filter>
+            </defs>
+
+            <rect x="0" y="0" width="1600" height="240" fill="url(#bgGrad)"/>
+
+            <!-- SLUNCE / ENERGIE (puls) -->
+            <g class="sunGlow" opacity=".35">
+              <ellipse cx="800" cy="120" rx="340" ry="120" fill="url(#sunGrad)"/>
+              <ellipse cx="800" cy="120" rx="260" ry="90"  fill="url(#sunGrad)"/>
+              <ellipse cx="800" cy="120" rx="180" ry="60"  fill="url(#sunGrad)"/>
+            </g>
+
+            <!-- lehký dým nalevo (minulost) -->
+            <g filter="url(#soft)" opacity=".20">
+              <ellipse cx="210" cy="70"  rx="85" ry="30" fill="url(#smoke)"/>
+              <ellipse cx="300" cy="62"  rx="70" ry="26" fill="url(#smoke)"/>
+              <ellipse cx="140" cy="64"  rx="50" ry="22" fill="url(#smoke)"/>
+            </g>
+
+            <!-- HORIZONT / SILUETA -->
+            <g>
+              <rect x="0" y="190" width="1600" height="50" fill="#0b1016"/>
+              <g fill="#121821">
+                <rect x="100"  y="120" width="38" height="70" />
+                <rect x="160"  y="100" width="42" height="110"/>
+                <rect x="220"  y="115" width="32" height="90" />
+                <rect x="300"  y="105" width="70" height="115"/>
+                <rect x="390"  y="130" width="48" height="90" />
+                <rect x="460"  y="95"  width="80" height="125"/>
+                <rect x="560"  y="135" width="40" height="85" />
+                <rect x="610"  y="110" width="58" height="110"/>
+                <rect x="680"  y="125" width="48" height="95" />
+                <rect x="740"  y="100" width="64" height="120"/>
+                <rect x="820"  y="130" width="46" height="90" />
+                <rect x="880"  y="110" width="58" height="110"/>
+                <rect x="950"  y="95"  width="74" height="125"/>
+                <rect x="1040" y="128" width="44" height="92" />
+                <rect x="1100" y="115" width="56" height="105"/>
+                <!-- Bolt Tower náznak -->
+                <rect x="1185" y="85"  width="18" height="135"/>
+                <rect x="1170" y="115" width="48" height="10"/>
+                <rect x="1166" y="105" width="56" height="6"/>
+                <!-- vpravo „čistší“ panorama -->
+                <rect x="1250" y="135" width="44" height="88"/>
+                <rect x="1300" y="120" width="58" height="100"/>
+                <rect x="1370" y="130" width="46" height="92"/>
+                <rect x="1430" y="142" width="36" height="80"/>
+              </g>
+
+              <!-- jemné zlaté hrany -->
+              <g class="edge">
+                <line x1="138" y1="120" x2="138" y2="190"/>
+                <line x1="181" y1="100" x2="181" y2="210"/>
+                <line x1="236" y1="115" x2="236" y2="205"/>
+                <line x1="370" y1="105" x2="370" y2="220"/>
+                <line x1="432" y1="130" x2="432" y2="220"/>
+                <line x1="520" y1="95"  x2="520" y2="220"/>
+                <line x1="598" y1="110" x2="598" y2="220"/>
+                <line x1="738" y1="100" x2="738" y2="220"/>
+                <line x1="878" y1="110" x2="878" y2="220"/>
+                <line x1="1014" y1="128" x2="1014" y2="220"/>
+                <line x1="1176" y1="85"  x2="1176" y2="220"/>
+                <line x1="1317" y1="120" x2="1317" y2="220"/>
+                <line x1="1393" y1="130" x2="1393" y2="220"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
-
     </div>
-  </div>
-
-  <!-- silueta Ostravy dole -->
-  <div class="ostrava-silhouette" aria-hidden="true">
-    <svg viewBox="0 0 1600 300" preserveAspectRatio="none">
-      <!-- základní pás -->
-      <rect x="0" y="250" width="1600" height="60" fill="#0b1016"/>
-      <!-- stylizovaná panoramata (továrny, haldy, věže) -->
-      <g fill="#141a22">
-        <rect x="80"  y="190" width="40"  height="60"/>
-        <rect x="130" y="160" width="36"  height="90"/>
-        <rect x="180" y="175" width="28"  height="75"/>
-        <rect x="230" y="150" width="52"  height="100"/>
-        <rect x="300" y="165" width="42"  height="85"/>
-        <rect x="360" y="140" width="70"  height="110"/>
-        <rect x="460" y="180" width="34"  height="70"/>
-        <rect x="510" y="155" width="48"  height="95"/>
-        <rect x="580" y="170" width="40"  height="80"/>
-        <rect x="640" y="145" width="64"  height="105"/>
-        <rect x="720" y="175" width="36"  height="75"/>
-        <rect x="770" y="160" width="46"  height="90"/>
-        <rect x="830" y="150" width="58"  height="100"/>
-        <rect x="910" y="170" width="40"  height="80"/>
-        <rect x="960" y="140" width="68"  height="110"/>
-        <rect x="1040" y="165" width="42" height="85"/>
-        <rect x="1100" y="175" width="36" height="75"/>
-        <rect x="1150" y="160" width="46" height="90"/>
-        <rect x="1210" y="180" width="34" height="70"/>
-        <rect x="1260" y="150" width="58" height="100"/>
-        <rect x="1330" y="170" width="40" height="80"/>
-        <rect x="1380" y="160" width="46" height="90"/>
-        <rect x="1440" y="175" width="36" height="75"/>
-      </g>
-      <!-- „kouřové“ oblaky jemně (minimální, decentní) -->
-      <g opacity=".14">
-        <ellipse cx="210" cy="130" rx="80" ry="28" fill="#bfc5cf"/>
-        <ellipse cx="360" cy="120" rx="95" ry="32" fill="#bfc5cf"/>
-        <ellipse cx="980" cy="110" rx="110" ry="34" fill="#bfc5cf"/>
-      </g>
-    </svg>
-  </div>
-</section>
-
+  </section>
 
   <!-- ===== PATIČKA ===== -->
   <footer class="site-footer">
@@ -152,6 +348,5 @@
       </nav>
     </div>
   </footer>
-
 </body>
 </html>
