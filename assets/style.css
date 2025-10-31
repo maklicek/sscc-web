@@ -141,3 +141,9 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
 .footer-links{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
 .footer-links a{color:#c8cedd}
 .footer-links a:hover{color:var(--gold); text-decoration:underline}
+/* výrazný focus pro klávesnici */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
