@@ -2,14 +2,12 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spolupráce | SSCC</title>
-<h1>Spolupráce</h1>
-<p class="lead">Informace pro partnery, výzkumné týmy a společnosti zapojené do projektu.</p>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Spolupráce | SSCC</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html">
@@ -19,61 +17,69 @@
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
-
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
           <li><a href="napady.html">Nápady</a></li>
           <li><a href="konsorcium.html">Konsorcium</a></li>
-          <li><a href="spoluprace.html" class="active" aria-current="page">Spolupráce</a></li>
+          <li><a href="spoluprace.html" class="active">Spolupráce</a></li>
         </ul>
       </nav>
-
       <div class="lang-switch">
-        <a class="lang active" href="#">CS</a> /
-        <a class="lang" href="#">EN</a>
+        <a class="lang active" href="#">CS</a> / <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
 
+  <!-- OBSAH -->
   <main class="page">
-    <h1>Spolupráce</h1>
-    <p class="lead">Zajímá vás zapojení do projektu SSCC? Tato sekce popisuje možnosti participace a sdílení dat.</p>
+    <h1>Spolupráce & zapojení do SSCC</h1>
+    <p class="lead">Hledáme výzkumné týmy, technologické partnery, studenty i investory.</p>
 
-    <section>
-      <h2>Možnosti zapojení</h2>
-      <ul>
-        <li>Společné výzkumné projekty a publikace</li>
-        <li>Přístup k experimentálním datům a simulacím</li>
-        <li>Studentské stáže a výměnné pobyty</li>
-      </ul>
+    <section class="coop-grid">
+      <article class="coop-card">
+        <h3>🔬 Vědecký výzkum</h3>
+        <p>Modelování, simulace, laboratorní testy (CO₂/H₂/NH₃).</p>
+        <p class="note">Pro: univerzity, doktorandy, postdoky.</p>
+      </article>
+      <article class="coop-card">
+        <h3>🏭 Průmysl a technologie</h3>
+        <p>Výrobci komponent, integrátoři, testy v reálném provozu.</p>
+        <p class="note">Cíl: prototypy s vlastní stopou.</p>
+      </article>
+      <article class="coop-card">
+        <h3>🎓 Studenti</h3>
+        <p>Stáže, semestrální/diplomové práce na reálných úkolech.</p>
+      </article>
+      <article class="coop-card">
+        <h3>💰 Investoři</h3>
+        <p>Pilotní jednotky s jasnou ekonomikou a návratností.</p>
+        <p class="note">Možnost NDA a přístupu k abstraktům.</p>
+      </article>
     </section>
-    <main id="main" class="page">
-  …
-</main>
 
+    <div class="section-cta">
+      <h2>Chcete se zapojit?</h2>
+      <p>Napište, do které oblasti spadáte a jaký typ spolupráce hledáte.</p>
+      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Požádat o spolupráci / Request abstract</a></p>
+    </div>
+  </main>
+
+  <!-- PATIČKA -->
   <footer class="site-footer">
     <div class="footer-inner">
-      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Powered by clean energy ✶
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
     </div>
   </footer>
-  <!-- vložte těsně před </body> na všech stránkách -->
-<script>
-(() => {
-  const here = location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href) return;
-    const same = (href === here) || (here === 'index.html' && href === 'index.html');
-    if (same) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
-})();
-</script>
-
 </body>
 </html>
