@@ -12,7 +12,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo" />
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
@@ -30,191 +30,117 @@
       </nav>
 
       <div class="lang-switch">
-        <a class="lang active" href="#">CS</a> /
+        <a class="lang active" href="#" aria-current="page">CS</a> /
         <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
-<!-- HERO (2 sloupce: vlevo rozcestník, vpravo text) -->
-<section class="home">
-  <div class="home__grid">
-    <!-- VLEVO: rozcestník (ponechte váš obsah/akordeon uvnitř) -->
-    <aside class="toc">
-      <!-- tady nechávám vaši stávající strukturu (Projekty/Edukace/…) -->
-      <!-- ... váš akordeon ... -->
-    </aside>
 
-    <!-- VPRAVO: hero text -->
-    <div class="hero-copy">
-      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-      <p>
-        Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-        Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
-      </p>
-      <div class="cta-row">
-        <a href="projekty.html" class="btn-hero">Projekty</a>
-        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+  <!-- ===== HERO: rozcestník vlevo + claim vpravo ===== -->
+  <section class="home">
+    <div class="home__grid">
+
+      <!-- VLEVO: rozcestník (akordeon) -->
+      <aside class="toc">
+        <div class="accordion">
+          <details open>
+            <summary>Projekty</summary>
+            <ul>
+              <li><a href="projekty.html">Všechny projekty</a></li>
+            </ul>
+          </details>
+          <details>
+            <summary>Edukace</summary>
+          </details>
+          <details>
+            <summary>Nápady</summary>
+          </details>
+          <details>
+            <summary>Konsorcium</summary>
+          </details>
+          <details>
+            <summary>Spolupráce</summary>
+          </details>
+        </div>
+      </aside>
+
+      <!-- VPRAVO: hero text -->
+      <div class="hero-copy">
+        <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+        <p>
+          Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+          Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+        </p>
+        <div class="cta-row">
+          <a href="projekty.html" class="btn-hero">Projekty</a>
+          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+        </div>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- JEDEN přehledný pruh (smog → přeměna → čisté ovzduší) -->
-<section class="flow">
-  <div class="flow__row">
-    <div class="flow__card">
-      <div class="flow__icon">🌫️</div>
-      <h3>Smog ve městě</h3>
-      <p>Znečištěné ovzduší a emise CO₂.</p>
-    </div>
+  <!-- (Volitelně) zachováváme prvek main kvůli struktuře, ale je skrytý -->
+  <main class="page" aria-hidden="true"></main>
 
-    <div class="flow__arrow">→</div>
+  <!-- ===== PRUH: 3 KROKY (Smog → Přeměna → Čisté ovzduší) ===== -->
+  <section class="process-strip" aria-label="Jak to funguje">
+    <div class="process-inner">
 
-    <div class="flow__card">
-      <div class="flow__icon">⚗️</div>
-      <h3>Přeměna CO₂ → NH₃</h3>
-      <p>Využití zachyceného CO₂ k výrobě amoniaku.</p>
-    </div>
-
-    <div class="flow__arrow">→</div>
-
-    <div class="flow__card">
-      <div class="flow__icon">🌳</div>
-      <h3>Čisté ovzduší</h3>
-      <p>Nižší emise a zdravější prostředí.</p>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== /TŘI KROKY ===== -->
-
-<section class="process-strip" ...> ... </section>
-<section class="process-strip" ...> ... </section>
-<!-- ===== HLAVNÍ OBSAH – TITULKA ===== -->
-
-<!-- Hlavní obsah na titulce nechceme – skrytý, jen kvůli struktuře -->
-<main class="page" aria-hidden="true"></main>
-
-<!-- ===== HERO SEKCE ===== -->
-<section class="home">
-  <div class="home__grid">
-
-    <!-- VLEVO: rozcestník -->
-    <aside class="toc">
-      <div class="accordion">
-        <details open>
-          <summary>Projekty</summary>
-          <ul>
-            <li><a href="projekty.html">Všechny projekty</a></li>
-          </ul>
-        </details>
-        <details>
-          <summary>Edukace</summary>
-        </details>
-        <details>
-          <summary>Nápady</summary>
-        </details>
-        <details>
-          <summary>Konsorcium</summary>
-        </details>
-        <details>
-          <summary>Spolupráce</summary>
-        </details>
+      <div class="step">
+        <div class="icon" aria-hidden="true">
+          <!-- Smog ve městě -->
+          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
+            <rect x="10" y="36" width="6" height="18" rx="2" fill="#6f7580"/>
+            <rect x="24" y="32" width="8" height="22" rx="2" fill="#7b818d"/>
+            <rect x="40" y="38" width="6" height="16" rx="2" fill="#6f7580"/>
+            <ellipse cx="26" cy="24" rx="16" ry="8" fill="#8a909a" opacity=".85"/>
+            <ellipse cx="38" cy="20" rx="14" ry="7" fill="#8a909a" opacity=".7"/>
+            <ellipse cx="18" cy="20" rx="10" ry="6" fill="#8a909a" opacity=".6"/>
+          </svg>
+        </div>
+        <h3>Smog ve městě</h3>
+        <p>Znečištěné ovzduší a emise CO₂.</p>
       </div>
-    </aside>
 
-    <!-- VPRAVO: hero text -->
-    <div class="hero-copy">
-      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-      <p>
-        Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-        Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
-      </p>
-      <div class="cta-row">
-        <a href="projekty.html" class="btn-hero">Projekty</a>
-        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+      <div class="arrow" aria-hidden="true">→</div>
+
+      <div class="step">
+        <div class="icon" aria-hidden="true">
+          <!-- Přeměna CO₂ na NH₃ -->
+          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
+            <circle cx="16" cy="32" r="8" stroke="#ffd75a" stroke-width="3"/>
+            <text x="12" y="36" font-size="10" fill="#ffd75a" font-weight="700">CO₂</text>
+            <circle cx="48" cy="32" r="8" stroke="#ffd75a" stroke-width="3" opacity=".55"/>
+            <text x="43" y="36" font-size="10" fill="#ffd75a" font-weight="700" opacity=".85">NH₃</text>
+            <line x1="24" y1="32" x2="40" y2="32" stroke="#ffd75a" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Přeměna CO₂ → NH₃</h3>
+        <p>Využití zachyceného CO₂ k výrobě amoniaku.</p>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== SCÉNICKÝ BLOK: 3 KROKY ===== -->
-<section class="process-strip" aria-label="Jak to funguje">
-  <div class="process-inner">
+      <div class="arrow" aria-hidden="true">→</div>
 
-    <div class="step">
-      <div class="icon" aria-hidden="true">
-        <!-- Smog ve městě -->
-        <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-          <rect x="10" y="36" width="6" height="18" rx="2" fill="#6f7580"/>
-          <rect x="24" y="32" width="8" height="22" rx="2" fill="#7b818d"/>
-          <rect x="40" y="38" width="6" height="16" rx="2" fill="#6f7580"/>
-          <ellipse cx="26" cy="24" rx="16" ry="8" fill="#8a909a" opacity=".85"/>
-          <ellipse cx="38" cy="20" rx="14" ry="7" fill="#8a909a" opacity=".7"/>
-          <ellipse cx="18" cy="20" rx="10" ry="6" fill="#8a909a" opacity=".6"/>
-        </svg>
+      <div class="step">
+        <div class="icon" aria-hidden="true">
+          <!-- Čisté ovzduší -->
+          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
+            <rect x="8" y="42" width="48" height="10" rx="3" fill="#2e9d6c"/>
+            <circle cx="20" cy="34" r="6" fill="#36b57d"/>
+            <circle cx="32" cy="30" r="7" fill="#36b57d"/>
+            <circle cx="44" cy="34" r="6" fill="#36b57d"/>
+            <circle cx="52" cy="16" r="6" fill="#ffd75a" opacity=".9"/>
+          </svg>
+        </div>
+        <h3>Čisté ovzduší</h3>
+        <p>Nižší emise a zdravější prostředí.</p>
       </div>
-      <h3>Smog ve městě</h3>
-      <p>Znečištěné ovzduší a emise CO₂.</p>
+
     </div>
-
-    <div class="arrow" aria-hidden="true">→</div>
-
-    <div class="step">
-      <div class="icon" aria-hidden="true">
-        <!-- Přeměna CO₂ na NH₃ -->
-        <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-          <circle cx="16" cy="32" r="8" stroke="#ffd75a" stroke-width="3"/>
-          <text x="12" y="36" font-size="10" fill="#ffd75a" font-weight="700">CO₂</text>
-          <circle cx="48" cy="32" r="8" stroke="#ffd75a" stroke-width="3" opacity=".55"/>
-          <text x="43" y="36" font-size="10" fill="#ffd75a" font-weight="700" opacity=".85">NH₃</text>
-          <line x1="24" y1="32" x2="40" y2="32" stroke="#ffd75a" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <h3>Přeměna CO₂ → NH₃</h3>
-      <p>Využití zachyceného CO₂ k výrobě amoniaku.</p>
-    </div>
-
-    <div class="arrow" aria-hidden="true">→</div>
-
-    <div class="step">
-      <div class="icon" aria-hidden="true">
-        <!-- Čisté ovzduší -->
-        <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-          <rect x="8" y="42" width="48" height="10" rx="3" fill="#2e9d6c"/>
-          <circle cx="20" cy="34" r="6" fill="#36b57d"/>
-          <circle cx="32" cy="30" r="7" fill="#36b57d"/>
-          <circle cx="44" cy="34" r="6" fill="#36b57d"/>
-          <circle cx="52" cy="16" r="6" fill="#ffd75a" opacity=".9"/>
-        </svg>
-      </div>
-      <h3>Čisté ovzduší</h3>
-      <p>Nižší emise a zdravější prostředí.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== PATIČKA ===== -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-      Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
-    </div>
-    <nav class="footer-links" aria-label="Spodní navigace">
-      <a href="projekty.html">Projekty</a> ·
-      <a href="edukace.html">Edukace</a> ·
-      <a href="napady.html">Nápady</a> ·
-      <a href="konsorcium.html">Konsorcium</a> ·
-      <a href="spoluprace.html">Spolupráce</a>
-    </nav>
-  </div>
-</footer>
+  </section>
 
   <!-- ===== PATIČKA ===== -->
-
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
