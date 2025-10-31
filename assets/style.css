@@ -167,3 +167,4 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 600px){
   .card-link{ padding: 1.1rem 1.25rem; }
 }
+<link rel="stylesheet" href="assets/style.css?v=1.0.0">
