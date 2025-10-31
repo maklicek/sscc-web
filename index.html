@@ -38,48 +38,57 @@
   </header>
 
   <!-- ===== HERO: rozcestník vlevo + claim vpravo ===== -->
-  <section class="home">
-    <div class="home__grid">
+ <section class="home" role="banner" aria-label="SSCC – přehled a mise">
+  <div class="home__grid">
+    <!-- VLEVO: Rozcestník (akordeon) -->
+    <aside class="toc">
+      <nav aria-label="Rychlá navigace">
+        <details open>
+          <summary>Projekty</summary>
+          <ul>
+            <li><a href="projekty.html">Všechny projekty</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>Edukace</summary>
+          <ul><li><a href="edukace.html">Přehled</a></li></ul>
+        </details>
+        <details>
+          <summary>Nápady</summary>
+          <ul><li><a href="napady.html">Návrhy</a></li></ul>
+        </details>
+        <details>
+          <summary>Konsorcium</summary>
+          <ul><li><a href="konsorcium.html">Členové</a></li></ul>
+        </details>
+        <details>
+          <summary>Spolupráce</summary>
+          <ul><li><a href="spoluprace.html">Zapojení</a></li></ul>
+        </details>
+      </nav>
+    </aside>
 
-      <!-- VLEVO: rozcestník (akordeon) -->
-      <aside class="toc">
-        <div class="accordion">
-          <details open>
-            <summary>Projekty</summary>
-            <ul>
-              <li><a href="projekty.html">Všechny projekty</a></li>
-            </ul>
-          </details>
-          <details>
-            <summary>Edukace</summary>
-          </details>
-          <details>
-            <summary>Nápady</summary>
-          </details>
-          <details>
-            <summary>Konsorcium</summary>
-          </details>
-          <details>
-            <summary>Spolupráce</summary>
-          </details>
-        </div>
-      </aside>
+    <!-- VPRAVO: Hero text (střed v rámci svého sloupce) -->
+    <div class="hero-copy">
+      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+      <p class="lead">
+        SSCC propojuje orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a
+        cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+      </p>
 
-      <!-- VPRAVO: hero text -->
-      <div class="hero-copy">
-        <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-        <p>
-          Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-          Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
-        </p>
-        <div class="cta-row">
-          <a href="projekty.html" class="btn-hero">Projekty</a>
-          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
-        </div>
+      <p class="hero-abstract">
+        Vyvíjíme škálovatelné komponenty pro bezemisní energetiku: od příjmu energie
+        mimo atmosféru, přes efektivní přenos a ukládání (např. NH₃), až po bezpečnou
+        integraci do sítí a průmyslu. Hledáme výzkumné partnery, průmysl, studenty i investory.
+      </p>
+
+      <div class="cta-row">
+        <a href="projekty.html" class="btn-hero">Projekty</a>
+        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
       </div>
-
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- (Volitelně) zachováváme prvek main kvůli struktuře, ale je skrytý -->
   <main class="page" aria-hidden="true"></main>
