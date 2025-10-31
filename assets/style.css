@@ -168,3 +168,24 @@ a:focus-visible, button:focus-visible {
   .card-link{ padding: 1.1rem 1.25rem; }
 }
 <link rel="stylesheet" href="assets/style.css?v=1.0.0">
+/* Screenshot / capture mód – vypne těžké efekty a animace */
+.capture-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.capture-mode .hero-wrap {
+  /* jednodušší pozadí, menší zátěž GPU */
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.6)),
+    #0f151d !important;
+}
+
+.capture-mode .card-link,
+.capture-mode .site-header,
+.capture-mode .site-footer,
+.capture-mode .btn-hero {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+}
