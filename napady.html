@@ -2,14 +2,12 @@
 <html lang="cs">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Nápady | SSCC</title>
-<h1>Nápady</h1>
-<p class="lead">Informace pro partnery, výzkumné týmy a společnosti zapojené do projektu.</p>
-
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html">
@@ -19,57 +17,53 @@
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
-
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
-          <li><a href="napady.html" class="active" aria-current="page">Nápady</a></li>
+          <li><a href="napady.html" class="active">Nápady</a></li>
           <li><a href="konsorcium.html">Konsorcium</a></li>
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
       </nav>
-
       <div class="lang-switch">
-        <a class="lang active" href="#">CS</a> /
-        <a class="lang" href="#">EN</a>
+        <a class="lang active" href="#">CS</a> / <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
 
-  <main class="page">
+  <!-- OBSAH -->
+  <main class="page page-ideas">
     <h1>Nápady</h1>
-    <p class="lead">Návrhy a myšlenky, které stojí za experiment či simulaci.</p>
+    <p class="lead">Návrhy a koncepce vhodné pro experiment, simulaci nebo pilot.</p>
 
-    <section>
-      <h2>Experimentální návrhy</h2>
-      <p>Sem mohou přijít záznamy projektů, teoretické směry nebo návrhy nových systémů.</p>
+    <section class="projects-list">
+      <article class="project-card">
+        <h2 class="project-title">Centrální DAC pro malé město</h2>
+        <p class="project-desc">Škálovatelný záchyt CO₂ a syntéza NH₃ pro lokální teplo.</p>
+      </article>
+
+      <article class="project-card">
+        <h2 class="project-title">Rectenna pole</h2>
+        <p class="project-desc">Příjem energie ze satelitů; bezpečnost, účinnost, ekonomika.</p>
+      </article>
     </section>
-    <main id="main" class="page">
-  …
-</main>
+  </main>
 
+  <!-- PATIČKA -->
   <footer class="site-footer">
     <div class="footer-inner">
-      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Powered by clean energy ✶
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
     </div>
   </footer>
-  <!-- vložte těsně před </body> na všech stránkách -->
-<script>
-(() => {
-  const here = location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href) return;
-    const same = (href === here) || (here === 'index.html' && href === 'index.html');
-    if (same) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
-})();
-</script>
-
 </body>
 </html>
