@@ -155,3 +155,39 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
 .footer-links{display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
 .footer-links a{color:#c8cedd}
 .footer-links a:hover{color:var(--gold); text-decoration:underline}
+/* ===== Bottom visual strip ===== */
+.impact-strip{
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw; /* full-bleed */
+  border-top: 1px solid rgba(255,215,90,.15);
+  border-bottom: 1px solid rgba(255,215,90,.12);
+  background: #0f151d; /* bezpečná výplň */
+}
+
+.impact-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* bez vnitřních okrajů, SVG je přes celou šířku */
+}
+
+.impact-svg{
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 220px;
+  max-height: 360px; /* můžeš upravit dle chuti */
+}
+
+/* Lehké stažení na menších zařízeních */
+@media (max-width: 900px){
+  .impact-svg{
+    max-height: 300px;
+  }
+}
+@media (max-width: 640px){
+  .impact-svg{
+    max-height: 260px;
+  }
+}
