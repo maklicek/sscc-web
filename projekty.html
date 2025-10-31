@@ -1,84 +1,74 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <!-- 🎨 STYL -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Projekty | SSCC</title>
-<h1>Projekty</h1>
-<p class="lead">Informace pro partnery, výzkumné týmy a společnosti zapojené do projektu.</p>
-
-    <link rel="stylesheet" href="assets/style.css">
-  </head>
-
-  <body>
-    <!-- 🧩 HLAVIČKA (stejná na všech stránkách) -->
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand-combo" href="index.html">
-          <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo" />
-          <span class="brand-block">
-            <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
-            <span class="brand-tagline">Initiative</span>
-          </span>
-        </a>
-
-        <nav class="site-nav">
-          <ul>
-            <li><a href="projekty.html" class="active">Projekty</a></li>
-            <li><a href="edukace.html">Edukace</a></li>
-            <li><a href="napady.html">Nápady</a></li>
-            <li><a href="konsorcium.html">Konsorcium</a></li>
-            <li><a href="spoluprace.html">Spolupráce</a></li>
-          </ul>
-        </nav>
-
-        <div class="lang-switch">
-          <a class="lang active" href="#">CS</a> /
-          <a class="lang" href="#">EN</a>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projekty | SSCC</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand-combo" href="index.html">
+        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
+        <span class="brand-block">
+          <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
+          <span class="brand-tagline">Initiative</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="projekty.html" class="active">Projekty</a></li>
+          <li><a href="edukace.html">Edukace</a></li>
+          <li><a href="napady.html">Nápady</a></li>
+          <li><a href="konsorcium.html">Konsorcium</a></li>
+          <li><a href="spoluprace.html">Spolupráce</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch">
+        <a class="lang active" href="#">CS</a> / <a class="lang" href="#">EN</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- 🧩 HLAVNÍ OBSAH STRÁNKY -->
-    <main class="page">
-      <h1>Projekty SSCC</h1>
-      <p class="lead">
-        Tato sekce představuje aktivní i plánované projekty v rámci SolarSpace Carbon Cycle.
-      </p>
+  <!-- OBSAH -->
+  <main class="page">
+    <h1>Projekty SSCC</h1>
+    <p class="lead">Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
 
-      <section class="projects-list">
-        <article class="project-card">
-          <h2 class="project-title">Orbitální solární pilot</h2>
-          <p class="project-desc">
-            Testovací platforma pro přenos energie mikrovlnným paprskem ze solární družice na Zemi.
-          </p>
-        </article>
+    <section class="projects-list">
+      <article class="project-card">
+        <h2 class="project-title">Orbitální solární farma → přenos energie</h2>
+        <p class="project-desc">Mikrovlnný/laserový svazek z oběhu a bezpečný příjem v pozemní stanici.</p>
+      </article>
 
-        <article class="project-card">
-          <h2 class="project-title">Vodíkový reaktor</h2>
-          <p class="project-desc">
-            Laboratorní reaktor pro výrobu vodíku z obnovitelných zdrojů a syntézu amoniaku.
-          </p>
-        </article>
-      </section>
-    </main>
+      <article class="project-card">
+        <h2 class="project-title">CO₂ jako pracovní médium</h2>
+        <p class="project-desc">Vysokoteplotní okruhy s CO₂ pro efektivní přenos tepla.</p>
+      </article>
 
-    <!-- 🧩 PATIČKA -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-left">
-          © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-          Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
-        </div>
-        <nav class="footer-links">
-          <a href="projekty.html">Projekty</a> ·
-          <a href="edukace.html">Edukace</a> ·
-          <a href="napady.html">Nápady</a> ·
-          <a href="konsorcium.html">Konsorcium</a> ·
-          <a href="spoluprace.html">Spolupráce</a>
-        </nav>
+      <article class="project-card">
+        <h2 class="project-title">Uhlíkově negativní amoniak</h2>
+        <p class="project-desc">NH₃ ze zeleného H₂ a CCU, využití pro teplo/uložiště energie.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
       </div>
-    </footer>
-  </body>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
+    </div>
+  </footer>
+</body>
 </html>
