@@ -537,3 +537,93 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
   border-top:1px solid rgba(255,215,90,.22);
   padding: 1.2rem 1rem 1.8rem;
 }
+/* ==== HERO layout (2 sloupce) ==== */
+.home {
+  padding: clamp(16px, 3vw, 32px) 0 8px;
+}
+.home__grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+/* akordeon/rozcestník – nechte si své styly; toto jen sjednocuje vzhled kontejneru */
+.toc { }
+
+.hero-copy h1 {
+  font-weight: 800;
+  line-height: 1.15;
+  /* menší, klidnější titulek */
+  font-size: clamp(28px, 2.2vw + 20px, 46px);
+  color: #fff;
+  margin: 0 0 12px;
+  text-shadow: 0 0 12px rgba(0,0,0,.25);
+}
+.hero-copy p {
+  max-width: 60ch;
+  color: rgba(255,255,255,.92);
+  margin: 0 0 16px;
+}
+.cta-row { display: flex; gap: 12px; }
+
+/* ==== Flow pruh (1 řada) ==== */
+.flow {
+  padding: 24px 0 32px;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(255,215,90,.06) 0%, rgba(0,0,0,0) 60%);
+}
+.flow__row {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+.flow__card {
+  background: rgba(20,25,35,.86);
+  border: 1px solid rgba(255,215,90,.2);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,.45);
+}
+.flow__card h3 {
+  margin: 6px 0 4px;
+  color: var(--ink, #d8dde6);
+  font-size: 18px;
+}
+.flow__card p {
+  margin: 0;
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+}
+.flow__icon {
+  font-size: 22px;
+  line-height: 1;
+  opacity: .95;
+}
+.flow__arrow {
+  color: var(--gold, #ffd75a);
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  user-select: none;
+}
+
+/* ==== Responsivita ==== */
+@media (max-width: 920px) {
+  .home__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .flow__row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .flow__arrow { display: none; }
+}
