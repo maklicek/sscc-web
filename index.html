@@ -37,118 +37,104 @@
     </div>
   </header>
 
-  <!-- ===== HERO: rozcestník vlevo + claim vpravo ===== -->
- <section class="home" role="banner" aria-label="SSCC – přehled a mise">
-  <div class="home__grid">
-    <!-- VLEVO: Rozcestník (akordeon) -->
-    <aside class="toc">
-      <nav aria-label="Rychlá navigace">
-        <details open>
-          <summary>Projekty</summary>
-          <ul>
-            <li><a href="projekty.html">Všechny projekty</a></li>
-          </ul>
-        </details>
-        <details>
-          <summary>Edukace</summary>
-          <ul><li><a href="edukace.html">Přehled</a></li></ul>
-        </details>
-        <details>
-          <summary>Nápady</summary>
-          <ul><li><a href="napady.html">Návrhy</a></li></ul>
-        </details>
-        <details>
-          <summary>Konsorcium</summary>
-          <ul><li><a href="konsorcium.html">Členové</a></li></ul>
-        </details>
-        <details>
-          <summary>Spolupráce</summary>
-          <ul><li><a href="spoluprace.html">Zapojení</a></li></ul>
-        </details>
-      </nav>
-    </aside>
+<section class="hero-sun" role="banner" aria-label="Pilotní projekt SSCC">
+  <div class="hero-sun__inner">
+    <div class="hero-sun__grid">
 
-    <!-- VPRAVO: Hero text (střed v rámci svého sloupce) -->
-    <div class="hero-copy">
-      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-      <p class="lead">
-        SSCC propojuje orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a
-        cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
-      </p>
+      <!-- VLEVO: rozcestník -->
+      <aside class="toc" aria-label="Rozcestník">
+        <a class="toc-card" href="projekty.html">
+          <h3>Projekty</h3>
+          <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
+        </a>
+        <a class="toc-card" href="edukace.html">
+          <h3>Edukace</h3>
+          <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
+        </a>
+        <a class="toc-card" href="napady.html">
+          <h3>Nápady</h3>
+          <p>Návrhy vhodné pro experiment či simulaci.</p>
+        </a>
+        <a class="toc-card" href="konsorcium.html">
+          <h3>Konsorcium</h3>
+          <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
+        </a>
+        <a class="toc-card" href="spoluprace.html">
+          <h3>Spolupráce</h3>
+          <p>Hledáme partnery z průmyslu, výzkumu i municipality.</p>
+        </a>
+      </aside>
 
-      <p class="hero-abstract">
-        Vyvíjíme škálovatelné komponenty pro bezemisní energetiku: od příjmu energie
-        mimo atmosféru, přes efektivní přenos a ukládání (např. NH₃), až po bezpečnou
-        integraci do sítí a průmyslu. Hledáme výzkumné partnery, průmysl, studenty i investory.
-      </p>
+      <!-- VPRAVO: text -->
+      <div class="hero-copy">
+        <h1>Pilotní projekt SSCC – z emisí na energii</h1>
 
-      <div class="cta-row">
-        <a href="projekty.html" class="btn-hero">Projekty</a>
-        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+        <p class="lead">
+          <strong>Pilotní projekt SolarSpace Carbon Cycle (SSCC)</strong> řeší klíčové výzvy dekarbonizace těžkého průmyslu v České republice, zejména v regionu Ostravska.
+          Cílem je vytvořit decentralizovaný systém pro výrobu zeleného amoniaku (NH₃), který slouží jako nosič uhlíku a energie.
+          V souladu s EU Green Deal a Vodíkovou strategií ČR 2024 projekt propojuje obnovitelné zdroje energie (solární PV + bateriové úložiště)
+          s technologií zachytávání CO₂ (CCUS) a elektrolýzou.
+          <br><br>
+          SSCC přetváří zachycené emise CO₂ z oceláren, cementáren nebo tepláren na užitečný produkt – amoniak, který lze dále využít
+          pro vytápění, výrobu elektřiny nebo hnojiva. Tento proces umožňuje zachytit více než 90 % uhlíku a uzavřít jeho cyklus v místě vzniku:
+          <strong>emise → přeměna → využití → čistší ovzduší</strong>.
+          <br><br>
+          Pro Ostravsko to znamená čistší vzduch, udržitelná pracovní místa, nižší náklady na emise a novou perspektivu pro těžký průmysl.
+          SSCC ukazuje, že dekarbonizace nemusí znamenat útlum – ale obnovu průmyslu na nových principech: z kouře na energii.
+        </p>
+
+        <p class="motto"><em>Nezavíráme fabriky – měníme způsob, jak dýchají.</em></p>
+
+        <div class="cta-row">
+          <a href="projekty.html" class="btn-hero">Projekty</a>
+          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
+        </div>
       </div>
+
     </div>
+  </div>
+
+  <!-- silueta Ostravy dole -->
+  <div class="ostrava-silhouette" aria-hidden="true">
+    <svg viewBox="0 0 1600 300" preserveAspectRatio="none">
+      <!-- základní pás -->
+      <rect x="0" y="250" width="1600" height="60" fill="#0b1016"/>
+      <!-- stylizovaná panoramata (továrny, haldy, věže) -->
+      <g fill="#141a22">
+        <rect x="80"  y="190" width="40"  height="60"/>
+        <rect x="130" y="160" width="36"  height="90"/>
+        <rect x="180" y="175" width="28"  height="75"/>
+        <rect x="230" y="150" width="52"  height="100"/>
+        <rect x="300" y="165" width="42"  height="85"/>
+        <rect x="360" y="140" width="70"  height="110"/>
+        <rect x="460" y="180" width="34"  height="70"/>
+        <rect x="510" y="155" width="48"  height="95"/>
+        <rect x="580" y="170" width="40"  height="80"/>
+        <rect x="640" y="145" width="64"  height="105"/>
+        <rect x="720" y="175" width="36"  height="75"/>
+        <rect x="770" y="160" width="46"  height="90"/>
+        <rect x="830" y="150" width="58"  height="100"/>
+        <rect x="910" y="170" width="40"  height="80"/>
+        <rect x="960" y="140" width="68"  height="110"/>
+        <rect x="1040" y="165" width="42" height="85"/>
+        <rect x="1100" y="175" width="36" height="75"/>
+        <rect x="1150" y="160" width="46" height="90"/>
+        <rect x="1210" y="180" width="34" height="70"/>
+        <rect x="1260" y="150" width="58" height="100"/>
+        <rect x="1330" y="170" width="40" height="80"/>
+        <rect x="1380" y="160" width="46" height="90"/>
+        <rect x="1440" y="175" width="36" height="75"/>
+      </g>
+      <!-- „kouřové“ oblaky jemně (minimální, decentní) -->
+      <g opacity=".14">
+        <ellipse cx="210" cy="130" rx="80" ry="28" fill="#bfc5cf"/>
+        <ellipse cx="360" cy="120" rx="95" ry="32" fill="#bfc5cf"/>
+        <ellipse cx="980" cy="110" rx="110" ry="34" fill="#bfc5cf"/>
+      </g>
+    </svg>
   </div>
 </section>
 
-  <!-- (Volitelně) zachováváme prvek main kvůli struktuře, ale je skrytý -->
-  <main class="page" aria-hidden="true"></main>
-
-  <!-- ===== PRUH: 3 KROKY (Smog → Přeměna → Čisté ovzduší) ===== -->
-  <section class="process-strip" aria-label="Jak to funguje">
-    <div class="process-inner">
-
-      <div class="step">
-        <div class="icon" aria-hidden="true">
-          <!-- Smog ve městě -->
-          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-            <rect x="10" y="36" width="6" height="18" rx="2" fill="#6f7580"/>
-            <rect x="24" y="32" width="8" height="22" rx="2" fill="#7b818d"/>
-            <rect x="40" y="38" width="6" height="16" rx="2" fill="#6f7580"/>
-            <ellipse cx="26" cy="24" rx="16" ry="8" fill="#8a909a" opacity=".85"/>
-            <ellipse cx="38" cy="20" rx="14" ry="7" fill="#8a909a" opacity=".7"/>
-            <ellipse cx="18" cy="20" rx="10" ry="6" fill="#8a909a" opacity=".6"/>
-          </svg>
-        </div>
-        <h3>Smog ve městě</h3>
-        <p>Znečištěné ovzduší a emise CO₂.</p>
-      </div>
-
-      <div class="arrow" aria-hidden="true">→</div>
-
-      <div class="step">
-        <div class="icon" aria-hidden="true">
-          <!-- Přeměna CO₂ na NH₃ -->
-          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-            <circle cx="16" cy="32" r="8" stroke="#ffd75a" stroke-width="3"/>
-            <text x="12" y="36" font-size="10" fill="#ffd75a" font-weight="700">CO₂</text>
-            <circle cx="48" cy="32" r="8" stroke="#ffd75a" stroke-width="3" opacity=".55"/>
-            <text x="43" y="36" font-size="10" fill="#ffd75a" font-weight="700" opacity=".85">NH₃</text>
-            <line x1="24" y1="32" x2="40" y2="32" stroke="#ffd75a" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Přeměna CO₂ → NH₃</h3>
-        <p>Využití zachyceného CO₂ k výrobě amoniaku.</p>
-      </div>
-
-      <div class="arrow" aria-hidden="true">→</div>
-
-      <div class="step">
-        <div class="icon" aria-hidden="true">
-          <!-- Čisté ovzduší -->
-          <svg viewBox="0 0 64 64" width="48" height="48" fill="none">
-            <rect x="8" y="42" width="48" height="10" rx="3" fill="#2e9d6c"/>
-            <circle cx="20" cy="34" r="6" fill="#36b57d"/>
-            <circle cx="32" cy="30" r="7" fill="#36b57d"/>
-            <circle cx="44" cy="34" r="6" fill="#36b57d"/>
-            <circle cx="52" cy="16" r="6" fill="#ffd75a" opacity=".9"/>
-          </svg>
-        </div>
-        <h3>Čisté ovzduší</h3>
-        <p>Nižší emise a zdravější prostředí.</p>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ===== PATIČKA ===== -->
   <footer class="site-footer">
