@@ -932,4 +932,128 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
   .hero-copy h1 { text-align: left; }
   .cta-row { justify-content: flex-start; }
 }
+/* 0) Logo – ať je zas čitelné */
+.site-header .main-logo {
+  height: 56px;           /* můžeš zvednout na 64px, pokud se hodí */
+  width: auto;
+}
+
+/* 1) Kontejner a mřížka na titulce */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;  /* širší levý sloupec */
+  column-gap: 96px;                  /* VĚTŠÍ MEZERA mezi rozcestníkem a textem */
+  align-items: start;
+  padding: 56px 0 24px;
+}
+
+.toc { margin-top: 4px; }
+
+.hero-copy {
+  padding-right: 24px;   /* trochu vzduchu na pravé straně textu */
+  max-width: 72ch;       /* čitelné řádky */
+}
+
+/* 2) Zjemněný nadpis (méně agresivní) */
+.hero-copy .eyebrow {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: #d8c587;        /* jemná „zlatá“ linka nadpisu */
+  margin-bottom: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  font-size: 44px;       /* zmenšeno */
+  line-height: 1.15;
+  color: #f1e8c6;        /* měkčí, teplá barva */
+  margin: 0 0 16px;
+  font-weight: 800;
+}
+
+.lead {
+  font-size: 18px;
+  color: #ced5de;
+  margin: 0 0 10px;
+}
+
+.hero-abstract {
+  font-size: 17px;
+  color: #bfc6cf;
+  margin: 0 0 18px;
+}
+
+/* 3) Obloha a „slunce“ vpravo nahoře */
+.hero-sky {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 65%;
+  height: 70%;
+  pointer-events: none;
+  opacity: 0.9;
+  background:
+    radial-gradient(ellipse at 82% 10%,
+      rgba(255, 215, 90, .55) 0%,
+      rgba(255, 215, 90, .18) 38%,
+      rgba(255, 215, 90, 0) 68%),
+    url("assets/img/hero-sun.jpg") right top / 520px auto no-repeat;
+  filter: saturate(110%);
+}
+
+/* 4) Spodní „Ostrava“ – rozostřená fotografie */
+.city-backdrop {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.city-backdrop .img {
+  position: absolute;
+  inset: 0;
+  background: url("assets/img/ostrava.jpg") center bottom / cover no-repeat;
+  /* rozostření + decentní tónování, ať neruší text */
+  filter: grayscale(55%) blur(3px) brightness(0.9);
+  transform: scale(1.06);              /* aby se blur neusekl na okrajích */
+}
+
+.city-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(14,18,24,1) 0%, rgba(14,18,24,0.75) 55%, rgba(14,18,24,0) 100%);
+  pointer-events: none;
+}
+
+/* 5) Tlačítka (jemné doladění, pokud už máš) */
+.btn-hero {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 24px;
+  background: #ffd75a;
+  color: #171b22;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-hero.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 215, 90, .45);
+  color: #e8dfbf;
+}
 
