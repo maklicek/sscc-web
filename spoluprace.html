@@ -53,5 +53,22 @@
       © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Powered by clean energy ✶
     </div>
   </footer>
+  <!-- vložte těsně před </body> na všech stránkách -->
+<script>
+(() => {
+  const here = location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.site-nav a');
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    const same = (href === here) || (here === 'index.html' && href === 'index.html');
+    if (same) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
