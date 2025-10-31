@@ -36,48 +36,108 @@
     </div>
   </header>
 
-  <!-- ===== HERO (full-bleed) ===== -->
-  <section class="hero-wrap" role="banner" style="--hero-img:url('img/hero-space.jpg')">
-    <div class="hero-inner">
-      <div class="home-links">
-        <!-- Levý rozcestník -->
-        <div class="tiles-row" aria-label="Rozcestník">
-          <a class="card-link" href="projekty.html">
+<!-- ===== HERO s rozcestníkem (střed stránky) ===== -->
+<section class="hero-wrap hero--sun" role="banner">
+  <div class="hero-inner">
+    <div class="home-grid">
+
+      <!-- Levý ROZCESTNÍK (akordeon) -->
+      <nav class="accordion-nav" aria-label="Rychlá navigace">
+        <details open>
+          <summary>
             <h3>Projekty</h3>
             <p>Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
-          </a>
-          <a class="card-link" href="edukace.html">
+          </summary>
+          <ul>
+            <li><a href="projekty.html">Všechny projekty</a></li>
+            <!-- sem časem doplníme podsekce -->
+          </ul>
+        </details>
+
+        <details>
+          <summary>
             <h3>Edukace</h3>
             <p>Texty, diagramy a přehledy k energiím, vodíku a CO₂ cyklům.</p>
-          </a>
-          <a class="card-link" href="napady.html">
-            <h3>Nápady</h3>
-            <p>Návrhy a myšlenky vhodné pro experiment či simulaci.</p>
-          </a>
-          <a class="card-link" href="konsorcium.html">
-            <h3>Konsorcium</h3>
-            <p>Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
-          </a>
-        </div>
+          </summary>
+          <ul>
+            <li><a href="edukace.html">Články a přehledy</a></li>
+          </ul>
+        </details>
 
-        <!-- Pravý hero text + CTA -->
-        <div class="hero-copy">
-          <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
-          <p>Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
-            Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
-          <div class="cta-row">
-            <a href="projekty.html" class="btn-hero">Projekty</a>
-            <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
-          </div>
+        <details>
+          <summary>
+            <h3>Nápady</h3>
+            <p>Myšlenky vhodné pro experiment či simulaci.</p>
+          </summary>
+          <ul>
+            <li><a href="napady.html">Návrhy a koncepty</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Konsorcium</h3>
+            <p>Instituce, firmy a týmy zapojené do SSCC.</p>
+          </summary>
+          <ul>
+            <li><a href="konsorcium.html">Členové a partneři</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Spolupráce</h3>
+            <p>Jak se zapojit do výzkumu a pilotních projektů.</p>
+          </summary>
+          <ul>
+            <li><a href="spoluprace.html">Možnosti zapojení</a></li>
+          </ul>
+        </details>
+      </nav>
+
+      <!-- Pravý HERO text -->
+      <div class="hero-copy">
+        <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+        <p>Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku. Cíl: stabilní čistý výkon nezávislý na denní době a počasí.</p>
+        <div class="cta-row">
+          <a href="projekty.html" class="btn-hero">Projekty</a>
+          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ===== Rezervované místo pro případný krátký úvod (volitelné) ===== -->
-  <main class="page">
-   
-  </main>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Spodní PRUH s obrázky (3 kroky) ===== -->
+<section class="promo-strip" aria-label="Jak to funguje">
+  <a class="promo-card" href="edukace.html">
+    <img src="assets/img/hub_edukace.jpg" alt="Kouřící komíny – dnešní energetika a emise">
+    <span class="promo-caption">
+      <strong>Kde jsme</strong>
+      <em>Dnešní energetika a emise</em>
+    </span>
+  </a>
+
+  <a class="promo-card" href="projekty.html">
+    <img src="assets/img/cyclus-sscc.jpg" alt="Cyklus SSCC – náš projekt">
+    <span class="promo-caption">
+      <strong>Náš projekt</strong>
+      <em>Cyklus SSCC – čistý tok energie a uhlíku</em>
+    </span>
+  </a>
+
+  <a class="promo-card" href="napady.html">
+    <img src="assets/img/priroda.jpg" alt="Výsledek – čisté prostředí a příroda">
+    <span class="promo-caption">
+      <strong>Kam míříme</strong>
+      <em>Čisté prostředí a zdravá příroda</em>
+    </span>
+  </a>
+</section>
+
+<!-- Hlavní obsah na titulce nechceme – skryjeme (ponecháváme kvůli struktuře) -->
+<main class="page" aria-hidden="true"></main>
 
   <!-- ===== PATIČKA ===== -->
   <footer class="site-footer">
