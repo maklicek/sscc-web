@@ -65,6 +65,14 @@ a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
     var(--hero-img, url('../img/hero-space.jpg')) center 45% / cover no-repeat;
   border-bottom:1px solid rgba(255,215,90,.2);
   box-shadow:inset 0 -80px 120px rgba(0,0,0,.45);
+  .hero-wrap::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 60% 60%, rgba(0,0,0,.1) 0%, rgba(0,0,0,.65) 90%);
+  pointer-events:none;
+}
+
 }
 .hero-inner{
   max-width:1200px; margin:0 auto;
