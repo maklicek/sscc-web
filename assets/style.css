@@ -400,7 +400,7 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
 .home-accordion ul{ margin:.5rem 0 0 0; padding:0 0 0 1rem; }
 .home-accordion a{ color:#cfd6e4; }
 .home-accordion a:hover{ color:#ffd75a; }
-
+ 
 /* === Triptych (3 kroky) === */
 .triptych{
   border-top:1px solid rgba(255,215,90,.18);
