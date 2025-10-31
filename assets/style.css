@@ -189,3 +189,6 @@ a:focus-visible, button:focus-visible {
   text-shadow: none !important;
   filter: none !important;
 }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
