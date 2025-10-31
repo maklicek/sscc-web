@@ -55,49 +55,61 @@ a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
   .site-nav{grid-area:nav}
   .lang-switch{grid-area:lang;justify-self:end}
   .main-logo{width:64px;height:64px}
-}
+  
+}<section class="home-hero" role="banner">
+  <div class="home-grid">
+    <!-- LEVÝ ROZCESTNÍK -->
+    <nav class="home-accordion" aria-label="Rozcestník">
+      <details open>
+        <summary>Projekty</summary>
+        <ul>
+          <li><a href="projekty.html">Všechny projekty</a></li>
+        </ul>
+      </details>
 
-/* ===== Hero (full-bleed) ===== */
-.hero-wrap{
-  position:relative; width:100vw; left:50%; margin-left:-50vw;
-  background:
-    radial-gradient(120% 120% at 0% 0%, rgba(255,215,90,.06) 0%, rgba(0,0,0,0) 60%),
-    var(--hero-img, url('../img/hero-space.jpg')) center 45% / cover no-repeat;
-  border-bottom:1px solid rgba(255,215,90,.2);
-  box-shadow:inset 0 -80px 120px rgba(0,0,0,.45);
-  .hero-wrap::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(ellipse at 60% 60%, rgba(0,0,0,.1) 0%, rgba(0,0,0,.65) 90%);
-  pointer-events:none;
-}
-/* HERO rozložení – rozcestník vlevo, text vpravo */
-.home-links{
-  display:grid;
-  grid-template-columns: 1fr 1.2fr;  /* víc místa pro text vpravo */
-  align-items:center;
-  gap:2rem;
-}
+      <details>
+        <summary>Edukace</summary>
+        <ul>
+          <li><a href="edukace.html">Texty a přehledy</a></li>
+        </ul>
+      </details>
 
-/* Menší, klidnější nadpis + kratší svislé mezery */
-.hero-inner{ padding: clamp(18px, 5vh, 48px) 1.25rem clamp(10px, 3vh, 18px); }
-.hero-copy h1{
-  font-size: clamp(1.8rem, 1.1rem + 2.2vw, 2.6rem);
-  line-height:1.15;
-  letter-spacing:.2px;
-  font-weight:800;
-  margin: 0 0 .6rem;
-}
-.hero-copy p{ margin:0 0 .75rem; }
+      <details>
+        <summary>Nápady</summary>
+        <ul>
+          <li><a href="napady.html">Náměty k experimentu</a></li>
+        </ul>
+      </details>
 
-/* aby nebyl obří tmavý „polštář“ nad patičkou */
-main.page{ padding-top: 1.25rem; padding-bottom: 1.5rem; }
+      <details>
+        <summary>Konsorcium</summary>
+        <ul>
+          <li><a href="konsorcium.html">Členové a partneři</a></li>
+        </ul>
+      </details>
 
-}
-.hero-inner{
-  max-width:1200px; margin:0 auto;
-  padding: clamp(28px, 8vh, 96px) 1.5rem clamp(24px, 7vh, 72px);
+      <details>
+        <summary>Spolupráce</summary>
+        <ul>
+          <li><a href="spoluprace.html">Jak se zapojit</a></li>
+        </ul>
+      </details>
+    </nav>
+
+    <!-- PRAVÝ HERO TEXT -->
+    <div class="hero-copy">
+      <h1 class="hero-title">Solární energie mimo atmosféru. Uhlíkový dopad pod nulou.</h1>
+      <p class="hero-lead">
+        Propojujeme orbitální solární zdroje, vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+        Cíl: stabilní čistý výkon nezávislý na denní době a počasí.
+      </p>
+      <div class="cta-row">
+        <a class="btn-hero" href="projekty.html">Projekty</a>
+        <a class="btn-hero btn-ghost" href="spoluprace.html">Spolupráce</a>
+      </div>
+    </div>
+  </div>
+</section>
 }
 
 /* Layout hero: levý rozcestník + pravý text */
