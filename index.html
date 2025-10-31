@@ -140,6 +140,119 @@
 <main class="page" aria-hidden="true"></main>
 
   <!-- ===== PATIČKA ===== -->
+  <!-- ===== Bottom visual strip (full-bleed) ===== -->
+<section class="impact-strip" role="img" aria-label="Přechod od emisí k čisté energii a přírodě">
+  <div class="impact-inner">
+    <!-- Inline SVG – full width, responsive -->
+    <svg class="impact-svg" viewBox="0 0 1600 320" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="svgTitle svgDesc">
+      <title id="svgTitle">Energie v proměně: od emisí ke čisté přírodě</title>
+      <desc id="svgDesc">Vlevo šedé komíny s kouřem, uprostřed solární tok a orbitální dráhy, vpravo zelená krajina a čisté nebe.</desc>
+
+      <defs>
+        <!-- Základní pozadí -->
+        <linearGradient id="bgGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+          <stop offset="0%"  stop-color="#0e1218"/>
+          <stop offset="55%" stop-color="#10161e"/>
+          <stop offset="100%" stop-color="#0e1218"/>
+        </linearGradient>
+
+        <!-- Zlatý přechod uprostřed -->
+        <radialGradient id="sunGlow" cx="55%" cy="50%" r="45%">
+          <stop offset="0%"  stop-color="#ffeaa0" stop-opacity="0.95"/>
+          <stop offset="40%" stop-color="#ffd75a" stop-opacity="0.55"/>
+          <stop offset="70%" stop-color="#ffd75a" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#ffd75a" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- Kouř -->
+        <linearGradient id="smoke" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%"  stop-color="#bfc5cf" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#bfc5cf" stop-opacity="0"/>
+        </linearGradient>
+
+        <!-- Zelené přechody -->
+        <linearGradient id="hill" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0%"  stop-color="#4dd075"/>
+          <stop offset="100%" stop-color="#1f7a43"/>
+        </linearGradient>
+
+        <!-- Jemný rozptyl/rozmazání -->
+        <filter id="softBlur" x="-10%" y="-10%" width="120%" height="120%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+        </filter>
+      </defs>
+
+      <!-- Pozadí -->
+      <rect x="0" y="0" width="1600" height="320" fill="url(#bgGrad)"/>
+
+      <!-- Zlatý svit uprostřed -->
+      <circle cx="880" cy="160" r="260" fill="url(#sunGlow)" />
+
+      <!-- Orbitální kružnice -->
+      <g opacity="0.6" stroke="#ffd75a" stroke-width="1.5" fill="none">
+        <ellipse cx="880" cy="160" rx="180" ry="70" opacity="0.55"/>
+        <ellipse cx="880" cy="160" rx="230" ry="90" opacity="0.35"/>
+        <ellipse cx="880" cy="160" rx="280" ry="110" opacity="0.2"/>
+      </g>
+
+      <!-- „Paprsek“ – tok energie (jemně rozmazaný přechod zleva doprava) -->
+      <rect x="560" y="120" width="640" height="80" fill="#ffd75a" opacity="0.18" filter="url(#softBlur)"/>
+      <rect x="600" y="135" width="560" height="50" fill="#ffd75a" opacity="0.22" filter="url(#softBlur)"/>
+
+      <!-- VLEVO: komíny + kouř -->
+      <!-- Kouřové „obláčky“ -->
+      <g filter="url(#softBlur)">
+        <ellipse cx="190" cy="70" rx="70" ry="45" fill="url(#smoke)" />
+        <ellipse cx="250" cy="55" rx="55" ry="35" fill="url(#smoke)" />
+        <ellipse cx="130" cy="55" rx="40" ry="28" fill="url(#smoke)" />
+        <ellipse cx="220" cy="90" rx="65" ry="40" fill="url(#smoke)" />
+      </g>
+
+      <!-- Siluety komínů -->
+      <g fill="#2b313b">
+        <rect x="100" y="130" width="40" height="120" rx="3"/>
+        <rect x="160" y="115" width="44" height="160" rx="3"/>
+        <rect x="220" y="140" width="36" height="110" rx="3"/>
+      </g>
+      <!-- Hlavy komínů -->
+      <g fill="#434b56">
+        <rect x="96"  y="120" width="48" height="16" rx="2"/>
+        <rect x="156" y="105" width="52" height="16" rx="2"/>
+        <rect x="216" y="130" width="44" height="14" rx="2"/>
+      </g>
+
+      <!-- VPRAVO: příroda -->
+      <!-- Kopce -->
+      <path d="M1200,240 C1260,200 1320,210 1380,240 L1600,240 L1600,320 L1200,320 Z" fill="url(#hill)"/>
+      <path d="M1120,250 C1180,220 1240,230 1300,255 L1600,255 L1600,320 L1120,320 Z" fill="#2a8f54" opacity="0.85"/>
+
+      <!-- Stromy (stylizované) -->
+      <g transform="translate(1240,200)">
+        <rect x="-6" y="40" width="12" height="36" rx="2" fill="#2b5c3f"/>
+        <circle cx="0" cy="30" r="18" fill="#47c06a"/>
+        <circle cx="-12" cy="32" r="12" fill="#58d07a"/>
+        <circle cx="12" cy="32" r="12" fill="#58d07a"/>
+      </g>
+      <g transform="translate(1315,205) scale(0.9)">
+        <rect x="-6" y="40" width="12" height="36" rx="2" fill="#2b5c3f"/>
+        <circle cx="0" cy="30" r="18" fill="#47c06a"/>
+        <circle cx="-12" cy="32" r="12" fill="#58d07a"/>
+        <circle cx="12" cy="32" r="12" fill="#58d07a"/>
+      </g>
+      <g transform="translate(1388,198) scale(1.05)">
+        <rect x="-6" y="40" width="12" height="36" rx="2" fill="#2b5c3f"/>
+        <circle cx="0" cy="30" r="18" fill="#47c06a"/>
+        <circle cx="-12" cy="32" r="12" fill="#58d07a"/>
+        <circle cx="12" cy="32" r="12" fill="#58d07a"/>
+      </g>
+
+      <!-- Voda / říční odlesk -->
+      <rect x="1120" y="275" width="480" height="10" fill="#7fe0a4" opacity="0.15"/>
+      <rect x="1160" y="285" width="420" height="8" fill="#7fe0a4" opacity="0.12"/>
+    </svg>
+  </div>
+</section>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
