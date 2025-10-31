@@ -722,4 +722,82 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
   font-size: clamp(1.8rem, 1.1rem + 3.2vw, 2.6rem);
   line-height: 1.18;
 }
+/* HERO s pozadím slunce */
+.home{
+  position: relative;
+  width: 100%;
+  background:
+    radial-gradient(120% 100% at 65% 45%, rgba(255,215,90,.10) 0%, rgba(255,215,90,0) 60%),
+    url('assets/img/hero-sun.jpg') center 30% / cover no-repeat;
+  border-bottom: 1px solid rgba(255,215,90,.2);
+}
+
+.home__grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(28px, 8vh, 96px) 1.5rem clamp(28px, 6vh, 72px);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;   /* vlevo TOC, vpravo text */
+  gap: clamp(18px, 4vw, 42px);
+}
+
+/* Akordeon vlevo */
+.toc details{
+  background: rgba(20,25,35,.9);
+  border: 1px solid rgba(255,215,90,.22);
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: .75rem 1rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+.toc summary{
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+.toc summary::-webkit-details-marker{ display: none; }
+.toc ul{ margin:.5rem 0 0 1rem; }
+.toc a{ color: #cfd6e6; }
+.toc a:hover{ color: var(--gold); }
+
+/* Text vpravo – nadpis vystředit v rámci sloupce */
+.hero-copy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* to dělá „vystředění“ vodorovně */
+  text-align: center;
+  gap: .8rem;
+}
+.hero-copy h1{
+  font-size: clamp(2rem, 1.2rem + 3.2vw, 3.25rem);
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 0 16px rgba(0,0,0,.35);
+  margin: 0 0 .4rem 0;
+}
+.hero-copy .lead{
+  max-width: 60ch;
+  color: rgba(255,255,255,.90);
+}
+.hero-copy .hero-abstract{
+  max-width: 70ch;
+  color: rgba(255,255,255,.78);
+}
+
+/* CTA tlačítka */
+.cta-row{ display:flex; gap:.75rem; margin-top:.5rem; flex-wrap:wrap; justify-content:center; }
+.btn-hero{
+  display:inline-block; padding:.85rem 1.15rem; border-radius:999px;
+  background: var(--gold); color:#000; font-weight:800; border:1px solid transparent;
+  box-shadow:0 8px 22px rgba(0,0,0,.35); transition:.2s;
+}
+.btn-hero:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.45) }
+.btn-hero.btn-ghost{ background:transparent; color:#fff; border-color:rgba(255,215,90,.55); }
+
+/* Responsivita – pod ~900px na 1 sloupec (TOC nahoře) */
+@media (max-width: 900px){
+  .home__grid{ grid-template-columns: 1fr; }
+  .hero-copy{ align-items: flex-start; text-align: left; }
+  .cta-row{ justify-content: flex-start; }
+}
 
