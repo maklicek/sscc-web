@@ -6,6 +6,12 @@
      jsou sloučeny sem.
    - Žádné <style> bloky už nemají být v HTML.
    ======================================================================== */
+.city-backdrop {
+  position: relative;
+  height: 260px;
+  background: url("assets/img/ostrava.jpg") center/cover no-repeat fixed;
+  border-top: 2px solid #f0cc54; /* test – aby bylo vidět, kde začíná */
+}
 
 /* -------------------------
    Design tokens (CSS vars)
