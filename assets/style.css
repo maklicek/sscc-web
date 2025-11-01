@@ -933,3 +933,50 @@ a:hover{ opacity:.92; }
   pointer-events:none;
   z-index:1;
 }
+.city-backdrop{
+  position:relative;
+  height:260px;
+  overflow:hidden;
+}
+
+.city-backdrop::before{
+  content:"";
+  position:absolute; inset:-8px;
+
+  /* 1) Bezpečný fallback pro starší prohlížeče */
+  background-image: url("img/ostrava.jpg");
+
+  /* 2) Moderní formáty (volitelné) */
+  background-image: -webkit-image-set(
+    url("img/ostrava.avif") type("image/avif") 1x,
+    url("img/ostrava.webp") type("image/webp") 1x,
+    url("img/ostrava.jpg")  type("image/jpeg") 1x
+  );
+  background-image: image-set(
+    url("img/ostrava.avif") type("image/avif") 1x,
+    url("img/ostrava.webp") type("image/webp") 1x,
+    url("img/ostrava.jpg")  type("image/jpeg") 1x
+  );
+
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /* Pro jistotu bez fixed (na některých kombinacích HW + filter dělá paseku) */
+  /* background-attachment: fixed; */
+
+  filter: blur(2px) brightness(.98) saturate(1.04);
+  opacity:.86;
+  transform:scale(1.035);
+  z-index:0;
+}
+
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.75) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,1) 0%, rgba(12,18,25,0) 45%);
+  pointer-events:none;
+  z-index:1;
+}
