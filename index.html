@@ -4,6 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SolarSpace Carbon Cycle (SSCC)</title>
+/* 3️⃣ Nadpis: jemnější barva a menší stín */
+.hero-title {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+  color: #f3e9c4;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: 18px;
+}
 
   <style>
     :root{
@@ -37,15 +46,27 @@
     .home__grid{display:grid;grid-template-columns:380px 1fr;column-gap:96px;align-items:start;padding:56px 0 24px}
     .toc,.hero-copy{position:relative;z-index:1}
 
-    /* Obloha + slunce vpravo nahoře */
-    .hero-sky{
-      position:absolute;top:-10%;right:-10%;width:65%;height:70%;pointer-events:none;opacity:.9;
-      background:
-        radial-gradient(ellipse at 82% 10%, rgba(255,215,90,.55) 0%, rgba(255,215,90,.18) 38%, rgba(255,215,90,0) 68%),
-        url("assets/img/hero-sun.jpg") right top / 520px auto no-repeat;
-      filter:saturate(110%); z-index:0;
-    }
-
+   /* 1️⃣ Hero-sky: jemnější přechod + slunce */
+.hero-sky {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 65%;
+  height: 80%;
+  pointer-events: none;
+  opacity: 0.45; /* méně nápadné */
+  background:
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(255, 215, 90, 0.5) 0%,
+      rgba(255, 215, 90, 0.15) 40%,
+      rgba(255, 215, 90, 0) 70%
+    ),
+    url("assets/img/hero-sun.jpg") right top / cover no-repeat;
+  filter: brightness(1.1) saturate(105%);
+  mix-blend-mode: screen; /* světelný efekt, ne tmavý flek */
+  z-index: 0;
+}
     /* TOC */
     .toc .accordion details{background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);border:1px solid rgba(255,255,255,.08);border-radius:12px;margin-bottom:16px;overflow:hidden}
     .toc summary{cursor:pointer;padding:14px 16px;list-style:none;user-select:none;font-weight:700}
@@ -53,7 +74,53 @@
     .toc ul{margin:0;padding:10px 16px;list-style:disc;color:var(--muted)}
     .toc a{color:var(--text);text-decoration:none}
     .toc a:hover{color:var(--accent)}
+/* 2️⃣ Mřížka: víc prostoru mezi menu a textem */
+.home__grid {
+  grid-template-columns: 360px 1fr;
+  column-gap: 120px;
+  padding: 64px 0 32px;
+}
+    * 4️⃣ Odstavec a tlačítka */
+.lead {
+  font-size: 18px;
+  color: #d5dbe4;
+  margin: 0 0 12px;
+}
+.hero-abstract {
+  font-size: 17px;
+  color: #bfc6cf;
+  margin-bottom: 24px;
+}
+.cta-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
 
+/* 5️⃣ Ostrava vespod */
+.city-backdrop {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.city-backdrop .img {
+  position: absolute;
+  inset: 0;
+  background: url("assets/img/ostrava.jpg") center bottom / cover no-repeat;
+  filter: grayscale(55%) blur(3px) brightness(0.9);
+  transform: scale(1.05);
+}
+.city-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 18, 24, 1) 0%,
+    rgba(14, 18, 24, 0.75) 50%,
+    rgba(14, 18, 24, 0) 100%
+  );
+}
     /* Texty vpravo */
     .eyebrow{display:block;font-size:15px;letter-spacing:.08em;color:#d8c587;margin-bottom:6px;font-weight:700;text-transform:uppercase}
     .hero-title{font-size:44px;line-height:1.15;color:#f1e8c6;margin:0 0 16px;font-weight:800}
