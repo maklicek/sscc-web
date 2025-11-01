@@ -48,6 +48,33 @@
 
    /* 1️⃣ Hero-sky: jemnější přechod + slunce */
 .hero-sky {
+  /* Slunce: méně výrazné, víc doprava/nahoru a pod textem */
+.hero-sky{
+  opacity: .32;                /* z 0.45 → jemnější */
+  right: -14%;
+  top: -12%;
+  width: 62%;
+  height: 78%;
+  z-index: 0;                  /* určitě pod textem */
+  mix-blend-mode: screen;
+}
+
+/* Mírné ztmavení pod textem pro čitelnost (jen vlevo u textu) */
+.hero-sun{ position: relative; }
+.hero-sun::before{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none; z-index:1;
+  background: linear-gradient(90deg,
+    rgba(12,18,25,.72) 0%,
+    rgba(12,18,25,.55) 45%,
+    rgba(12,18,25,.25) 65%,
+    rgba(12,18,25,0) 78%
+  );
+}
+/* ať je text nad ztmavením */
+.hero-sun__inner{ position: relative; z-index: 2; }
+
   position: absolute;
   top: -10%;
   right: -10%;
