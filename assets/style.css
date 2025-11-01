@@ -1184,4 +1184,10 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
 .site-header {
   background: linear-gradient(180deg, rgba(14,20,29,0.9) 0%, rgba(12,18,25,0.7) 100%);
 }
+@media (min-width: 1200px){
+  .home__grid{ gap: 56px; }
+}
+@media (max-width: 900px){
+  .home__grid{ grid-template-columns: 1fr; gap: 24px; }
+}
 
