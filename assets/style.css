@@ -1288,4 +1288,47 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
   .lang-switch{ grid-area: lang; }
   .site-nav{ grid-area: nav; justify-self: center; }
 }
+/* ====== GLOBÁLNÍ SLUNCE NA VŠECH STRÁNKÁCH ====== */
+
+/* základní třída pro celé tělo stránky */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,                    /* pozice slunce */
+      rgba(255,215,90,0.35) 0%,              /* střed – teplý zlatý */
+      rgba(255,215,90,0.12) 30%,             /* halo */
+      rgba(255,215,90,0.03) 55%,             /* slabý přechod */
+      rgba(255,215,90,0) 100%
+    ),
+    url("assets/img/hero-sun.jpg") right top / cover no-repeat;
+  mix-blend-mode: screen;                     /* lehce prosvítá */
+  filter: brightness(1.05) saturate(1.05);
+  opacity: 0.25;                             /* globální průhlednost */
+  pointer-events: none;                      /* nezasahuje do klikání */
+  z-index: 0;
+}
+
+/* hero sekce (např. s velkým titulkem) dostane tmavší přechod, aby slunce nerušilo */
+.hero-sun,
+.projects-hero,
+.hero {
+  position: relative;
+  z-index: 1;                                /* nad sluncem */
+}
+.hero-sun::before,
+.projects-hero::before {
+  background-color: rgba(12,18,25,0.9);      /* mírně stmavit podklad */
+}
+
+/* pro jistotu zajistíme, že text i navigace budou nad sluncem */
+header, main, footer, .site-header, .site-footer {
+  position: relative;
+  z-index: 2;
+}
 
