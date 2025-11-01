@@ -1,84 +1,128 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>SSCC — SolarSpace Carbon Cycle</title>
 
-  <!-- ZÁKLADNÍ STYL -->
-  <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- (volitelně) favicon -->
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/img/sscc-logo.jpg" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <!-- pokud máš logo jako obrázek: <img src="assets/logo-sscc.svg" alt="SSCC" class="brand-logo" /> -->
-        <span class="brand-mark">SSCC</span>
-        <span class="brand-text">SolarSpace Carbon Cycle</span>
-      </a>
 
-      <button class="nav-toggle" aria-label="Zobrazit menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
+<header class="site-header">
+  <div class="container header-inner">
 
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#mission">Mise</a></li>
-          <li><a href="#tech">Technologie</a></li>
-          <li><a href="#benefits">Přínosy</a></li>
-          <li><a href="#team">Tým</a></li>
-          <li><a class="cta-link" href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
+    <!-- Levý blok: značka -->
+    <a class="brand-block" href="index.html">
+      <div class="brand-name">SSCC</div>
+      <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+    </a>
+
+    <!-- Burger tlačítko (mobil) -->
+    <button class="nav-toggle" aria-label="Zobrazit menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <!-- Navigace -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="projekty.html">Projekty</a></li>
+        <li><a href="edukace.html">Edukace</a></li>
+        <li><a href="napady.html">Nápady</a></li>
+        <li><a href="konsorcium.html">Konsorcium</a></li>
+        <li class="lang-switch">
+          <a href="index.html" class="lang active">CZ</a>
+          <span class="sep">|</span>
+          <a href="index-en.html" class="lang">EN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Pravý blok: logo -->
+    <div class="header-right">
+      <img
+        class="main-logo"
+        src="assets/img/sscc-logo.jpg"
+        alt="SolarSpace Carbon Cycle logo"
+      />
     </div>
-  </header>
 
-  <!-- HLAVNÍ OBSAH STRÁNKY -->
-  <main class="page-content">
-    <!-- Hero sekce / úvodní claim -->
-    <section class="hero" id="hero">
-      <div class="container hero-inner">
-        <h1>
-          Solární energie z vesmíru.<br />
-          Uhlíkově negativní na Zemi.
-        </h1>
-        <p class="hero-lead">
-          SSCC (SolarSpace Carbon Cycle) je výzkumná iniciativa zaměřená na
-          ziskovou uhlíkovou neutralizaci: orbitální solární energie,
-          atmosférický sběr CO₂, a jeho přeměna na průmyslově hodnotné suroviny.
-        </p>
-        <a class="hero-cta" href="#mission">Zjistit víc</a>
-      </div>
-    </section>
+  </div>
+</header>
 
-    <!-- TADY BUDOU DALŠÍ SEKCE (mise, tech...) -->
-  </main>
 
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="footer-title">SSCC — SolarSpace Carbon Cycle</div>
-        <div class="footer-small">© 2025 SSCC. Všechna práva vyhrazena.</div>
-      </div>
-      <div class="footer-nav">
-        <a href="#mission">Mise</a>
-        <a href="#tech">Technologie</a>
-        <a href="#benefits">Přínosy</a>
-        <a href="#team">Tým</a>
-        <a href="#contact">Kontakt</a>
-      </div>
+<main class="hub">
+
+  <!-- Hero / úvod (volitelné; můžeš klidně smazat pokud nechceš text nahoře) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Solární energie mimo atmosféru.<br>Uhlíkový dopad pod nulou.</h1>
+      <p class="hero-lead">
+        SSCC (SolarSpace Carbon Cycle) propojuje orbitální solární zdroje,
+        vodíkovou chemii, syntézu amoniaku a cirkulaci uhlíku.
+        Cíl: energeticky soběstačné, škálovatelné a ziskové odstraňování CO₂.
+      </p>
     </div>
-  </footer>
+  </section>
 
-  <!-- MALÝ JS PRO BURGER MENU -->
-  <script src="assets/main.js"></script>
+  <!-- 4 karty -->
+  <section class="tiles-row container">
+
+    <article class="card">
+      <h2>Projekty</h2>
+      <p>Přehled pilotů a konceptů SSCC.</p>
+      <img
+        src="assets/img/pilotni-jednotka.jpg"
+        alt="Pilotní jednotka SSCC">
+    </article>
+
+    <article class="card">
+      <h2>Edukace</h2>
+      <p>Principy: Slunce → H₂ → NH₃ → CCU.</p>
+      <img
+        src="assets/img/cyclus-sscc.jpg"
+        alt="Schéma cyklu SSCC">
+    </article>
+
+    <article class="card">
+      <h2>Nápady</h2>
+      <p>Vize a teoretické směry k diskuzi.</p>
+      <img
+        src="assets/img/hypotezy.jpg"
+        alt="Koncepční hypotézy">
+    </article>
+
+    <article class="card">
+      <h2>Konsorcium</h2>
+      <p>Uzavřené materiály pro partnery.</p>
+      <img
+        src="assets/img/partneri.jpg"
+        alt="Partnerské materiály">
+    </article>
+
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <p>© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative</p>
+      <p>Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶</p>
+    </div>
+    <div class="footer-right">
+      <a href="projekty.html">Projekty</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="napady.html">Nápady</a>
+      <a href="konsorcium.html">Konsorcium</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
