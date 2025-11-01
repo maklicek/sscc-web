@@ -57,6 +57,8 @@ a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
   .main-logo{width:64px;height:64px}
   
 }<section class="home-hero" role="banner">
+<section class="city-backdrop" aria-hidden="true"><div class="img"></div></section>
+
   <div class="home-grid">
     <!-- LEVÝ ROZCESTNÍK -->
     <nav class="home-accordion" aria-label="Rozcestník">
