@@ -396,3 +396,84 @@ a.btn-hero {
 .toc summary { color:#f3e9c4; }
 .toc a       { color:#e9eef5; }
 .toc a:hover { color:#ffd75a; }
+/* ---------- HLAVIČKA: menší výška + větší logo ---------- */
+.site-header .header-inner{
+  max-width: 1320px;         /* víc prostoru ve středu */
+  margin: 0 auto;
+  padding: 6px 10px;         /* menší vertikální padding = nižší hlavička */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+.site-header .main-logo{
+  height: 72px;              /* větší logo */
+  width: auto;
+}
+
+/* ---------- STŘED: víc šířky + větší mezera mezi TOC a textem ---------- */
+.home__grid{
+  max-width: 1320px;         /* roztáhne střed */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 84px;                 /* větší mezera mezi rozcestníkem a SSCC textem */
+  padding: 16px 10px 0;
+  position: relative;
+  z-index: 1;                /* jistota nad podkladem */
+}
+
+/* ---------- SLUNCE: jemné pozadí, aby neubilo text ---------- */
+.hero-sun{ position: relative; overflow: hidden; }
+.hero-sun::before{
+  content: "";
+  position: absolute;
+  inset: -6% -6% -40% -6%;
+  background:
+    radial-gradient(ellipse at 82% 28%, rgba(255,215,90,.28) 0%, rgba(255,215,90,.10) 50%, rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right top/cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: .26;
+  z-index: 0;                /* POD obsahem */
+}
+
+/* jemný přechod u spodku hero */
+.hero-sun::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:0; height:120px;
+  background: linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,0) 100%);
+  z-index:0;
+}
+
+/* ---------- OSTRAVA: spodní pás – viditelnější ---------- */
+.city-backdrop{
+  position: relative;
+  height: 260px;             /* trochu vyšší, ať je znát */
+  overflow: hidden;
+  z-index: 0;                /* pod obsahem */
+}
+.city-backdrop::before{
+  content:"";
+  position:absolute; inset:-12px;
+  background: url("assets/img/ostrava.jpg") center/cover no-repeat fixed;
+  filter: blur(2.2px) brightness(.98) saturate(1.02);
+  opacity: .88;              /* víc obrysů */
+  transform: scale(1.05);
+}
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.82) 26%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.9) 0%, rgba(12,18,25,0) 55%);
+  pointer-events:none;
+}
+
+/* ---------- TITUL & TEXT: pro čitelnost ---------- */
+.hero-title{ color:#f3e9c4; font-weight:800; }
+.lead{ color:#e9eef5; }
+.hero-abstract{ color:#aeb6c3; }
+
+/* ---------- ROZCESTNÍK: barvy textů (čitelnější) ---------- */
+.toc summary{ color:#f3e9c4; }
+.toc a{ color:#e9eef5; }
+.toc a:hover{ color:#ffd75a; }
