@@ -320,3 +320,79 @@ a.btn-hero {
   opacity: .35;
   filter: brightness(1.05) saturate(1.06);
 }
+/* Šířky a grid */
+.site-header .header-inner,
+.home__grid,
+.footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Logo trochu větší */
+.site-header .main-logo { height: 68px; }
+
+/* Hero grid – levý panel + pravý obsah */
+.home { padding: 24px 0 0; }
+.home__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 72px;
+  z-index: 1;                /* obsah nahoře */
+}
+.toc, .hero-copy { min-width: 0; }
+
+/* Overlay slunce nesmí překrývat obsah */
+.hero-sun { position: relative; overflow: hidden; }
+.hero-sun::before {
+  content: "";
+  position: absolute;
+  inset: -6% -6% -40% -6%;
+  background:
+    radial-gradient(ellipse at 82% 28%, rgba(255,215,90,.32) 0%, rgba(255,215,90,.12) 50%, rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right top/cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: .28;              /* slabší, aby neubíjelo text */
+  z-index: 0;                 /* POD obsahem */
+}
+.hero-sun::after {
+  content: "";
+  position: absolute;
+  left:0; right:0; bottom:0; height:140px;
+  background: linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,0) 100%);
+  z-index: 0;
+}
+
+/* Typografie (jen pro jistotu viditelnosti) */
+.hero-title { color:#f3e9c4; font-weight:800; }
+.lead { color:#e9eef5; }
+.hero-abstract { color:#aeb6c3; }
+
+/* Spodní pás Ostrava – lehčí blur, vyšší opacity */
+.city-backdrop {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  z-index: 0;                 /* určitě pod obsahem */
+}
+.city-backdrop::before {
+  content: "";
+  position: absolute; inset: -10px;
+  background: url("assets/img/ostrava.jpg") center/cover no-repeat fixed;
+  filter: blur(2.5px) brightness(.96) saturate(1.02);
+  opacity: .85;
+  transform: scale(1.05);
+}
+.city-backdrop::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.8) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.9) 0%, rgba(12,18,25,0) 55%);
+  pointer-events: none;
+}
+
+/* Rozcestník: čitelnější barvy */
+.toc summary { color:#f3e9c4; }
+.toc a       { color:#e9eef5; }
+.toc a:hover { color:#ffd75a; }
