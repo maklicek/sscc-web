@@ -6,7 +6,7 @@
      jsou sloučeny sem.
    - Žádné <style> bloky už nemají být v HTML.
    ======================================================================== */
-
+ 
 /* -------------------------
    Design tokens (CSS vars)
    ------------------------- */
@@ -502,7 +502,6 @@ a.btn-hero {
 }
 /* ========= SSCC HOTFIX (header, layout, city backdrop) ========= */
 
-/* --- 1) HLAVIČKA: větší logo + centrované menu --- */
 .site-header .header-inner{
   max-width: 1280px;          /* víc prostoru pro střed */
   margin: 0 auto;
@@ -544,10 +543,7 @@ a.btn-hero {
 .hero-abstract{ color:#bfc7d3; }
 
 /* --- 3) OSTRAVA DOLE: spolehlivé vykreslení s fallbacky --- */
-/* a) sekce musí existovat v HTML těsně NAD <footer>:
-   <section class="city-backdrop" aria-hidden="true"></section>
-*/
-/* Spodní pás – rozostřená Ostrava s AVIF/WEBP/JPG */
+
 .city-backdrop{
   position: relative;
   height: 260px;         /* 220–300px podle chuti */
