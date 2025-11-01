@@ -280,3 +280,20 @@ a:hover{ opacity:.92; }
   pointer-events: none;
   z-index: 1;
 }
+/* === OSTRAVA – testovací, jednoduchá verze === */
+.city-backdrop{
+  position: relative;
+  height: 240px;             /* klidně změň na 220–300px */
+  overflow: hidden;
+  z-index: 0;
+  background: url("assets/img/ostrava.jpg") center / cover no-repeat; /* jednoduchý fallback */
+}
+
+/* jemné přizdění přechodem (volitelné) */
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,.95) 0%, rgba(12,18,25,.6) 30%, rgba(12,18,25,0) 65%);
+  pointer-events:none;
+}
