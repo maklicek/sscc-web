@@ -1430,6 +1430,30 @@ body.no-sun::before {
   .site-header .site-nav ul { gap: 18px; }
 }
 /* ===== HOTFIX v2 — header, nav, TOC, hero, slunce ===== */
+/* Globální jemné slunce pro podstránky */
+/* Přidej class="with-sun" na <body> dané podstránky */
+.with-sun{
+  position: relative;
+  background: var(--bg);
+}
+.with-sun::before{
+  content:"";
+  position: fixed;
+  z-index: 0;
+  inset:-10% -10% 0 -10%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 82% 14%,
+      rgba(255,215,90,.42) 0%,
+      rgba(255,215,90,.18) 38%,
+      rgba(255,215,90,.06) 70%,
+      rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right top/cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: .28;                 /* jemné, aby nerušilo obsah */
+  filter: brightness(1.02) saturate(1.05);
+}
+
 
 /* 1) Header: logo větší + víc vlevo, navigace přesně na střed */
 .site-header .header-inner{
