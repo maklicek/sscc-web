@@ -1190,4 +1190,102 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
 @media (max-width: 900px){
   .home__grid{ grid-template-columns: 1fr; gap: 24px; }
 }
+/* ====== HLAVIČKA: logo větší vlevo, NAV uprostřed, jazyk vpravo ====== */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner{
+  /* přechod z flexu na grid – 3 oblasti: logo | nav | jazyk */
+  display: grid !important;
+  grid-template-columns: auto 1fr auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+
+  /* roztáhneme na celou šířku, abychom logo dostali úplně vlevo */
+  max-width: none !important;
+  padding: 8px 20px !important;
+}
+
+/* logo větší a opravdu "na levý kraj" */
+.brand-combo{
+  justify-self: start !important;
+}
+.main-logo{
+  height: 64px !important;         /* můžeš klidně 72px, když bude vypadat dobře */
+  width: auto !important;
+  border-radius: 12px !important;
+  padding: 6px !important;
+}
+
+/* navigace do středu */
+.site-nav{
+  justify-self: center !important;
+}
+.site-nav ul{
+  display: flex; gap: 22px !important;
+  align-items: center;
+}
+
+/* přepínač jazyků úplně vpravo */
+.lang-switch{
+  justify-self: end !important;
+}
+
+/* ====== ROZCESTNÍK: víc doleva, menší vnitřní okraje, jemnější barvy ====== */
+/* ukotvíme grid víc doleva – vycentrované layouty necháme, ale lehce posuneme */
+.home__grid{
+  /* posun od levého okraje – menší než default */
+  margin-left: 20px !important;
+  margin-right: auto !important;
+  max-width: 1280px !important;       /* nenecháme ho být příliš úzký ani široký */
+  gap: 48px !important;
+}
+
+/* samotný TOC k okraji, aby "seděl" víc vlevo */
+.toc{
+  /* na velkých monitorech ať je to opravdu blízko levého kraje */
+  margin-left: 0 !important;
+}
+
+/* barvy a kontrast TOC – čitelnější a živější */
+.toc .accordion details{
+  background: linear-gradient(180deg, #121a25 0%, #0f1620 100%) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+}
+.toc summary{
+  color: #f3e9c4 !important;           /* jemný teplý nadpis */
+  font-weight: 800 !important;
+}
+.toc ul{ color: #cfd7e3 !important; }  /* text v položkách */
+.toc a{
+  color: #dbe4f2 !important;
+  text-decoration: none !important;
+}
+.toc a:hover{
+  color: #ffd75a !important;
+}
+
+/* drobná úprava tlačítek, ať jemně vystoupí */
+.btn-hero.btn-primary{
+  box-shadow: 0 6px 18px rgba(255,215,90,.18);
+}
+.btn-hero:hover{ transform: translateY(-2px); }
+
+/* ====== RESPONSIVE drobnosti ====== */
+@media (max-width: 1024px){
+  .main-logo{ height: 56px !important; }
+  .home__grid{ margin-left: 16px !important; gap: 28px !important; }
+  .site-nav ul{ gap: 16px !important; }
+}
+@media (max-width: 720px){
+  .header-inner{
+    grid-template-columns: auto auto !important;
+    grid-template-areas:
+      "logo lang"
+      "nav  nav" !important;
+  }
+  .brand-combo{ grid-area: logo; }
+  .lang-switch{ grid-area: lang; }
+  .site-nav{ grid-area: nav; justify-self: center; }
+}
 
