@@ -257,3 +257,58 @@ a:hover{ opacity:.92; }
 ...
 /* Patička – nízký vertikální padding */
 .footer-inner{ padding:8px 16px !important; }
+/* Logo o kousek větší */
+.site-header .main-logo { height: 64px; }
+
+/* Tichý spacing v hlavičce */
+.site-header .header-inner { gap: 18px; }
+.site-header .site-nav ul { gap: 22px; }
+/* Větší mezera mezi sloupci + širší levý sloupec */
+.home__grid {
+  grid-template-columns: 400px 1fr;  /* bylo třeba ~360px */
+  gap: 56px;
+}
+
+/* Panely rozcestníku: méně černé, víc čitelnosti */
+.toc .accordion details {
+  background: linear-gradient(180deg, #121a26 0%, #0f1620 100%);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+}
+.toc summary { color: #f3e9c4; }      /* stejný tón jako hero titulek */
+.toc a { color: #e9eef5; }
+.toc a:hover { color: #ffd75a; }
+.btn-hero,
+button,
+a.btn-hero {
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+.btn-hero:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow: 0 6px 14px rgba(0,0,0,.25);
+}
+.footer-inner { padding: 8px 16px; opacity: .9; }
+/* Dekor: jemné „slunce“ vpravo nahoře pro všechny podstránky */
+.has-sun {
+  position: relative;
+  overflow: hidden;
+}
+.has-sun::before {
+  content: "";
+  position: absolute;
+  inset: -8% -8% auto auto;
+  width: 60%;
+  height: 80%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 82% 18%,
+      rgba(255,215,90,.42) 0%,
+      rgba(255,215,90,.18) 38%,
+      rgba(255,215,90,.06) 66%,
+      rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right top / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: .35;
+  filter: brightness(1.05) saturate(1.06);
+}
