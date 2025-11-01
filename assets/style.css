@@ -547,29 +547,52 @@ a.btn-hero {
 /* a) sekce musí existovat v HTML těsně NAD <footer>:
    <section class="city-backdrop" aria-hidden="true"></section>
 */
+/* Spodní pás – rozostřená Ostrava s AVIF/WEBP/JPG */
 .city-backdrop{
   position: relative;
-  height: 260px;              /* klidně zvedni/uber (220–300) */
+  height: 260px;         /* 220–300px podle chuti */
   overflow: hidden;
   z-index: 0;
 }
 
-/* b) obrázek přes image-set (AVIF/WEBP/JPG) – používá tvůj soubor “ostrava@2x.avifwebp.jpg”.
-   Pokud bys chtěl standardní pojmenování, vytvoř si kopie:
-   - assets/img/ostrava.avif
-   - assets/img/ostrava.webp
-   - assets/img/ostrava.jpg
-   a ten image-set níže přepiš na ně. 
-*/
 .city-backdrop::before{
   content:"";
   position:absolute; inset:-10px;
   background-image: image-set(
-    url("assets/img/ostrava@2x.avifwebp.jpg") type("image/avif") 1x,
-    url("assets/img/ostrava@2x.avifwebp.jpg") type("image/webp") 1x,
-    url("assets/img/ostrava@2x.avifwebp.jpg") type("image/jpeg") 1x
+    url("assets/img/ostrava.avif") type("image/avif") 1x,
+    url("assets/img/ostrava.webp") type("image/webp") 1x,
+    url("assets/img/ostrava.jpg")  type("image/jpeg") 1x
   );
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;      /* hezké parallaxové „přilepení“ */
+  filter: blur(2.5px) brightness(.96) saturate(1.02);
+  opacity: .85;                       /* obrysy víc vidět */
+  transform: scale(1.05);
+  z-index:0;
+}
+
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.78) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.92) 0%, rgba(12,18,25,0) 55%);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* iOS Safari: vyhnout se background-attachment: fixed bugu */
+@supports (-webkit-touch-callout: none) {
+  .city-backdrop::before{ background-attachment: scroll; }
+}
+
+/* Preferuje-li uživatel méně efektů, uber blur */
+@media (prefers-reduced-motion: reduce){
+  .city-backdrop::before{ filter: blur(1.5px) brightness(.98) saturate(1.0); }
+}
+
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;      /* aby to “sedělo” na viewport */
