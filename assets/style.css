@@ -477,3 +477,16 @@ a.btn-hero {
 .toc summary{ color:#f3e9c4; }
 .toc a{ color:#e9eef5; }
 .toc a:hover{ color:#ffd75a; }
+@supports (background-image: image-set(url("x") type("image/avif"))) {
+  .city-backdrop::before{
+    background-image: image-set(
+      url("assets/img/ostrava.avif") type("image/avif"),
+      url("assets/img/ostrava.webp") type("image/webp"),
+      url("assets/img/ostrava.jpg") type("image/jpeg")
+    );
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
