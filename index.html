@@ -5,124 +5,74 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SolarSpace Carbon Cycle (SSCC)</title>
 
-  <!-- ====== VLOŽENÉ STYLY (můžeš kdykoli přesunout do assets/style.css) ====== -->
   <style>
     :root{
-      --bg:#0c1219;
-      --panel:#111823;
-      --panel-2:#0e141d;
-      --text:#e9eef5;
-      --muted:#aeb6c3;
-      --accent:#ffd75a;
-      --accent-soft:#ffeaa0;
-      --brand-outline:#f0cc54;
+      --bg:#0c1219; --panel:#111823; --panel-2:#0e141d;
+      --text:#e9eef5; --muted:#aeb6c3;
+      --accent:#ffd75a; --accent-soft:#ffeaa0;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-      color:var(--text);
-      background:var(--bg);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    a{color:var(--accent)}
-    a:hover{opacity:.9}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0; font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    a{color:var(--accent)} a:hover{opacity:.9}
 
-    /* ===== HEADER ===== */
-    .site-header{
-      position:sticky; top:0; z-index:100;
-      background:linear-gradient(180deg,#0e141d 0%, #0c1219 100%);
-      border-bottom:1px solid rgba(255,255,255,.06);
-      backdrop-filter: blur(6px);
-    }
-    .header-inner{
-      max-width:1200px; margin:0 auto; padding:10px 16px;
-      display:flex; align-items:center; gap:18px;
-    }
-    .brand-combo{display:flex; align-items:center; gap:12px; text-decoration:none}
-    .main-logo{height:44px; width:auto; border-radius:10px; border:1px solid rgba(255,215,90,.35); background:#141b26; padding:6px}
-    .brand-block{display:flex; flex-direction:column}
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,#0e141d 0%, #0c1219 100%);border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter: blur(6px)}
+    .header-inner{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:18px}
+    .brand-combo{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .main-logo{height:56px;width:auto;border-radius:10px;border:1px solid rgba(255,215,90,.35);background:#141b26;padding:6px}
+    .brand-block{display:flex;flex-direction:column}
     .brand-name{font-weight:700}
-    .brand-tagline{font-size:.9rem; color:var(--muted)}
-
+    .brand-tagline{font-size:.9rem;color:var(--muted)}
     .site-nav{margin-left:auto}
-    .site-nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
-    .site-nav a{color:var(--text); text-decoration:none}
+    .site-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .site-nav a{color:var(--text);text-decoration:none}
     .site-nav a:hover{color:var(--accent)}
+    .lang-switch{margin-left:16px;color:var(--muted)}
+    .lang-switch .lang{text-decoration:none;color:var(--muted)}
+    .lang-switch .active{color:#222;background:var(--accent);border-radius:6px;padding:2px 6px}
 
-    .lang-switch{margin-left:16px; color:var(--muted)}
-    .lang-switch .lang{text-decoration:none; color:var(--muted)}
-    .lang-switch .active{color:#222; background:var(--accent); border-radius:6px; padding:2px 6px}
+    /* Layout */
+    .container{max-width:1280px;margin:0 auto;padding:0 28px}
+    .home{position:relative;overflow:hidden}
+    .home__grid{display:grid;grid-template-columns:380px 1fr;column-gap:96px;align-items:start;padding:56px 0 24px}
+    .toc,.hero-copy{position:relative;z-index:1}
 
-    /* ===== HERO (grid: TOC vlevo + text vpravo) ===== */
-    .home{position:relative}
-    .hero-sun{
-      position: relative;
+    /* Obloha + slunce vpravo nahoře */
+    .hero-sky{
+      position:absolute;top:-10%;right:-10%;width:65%;height:70%;pointer-events:none;opacity:.9;
       background:
-        linear-gradient(180deg, rgba(10,14,20,.85) 0%, rgba(10,14,20,.88) 60%, rgba(10,14,20,.95) 100%),
-        url("assets/img/hero-sun.jpg") center 20% / cover no-repeat fixed;
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,.06);
+        radial-gradient(ellipse at 82% 10%, rgba(255,215,90,.55) 0%, rgba(255,215,90,.18) 38%, rgba(255,215,90,0) 68%),
+        url("assets/img/hero-sun.jpg") right top / 520px auto no-repeat;
+      filter:saturate(110%); z-index:0;
     }
-    .home__grid{
-      max-width:1200px; margin:0 auto; padding:36px 16px 0 16px;
-      display:grid; grid-template-columns: 360px 1fr; gap:32px;
-    }
-    .hero-sun__inner{position:relative; z-index:2; padding-bottom:10px}
 
-    .toc .accordion details{
-      background:linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;
-      margin-bottom:16px;
-      overflow:hidden;
-    }
-    .toc summary{
-      cursor:pointer; padding:14px 16px; list-style:none; user-select:none;
-      font-weight:700;
-    }
+    /* TOC */
+    .toc .accordion details{background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);border:1px solid rgba(255,255,255,.08);border-radius:12px;margin-bottom:16px;overflow:hidden}
+    .toc summary{cursor:pointer;padding:14px 16px;list-style:none;user-select:none;font-weight:700}
     .toc details[open] summary{border-bottom:1px solid rgba(255,255,255,.06)}
-    .toc ul{margin:0; padding:10px 16px; list-style:disc; color:var(--muted)}
-    .toc a{color:var(--text); text-decoration:none}
+    .toc ul{margin:0;padding:10px 16px;list-style:disc;color:var(--muted)}
+    .toc a{color:var(--text);text-decoration:none}
     .toc a:hover{color:var(--accent)}
 
-    /* NADPIS – menší a měkčí */
-    .hero-title{
-      font-size:clamp(26px, 4.5vw, 44px);
-      line-height:1.15;
-      margin:4px 0 14px 0;
-      font-weight:800;
-      color:#f7f1dc;                 /* teplý off-white, ne „křičící“ */
-      text-shadow:0 1px 0 rgba(0,0,0,.4);
-    }
-    .hero-tag{
-      display:inline-block;
-      font-size:clamp(16px, 2.5vw, 22px);
-      color:#ffeab0;
-      margin:0 0 8px 0;
-      font-weight:700;
-      letter-spacing:.2px;
-    }
-    .lead{color:var(--text); font-size:1.05rem; margin:12px 0 8px 0}
-    .hero-abstract{color:var(--muted); margin:8px 0 16px 0}
-    .cta-row{display:flex; gap:12px; margin:14px 0 6px 0}
-    .btn-hero{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:10px 16px; border-radius:28px; text-decoration:none; font-weight:700;
-      border:1px solid rgba(255,255,255,.12); background:#17202b; color:var(--text);
-    }
-    .btn-hero.btn-primary{
-      background:var(--accent); color:#1a1a1a; border-color:#f7d259;
-    }
-    .btn-hero:hover{transform:translateY(-1px); filter:brightness(1.03)}
+    /* Texty vpravo */
+    .eyebrow{display:block;font-size:15px;letter-spacing:.08em;color:#d8c587;margin-bottom:6px;font-weight:700;text-transform:uppercase}
+    .hero-title{font-size:44px;line-height:1.15;color:#f1e8c6;margin:0 0 16px;font-weight:800}
+    .lead{font-size:18px;color:#ced5de;margin:0 0 10px}
+    .hero-abstract{font-size:17px;color:#bfc6cf;margin:0 0 18px}
 
-    <style>
+    /* CTA */
+    .btn-hero{display:inline-block;padding:12px 18px;border-radius:24px;background:#ffd75a;color:#171b22;font-weight:700;text-decoration:none;margin-right:10px}
+    .btn-hero.btn-ghost{background:transparent;border:1px solid rgba(255,215,90,.45);color:#e8dfbf}
+
+    /* Spodní pás – Ostrava */
+    .city-backdrop{position:relative;height:220px;overflow:hidden;border-top:1px solid rgba(255,255,255,.06)}
+    .city-backdrop .img{position:absolute;inset:0;background:url("assets/img/ostrava.jpg") center bottom / cover no-repeat;filter:grayscale(55%) blur(3px) brightness(.9);transform:scale(1.06)}
+    .city-backdrop::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(14,18,24,1) 0%, rgba(14,18,24,.75) 55%, rgba(14,18,24,0) 100%)}
+  </style>
 </head>
 <body>
 
-  <!-- ===== HLAVIČKA ===== -->
+  <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html" aria-label="SSCC domů">
@@ -144,131 +94,81 @@
       </nav>
 
       <div class="lang-switch">
-        <a class="lang active" href="#" aria-current="true">CS</a> /
-        <a class="lang" href="#">EN</a>
+        <a class="lang active" href="#" aria-current="true">CS</a> / <a class="lang" href="#">EN</a>
       </div>
     </div>
   </header>
 
-  <!-- ===== HERO: rozcestník + text ===== -->
-  <section class="home hero-sun">
-    <div class="home__grid">
+  <!-- HERO (jediný) -->
+  <section class="home has-sky" id="home-hero">
+    <div class="hero-sky" aria-hidden="true"></div>
 
-      <!-- VLEVO: rozcestník (akordeon) -->
+    <div class="container home__grid">
+      <!-- VLEVO: rozcestník -->
       <aside class="toc">
         <div class="accordion" aria-label="Rychlá navigace">
           <details open>
             <summary>Projekty</summary>
-            <ul>
-              <li><a href="projekty.html">Všechny projekty</a></li>
-            </ul>
+            <ul><li><a href="projekty.html">Všechny projekty</a></li></ul>
           </details>
           <details>
             <summary>Edukace</summary>
-            <ul>
-              <li><a href="edukace.html">Úvod</a></li>
-            </ul>
+            <ul><li><a href="edukace.html">Úvod</a></li></ul>
           </details>
           <details>
             <summary>Nápady</summary>
-            <ul>
-              <li><a href="napady.html">Koncepty a návrhy</a></li>
-            </ul>
+            <ul><li><a href="napady.html">Koncepty a návrhy</a></li></ul>
           </details>
           <details>
             <summary>Konsorcium</summary>
-            <ul>
-              <li><a href="konsorcium.html">Členové a partneři</a></li>
-            </ul>
+            <ul><li><a href="konsorcium.html">Členové a partneři</a></li></ul>
           </details>
           <details>
             <summary>Spolupráce</summary>
-            <ul>
-              <li><a href="spoluprace.html">Zapojení & kontakty</a></li>
-            </ul>
+            <ul><li><a href="spoluprace.html">Zapojení & kontakty</a></li></ul>
           </details>
         </div>
       </aside>
- 
-      <!-- VPRAVO: text -->
-      <div class="hero-sun__inner">
-        <div class="hero-tag">Pilotní průmyslový projekt</div>
-        <h1 class="hero-title">SSCC: ze škodlivého na užitečné</h1>
 
-        <!-- Úvodní delší text – můžeš libovolně měnit -->
+      <!-- VPRAVO: text -->
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span class="eyebrow">Pilotní průmyslový projekt</span>
+          SSCC: ze škodlivého na užitečné
+        </h1>
+
         <p class="lead">
           Projekt SSCC reaguje na existenční tlak emisních povolenek a rostoucí ceny energií,
-          které ohrožují těžký průmysl v ČR – zejména ostravské hutě. Nabízíme pragmatickou
-          cestu: <strong>zachytit CO₂ z komínů</strong>, spojit jej s <strong>vodíkem vyrobeným
-          z obnovitelných zdrojů</strong> a převést na <strong>amoniak (NH₃)</strong>.
-          Ten může sloužit jako palivo pro vysokoteplotní procesy, jako zásobník energie
-          nebo surovina pro hnojiva.
+          které ohrožují těžký průmysl v&nbsp;ČR – zejména ostravské hutě. Nabízíme pragmatickou cestu:
+          <strong>zachytit CO<sub>2</sub> z&nbsp;komínů</strong>, spojit jej s&nbsp;<strong>vodíkem z&nbsp;obnovitelných zdrojů</strong>
+          a převést na <strong>amoniak (NH<sub>3</sub>)</strong>. Ten může sloužit jako palivo pro vysokoteplotní procesy
+          nebo jako hnojivo – tedy užitečný produkt místo zátěže.
         </p>
+
         <p class="hero-abstract">
-          Systém SSCC integruje fotovoltaiku (s akumulací), technologii zachytávání CO₂ (CCUS)
-          a elektrolýzu tak, aby <strong>lokálně snižoval emise o více než 90 %</strong>
-          a zároveň poskytoval průmyslu <em>použitelný produkt</em>. Pro region to znamená
-          čistější vzduch, zachování kvalifikovaných pracovních míst a menší závislost na
-          dovozu „špinavé“ oceli ze zahraničí. Pro podniky to jsou <strong>nižší provozní
-          náklady na emise</strong> a technická cesta, jak zvládnout Green Deal bez útlumu výroby.
+          Systém SSCC integruje fotovoltaiku (s akumulací), technologii zachytávání CO<sub>2</sub> (CCUS) a elektrolýzu tak,
+          aby <strong>lokálně snižoval emise o více než 90&nbsp;%</strong> a současně dával průmyslu použitelný produkt.
+          Pro region to znamená čistější vzduch, zachování kvalifikovaných pracovních míst a menší závislost na dovozu.
+          Pro podniky je to navíc <strong>nižší provozní náklad na emise</strong> a technická cesta, jak zvládnout Green Deal
+          bez útlumu výroby.
         </p>
+
         <div class="cta-row">
-          <a href="projekty.html" class="btn-hero btn-primary">Projekty</a>
-          <a href="spoluprace.html" class="btn-hero">Spolupráce</a>
+          <a href="projekty.html" class="btn-hero">Projekty</a>
+          <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
         </div>
-
-  </section>
-<!-- HERO (rozcestník vlevo + text vpravo) -->
-<section class="home has-sky">
-  <!-- dekorativní obloha + slunce vpravo nahoře -->
-  <div class="hero-sky" aria-hidden="true"></div>
-
-  <div class="container home__grid">
-    <!-- Levý rozcestník: ponech tvůj akordeon -->
-    <aside class="toc">
-      <!-- sem patří tvoje stávající <details>…</details> struktura rozcestníku -->
-      <!-- ... -->
-    </aside>
-
-    <!-- Pravý text -->
-    <div class="hero-copy">
-      <h1>
-        <span class="eyebrow">Pilotní průmyslový projekt</span>
-        SSCC: ze škodlivého na užitečné
-      </h1>
-
-      <p class="lead">
-        Projekt SSCC reaguje na existenční tlak emisních povolenek a rostoucí ceny energií,
-        které ohrožují těžký průmysl v&nbsp;ČR – zejména ostravské hutě. Nabízíme pragmatickou cestu:
-        <strong>zachytit CO<sub>2</sub> z&nbsp;komínů</strong>, spojit jej s&nbsp;<strong>vodíkem z&nbsp;obnovitelných zdrojů</strong>
-        a převést na <strong>amoniak (NH<sub>3</sub>)</strong>. Ten může sloužit jako palivo pro vysokoteplotní procesy
-        nebo jako hnojivo – tedy užitečný produkt místo zátěže.
-      </p>
-
-      <p class="hero-abstract">
-        Systém SSCC integruje fotovoltaiku (s akumulací), technologii zachytávání CO<sub>2</sub> (CCUS) a elektrolýzu tak,
-        aby <strong>lokálně snižoval emise o více než 90&nbsp;%</strong> a současně dával průmyslu použitelný produkt.
-        Pro region to znamená čistější vzduch, zachování kvalifikovaných pracovních míst a menší závislost na dovozu.
-        Pro podniky je to navíc <strong>nižší provozní náklad na emise</strong> a technická cesta, jak zvládnout Green Deal
-        bez útlumu výroby.
-      </p>
-
-      <div class="cta-row">
-        <a href="projekty.html" class="btn-hero">Projekty</a>
-        <a href="spoluprace.html" class="btn-hero btn-ghost">Spolupráce</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Rozostřená Ostrava jako „emoční“ spodní pás -->
-<section class="city-backdrop" aria-hidden="true">
-  <div class="img"></div>
-</section>
+  <!-- Spodní pás – rozostřená Ostrava -->
+  <section class="city-backdrop" aria-hidden="true">
+    <div class="img"></div>
+  </section>
 
-  <!-- ===== PATIČKA ===== -->
+  <!-- PATIČKA -->
   <footer class="site-footer">
-    <div class="footer-inner">
+    <div class="footer-inner container" style="display:flex;justify-content:space-between;gap:16px;padding:18px 0">
       <div class="footer-left">
         © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
         Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
@@ -282,5 +182,6 @@
       </nav>
     </div>
   </footer>
+
 </body>
 </html>
