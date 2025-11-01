@@ -247,3 +247,67 @@ a:hover{ opacity:.92; }
   .hero-title{ font-size: clamp(26px, 6.4vw, 36px); }
   .footer-inner{ font-size:.85rem; }
 }
+/* === FINISHING TOUCHES =============================================== */
+
+/* 1) Logo o chloupek výraznější na desktopu */
+@media (min-width: 1024px){
+  .main-logo{ height: 72px; }
+  .site-header .header-inner{ padding-top: 6px; padding-bottom: 6px; }
+}
+
+/* 2) Větší mezera mezi TOC a textem + příjemnější maximální šířka textu */
+@media (min-width: 1100px){
+  .home__grid{
+    grid-template-columns: 400px 1fr;   /* sidebar o chlup širší */
+    gap: 64px;                           /* víc vzduchu mezi sloupci */
+  }
+}
+.hero-copy{ max-width: 820px; }          /* netahá se do extrémní šířky */
+
+/* 3) TOC panely: o kapku světlejší a čitelnější */
+.toc .accordion details{
+  background: linear-gradient(180deg, #121a26 0%, #0f1620 100%);
+  border-color: rgba(255,255,255,.10);
+}
+.toc summary{ color:#f3e9c4; }
+.toc a{ color:#e9eef5; }
+.toc a:hover{ color:#ffd75a; }
+
+/* 4) Hrdina (hero): jistota, že za textem nic “nesvítí” */
+.hero-copy{ background: none; }
+
+/* 5) Spodní “Ostrava”: méně nápadná, ale viditelná */
+.city-backdrop{
+  position: relative;
+  height: 180px;           /* bylo víc – zjemníme */
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 8px;         /* malý rozestup od obsahu */
+}
+.city-backdrop::before{
+  content:"";
+  position:absolute; inset:-8px;
+  background-image: image-set(
+    url("assets/img/ostrava.avif") type("image/avif") 1x,
+    url("assets/img/ostrava.webp") type("image/webp") 1x,
+    url("assets/img/ostrava.jpg")  type("image/jpeg") 1x
+  );
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  /* Povol, pokud chceš parallax (někdy + blur můžou na slabších PC cukat) */
+  /* background-attachment: fixed; */
+  filter: blur(1.6px) brightness(.98) saturate(1.03);
+  opacity:.66;              /* mírnější než předtím */
+  transform: scale(1.03);
+  z-index:0;
+}
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.68) 26%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 50%);
+  pointer-events:none;
+  z-index:1;
+}
