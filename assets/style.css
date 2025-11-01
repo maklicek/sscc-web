@@ -252,3 +252,8 @@ a:hover{ opacity:.92; }
   .hero-title{ font-size: clamp(26px, 6.5vw, 36px); }
   .footer-inner{ font-size:.85rem; }
 }
+/* Header: robustní centrování NAV přes CSS Grid (spolehlivější než absolute) */
+.site-header .header-inner{ ... }
+...
+/* Patička – nízký vertikální padding */
+.footer-inner{ padding:8px 16px !important; }
