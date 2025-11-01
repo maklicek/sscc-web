@@ -1056,4 +1056,43 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
   border: 1px solid rgba(255, 215, 90, .45);
   color: #e8dfbf;
 }
+/* trochu kompaktnější, ale čitelné */
+.hero-title{
+  font-size: clamp(30px, 3.6vw, 42px);
+  color: #f3e9c4;
+  text-shadow: 0 1px 2px rgba(0,0,0,.25);
+  margin: 2px 0 14px;
+}
+.lead{ font-size: 18px; color:#dfe5ee; margin: 0 0 10px; }
+.hero-abstract{ font-size: 17px; color:#c3cbd6; margin-bottom: 22px; }
+.cta-row{ margin-top: 22px; }
+
+/* mřížka: ještě o krok víc prostoru */
+.home__grid{
+  max-width: 1260px;
+  column-gap: 128px;           /* bylo 120 */
+  padding: 58px 0 28px;
+}
+
+/* logo a „placka“ v hlavičce o fous výraznější */
+.main-logo{ height: 52px; }
+.city-backdrop{
+  position: relative;
+  height: 240px;               /* trochu vyšší */
+  border-top: 1px solid rgba(255,255,255,.06);
+  overflow: hidden;
+}
+.city-backdrop .img{
+  position:absolute; inset:0;
+  background: url("assets/img/ostrava.jpg") center bottom / cover no-repeat;
+  filter: grayscale(55%) blur(3px) brightness(.92);
+  transform: scale(1.06);
+}
+.city-backdrop::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(to top,
+    rgba(14,18,24,1) 0%,
+    rgba(14,18,24,.85) 40%,
+    rgba(14,18,24,0) 100%);
+}
 
