@@ -13,7 +13,7 @@ body{
   background:var(--bg); color:var(--ink);
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   line-height:1.5;
-  overflow-x:hidden;
+  overflow-x:hidden; 
 }
 a{color:#9da0ff; text-decoration:none}
 a:hover{color:var(--gold); text-shadow:0 0 8px rgba(255,226,120,.45)}
