@@ -708,3 +708,40 @@ a.btn-hero {
   pointer-events: none;
   z-index: 1;
 }
+/* Spodní rozostřená Ostrava */
+.city-backdrop {
+  position: relative;
+  height: 260px;             /* klidně uprav na 220–300px */
+  overflow: hidden;
+}
+
+.city-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  /* bezpečný fallback + moderní formáty, ale název JPG musí sedět */
+  background-image: image-set(
+    url("assets/img/ostrava.avif") type("image/avif") 1x,
+    url("assets/img/ostrava.webp") type("image/webp") 1x,
+    url("assets/img/ostrava.jpg")  type("image/jpeg") 1x
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  /* můžeš vypnout na iOS, ale desktopu nevadí */
+  filter: blur(2px) brightness(.98) saturate(1.04);
+  opacity: .86;
+  transform: scale(1.035);
+  z-index: 0;
+}
+
+.city-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.75) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,1) 0%, rgba(12,18,25,0) 45%);
+  pointer-events: none;
+  z-index: 1;
+}
