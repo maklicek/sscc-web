@@ -8,6 +8,26 @@
 </head>
 <body>
   <body class="with-sun">
+.with-sun{
+  position:relative;
+}
+.with-sun::before{
+  content:"";
+  position:fixed;
+  inset:-10% -10% 0 -10%;
+  background:
+    radial-gradient(ellipse at 78% 10%,
+      rgba(255,215,90,.30) 0%,
+      rgba(255,215,90,.14) 36%,
+      rgba(255,215,90,.06) 68%,
+      rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right top/cover no-repeat;
+  mix-blend-mode:screen;
+  opacity:.22;
+  filter:brightness(1.02) saturate(1.05);
+  pointer-events:none;
+  z-index:0;
+}
 
   <!-- HLAVIČKA -->
   <header class="site-header">
