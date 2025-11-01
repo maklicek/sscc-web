@@ -6,12 +6,6 @@
      jsou sloučeny sem.
    - Žádné <style> bloky už nemají být v HTML.
    ======================================================================== */
-.city-backdrop {
-  position: relative;
-  height: 260px;
-  background: url("assets/img/ostrava.jpg") center/cover no-repeat fixed;
-  border-top: 2px solid #f0cc54; /* test – aby bylo vidět, kde začíná */
-}
 
 /* -------------------------
    Design tokens (CSS vars)
@@ -193,6 +187,13 @@ a:hover{ opacity:.92; }
    Bottom „city backdrop“ (Ostrava)
    ------------------------- */
 /* Spodní pás: rozostřená Ostrava */
+.city-backdrop {
+  position: relative;
+  height: 260px;
+  background: url("assets/img/ostrava.jpg") center/cover no-repeat fixed;
+  border-top: 2px solid #f0cc54; /* test – aby bylo vidět, kde začíná */
+}
+
 .city-backdrop {
   position: relative;
   height: 240px;              /* výška pásu – klidně 220–280px podle chuti */
