@@ -976,3 +976,47 @@ a:hover{ opacity:.92; }
   pointer-events:none;
   z-index:1;
 }
+/* ==== SSCC – finální override pro Ostravu (vložit ÚPLNĚ NA KONEC CSS) ==== */
+
+/* 1) Vypnout jakékoliv staré „background“ přímo na .city-backdrop */
+.city-backdrop { background: none !important; }
+
+/* 2) Jediný zdroj Ostravy – dole, jemný pás */
+.city-backdrop{
+  position: relative;
+  height: 180px;           /* uprav klidně na 160–200 px podle oka */
+  overflow: hidden;
+  z-index: 0;
+}
+
+.city-backdrop::before{
+  content: "";
+  position: absolute; inset: -8px;
+  /* moderní formáty + fallback (nezapomeň, že soubory jsou v assets/img/) */
+  background-image: image-set(
+    url("assets/img/ostrava.avif") type("image/avif"),
+    url("assets/img/ostrava.webp") type("image/webp"),
+    url("assets/img/ostrava.jpg")  type("image/jpeg")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* NEpoužívat fixed – dělá neplechu s blurem na některých sestavách */
+  filter: blur(2px) brightness(.96) saturate(1.02);
+  opacity: .75;            /* jemnější, jen „naznačí“ */
+  transform: scale(1.03);
+  z-index: 0;
+}
+
+.city-backdrop::after{
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.70) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* (Volitelné) Pokud bys na titulce nechtěl žádné „slunce“, můžeš ho potichu stáhnout: */
+.hero-sun::before{ opacity: .20; }
