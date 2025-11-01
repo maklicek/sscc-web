@@ -1017,6 +1017,51 @@ a:hover{ opacity:.92; }
   pointer-events: none;
   z-index: 1;
 }
+/* ===== SSCC FINAL OVERRIDE (city backdrop) – PASTE AS THE VERY LAST LINES ===== */
+
+/* Zruší jakýkoli starý background přímo na .city-backdrop */
+.city-backdrop { background: none !important; }
+
+/* Jemný pás Ostravy jen dole */
+.city-backdrop{
+  position: relative !important;
+  height: 180px !important;      /* klidně 160–200 px, jak ti sedí */
+  overflow: hidden !important;
+  z-index: 0 !important;
+}
+
+.city-backdrop::before{
+  content: "" !important;
+  position: absolute !important;
+  inset: -8px !important;
+  /* Brutálně jednoduchý fallback bez image-set, aby nebyl prostor pro chybu cesty */
+  background: url("assets/img/ostrava.jpg") center/cover no-repeat !important;
+  /* Pokud chceš, až to bude OK, můžeš vrátit image-set */
+  /* background-image: image-set(
+      url("assets/img/ostrava.avif") type("image/avif"),
+      url("assets/img/ostrava.webp") type("image/webp"),
+      url("assets/img/ostrava.jpg")  type("image/jpeg")
+    ) !important; */
+
+  filter: blur(2px) brightness(.96) saturate(1.02) !important;
+  opacity: .75 !important;       /* jen „naznačení“ */
+  transform: scale(1.03) !important;
+  z-index: 0 !important;
+}
+
+.city-backdrop::after{
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.70) 28%, rgba(12,18,25,0) 60%),
+    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 50%) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* (Volitelné) Pokud je „slunce“ moc výrazné, klidně ho stáhni */
+.hero-sun::before{ opacity: .20 !important; }
 
 /* (Volitelné) Pokud bys na titulce nechtěl žádné „slunce“, můžeš ho potichu stáhnout: */
 .hero-sun::before{ opacity: .20; }
