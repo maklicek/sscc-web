@@ -1097,4 +1097,51 @@ main.page h1{font-size: clamp(1.6rem, 1.1rem + 2.2vw, 2.3rem); line-height:1.2; 
     rgba(14,18,24,.85) 40%,
     rgba(14,18,24,0) 100%);
 }
+.hero-sky {
+  position: absolute;
+  top: -10%;
+  right: -14%;
+  width: 70%;
+  height: 120%; /* bylo 78%, prodlouženo až ke spodní hraně */
+  opacity: 0.35;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 80% 25%,
+      rgba(255, 215, 90, 0.45) 0%,
+      rgba(255, 215, 90, 0.12) 40%,
+      rgba(255, 215, 90, 0.02) 75%,
+      rgba(255, 215, 90, 0) 100%
+    ),
+    url("assets/img/hero-sun.jpg") right bottom / cover no-repeat;
+  filter: brightness(1.05) saturate(105%);
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+.site-footer {
+  background: linear-gradient(180deg, #0e141d 0%, #0c1219 100%);
+  border-top: 1px solid rgba(255,255,255,.06);
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 16px; /* bylo cca 18px – zmenšeno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
 
