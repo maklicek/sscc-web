@@ -1331,4 +1331,102 @@ header, main, footer, .site-header, .site-footer {
   position: relative;
   z-index: 2;
 }
+/* ========== GLOBAL SUN & HEADER / TOC TUNING ========== */
+
+/* --- Přátelštější text v TOC (rozcestníku) --- */
+.toc summary {
+  color: #f1f4fa;
+}
+.toc ul {
+  color: #c5ccda;
+}
+.toc a { color: #e7ecf7; }
+.toc a:hover { color: #ffd75a; }
+
+/* --- Posun TOC víc vlevo, víc vzduchu v gridu --- */
+.home__grid {
+  max-width: 1280px;
+  padding-left: 20px;           /* blíž k levému okraji */
+  grid-template-columns: 340px 1fr; /* o chlup širší levý sloupec */
+  gap: 56px;
+}
+
+/* --- Hlavička: logo vlevo, menu uprostřed --- */
+.site-header .header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* [logo] [nav] [jazyk] */
+  align-items: center;
+  gap: 20px;
+  max-width: 1280px;           /* držíme hezkou šířku */
+}
+
+.site-header .brand-combo {
+  justify-self: start;         /* logo nalevo */
+}
+.site-header .main-logo {
+  height: 64px;                /* větší logo */
+  border-radius: 12px;
+}
+
+.site-header .site-nav {
+  justify-self: center;        /* navigace na střed */
+}
+.site-header .site-nav ul {
+  gap: 24px;                   /* trochu víc rozestupy */
+}
+
+.site-header .lang-switch {
+  justify-self: end;           /* přepínač jazyka vpravo */
+}
+
+/* --- Globální slunce: je všude... --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -15% -10% -30% -10%;  /* roztažení přes viewport, dolů víc */
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 85% 18%,
+      rgba(255,215,90,.48) 0%,
+      rgba(255,215,90,.22) 40%,
+      rgba(255,215,90,.08) 68%,
+      rgba(255,215,90,0) 100%),
+    url("assets/img/hero-sun.jpg") right -12% / cover no-repeat;
+  mix-blend-mode: screen;
+  filter: brightness(1.06) saturate(1.06);
+  opacity: .38;
+}
+
+/* ...ale na titulní straně ho jednoduše vypneme touto třídou */
+body.no-sun::before {
+  display: none;
+}
+
+/* --- aby obsah byl vždy nad „sluncem“ --- */
+.site-header,
+.home,
+.page,
+.city-backdrop,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- RWD drobnosti --- */
+@media (max-width: 1024px) {
+  .site-header .main-logo { height: 56px; }
+  .home__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .site-header .header-inner {
+    grid-template-columns: auto 1fr auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .site-header .site-nav ul { gap: 18px; }
+}
 
