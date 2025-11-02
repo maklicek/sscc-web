@@ -3,39 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Consortium | SSCC</title>
-  <meta name="description" content="Information for partners, research teams and companies involved in the SSCC Initiative.">
-
-  <!-- Favicons -->
+  <meta name="description" content="Information for partners, research teams and companies involved in the SSCC initiative.">
   <link rel="icon" href="favicons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- Language alternates -->
   <link rel="alternate" hreflang="en" href="consortium.html">
   <link rel="alternate" hreflang="cs" href="konsorcium.html">
-
-  <!-- Unified CSS -->
   <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
       <a class="brand-combo" href="index-en.html" aria-label="SSCC Home">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
+        <div class="logo-frame"><img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo"></div>
+        <div class="brand-block"><div class="brand-name">SSCC</div><div class="brand-tagline">SolarSpace Carbon Cycle</div></div>
       </a>
-
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
           <li><a href="projects.html">Projects</a></li>
@@ -45,74 +30,56 @@
           <li><a href="cooperation.html">Cooperation</a></li>
         </ul>
       </nav>
-
       <div class="lang-switch" aria-label="Language">
-        <a class="lang" href="konsorcium.html">CS</a>
-        <span class="sep">|</span>
+        <a class="lang" href="konsorcium.html">CS</a><span class="sep">|</span>
         <a class="lang active" href="consortium.html" aria-current="true">EN</a>
       </div>
     </div>
   </header>
 
-  <!-- CONTENT -->
   <main class="page has-sun">
-    <h1 class="hero-title">SSCC Consortium</h1>
-    <p class="lead">A collaboration platform linking research, industry and regional innovation in decarbonization and green ammonia synthesis.</p>
+    <h1 class="hero-title">Consortium</h1>
+    <p class="lead">Information for partners, research teams and companies involved in SSCC.</p>
 
-    <section class="projects-list" aria-label="Consortium sections">
-      <article class="project-card">
-        <h2 class="project-title">Consortium Members</h2>
-        <p class="project-desc">Academic, research and industrial partners involved in the SSCC Initiative.</p>
+    <section class="cards-grid">
+      <article class="card">
+        <h2 class="card-title">Consortium members</h2>
+        <p class="card-desc">Overview of partners, competencies and roles in projects.</p>
       </article>
-
-      <article class="project-card">
-        <h2 class="project-title">Coordination & Management</h2>
-        <p class="project-desc">Organizational structure, project management, shared repositories and data access.</p>
+      <article class="card">
+        <h2 class="card-title">Materials for partners</h2>
+        <p class="card-desc">NDAs, abstracts, technical sheets and shared documents.</p>
       </article>
-
-      <article class="project-card">
-        <h2 class="project-title">Joint Objectives</h2>
-        <p class="project-desc">Decarbonization, CO₂ utilization, energy innovation and education support.</p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title">Partner Materials</h2>
-        <p class="project-desc">Cooperation agreements, NDAs, presentations and internal documentation.</p>
+      <article class="card">
+        <h2 class="card-title">Pilots & testing</h2>
+        <p class="card-desc">Options to participate in pilot units and real-world testing.</p>
       </article>
     </section>
 
     <section class="section-cta">
-      <h2>Contact us</h2>
-      <p>Would you like to join the consortium or share your research results?</p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Contact the coordinator</a></p>
+      <h2>Want to join?</h2>
+      <p>We welcome industrial partners, universities and research teams. Tell us what role you’d like to take.</p>
+      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">🧩 Request to join</a></p>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Designed & maintained by SSCC Consortium · Powered by clean energy ✶
-      </div>
+      <div class="footer-left">© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Designed & maintained by SSCC Consortium · Powered by clean energy ✶</div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="projects.html">Projects</a> ·
-        <a href="education.html">Education</a> ·
-        <a href="ideas.html">Ideas</a> ·
-        <a href="consortium.html" aria-current="page">Consortium</a> ·
-        <a href="cooperation.html">Cooperation</a>
+        <a href="projects.html">Projects</a> · <a href="education.html">Education</a> · <a href="ideas.html">Ideas</a> · <a href="consortium.html" aria-current="page">Consortium</a> · <a href="cooperation.html">Cooperation</a>
       </nav>
     </div>
   </footer>
 
   <script>
-    (() => {
-      const here = location.pathname.split('/').pop() || 'index-en.html';
-      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-      });
-    })();
+  (() => {
+    const here = location.pathname.split('/').pop() || 'consortium.html';
+    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+      const href = a.getAttribute('href'); if (!href) return;
+      if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
+    });
+  })();
   </script>
 </body>
 </html>
