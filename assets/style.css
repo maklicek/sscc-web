@@ -46,42 +46,40 @@ a:hover{ opacity:.92; }
 /* -------------------------
    Header
    ------------------------- */
-.site-header{
-  position:sticky; top:0; z-index:100;
-  background: linear-gradient(180deg, rgba(14,20,29,.95) 0%, rgba(12,18,25,.75) 100%);
-  border-bottom: 1px solid var(--ui-border-soft);
-  backdrop-filter: blur(6px);
-}
-.header-inner{
-  max-width:var(--wrap);
-  margin:0 auto;
-  padding:10px 10px;
-  display:grid;
-  grid-template-columns:auto 1fr auto;  /* logo | nav | jazyk */
-  align-items:center;
-  gap:16px;
-}
-.brand-combo{ display:flex; align-items:center; gap:12px; }
-.main-logo{
-  height:78px;
-  width:auto;
-  border-radius:12px;
-  border:1px solid rgba(255,215,90,.35);
-  background:#141b26; padding:8px;
-  box-shadow: 0 0 10px rgba(255, 225, 120, 0.22);
-}
-.brand-block{ display:flex; flex-direction:column; }
-.brand-name{ font-weight:800; letter-spacing:.1px; }
-.brand-tagline{ font-size:.9rem; color:var(--muted); }
+<header class="site-header">
+  <div class="header-inner container">
 
-.site-nav{ justify-self:center; }
-.site-nav ul{ margin:0; padding:0; list-style:none; display:flex; gap:22px; }
-.site-nav a{ color:inherit; font-weight:600; }
-.site-nav a:hover{ color:var(--accent); }
+    <!-- Logo + název -->
+    <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+      <div class="logo-frame">
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+      </div>
+      <div class="brand-block">
+        <div class="brand-name">SSCC</div>
+        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+      </div>
+    </a>
 
-.lang-switch{ color:var(--muted); }
-.lang-switch .lang{ color:inherit; }
-.lang-switch .active{ background:var(--accent); color:#222; padding:2px 6px; border-radius:6px; }
+    <!-- Navigace -->
+    <nav class="site-nav" aria-label="Hlavní navigace">
+      <ul>
+        <li><a href="projekty.html">Projekty</a></li>
+        <li><a href="edukace.html">Edukace</a></li>
+        <li><a href="napady.html">Nápady</a></li>
+        <li><a href="konsorcium.html">Konsorcium</a></li>
+        <li><a href="spoluprace.html">Spolupráce</a></li>
+      </ul>
+    </nav>
+
+    <!-- Přepínač jazyků -->
+    <div class="lang-switch" aria-label="Jazyk">
+      <a href="index.html" class="lang active" aria-current="true">CS</a>
+      <span class="sep">/</span>
+      <a href="index-en.html" class="lang">EN</a>
+    </div>
+
+  </div>
+</header>
 
 /* -------------------------
    Home (sidebar + obsah)
