@@ -61,13 +61,18 @@ a:hover{ opacity:.92; }
   gap:16px;
 }
 .brand-combo{ display:flex; align-items:center; gap:12px; }
+/* LOGO – větší, bez rámu a pozadí */
 .main-logo{
-  height:78px; width:auto;
-  border-radius:12px; padding:8px;
-  border:1px solid rgba(255,215,90,.35);
-  background:#141b26;
-  box-shadow:0 0 10px rgba(255,225,120,.22);
+  height:96px;        /* zvětšeno z 78px */
+  width:auto;
+  padding:0;          /* žádný vnitřní okraj */
+  border:none;        /* bez obrysu */
+  background:transparent;
+  box-shadow:none;
 }
+@media (max-width:1100px){ .main-logo{ height:84px; } }
+@media (max-width:640px){  .main-logo{ height:72px; } }
+
 .brand-block{ display:flex; flex-direction:column; }
 .brand-name{ font-weight:800; letter-spacing:.1px; }
 .brand-tagline{ font-size:.9rem; color:var(--muted); }
