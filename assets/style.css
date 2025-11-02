@@ -218,7 +218,7 @@ a:hover{ opacity:.92; }
 @media (min-width: 1500px){
   .home__grid{
     grid-template-columns: 400px 1fr;   /* sidebar o chlup širší */
-    gap: 84px;                           /* víc vzduchu mezi sloupci */
+    gap: 94px;                           /* víc vzduchu mezi sloupci */
   }
 }
 .hero-copy{ max-width: 820px; }          /* netahá se do extrémní šířky */
