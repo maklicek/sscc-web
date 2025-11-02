@@ -3,141 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="SolarSpace Carbon Cycle (SSCC): decentralized green ammonia (NH₃) synthesis and CO₂ capture.">
-
-  <!-- Favicons -->
+  <title>Ideas | SSCC</title>
+  <meta name="description" content="Concepts suitable for experiments, simulations or pilot verification within SSCC.">
   <link rel="icon" href="favicons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- Language alternates -->
-  <link rel="alternate" hreflang="en" href="index-en.html">
-  <link rel="alternate" hreflang="cs" href="index.html">
-
-  <!-- Single global CSS -->
+  <link rel="alternate" hreflang="en" href="ideas.html">
+  <link rel="alternate" hreflang="cs" href="napady.html">
   <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
       <a class="brand-combo" href="index-en.html" aria-label="SSCC Home">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
+        <div class="logo-frame"><img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo"></div>
+        <div class="brand-block"><div class="brand-name">SSCC</div><div class="brand-tagline">SolarSpace Carbon Cycle</div></div>
       </a>
-
       <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li class="has-sub">
-            <a href="projects.html">Projects</a>
-            <ul class="submenu" aria-label="Projects submenu">
-              <li><a href="projects.html#orbit">Orbital solar farm</a></li>
-              <li><a href="projects.html#co2">CO₂ as a working fluid</a></li>
-              <li><a href="projects.html#nh3">Carbon-negative ammonia</a></li>
-            </ul>
-          </li>
+          <li><a href="projects.html">Projects</a></li>
           <li><a href="education.html">Education</a></li>
-          <li><a href="ideas.html">Ideas</a></li>
+          <li><a href="ideas.html" class="active" aria-current="page">Ideas</a></li>
           <li><a href="consortium.html">Consortium</a></li>
           <li><a href="cooperation.html">Cooperation</a></li>
         </ul>
       </nav>
-
       <div class="lang-switch" aria-label="Language">
-        <a class="lang" href="index.html">CS</a>
-        <span class="sep">|</span>
-        <a class="lang active" href="index-en.html" aria-current="true">EN</a>
+        <a class="lang" href="napady.html">CS</a><span class="sep">|</span>
+        <a class="lang active" href="ideas.html" aria-current="true">EN</a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main id="main" class="home has-sun">
-    <div class="home__grid">
-      <!-- Left: quick nav -->
-      <aside class="toc" aria-label="Quick navigation">
-        <div class="accordion">
-          <details open>
-            <summary>Projects</summary>
-            <ul><li><a href="projects.html">All projects</a></li></ul>
-          </details>
-          <details>
-            <summary>Education</summary>
-            <ul><li><a href="education.html">Overview</a></li></ul>
-          </details>
-          <details>
-            <summary>Ideas</summary>
-            <ul><li><a href="ideas.html">Concepts & proposals</a></li></ul>
-          </details>
-          <details>
-            <summary>Consortium</summary>
-            <ul><li><a href="consortium.html">Members & partners</a></li></ul>
-          </details>
-          <details>
-            <summary>Cooperation</summary>
-            <ul><li><a href="cooperation.html">Get involved & contacts</a></li></ul>
-          </details>
-        </div>
-      </aside>
+  <main class="page has-sun">
+    <h1 class="hero-title">Ideas & Concepts</h1>
+    <p class="lead">Proposals suitable for experiments, simulations or pilot verification — aiming at carbon neutrality and local industrial innovation.</p>
 
-      <!-- Right: hero -->
-      <section class="hero-copy">
-        <p class="hero-tag">Pilot industrial project</p>
-        <h1 class="hero-title">SSCC: turning harmful into useful</h1>
+    <section class="projects-list" aria-label="Idea list">
+      <article class="project-card">
+        <h2 class="project-title">Central DAC for small cities</h2>
+        <p class="project-desc">Scalable CO₂ capture and NH₃ synthesis for district heating.</p>
+      </article>
 
-        <p class="lead">
-          Capture <strong>CO<sub>2</sub></strong> from stacks, combine with <strong>H<sub>2</sub></strong> from renewables
-          and convert to <strong>NH<sub>3</sub></strong> — a fuel and fertilizer. Cleaner air, lower emission costs,
-          technology over shutdowns.
-        </p>
+      <article class="project-card">
+        <h2 class="project-title">Rectenna field</h2>
+        <p class="project-desc">Safe reception of beamed energy from satellites; efficiency and safety zones.</p>
+      </article>
 
-        <p class="hero-abstract">
-          An integrated system of photovoltaics (with storage), CCUS and electrolysis to reduce local emissions
-          by &gt;90% and create a useful product. Goal: retain skilled manufacturing in the region.
-        </p>
+      <article class="project-card">
+        <h2 class="project-title">Energy storage in NH₃</h2>
+        <p class="project-desc">Seasonal store — converting RES surplus to ammonia and back to heat/electricity.</p>
+      </article>
 
-        <div class="cta-row">
-          <a href="projects.html" class="btn-hero btn-primary">Projects</a>
-          <a href="cooperation.html" class="btn-hero">Cooperation</a>
-        </div>
-      </section>
-    </div>
+      <article class="project-card">
+        <h2 class="project-title">CO₂ heat pumps for industry</h2>
+        <p class="project-desc">High-temperature heat pumps with CO₂ to utilize waste heat.</p>
+      </article>
+    </section>
+
+    <section class="section-cta">
+      <h2>Would you like to develop one of the ideas?</h2>
+      <p>Tell us which concept interests you and what capacity you have (research, prototype, pilot).</p>
+      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">💡 Propose collaboration</a></p>
+    </section>
   </main>
 
-  <!-- Optional city backdrop -->
-  <section class="city-backdrop" aria-hidden="true"></section>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Designed & maintained by SSCC Consortium · Powered by clean energy ✶
-      </div>
+      <div class="footer-left">© 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Designed & maintained by SSCC Consortium · Powered by clean energy ✶</div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="projects.html">Projects</a> ·
-        <a href="education.html">Education</a> ·
-        <a href="ideas.html">Ideas</a> ·
-        <a href="consortium.html">Consortium</a> ·
-        <a href="cooperation.html">Cooperation</a>
+        <a href="projects.html">Projects</a> · <a href="education.html">Education</a> · <a href="ideas.html" aria-current="page">Ideas</a> · <a href="consortium.html">Consortium</a> · <a href="cooperation.html">Cooperation</a>
       </nav>
     </div>
   </footer>
 
-  <!-- Active link highlighter -->
   <script>
   (() => {
-    const here = location.pathname.split('/').pop() || 'index-en.html';
+    const here = location.pathname.split('/').pop() || 'ideas.html';
     document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
       const href = a.getAttribute('href'); if (!href) return;
       if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
