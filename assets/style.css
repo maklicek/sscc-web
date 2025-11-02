@@ -167,7 +167,7 @@ a:hover{ opacity:.92; }
       rgba(255,215,90,0) 100%),
     url("assets/img/hero-sun.jpg") right top/cover no-repeat;
   mix-blend-mode:screen;
-  opacity:.26;
+  opacity:.36;
   filter:brightness(1.05) saturate(1.06);
   z-index:0;
 }
@@ -187,10 +187,6 @@ a:hover{ opacity:.92; }
 .footer-links a{ color:var(--muted); }
 .footer-links a:hover{ color:var(--accent); }
 
-/* -------------------------
-   Utilities
-   ------------------------- */
-.container{ max-width:var(--wrap); margin:0 auto; }
 
 /* -------------------------
    Responsive
