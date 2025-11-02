@@ -326,13 +326,13 @@ a:hover{ opacity:.92; }
 .brand-combo:focus-visible .main-logo{
   box-shadow: 0 0 22px rgba(255,215,90,.25);
 }
-/* Hlavička – jemnější přechod + decentní linka dole */
+/* HLAVIČKA – světlejší a čitelnější */
 .site-header{
-  position: sticky; top: 0; z-index: 100;
-  background:
-    linear-gradient(180deg, rgba(13,19,28,.92) 0%, rgba(13,19,28,.78) 60%, rgba(13,19,28,.68) 100%);
-  border-bottom: 1px solid var(--ui-border-soft);
-  backdrop-filter: blur(6px);
+  position:sticky; top:0; z-index:1000;
+  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
+  border-bottom:1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(6px) saturate(1.06);
+  box-shadow: 0 10px 22px rgba(0,0,0,.24);
 }
 
 /* Footer – světlejší panel */
@@ -342,8 +342,14 @@ a:hover{ opacity:.92; }
   border-top:1px solid rgba(255,255,255,.10);
   color: var(--muted);
 }
-.site-footer .footer-links a{ color:var(--text); }
-.site-footer .footer-links a:hover{ color:var(--accent); }
+/* HLAVIČKA – světlejší a čitelnější */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
+  border-bottom:1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(6px) saturate(1.06);
+  box-shadow: 0 10px 22px rgba(0,0,0,.24);
+}
 
 /* Dropdown v hlavním menu */
 .site-nav ul { position: relative; }
