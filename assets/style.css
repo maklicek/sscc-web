@@ -302,14 +302,17 @@ a:hover{ opacity:.92; }
 /* Logo – větší, čitelnější, bez “rámečkového” dojmu */
 .logo-frame{ display:flex; align-items:center; }
 .main-logo{
-  height: clamp(76px, 9vw, 116px);   /* škáluje, ale drží rozumný strop */
-  width: auto;
-  border-radius: 14px;
-  padding: 6px 8px;
-  border: none;                      /* pryč tenká linka = méně “rámeček” */
-  background: transparent;           /* žádná tmavá ploška za logem */
-  box-shadow: 0 0 0 rgba(0,0,0,0);   /* default bez stínu */
+  height: 92px;           /* z 78 na 92–96 podle chuti */
+  padding: 6px;           /* menší vnitřní okraj */
+  border-radius: 12px;
+  border: 1px solid rgba(255,215,90,.25); /* jemnější */
+  box-shadow: 0 0 8px rgba(255,225,120,.18);
+  background: #141b26;
 }
+@media (max-width: 720px){
+  .main-logo{ height: 68px; }
+}
+
 .brand-block .brand-name{ font-weight: 800; }
 .brand-block .brand-tagline{ color: var(--muted); }
 
