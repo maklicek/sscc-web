@@ -221,7 +221,7 @@ a:hover{ opacity:.92; }
 /* 2) Větší mezera mezi TOC a textem + příjemnější maximální šířka textu */
 @media (min-width: 1100px){
   .home__grid{
-    grid-template-columns: 400px 1fr;   /* sidebar o chlup širší */
+    grid-template-columns: 600px 1fr;   /* sidebar o chlup širší */
     gap: 64px;                           /* víc vzduchu mezi sloupci */
   }
 }
@@ -244,7 +244,7 @@ a:hover{ opacity:.92; }
 /* === OSTRAVA: jediná autoritativní verze (FIX) ======================= */
 .city-backdrop{
   position: relative;
-  height: 200px;            /* můžeš zvednout na 220–280px podle chuti */
+  height: 240px;            /* můžeš zvednout na 220–280px podle chuti */
   overflow: hidden;
   z-index: 0;               /* pod obsahem stránky */
 }
@@ -280,21 +280,5 @@ a:hover{ opacity:.92; }
   pointer-events: none;
   z-index: 1;
 }
-/* === OSTRAVA – testovací, jednoduchá verze === */
-.city-backdrop{
-  position: relative;
-  height: 240px;             /* klidně změň na 220–300px */
-  overflow: hidden;
-  z-index: 0;
-  background: url("assets/img/ostrava.jpg") center / cover no-repeat; /* jednoduchý fallback */
-}
 
-/* jemné přizdění přechodem (volitelné) */
-.city-backdrop::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to top, rgba(12,18,25,.95) 0%, rgba(12,18,25,.6) 30%, rgba(12,18,25,0) 65%);
-  pointer-events:none;
-}
-.city-backdrop{ background: #e63946; }
+
