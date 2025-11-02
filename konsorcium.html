@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Konsorcium | SSCC</title>
-<h1>konsorcium</h1>
-<p class="lead">Informace pro partnery, výzkumné týmy a společnosti zapojené do projektu.</p>
-<link rel="stylesheet" href="assets/style.css?v=a711e3c">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spolupráce a dokumenty pro partnery projektů</title>
-<meta name="description" content="Decentralizovaná syntéza zeleného amoniaku (NH₃) a zachytávání CO₂.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="icon" href="favicons/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-<link rel="manifest" href="favicons/site.webmanifest">
+  <title>Konsorcium | SSCC</title>
+  <meta name="description" content="Informace pro partnery, výzkumné týmy a společnosti zapojené do iniciativy SSCC.">
 
-<link rel="alternate" hreflang="cs" href="index.html">
-<link rel="alternate" hreflang="en" href="index-en.html">
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
 
-<link rel="stylesheet" href="assets/style.css?v=a711e3c">
+  <!-- Jazykové varianty této stránky -->
+  <link rel="alternate" hreflang="cs" href="konsorcium.html">
+  <link rel="alternate" hreflang="en" href="consortium.html">
 
- 
+  <!-- Jediné globální CSS -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
 </head>
 <body>
-  <body class="with-sun">
 
+  <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
+      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+        <img class="main-logo" src="assets/img/sscc-logo.jpg" alt="SSCC logo">
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
 
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
@@ -46,48 +42,4 @@
           <li><a href="konsorcium.html" class="active" aria-current="page">Konsorcium</a></li>
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
-      </nav>
-
-      <div class="lang-switch">
-        <a class="lang active" href="#">CS</a> /
-        <a class="lang" href="#">EN</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="page">
-    <h1>Konsorcium</h1>
-    <p class="lead">Instituce, firmy a týmy zapojené do iniciativy SSCC.</p>
-
-    <section>
-      <h2>Členové konsorcia</h2>
-      <p>Zde může být přehled partnerů, loga nebo mapy spoluprací.</p>
-    </section>
-    <main id="main" class="page">
-  …
-</main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Powered by clean energy ✶
-    </div>
-  </footer>
-  <!-- vložte těsně před </body> na všech stránkách -->
-<script>
-(() => {
-  const here = location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.site-nav a');
-  navLinks.forEach(a => {
-    const href = a.getAttribute('href');
-    if (!href) return;
-    const same = (href === here) || (here === 'index.html' && href === 'index.html');
-    if (same) {
-      a.classList.add('active');
-      a.setAttribute('aria-current', 'page');
-    }
-  });
-})();
-</script>
-
-</body>
-</html>
+      <
