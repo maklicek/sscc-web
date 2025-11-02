@@ -21,11 +21,27 @@
   <!-- Jediné globální CSS (cache-buster) -->
   <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
+  <script>
+(() => {
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+    const same = href === here || (here === 'index.html' && href === 'index.html');
+    if (same) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+})();
+</script>
+
 <body class="with-sun">
 
   <!-- HLAVIČKA -->
   <header class="site-header">
-    <div class="header-inner">
+   <div class="header-inner container">
+
       <a class="brand-combo" href="index.html" aria-label="SSCC domů">
         <div class="logo-frame">
           <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
