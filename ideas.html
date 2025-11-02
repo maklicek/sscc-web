@@ -1,123 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/svg+xml" href="assets/sscc-logo.svg">
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ideas — SSCC</title>
-  <!-- 🌐 Open Graph / Twitter meta tags (EN version) -->
-<meta property="og:title" content="SolarSpace Carbon Cycle (SSCC)">
-<meta property="og:description" content="Decentralized synthesis of green ammonia (NH₃) and CO₂ capture — energy from carbon, cycled by the Sun.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://maklicek.github.io/sscc-web/index-en.html">
-<meta property="og:image" content="https://maklicek.github.io/sscc-web/assets/hero-bg.png">
-<meta property="og:site_name" content="SSCC Initiative">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SolarSpace Carbon Cycle (SSCC)">
-<meta name="twitter:description" content="Decentralized synthesis of green NH₃ and CO₂ capture — energy from carbon, cycled by the Sun.">
-<meta name="twitter:image" content="https://maklicek.github.io/sscc-web/assets/hero-bg.png">
-<link rel="preload" href="style.css?v=16" as="style">
-<link rel="stylesheet" href="style.css?v=100">
+  <title>Ideas | SSCC</title>
+  <meta name="description" content="Concepts and proposals within the SolarSpace Carbon Cycle (SSCC) — decentralized synthesis of green ammonia (NH₃) and CO₂ capture." />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+
+  <!-- Alternate languages -->
+  <link rel="alternate" hreflang="en" href="ideas.html">
+  <link rel="alternate" hreflang="cs" href="napady.html">
+
+  <!-- Unified global stylesheet -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
-<body>
- <header class="site-header">
-  <div class="container header-inner">
+<body class="with-sun">
 
-    <!-- LEVÁ STRANA: logo + název -->
-    <a class="brand-combo" href="index.html">
-      <div class="logo-frame">
-        <img
-          class="main-logo"
-          src="assets/img/sscc-logo.jpg"
-          alt="SSCC logo"
-        />
-      </div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand-combo" href="index-en.html" aria-label="SSCC home">
+        <div class="logo-frame">
+          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+        </div>
+        <div class="brand-block">
+          <div class="brand-name">SSCC</div>
+          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        </div>
+      </a>
 
-      <div class="brand-block">
-        <div class="brand-name">SSCC</div>
-        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-      </div>
-    </a>
-
-    <!-- PRAVÁ STRANA: menu + jazyk -->
-    <div class="header-rightside">
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="projekty.html">Projekty</a></li>
-          <li><a href="edukace.html">Edukace</a></li>
-          <li><a href="napady.html">Nápady</a></li>
-          <li><a href="konsorcium.html">Konsorcium</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="ideas.html" class="active" aria-current="page">Ideas</a></li>
+          <li><a href="consortium.html">Consortium</a></li>
+          <li><a href="cooperation.html">Cooperation</a></li>
         </ul>
       </nav>
 
-      <div class="lang-switch">
-        <a href="index.html" class="lang active">CZ</a>
+      <div class="lang-switch" aria-label="Language">
+        <a class="lang" href="napady.html">CS</a>
         <span class="sep">|</span>
-        <a href="index-en.html" class="lang">EN</a>
+        <a class="lang active" href="ideas.html" aria-current="true">EN</a>
       </div>
-
-      <button class="nav-toggle" aria-label="Menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
     </div>
+  </header>
 
-  </div>
-</header>
+  <!-- MAIN CONTENT -->
+  <main class="page has-sun">
+    <h1 class="hero-title">Ideas & Concepts</h1>
+    <p class="lead">
+      Proposals for new technologies, processes, and pilot systems within the SSCC initiative —
+      focused on carbon neutrality and local industrial innovation.
+    </p>
 
-    <!-- VPRAVO: navigace -->
-    <nav class="site-nav">
-      <a href="projekty.html">Projekty</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="napady.html">Nápady</a>
-      <a href="konsorcium.html">Konsorcium</a>
+    <section class="projects-list">
+      <article class="project-card">
+        <h2 class="project-title">Hybrid CO₂ → NH₃ Reactor</h2>
+        <p class="project-desc">
+          A combined plasma–electrocatalytic system for converting CO₂ and N₂ with renewable H₂.
+        </p>
+      </article>
 
-      <span class="lang-group">
-        <a href="index.html" class="lang">CZ</a>
-        <span class="sep">|</span>
-        <a href="index-en.html" class="lang">EN</a>
-      </span>
-    </nav>
-  </div>
-</header>
+      <article class="project-card">
+        <h2 class="project-title">Solar Thermal Carbon Loop</h2>
+        <p class="project-desc">
+          High-temperature reactors using concentrated sunlight to recycle carbon and produce syngas.
+        </p>
+      </article>
 
-</footer>
-<footer><div class="container">© SSCC Initiative — 2025</div></footer>
-  <header class="site-header">
-  <div class="header-inner">
+      <article class="project-card">
+        <h2 class="project-title">Micro-Ammonia Modules</h2>
+        <p class="project-desc">
+          Modular container-scale synthesis units for agricultural and research use.
+        </p>
+      </article>
+    </section>
+  </main>
 
-    <!-- LEVÁ STRANA: logo + název -->
-    <a class="brand-combo" href="index.html">
-      <img
-        class="main-logo"
-        src="assets/img/sscc-logo.jpg"
-        alt="SSCC logo"
-      />
-      <div class="brand-block">
-        <div class="brand-name">SSCC</div>
-        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Designed & maintained by SSCC Consortium · Powered by clean energy ✶
       </div>
-    </a>
-
-    <!-- STŘED: hlavní menu -->
-    <nav class="site-nav">
-      <ul>
-        <li><a href="projekty.html">Projekty</a></li>
-        <li><a href="edukace.html">Edukace</a></li>
-        <li><a href="napady.html">Nápady</a></li>
-        <li><a href="konsorcium.html">Konsorcium</a></li>
-      </ul>
-    </nav>
-
-    <!-- PRAVO: jazyk -->
-    <div class="lang-switch">
-      <a href="index.html" class="lang active">CZ</a>
-      <span class="sep">|</span>
-      <a href="index-en.html" class="lang">EN</a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="projects.html">Projects</a> ·
+        <a href="education.html">Education</a> ·
+        <a href="ideas.html" aria-current="page">Ideas</a> ·
+        <a href="consortium.html">Consortium</a> ·
+        <a href="cooperation.html">Cooperation</a>
+      </nav>
     </div>
+  </footer>
 
-  </div>
-</header>
-
-</body></html>
+</body>
+</html>
