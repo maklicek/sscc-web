@@ -236,7 +236,7 @@ a:hover{ opacity:.92; }
       rgba(255,215,90,0) 100%),
     url("assets/img/hero-sun.jpg") right top/cover no-repeat;
   mix-blend-mode:screen;
-  opacity:.30;
+  opacity:.24;
   filter:brightness(1.05) saturate(1.05);
   z-index:0;
 }
