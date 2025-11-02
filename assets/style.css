@@ -377,13 +377,12 @@ body.with-sun::before{
   z-index:0;
   opacity:.65;                     /* bylo ~.42 */
   mix-blend-mode:screen;
-  background:
-    radial-gradient(ellipse at 58% 42%,
-      rgba(255,215,90,.80) 0%,
-      rgba(255,215,90,.35) 40%,
-      rgba(255,215,90,0) 72%),
-    url("assets/img/hero-sun.jpg") center/cover no-repeat;
-}
+ background:
+  url("/sscc-web/assets/img/hero-sun.jpg") center/cover no-repeat,
+  radial-gradient(ellipse at 58% 42%,
+    rgba(255,215,90,.85) 0%,
+    rgba(255,215,90,.38) 42%,
+    rgba(255,215,90,0) 72%);
 
 
 /* jistota, že obsah bude NAD sluncem */
