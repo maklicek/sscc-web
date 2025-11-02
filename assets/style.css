@@ -389,3 +389,74 @@ body.with-sun::before{
 
 /* jistota, že obsah bude NAD sluncem */
 header.site-header, main, footer{ position:relative; z-index:1; }
+/* ——— 1) HLAVIČKA + PATIČKA světlejší ——— */
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
+  border-bottom:1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(6px) saturate(1.06);
+  box-shadow: 0 10px 22px rgba(0,0,0,.24);
+}
+.site-footer{
+  background: linear-gradient(180deg, rgba(18,25,35,.88) 0%, rgba(14,20,30,.88) 100%);
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.footer-links a{ color:#e6ecf5; }
+.footer-links a:hover{ color:#ffd75a; }
+
+/* ——— 2) SLUNCE vpravo nahoře (globálně) ——— */
+body.with-sun::before{
+  content:"";
+  position:fixed;
+  top:-80px; right:-60px;
+  width:min(48vw, 760px); aspect-ratio:1/1;
+  pointer-events:none;
+  z-index:0;                         /* pod obsahem */
+  opacity:.42;
+  mix-blend-mode:screen;
+  background:
+    radial-gradient(ellipse at 60% 40%,
+      rgba(255,215,90,.55) 0%,
+      rgba(255,215,90,.20) 45%,
+      rgba(255,215,90,0) 70%),
+    url("assets/img/hero-sun.jpg") center/cover no-repeat;
+}
+/* jistota, že obsah bude nad sluncem */
+header.site-header, main, footer{ position:relative; z-index:1; }
+
+/* ——— 3) OSTRAVA na titulce ——— */
+.city-backdrop{
+  position: relative;
+  height: 260px;
+  margin: 32px 0 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.city-backdrop::before{
+  content:"";
+  position:absolute; inset:-18px;
+  background:
+    image-set(
+      url("assets/img/ostrava.avif") type("image/avif"),
+      url("assets/img/ostrava.webp") type("image/webp"),
+      url("assets/img/ostrava.jpg")  type("image/jpeg")
+    );
+  background-position:center;
+  background-size:cover;
+  filter: blur(3px) brightness(1.05) contrast(1.03) saturate(1.05);
+  transform: scale(1.06);
+  z-index:0;
+}
+.city-backdrop::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.70) 36%, rgba(12,18,25,0) 70%),
+    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 52%);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* ——— 4) Větší mezera na titulce ——— */
+.home__grid{ gap:96px; } /* bylo menší */
