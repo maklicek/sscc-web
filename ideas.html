@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Ideas | SSCC</title>
-  <meta name="description" content="Concepts and proposals within the SolarSpace Carbon Cycle (SSCC) — decentralized synthesis of green ammonia (NH₃) and CO₂ capture." />
+  <meta name="description" content="Concepts suitable for experiments, simulations and pilot projects within SSCC.">
 
   <!-- Favicons -->
   <link rel="icon" href="favicons/favicon.ico">
@@ -14,19 +14,19 @@
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="favicons/site.webmanifest">
 
-  <!-- Alternate languages -->
+  <!-- Language alternates -->
   <link rel="alternate" hreflang="en" href="ideas.html">
   <link rel="alternate" hreflang="cs" href="napady.html">
 
-  <!-- Unified global stylesheet -->
+  <!-- Single global CSS (cache-buster) -->
   <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
-<body class="with-sun">
+<body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
-      <a class="brand-combo" href="index-en.html" aria-label="SSCC home">
+      <a class="brand-combo" href="index-en.html" aria-label="SSCC Home">
         <div class="logo-frame">
           <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
         </div>
@@ -54,35 +54,37 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- CONTENT -->
   <main class="page has-sun">
-    <h1 class="hero-title">Ideas & Concepts</h1>
-    <p class="lead">
-      Proposals for new technologies, processes, and pilot systems within the SSCC initiative —
-      focused on carbon neutrality and local industrial innovation.
-    </p>
+    <h1 class="hero-title">Ideas</h1>
+    <p class="lead">Concepts and proposals suitable for experiments, simulations or pilots.</p>
 
-    <section class="projects-list">
+    <section class="projects-list" aria-label="Ideas and concepts">
       <article class="project-card">
-        <h2 class="project-title">Hybrid CO₂ → NH₃ Reactor</h2>
-        <p class="project-desc">
-          A combined plasma–electrocatalytic system for converting CO₂ and N₂ with renewable H₂.
-        </p>
+        <h2 class="project-title">City-scale DAC hub</h2>
+        <p class="project-desc">Scalable CO₂ capture with NH₃ synthesis for district heat.</p>
       </article>
 
       <article class="project-card">
-        <h2 class="project-title">Solar Thermal Carbon Loop</h2>
-        <p class="project-desc">
-          High-temperature reactors using concentrated sunlight to recycle carbon and produce syngas.
-        </p>
+        <h2 class="project-title">Rectenna Field</h2>
+        <p class="project-desc">Safe reception of beamed power from orbit; efficiency and safety corridors.</p>
       </article>
 
       <article class="project-card">
-        <h2 class="project-title">Micro-Ammonia Modules</h2>
-        <p class="project-desc">
-          Modular container-scale synthesis units for agricultural and research use.
-        </p>
+        <h2 class="project-title">NH₃ as Seasonal Storage</h2>
+        <p class="project-desc">Convert RES surplus to ammonia; reconvert to heat/power on demand.</p>
       </article>
+
+      <article class="project-card">
+        <h2 class="project-title">CO₂ Industrial Heat Pumps</h2>
+        <p class="project-desc">High-temperature CO₂ heat pump for process heat and waste-heat recovery.</p>
+      </article>
+    </section>
+
+    <section class="section-cta">
+      <h2>Want to develop one?</h2>
+      <p>Tell us which concept fits your team (research, prototyping, pilot integration).</p>
+      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Propose collaboration</a></p>
     </section>
   </main>
 
@@ -103,5 +105,15 @@
     </div>
   </footer>
 
+  <!-- Active link highlighter -->
+  <script>
+    (() => {
+      const here = location.pathname.split('/').pop() || 'index-en.html';
+      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+        const href = a.getAttribute('href'); if (!href) return;
+        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
+      });
+    })();
+  </script>
 </body>
 </html>
