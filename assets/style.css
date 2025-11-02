@@ -159,7 +159,7 @@ a:hover{ opacity:.92; }
   padding:36px 16px 0 12px;
   display:grid;
   grid-template-columns: 380px 1fr;
-  gap: 96px;              /* bylo menší – přidáváme */
+  gap: 120px;              /* bylo menší – přidáváme */
   align-items:start;
 }
 
