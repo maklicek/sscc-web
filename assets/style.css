@@ -43,43 +43,6 @@ a:hover{ opacity:.92; }
 /* Pomocné kontejnery */
 .container{ max-width:var(--wrap); margin:0 auto; padding:0 16px; }
 
-/* -------------------------
-   Header
-   ------------------------- */
-<header class="site-header">
-  <div class="header-inner container">
-
-    <!-- Logo + název -->
-    <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-      <div class="logo-frame">
-        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-      </div>
-      <div class="brand-block">
-        <div class="brand-name">SSCC</div>
-        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-      </div>
-    </a>
-
-    <!-- Navigace -->
-    <nav class="site-nav" aria-label="Hlavní navigace">
-      <ul>
-        <li><a href="projekty.html">Projekty</a></li>
-        <li><a href="edukace.html">Edukace</a></li>
-        <li><a href="napady.html">Nápady</a></li>
-        <li><a href="konsorcium.html">Konsorcium</a></li>
-        <li><a href="spoluprace.html">Spolupráce</a></li>
-      </ul>
-    </nav>
-
-    <!-- Přepínač jazyků -->
-    <div class="lang-switch" aria-label="Jazyk">
-      <a href="index.html" class="lang active" aria-current="true">CS</a>
-      <span class="sep">/</span>
-      <a href="index-en.html" class="lang">EN</a>
-    </div>
-
-  </div>
-</header>
 
 /* -------------------------
    Home (sidebar + obsah)
