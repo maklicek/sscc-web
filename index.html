@@ -27,10 +27,11 @@
   <!-- HLAVIČKA -->
   <header class="site-header">
     <body class="with-sun">
-  <!-- HLAVIČKA ... zůstává beze změny -->
 
-  <!-- OBSAH -->
   <main id="main" class="home has-sun">
+    .main-logo{ height:90px; }          /* bylo ~78px */
+@media (max-width:720px){ .main-logo{ height:64px; } }
+
     <div class="home__grid">
       <!-- Levý sloupec: rychlý rozcestník -->
       <aside class="toc" aria-label="Rychlá navigace">
@@ -132,7 +133,7 @@
   </header>
 
   <!-- OBSAH -->
-   <!-- OBSAH -->
+
   <main id="main" class="home has-sun">
     <div class="home__grid">
       <!-- Levý sloupec: rychlý rozcestník -->
@@ -213,6 +214,16 @@
       </nav>
     </div>
   </footer>
+<!-- vlož PŘED </body> na každé stránce -->
+<script>
+(() => {
+  const here = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+    const href = a.getAttribute('href'); if (!href) return;
+    if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
+  });
+})();
+</script>
 
 </body>
 </html>
