@@ -18,17 +18,18 @@
   <link rel="alternate" hreflang="cs" href="konsorcium.html">
   <link rel="alternate" hreflang="en" href="consortium.html">
 
-  <!-- Jediné globální CSS -->
-  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
+  <!-- Jediné globální CSS (cache-buster) -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
-<body>
+<body class="with-sun">
 
   <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-  <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-
+        <div class="logo-frame">
+          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+        </div>
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
@@ -43,4 +44,53 @@
           <li><a href="konsorcium.html" class="active" aria-current="page">Konsorcium</a></li>
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
-      <
+      </nav>
+
+      <div class="lang-switch" aria-label="Jazyk">
+        <a class="lang active" href="konsorcium.html" aria-current="true">CS</a> /
+        <a class="lang" href="consortium.html">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBSAH -->
+  <main class="page has-sun">
+    <h1 class="hero-title">Konsorcium</h1>
+    <p class="lead">Informace pro partnery, výzkumné týmy a společnosti zapojené do iniciativy SSCC.</p>
+
+    <!-- ukázková mřížka / můžeš smazat nebo rozšířit -->
+    <section class="cards-grid">
+      <article class="card">
+        <h2 class="card-title">Členové konsorcia</h2>
+        <p class="card-desc">Přehled partnerů, kompetencí a rolí v projektech.</p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Materiály pro partnery</h2>
+        <p class="card-desc">NDA, abstrakty, technické listy a sdílené dokumenty.</p>
+      </article>
+      <article class="card">
+        <h2 class="card-title">Kontakt a zapojení</h2>
+        <p class="card-desc">Možnosti účasti na pilotech, výzkumu a testování.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html" aria-current="page">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
