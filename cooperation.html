@@ -120,6 +120,24 @@
       </nav>
     </div>
   </footer>
+<script>
+(() => {
+  // Určí aktuální název souboru (např. 'napady.html' nebo 'index.html')
+  const here = location.pathname.split('/').pop() || 'index.html';
+
+  // Projde všechny odkazy v hlavní i spodní navigaci
+  document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href) return;
+
+    // Pokud odkaz odpovídá aktuální stránce → zvýrazní ho
+    if (href === here || (here === 'index.html' && href.includes('index'))) {
+      a.classList.add('active');
+      a.setAttribute('aria-current', 'page');
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
