@@ -343,14 +343,7 @@ a:hover{ opacity:.92; }
   border-top:1px solid rgba(255,255,255,.10);
   color: var(--muted);
 }
-/* HLAVIČKA – světlejší a čitelnější */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
-  border-bottom:1px solid rgba(255,255,255,.14);
-  backdrop-filter: blur(6px) saturate(1.06);
-  box-shadow: 0 10px 22px rgba(0,0,0,.24);
-}
+
 
 /* Dropdown v hlavním menu */
 .site-nav ul { position: relative; }
