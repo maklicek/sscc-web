@@ -370,3 +370,25 @@ a:hover{ opacity:.92; }
   .site-nav .submenu{ position: static; display:none; margin-top:6px; }
   .site-nav .has-sub.open > .submenu{ display:flex; }
 }
+/* Slunce vpravo nahoře – globálně pro všechny stránky */
+body.with-sun::before{
+  content:"";
+  position:fixed;
+  top:-80px;             /* jemně vytažené nahoru */
+  right:-60px;           /* a k pravému okraji */
+  width:min(48vw, 760px);
+  aspect-ratio:1/1;
+  pointer-events:none;
+  z-index:0;             /* pod obsahem */
+  opacity:.42;           /* síla efektu */
+  mix-blend-mode:screen; /* „prosvícení“ tmavého pozadí */
+  background:
+    radial-gradient(ellipse at 60% 40%,
+      rgba(255,215,90,.55) 0%,
+      rgba(255,215,90,.20) 45%,
+      rgba(255,215,90,0) 70%),
+    url("assets/img/hero-sun.jpg") center/cover no-repeat;
+}
+
+/* jistota, že obsah bude NAD sluncem */
+header.site-header, main, footer{ position:relative; z-index:1; }
