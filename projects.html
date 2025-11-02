@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="SolarSpace Carbon Cycle (SSCC): decentralized green ammonia (NH₃) synthesis and CO₂ capture." />
+  <title>Projects | SSCC</title>
+  <meta name="description" content="Main SSCC research and technology projects: CO₂, NH₃, orbital energy and pilot systems.">
 
-  <!-- Favicons (root/favicons) -->
+  <!-- Favicons -->
   <link rel="icon" href="favicons/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -15,22 +15,20 @@
   <link rel="manifest" href="favicons/site.webmanifest">
 
   <!-- Language alternates -->
-  <link rel="alternate" hreflang="en" href="index-en.html">
-  <link rel="alternate" hreflang="cs" href="index.html">
+  <link rel="alternate" hreflang="en" href="projects.html">
+  <link rel="alternate" hreflang="cs" href="projekty.html">
 
-  <!-- Single global CSS -->
-  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
+  <!-- Unified global CSS -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner container">
-      <!-- Logo + brand -->
-      <a class="brand-combo" href="index-en.html" aria-label="SSCC home">
+      <a class="brand-combo" href="index-en.html" aria-label="SSCC Home">
         <div class="logo-frame">
           <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-
         </div>
         <div class="brand-block">
           <div class="brand-name">SSCC</div>
@@ -38,37 +36,56 @@
         </div>
       </a>
 
-      <!-- Main nav (EN) -->
-     <nav class="site-nav" aria-label="Hlavní navigace">
-  <ul>
-    <li class="has-sub">
-      <a href="projekty.html">Projekty</a>
-      <ul class="submenu" aria-label="Pod-menu Projekty">
-        <li><a href="projekty.html#orbit">Orbitální solární farma</a></li>
-        <li><a href="projekty.html#co2">CO₂ jako pracovní médium</a></li>
-        <li><a href="projekty.html#nh3">Uhlíkově negativní amoniak</a></li>
-      </ul>
-    </li>
-    <li><a href="edukace.html">Edukace</a></li>
-    <li><a href="napady.html">Nápady</a></li>
-    <li><a href="konsorcium.html">Konsorcium</a></li>
-    <li><a href="spoluprace.html">Spolupráce</a></li>
-  </ul>
-</nav>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="ideas.html">Ideas</a></li>
+          <li><a href="consortium.html">Consortium</a></li>
+          <li><a href="cooperation.html">Cooperation</a></li>
+        </ul>
+      </nav>
 
-
-      <!-- Language -->
       <div class="lang-switch" aria-label="Language">
-        <a class="lang" href="index.html">CZ</a>
+        <a class="lang" href="projekty.html">CS</a>
         <span class="sep">|</span>
-        <a class="lang active" href="index-en.html" aria-current="true">EN</a>
+        <a class="lang active" href="projects.html" aria-current="true">EN</a>
       </div>
     </div>
   </header>
 
   <!-- CONTENT -->
-  <main class="home has-sun">
-    <!-- EN homepage content -->
+  <main class="page has-sun">
+    <h1 class="hero-title">Projects</h1>
+    <p class="lead">Main directions of development and pilot implementation within the SSCC Initiative.</p>
+
+    <section class="projects-list" aria-label="Project list">
+      <article class="project-card" id="orbit">
+        <h2 class="project-title">Orbital Solar Farm</h2>
+        <p class="project-desc">Transmission of power from orbit via microwave fields. Safety and efficiency studies.</p>
+      </article>
+
+      <article class="project-card" id="co2">
+        <h2 class="project-title">CO₂ as a Working Fluid</h2>
+        <p class="project-desc">Closed high-temperature CO₂ cycles for turbines and heat exchangers.</p>
+      </article>
+
+      <article class="project-card" id="nh3">
+        <h2 class="project-title">Carbon-Negative Ammonia</h2>
+        <p class="project-desc">CO₂ capture and NH₃ synthesis using green hydrogen — targeting economic viability.</p>
+      </article>
+
+      <article class="project-card">
+        <h2 class="project-title">Pilot Units</h2>
+        <p class="project-desc">Small modular systems combining electrolysis, CCUS and NH₃ synthesis for local industry.</p>
+      </article>
+    </section>
+
+    <section class="section-cta">
+      <h2>Join the development</h2>
+      <p>We cooperate with academia and industry. Your idea can become the next SSCC project.</p>
+      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Propose collaboration</a></p>
+    </section>
   </main>
 
   <!-- FOOTER -->
@@ -76,16 +93,27 @@
     <div class="footer-inner container">
       <div class="footer-left">
         © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Designed & maintained by the SSCC Consortium · Powered by clean energy ✶
+        Designed & maintained by SSCC Consortium · Powered by clean energy ✶
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="projects.html">Projects</a> ·
+        <a href="projects.html" aria-current="page">Projects</a> ·
         <a href="education.html">Education</a> ·
         <a href="ideas.html">Ideas</a> ·
-        <a href="consortium.html">Consortium</a>
+        <a href="consortium.html">Consortium</a> ·
+        <a href="cooperation.html">Cooperation</a>
       </nav>
     </div>
   </footer>
 
+  <!-- Active link -->
+  <script>
+    (() => {
+      const here = location.pathname.split('/').pop() || 'index-en.html';
+      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+        const href = a.getAttribute('href'); if (!href) return;
+        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
+      });
+    })();
+  </script>
 </body>
 </html>
