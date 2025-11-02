@@ -18,22 +18,24 @@
   <link rel="alternate" hreflang="cs" href="napady.html">
   <link rel="alternate" hreflang="en" href="ideas.html">
 
-  <!-- Jediné globální CSS -->
-  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
+  <!-- Jediné globální CSS (zvyšuji verzi kvůli cache) -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
-<body>
+<body class="with-sun">
 
   <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-       <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-
+        <div class="logo-frame">
+          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+        </div>
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
+
       <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
@@ -43,6 +45,7 @@
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
       </nav>
+
       <div class="lang-switch" aria-label="Jazyk">
         <a class="lang active" href="napady.html" aria-current="true">CS</a> /
         <a class="lang" href="ideas.html">EN</a>
@@ -53,4 +56,42 @@
   <!-- OBSAH -->
   <main class="page has-sun">
     <h1 class="hero-title">Nápady</h1>
-    <p class="lead">Ná
+    <p class="lead">Návrhy a koncepce vhodné pro experiment, simulaci nebo pilot.</p>
+
+    <section class="cards-grid">
+      <article class="card">
+        <h2 class="card-title">Centrální DAC pro malé město</h2>
+        <p class="card-desc">Škálovatelný záchyt CO₂ a syntéza NH₃ pro lokální teplo a průmysl.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Rectenna pole</h2>
+        <p class="card-desc">Příjem energie ze satelitů – bezpečnost, účinnost, ekonomika.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">CO₂ jako pracovní médium</h2>
+        <p class="card-desc">Vysokoteplotní okruhy s CO₂ pro efektivní přenos tepla.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html" aria-current="page">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
