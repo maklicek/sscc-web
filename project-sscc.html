@@ -1,42 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>SSCC — SolarSpace Carbon Cycle</title>
+  <meta name="description" content="SolarSpace Carbon Cycle (SSCC): decentralizovaná syntéza zeleného amoniaku (NH₃) a zachytávání CO₂.">
 
-  <!-- favicona (ponecháš, pokud ji už máš) -->
-  <link rel="icon" href="assets/favicons/favicon-32.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/favicon-180.png" />
+  <!-- Favicons (root/favicons) -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
 
-  <!-- JEDINÉ globální CSS (číslo za ?v= je jen na promazání cache) -->
- <link rel="preload" href="style.css?v=16" as="style">
-<link rel="stylesheet" href="style.css?v=13">
+  <!-- Jazykové varianty -->
+  <link rel="alternate" hreflang="cs" href="index.html">
+  <link rel="alternate" hreflang="en" href="index-en.html">
 
+  <!-- Jediné globální CSS -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
 
-    <!-- LEVÁ STRANA: logo + název -->
-    <a class="brand-combo" href="index.html">
-      <div class="logo-frame">
-        <img
-          class="main-logo"
-          src="assets/img/sscc-logo.jpg"
-          alt="SSCC logo"
-        />
-      </div>
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <!-- Logo + název -->
+      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+        <div class="logo-frame">
+          <img class="main-logo" src="assets/img/sscc-logo.jpg" alt="SSCC logo">
+        </div>
+        <div class="brand-block">
+          <div class="brand-name">SSCC</div>
+          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        </div>
+      </a>
 
-      <div class="brand-block">
-        <div class="brand-name">SSCC</div>
-        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-      </div>
-    </a>
-
-    <!-- PRAVÁ STRANA: menu + jazyk -->
-    <div class="header-rightside">
-      <nav class="site-nav">
+      <!-- Menu + jazyk -->
+      <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html">Projekty</a></li>
           <li><a href="edukace.html">Edukace</a></li>
@@ -45,77 +47,7 @@
         </ul>
       </nav>
 
-      <div class="lang-switch">
-        <a href="index.html" class="lang active">CZ</a>
+      <div class="lang-switch" aria-label="Jazyk">
+        <a href="index.html" class="lang active" aria-current="true">CZ</a>
         <span class="sep">|</span>
-        <a href="index-en.html" class="lang">EN</a>
-      </div>
-
-      <button class="nav-toggle" aria-label="Menu">
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-    </div>
-
-  </div>
-</header>
-
-
-    <!-- VPRAVO: navigace -->
-    <nav class="site-nav">
-      <a href="projekty.html">Projekty</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="napady.html">Nápady</a>
-      <a href="konsorcium.html">Konsorcium</a>
-
-      <span class="lang-group">
-        <a href="index.html" class="lang">CZ</a>
-        <span class="sep">|</span>
-        <a href="index-en.html" class="lang">EN</a>
-      </span>
-    </nav>
-  </div>
-</header>
-
-  <footer class="container" style="padding:20px 24px">
-    © SSCC Initiative — 2025
-  </footer>
-  <header class="site-header">
-  <div class="header-inner">
-
-    <!-- LEVÁ STRANA: logo + název -->
-    <a class="brand-combo" href="index.html">
-      <img
-        class="main-logo"
-        src="assets/img/sscc-logo.jpg"
-        alt="SSCC logo"
-      />
-      <div class="brand-block">
-        <div class="brand-name">SSCC</div>
-        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-      </div>
-    </a>
-
-    <!-- STŘED: hlavní menu -->
-    <nav class="site-nav">
-      <ul>
-        <li><a href="projekty.html">Projekty</a></li>
-        <li><a href="edukace.html">Edukace</a></li>
-        <li><a href="napady.html">Nápady</a></li>
-        <li><a href="konsorcium.html">Konsorcium</a></li>
-      </ul>
-    </nav>
-
-    <!-- PRAVO: jazyk -->
-    <div class="lang-switch">
-      <a href="index.html" class="lang active">CZ</a>
-      <span class="sep">|</span>
-      <a href="index-en.html" class="lang">EN</a>
-    </div>
-
-  </div>
-</header>
-
-</body>
-</html>
+        <a href
