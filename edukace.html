@@ -42,4 +42,71 @@
           <li><a href="edukace.html" class="active" aria-current="page">Edukace</a></li>
           <li><a href="napady.html">Nápady</a></li>
           <li><a href="konsorcium.html">Konsorcium</a></li>
-          <li><a href="spoluprace.html">Spolu
+          <li><a href="spoluprace.html">Spolupráce</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch" aria-label="Jazyk">
+        <a class="lang active" href="edukace.html" aria-current="true">CS</a>
+        <span class="sep">|</span>
+        <a class="lang" href="education.html">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- OBSAH -->
+  <main id="main" class="page has-sun">
+    <h1 class="hero-title">Edukace &amp; spolupráce</h1>
+    <p class="lead">SSCC není jen technologie — je to otevřená platforma pro výzkum, průmysl a studenty.</p>
+
+    <section class="projects-list" aria-label="Možnosti zapojení">
+      <article class="project-card">
+        <h2 class="project-title">Spolupráce na vědeckém výzkumu</h2>
+        <p class="project-desc">Modelování, simulace a validace (CO₂, H₂, NH₃, tepelné cykly).</p>
+      </article>
+
+      <article class="project-card">
+        <h2 class="project-title">Průmyslové a technické partnerství</h2>
+        <p class="project-desc">Vývoj pilotů a testování modulů v reálném provozu.</p>
+      </article>
+
+      <article class="project-card">
+        <h2 class="project-title">Zapojení studentů</h2>
+        <p class="project-desc">Stáže, semestrální práce a diplomky na reálných úkolech.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html">Projekty</a> ·
+        <a href="edukace.html" aria-current="page">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Auto-highlight aktivní položky v menu/patičce -->
+  <script>
+  (() => {
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      if (href === here || (here === 'index.html' && href.includes('index'))) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
