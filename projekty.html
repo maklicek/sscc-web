@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Projekty | SSCC</title>
-  <meta name="description" content="Pilotní jednotky, technologické koncepty a aplikace SolarSpace Carbon Cycle (SSCC).">
+  <meta name="description" content="Hlavní technologické a výzkumné projekty SSCC: CO₂, NH₃, orbitální energie a pilotní jednotky.">
 
   <!-- Favicons -->
   <link rel="icon" href="favicons/favicon.ico">
@@ -14,11 +14,11 @@
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="favicons/site.webmanifest">
 
-  <!-- Jazykové varianty této stránky -->
+  <!-- Jazykové varianty -->
   <link rel="alternate" hreflang="cs" href="projekty.html">
   <link rel="alternate" hreflang="en" href="projects.html">
 
-  <!-- Jediné globální CSS (cache-buster) -->
+  <!-- Jediné globální CSS -->
   <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
 <body>
@@ -47,79 +47,4 @@
       </nav>
 
       <div class="lang-switch" aria-label="Jazyk">
-        <a class="lang active" href="projekty.html" aria-current="true">CS</a>
-        <span class="sep">|</span>
-        <a class="lang" href="projects.html">EN</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- OBSAH -->
-  <main class="page has-sun">
-    <h1 class="hero-title">Projekty SSCC</h1>
-    <p class="lead">Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
-
-    <!-- Karty — rychlý přehled -->
-    <section class="projects-list" aria-label="Přehled projektů">
-      <article class="project-card">
-        <h2 class="project-title"><a href="#orbit">Orbitální solární farma → přenos energie</a></h2>
-        <p class="project-desc">Mikrovlnný/laserový svazek z oběhu a bezpečný příjem v pozemní stanici.</p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title"><a href="#co2">CO₂ jako pracovní médium</a></h2>
-        <p class="project-desc">Vysokoteplotní okruhy s CO₂ pro efektivní přenos tepla.</p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title"><a href="#nh3">Uhlíkově negativní amoniak</a></h2>
-        <p class="project-desc">NH₃ ze zeleného H₂ a CCU – využití pro teplo a jako úložiště energie.</p>
-      </article>
-    </section>
-
-    <!-- Detailní sekce s kotvami -->
-    <section id="orbit" class="project-detail">
-      <h2>Orbitální solární farma → přenos energie</h2>
-      <p>Koncept sběru solární energie v kosmu s <strong>bezpečným přenosem</strong> (mikrovlny/laser) na Zemi. Témata: energetická bilance, bezpečnostní zóny, účinnost, legislativa.</p>
-    </section>
-
-    <section id="co2" class="project-detail">
-      <h2>CO₂ jako pracovní médium</h2>
-      <p>Uzavřené <strong>vysokoteplotní CO₂ okruhy</strong> pro přenos tepla a integraci s průmyslovými provozy. Témata: materiály, korozní odolnost, výměníky, turbomlýny.</p>
-    </section>
-
-    <section id="nh3" class="project-detail">
-      <h2>Uhlíkově negativní amoniak</h2>
-      <p>Syntéza <strong>NH₃</strong> ze zeleného vodíku a zachyceného CO₂ (CCUS/CCU) pro lokální teplo i sezónní úložiště energie. Témata: ekonomika pilotu, bezpečnost, logistika.</p>
-    </section>
-  </main>
-
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
-      </div>
-      <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html" aria-current="page">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-
-  <!-- Aktivní odkaz v menu/patičce -->
-  <script>
-    (() => {
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-      });
-    })();
-  </script>
-</body>
-</html>
+        <a class="lang active" href="projekty.html" a
