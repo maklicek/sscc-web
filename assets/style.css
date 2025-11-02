@@ -21,8 +21,7 @@
   --ui-border-soft:rgba(255,255,255,.06);
   --shadow:        0 6px 18px rgba(0,0,0,.28);
 
-  /* sjednocená šířka – navazuje na „hotfix“ */
-  --wrap:          1200px;
+  --wrap:          1200px;   /* sjednocená max. šířka */
 }
 
 /* -------------------------
@@ -41,6 +40,9 @@ body{
 a{ color:var(--accent); text-decoration:none; }
 a:hover{ opacity:.92; }
 
+/* Pomocné kontejnery */
+.container{ max-width:var(--wrap); margin:0 auto; padding:0 16px; }
+
 /* -------------------------
    Header
    ------------------------- */
@@ -53,7 +55,7 @@ a:hover{ opacity:.92; }
 .header-inner{
   max-width:var(--wrap);
   margin:0 auto;
-  padding:10px 10px; /* z hotfixu */
+  padding:10px 10px;
   display:grid;
   grid-template-columns:auto 1fr auto;  /* logo | nav | jazyk */
   align-items:center;
@@ -61,7 +63,7 @@ a:hover{ opacity:.92; }
 }
 .brand-combo{ display:flex; align-items:center; gap:12px; }
 .main-logo{
-  height:78px; /* z hotfixu, výraznější */
+  height:78px;
   width:auto;
   border-radius:12px;
   border:1px solid rgba(255,215,90,.35);
@@ -88,12 +90,15 @@ a:hover{ opacity:.92; }
 .home__grid{
   max-width:var(--wrap);
   margin:0 auto;
-  padding:36px 16px 0 12px; /* lehce menší levý okraj z hotfixu */
+  padding:36px 16px 0 12px;
   display:grid;
-  grid-template-columns: 380px 1fr; /* širší sidebar (hotfix) */
-  gap:80px;                        /* větší mezera (hotfix) */
+  grid-template-columns: 380px 1fr; /* širší sidebar */
+  gap:80px;                        /* větší mezera */
   align-items:start;
 }
+
+/* Page layout bez sidebaru */
+.page{ max-width:var(--wrap); margin:0 auto; padding:32px 16px; }
 
 /* Sidebar (TOC) */
 .toc .accordion details{
@@ -169,7 +174,7 @@ a:hover{ opacity:.92; }
       rgba(255,215,90,0) 100%),
     url("assets/img/hero-sun.jpg") right top/cover no-repeat;
   mix-blend-mode:screen;
-  opacity:.30; /* sjednoceno s hotfixem */
+  opacity:.30;
   filter:brightness(1.05) saturate(1.05);
   z-index:0;
 }
@@ -183,12 +188,10 @@ a:hover{ opacity:.92; }
   overflow: hidden;
   z-index: 0;  /* pod obsahem stránky */
 }
-
 .city-backdrop::before{
   content: "";
   position: absolute;
   inset: -8px;
-  /* Moderní formáty + fallback – POZOR na správnou cestu! */
   background-image: image-set(
     url("assets/img/ostrava.avif") type("image/avif") 1x,
     url("assets/img/ostrava.webp") type("image/webp") 1x,
@@ -197,14 +200,12 @@ a:hover{ opacity:.92; }
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  /* fixed může cukat při scrollu na některých prohlížečích – ponecháno vypnuto */
-  /* background-attachment: fixed; */
+  /* background-attachment: fixed;  // může škubat na některých prohlížečích */
   filter: blur(2.4px) brightness(1.03) contrast(1.03) saturate(1.03);
   opacity: .62;
   transform: scale(1.04);
   z-index: 0;
 }
-
 .city-backdrop::after{
   content: "";
   position: absolute;
@@ -217,45 +218,6 @@ a:hover{ opacity:.92; }
 }
 
 /* -------------------------
-   Footer
+   Projects list (karty)
    ------------------------- */
-.site-footer{ border-top:1px solid var(--ui-border-soft); }
-.footer-inner{
-  max-width:var(--wrap);
-  margin:0 auto; padding:8px 16px;
-  font-size:.9rem; opacity:.9;
-  display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap;
-}
-.footer-links a{ color:var(--muted); }
-.footer-links a:hover{ color:var(--accent); }
-
-/* -------------------------
-   Responsive
-   ------------------------- */
-@media (max-width: 1100px){
-  .home__grid{ grid-template-columns: 340px 1fr; gap:44px; }
-  .main-logo{ height:62px; }
-}
-@media (max-width: 860px){
-  .header-inner{ grid-template-columns:auto 1fr auto; }
-  .site-nav ul{ gap:14px; }
-  .home__grid{ grid-template-columns: 1fr; gap:22px; padding-top:22px; }
-  .city-backdrop{ height:160px; }
-}
-@media (max-width: 520px){
-  .main-logo{ height:56px; }
-  .hero-title{ font-size: clamp(26px, 6.4vw, 36px); }
-  .footer-inner{ font-size:.85rem; }
-}
-
-/* === Finishing touches ====================== */
-@media (min-width: 1024px){
-  .site-header .header-inner{ padding-top: 6px; padding-bottom: 6px; }
-}
-@media (min-width: 1500px){
-  .home__grid{
-    grid-template-columns: 400px 1fr; /* sidebar o chlup širší */
-    gap: 104px;
-  }
-}
-.hero-copy{ max-width: 780px; } /* netahá se do extrémní šířky; hotfix */
+.projects
