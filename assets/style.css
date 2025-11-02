@@ -219,7 +219,7 @@ a:hover{ opacity:.92; }
 }
 
 /* 2) Větší mezera mezi TOC a textem + příjemnější maximální šířka textu */
-@media (min-width: 1100px){
+@media (min-width: 1500px){
   .home__grid{
     grid-template-columns: 400px 1fr;   /* sidebar o chlup širší */
     gap: 84px;                           /* víc vzduchu mezi sloupci */
@@ -229,7 +229,7 @@ a:hover{ opacity:.92; }
 
 /* 3) TOC panely: o kapku světlejší a čitelnější */
 .toc .accordion details{
-  background: linear-gradient(180deg, #121a26 0%, #0f1620 100%);
+  background: linear-gradient(190deg, #121a26 0%, #0f1620 100%);
   border-color: rgba(255,255,255,.10);
 }
 .toc summary{ color:#f3e9c4; }
@@ -244,7 +244,7 @@ a:hover{ opacity:.92; }
 /* === OSTRAVA: jediná autoritativní verze (FIX) ======================= */
 .city-backdrop{
   position: relative;
-  height: 200px;            /* můžeš zvednout na 220–280px podle chuti */
+  height: 240px;            /* můžeš zvednout na 220–280px podle chuti */
   overflow: hidden;
   z-index: 0;               /* pod obsahem stránky */
 }
