@@ -225,24 +225,29 @@ a:hover{ opacity:.92; }
 /* -------------------------
    Sun accent (použij .has-sun na sekci)
    ------------------------- */
-.has-sun{ position:relative; overflow:hidden; }
-.has-sun::before{
+/* Sun accent – použij .has-sun na sekci NEBO .with-sun na <body> */
+.has-sun,
+.with-sun{ position:relative; overflow:hidden; }
+
+.has-sun::before,
+.with-sun::before{
   content:"";
   position:absolute;
-  inset:-6% -6% auto auto;      /* vpravo nahoře, mimo text */
+  inset:-6% -6% auto auto;   /* pravý horní roh, kousek mimo */
   width:60%; height:70%;
   pointer-events:none;
   background:
     radial-gradient(ellipse at 82% 18%,
-      rgba(255,215,90,.32) 0%,
+      rgba(255,215,90,.36) 0%,
       rgba(255,215,90,.12) 50%,
       rgba(255,215,90,0) 100%),
     url("assets/img/hero-sun.jpg") right top/cover no-repeat;
   mix-blend-mode:screen;
-  opacity:.24;
-  filter:brightness(1.05) saturate(1.05);
+  opacity:.34;
+  filter:brightness(1.05) saturate(1.06);
   z-index:0;
 }
+
 
 /* -------------------------
    Ostrava backdrop (jediná autoritativní verze)
