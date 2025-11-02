@@ -152,13 +152,14 @@ a:hover{ opacity:.92; }
    Home (sidebar + obsah)
    ------------------------- */
 .home{ position:relative; }
+/* Titulka – víc „vzduchu“ mezi TOC a hero copy */
 .home__grid{
   max-width:var(--wrap);
   margin:0 auto;
   padding:36px 16px 0 12px;
   display:grid;
-  grid-template-columns: 380px 1fr; /* širší sidebar */
-  gap:80px;                        /* větší mezera */
+  grid-template-columns: 380px 1fr;
+  gap: 96px;              /* bylo menší – přidáváme */
   align-items:start;
 }
 
