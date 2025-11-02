@@ -18,29 +18,23 @@
   <link rel="alternate" hreflang="cs" href="projekty.html">
   <link rel="alternate" hreflang="en" href="projects.html">
 
-  <!-- Sjednocené styly -->
-  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
+  <!-- Jediné globální CSS (zvednutá verze kvůli cache) -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e40">
 </head>
-<body>
+<body class="with-sun">
 
   <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-       <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-
+        <div class="logo-frame">
+          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+        </div>
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
-<section class="cards-grid">
-  <article class="card">
-    <h2 class="card-title">Projekty</h2>
-    <p class="card-desc">Současné i připravované projekty, vesměs zaměřené na úsporu energie a čistotu ovzduší</p>
-  </article>
-  <!-- … -->
-</section>
 
       <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
@@ -58,3 +52,46 @@
       </div>
     </div>
   </header>
+
+  <!-- OBSAH -->
+  <main class="page has-sun">
+    <h1 class="hero-title">Projekty SSCC</h1>
+    <p class="lead">Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
+
+    <section class="cards-grid">
+      <article class="card">
+        <h2 class="card-title">Orbitální solární farma → přenos energie</h2>
+        <p class="card-desc">Mikrovlnný/laserový svazek z oběhu a bezpečný příjem v pozemní stanici.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">CO₂ jako pracovní médium</h2>
+        <p class="card-desc">Vysokoteplotní okruhy s CO₂ pro efektivní přenos tepla.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Uhlíkově negativní amoniak</h2>
+        <p class="card-desc">NH₃ ze zeleného H₂ a CCU — teplo, úložiště energie, hnojivo.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- PATIČKA -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Spodní navigace">
+        <a href="projekty.html" aria-current="page">Projekty</a> ·
+        <a href="edukace.html">Edukace</a> ·
+        <a href="napady.html">Nápady</a> ·
+        <a href="konsorcium.html">Konsorcium</a> ·
+        <a href="spoluprace.html">Spolupráce</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
