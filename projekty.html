@@ -1,60 +1,39 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Projekty | SSCC</title>
- <link rel="stylesheet" href="assets/style.css?v=a711e3c">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projekty</title>
-<meta name="description" content="Decentralizovaná syntéza zeleného amoniaku (NH₃) a zachytávání CO₂.">
+  <meta name="description" content="Pilotní jednotky, technologické koncepty a aplikace SolarSpace Carbon Cycle (SSCC).">
 
-<link rel="icon" href="favicons/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-<link rel="manifest" href="favicons/site.webmanifest">
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
 
-<link rel="alternate" hreflang="cs" href="index.html">
-<link rel="alternate" hreflang="en" href="index-en.html">
+  <!-- Jazykové varianty této stránky -->
+  <link rel="alternate" hreflang="cs" href="projekty.html">
+  <link rel="alternate" hreflang="en" href="projects.html">
 
-<link rel="stylesheet" href="assets/style.css?v=a711e3c">
-
+  <!-- Sjednocené styly -->
+  <link rel="stylesheet" href="assets/style.css?v=a711e3c">
 </head>
 <body>
-  <body class="with-sun">
-.with-sun{
-  position:relative;
-}
-.with-sun::before{
-  content:"";
-  position:fixed;
-  inset:-10% -10% 0 -10%;
-  background:
-    radial-gradient(ellipse at 78% 10%,
-      rgba(255,215,90,.30) 0%,
-      rgba(255,215,90,.14) 36%,
-      rgba(255,215,90,.06) 68%,
-      rgba(255,215,90,0) 100%),
-    url("assets/img/hero-sun.jpg") right top/cover no-repeat;
-  mix-blend-mode:screen;
-  opacity:.22;
-  filter:brightness(1.02) saturate(1.05);
-  pointer-events:none;
-  z-index:0;
-}
 
   <!-- HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand-combo" href="index.html">
-        <img class="main-logo" src="img/logo-sscc.png" alt="SSCC logo">
+      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="Logo SSCC">
         <span class="brand-block">
           <span class="brand-name">SolarSpace Carbon Cycle (SSCC)</span>
           <span class="brand-tagline">Initiative</span>
         </span>
       </a>
+
       <nav class="site-nav" aria-label="Hlavní navigace">
         <ul>
           <li><a href="projekty.html" class="active">Projekty</a></li>
@@ -64,15 +43,17 @@
           <li><a href="spoluprace.html">Spolupráce</a></li>
         </ul>
       </nav>
-      <div class="lang-switch">
-        <a class="lang active" href="#">CS</a> / <a class="lang" href="#">EN</a>
+
+      <div class="lang-switch" aria-label="Jazyk">
+        <a class="lang active" href="projekty.html" aria-current="true">CS</a> /
+        <a class="lang" href="projects.html">EN</a>
       </div>
     </div>
   </header>
 
   <!-- OBSAH -->
-  <main class="page">
-    <h1>Projekty SSCC</h1>
+  <main class="page has-sun">
+    <h1 class="hero-title">Projekty SSCC</h1>
     <p class="lead">Pilotní jednotky, technologické koncepty a aplikace SSCC.</p>
 
     <section class="projects-list">
@@ -97,10 +78,11 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative · Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
       </div>
       <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html">Projekty</a> ·
+        <a href="projekty.html" aria-current="page">Projekty</a> ·
         <a href="edukace.html">Edukace</a> ·
         <a href="napady.html">Nápady</a> ·
         <a href="konsorcium.html">Konsorcium</a> ·
@@ -108,5 +90,6 @@
       </nav>
     </div>
   </footer>
+
 </body>
 </html>
