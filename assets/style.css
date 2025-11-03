@@ -588,3 +588,39 @@ html.page--napady{--show-sun:1}
 .city--ostrava { background-image: url('assets/img/ostrava.jpg'); }
 .city--brno    { background-image: url('assets/img/brno.jpg'); }
 .city--praha   { background-image: url('assets/img/praha.jpg'); }
+/* --- Layout fixes & spacing normalization --- */
+.container { max-width: 1200px; margin-inline: auto; padding-inline: 16px; }
+
+.site-header { position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+
+.site-nav ul { display: flex; gap: 18px; align-items: center; }
+.site-nav a { text-decoration: none; }
+.site-nav a.active { text-decoration: underline; }
+
+.lang-switch { display: flex; align-items: center; gap: 8px; }
+.lang-switch .lang { padding: 2px 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,.12); }
+.lang-switch .active { background: rgba(255,255,255,.08); }
+
+.home { padding-block: 16px 64px; }
+.home__grid { display: grid; grid-template-columns: 360px 1fr; gap: 28px; align-items: start; }
+@media (max-width: 980px) { .home__grid { grid-template-columns: 1fr; } }
+
+.toc .accordion details { border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 10px 14px; background: rgba(255,255,255,.02); }
+.toc .accordion details + details { margin-top: 16px; }
+
+.hero-copy { max-width: 780px; }
+.hero-title { margin: 0 0 12px; line-height: 1.05; }
+.lead { font-size: 1.05rem; opacity: .95; }
+.cta-row { display: flex; gap: 12px; margin-top: 16px; }
+
+.page { padding-block: 36px 72px; }
+.page > section { margin-bottom: 48px; }
+
+/* City backdrop – správná cesta do assets/img */
+.city-backdrop{
+  position: fixed; inset: 0;
+  background: url('assets/img/ostrava.jpg') center/cover no-repeat;
+  opacity: .18; pointer-events: none; z-index: 0;
+}
+.home, .page { position: relative; z-index: 1; }
