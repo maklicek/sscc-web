@@ -624,3 +624,17 @@ html.page--napady{--show-sun:1}
   opacity: .18; pointer-events: none; z-index: 0;
 }
 .home, .page { position: relative; z-index: 1; }
+.menu { list-style: none; display:flex; gap:.9rem; margin:0; padding:0; align-items:center; }
+.menu li { position: relative; }
+.menu a { text-decoration:none; }
+.menu .lang { margin-left: 1rem; }
+
+.has-sub > .submenu {
+  display:none; position:absolute; top:100%; left:0;
+  background: var(--panel, #111823); padding:.5rem .75rem; border-radius:.5rem;
+  box-shadow: var(--shadow, 0 6px 18px rgba(0,0,0,.25));
+}
+.has-sub:hover > .submenu { display:block; }
+.submenu { list-style:none; margin:0; padding:0; }
+.submenu li { white-space:nowrap; }
+.submenu a { display:block; padding:.35rem .4rem; }
