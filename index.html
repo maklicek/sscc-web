@@ -1,47 +1,61 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="page--index">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarSpace Carbon Cycle (SSCC)</title>
-    <link rel="icon" href="favicons/favicon.ico">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
-        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        .lang-switch { float: right; margin-right: 1rem; }
-        main { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #2c3e50; }
-        footer { text-align: center; padding: 1rem; background: #2c3e50; color: white; }
-        @media (max-width: 600px) { nav ul { flex-direction: column; } }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSCC — SolarSpace Carbon Cycle</title>
+<meta name="description" content="SolarSpace Carbon Cycle — výzkum, spolupráce, edukace." />
+
+
+<link rel="icon" href="/favicons/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/favicons/site.webmanifest" />
+
+
+<link rel="preload" href="/assets/style.css" as="style" />
+<link rel="stylesheet" href="/assets/style.css" />
+
+
+<link rel="alternate" hreflang="en" href="/index-en.html" />
+<link rel="alternate" hreflang="cs" href="/index.html" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Úvod</a></li>
-                <li><a href="projekty.html">Projekty</a></li>
-                <li><a href="projekt-sscc.html">Pilotní projekt</a></li>
-                <li><a href="edukace.html">Edukace</a></li>
-                <li><a href="napady.html">Nápady</a></li>
-                <li><a href="konsorcium.html">Konsorcium</a></li>
-            </ul>
-            <div class="lang-switch"><a href="index-en.html">🇬🇧 EN</a></div>
-        </nav>
-    </header>
-    <main>
-        <h1>SolarSpace Carbon Cycle</h1>
-        <p>Multioborová platforma pro výzkum, spolupráci a otevřenou edukaci.</p>
-        <h2>Vítejte</h2>
-        <p>Prozkoumejte projekt, běžící iniciativy i příležitosti ke spolupráci.</p>
-        <!-- Zde přidej obrázek, např. <img src="images/sscc-logo.jpg" alt="SSCC Logo"> -->
-    </main>
-    <footer>
-        &copy; 2025 SolarSpace Carbon Cycle. <a href="mailto:martin.klic46@gmail.com">Kontakt</a>
-    </footer>
+
+
+<nav class="site-nav">
+<a href="/index.html" class="logo">SSCC</a>
+<ul class="menu">
+<li><a href="/projekt-sscc.html">Projekt</a></li>
+<li><a href="/projekty.html">Projekty</a></li>
+<li><a href="/spoluprace.html">Spolupráce</a></li>
+<li><a href="/edukace.html">Edukace</a></li>
+<li><a href="/konsorcium.html">Konsorcium</a></li>
+<li class="lang"><a href="/index-en.html" aria-label="Switch to English">EN</a></li>
+</ul>
+</nav>
+
+
+<header class="hero city city--ostrava">
+<div class="sun" aria-hidden="true"></div>
+<div class="hero-content">
+<h1>SolarSpace Carbon Cycle</h1>
+<p>Multioborová platforma pro výzkum, spolupráci a otevřenou edukaci.</p>
+</div>
+</header>
+
+
+<main class="page">
+<section>
+<h2>Vítejte</h2>
+<p>Prozkoumejte projekt, běžící iniciativy i příležitosti ke spolupráci.</p>
+</section>
+</main>
+
+
+<footer class="site-footer">
+<p>© SSCC — SolarSpace Carbon Cycle</p>
+</footer>
 </body>
 </html>
