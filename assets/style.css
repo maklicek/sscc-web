@@ -620,7 +620,7 @@ html.page--napady{--show-sun:1}
 /* City backdrop – správná cesta do assets/img */
 .city-backdrop{
   position: fixed; inset: 0;
-  background: url('assets/img/ostrava.jpg') center/cover no-repeat;
+  background: url('assets/img/ostrava.jpg') center/cover no-repeat; 
   opacity: .18; pointer-events: none; z-index: 0;
 }
 .home, .page { position: relative; z-index: 1; }
