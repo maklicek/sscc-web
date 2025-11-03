@@ -566,11 +566,6 @@ aktivní stránka, slunce, města
 html.page--napady{--show-sun:1}
 
 
-/***** CITY BACKDROPS *****/
-.city{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
-.city--ostrava{background-image:url('images/ostrava.jpg')}
-
-
 /***** HERO *****/
 .hero{position:relative;min-height:48svh;display:grid;place-items:center;padding:4rem 1.5rem}
 .hero .hero-content{max-width:980px;text-align:cente
