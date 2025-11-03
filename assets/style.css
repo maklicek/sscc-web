@@ -507,3 +507,6 @@ html.page--napady{--show-sun:1}
 .hero{position:relative;min-height:48svh;display:grid;place-items:center;padding:4rem 1.5rem}
 .hero .hero-content{max-width:980px;text-align:center}
 
+/* zvýraznění aktivní stránky */
+.menu a[href$="projekty.html"] { opacity: .75; }
+html.page--projekty .menu a[href$="projekty.html"] { opacity: 1; text-decoration: underline;
