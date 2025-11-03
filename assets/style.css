@@ -446,7 +446,7 @@ header, main, footer { position: relative; z-index: 1; }
   background-position: center;
   background-size: cover;
   filter: blur(3px) brightness(1.03) contrast(1.05) saturate(1.05);
-  opacity:.62;
+  opacity:.82;
   transform: scale(1.04);
 }
 .city-backdrop::after{
