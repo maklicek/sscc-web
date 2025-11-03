@@ -19,25 +19,39 @@
   <link rel="stylesheet" href="assets/style.css?v=p1" />
 </head>
 
+<!-- === HLAVIČKA / HEADER === -->
+<header class="site-header">
+  <div class="header-inner container">
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <!-- Logo + název -->
-      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-        <div class="logo-frame">
-         <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+    <!-- Logo + název -->
+    <a class="brand-combo" href="index.html" aria-label="SSCC domů">
+      <div class="logo-frame">
+        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+      </div>
+      <div class="brand-block">
+        <div class="brand-name">SSCC</div>
+        <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+      </div>
+    </a>
 
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
-      </a>
-
-      <!-- Menu + jazyk -->
+    <!-- Hlavní navigace -->
     <nav class="site-nav" aria-label="Hlavní navigace">
-  <ul>
+      <ul class="menu">
+        <li><a href="projekt-sscc.html">Projekt</a></li>
+        <li><a href="projekty.html">Projekty</a></li>
+        <li><a href="spoluprace.html">Spolupráce</a></li>
+        <li><a href="edukace.html">Edukace</a></li>
+        <li><a href="konsorcium.html">Konsorcium</a></li>
+        <li class="lang"><a href="index-en.html" aria-label="Switch to English">EN</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- Menu + jazyk -->
+<nav class="site-nav" aria-label="Hlavní navigace">
+  <ul class="menu">
     <li class="has-sub">
       <a href="projekty.html">Projekty</a>
       <ul class="submenu" aria-label="Pod-menu Projekty">
@@ -50,11 +64,15 @@
     <li><a href="napady.html">Nápady</a></li>
     <li><a href="konsorcium.html">Konsorcium</a></li>
     <li><a href="spoluprace.html">Spolupráce</a></li>
+
+    <!-- Jazykový přepínač -->
+    <li class="lang">
+      <a href="index.html" class="lang active" lang="cs" hreflang="cs" aria-current="page">CZ</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="index-en.html" class="lang" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+    </li>
   </ul>
 </nav>
 
-
-      <div class="lang-switch" aria-label="Jazyk">
-        <a href="index.html" class="lang active" aria-current="true">CZ</a>
-        <span class="sep">|</span>
-        <a href
+</div>
+</header>
