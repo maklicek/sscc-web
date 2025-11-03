@@ -1,0 +1,21 @@
+name: Guard bad paths
+on: [push, pull_request]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan HTML and CSS for bad paths
+        run: |
+          echo "🔍 Kontroluji cesty v HTML a CSS..."
+          BAD1=$(grep -RInE 'href="/(?!https?:)' --include='*.html' || true)
+          BAD2=$(grep -RInE 'src="/(?!https?:)'  --include='*.html' || true)
+          BAD3=$(grep -RInE 'url\\((["'\''']?)/?images/' --include='*.css' || true)
+          if [ -n "$BAD1$BAD2$BAD3" ]; then
+            echo "❌ Nalezeny potenciálně chybné cesty:"
+            echo "$BAD1"; echo "$BAD2"; echo "$BAD3"
+            exit 1
+          else
+            echo "✅ Cesty vypadají v pořádku."
+          fi
