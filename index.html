@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="page--index">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,7 +7,6 @@
 <meta name="description" content="SolarSpace Carbon Cycle — výzkum, spolupráce, edukace." />
 
 
-<!-- Favicons -->
 <link rel="icon" href="/favicons/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
@@ -15,31 +14,17 @@
 <link rel="manifest" href="/favicons/site.webmanifest" />
 
 
-<!-- Styles -->
 <link rel="preload" href="/assets/style.css" as="style" />
 <link rel="stylesheet" href="/assets/style.css" />
 
 
-<!-- Alternativní jazykové verze (příklad pro CZ stránku) -->
 <link rel="alternate" hreflang="en" href="/index-en.html" />
 <link rel="alternate" hreflang="cs" href="/index.html" />
 </head>
 <body>
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index.html" aria-label="SSCC Domů">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
-      </a>
 
-   <nav class="site-nav">
+<nav class="site-nav">
 <a href="/index.html" class="logo">SSCC</a>
 <ul class="menu">
 <li><a href="/projekt-sscc.html">Projekt</a></li>
@@ -47,102 +32,30 @@
 <li><a href="/spoluprace.html">Spolupráce</a></li>
 <li><a href="/edukace.html">Edukace</a></li>
 <li><a href="/konsorcium.html">Konsorcium</a></li>
-<li class="lang">
-<a href="/index-en.html" aria-label="Switch to English">EN</a>
-</li>
+<li class="lang"><a href="/index-en.html" aria-label="Switch to English">EN</a></li>
 </ul>
 </nav>
 
-      <div class="lang-switch" aria-label="Jazyk">
-        <a class="lang active" href="index.html" aria-current="true">CZ</a>
-        <span class="sep">|</span>
-        <a class="lang" href="index-en.html">EN</a>
-      </div>
-    </div>
-  </header>
 
-  <!-- HLAVNÍ OBSAH -->
-  <main id="main" class="home has-sun">
-    <div class="home__grid">
-      <!-- Vlevo: rychlá navigace -->
-      <aside class="toc" aria-label="Rychlá navigace">
-        <div class="accordion">
-          <details open>
-            <summary>Projekty</summary>
-            <ul><li><a href="projekty.html">Všechny projekty</a></li></ul>
-          </details>
-          <details>
-            <summary>Edukace</summary>
-            <ul><li><a href="edukace.html">Přehled</a></li></ul>
-          </details>
-          <details>
-            <summary>Nápady</summary>
-            <ul><li><a href="napady.html">Koncepty a návrhy</a></li></ul>
-          </details>
-          <details>
-            <summary>Konsorcium</summary>
-            <ul><li><a href="konsorcium.html">Členové a partneři</a></li></ul>
-          </details>
-          <details>
-            <summary>Spolupráce</summary>
-            <ul><li><a href="spoluprace.html">Zapojení & kontakty</a></li></ul>
-          </details>
-        </div>
-      </aside>
+<header class="hero city city--ostrava">
+<div class="sun" aria-hidden="true"></div>
+<div class="hero-content">
+<h1>SolarSpace Carbon Cycle</h1>
+<p>Multioborová platforma pro výzkum, spolupráci a otevřenou edukaci.</p>
+</div>
+</header>
 
-      <!-- Vpravo: hero -->
-      <section class="hero-copy">
-        <p class="hero-tag">Pilotní průmyslový projekt</p>
-        <h1 class="hero-title">SSCC: ze škodlivého užitečné</h1>
 
-        <p class="lead">
-          Zachytit <strong>CO<sub>2</sub></strong> z kouřovodů, spojit s <strong>H<sub>2</sub></strong> z OZE
-          a převést na <strong>NH<sub>3</sub></strong> — palivo i hnojivo. Čistší vzduch, nižší náklady na emise,
-          technologie místo odstavování.
-        </p>
+<main class="page">
+<section>
+<h2>Vítejte</h2>
+<p>Prozkoumejte projekt, běžící iniciativy i příležitosti ke spolupráci.</p>
+</section>
+</main>
 
-        <p class="hero-abstract">
-          Integrovaný systém fotovoltaiky (se zásobníky), CCUS a elektrolýzy pro snížení lokálních emisí
-          o &gt;90 % a vytvoření užitečného produktu. Cíl: udržet kvalifikovanou výrobu v regionu.
-        </p>
 
-        <div class="cta-row">
-          <a href="projekty.html" class="btn-hero btn-primary">Projekty</a>
-          <a href="spoluprace.html" class="btn-hero">Spolupráce</a>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- Volitelné pozadí města -->
-  <section class="city-backdrop" aria-hidden="true"></section>
-
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> ·
-        Design & správa: SSCC Consortium · Poháněno čistou energií ✶
-      </div>
-      <nav class="footer-links" aria-label="Patičková navigace">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
-
-  <!-- Zvýraznění aktivní položky -->
-  <script>
-  (() => {
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-      const href = a.getAttribute('href'); if (!href) return;
-      if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-    });
-  })();
-  </script>
+<footer class="site-footer">
+<p>© SSCC — SolarSpace Carbon Cycle</p>
+</footer>
 </body>
 </html>
