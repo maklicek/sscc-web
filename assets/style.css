@@ -574,3 +574,17 @@ html.page--napady{--show-sun:1}
 /***** HERO *****/
 .hero{position:relative;min-height:48svh;display:grid;place-items:center;padding:4rem 1.5rem}
 .hero .hero-content{max-width:980px;text-align:cente
+.city-backdrop{
+  position: fixed;
+  inset: 0;
+  background: url('assets/img/ostrava.jpg') center/cover no-repeat;
+  opacity: .18;
+  pointer-events: none;
+  z-index: 0;
+}
+.home, .page { position: relative; z-index: 1; }
+
+/* (volitelné) další města – všechny ve assets/img/ */
+.city--ostrava { background-image: url('assets/img/ostrava.jpg'); }
+.city--brno    { background-image: url('assets/img/brno.jpg'); }
+.city--praha   { background-image: url('assets/img/praha.jpg'); }
