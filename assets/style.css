@@ -551,7 +551,7 @@ html.page--napady{--show-sun:1}
   pointer-events: none;
   z-index: 0;
 }
-.home, .page { position: relative; z-index: 1; }
+.home, .page { position: relative; z-index: 1; } 
 
 /* (volitelné) další města – všechny ve assets/img/ */
 .city--ostrava { background-image: url('assets/img/ostrava.jpg'); }
