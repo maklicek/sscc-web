@@ -41,4 +41,108 @@
           <li class="has-sub">
             <a href="projects.html">Projects</a>
             <ul class="submenu" aria-label="Projects submenu">
-              <li><a href="projects.html#orbit">Orbital solar
+              <li><a href="projects.html#orbit">Orbital solar farm</a></li>
+              <li><a href="projects.html#co2">CO₂ as a working fluid</a></li>
+              <li><a href="projects.html#nh3">Carbon-negative ammonia</a></li>
+            </ul>
+          </li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="ideas.html">Ideas</a></li>
+          <li><a href="consortium.html">Consortium</a></li>
+          <li><a href="cooperation.html">Cooperation</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch" aria-label="Language">
+        <a class="lang" href="index.html">CS</a>
+        <span class="sep">|</span>
+        <a class="lang active" href="index-en.html" aria-current="true">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main" class="home has-sun">
+    <div class="home__grid">
+      <!-- Left: quick nav -->
+      <aside class="toc" aria-label="Quick navigation">
+        <div class="accordion">
+          <details open>
+            <summary>Projects</summary>
+            <ul><li><a href="projects.html">All projects</a></li></ul>
+          </details>
+          <details>
+            <summary>Education</summary>
+            <ul><li><a href="education.html">Overview</a></li></ul>
+          </details>
+          <details>
+            <summary>Ideas</summary>
+            <ul><li><a href="ideas.html">Concepts & proposals</a></li></ul>
+          </details>
+          <details>
+            <summary>Consortium</summary>
+            <ul><li><a href="consortium.html">Members & partners</a></li></ul>
+          </details>
+          <details>
+            <summary>Cooperation</summary>
+            <ul><li><a href="cooperation.html">Get involved & contacts</a></li></ul>
+          </details>
+        </div>
+      </aside>
+
+      <!-- Right: hero -->
+      <section class="hero-copy">
+        <p class="hero-tag">Pilot industrial project</p>
+        <h1 class="hero-title">SSCC: turning harmful into useful</h1>
+
+        <p class="lead">
+          Capture <strong>CO<sub>2</sub></strong> from stacks, combine with <strong>H<sub>2</sub></strong> from renewables
+          and convert to <strong>NH<sub>3</sub></strong> — a fuel and fertilizer. Cleaner air, lower emission costs,
+          technology over shutdowns.
+        </p>
+
+        <p class="hero-abstract">
+          An integrated system of photovoltaics (with storage), CCUS and electrolysis to reduce local emissions
+          by &gt;90% and create a useful product. Goal: retain skilled manufacturing in the region.
+        </p>
+
+        <div class="cta-row">
+          <a href="projects.html" class="btn-hero btn-primary">Projects</a>
+          <a href="cooperation.html" class="btn-hero">Cooperation</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Optional city backdrop (make sure image exists at images/cities/ostrava.jpg) -->
+  <section class="city-backdrop" aria-hidden="true"></section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
+        Designed & maintained by SSCC Consortium · Powered by clean energy ✶
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="projects.html">Projects</a> ·
+        <a href="education.html">Education</a> ·
+        <a href="ideas.html">Ideas</a> ·
+        <a href="consortium.html">Consortium</a> ·
+        <a href="cooperation.html">Cooperation</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Active link highlighter -->
+  <script>
+  (() => {
+    const here = location.pathname.split('/').pop() || 'index-en.html';
+    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
+      const href = a.getAttribute('href'); if (!href) return;
+      if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
+    });
+  })();
+  </script>
+</body>
+</html>
