@@ -1,39 +1,28 @@
-name: Deploy static site to GitHub Pages
+      - name: Scan HTML and CSS for bad paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "🔍 Kontroluji cesty v HTML a CSS..."
 
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch:
+          # Pokud je grep bez -P, varování přeskočíme
+          if ! grep -P '' <<<"" &>/dev/null; then
+            echo "⚠️  grep nepodporuje PCRE (-P), přepínám na jednodušší kontrolu..."
+            BAD1=$(grep -RIn 'href="/assets' --include='*.html' || true)
+            BAD2=$(grep -RIn 'src="/assets'  --include='*.html' || true)
+          else
+            BAD1=$(grep -RInP 'href="/(?!https?:)' --include='*.html' || true)
+            BAD2=$(grep -RInP 'src="/(?!https?:)'  --include='*.html' || true)
+          fi
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+          # CSS — zakázat „images/“
+          BAD3=$(grep -RIn 'images/' --include='*.css' || true)
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+          if [[ -n "$BAD1$BAD2$BAD3" ]]; then
+            echo "❌ Nalezeny potenciálně chybné cesty:"
+            [[ -n "$BAD1" ]] && echo "$BAD1"
+            [[ -n "$BAD2" ]] && echo "$BAD2"
+            [[ -n "$BAD3" ]] && echo "$BAD3"
+            exit 1
+          fi
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Pokud máš web v kořeni repa, nic nebuildíme – jen uploadneme.
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          echo "✅ Cesty vypadají v pořádku."
