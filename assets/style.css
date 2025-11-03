@@ -486,7 +486,8 @@ html.page--napady{--show-sun:1}
 
 /***** CITY BACKDROPS *****/
 .city{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
-.city--ostrava{background-image:url('/images/cities/ostrava.jpg')}
+.city--ostrava { background-image: url('images/cities/ostrava.jpg'); }
+
 
 
 /***** HERO *****/
