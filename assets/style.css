@@ -624,3 +624,46 @@ html.page--napady{--show-sun:1}
   opacity: .18; pointer-events: none; z-index: 0;
 }
 .home, .page { position: relative; z-index: 1; }
+/* ===== Projekty — dvousloupcový hero layout ===== */
+.container { max-width: var(--wrap, 1200px); margin-inline: auto; padding-inline: 16px; }
+
+.hero-split{
+  display:grid;
+  grid-template-columns:minmax(320px, 760px) 1fr;
+  gap:3rem;
+  align-items:center;
+  padding:3rem 0 4rem;
+}
+
+/* levý sloupec – kontrola šířky textu */
+.page--projekty .col-copy{
+  max-width:760px;
+}
+.page--projekty h1{
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  margin: 0 0 0.75rem 0;
+}
+.page--projekty .lead{
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: var(--muted, #aeb6c3);
+  margin: 0 0 2rem 0;
+}
+.page--projekty h2{
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  margin: 2rem 0 .5rem;
+}
+
+/* pravý vizuál – můžeš změnit obrázek na, co máš v repo */
+.hero-art{
+  min-height: 520px;
+  border-radius: 16px;
+  background: url('/images/space-sun.jpg') center/cover no-repeat;
+  filter: saturate(1.05);
+  box-shadow: var(--shadow, 0 6px 18px rgba(0,0,0,.28));
+}
+
+/* responzivní stackování */
+@media (max-width: 1024px){
+  .hero-split{ grid-template-columns: 1fr; }
+  .hero-art{ min-height: 320px; order:-1; }
+}
