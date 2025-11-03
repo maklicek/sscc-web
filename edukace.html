@@ -1,75 +1,61 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en" class="page--index">
 <head>
-  ...
-  <link rel="stylesheet" href="assets/style.css?v=a711e41"><!-- bump cache -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSCC — SolarSpace Carbon Cycle</title>
+<meta name="description" content="SolarSpace Carbon Cycle — research, collaboration, education." />
+
+
+<link rel="icon" href="/favicons/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/favicons/site.webmanifest" />
+
+
+<link rel="preload" href="/assets/style.css" as="style" />
+<link rel="stylesheet" href="/assets/style.css" />
+
+
+<link rel="alternate" hreflang="en" href="/index-en.html" />
+<link rel="alternate" hreflang="cs" href="/index.html" />
 </head>
+<body>
 
-<body class="with-sun">
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
-      </a>
+<nav class="site-nav">
+<a href="/index-en.html" class="logo">SSCC</a>
+<ul class="menu">
+<li><a href="/project-sscc.html">Project</a></li>
+<li><a href="/projects.html">Projects</a></li>
+<li><a href="/cooperation.html">Cooperation</a></li>
+<li><a href="/education.html">Education</a></li>
+<li><a href="/consortium.html">Consortium</a></li>
+<li class="lang"><a href="/index.html" aria-label="Přepnout do češtiny">CZ</a></li>
+</ul>
+</nav>
 
-      <nav class="site-nav" aria-label="Hlavní navigace">
-        <ul>
-          <li><a href="projekty.html">Projekty</a></li>
-          <li><a href="edukace.html" class="active" aria-current="page">Edukace</a></li>
-          <li><a href="napady.html">Nápady</a></li>
-          <li><a href="konsorcium.html">Konsorcium</a></li>
-          <li><a href="spoluprace.html">Spolupráce</a></li>
-        </ul>
-      </nav>
 
-      <div class="lang-switch" aria-label="Jazyk">
-        <a class="lang active" href="edukace.html" aria-current="true">CS</a>
-        <span class="sep">|</span>
-        <a class="lang" href="education.html">EN</a>
-      </div>
-    </div>
-  </header>
+<header class="hero city city--ostrava">
+<div class="sun" aria-hidden="true"></div>
+<div class="hero-content">
+<h1>SolarSpace Carbon Cycle</h1>
+<p>A cross‑disciplinary platform for research, collaboration and open education.</p>
+</div>
+</header>
 
-  <!-- OBSAH -->
-  <main id="main" class="page has-sun">
-    <h1 class="hero-title">Edukace &amp; spolupráce</h1>
-    <p class="lead">SSCC není jen technologie — je to otevřená platforma pro výzkum, průmysl a studenty.</p>
 
-    <section class="projects-list" aria-label="Témata">
-      <!-- ... -->
-    </section>
-<section class="city-backdrop"></section>
-    <section class="section-cta">
-      <h2>Chcete se zapojit?</h2>
-      <p>Napište, do které oblasti spadáte a jaký typ spolupráce hledáte.</p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Požádat o spolupráci / Request abstract</a></p>
-    </section>
-  </main>
+<main class="page">
+<section>
+<h2>Welcome</h2>
+<p>Explore the project, running initiatives and opportunities for cooperation.</p>
+</section>
+</main>
 
-  <!-- Ostrava pod hero -->
-  <section class="city-backdrop" aria-hidden="true"></section>
 
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    ...
-  </footer>
-
-  <script>
-    (() => {
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-      });
-    })();
-  </script>
+<footer class="site-footer">
+<p>© SSCC — SolarSpace Carbon Cycle</p>
+</footer>
 </body>
 </html>
