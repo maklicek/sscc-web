@@ -250,40 +250,6 @@ a:hover{ opacity:.92; }
 }
 
 
-/* Ostrava – rozostřené pozadí dole na titulce */
-.city-backdrop{
-  position: relative;
-  height: 260px;            /* výška pásu */
-  margin: 32px 0 0;         /* mezera nad pásem */
-  overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.city-backdrop::before{
-  content:"";
-  position:absolute;
-  inset:-18px;
-  background:
-    image-set(
-      url("assets/img/ostrava.avif") type("image/avif"),
-      url("assets/img/ostrava.webp") type("image/webp"),
-      url("assets/img/ostrava.jpg")  type("image/jpeg")
-    );
-  background-position:center;
-  background-size:cover;
-  filter: blur(3px) brightness(1.05) contrast(1.03) saturate(1.05);
-  transform: scale(1.06);
-  z-index:0;
-}
-.city-backdrop::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to top, rgba(12,18,25,1) 0%, rgba(12,18,25,.70) 36%, rgba(12,18,25,0) 70%),
-    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 52%);
-  pointer-events:none;
-  z-index:1;
-}
 
 /* Grid + karty pro Projekty/Nápady – stejné jako Spolupráce */
 .cards-grid{
@@ -338,7 +304,7 @@ a:hover{ opacity:.92; }
 
 /* Footer – světlejší panel */
 .site-footer{
-  margin-top:40px;
+  margin-top:50px;
   background: linear-gradient(180deg, rgba(22,30,42,.85) 0%, rgba(18,26,37,.88) 100%);
   border-top:1px solid rgba(255,255,255,.10);
   color: var(--muted);
@@ -402,36 +368,6 @@ header.site-header, main, footer{ position:relative; z-index:1; }
 .footer-links a{ color:#e6ecf5; }
 .footer-links a:hover{ color:#ffd75a; }
 
-
-/* OSTRAVA pod titulkem – „na tvrdo“ JPG */
-.city-backdrop{
-  position: relative;
-  height: 300px;                  /* o chlup vyšší, ať je patrná */
-  margin: 36px 0 0;
-  overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.city-backdrop::before{
-  content:"";
-  position:absolute; inset:-18px;
-  background-image: url("assets/img/ostrava.jpg");   /* jen JPG */
-  background-position:center;
-  background-size:cover;
-  filter: blur(3.2px) brightness(1.06) contrast(1.04) saturate(1.06);
-  transform: scale(1.06);
-  z-index:0;
-}
-.city-backdrop::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.72) 36%, rgba(12,18,25,0) 70%),
-    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 52%);
-  pointer-events:none;
-  z-index:1;
-}
-
 /* ——— 4) Větší mezera na titulce ——— */
 .home__grid{ gap:96px; } /* bylo menší */
 /* SLUNCE (vpravo nahoře) – obrázek NAD gradientem + silnější svit */
@@ -459,32 +395,6 @@ body.with-sun::before{
     0 0 220px 120px rgba(255,215,90,.18);
 }
 
-/* OSTRAVA pod titulkem – jistota zobrazení JPG + o chlup vyšší */
-.city-backdrop{
-  position: relative;
-  height: 320px;                 /* zvětšeno, ať je patrná */
-  margin: 36px 0 0;
-  overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.08);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.city-backdrop::before{
-  content:"";
-  position:absolute; inset:-18px;
-  background: url("assets/img/ostrava.jpg") center/cover no-repeat;
-  filter: blur(3.2px) brightness(1.06) contrast(1.04) saturate(1.06);
-  transform: scale(1.06);
-  z-index:0;
-}
-.city-backdrop::after{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    linear-gradient(to top,    rgba(12,18,25,1) 0%, rgba(12,18,25,.72) 36%, rgba(12,18,25,0) 70%),
-    linear-gradient(to bottom, rgba(12,18,25,.90) 0%, rgba(12,18,25,0) 52%);
-  pointer-events:none;
-  z-index:1;
-}
 
 /* Větší mezera mezi rozcestníkem a hero textem na titulce */
 .home__grid{ gap:112px; }
@@ -525,7 +435,7 @@ header, main, footer { position: relative; z-index: 1; }
 /* ---- OSTRAVA na titulce (spodek stránky) ---- */
 .city-backdrop{
   position: relative;
-  height: 280px;             /* můžeš zvětšit 320–360px */
+  height: 480px;             /* můžeš zvětšit 320–360px */
   overflow: hidden;
   z-index: 0;
 }
@@ -548,4 +458,4 @@ header, main, footer { position: relative; z-index: 1; }
 }
 
 /* ---- větší mezera titulka: rozcestník × text ---- */
-.home__grid{ gap: 96px; }  /* bylo ~80; klidně uprav */
+.home__grid{ gap: 110px; }  /* bylo ~80; klidně uprav */
