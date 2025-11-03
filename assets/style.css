@@ -487,6 +487,12 @@ html.page--napady{--show-sun:1}
 /***** CITY BACKDROPS *****/
 .city{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
 .city--ostrava { background-image: url('images/cities/ostrava.jpg'); }
+.city-backdrop{
+  position: fixed; inset: 0;
+  background: url('images/cities/ostrava.jpg') center/cover no-repeat;
+  opacity:.18; pointer-events:none; z-index:0;
+}
+.home, .page { position: relative; z-index:1; }
 
 
 
