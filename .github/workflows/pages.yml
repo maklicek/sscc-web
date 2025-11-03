@@ -1,39 +1,31 @@
-name: Deploy static site to GitHub Pages
-
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+name: Guard bad paths
+on: [push, pull_request]
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      # Pokud máš web v kořeni repa, nic nebuildíme – jen uploadneme.
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+      - name: Scan HTML and CSS for bad paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "🔍 Kontroluji cesty v HTML a CSS..."
 
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          # 1) V HTML zakázat ABSOLUTNÍ cesty od kořene ("/...").
+          BAD1=$(grep -RIn 'href="/' --include='*.html' -- . || true)
+          BAD2=$(grep -RIn 'src="/'  --include='*.html' -- . || true)
+
+          # 2) V CSS zakázat používání 'images/' (má být assets/img/…).
+          BAD3=$(grep -RIn 'images/' --include='*.css' -- . || true)
+
+          if [[ -n "$BAD1$BAD2$BAD3" ]]; then
+            echo "❌ Nalezeny potenciálně chybné cesty:"
+            [[ -n "$BAD1" ]] && echo "$BAD1"
+            [[ -n "$BAD2" ]] && echo "$BAD2"
+            [[ -n "$BAD3" ]] && echo "$BAD3"
+            exit 1
+          fi
+
+          echo "✅ Cesty vypadají v pořádku."
