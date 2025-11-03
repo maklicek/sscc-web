@@ -1,160 +1,455 @@
-<!DOCTYPE html>
-<html lang="cs">
+# Cíl
+
+Znovu navázat na práci na webu **maklicek/sscc-web**, sjednotit styly, doladit jazykový přepínač a opravit „slunce/Ostrava“ + drobné 404.
+
+---
+
+## Rychlá rekapitulace (podle struktury repa, 2025‑11‑03)
+
+* Hlavní stránky: `index.html`, `index-en.html`, `project-sscc.html`/`projekt-sscc.html`, `projects.html`/`projekty.html`, `cooperation.html`/`spoluprace.html`, `education.html`/`edukace.html`, `consortium.html`/`konsorcium.html`, `ideas.html`/`napady.html`, `health.html`, `coming-soon.html`, `404.html`.
+* Soubory SEO: `sitemap.xml`, `robots.txt`, `.nojekyll`.
+* Složky: `assets/` (CSS, JS, případně fonty), `images/`, `favicons/`, `pdf/`, `docx/`.
+* Automatizace: `.github/workflows/pages.yml`, utility `check-pages.py`, `check_and_fix_pages.py`.
+
+> Pozn.: dvojice CZ/EN souborů existují, ale některé cesty v navigaci jsou napříč soubory nedůsledné (absolutní vs. relativní), a aktivní stav v menu je nekonzistentní.
+
+---
+
+## To‑do (první průchod)
+
+1. **Konsolidace hlavičky/patičky** (minimal‑duplication)
+
+* Přesunout všechny společné styly do `assets/style.css`.
+* V HTML vyházet zbytky inline `<style>` a do hlaviček doplnit jednotné metatagy + `hreflang`.
+
+2. **Jazykový přepínač (CZ/EN)**
+
+* Viditelný toggle + `link rel="alternate" hreflang` páry.
+* Pevné mapování CZ → EN souborů a zpět.
+
+3. **Navigace: aktivní stránka + konzistentní cesty**
+
+* Root‑relative odkazy (`/spoluprace.html`), aby fungovaly i na GitHub Pages i při vnořených odkazech.
+
+4. **„Slunce“ / „Ostrava trucuje“**
+
+* Zrušit případné ID kolize (`id="sun"` na více stránkách) → použít třídy.
+* Ošetřit zobrazení přes CSS proměnnou `--show-sun` a konsistentní `background-image` pro Ostravu.
+
+5. **Kontroly**
+
+* Prohnat link‑checkerem (`check-pages.py`) a dořešit 404 a přesměrování.
+
+---
+
+## Návrhy konkrétních úprav
+
+### 1) Jednotná hlavička (vzor vložit do všech *.html)
+
+```html
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="SolarSpace Carbon Cycle (SSCC): decentralizovaná syntéza zeleného amoniaku (NH₃) a zachytávání CO₂.">
+  <meta name="description" content="SolarSpace Carbon Cycle — výzkum, spolupráce, edukace." />
 
   <!-- Favicons -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
 
-  <!-- Jazykové alternativy -->
-  <link rel="alternate" hreflang="cs" href="index.html">
-  <link rel="alternate" hreflang="en" href="index-en.html">
+  <!-- Styles -->
+  <link rel="preload" href="/assets/style.css" as="style" />
+  <link rel="stylesheet" href="/assets/style.css" />
 
-  <!-- Jediné globální CSS -->
-  <link rel="stylesheet" href="assets/style.css?v=a711e50">
-
-  <style>
-    
-    .main-logo { height: 80px; }
-    @media (max-width: 720px){ .main-logo { height: 64px; } }
-  </style>
+  <!-- Alternativní jazykové verze (příklad pro CZ stránku) -->
+  <link rel="alternate" hreflang="en" href="/index-en.html" />
+  <link rel="alternate" hreflang="cs" href="/index.html" />
 </head>
+```
 
-<body class="with-sun">
+### 2) Viditelný jazykový přepínač (fragment nav)
 
+```html
+<nav class="site-nav">
+  <a href="/index.html" class="logo">SSCC</a>
+  <ul class="menu">
+    <li><a href="/projekt-sscc.html">Projekt</a></li>
+    <li><a href="/projekty.html">Projekty</a></li>
+    <li><a href="/spoluprace.html">Spolupráce</a></li>
+    <li><a href="/edukace.html">Edukace</a></li>
+    <li><a href="/konsorcium.html">Konsorcium</a></li>
+    <li class="lang">
+      <a href="/index-en.html" aria-label="Switch to English">EN</a>
+    </li>
+  </ul>
+</nav>
+```
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-        </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
-        </div>
-      </a>
+> V EN variantě prohodit cesty na `project-sscc.html`, `projects.html` atd. a CZ odkaz nastavit na `/index.html`.
 
-      <nav class="site-nav" aria-label="Hlavní navigace">
-        <ul>
-          <li class="has-sub">
-            <a href="projekty.html">Projekty</a>
-            <ul class="submenu" aria-label="Pod-menu Projekty">
-              <li><a href="projekty.html#orbit">Orbitální solární farma</a></li>
-              <li><a href="projekty.html#co2">CO₂ jako pracovní médium</a></li>
-              <li><a href="projekty.html#nh3">Uhlíkově negativní amoniak</a></li>
-            </ul>
-          </li>
-          <li><a href="edukace.html">Edukace</a></li>
-          <li><a href="napady.html">Nápady</a></li>
-          <li><a href="konsorcium.html">Konsorcium</a></li>
-          <li><a href="spoluprace.html">Spolupráce</a></li>
-        </ul>
-      </nav>
+### 3) Aktivní položka v menu (čistě v CSS)
 
-      <div class="lang-switch" aria-label="Jazyk">
-        <a class="lang active" href="index.html" aria-current="true">CS</a>
-        <span class="sep">|</span>
-        <a class="lang" href="index-en.html">EN</a>
-      </div>
+Do `<html>` na každé stránce přidejte třídu `page--XYZ` (např. `page--projekty`). Pak v CSS:
+
+```css
+/* zvýraznění aktivní stránky */
+.menu a[href$="projekty.html"] { opacity: .75; }
+html.page--projekty .menu a[href$="projekty.html"] { opacity: 1; text-decoration: underline; }
+```
+
+### 4) „Slunce“ + „Ostrava“ (bez kolizí a s jistým zobrazením)
+
+```css
+/* defaultně skryté slunce */
+:root { --show-sun: 0; }
+.sun { opacity: calc(var(--show-sun)); transition: opacity .3s ease; }
+
+/* stránka, kde má být slunce vidět (např. nápady) */
+html.page--napady { --show-sun: 1; }
+
+/* Ostrava pozadí sjednoceně */
+.city {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.city--ostrava {
+  /* zkontrolovat název souboru a cestu přesně podle /images */
+  background-image: url('/images/cities/ostrava.jpg');
+}
+```
+
+V HTML pak používat jen třídy, ne ID (zabrání se kolizím):
+
+```html
+<section class="hero city city--ostrava">
+  <div class="sun" aria-hidden="true"></div>
+  <!-- obsah -->
+</section>
+```
+
+### 5) Oprava cest (root‑relative)
+
+Všechny vnitřní odkazy sjednotit na tvar `href="/soubor.html"`, stejně obrázky `src="/images/..."`. Na GitHub Pages to spolehlivě funguje i mezi stránkami.
+
+### 6) Link‑checker: rozšířená varianta
+
+Aktuální `check_and_fix_pages.py` můžete rozšířit o kontrolu obrázků a `hreflang` párů:
+
+```python
+# pseudo‑diff hlavních kroků
+# 1) najít všechny <a href>, <img src>, <link rel="alternate">
+# 2) ověřit existenci cílových souborů v repozitáři
+# 3) varovat na relativní cesty bez úvodního '/'
+# 4) zkontrolovat, že pro CZ stránku existuje EN alternate a obráceně
+```
+
+(Pokud chcete, dodám plnou verzi skriptu.)
+
+---
+
+## Mini‑kontrolní seznam před zveřejněním
+
+* [ ] Všechny stránky mají jednotnou hlavičku a načítají `/assets/style.css`.
+* [ ] Navigace používá root‑relative cesty a zvýrazňuje aktivní stránku.
+* [ ] Přepínač jazyků funguje na všech dvojicích CZ/EN.
+* [ ] Slunce je řízeno přes `--show-sun`, žádná duplicitní `id`.
+* [ ] Obrázky měst (vč. Ostravy) mají existující soubory a správné cesty.
+* [ ] `check-pages.py`/`check_and_fix_pages.py` hlásí 0 chyb.
+
+---
+
+## Další drobnosti (volitelné)
+
+* `preload` pro největší hero obrázky.
+* `aria-current="page"` na aktivní odkaz pro lepší přístupnost.
+* `sitemap.xml` – doplnit EN URL, pokud chybí; ověřit kanonické adresy.
+* `404.html` – přidat odkazy na hlavní CZ/EN stránky.
+
+---
+
+## Hotové záplaty (k pastnutí)
+
+> **Pozn.:** V `assets/style.css` **jen přidej na konec**. U HTML souborů je to **drop‑in náhrada** (můžeš je vložit celé).
+
+### Patch 1 — `assets/style.css` (přidej na **konec** souboru)
+
+```css
+/* ===============================
+   SSCC: navigace, jazykový toggle,
+   aktivní stránka, slunce, města
+   =============================== */
+
+/***** NAV *****/
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.06);background:var(--panel, #111823);position:sticky;top:0;z-index:50}
+.site-nav .logo{font-weight:700;letter-spacing:.02em;text-decoration:none}
+.menu{list-style:none;display:flex;align-items:center;gap:.85rem;margin:0;padding:0}
+.menu a{display:inline-block;padding:.4rem .6rem;text-decoration:none;opacity:.9}
+.menu a:hover{opacity:1}
+.menu .lang a{border:1px solid rgba(255,255,255,.12);border-radius:.5rem;padding:.3rem .5rem;font-variant:small-caps}
+
+/* aktivní stránka (dostane třídu na <html>) */
+.menu a[aria-current="page"]{text-decoration:underline;opacity:1}
+
+/***** SUN *****/
+:root{--show-sun:0}
+.sun{width:120px;height:120px;border-radius:999px;position:absolute;right:5vw;top:5vh;filter:blur(6px);opacity:calc(var(--show-sun));transition:opacity .3s ease;pointer-events:none;background:radial-gradient(circle at 50% 50%, rgba(255,220,130,.95), rgba(255,160,40,.6) 45%, rgba(255,140,0,.0) 70%)}
+html.page--napady{--show-sun:1}
+
+/***** CITY BACKDROPS *****/
+.city{background-position:center;background-size:cover;background-repeat:no-repeat;position:relative}
+.city--ostrava{background-image:url('/images/cities/ostrava.jpg')}
+
+/***** HERO *****/
+.hero{position:relative;min-height:48svh;display:grid;place-items:center;padding:4rem 1.5rem}
+.hero .hero-content{max-width:980px;text-align:center}
+```
+
+---
+
+### Patch 2 — `index.html` (CZ, **nahraď celý soubor**)
+
+```html
+<!DOCTYPE html>
+<html lang="cs" class="page--index">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SSCC — SolarSpace Carbon Cycle</title>
+  <meta name="description" content="SolarSpace Carbon Cycle — výzkum, spolupráce, edukace." />
+
+  <link rel="icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+
+  <link rel="preload" href="/assets/style.css" as="style" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <link rel="alternate" hreflang="en" href="/index-en.html" />
+  <link rel="alternate" hreflang="cs" href="/index.html" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">SSCC</a>
+    <ul class="menu">
+      <li><a href="/projekt-sscc.html">Projekt</a></li>
+      <li><a href="/projekty.html">Projekty</a></li>
+      <li><a href="/spoluprace.html">Spolupráce</a></li>
+      <li><a href="/edukace.html">Edukace</a></li>
+      <li><a href="/konsorcium.html">Konsorcium</a></li>
+      <li class="lang"><a href="/index-en.html" aria-label="Switch to English">EN</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero city city--ostrava">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>SolarSpace Carbon Cycle</h1>
+      <p>Multioborová platforma pro výzkum, spolupráci a otevřenou edukaci.</p>
     </div>
   </header>
 
-  <!-- OBSAH -->
-  <main id="main" class="home has-sun">
-    <div class="home__grid">
-      <!-- Levý sloupec: rychlý rozcestník -->
-      <aside class="toc" aria-label="Rychlá navigace">
-        <div class="accordion">
-          <details open>
-            <summary>Projekty</summary>
-            <ul><li><a href="projekty.html">Všechny projekty</a></li></ul>
-          </details>
-          <details>
-            <summary>Edukace</summary>
-            <ul><li><a href="edukace.html">Úvod</a></li></ul>
-          </details>
-          <details>
-            <summary>Nápady</summary>
-            <ul><li><a href="napady.html">Koncepty a návrhy</a></li></ul>
-          </details>
-          <details>
-            <summary>Konsorcium</summary>
-            <ul><li><a href="konsorcium.html">Členové a partneři</a></li></ul>
-          </details>
-          <details>
-            <summary>Spolupráce</summary>
-            <ul><li><a href="spoluprace.html">Zapojení &amp; kontakty</a></li></ul>
-          </details>
-        </div>
-      </aside>
-
-      <!-- Pravý sloupec: hero text -->
-      <section class="hero-copy">
-        <p class="hero-tag">Pilotní průmyslový projekt</p>
-        <h1 class="hero-title">SSCC: ze škodlivého na užitečné</h1>
-
-        <p class="lead">
-          Zachytit <strong>CO<sub>2</sub></strong> z&nbsp;komínů, spojit s&nbsp;<strong>H<sub>2</sub></strong> z obnovitelných zdrojů a převést na
-          <strong>NH<sub>3</sub></strong> — palivo i hnojivo. Čistší vzduch, nižší náklady na emise, technologie místo útlumu.
-        </p>
-
-        <p class="hero-abstract">
-          Integrovaný systém fotovoltaiky (s akumulací), CCUS a elektrolýzy pro lokální snížení emisí
-          o&nbsp;&gt;90&nbsp;% a vznik užitečného produktu. Cíl: udržet kvalifikovanou výrobu v&nbsp;regionu.
-        </p>
-
-        <div class="cta-row">
-          <a href="projekty.html" class="btn-hero btn-primary">Projekty</a>
-          <a href="spoluprace.html" class="btn-hero">Spolupráce</a>
-        </div>
-        <section class="city-backdrop"></section>
-        
-  <!-- (Volitelné) Ostrava backdrop pod hero -->
-  <section class="city-backdrop" aria-hidden="true"></section>
-      </section>
-      
- 
-    </div>
+  <main class="page">
+    <section>
+      <h2>Vítejte</h2>
+      <p>Prozkoumejte projekt, běžící iniciativy i příležitosti ke spolupráci.</p>
+    </section>
   </main>
 
-
-  <!-- PATIČKA -->
   <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
-      </div>
-      <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
+    <p>© SSCC — SolarSpace Carbon Cycle</p>
   </footer>
-
-  <!-- aktivní odkaz v menu/patičce -->
-  <script>
-  (() => {
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-      const href = a.getAttribute('href'); if (!href) return;
-      if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-    });
-  })();
-  </script>
-  <!-- END: sscc page OK -->
 </body>
 </html>
+```
+
+---
+
+### Patch 3 — `index-en.html` (EN, **nahraď celý soubor**)
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="page--index">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SSCC — SolarSpace Carbon Cycle</title>
+  <meta name="description" content="SolarSpace Carbon Cycle — research, collaboration, education." />
+
+  <link rel="icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+
+  <link rel="preload" href="/assets/style.css" as="style" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <link rel="alternate" hreflang="en" href="/index-en.html" />
+  <link rel="alternate" hreflang="cs" href="/index.html" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <a href="/index-en.html" class="logo">SSCC</a>
+    <ul class="menu">
+      <li><a href="/project-sscc.html">Project</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/cooperation.html">Cooperation</a></li>
+      <li><a href="/education.html">Education</a></li>
+      <li><a href="/consortium.html">Consortium</a></li>
+      <li class="lang"><a href="/index.html" aria-label="Přepnout do češtiny">CZ</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero city city--ostrava">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>SolarSpace Carbon Cycle</h1>
+      <p>A cross‑disciplinary platform for research, collaboration and open education.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section>
+      <h2>Welcome</h2>
+      <p>Explore the project, running initiatives and opportunities for cooperation.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© SSCC — SolarSpace Carbon Cycle</p>
+  </footer>
+</body>
+</html>
+```
+
+---
+
+### Patch 4 — `edukace.html` (CZ, **nahraď celý soubor**)
+
+```html
+<!DOCTYPE html>
+<html lang="cs" class="page--edukace page--napady">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edukace | SSCC</title>
+  <meta name="description" content="Edukace a spolupráce: materiály SSCC, výzkum, průmyslové partnerství a zapojení studentů.">
+
+  <link rel="icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+
+  <link rel="preload" href="/assets/style.css" as="style" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <link rel="alternate" hreflang="en" href="/education.html" />
+  <link rel="alternate" hreflang="cs" href="/edukace.html" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/index.html" class="logo">SSCC</a>
+    <ul class="menu">
+      <li><a href="/projekt-sscc.html">Projekt</a></li>
+      <li><a href="/projekty.html">Projekty</a></li>
+      <li><a href="/spoluprace.html">Spolupráce</a></li>
+      <li><a href="/edukace.html" aria-current="page">Edukace</a></li>
+      <li><a href="/konsorcium.html">Konsorcium</a></li>
+      <li class="lang"><a href="/education.html" aria-label="Switch to English">EN</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Edukace</h1>
+      <p>Materiály, kurzy a otevřené zdroje pro školy, univerzity i veřejnost.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section>
+      <h2>Materiály</h2>
+      <ul>
+        <li><a href="/pdf/Obecny%20popis.pdf">Obecný popis projektu (PDF)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© SSCC — SolarSpace Carbon Cycle</p>
+  </footer>
+</body>
+</html>
+```
+
+---
+
+### Patch 5 — `education.html` (EN, **nahraď celý soubor**)
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="page--education page--napady">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education | SSCC</title>
+  <meta name="description" content="Education & collaboration: SSCC materials, research, industrial partnerships and student engagement.">
+
+  <link rel="icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+
+  <link rel="preload" href="/assets/style.css" as="style" />
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <link rel="alternate" hreflang="en" href="/education.html" />
+  <link rel="alternate" hreflang="cs" href="/edukace.html" />
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="/index-en.html" class="logo">SSCC</a>
+    <ul class="menu">
+      <li><a href="/project-sscc.html">Project</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/cooperation.html">Cooperation</a></li>
+      <li><a href="/education.html" aria-current="page">Education</a></li>
+      <li><a href="/consortium.html">Consortium</a></li>
+      <li class="lang"><a href="/edukace.html" aria-label="Přepnout do češtiny">CZ</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Education</h1>
+      <p>Materials, courses and open resources for schools, universities and the public.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section>
+      <h2>Materials</h2>
+      <ul>
+        <li><a href="/pdf/Obecny%20popis.pdf">General project overview (PDF, CZ)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© SSCC — SolarSpace Carbon Cycle</p>
+  </footer>
+</body>
+</html>
+
