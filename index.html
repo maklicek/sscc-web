@@ -95,6 +95,23 @@
       border-radius: 12px;
       object-fit: contain;
     }
+    /* zmenšení velkých diagramů na rozumnou výšku */
+    .diagram-hero {
+      display: block;
+      max-width: 900px;     /* maximální šířka obrázku */
+      max-height: 420px;    /* maximální výška obrázku */
+      width: 100%;
+      height: auto;
+      margin: 40px auto 0;  /* vystředění a mezera od nadpisu */
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .diagram-hero {
+        max-height: 260px;
+        margin-top: 24px;
+      }
+    }
 
   </style>
 </head>
