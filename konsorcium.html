@@ -84,6 +84,55 @@
       border-radius: 12px;
       object-fit: contain;
     }
+    /* obecně pro všechny obrázky */
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* velký hero obrázek přes celou šířku textu */
+    .hero-slot {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #262626;
+    }
+    .hero-slot img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* obrázek v kartě / bloku – pevná výška, hezky oříznutý */
+    .img-slot {
+      width: 100%;
+      height: 220px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #262626;
+    }
+    .img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;   /* fotka se přizpůsobí rámečku, klidně se trochu ořízne */
+    }
+
+    /* diagram / schéma – neřezat, jen zmenšit do rámečku */
+    .diagram-slot {
+      max-width: 900px;
+      max-height: 420px;
+      margin: 32px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1b1b1b;
+    }
+    .diagram-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* nic neořízne, jen zmenší */
+    }
 
   </style>
 </head>
