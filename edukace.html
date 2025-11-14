@@ -1,59 +1,230 @@
 <!DOCTYPE html>
-<html lang="cs" class="page--edukace page--napady">
-<!-- vlož do každé stránky, nahraď její <head> -->
+<html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="... stránkový popis ...">
-
-  <!-- Favicons (repo-relative) -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- CSS (pozor: BEZ / na začátku) -->
-  <link rel="preload" href="assets/style.css?v=p1" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=p1">
-  <link rel="alternate" hreflang="cs" href="edukace.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edukace – SSCC</title>
+  <style>
+    body { margin: 0; padding: 0; background: #0d0d0d; color: #f1f1f1; font-family: Arial, sans-serif; line-height: 1.6; }
+    h1, h2, h3 { color: #e4c77f; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0 80px; }
+    .section { margin-bottom: 72px; }
+    .intro { max-width: 780px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-gap: 28px; margin-top: 24px; }
+    .card { background: #151515; padding: 22px; border-radius: 12px; }
+    .img-placeholder { width: 100%; height: 180px; background: #262626; border-radius: 12px; margin: 18px 0; display: flex; align-items: center; justify-content: center; color:#888; font-size: 0.9rem; }
+    ul { padding-left: 20px; }
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-gap: 24px; margin-top: 24px; }
+    .faq-item { background: #151515; padding: 18px; border-radius: 10px; }
+    .faq-item h3 { font-size: 1rem; margin-top: 0; margin-bottom: 8px; }
+    .hero-title { font-size: 2.2rem; margin-bottom: 12px; }
+  </style>
 </head>
-
 <body>
-<nav class="site-nav">
-<a href="index.html" class="logo">SSCC</a>
-<ul class="menu">
-<li><a href="projekty.html">Projekty</a></li>
-<li><a href="spoluprace.html">Spolupráce</a></li>
-<li><a href="edukace.html" aria-current="page">Edukace</a></li>
-<li><a href="konsorcium.html">Konsorcium</a></li>
-<li class="lang"><a href="education.html" aria-label="Switch to English">EN</a></li>
-<ul>
-<nav>
+  <div class="container">
+    <!-- HLAVNI NADPIS -->
+    <section class="section">
+      <h1 class="hero-title">Edukace</h1>
+      <p class="intro">
+        Energie, CO₂ a chemie kolem syntetických paliv bývají složitá témata. V edukaci je vysvětlujeme jednoduše: jak funguje CO₂ v atmosféře,
+        proč dává smysl zelený amoniak, co umí geotermie a jak do toho zapadá energie z kosmu.
+      </p>
+      <div class="img-placeholder">Schéma: CO₂ → NH₃ → energie</div>
+    </section>
 
+    <!-- CO2 SEKCE -->
+    <section class="section">
+      <h2>CO₂ – co to je a proč se řeší</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Základní fakta</h3>
+          <ul>
+            <li>CO₂ (oxid uhličitý) je běžná součást atmosféry.</li>
+            <li>Vzniká spalováním fosilních paliv, v průmyslu, dopravě i v přírodních procesech.</li>
+            <li>V atmosféře zadržuje teplo – podílí se na skleníkovém efektu.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Proč je problém dnes</h3>
+          <ul>
+            <li>Emise CO₂ za posledních ~150 let výrazně vzrostly.</li>
+            <li>Koncentrace je vyšší než v předindustriálním období.</li>
+            <li>Dopad na klima, extrémy počasí a stabilitu ekosystémů.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>CO₂ jako zdroj</h3>
+          <ul>
+            <li>V SSCC je CO₂ vstupní surovinou, ne jen odpadem.</li>
+            <li>Lze ho zachytit z průmyslu, ze vzduchu (DAC) nebo z podzemních zásobníků.</li>
+            <li>Slouží jako uhlíkový vstup pro syntézu nosičů energie.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<header class="hero">
-<div class="sun" aria-hidden="true"></div>
-<div class="hero-content">
-<h1>Edukace</h1>
-<p>Materiály, kurzy a otevřené zdroje pro školy, univerzity i veřejnost.</p>
-</div>
-</header>
+    <!-- NH3 SEKCE -->
+    <section class="section">
+      <h2>Zelený amoniak (NH₃) – nosič energie a uhlíku</h2>
+      <div class="img-placeholder">Nádrž NH₃ a šipky: teplo, elektřina, chemie</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Co je NH₃</h3>
+          <ul>
+            <li>Amoniak je sloučenina dusíku a vodíku.</li>
+            <li>Dnes se používá hlavně pro výrobu hnojiv a chemických meziproduktů.</li>
+            <li>„Zelený“ NH₃ vyžaduje nízkoemisní nebo obnovitelnou energii a udržitelný zdroj vstupů.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Proč je dobrý nosič energie</h3>
+          <ul>
+            <li>Dá se skladovat a přepravovat na velké vzdálenosti.</li>
+            <li>Umí nést energii i uhlík v jedné molekule.</li>
+            <li>Lze ho využít pro teplo, elektřinu i další chemii.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Role v SSCC</h3>
+          <ul>
+            <li>NH₃ je hlavní výstup z mnoha uzlů systému SSCC.</li>
+            <li>Může napájet průmysl, obce i malé lokální uzly.</li>
+            <li>Umožňuje přesouvat energii tam, kde dává největší smysl.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- GEOTERMIE SEKCE -->
+    <section class="section">
+      <h2>Geotermální energie – teplo zevnitř Země</h2>
+      <div class="img-placeholder">Řez podložím: geotermální vrt</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Princip</h3>
+          <ul>
+            <li>Teplo z nitra Země se šíří horninami směrem k povrchu.</li>
+            <li>Ve větších hloubkách jsou vyšší teploty.</li>
+            <li>Pomocí vrtů lze teplo přivést na povrch a využít ho.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Výhody</h3>
+          <ul>
+            <li>Stabilní zdroj energie nezávislý na počasí.</li>
+            <li>Vhodný pro vytápění, průmysl i sušení.</li>
+            <li>Lze kombinovat s dalšími zdroji a syntézou.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Role v SSCC</h3>
+          <ul>
+            <li>V Doupově testujeme geotermii jako základ modulárního uzlu.</li>
+            <li>Teplo může pohánět syntézu NH₃ nebo jiné procesy.</li>
+            <li>Kombinace geotermie a dalších zdrojů zvyšuje stabilitu systému.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<main class="page">
-<section>
-<h2>Materiály</h2>
-<ul>
-<li><a href="pdf/Obecny%20popis.pdf">Obecný popis projektu (PDF)</a></li>
-</ul>
-</section>
-</main>
+    <!-- ENERGIE Z KOSMU SEKCE -->
+    <section class="section">
+      <h2>Energie z kosmu – orbitální systémy jednoduše</h2>
+      <div class="img-placeholder">Orbitální panel → paprsek → pozemní pole</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Proč je to zajímavé</h3>
+          <ul>
+            <li>Na orbitě neřešíme noc ani špatné počasí.</li>
+            <li>Výkon je stabilnější než z pozemních panelů.</li>
+            <li>Může doplňovat pozemní obnovitelné zdroje.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Jak by to mohlo fungovat</h3>
+          <ul>
+            <li>Solární panely na orbitě vyrábějí energii.</li>
+            <li>Ta se přenáší ve formě řízeného paprsku na Zemi.</li>
+            <li>Na zemi se znovu převádí na využitelnou energii pro uzly SSCC.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>V rámci SSCC</h3>
+          <ul>
+            <li>V edukaci vysvětlujeme princip a možnosti.</li>
+            <li>Detailní scénáře jsou v sekci „Nápady a hypotézy“.</li>
+            <li>Jde o jeden z dlouhodobých zdrojů energie pro systém.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
+    <!-- BEZPECNOST A METROLOGIE SEKCE -->
+    <section class="section">
+      <h2>Bezpečnost a metrologie</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bezpečnost</h3>
+          <ul>
+            <li>Bezpečnostní zóny kolem přijímacích polí a technologických uzlů.</li>
+            <li>Ochranné prvky a automatické vypínání při odchylkách.</li>
+            <li>Standardy pro práci s NH₃ a dalšími látkami.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Metrologie</h3>
+          <ul>
+            <li>Měření výkonu a energie v čase.</li>
+            <li>Sledování emisí a skutečných úspor CO₂.</li>
+            <li>Transparentní data pro partnery a veřejnost.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Důvěra</h3>
+          <ul>
+            <li>Otevřenost dat tam, kde to dává smysl.</li>
+            <li>Možnost nezávislého auditu.</li>
+            <li>Jasná pravidla a procesy pro provoz.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<footer class="site-footer">
-<p>© SSCC — SolarSpace Carbon Cycle</p>
-</footer>
+    <!-- FAQ SEKCE -->
+    <section class="section">
+      <h2>Často kladené otázky</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Je NH₃ bezpečný?</h3>
+          <p>
+            Amoniak je běžně používaná chemikálie s jasně definovanými bezpečnostními standardy. Klíčové je správné skladování, ventilace a školení
+            personálu. SSCC staví na existujících průmyslových normách.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Proč nestačí jen klasická fotovoltaika?</h3>
+          <p>
+            Fotovoltaika je důležitá, ale je závislá na počasí, denní době a místě. SSCC se zaměřuje na stabilnější kombinace zdrojů a na možnost
+            přenášet energii v čase i prostoru pomocí NH₃.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Proč používat CO₂, když se ho chceme zbavit?</h3>
+          <p>
+            CO₂ nechceme jen ukládat nebo danit. Smyslem je část z něj použít jako vstup do užitečných procesů – například pro výrobu nosičů energie,
+            které pak snižují potřebu spalovat další fosilní paliva.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Jak daleko je to od reálného nasazení?</h3>
+          <p>
+            První kroky se odehrávají v pilotních projektech: průmyslové uzly, obce a geotermální lokality. Cílem je ověřit technologie v konkrétních
+            regionech a postupně je rozšiřovat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
