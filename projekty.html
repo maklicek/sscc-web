@@ -1,127 +1,135 @@
 <!DOCTYPE html>
 <html lang="cs">
-<!-- vlož do každé stránky, nahraď její <head> -->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="... stránkový popis ...">
-
-  <!-- Favicons (repo-relative) -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- CSS (pozor: BEZ / na začátku) -->
-  <link rel="preload" href="assets/style.css?v=p1" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=p1">
-  <link rel="alternate" hreflang="cs" href="projekty.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekty SSCC</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0d0d0d; color: #f1f1f1; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+    h1, h2 { color: #e4c77f; }
+    .hero { width: 100%; height: 300px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 40px; }
+    .hero span { font-size: 2rem; color: #e4c77f; }
+    .project { margin-bottom: 80px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-gap: 32px; margin-top: 24px; }
+    .card { background: #1a1a1a; padding: 24px; border-radius: 12px; }
+    .img-placeholder { width: 100%; height: 180px; background: #333; border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.9rem; }
+    .status { margin-top: 20px; font-style: italic; color: #c9c9c9; }
+  </style>
 </head>
+<body>
+  <div class="hero"><span>Projekty SSCC</span></div>
 
-<body class="with-sun">
+  <div class="container">
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+    <!-- PROJEKT 1: OSTRAVA -->
+    <section class="project">
+      <h2>Ostrava – průmyslový uzel DAC → NH₃</h2>
+      <div class="img-placeholder">Schéma DAC → NH₃</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Cíle projektu</h3>
+          <ul>
+            <li>Zachytávání CO₂ ze spalin</li>
+            <li>Lokální syntéza zeleného NH₃</li>
+            <li>Metrologie a měření účinnosti</li>
+            <li>Napojení na energetické sítě</li>
+          </ul>
         </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC</div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle</div>
+        <div class="card">
+          <h3>Lokální přínosy</h3>
+          <ul>
+            <li>Nízké emise v regionu</li>
+            <li>NH₃ pro průmysl a teplárny</li>
+            <li>Stabilní dodávky energie</li>
+            <li>Transformace průmyslové zóny</li>
+          </ul>
         </div>
-      </a>
-
-      <nav class="site-nav">
-<a href="/index.html" class="logo">SSCC<a>
-<ul class="menu">
-<li><a href="/projekt-sscc.html">Projekt<a><li>
-<li><a href="/projekty.html">Projekty<a><li>
-<li><a href="/spoluprace.html">Spolupráce<a><li>
-<li><a href="/edukace.html">Edukace<a><li>
-<li><a href="/konsorcium.html">Konsorcium<a><li>
-<li class="lang">
-<a href="/index-en.html" aria-label="Switch to English">EN<a>
-</li>
-</ul>
-<nav class="site-nav">
-<a href="index.html" class="logo">SSCC<a>
-<ul class="menu">
-<li><a href="projekty.html">Projekty<a><li>
-<li><a href="spoluprace.html">Spolupráce<a><li>
-<li><a href="edukace.html">Edukace<a><li>
-<li><a href="konsorcium.html">Konsorcium<a></i>
-<li class="lang">
-<a href="index-en.html" aria-label="Switch to English">EN<a>
-</li>
-</ul>
-</nav>
-    </div>
-  </header>
-
-  <!-- OBSAH -->
-  <main class="page has-sun">
-    <h1 class="hero-title">Projekty<h1>
-    <p class="lead">Hlavní vývojové směry a implementace v rámci iniciativy SSCC.<p>
-
-    <section class="projects-list" aria-label="Seznam projektů">
-      <article class="project-card" id="orbit">
-        <h2 class="project-title">Orbitální solární farma → přenos energie<h2>
-        <p class="project-desc">Mikrovlnný / laserový přenos z oběhu a bezpečný příjem v pozemní stanici. Studie bezpečnosti, účinnosti a ekonomiky.<p>
-      </article>
-
-      <article class="project-card" id="co2">
-        <h2 class="project-title">CO₂ jako pracovní médium</h2>
-        <p class="project-desc">Vysokoteplotní uzavřené okruhy s CO₂ pro efektivní přenos tepla a výrobu elektřiny.</p>
-      </article>
-
-      <article class="project-card" id="nh3">
-        <h2 class="project-title">Uhlíkově negativní amoniak</h2>
-        <p class="project-desc">Záchyt CO₂ + zelený H₂ → NH₃. Lokální palivo/akumulace tepla s udržitelnou ekonomikou jednotek.</p>
-      </article>
-
-      <article class="project-card" id="pilots">
-        <h2 class="project-title">Pilotní jednotky<h2>
-        <p class="project-desc">Modulární piloty integrující FV + akumulaci, CCUS a syntézu NH₃ pro nasazení v průmyslu.</p>
-      </article>
-    </section>
-<section class="city-backdrop"><section>
-    <section class="section-cta">
-      <h2>Chcete se zapojit?<h2>
-      <p>Spolupracujeme s univerzitami i průmyslem. Váš nápad může vyrůst v projekt SSCC.<p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Navrhnout spolupráci<a>/p>
-    </section>
-  </main>
-
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+        <div class="card">
+          <h3>Technologie</h3>
+          <ul>
+            <li>DAC / zachytávání CO₂</li>
+            <li>Syntéza NH₃</li>
+            <li>Bezpečnostní infrastruktura</li>
+            <li>Řízení a metrologie</li>
+          </ul>
+        </div>
       </div>
-      <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html" aria-current="page">Projekty<a> ·
-        <a href="edukace.html">Edukace<a> ·
-        <a href="napady.html">Nápady<a> ·
-        <a href="konsorcium.html">Konsorcium<a> ·
-        <a href="spoluprace.html">Spolupráce<a>
-      </nav>
-    </div>
-  </footer>
+      <div class="status">Stav: probíhá technická specifikace.</div>
+    </section>
 
-  <!-- Zvýraznění aktivního odkazu -->
-  <script>
-    (() => {
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-      });
-    })();
-  </script>
+    <!-- PROJEKT 2: RD A OBCE -->
+    <section class="project">
+      <h2>RD a obce – lokální zelené uzly energie</h2>
+      <div class="img-placeholder">Ilustrace RD → obec → miniuzel</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Cíle projektu</h3>
+          <ul>
+            <li>Model RD + model obce</li>
+            <li>Stabilní příjem výkonu</li>
+            <li>Mini-syntetický okruh NH₃</li>
+            <li>Zajištění bezpečnosti</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Přínosy</h3>
+          <ul>
+            <li>Stabilní energie mimo počasí</li>
+            <li>Ukládání energie v NH₃</li>
+            <li>Snížení zátěže sítě</li>
+            <li>Soběstačnost pro obce</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Technologie</h3>
+          <ul>
+            <li>Řízení příjmu výkonu</li>
+            <li>Mini-syntéza NH₃</li>
+            <li>Bezpečnostní pásma</li>
+            <li>Integrace s topnými systémy</li>
+          </ul>
+        </div>
+      </div>
+      <div class="status">Stav: probíhá návrh dvou modelových lokalit.</div>
+    </section>
+
+    <!-- PROJEKT 3: DOUP0V -->
+    <section class="project">
+      <h2>Doupov – geotermální energetický hub</h2>
+      <div class="img-placeholder">Geotermální schéma</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Cíle projektu</h3>
+          <ul>
+            <li>Geologické mapování</li>
+            <li>Návrh pilotního vrtu</li>
+            <li>Tepelný model lokality</li>
+            <li>Kombinace tepla a syntézy</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Přínosy</h3>
+          <ul>
+            <li>Stálý zdroj tepla</li>
+            <li>Dodávky tepla obcím</li>
+            <li>Podpora regionální obnovy</li>
+            <li>Hybridní provoz s OS energií</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Technologie</h3>
+          <ul>
+            <li>Hlubinné vrty</li>
+            <li>Tepelné čerpané okruhy</li>
+            <li>Integrace se syntézou</li>
+            <li>Řízení tepelné bilance</li>
+          </ul>
+        </div>
+      </div>
+      <div class="status">Stav: probíhá geologická a tepelná analýza.</div>
+    </section>
+
+  </div>
 </body>
 </html>
