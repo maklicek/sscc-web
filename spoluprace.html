@@ -1,116 +1,179 @@
 <!DOCTYPE html>
 <html lang="cs">
-<!-- vlož do každé stránky, nahraď její <head> -->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="... stránkový popis ...">
-
-  <!-- Favicons (repo-relative) -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- CSS (pozor: BEZ / na začátku) -->
-  <link rel="preload" href="assets/style.css?v=p1" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=p1">
-  <link rel="alternate" hreflang="cs" href="spoluprace.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spolupráce – SSCC</title>
+  <style>
+    body { margin: 0; padding: 0; background: #0d0d0d; color: #f1f1f1; font-family: Arial, sans-serif; line-height: 1.6; }
+    h1, h2, h3 { color: #e4c77f; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0 80px; }
+    .section { margin-bottom: 72px; }
+    .intro { max-width: 820px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-gap: 28px; margin-top: 24px; }
+    .card { background: #151515; padding: 22px; border-radius: 12px; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #333; font-size: 0.8rem; color: #c0c0c0; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    .contact-box { background: #151515; padding: 22px; border-radius: 12px; max-width: 520px; }
+    .email { font-family: monospace; background: #262626; padding: 4px 8px; border-radius: 6px; display: inline-block; margin-top: 6px; }
+  </style>
 </head>
+<body>
+  <div class="container">
 
-<body class="with-sun">
-
-
-<!-- HLAVIČKA -->
-<header class="site-header">
-  <div class="header-inner container">
-    <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-      <div class="logo-frame">
-        <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
-      </div>
-      <div class="brand-block">
-        <div class="brand-name">SolarSpace Carbon Cycle (SSCC)<div>
-        <div class="brand-tagline">Initiative<div>
-      </div>
-    </a>
-
-  <nav class="site-nav">
-<a href="index.html" class="logo">SSCC<a>
-<ul class="menu">
-<li><a href="projekty.html">Projekty<a><li>
-<li><a href="spoluprace.html">Spolupráce<a><li>
-<li><a href="edukace.html">Edukace<a><li>
-<li><a href="konsorcium.html">Konsorcium<a><li>
-<li class="lang">
-<a href="index-en.html" aria-label="Switch to English">EN<a>
-</li>
-</ul>
-</nav>
-
-    <div class="lang-switch" aria-label="Jazyk">
-      <a class="lang active" href="index.html" aria-current="true">CS<a>
-      <span class="sep">|</span>
-      <a class="lang" href="index-en.html">EN<a>
-    </div>
-  </div>
-</header>
-
-  <!-- OBSAH -->
-  <main class="page">
-    <h1>Spolupráce & zapojení do SSCC</h1>
-    <p class="lead">Hledáme výzkumné týmy, technologické partnery, studenty i investory.</p>
-
-    <section class="coop-grid">
-      <article class="coop-card">
-        <h3>🔬 Vědecký výzkum</h3>
-        <p>Modelování, simulace, laboratorní testy (CO₂ / H₂ / NH₃).</p>
-        <p class="note">Pro: univerzity, doktorandy, postdoky.</p>
-      </article>
-
-      <article class="coop-card">
-        <h3>🏭 Průmysl a technologie</h3>
-        <p>Výrobci komponent, integrátoři, testy v reálném provozu.</p>
-        <p class="note">Cíl: prototypy s vlastní stopou.</p>
-      </article>
-
-      <article class="coop-card">
-        <h3>🎓 Studenti</h3>
-        <p>Stáže, semestrální a diplomové práce na reálných úkolech.</p>
-      </article>
-
-      <article class="coop-card">
-        <h3>💰 Investoři</h3>
-        <p>Pilotní jednotky s jasnou ekonomikou a návratností.</p>
-        <p class="note">Možnost NDA a přístupu k abstraktům.</p>
-      </article>
+    <!-- HLAVNI NADPIS -->
+    <section class="section">
+      <h1>Spolupráce</h1>
+      <p class="intro">
+        SSCC není velká instituce ani firma s obřím majetkem. Jsme menší tým, který spojuje technologie, nápady a pilotní projekty napříč energetikou,
+        chemií a regionálním rozvojem. Hledáme partnery, kteří chtějí být u začátku – ne až u hotové věci.
+      </p>
     </section>
-<section class="city-backdrop"><section>
-    <section class="section-cta">
-      <h2>Chcete se zapojit?<h2>
-      <p>Napište, do které oblasti spadáte a jaký typ spolupráce hledáte.<p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Požádat o spolupráci / Request abstract</a></p>
+
+    <!-- KOHO HLEDAME -->
+    <section class="section">
+      <h2>Koho hledáme</h2>
+      <div class="grid">
+        <div class="card">
+          <span class="pill">Odborné profily</span>
+          <h3>Energetika a sítě</h3>
+          <ul>
+            <li>Obnovitelné zdroje a řízení výkonu.</li>
+            <li>Distribuované energetické systémy.</li>
+            <li>Metrologie v energetice.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="pill">Odborné profily</span>
+          <h3>Chemie a geotermie</h3>
+          <ul>
+            <li>Procesní chemie, NH₃, syntéza a bezpečnost.</li>
+            <li>Geologie a modelování podloží.</li>
+            <li>Geotermální vrty a provoz.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="pill">Praktické profily</span>
+          <h3>Technici a systémoví inženýři</h3>
+          <ul>
+            <li>Provoz a údržba technologií.</li>
+            <li>Systémové inženýrství a integrace.</li>
+            <li>Simulace, data a měření.</li>
+          </ul>
+        </div>
+      </div>
     </section>
-  </main>
 
- <!-- PATIČKA -->
-<footer class="site-footer">
-  <div class="footer-inner container">
-    <div class="footer-left">
-      © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-      Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
-    </div>
-    <nav class="footer-links" aria-label="Spodní navigace">
-      <a href="projekty.html">Projekty</a> ·
-      <a href="edukace.html">Edukace</a> ·
-      <a href="napady.html">Nápady</a> ·
-      <a href="konsorcium.html">Konsorcium</a> ·
-      <a href="spoluprace.html">Spolupráce</a>
-    </nav>
+    <!-- OBCE A REGIONY -->
+    <section class="section">
+      <h2>Obce, města a regiony</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Co nabízíme</h3>
+          <ul>
+            <li>Společné hledání vhodných pilotních projektů.</li>
+            <li>Modely pro rodinné domy i menší obce.</li>
+            <li>Možnosti lokálních energetických minifarem.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pro jaké situace</h3>
+          <ul>
+            <li>Regiony se zájmem o stabilní energii.</li>
+            <li>Oblasti s vysokými emisemi nebo energetickými špičkami.</li>
+            <li>Lokality s potenciálem geotermie nebo průmyslových vazeb.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRUMYSLOVI PARTNERI -->
+    <section class="section">
+      <h2>Průmysloví partneři</h2>
+      <p>
+        V průmyslu hledáme partnery hlavně pro testování zachytávání CO₂, syntézy NH₃, bezpečnostních standardů a metrologie. Nejde o projekty za
+        miliardy – jde o smysluplné pilotní úseky, kde lze technologie bezpečně ověřit v praxi.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Co potřebujeme</h3>
+          <ul>
+            <li>Přístup k reálným provozům a datům.</li>
+            <li>Otevřenost ke společnému vývoji pilotu.</li>
+            <li>Ochotu testovat nové kombinace technologií.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Co nabízíme</h3>
+          <ul>
+            <li>Návrh pilotního řešení na míru.</li>
+            <li>Metodiku měření a vyhodnocení.</li>
+            <li>Zapojení do širšího rámce SSCC.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAK SPOLUPRACE PROBIHA -->
+    <section class="section">
+      <h2>Jak spolupráce probíhá</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Kontakt</h3>
+          <p>
+            Krátký online nebo osobní rozhovor nad vaší situací. Bez závazků, cílem je pochopit, zda dává&nbsp;spolupráce smysl.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2. Malý model</h3>
+          <p>
+            Připravíme jednoduchý energetický a bezpečnostní model: nákres, základní bilanci, možné scénáře. Zaměřujeme se na malé, konkrétní piloty.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Rozhodnutí o pilotu</h3>
+          <p>
+            Pokud model dává smysl a jsou k dispozici kapacity, domlouváme konkrétní kroky k pilotnímu projektu – v realistickém rozsahu.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CO NEDELAME -->
+    <section class="section">
+      <h2>Co neděláme</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Aby bylo jasno</h3>
+          <ul>
+            <li>Neprodáváme elektřinu ani plyn.</li>
+            <li>Nejsme dodavatel technologií na klíč.</li>
+            <li>Nejsme investiční fond ani startup hledající kapitál.</li>
+            <li>Nejsme vědecký ústav s miliardovým zázemím.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Co děláme</h3>
+          <ul>
+            <li>Navrhujeme a testujeme pilotní projekty.</li>
+            <li>Spojujeme lidi z různých oborů.</li>
+            <li>Ověřujeme technologie v reálných podmínkách.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section">
+      <h2>Kontakt</h2>
+      <div class="contact-box">
+        <p>
+          Pokud máte zájem o spolupráci nebo jen chcete probrat možnosti, napište krátkou zprávu s pár větami o sobě a své situaci.
+        </p>
+        <p class="email">contact@sscc.example</p>
+      </div>
+    </section>
+
   </div>
-</footer>
-
-
 </body>
 </html>
