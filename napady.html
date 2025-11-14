@@ -1,120 +1,189 @@
 <!DOCTYPE html>
 <html lang="cs">
-<!-- vlož do každé stránky, nahraď její <head> -->
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="... stránkový popis ...">
-
-  <!-- Favicons (repo-relative) -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- CSS (pozor: BEZ / na začátku) -->
-  <link rel="preload" href="assets/style.css?v=p1" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=p1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nápady a hypotézy – SSCC</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #0d0d0d; color: #f1f1f1; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0; }
+    h1, h2 { color: #e4c77f; }
+    h3 { color: #f5e7b5; }
+    .hero { width: 100%; height: 280px; background: #181818; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 40px; text-align: center; }
+    .hero span.title { font-size: 2rem; color: #e4c77f; margin-bottom: 8px; }
+    .hero span.subtitle { font-size: 1rem; color: #d0d0d0; max-width: 640px; }
+    .section { margin-bottom: 72px; }
+    .img-placeholder { width: 100%; height: 180px; background: #262626; border-radius: 12px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: #888; font-size: 0.9rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-gap: 28px; margin-top: 20px; }
+    .card { background: #151515; padding: 22px; border-radius: 12px; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #333; font-size: 0.8rem; color: #c0c0c0; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    .ideas-list { columns: 2; column-gap: 32px; }
+    .ideas-list li { break-inside: avoid; margin-bottom: 6px; }
+    @media (max-width: 700px) {
+      .ideas-list { columns: 1; }
+    }
+    .highlight-box { background: #141414; border-radius: 12px; padding: 20px; margin-top: 16px; }
+    .email { font-family: monospace; background: #262626; padding: 4px 8px; border-radius: 6px; display: inline-block; margin-top: 8px; }
+  </style>
 </head>
+<body>
+  <div class="hero">
+    <span class="title">Nápady a hypotézy</span>
+    <span class="subtitle">Rozpracované koncepty, budoucí směry a podněty, které mohou zítra vyrůst v plnohodnotné projekty.</span>
+  </div>
 
-<body class="with-sun">
+  <div class="container">
 
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index.html" aria-label="SSCC domů">
-        <div class="logo-frame">
-          <img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo">
+    <!-- SEKCE 1: ENERGIE Z KOSMU -->
+    <section class="section">
+      <h2>Energie z kosmu – scénáře pro SSCC</h2>
+      <p>
+        Orbitální energie nabízí stálý výkon 24/7 a může doplnit limity pozemních obnovitelných zdrojů. V rámci SSCC ji zkoumáme jako 
+        dlouhodobou možnost stabilního příjmu energie pro průmysl, obce i menší uzly.
+      </p>
+      <div class="img-placeholder">Ilustrace: orbitální prvek → paprsek → pozemní pole</div>
+      <div class="grid">
+        <div class="card">
+          <span class="pill">Technická proveditelnost</span>
+          <h3>Jak přivést energii dolů</h3>
+          <ul>
+            <li>Přenos energie z orbitálních prvků na přijímací pole.</li>
+            <li>Automatické řízení a modulace výkonu.</li>
+            <li>Účinnost přeměny a ztráty v řetězci.</li>
+          </ul>
         </div>
-        <div class="brand-block">
-          <div class="brand-name">SSCC<div>
-          <div class="brand-tagline">SolarSpace Carbon Cycle<div>
+        <div class="card">
+          <span class="pill">Scénáře použití</span>
+          <h3>Kde dává smysl</h3>
+          <ul>
+            <li>Energetické uzly pro těžký průmysl.</li>
+            <li>Lokální zásobování obcí a měst.</li>
+            <li>Zálohování geotermie v regionech.</li>
+          </ul>
         </div>
-      </a>
-
-     <nav class="site-nav">
-<a href="index.html" class="logo">SSCC<a>
-<ul class="menu">
-<li><a href="projekty.html">Projekty</a><li>
-<li><a href="spoluprace.html">Spolupráce</a><li>
-<li><a href="edukace.html">Edukace</a><li>
-<li><a href="konsorcium.html">Konsorcium</a><li>
-<li class="lang">
-<a href="index-en.html" aria-label="Switch to English">EN<a>
-</li>
-</ul>
-</nav>
-
-      <div class="lang-switch" aria-label="Jazyk">
-        <a class="lang active" href="napady.html" aria-current="true">CS<a>
-        <span class="sep">|</span>
-        <a class="lang" href="ideas.html">EN<a>
+        <div class="card">
+          <span class="pill">Integrace do SSCC</span>
+          <h3>Souhra se syntézou</h3>
+          <ul>
+            <li>Kombinace orbitální energie, geotermie a syntézy NH₃.</li>
+            <li>Reakce na špičky výkonu a potřebu sítě.</li>
+            <li>Bezpečnost, metrologie a standardy řízení.</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </header>
-
-  <!-- OBSAH -->
-  <main class="page has-sun">
-    <h1 class="hero-title">Nápady</h1>
-    <p class="lead">Návrhy a koncepce vhodné pro experiment, simulaci nebo pilotní ověření.</p>
-
-    <section class="projects-list" aria-label="Nápady a koncepce">
-      <article class="project-card">
-        <h2 class="project-title">Centrální DAC pro malé město<h2>
-        <p class="project-desc">Škálovatelný záchyt CO₂ a syntéza NH₃ pro lokální teplárenství.<p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title">Rectenna pole</h2>
-        <p class="project-desc">Bezpečný příjem přenášené energie ze satelitů; účinnost a bezpečnostní zóny.<p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title">Skladování energie v NH₃</h2>
-        <p class="project-desc">Sezónní úložiště – přeměna přebytků OZE na amoniak a zpět na teplo/elektřinu.<p>
-      </article>
-
-      <article class="project-card">
-        <h2 class="project-title">CO₂ tepelná čerpadla pro průmysl</h2>
-        <p class="project-desc">Vysokoteplotní tepelné čerpadlo s CO₂ pro využití odpadního tepla.<p>
-      </article>
-    </section>
-<section class="city-backdrop"></section>
-    <section class="section-cta">
-      <h2>Chcete rozpracovat jeden z nápadů?<h2>
-      <p>Napište, který koncept vás zajímá a jaké máte kapacity (výzkum, prototyp, pilot).<p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">📩 Navrhnout spolupráci<a><p>
-    </section>
-  </main>
-
-  <!-- PATIČKA -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">
-        © 2025 <strong>SolarSpace Carbon Cycle (SSCC)</strong> Initiative ·
-        Navrhl a spravuje SSCC Consortium · Powered by clean energy ✶
+      <div class="highlight-box">
+        <strong>Kde je to dnes?</strong>
+        <p>
+          Téma je ve stadiu rozšířené hypotézy: technicky proveditelné, testovatelné, dnes hlavně na úrovni scénářů a simulací.
+        </p>
       </div>
-      <nav class="footer-links" aria-label="Spodní navigace">
-        <a href="projekty.html">Projekty</a> ·
-        <a href="edukace.html">Edukace</a> ·
-        <a href="napady.html" aria-current="page">Nápady</a> ·
-        <a href="konsorcium.html">Konsorcium</a> ·
-        <a href="spoluprace.html">Spolupráce</a>
-      </nav>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Aktivní odkaz v menu/patičce -->
-  <script>
-    (() => {
-      const here = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-      });
-    })();
-  </script>
+    <!-- SEKCE 2: CO2 Z PODZEMNICH SKLADU -->
+    <section class="section">
+      <h2>CO₂ z podzemních skladů – obrácená těžba uhlíku</h2>
+      <p>
+        Některé regiony disponují významnými podzemními zásobami CO₂. SSCC zkoumá možnost využít tyto zásoby jako uhlíkový vstup pro syntézu
+        paliv a materiálů místo toho, aby CO₂ zůstal trvale uložený bez dalšího využití.
+      </p>
+      <div class="img-placeholder">Ilustrace: podzemní zásobník CO₂ → povrchový syntetický hub</div>
+      <div class="grid">
+        <div class="card">
+          <span class="pill">Geologie</span>
+          <h3>Jak vypadá podloží</h3>
+          <ul>
+            <li>Stabilita zásobních vrstev a nadloží.</li>
+            <li>Objemy a tlaky CO₂.</li>
+            <li>Možnosti řízeného odběru.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="pill">Energetický cyklus</span>
+          <h3>Od CO₂ k energii</h3>
+          <ul>
+            <li>CO₂ jako vstup do syntézy NH₃.</li>
+            <li>Kombinace s lokálními zdroji energie.</li>
+            <li>Dopad na síť a lokální ekonomiku.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="pill">Bezpečnost</span>
+          <h3>Rizika a monitoring</h3>
+          <ul>
+            <li>Pohyb CO₂ v podzemí.</li>
+            <li>Riziko úniků a tlakových změn.</li>
+            <li>Požadavky na kontinuální monitoring.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <strong>Kde je to dnes?</strong>
+        <p>
+          Koncept, který dává smysl v regionech s hlubokými zásobami CO₂ a existující energetickou infrastrukturou. Vyžaduje geologická data a modelový pilot.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEKCE 3: OTEVRENE NAPADY -->
+    <section class="section">
+      <h2>Otevřené nápady a podněty</h2>
+      <p>
+        Sekce slouží pro rozpracované návrhy, které mohou rozšířit SSCC nebo navazovat na stávající projekty. Nejde o finální závěry, ale o
+        otevřené směry k ověření.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Fronta k posouzení</h3>
+          <ul class="ideas-list">
+            <li>LIDAR bezpečnostní zóny.</li>
+            <li>Standardy příjmu výkonu.</li>
+            <li>Metrologie malých uzlů.</li>
+            <li>Modulární NH₃ zásobník.</li>
+            <li>Adaptivní řízení výkonu pro obce.</li>
+            <li>Podzemní přenosová vlákna.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Jak poslat vlastní návrh</h3>
+          <p>
+            Stručně (do 200 slov) popište myšlenku a její přínos. Pokud můžete, uveďte své kompetence nebo oblast, ve které působíte.
+          </p>
+          <p>
+            Zajímají nás zejména nápady v oblasti energie, chemie, geologie, bezpečnosti a řízení sítí.
+          </p>
+          <div class="email">ideas@sscc.example</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCE 4: OD NAPADU K PROJEKTU -->
+    <section class="section">
+      <h2>Od nápadu k projektu</h2>
+      <p>
+        Nápady, které splní základní kritéria technické proveditelnosti, bezpečnosti, ekonomiky a regionálního dopadu, mohou přejít mezi
+        plnohodnotné projekty SSCC.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Co sledujeme</h3>
+          <ul>
+            <li>Technologickou realističnost.</li>
+            <li>Dopad na emise a energetiku.</li>
+            <li>Regionální přínosy.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Kdy z toho vzniká projekt</h3>
+          <ul>
+            <li>Existuje cesta k pilotu do 12–24 měsíců.</li>
+            <li>Je zajištěná základní bezpečnost a metrologie.</li>
+            <li>Lze navázat na partnery nebo regionální iniciativy.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
