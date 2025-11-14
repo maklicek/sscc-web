@@ -80,6 +80,21 @@
       display: block;
       border-radius: 12px;
     }
+    /* obecné chování obrázků */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* velká schémata / ilustrace – zmenšené a vystředěné */
+    .diagram {
+      display: block;
+      max-width: min(100%, 960px);
+      max-height: 70vh;
+      margin: 32px auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
 
   </style>
 </head>
