@@ -18,6 +18,58 @@
     .faq-item { background: #151515; padding: 18px; border-radius: 10px; }
     .faq-item h3 { font-size: 1rem; margin-top: 0; margin-bottom: 8px; }
     .hero-title { font-size: 2.2rem; margin-bottom: 12px; }
+        .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #050505d9;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #262626;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: #e4c77f;
+    }
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: #f1f1f1;
+      opacity: 0.8;
+      padding: 4px 8px;
+      border-radius: 999px;
+      transition: 0.15s ease;
+    }
+    .main-nav a:hover {
+      opacity: 1;
+      background: #1f1f1f;
+    }
+    @media (max-width: 720px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav {
+        justify-content: flex-start;
+      }
+    }
+
   </style>
 </head>
 <body>
