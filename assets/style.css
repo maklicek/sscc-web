@@ -624,3 +624,49 @@ html.page--napady{--show-sun:1}
   opacity: .18; pointer-events: none; z-index: 0;
 }
 .home, .page { position: relative; z-index: 1; }
+/* === GLOBAL DARK GREEN THEME =================================== */
+
+body {
+  background: #0a1310;  /* tmavě zelená */
+  color: #eef2ee;
+  line-height: 1.6;
+}
+
+.site-header {
+  background: rgba(10, 19, 16, 0.9);
+  border-bottom: 1px solid #1e2b25;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.main-nav a {
+  color: #e9f5ec;
+  opacity: 0.9;
+}
+
+.main-nav a:hover {
+  background: #1c2b24;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.page-main {
+  padding-top: 32px;
+  background: #0b120e;
+}
+
+.site-intro {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e4c77f;
+}
+
+.site-subtitle {
+  font-size: 1.05rem;
+  color: #c8e8d0;
+  opacity: 0.9;
+}
