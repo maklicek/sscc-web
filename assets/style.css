@@ -670,3 +670,72 @@ body {
   color: #c8e8d0;
   opacity: 0.9;
 }
+/* === ZÁKLADNÍ BARVY STRÁNKY === */
+body {
+  background: #081c15;       /* tmavě zelená */
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* === HLAVIČKA === */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0f2e26ee;     /* světlejší zelená než stránka */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #174a3a;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* KONTEJNER HLAVIČKY */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo-img {
+  height: 48px;
+  width: auto;
+}
+
+/* MENU */
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: #f1f1f1;
+  opacity: 0.8;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.15s;
+}
+
+.main-nav a:hover {
+  opacity: 1;
+  background: #154734;
+}
+
+/* MOTTO POD HLAVIČKOU */
+.header-motto {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: #e4c77f;
+  opacity: 0.9;
+}
+
+/* Nadpisy */
+h1, h2, h3 {
+  color: #e4c77f;
+}
