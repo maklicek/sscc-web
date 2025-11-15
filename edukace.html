@@ -64,13 +64,7 @@
       text-decoration: none;
     }
 
-    .brand-logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: contain;
-    }
-
+   
     .brand-text {
       display: flex;
       flex-direction: column;
@@ -169,11 +163,13 @@
         flex-direction: column;
         align-items: flex-start;
       }
-    .brand-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 0;      /* žádný kruh, čistý čtverec */
-  object-fit: cover;     /* logo pěkně vyplní čtverec */
+  
+/* LOGO V HLAVIČCE – ČTVEREC */
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 0 !important;  /* zruší kulatý tvar */
+  object-fit: cover;             /* obrázek pěkně vyplní čtverec */
 }
 
   </style>
