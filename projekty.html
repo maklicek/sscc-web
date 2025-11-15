@@ -70,13 +70,23 @@
     gap: 24px;
   }
 
-  .logo {
-    font-weight: bold;
-    letter-spacing: 0.16em;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    color: #ffd877;               /* světlejší logo, víc svítí */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 32px;            /* velikost loga */
+  display: block;
+}
+
+/* logo se na mobilu trochu zmenší */
+@media (max-width: 720px) {
+  .logo img {
+    height: 26px;
   }
+}
+
 
   .main-nav {
     display: flex;
