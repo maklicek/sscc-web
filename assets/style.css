@@ -38,7 +38,7 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 a{ color:var(--accent); text-decoration:none; }
-a:hover{ opacity:.92; }
+a:hover{ opacity:.92; } 
 
 /* Pomocné kontejnery */
 .container{ max-width:var(--wrap); margin:0 auto; padding:0 16px; }
