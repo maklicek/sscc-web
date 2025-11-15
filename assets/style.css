@@ -739,3 +739,12 @@ body {
 h1, h2, h3 {
   color: #e4c77f;
 }
+/* === LOGO V HLAVIČCE – pevná velikost === */
+.brand-logo {
+    width: 72px !important;
+    height: 72px !important;
+    object-fit: contain;
+    border-radius: 0;     /* čtvercové logo */
+    margin: 0;
+    padding: 0;
+}
