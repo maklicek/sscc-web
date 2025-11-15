@@ -1,239 +1,297 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <link rel="stylesheet" href="assets/css/style.css">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSCC – Úvodní stránka</title>
-<style>
-:root {
-  --gold: #e4c77f;
-  --gold-strong: #ffd877;
 
-  --green-dark: #05261a;   /* pozadí celé stránky */
-  --green-mid:  #0e432d;   /* karty / panely */
-  --header-bg:  #0b3a27;   /* hlavička */
-}
+  <!-- případně tvůj globální CSS soubor -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--green-dark);
-  color: #f4f4e8;
-}
+  <style>
+    :root {
+      --gold: #e4c77f;
+      --gold-strong: #ffd877;
 
-/* HLAVIČKA */
-.site-header {
-  background: var(--header-bg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
+      --green-dark: #05261a;   /* pozadí celé stránky */
+      --green-mid:  #0e432d;   /* karty / panely */
+      --header-bg:  #0b3a27;   /* hlavička */
+    }
 
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--green-dark);
+      color: #f4f4e8;
+      line-height: 1.6;
+    }
 
-/* logo + text vlevo */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-}
+    /* HLAVIČKA */
+    .site-header {
+      background: var(--header-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
 
-.brand-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0;
-  object-fit: cover;
-  flex-shrink: 0;
-}
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
 
-.brand-title {
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-strong);
-}
+    /* logo + text vlevo */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
 
-.brand-subtitle {
-  font-size: 0.8rem;
-  color: #e3e2c4;
-}
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-/* MENU */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.9rem;
-}
+    .brand-title {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-strong);
+    }
 
-.main-nav a {
-  color: var(--gold-strong);      /* pozlacené */
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 999px;
-  opacity: 0.88;
-  transition: background 0.15s ease, opacity 0.15s ease;
-}
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: #e3e2c4;
+    }
 
-.main-nav a:hover {
-  background: rgba(0,0,0,0.25);
-  opacity: 1;
-}
+    /* MENU */
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
 
-/* MOTTO */
-.site-tagline {
-  text-align: center;
-  padding: 6px 0 10px;
-  font-size: 0.9rem;
-  color: #f6e8a4;
-  border-top: 1px solid rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.35);
-  background: var(--green-mid);
-}
-</style>
+    .main-nav a {
+      color: var(--gold-strong);      /* pozlacené */
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      opacity: 0.88;
+      transition: background 0.15s ease, opacity 0.15s ease;
+    }
 
+    .main-nav a:hover {
+      background: rgba(0,0,0,0.25);
+      opacity: 1;
+    }
+
+    /* MOTTO POD HLAVIČKOU */
+    .site-tagline {
+      text-align: center;
+      padding: 6px 0 10px;
+      font-size: 0.9rem;
+      color: #f6e8a4;
+      border-top: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.35);
+      background: var(--green-mid);
+    }
+
+    /* OBSAH STRÁNKY */
+
+    .page-main {
+      padding: 32px 0 72px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-size: 2.1rem;
+      margin: 0 0 24px;
+      color: var(--gold);
+    }
+
+    .lead {
+      max-width: 960px;
+      margin-bottom: 24px;
+    }
+
+    .home-hero {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin: 40px 0 16px;
+      color: var(--gold);
+    }
+
+    /* KARTY – stejný princip jako v Edukaci */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .cards-grid .card {
+      background: var(--green-mid);
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    .cards-grid .card h3 {
+      margin-top: 0;
+      color: var(--gold-strong);
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/img/logo-sscc.png"
-           alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
-           class="brand-logo">
 
-      <div class="brand-text">
-        <div class="brand-title">SSCC</div>
-        <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
-      </div>
-    </a>
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-sscc.png"
+             alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
+             class="brand-logo">
 
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="projekt-sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="spoluprace.html">Spolupráce</a>
-      <a href="konsorcium.html">Konsorcium</a>
-    </nav>
-  </div>
+        <div class="brand-text">
+          <div class="brand-title">SSCC</div>
+          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
+        </div>
+      </a>
 
-  <div class="site-tagline">
-    Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
-  </div>
-</header>
-
-
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-title">SSCC – Solar & Synthetic Carbon Cycle</div>
-    <div class="hero-sub">
-      Energetický systém, který proměňuje CO₂ a obnovitelné zdroje na stabilní energii a zelený amoniak. 
-      Nový způsob, jak vyrábět energii tam, kde je potřeba.
+      <nav class="main-nav">
+        <a href="index.html">Úvod</a>
+        <a href="projekt-sscc.html">SSCC</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="napady.html">Nápady</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="spoluprace.html">Spolupráce</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </nav>
     </div>
-  </section>
 
-  <div class="container">
+    <div class="site-tagline">
+      Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
+    </div>
+  </header>
 
-    <!-- SEKCE: HLAVNÍ TŘI OBLASTI -->
-    <section class="section">
-      <h2>Co SSCC přináší</h2>
-      <div class="grid-3">
-        <div class="card">
-<div class="img-placeholder">
- 
-</div>
+  <!-- OBSAH ÚVODNÍ STRÁNKY -->
+  <main class="page-main">
+    <div class="container">
 
-          <h3>Proměna CO₂ na zdroj</h3>
-          <p>
-            CO₂ vnímáme jako surovinu. Syntézou NH₃ vytváříme nosič energie a uhlíku pro průmysl, obce i rodinné domy.
-          </p>
+      <!-- HERO -->
+      <section class="home-hero">
+        <h1 class="page-title">Co SSCC přináší</h1>
+        <p class="lead">
+          SSCC je energetický systém, který proměňuje CO₂ a obnovitelné zdroje
+          na stabilní energii a zelený amoniak. Nový způsob, jak vyrábět energii tam,
+          kde je potřeba – od rodinných domů po průmyslové uzly.
+        </p>
+      </section>
+
+      <!-- 1) CO SSCC PŘINÁŠÍ -->
+      <section>
+        <h2 class="section-title">Co SSCC přináší</h2>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Proměna CO₂ na zdroj</h3>
+            <p>
+              CO₂ vnímáme jako surovinu. Syntézou NH₃ vytváříme nosič energie a uhlíku
+              pro průmysl, obce i rodinné domy.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Stabilní energie 24/7</h3>
+            <p>
+              Kombinace orbitální energie, geotermie a syntézy umožňuje vytvářet stabilní
+              a bezpečné energetické uzly nezávislé na počasí.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Škálování od domu po průmysl</h3>
+            <p>
+              Systém lze budovat modulárně – od malých okruhů pro RD až po rozsáhlé
+              průmyslové uzly a městské energetické zóny.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Pilotní projekty</h3>
+            <p>
+              Reálné projekty, kde SSCC ověřujeme v praxi – v průmyslu, obcích
+              i geotermálních lokalitách.
+            </p>
+          </div>
         </div>
-        <div class="card">
-       <div class="img-placeholder">
+      </section>
 
-</div>
+      <!-- 2) PILOTNÍ PROJEKTY -->
+      <section>
+        <h2 class="section-title">Pilotní projekty</h2>
 
-          <h3>Stabilní energie 24/7</h3>
-          <p>
-            Kombinace orbitální energie, geotermie a syntézy umožňuje vytvářet stabilní a bezpečné energetické uzly.
-          </p>
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Průmyslový uzel</h3>
+            <p>
+              Integrace zachytávání CO₂, syntézy NH₃ a stabilní dodávky energie
+              pro těžký průmysl a teplárny v jednom uzlu.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Obce a menší města</h3>
+            <p>
+              Lokální energetické uzly napojené na obnovitelné zdroje a syntézu NH₃
+              – stabilní energie mimo špičky i výpadky v síti.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Geotermální hub</h3>
+            <p>
+              Využití geotermálního tepla jako stálého zdroje pro syntézu
+              a zásobování regionálních energetických uzlů.
+            </p>
+          </div>
         </div>
-        <div class="card">
-        <div class="img-placeholder">
+      </section>
 
-     alt="Schéma zachytávání CO₂ a přeměny na stabilní energii"
-     class="diagram-hero">
+      <!-- 3) NÁPADY A HYPOTÉZY -->
+      <section>
+        <h2 class="section-title">Nápady a hypotézy</h2>
+        <p class="lead">
+          Rozpracované koncepty, které mohou v budoucnu změnit způsob výroby
+          a přenosu energie. Od orbitálních systémů po využití podzemních zásob CO₂ –
+          prostor pro nové nápady, partnery a pilotní projekty.
+        </p>
+      </section>
 
-</div>
-
-          <h3>Škálování od domu po průmysl</h3>
-          <p>
-            Systém lze budovat modulárně – od malých okruhů pro RD po rozsáhlé průmyslové uzly.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEKCE: PROJEKTY -->
-    <section class="section">
-      <h2>Pilotní projekty</h2>
-      <p>Reálné projekty, kde SSCC ověřujeme v praxi.</p>
-      <div class="grid-3">
-        <div class="card">
-          <div class="img-placeholder">Ostrava</div>
-          <h3>Ostrava – průmyslový uzel</h3>
-        
-        </div>
-        <div class="card">
-          <div class="img-placeholder">Obce</div>
-          <h3>RD a obce</h3>
-         
-        </div>
-        <div class="card">
-          <div class="img-placeholder">Doupov</div>
-          <h3>Doupov – geotermální hub</h3>
-         
-        </div>
-      </div>
-      <div class="cta">
-       <a class="btn" href="projekty.html">Zobrazit všechny projekty</a>
-      </div>
-    </section>
-
-    <!-- SEKCE: NÁPADY -->
-    <section class="section">
-      <h2>Nápady a hypotézy</h2>
-      <p>
-        Zkoumáme koncepty, které mohou v budoucnu změnit způsob výroby a přenosu energie. Od orbitálních systémů po využití podzemních zásob CO₂.
-      </p>
-      <div class="cta">
-        <a class="btn" href="napady.html">Přejít na nápady</a>
-      </div>
-    </section>
-
-    <!-- SEKCE: VÝZVA KE SPOLUPRÁCI -->
-    <section class="section">
-      <h2>Chcete se zapojit?</h2>
-      <p>
-        Hledáme výzkumníky, obce, průmyslové partnery i jednotlivce se zájmem o nové energetické technologie.
-      </p>
-      <div class="cta">
-       <a class="btn" href="spoluprace.html">Možnosti spolupráce</a>
-      </div>
-    </section>
-
-  </div>
+    </div>
+  </main>
 
 </body>
 </html>
