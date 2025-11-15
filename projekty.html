@@ -4,172 +4,187 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projekty SSCC</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #050505;
-    color: #f1f1f1;
-    line-height: 1.6;
-  }
 
-  h1, h2, h3 {
-    color: #e4c77f;
-    margin-top: 0;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #050505;
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
 
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0 80px;
-  }
+    h1, h2, h3 {
+      color: #e4c77f;
+      margin-top: 0;
+    }
 
-  .project {
-    margin-bottom: 72px;
-  }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0 80px;
+    }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-top: 24px;
-  }
+    .project {
+      margin-bottom: 72px;
+    }
 
-  .card {
-    background: #111;
-    padding: 24px;
-    border-radius: 12px;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 24px;
+    }
 
-  .status {
-    margin-top: 20px;
-    font-style: italic;
-    color: #c9c9c9;
-  }
+    .card {
+      background: #111;
+      padding: 24px;
+      border-radius: 12px;
+    }
 
-  /* HLAVIČKA */
+    .status {
+      margin-top: 20px;
+      font-style: italic;
+      color: #c9c9c9;
+    }
 
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #050505d9;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #262626;
-  }
+    /* HLAVIČKA */
 
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #050505d9;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #262626;
+    }
 
-  .logo {
-    font-weight: bold;
-    letter-spacing: 0.08em;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    color: #e4c77f;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 0.9rem;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: #f1f1f1;
-    opacity: 0.8;
-    padding: 4px 8px;
-    border-radius: 999px;
-    transition: 0.15s ease;
-  }
-
-  .main-nav a:hover {
-    opacity: 1;
-    background: #1f1f1f;
-  }
-
-  /* OBRÁZKY – JEDNODUCHÝ SYSTÉM */
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* velký obrázek nahoře (hero) – používáme zatím jen u Projektů */
-  .hero-slot {
-    max-width: 1100px;
-    height: 420px;
-    margin: 40px auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #262626;
-  }
-
-  .hero-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* menší obrázek v kartě nebo sekci – pokud je někdy přidáme */
-  .img-slot {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 16px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #262626;
-  }
-
-  .img-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* diagramy – zmenšit, neřezat */
-  .diagram-slot {
-    max-width: 900px;
-    max-height: 420px;
-    margin: 32px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #1b1b1b;
-  }
-
-  .diagram-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  @media (max-width: 720px) {
     .nav-container {
-      flex-direction: column;
-      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .main-nav {
-      justify-content: flex-start;
-    }
-  }
-</style>
 
+    .logo {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: #e4c77f;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #f1f1f1;
+      opacity: 0.8;
+      padding: 4px 8px;
+      border-radius: 999px;
+      transition: 0.15s ease;
+    }
+
+    .main-nav a:hover {
+      opacity: 1;
+      background: #1f1f1f;
+    }
+
+    /* PÁSEK S NÁZVEM STRÁNKY */
+
+    .hero {
+      padding: 72px 5% 24px;
+      text-align: center;
+    }
+
+    .hero span {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #e4c77f;
+    }
+
+    /* OBRÁZKY – JEDNODUCHÝ SYSTÉM */
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* velký obrázek nahoře (hero) – používáme u Projektů */
+    .hero-slot {
+      max-width: 1100px;
+      height: 420px;
+      margin: 16px auto 40px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #262626;
+    }
+
+    .hero-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* menší obrázek v kartě nebo sekci – pokud je někdy přidáme */
+    .img-slot {
+      width: 100%;
+      height: 220px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #262626;
+    }
+
+    .img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* diagramy – zmenšit, neřezat */
+    .diagram-slot {
+      max-width: 900px;
+      max-height: 420px;
+      margin: 32px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1b1b1b;
+    }
+
+    .diagram-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 720px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="site-header">
+  <header class="site-header">
     <div class="nav-container">
       <div class="logo">
         SSCC
@@ -186,60 +201,56 @@
     </div>
   </header>
 
-  <div class="hero"><span>Projekty SSCC</span></div>
-
-  <div class="container">
-
-<!-- PROJEKT 1: OSTRAVA -->
-<section class="project">
-
-  <div class="hero-slot">
-    <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava">
+  <div class="hero">
+    <span>Projekty SSCC</span>
   </div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Cíle projektu</h3>
-      <ul>
-        <li>Zachytávání CO₂ ze spalin</li>
-        <li>Lokální syntéza zeleného NH₃</li>
-        <li>Metrologie a měření účinnosti</li>
-        <li>Napojení na energetické sítě</li>
-      </ul>
-    </div>
+  <main class="container">
 
-    <div class="card">
-      <h3>Lokální přínosy</h3>
-      <ul>
-        <li>Nízké emise v regionu</li>
-        <li>NH₃ pro průmysl a teplárny</li>
-        <li>Stabilní dodávky energie</li>
-        <li>Transformace průmyslové zóny</li>
-      </ul>
-    </div>
+    <!-- PROJEKT 1: OSTRAVA -->
+    <section class="project">
+      <div class="hero-slot">
+        <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava">
+      </div>
 
-    <div class="card">
-      <h3>Technologie</h3>
-      <ul>
-        <li>DAC / zachytávání CO₂</li>
-        <li>Syntéza NH₃</li>
-        <li>Bezpečnostní infrastruktura</li>
-        <li>Řízení a metrologie</li>
-      </ul>
-    </div>
-  </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Cíle projektu</h3>
+          <ul>
+            <li>Zachytávání CO₂ ze spalin</li>
+            <li>Lokální syntéza zeleného NH₃</li>
+            <li>Metrologie a měření účinnosti</li>
+            <li>Napojení na energetické sítě</li>
+          </ul>
+        </div>
 
-  <div class="status">Stav: probíhá technická specifikace.</div>
+        <div class="card">
+          <h3>Lokální přínosy</h3>
+          <ul>
+            <li>Nízké emise v regionu</li>
+            <li>NH₃ pro průmysl a teplárny</li>
+            <li>Stabilní dodávky energie</li>
+            <li>Transformace průmyslové zóny</li>
+          </ul>
+        </div>
 
-</section>
+        <div class="card">
+          <h3>Technologie</h3>
+          <ul>
+            <li>DAC / zachytávání CO₂</li>
+            <li>Syntéza NH₃</li>
+            <li>Bezpečnostní infrastruktura</li>
+            <li>Řízení a metrologie</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="status">Stav: probíhá technická specifikace.</div>
+    </section>
 
     <!-- PROJEKT 2: RD A OBCE -->
     <section class="project">
       <h2>RD a obce – lokální zelené uzly energie</h2>
-  
-
-</div>
 
       <div class="grid">
         <div class="card">
@@ -270,15 +281,13 @@
           </ul>
         </div>
       </div>
+
       <div class="status">Stav: probíhá návrh dvou modelových lokalit.</div>
     </section>
 
-    <!-- PROJEKT 3: DOUP0V -->
+    <!-- PROJEKT 3: DOUPOV -->
     <section class="project">
       <h2>Doupov – geotermální energetický hub</h2>
-  
-
-</div>
 
       <div class="grid">
         <div class="card">
@@ -288,7 +297,7 @@
             <li>Návrh pilotního vrtu</li>
             <li>Tepelný model lokality</li>
             <li>Kombinace tepla a syntézy</li>
-          </ul> 
+          </ul>
         </div>
         <div class="card">
           <h3>Přínosy</h3>
@@ -309,9 +318,10 @@
           </ul>
         </div>
       </div>
+
       <div class="status">Stav: probíhá geologická a tepelná analýza.</div>
     </section>
 
-  </div>
+  </main>
 </body>
 </html>
