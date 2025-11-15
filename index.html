@@ -106,20 +106,23 @@
     display: block;
   }
 
-  /* velký obrázek nahoře v projektech */
-  .hero-slot {
+    .hero-slot {
     max-width: 1100px;
     margin: 40px auto 0;
     border-radius: 16px;
     overflow: hidden;
     background: #262626;
+
+    /* DŮLEŽITÉ: omezit výšku */
+    max-height: 420px;      /* můžeš změnit třeba na 360 / 350 podle chuti */
   }
 
   .hero-slot img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;           /* natáhnout do rámečku */
+    object-fit: cover;      /* nahoře/dole se trochu ořízne */
   }
+
 
   /* menší obrázek v kartě / bloku */
   .img-slot {
