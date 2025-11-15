@@ -492,7 +492,11 @@ html.page--napady{--show-sun:1}
 
 /* zvýraznění aktivní stránky */
 .menu a[href$="projekty.html"] { opacity: .75; }
-html.page--projekty .menu a[href$="projekty.html"] { opacity: 1; text-decoration: underline;
+.menu a[href$="projekty.html"] {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /* ===============================
 SSCC: navigace, jazykový toggle,
 aktivní stránka, slunce, města
