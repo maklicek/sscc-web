@@ -808,3 +808,7 @@ img.logo-img {
   border-bottom: 1px solid rgba(0,0,0,0.35);
   background: var(--green-mid);
 }
+.main-nav a[aria-current="page"] {
+  background: rgba(0,0,0,0.35);
+  opacity: 1;
+}
