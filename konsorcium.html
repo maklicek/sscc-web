@@ -6,233 +6,376 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Konsorcium a tým – SSCC</title>
-<style>
-:root {
-  --gold: #e4c77f;
-  --gold-strong: #ffd877;
 
-  --green-dark: #05261a;   /* pozadí celé stránky */
-  --green-mid:  #0e432d;   /* karty / panely */
-  --header-bg:  #0b3a27;   /* hlavička */
-}
+  <style>
+    :root {
+      --gold: #e4c77f;
+      --gold-strong: #ffd877;
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--green-dark);
-  color: #f4f4e8;
-}
+      --green-dark: #05261a;   /* pozadí celé stránky */
+      --green-mid:  #0e432d;   /* karty / panely */
+      --header-bg:  #0b3a27;   /* hlavička */
+    }
 
-/* HLAVIČKA */
-.site-header {
-  background: var(--header-bg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--green-dark);
+      color: #f4f4e8;
+      line-height: 1.6;
+    }
 
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
+    /* HLAVIČKA */
+    .site-header {
+      background: var(--header-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
 
-/* logo + text vlevo */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-}
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
 
-.brand-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0;
-  object-fit: cover;
-  flex-shrink: 0;
-}
+    /* logo + text vlevo */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
 
-.brand-title {
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-strong);
-}
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-.brand-subtitle {
-  font-size: 0.8rem;
-  color: #e3e2c4;
-}
+    .brand-title {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-strong);
+    }
 
-/* MENU */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.9rem;
-}
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: #e3e2c4;
+    }
 
-.main-nav a {
-  color: var(--gold-strong);      /* pozlacené */
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 999px;
-  opacity: 0.88;
-  transition: background 0.15s ease, opacity 0.15s ease;
-}
+    /* MENU */
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
 
-.main-nav a:hover {
-  background: rgba(0,0,0,0.25);
-  opacity: 1;
-}
+    .main-nav a {
+      color: var(--gold-strong);      /* pozlacené */
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      opacity: 0.88;
+      transition: background 0.15s ease, opacity 0.15s ease;
+    }
 
-/* MOTTO */
-.site-tagline {
-  text-align: center;
-  padding: 6px 0 10px;
-  font-size: 0.9rem;
-  color: #f6e8a4;
-  border-top: 1px solid rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.35);
-  background: var(--green-mid);
-}
-</style>
+    .main-nav a:hover {
+      background: rgba(0,0,0,0.25);
+      opacity: 1;
+    }
 
+    .main-nav a.active {
+      background: rgba(0,0,0,0.35);
+      opacity: 1;
+    }
+
+    /* MOTTO */
+    .site-tagline {
+      text-align: center;
+      padding: 6px 0 10px;
+      font-size: 0.9rem;
+      color: #f6e8a4;
+      border-top: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.35);
+      background: var(--green-mid);
+    }
+
+    /* OBSAH STRÁNKY */
+    .page-main {
+      padding: 32px 0 72px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 72px;
+    }
+
+    h1, h2, h3 {
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      margin: 0 0 24px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 0 0 16px;
+    }
+
+    .intro {
+      max-width: 820px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-gap: 28px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--green-mid);
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--gold-strong);
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 6px;
+      color: #f4f4e8;
+    }
+
+    .portrait {
+      height: 120px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #d0d7cf;
+      border: 1px dashed rgba(255,255,255,0.25);
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #d3dccf;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      background: var(--green-mid);
+      padding: 20px 22px;
+      border-radius: 12px;
+    }
+
+    .email {
+      margin-top: 6px;
+      font-weight: 600;
+      color: var(--gold-strong);
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
+
 <body>
- <header class="site-header">
-  <div class="nav-container">
-    <img src="assets/img/logo-sscc.png" class="logo-img" alt="SSCC logo">
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-sscc.png"
+             alt="SSCC logo"
+             class="brand-logo">
 
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="projekt-sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="spoluprace.html">Spolupráce</a>
-      <a href="konsorcium.html">Konsorcium</a>
-    </nav>
-  </div>
-
-  <!-- MOTTO POD HLAVIČKOU -->
-<div class="site-tagline">
-  Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
-</div>
-
-</header>
-
-
-  <div class="container">
-
-    <!-- HLAVNI NADPIS -->
-    <section class="section">
-      <h1>Konsorcium a tým</h1>
-      <p class="intro">
-        SSCC tvoří menší a otevřené konsorcium lidí z různých oblastí – energetiky, chemie, geologie, inženýrství a dat. Nejsme formální instituce,
-        ale společný prostor pro pilotní projekty, výzkumné směry a praktické ověřování technologií. 
-        Cílem není budovat velkou organizaci, ale propojit kompetence tak, aby dávaly smysl.
-      </p>
-    </section>
-
-    <!-- PRINCIPY KONSORCIA -->
-    <section class="section">
-      <h2>Jak funguje konsorcium</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="pill">Princip</span>
-          <h3>Otevřená struktura</h3>
-          <p>Žádné pevné oddělení „my“ a „oni“. Každý partner přispívá podle svých možností – daty, vědomostmi, místem, technologií nebo časem.</p>
+        <div class="brand-text">
+          <div class="brand-title">SSCC</div>
+          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
         </div>
-        <div class="card">
-          <span class="pill">Přístup</span>
-          <h3>Malé kroky, reálné piloty</h3>
-          <p>Konsorcium se nesnaží stavět obří projekty na papíře. Testujeme malé části, vyhodnocujeme je a postupně skládáme větší celek.</p>
-        </div>
-        <div class="card">
-          <span class="pill">Kultura</span>
-          <h3>Technická poctivost</h3>
-          <p>Důraz na data, bezpečnost, měření a transparentnost. Bez velkých slibů, zato s fungujícími mini-projekty.</p>
-        </div>
-      </div>
-    </section>
+      </a>
 
-    <!-- TYM -->
-    <section class="section">
-      <h2>Tým</h2>
-      <p class="intro">Malý, multidisciplinární tým, který drží pohromadě technické směry, koordinaci pilotů a komunikaci s partnery.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="portrait">Foto – zakladatel</div>
-          <h3>Jméno 1</h3>
-          <div class="role">Koordinace SSCC / hlavní koncept</div>
-          <p>Koncept systému, rozvoj rámce SSCC, vedení pilotních projektů a komunikace s odbornými partnery.</p>
-        </div>
-        <div class="card">
-          <div class="portrait">Foto – energetika</div>
-          <h3>Jméno 2</h3>
-          <div class="role">Energetika & bezpečnost</div>
-          <p>Návrhy přijímacích polí, integrace zdrojů, bezpečnostní analýzy a metrologie.</p>
-        </div>
-        <div class="card">
-          <div class="portrait">Foto – chemie</div>
-          <h3>Jméno 3</h3>
-          <div class="role">Chemie & syntéza NH₃</div>
-          <p>Procesní chemie, návrh syntetických okruhů a bezpečnostní standardy pro NH₃ a další látky.</p>
-        </div>
-        <div class="card">
-          <div class="portrait">Foto – geologie</div>
-          <h3>Jméno 4</h3>
-          <div class="role">Geologie & geotermie</div>
-          <p>Modelování podloží, geotermální projekty, analýzy hlubinných vrtů a spolupráce s obcemi a regiony.</p>
-        </div>
-      </div>
-    </section>
+      <nav class="main-nav">
+        <a href="index.html">Úvod</a>
+        <a href="projekt-sscc.html">SSCC</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="napady.html">Nápady</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="spoluprace.html">Spolupráce</a>
+        <a href="konsorcium.html" class="active">Konsorcium</a>
+      </nav>
+    </div>
 
-    <!-- PARTNERI -->
-    <section class="section">
-      <h2>Partnerské subjekty</h2>
-      <p class="intro">SSCC stojí na spolupráci s institucemi, obcemi, univerzitami a firmami, které sdílí praktický pohled na energetiku a technologii.</p>
-      <div class="grid">
-        <div class="card">
-          <h3>Technologičtí partneři</h3>
-          <ul>
-            <li>Vývoj menších komponent (mini-uzly).</li>
-            <li>Senzory, měření a metrologie.</li>
-            <li>Syntéza a manipulace s NH₃.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Municipality & regiony</h3>
-          <ul>
-            <li>Obce a města se zájmem o stabilní energii.</li>
-            <li>Regiony s potenciálem geotermie.</li>
-            <li>Průmyslové zóny s vysokými emisemi.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Univerzity & výzkum</h3>
-          <ul>
-            <li>Konzultace chemie, geologie a energetiky.</li>
-            <li>Podpora experimentů a pilotních měření.</li>
-            <li>Modely, simulace a ověřování.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- MOTTO POD HLAVIČKOU -->
+    <div class="site-tagline">
+      Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
+    </div>
+  </header>
 
-    <!-- KONTAKT -->
-    <section class="section">
-      <h2>Kontakt na tým</h2>
-      <div class="contact-box">
-        <p>Pokud chcete vědět víc o týmu nebo o možnostech zapojení do konsorcia, napište nám:</p>
-        <p class="email">team@sscc.example</p>
-      </div>
-    </section>
+  <!-- OBSAH STRÁNKY -->
+  <main class="page-main">
+    <div class="container">
 
-  </div>
+      <!-- HLAVNÍ NADPIS -->
+      <section class="section">
+        <h1>Konsorcium a tým</h1>
+        <p class="intro">
+          SSCC tvoří menší a otevřené konsorcium lidí z různých oblastí – energetiky, chemie, geologie, inženýrství a dat.
+          Nejsme formální instituce, ale společný prostor pro pilotní projekty, výzkumné směry a praktické ověřování technologií.
+          Cílem není budovat velkou organizaci, ale propojit kompetence tak, aby dávaly smysl.
+        </p>
+      </section>
+
+      <!-- PRINCIPY KONSORCIA -->
+      <section class="section">
+        <h2>Jak funguje konsorcium</h2>
+        <div class="grid">
+          <div class="card">
+            <span class="pill">Princip</span>
+            <h3>Otevřená struktura</h3>
+            <p>
+              Žádné pevné oddělení „my“ a „oni“. Každý partner přispívá podle svých možností – daty, vědomostmi,
+              místem, technologií nebo časem.
+            </p>
+          </div>
+          <div class="card">
+            <span class="pill">Přístup</span>
+            <h3>Malé kroky, reálné piloty</h3>
+            <p>
+              Konsorcium se nesnaží stavět obří projekty na papíře. Testujeme malé části, vyhodnocujeme je
+              a postupně skládáme větší celek.
+            </p>
+          </div>
+          <div class="card">
+            <span class="pill">Kultura</span>
+            <h3>Technická poctivost</h3>
+            <p>
+              Důraz na data, bezpečnost, měření a transparentnost. Bez velkých slibů, zato s fungujícími mini-projekty.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TÝM -->
+      <section class="section">
+        <h2>Tým</h2>
+        <p class="intro">
+          Malý, multidisciplinární tým, který drží pohromadě technické směry, koordinaci pilotů a komunikaci s partnery.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <div class="portrait">Foto – zakladatel</div>
+            <h3>Jméno 1</h3>
+            <div class="role">Koordinace SSCC / hlavní koncept</div>
+            <p>
+              Koncept systému, rozvoj rámce SSCC, vedení pilotních projektů a komunikace s odbornými partnery.
+            </p>
+          </div>
+          <div class="card">
+            <div class="portrait">Foto – energetika</div>
+            <h3>Jméno 2</h3>
+            <div class="role">Energetika &amp; bezpečnost</div>
+            <p>
+              Návrhy přijímacích polí, integrace zdrojů, bezpečnostní analýzy a metrologie.
+            </p>
+          </div>
+          <div class="card">
+            <div class="portrait">Foto – chemie</div>
+            <h3>Jméno 3</h3>
+            <div class="role">Chemie &amp; syntéza NH₃</div>
+            <p>
+              Procesní chemie, návrh syntetických okruhů a bezpečnostní standardy pro NH₃ a další látky.
+            </p>
+          </div>
+          <div class="card">
+            <div class="portrait">Foto – geologie</div>
+            <h3>Jméno 4</h3>
+            <div class="role">Geologie &amp; geotermie</div>
+            <p>
+              Modelování podloží, geotermální projekty, analýzy hlubinných vrtů a spolupráce s obcemi a regiony.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNEŘI -->
+      <section class="section">
+        <h2>Partnerské subjekty</h2>
+        <p class="intro">
+          SSCC stojí na spolupráci s institucemi, obcemi, univerzitami a firmami, které sdílí praktický pohled
+          na energetiku a technologii.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Technologičtí partneři</h3>
+            <ul>
+              <li>Vývoj menších komponent (mini-uzly).</li>
+              <li>Senzory, měření a metrologie.</li>
+              <li>Syntéza a manipulace s NH₃.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Municipality &amp; regiony</h3>
+            <ul>
+              <li>Obce a města se zájmem o stabilní energii.</li>
+              <li>Regiony s potenciálem geotermie.</li>
+              <li>Průmyslové zóny s vysokými emisemi.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Univerzity &amp; výzkum</h3>
+            <ul>
+              <li>Konzultace chemie, geologie a energetiky.</li>
+              <li>Podpora experimentů a pilotních měření.</li>
+              <li>Modely, simulace a ověřování.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAKT -->
+      <section class="section">
+        <h2>Kontakt na tým</h2>
+        <div class="contact-box">
+          <p>
+            Pokud chcete vědět víc o týmu nebo o možnostech zapojení do konsorcia, napište nám:
+          </p>
+          <p class="email">team@sscc.example</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
 </body>
 </html>
