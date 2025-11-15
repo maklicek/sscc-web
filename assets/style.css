@@ -45,13 +45,7 @@ a:hover{ opacity:.92; }
 /* -------------------------
    Header (logo | nav | jazyk)
    ------------------------- */
-/* Header – světlejší, lehčí sklo efekt */
-.site-header{
-  position:sticky; top:0; z-index:100;
-  background: linear-gradient(180deg, rgba(24,32,45,.92) 0%, rgba(18,26,37,.78) 100%);
-  border-bottom: 1px solid rgba(255,255,255,.12);
-  backdrop-filter: blur(8px) saturate(1.05);
-}
+
 .header-inner{
   max-width:var(--wrap);
   margin:0 auto;
@@ -276,14 +270,7 @@ a:hover{ opacity:.92; }
 .brand-combo:focus-visible .main-logo{
   box-shadow: 0 0 22px rgba(255,215,90,.25);
 }
-/* HLAVIČKA – světlejší a čitelnější */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
-  border-bottom:1px solid rgba(255,255,255,.14);
-  backdrop-filter: blur(6px) saturate(1.06);
-  box-shadow: 0 10px 22px rgba(0,0,0,.24);
-}
+
 
 /* Footer – světlejší panel */
 .site-footer{
@@ -337,13 +324,7 @@ body.with-sun::before{
 /* jistota, že obsah bude NAD sluncem */
 header.site-header, main, footer{ position:relative; z-index:1; }
 /* ——— 1) HLAVIČKA + PATIČKA světlejší ——— */
-.site-header{
-  position:sticky; top:0; z-index:1000;
-  background: linear-gradient(180deg, rgba(26,34,46,.90) 0%, rgba(22,30,42,.82) 100%);
-  border-bottom:1px solid rgba(255,255,255,.14);
-  backdrop-filter: blur(6px) saturate(1.06);
-  box-shadow: 0 10px 22px rgba(0,0,0,.24);
-}
+
 .site-footer{
   background: linear-gradient(180deg, rgba(18,25,35,.88) 0%, rgba(14,20,30,.88) 100%);
   border-top:1px solid rgba(255,255,255,.10);
@@ -382,11 +363,7 @@ body.with-sun::before{
 /* Větší mezera mezi rozcestníkem a hero textem na titulce */
 .home__grid{ gap:112px; }
 /* ---- světlejší hlavička & patička ---- */
-.site-header{
-  background: linear-gradient(180deg, rgba(18,26,37,.92) 0%, rgba(14,20,29,.76) 100%);
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  backdrop-filter: blur(6px);
-}
+
 .site-footer{
   background: linear-gradient(0deg, rgba(18,26,37,.92) 0%, rgba(14,20,29,.76) 100%);
   border-top: 1px solid rgba(255,255,255,.10);
@@ -578,7 +555,7 @@ html.page--napady{--show-sun:1}
 /* --- Layout fixes & spacing normalization --- */
 .container { max-width: 1200px; margin-inline: auto; padding-inline: 16px; }
 
-.site-header { position: sticky; top: 0; z-index: 100; }
+
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
 
 .site-nav ul { display: flex; gap: 18px; align-items: center; }
@@ -613,17 +590,7 @@ html.page--napady{--show-sun:1}
 .home, .page { position: relative; z-index: 1; }
 /* === GLOBAL DARK GREEN THEME =================================== */
 
-body {
-  background: #0a1310;  /* tmavě zelená */
-  color: #eef2ee;
-  line-height: 1.6;
-}
 
-.site-header {
-  background: rgba(10, 19, 16, 0.9);
-  border-bottom: 1px solid #1e2b25;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
 
 .main-nav a {
   color: #e9f5ec;
@@ -657,26 +624,7 @@ body {
   color: #c8e8d0;
   opacity: 0.9;
 }
-/* === ZÁKLADNÍ BARVY STRÁNKY === */
-body {
-  background: #081c15;       /* tmavě zelená */
-  color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
 
-/* === HLAVIČKA === */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #0f2e26ee;     /* světlejší zelená než stránka */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #174a3a;
-  padding-bottom: 10px;
-  text-align: center;
-}
 
 /* KONTEJNER HLAVIČKY */
 .nav-container {
@@ -739,4 +687,23 @@ img.brand-logo {
   border-radius: 0;         /* žádné kulaté logo */
   margin: 0;
   padding: 0;
+}
+/* ZÁKLAD VZHLEDU STRÁNKY */
+body {
+  background: #081c15;       /* jednotná tmavě zelená */
+  color: #f1f1f1;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HLAVIČKA – o trochu světlejší než tělo stránky */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #0f2e26ee;     /* světlejší zelená */
+  border-bottom: 1px solid #174a3a;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
