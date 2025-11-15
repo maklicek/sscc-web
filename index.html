@@ -7,6 +7,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SSCC – Úvodní stránka</title>
 <style>
+  /* ======== HLAVIČKA SSCC – GOLD PREMIUM STYLE ======== */
+
+/* Barvy */
+:root {
+  --gold: #ffd877;
+  --gold-strong: #ffea9e;
+  --green-header: #0b3a27;
+  --green-dark: #05261a;
+}
+
+/* Celá hlavička */
+.site-header {
+  background: var(--green-header);
+  padding: 6px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Vnitřek hlavičky */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Text vedle loga */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+/* SSCC – hlavní název */
+.brand-title {
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Solar & Synthetic Carbon Cycle – podtitul */
+.brand-subtitle {
+  font-size: 0.95rem;
+  color: var(--gold-strong);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* MENU */
+.main-nav {
+  display: flex;
+  gap: 20px;
+  font-size: 1.05rem;     /* zvětšeno */
+  font-weight: 600;       /* zvýrazněno */
+}
+
+.main-nav a {
+  color: var(--gold-strong);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: 0.85;
+  transition: 0.25s ease;
+}
+
+/* Hover efekt */
+.main-nav a:hover {
+  background: rgba(255, 216, 118, 0.15);
+  opacity: 1;
+}
+
+/* Aktivní stránka */
+.main-nav a.active {
+  background: rgba(255, 216, 118, 0.2);
+  opacity: 1;
+}
+
+/* Motto */
+.site-tagline {
+  background: var(--green-header);
+  color: var(--gold-strong);
+  text-align: center;
+  padding: 4px 0 8px;
+  font-size: 0.97rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  letter-spacing: 0.3px;
+}
+
   body {
     font-family: Arial, sans-serif;
     margin: 0;
