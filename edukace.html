@@ -4,196 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edukace – SSCC</title>
-  <style>
-    body { margin: 0; padding: 0; background: #0d0d0d; color: #f1f1f1; font-family: Arial, sans-serif; line-height: 1.6; }
-    h1, h2, h3 { color: #e4c77f; }
-    .container { width: 90%; max-width: 1200px; margin: auto; padding: 40px 0 80px; }
-    .section { margin-bottom: 72px; }
-    .intro { max-width: 780px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); grid-gap: 28px; margin-top: 24px; }
-    .card { background: #151515; padding: 22px; border-radius: 12px; }
-    .img-placeholder { width: 100%; height: 180px; background: #262626; border-radius: 12px; margin: 18px 0; display: flex; align-items: center; justify-content: center; color:#888; font-size: 0.9rem; }
-    ul { padding-left: 20px; }
-    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); grid-gap: 24px; margin-top: 24px; }
-    .faq-item { background: #151515; padding: 18px; border-radius: 10px; }
-    .faq-item h3 { font-size: 1rem; margin-top: 0; margin-bottom: 8px; }
-    .hero-title { font-size: 2.2rem; margin-bottom: 12px; }
-        .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #050505d9;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #262626;
-    }
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: #f1f1f1;
+    line-height: 1.6;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+  }
+
+  h1, h2 {
+    color: #e4c77f;
+  }
+
+  .project {
+    margin-bottom: 80px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 32px;
+    margin-top: 24px;
+  }
+
+  .card {
+    background: #1a1a1a;
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .status {
+    margin-top: 20px;
+    font-style: italic;
+    color: #c9c9c9;
+  }
+
+  /* HLAVIČKA */
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #050505d9;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #262626;
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: #e4c77f;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.9rem;
+  }
+
+  .main-nav a {
+    text-decoration: none;
+    color: #f1f1f1;
+    opacity: 0.8;
+    padding: 4px 8px;
+    border-radius: 999px;
+    transition: 0.15s ease;
+  }
+
+  .main-nav a:hover {
+    opacity: 1;
+    background: #1f1f1f;
+  }
+
+  /* OBRÁZKOVÝ SYSTÉM */
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* velký obrázek nahoře v projektech */
+  .hero-slot {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #262626;
+  }
+
+  .hero-slot img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* menší obrázek v kartě / bloku */
+  .img-slot {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #262626;
+  }
+
+  .img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* případně schéma – aby se nezdeformovalo */
+  .diagram-slot {
+    max-width: 900px;
+    max-height: 420px;
+    margin: 32px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1b1b1b;
+  }
+
+  .diagram-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 720px) {
     .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 10px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      flex-direction: column;
+      align-items: flex-start;
     }
-    .logo {
-      font-weight: bold;
-      letter-spacing: 0.08em;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      color: #e4c77f;
-    }
+
     .main-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.9rem;
+      justify-content: flex-start;
     }
-    .main-nav a {
-      text-decoration: none;
-      color: #f1f1f1;
-      opacity: 0.8;
-      padding: 4px 8px;
-      border-radius: 999px;
-      transition: 0.15s ease;
-    }
-    .main-nav a:hover {
-      opacity: 1;
-      background: #1f1f1f;
-    }
-    @media (max-width: 720px) {
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .main-nav {
-        justify-content: flex-start;
-      }
-        .img-placeholder {
-      overflow: hidden;
-    }
-    .img-placeholder img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      border-radius: 12px;
-    }
-    /* obecné chování obrázků */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
+  }
+</style>
 
-    /* velká schémata / ilustrace – zmenšené a vystředěné */
-    .diagram {
-      display: block;
-      max-width: min(100%, 960px);
-      max-height: 70vh;
-      margin: 32px auto;
-      border-radius: 12px;
-      object-fit: contain;
-    }
-    /* obecně pro všechny obrázky */
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* velký hero obrázek přes celou šířku textu */
-    .hero-slot {
-      max-width: 1100px;
-      margin: 40px auto 0;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #262626;
-    }
-    .hero-slot img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* obrázek v kartě / bloku – pevná výška, hezky oříznutý */
-    .img-slot {
-      width: 100%;
-      height: 220px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #262626;
-    }
-    .img-slot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;   /* fotka se přizpůsobí rámečku, klidně se trochu ořízne */
-    }
-
-    /* diagram / schéma – neřezat, jen zmenšit do rámečku */
-    .diagram-slot {
-      max-width: 900px;
-      max-height: 420px;
-      margin: 32px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #1b1b1b;
-    }
-    .diagram-slot img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* nic neořízne, jen zmenší */
-    }
-    /* obecně pro všechny obrázky */
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* velký hero obrázek přes celou šířku textu */
-    .hero-slot {
-      max-width: 1100px;
-      margin: 40px auto 0;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #262626;
-    }
-    .hero-slot img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* obrázek v kartě / bloku – pevná výška, hezky oříznutý */
-    .img-slot {
-      width: 100%;
-      height: 220px;
-      margin-bottom: 16px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #262626;
-    }
-    .img-slot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;   /* fotka se přizpůsobí rámečku, klidně se trochu ořízne */
-    }
-
-    /* diagram / schéma – neřezat, jen zmenšit do rámečku */
-    .diagram-slot {
-      max-width: 900px;
-      max-height: 420px;
-      margin: 32px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #1b1b1b;
-    }
-    .diagram-slot img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* nic neořízne, jen zmenší */
-    }
-
-
-  </style>
 </head>
 <body>
     <header class="site-header">
