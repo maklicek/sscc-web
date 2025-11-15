@@ -9,35 +9,36 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #0d0d0d;
+    background: #050505;
     color: #f1f1f1;
     line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    color: #e4c77f;
+    margin-top: 0;
   }
 
   .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
-  }
-
-  h1, h2 {
-    color: #e4c77f;
+    margin: 0 auto;
+    padding: 40px 0 80px;
   }
 
   .project {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 32px;
+    gap: 32px;
     margin-top: 24px;
   }
 
   .card {
-    background: #1a1a1a;
+    background: #111;
     padding: 24px;
     border-radius: 12px;
   }
@@ -98,7 +99,7 @@
     background: #1f1f1f;
   }
 
-  /* OBRÁZKOVÝ SYSTÉM */
+  /* OBRÁZKY – JEDNODUCHÝ SYSTÉM */
 
   img {
     max-width: 100%;
@@ -106,25 +107,24 @@
     display: block;
   }
 
-    .hero-slot {
+  /* velký obrázek nahoře (hero) – používáme zatím jen u Projektů */
+  .hero-slot {
     max-width: 1100px;
+    height: 420px;
     margin: 40px auto 0;
     border-radius: 16px;
     overflow: hidden;
     background: #262626;
-
-    /* DŮLEŽITÉ: omezit výšku */
-    max-height: 420px;      /* můžeš změnit třeba na 360 / 350 podle chuti */
   }
 
   .hero-slot img {
     width: 100%;
-    height: 100%;           /* natáhnout do rámečku */
-    object-fit: cover;      /* nahoře/dole se trochu ořízne */
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
-
-  /* menší obrázek v kartě / bloku */
+  /* menší obrázek v kartě nebo sekci – pokud je někdy přidáme */
   .img-slot {
     width: 100%;
     height: 220px;
@@ -140,7 +140,7 @@
     object-fit: cover;
   }
 
-  /* případně schéma – aby se nezdeformovalo */
+  /* diagramy – zmenšit, neřezat */
   .diagram-slot {
     max-width: 900px;
     max-height: 420px;
@@ -161,7 +161,6 @@
       flex-direction: column;
       align-items: flex-start;
     }
-
     .main-nav {
       justify-content: flex-start;
     }
