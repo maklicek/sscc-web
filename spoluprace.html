@@ -1,301 +1,395 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+  <!-- Favicons -->
   <link rel="icon" href="favicons/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-<link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-<link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
 
+  <!-- Globální CSS (pokud používáš) -->
   <link rel="stylesheet" href="assets/css/style.css">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spolupráce – SSCC</title>
-<style>
-:root {
-  --gold: #e4c77f;
-  --gold-strong: #ffd877;
 
-  --green-dark: #05261a;   /* pozadí celé stránky */
-  --green-mid:  #0e432d;   /* karty / panely */
-  --header-bg:  #0b3a27;   /* hlavička */
-}
+  <style>
+    :root {
+      --gold: #e4c77f;
+      --gold-strong: #ffd877;
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--green-dark);
-  color: #f4f4e8;
-}
+      --green-dark: #05261a;   /* pozadí celé stránky */
+      --green-mid:  #0e432d;   /* karty / panely */
+      --header-bg:  #0b3a27;   /* hlavička */
+    }
 
-/* HLAVIČKA */
-.site-header {
-  background: var(--header-bg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--green-dark);
+      color: #f4f4e8;
+      line-height: 1.6;
+    }
 
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
+    /* HLAVIČKA */
+    .site-header {
+      background: var(--header-bg);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
 
-/* logo + text vlevo */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-}
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
 
-.brand-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0;
-  object-fit: cover;
-  flex-shrink: 0;
-}
+    /* logo + text vlevo */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
 
-.brand-title {
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-strong);
-}
+    .brand-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-.brand-subtitle {
-  font-size: 0.8rem;
-  color: #e3e2c4;
-}
+    .brand-title {
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-strong);
+    }
 
-/* MENU */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.9rem;
-}
+    .brand-subtitle {
+      font-size: 0.8rem;
+      color: #e3e2c4;
+    }
 
-.main-nav a {
-  color: var(--gold-strong);      /* pozlacené */
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 999px;
-  opacity: 0.88;
-  transition: background 0.15s ease, opacity 0.15s ease;
-}
+    /* MENU */
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
 
-.main-nav a:hover {
-  background: rgba(0,0,0,0.25);
-  opacity: 1;
-}
+    .main-nav a {
+      color: var(--gold-strong);      /* pozlacené */
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      opacity: 0.88;
+      transition: background 0.15s ease, opacity 0.15s ease;
+    }
 
-/* MOTTO */
-.site-tagline {
-  text-align: center;
-  padding: 6px 0 10px;
-  font-size: 0.9rem;
-  color: #f6e8a4;
-  border-top: 1px solid rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.35);
-  background: var(--green-mid);
-}
-</style>
+    .main-nav a:hover {
+      background: rgba(0,0,0,0.25);
+      opacity: 1;
+    }
 
+    .main-nav a.active {
+      background: rgba(0,0,0,0.35);
+      opacity: 1;
+    }
+
+    /* MOTTO */
+    .site-tagline {
+      text-align: center;
+      padding: 6px 0 10px;
+      font-size: 0.9rem;
+      color: #f6e8a4;
+      border-top: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.35);
+      background: var(--green-mid);
+    }
+
+    /* OBSAH STRÁNKY */
+    .page-main {
+      padding: 32px 0 72px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 72px;
+    }
+
+    h1, h2, h3 {
+      color: var(--gold);
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      margin: 0 0 24px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 0 0 16px;
+    }
+
+    .intro {
+      max-width: 820px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-gap: 28px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--green-mid);
+      padding: 22px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--gold-strong);
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 6px;
+      color: #f4f4e8;
+    }
+
+    .contact-box {
+      background: var(--green-mid);
+      padding: 20px 22px;
+      border-radius: 12px;
+    }
+
+    .email {
+      margin-top: 6px;
+      font-weight: 600;
+      color: var(--gold-strong);
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header class="site-header">
-  <div class="nav-inner">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/img/logo-sscc.png"
-           alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
-           class="brand-logo">
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-sscc.png"
+             alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
+             class="brand-logo">
 
-      <div class="brand-text">
-        <div class="brand-title">SSCC</div>
-        <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
-      </div>
-    </a>
+        <div class="brand-text">
+          <div class="brand-title">SSCC</div>
+          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
+        </div>
+      </a>
 
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="projekt-sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="spoluprace.html">Spolupráce</a>
-      <a href="konsorcium.html">Konsorcium</a>
-    </nav>
-  </div>
+      <nav class="main-nav">
+        <a href="index.html">Úvod</a>
+        <a href="projekt-sscc.html">SSCC</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="napady.html">Nápady</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="spoluprace.html" class="active">Spolupráce</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </nav>
+    </div>
 
- </div>
-  <div class="site-tagline">
-    Zelenou se naše planeta...
-  </div>
-</header>
+    <div class="site-tagline">
+      Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
+    </div>
+  </header>
 
+  <!-- OBSAH STRÁNKY -->
+  <main class="page-main">
+    <div class="container">
 
-  <div class="container">
-
-    <!-- HLAVNI NADPIS -->
-    <section class="section">
-      <h1>Spolupráce</h1>
-      <p class="intro">
-        SSCC není velká instituce ani firma s obřím majetkem. Jsme menší tým, který spojuje technologie, nápady a pilotní projekty napříč energetikou,
-        chemií a regionálním rozvojem. Hledáme partnery, kteří chtějí být u začátku – ne až u hotové věci.
-      </p>
-    </section>
-
-    <!-- KOHO HLEDAME -->
-    <section class="section">
-      <h2>Koho hledáme</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="pill">Odborné profily</span>
-          <h3>Energetika a sítě</h3>
-          <ul>
-            <li>Obnovitelné zdroje a řízení výkonu.</li>
-            <li>Distribuované energetické systémy.</li>
-            <li>Metrologie v energetice.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="pill">Odborné profily</span>
-          <h3>Chemie a geotermie</h3>
-          <ul>
-            <li>Procesní chemie, NH₃, syntéza a bezpečnost.</li>
-            <li>Geologie a modelování podloží.</li>
-            <li>Geotermální vrty a provoz.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <span class="pill">Praktické profily</span>
-          <h3>Technici a systémoví inženýři</h3>
-          <ul>
-            <li>Provoz a údržba technologií.</li>
-            <li>Systémové inženýrství a integrace.</li>
-            <li>Simulace, data a měření.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBCE A REGIONY -->
-    <section class="section">
-      <h2>Obce, města a regiony</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Co nabízíme</h3>
-          <ul>
-            <li>Společné hledání vhodných pilotních projektů.</li>
-            <li>Modely pro rodinné domy i menší obce.</li>
-            <li>Možnosti lokálních energetických minifarem.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Pro jaké situace</h3>
-          <ul>
-            <li>Regiony se zájmem o stabilní energii.</li>
-            <li>Oblasti s vysokými emisemi nebo energetickými špičkami.</li>
-            <li>Lokality s potenciálem geotermie nebo průmyslových vazeb.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRUMYSLOVI PARTNERI -->
-    <section class="section">
-      <h2>Průmysloví partneři</h2>
-      <p>
-        V průmyslu hledáme partnery hlavně pro testování zachytávání CO₂, syntézy NH₃, bezpečnostních standardů a metrologie. Nejde o projekty za
-        miliardy – jde o smysluplné pilotní úseky, kde lze technologie bezpečně ověřit v praxi.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <h3>Co potřebujeme</h3>
-          <ul>
-            <li>Přístup k reálným provozům a datům.</li>
-            <li>Otevřenost ke společnému vývoji pilotu.</li>
-            <li>Ochotu testovat nové kombinace technologií.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Co nabízíme</h3>
-          <ul>
-            <li>Návrh pilotního řešení na míru.</li>
-            <li>Metodiku měření a vyhodnocení.</li>
-            <li>Zapojení do širšího rámce SSCC.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- JAK SPOLUPRACE PROBIHA -->
-    <section class="section">
-      <h2>Jak spolupráce probíhá</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>1. Kontakt</h3>
-          <p>
-            Krátký online nebo osobní rozhovor nad vaší situací. Bez závazků, cílem je pochopit, zda dává&nbsp;spolupráce smysl.
-          </p>
-        </div>
-        <div class="card">
-          <h3>2. Malý model</h3>
-          <p>
-            Připravíme jednoduchý energetický a bezpečnostní model: nákres, základní bilanci, možné scénáře. Zaměřujeme se na malé, konkrétní piloty.
-          </p>
-        </div>
-        <div class="card">
-          <h3>3. Rozhodnutí o pilotu</h3>
-          <p>
-            Pokud model dává smysl a jsou k dispozici kapacity, domlouváme konkrétní kroky k pilotnímu projektu – v realistickém rozsahu.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CO NEDELAME -->
-    <section class="section">
-      <h2>Co neděláme</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Aby bylo jasno</h3>
-          <ul>
-            <li>Neprodáváme elektřinu ani plyn.</li>
-            <li>Nejsme dodavatel technologií na klíč.</li>
-            <li>Nejsme investiční fond ani startup hledající kapitál.</li>
-            <li>Nejsme vědecký ústav s miliardovým zázemím.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Co děláme</h3>
-          <ul>
-            <li>Navrhujeme a testujeme pilotní projekty.</li>
-            <li>Spojujeme lidi z různých oborů.</li>
-            <li>Ověřujeme technologie v reálných podmínkách.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- KONTAKT -->
-    <section class="section">
-      <h2>Kontakt</h2>
-      <div class="contact-box">
-        <p>
-          Pokud máte zájem o spolupráci nebo jen chcete probrat možnosti, napište krátkou zprávu s pár větami o sobě a své situaci.
+      <!-- HLAVNÍ NADPIS -->
+      <section class="section">
+        <h1>Spolupráce</h1>
+        <p class="intro">
+          SSCC není velká instituce ani firma s obřím majetkem. Jsme menší tým, který spojuje technologie, nápady a pilotní projekty
+          napříč energetikou, chemií a regionálním rozvojem. Hledáme partnery, kteří chtějí být u začátku – ne až u hotové věci.
         </p>
-        <p class="email">contact@sscc.example</p>
-      </div>
-    </section>
+      </section>
 
-  </div>
+      <!-- KOHO HLEDÁME -->
+      <section class="section">
+        <h2>Koho hledáme</h2>
+        <div class="grid">
+          <div class="card">
+            <span class="pill">Odborné profily</span>
+            <h3>Energetika a sítě</h3>
+            <ul>
+              <li>Obnovitelné zdroje a řízení výkonu.</li>
+              <li>Distribuované energetické systémy.</li>
+              <li>Metrologie v energetice.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="pill">Odborné profily</span>
+            <h3>Chemie a geotermie</h3>
+            <ul>
+              <li>Procesní chemie, NH₃, syntéza a bezpečnost.</li>
+              <li>Geologie a modelování podloží.</li>
+              <li>Geotermální vrty a provoz.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="pill">Praktické profily</span>
+            <h3>Technici a systémoví inženýři</h3>
+            <ul>
+              <li>Provoz a údržba technologií.</li>
+              <li>Systémové inženýrství a integrace.</li>
+              <li>Simulace, data a měření.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- OBCE A REGIONY -->
+      <section class="section">
+        <h2>Obce, města a regiony</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Co nabízíme</h3>
+            <ul>
+              <li>Společné hledání vhodných pilotních projektů.</li>
+              <li>Modely pro rodinné domy i menší obce.</li>
+              <li>Možnosti lokálních energetických minifarem.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Pro jaké situace</h3>
+            <ul>
+              <li>Regiony se zájmem o stabilní energii.</li>
+              <li>Oblasti s vysokými emisemi nebo energetickými špičkami.</li>
+              <li>Lokality s potenciálem geotermie nebo průmyslových vazeb.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRŮMYSLOVÍ PARTNEŘI -->
+      <section class="section">
+        <h2>Průmysloví partneři</h2>
+        <p>
+          V průmyslu hledáme partnery hlavně pro testování zachytávání CO₂, syntézy NH₃, bezpečnostních standardů a metrologie.
+          Nejde o projekty za miliardy – jde o smysluplné pilotní úseky, kde lze technologie bezpečně ověřit v praxi.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Co potřebujeme</h3>
+            <ul>
+              <li>Přístup k reálným provozům a datům.</li>
+              <li>Otevřenost ke společnému vývoji pilotu.</li>
+              <li>Ochotu testovat nové kombinace technologií.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Co nabízíme</h3>
+            <ul>
+              <li>Návrh pilotního řešení na míru.</li>
+              <li>Metodiku měření a vyhodnocení.</li>
+              <li>Zapojení do širšího rámce SSCC.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- JAK SPOLUPRÁCE PROBÍHÁ -->
+      <section class="section">
+        <h2>Jak spolupráce probíhá</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>1. Kontakt</h3>
+            <p>
+              Krátký online nebo osobní rozhovor nad vaší situací. Bez závazků, cílem je pochopit, zda dává&nbsp;spolupráce smysl.
+            </p>
+          </div>
+          <div class="card">
+            <h3>2. Malý model</h3>
+            <p>
+              Připravíme jednoduchý energetický a bezpečnostní model: nákres, základní bilanci, možné scénáře.
+              Zaměřujeme se na malé, konkrétní piloty.
+            </p>
+          </div>
+          <div class="card">
+            <h3>3. Rozhodnutí o pilotu</h3>
+            <p>
+              Pokud model dává smysl a jsou k dispozici kapacity, domlouváme konkrétní kroky k pilotnímu projektu – v realistickém rozsahu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CO NEDĚLÁME -->
+      <section class="section">
+        <h2>Co neděláme</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Aby bylo jasno</h3>
+            <ul>
+              <li>Neprodáváme elektřinu ani plyn.</li>
+              <li>Nejsme dodavatel technologií na klíč.</li>
+              <li>Nejsme investiční fond ani startup hledající kapitál.</li>
+              <li>Nejsme vědecký ústav s miliardovým zázemím.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Co děláme</h3>
+            <ul>
+              <li>Navrhujeme a testujeme pilotní projekty.</li>
+              <li>Spojujeme lidi z různých oborů.</li>
+              <li>Ověřujeme technologie v reálných podmínkách.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTAKT -->
+      <section class="section">
+        <h2>Kontakt</h2>
+        <div class="contact-box">
+          <p>
+            Pokud máte zájem o spolupráci nebo jen chcete probrat možnosti, napište krátkou zprávu
+            s pár větami o sobě a své situaci.
+          </p>
+          <p class="email">contact@sscc.example</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
 </body>
 </html>
