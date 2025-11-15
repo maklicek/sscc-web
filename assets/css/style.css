@@ -1,0 +1,37 @@
+/* === LOGO — pevná velikost, čtverec === */
+.brand-logo {
+    width: 80px;         /* můžeš změnit */
+    height: 80px;
+    object-fit: contain;
+    border-radius: 0;
+    display: block;
+}
+:root {
+  --green-dark: #0a2019;
+  --green-mid:  #12372b;
+  --header-bg:  #164033;
+  --gold: #e4c77f;
+  --text-main: #f4f4f4;
+  --text-muted: #c9c9c9;
+}
+
+/* celá stránka */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--green-dark);
+  color: var(--text-main);
+}
+
+/* hlavička */
+.site-header {
+  background: var(--header-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.site-tagline {
+  text-align: center;
+  padding: 8px 0;
+  background: var(--green-dark);
+  color: var(--text-muted);
+}
