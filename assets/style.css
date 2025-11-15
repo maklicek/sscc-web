@@ -707,3 +707,16 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
+/* LOGO – společné pro všechny stránky */
+img.logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 0;
+}
+img.logo-img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: contain;
+  border-radius: 0;
+}
