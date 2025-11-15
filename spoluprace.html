@@ -6,276 +6,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spolupráce – SSCC</title>
- <style>
-   /* ======== HLAVIČKA SSCC – GOLD PREMIUM STYLE ======== */
-
-/* Barvy */
+<style>
 :root {
-  --gold: #ffd877;
-  --gold-strong: #ffea9e;
-  --green-header: #0b3a27;
-  --green-dark: #05261a;
+  --gold: #e4c77f;
+  --gold-strong: #ffd877;
+
+  --green-dark: #05261a;   /* pozadí celé stránky */
+  --green-mid:  #0e432d;   /* karty / panely */
+  --header-bg:  #0b3a27;   /* hlavička */
 }
 
-/* Celá hlavička */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--green-dark);
+  color: #f4f4e8;
+}
+
+/* HLAVIČKA */
 .site-header {
-  background: var(--green-header);
-  padding: 6px 0 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: var(--header-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
-/* Vnitřek hlavičky */
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8px 24px 0;
+  padding: 8px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 32px;
 }
 
-/* Logo */
+/* logo + text vlevo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
 .brand-logo {
   width: 64px;
   height: 64px;
   border-radius: 0;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Text vedle loga */
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-
-/* SSCC – hlavní název */
 .brand-title {
-  font-size: 1.28rem;
-  font-weight: 700;
-  color: var(--gold);
+  font-weight: bold;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: var(--gold-strong);
 }
 
-/* Solar & Synthetic Carbon Cycle – podtitul */
 .brand-subtitle {
-  font-size: 0.95rem;
-  color: var(--gold-strong);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 0.8rem;
+  color: #e3e2c4;
 }
 
 /* MENU */
 .main-nav {
   display: flex;
-  gap: 20px;
-  font-size: 1.05rem;     /* zvětšeno */
-  font-weight: 600;       /* zvýrazněno */
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.9rem;
 }
 
 .main-nav a {
-  color: var(--gold-strong);
+  color: var(--gold-strong);      /* pozlacené */
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 4px 10px;
   border-radius: 999px;
-  opacity: 0.85;
-  transition: 0.25s ease;
+  opacity: 0.88;
+  transition: background 0.15s ease, opacity 0.15s ease;
 }
 
-/* Hover efekt */
 .main-nav a:hover {
-  background: rgba(255, 216, 118, 0.15);
+  background: rgba(0,0,0,0.25);
   opacity: 1;
 }
 
-/* Aktivní stránka */
-.main-nav a.active {
-  background: rgba(255, 216, 118, 0.2);
-  opacity: 1;
-}
-
-/* Motto */
+/* MOTTO */
 .site-tagline {
-  background: var(--green-header);
-  color: var(--gold-strong);
   text-align: center;
-  padding: 4px 0 8px;
-  font-size: 0.97rem;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  letter-spacing: 0.3px;
+  padding: 6px 0 10px;
+  font-size: 0.9rem;
+  color: #f6e8a4;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+  background: var(--green-mid);
 }
-
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #050505;
-    color: #f1f1f1;
-    line-height: 1.6;
-  }
-
-  h1, h2, h3 {
-    color: #e4c77f;
-    margin-top: 0;
-  }
-
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0 80px;
-  }
-
-  .project {
-    margin-bottom: 72px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-top: 24px;
-  }
-
-  .card {
-    background: #111;
-    padding: 24px;
-    border-radius: 12px;
-  }
-
-  .status {
-    margin-top: 20px;
-    font-style: italic;
-    color: #c9c9c9;
-  }
-
-  /* HLAVIČKA */
-
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #050505d9;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #262626;
-  }
-
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
-
-  .logo {
-    font-weight: bold;
-    letter-spacing: 0.08em;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    color: #e4c77f;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 0.9rem;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: #f1f1f1;
-    opacity: 0.8;
-    padding: 4px 8px;
-    border-radius: 999px;
-    transition: 0.15s ease;
-  }
-
-  .main-nav a:hover {
-    opacity: 1;
-    background: #1f1f1f;
-  }
-
-  /* OBRÁZKY – JEDNODUCHÝ SYSTÉM */
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
- /* LOGO – pevná velikost */
-  img.logo-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 0;
-  }
-  /* velký obrázek nahoře (hero) – používáme zatím jen u Projektů */
-  .hero-slot {
-    max-width: 1100px;
-    height: 420px;
-    margin: 40px auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #262626;
-  }
-
-  .hero-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  /* menší obrázek v kartě nebo sekci – pokud je někdy přidáme */
-  .img-slot {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 16px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #262626;
-  }
-
-  .img-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* diagramy – zmenšit, neřezat */
-  .diagram-slot {
-    max-width: 900px;
-    max-height: 420px;
-    margin: 32px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #1b1b1b;
-  }
-
-  .diagram-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  @media (max-width: 720px) {
-    .nav-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .main-nav {
-      justify-content: flex-start;
-    }
-  }
 </style>
 
 </head>
