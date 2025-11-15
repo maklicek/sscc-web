@@ -6,15 +6,18 @@
   <title>Edukace – SSCC</title>
 
   <style>
-    :root {
-      --gold: #e4c77f;
-      --gold-strong: #ffd877;
-      --green-dark: #041510;     /* hlavní pozadí stránky */
-      --green-mid: #0b261e;      /* karty / bloky */
-      --header-bg: #113329;      /* hlavička – světlejší než tělo */
-      --text-main: #f4f4f4;
-      --text-muted: #c9c9c9;
-    }
+:root {
+  --gold: #e4c77f;
+  --gold-strong: #ffd877;
+
+  /* sjednocené zelené */
+  --green-dark: #0a2019;     /* pozadí celé stránky + pod hlavičkou */
+  --green-mid:  #12372b;     /* karty / vnitřní bloky */
+  --header-bg:  #164033;     /* hlavička – o chlup světlejší */
+
+  --text-main:  #f4f4f4;
+  --text-muted: #c9c9c9;
+}
 
     * {
       box-sizing: border-box;
@@ -111,14 +114,14 @@
 
     /* MOTTO POD HLAVIČKOU */
 
-    .site-tagline {
-      background: #0a2019;
-      border-bottom: 1px solid rgba(0,0,0,0.4);
-      text-align: center;
-      padding: 8px 16px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
+ .site-tagline {
+  background: var(--green-dark);   /* stejná barva jako tělo stránky */
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
 
     /* OBSAH STRÁNKY */
 
@@ -166,17 +169,13 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .brand-logo {
-        width: 52px;
-        height: 52px;
-      }
-      .page-main {
-        padding-top: 24px;
-      }
-      .page-title {
-        font-size: 1.6rem;
-      }
-    }
+    .brand-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 0;      /* žádný kruh, čistý čtverec */
+  object-fit: cover;     /* logo pěkně vyplní čtverec */
+}
+
   </style>
 </head>
 
