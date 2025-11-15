@@ -55,7 +55,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: #050505d9;
+      background: #000000e0;      /* o chlup tmavší než zbytek stránky */
       backdrop-filter: blur(10px);
       border-bottom: 1px solid #262626;
     }
@@ -75,7 +75,7 @@
       letter-spacing: 0.08em;
       font-size: 0.95rem;
       text-transform: uppercase;
-      color: #e4c77f;
+      color: #e4c77f;             /* zesvětlené logo */
     }
 
     .main-nav {
@@ -99,12 +99,15 @@
       background: #1f1f1f;
     }
 
-    /* LOGO + MOTTO POD HLAVIČKOU */
+    /* LOGO + MOTTO POD HLAVIČKOU (UVNITŘ OBSAHU) */
+
+    .page-main {
+      padding-top: 24px;          /* malý odstup od hlavičky */
+    }
 
     .site-intro {
       text-align: center;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .site-title {
@@ -121,13 +124,13 @@
       opacity: 0.85;
     }
 
-    /* HERO NAD SEKCI PROJEKTŮ */
+    /* NÁZEV STRÁNKY */
 
     .hero {
       width: 100%;
       display: flex;
       justify-content: center;
-      margin: 24px 0 0;
+      margin: 16px 0 8px;
     }
 
     .hero span {
@@ -148,7 +151,7 @@
     .hero-slot {
       max-width: 1100px;
       height: 420px;
-      margin: 40px auto 0;
+      margin: 32px auto 0;
       border-radius: 16px;
       overflow: hidden;
       background: #262626;
@@ -226,130 +229,132 @@
     </div>
   </header>
 
-  <!-- LOGO + MOTTO -->
-  <div class="site-intro">
-    <h1 class="site-title">SSCC — Solar & Synthetic Carbon Cycle</h1>
-    <p class="site-subtitle">Energetický systém nové generace</p>
-  </div>
+  <main class="page-main">
+    <div class="container">
 
-  <!-- NÁZEV STRÁNKY -->
-  <div class="hero"><span>Projekty SSCC</span></div>
-
-  <div class="container">
-
-    <!-- PROJEKT 1: OSTRAVA -->
-    <section class="project">
-      <div class="hero-slot">
-        <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava" />
+      <!-- LOGO + MOTTO UVNITŘ OBSAHU -->
+      <div class="site-intro">
+        <h1 class="site-title">SSCC — Solar &amp; Synthetic Carbon Cycle</h1>
+        <p class="site-subtitle">Energetický systém nové generace</p>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Cíle projektu</h3>
-          <ul>
-            <li>Zachytávání CO₂ ze spalin</li>
-            <li>Lokální syntéza zeleného NH₃</li>
-            <li>Metrologie a měření účinnosti</li>
-            <li>Napojení na energetické sítě</li>
-          </ul>
+      <!-- NÁZEV STRÁNKY -->
+      <div class="hero"><span>Projekty SSCC</span></div>
+
+      <!-- PROJEKT 1: OSTRAVA -->
+      <section class="project">
+        <div class="hero-slot">
+          <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava" />
         </div>
 
-        <div class="card">
-          <h3>Lokální přínosy</h3>
-          <ul>
-            <li>Nízké emise v regionu</li>
-            <li>NH₃ pro průmysl a teplárny</li>
-            <li>Stabilní dodávky energie</li>
-            <li>Transformace průmyslové zóny</li>
-          </ul>
+        <div class="grid">
+          <div class="card">
+            <h3>Cíle projektu</h3>
+            <ul>
+              <li>Zachytávání CO₂ ze spalin</li>
+              <li>Lokální syntéza zeleného NH₃</li>
+              <li>Metrologie a měření účinnosti</li>
+              <li>Napojení na energetické sítě</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Lokální přínosy</h3>
+            <ul>
+              <li>Nízké emise v regionu</li>
+              <li>NH₃ pro průmysl a teplárny</li>
+              <li>Stabilní dodávky energie</li>
+              <li>Transformace průmyslové zóny</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Technologie</h3>
+            <ul>
+              <li>DAC / zachytávání CO₂</li>
+              <li>Syntéza NH₃</li>
+              <li>Bezpečnostní infrastruktura</li>
+              <li>Řízení a metrologie</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card">
-          <h3>Technologie</h3>
-          <ul>
-            <li>DAC / zachytávání CO₂</li>
-            <li>Syntéza NH₃</li>
-            <li>Bezpečnostní infrastruktura</li>
-            <li>Řízení a metrologie</li>
-          </ul>
-        </div>
-      </div>
+        <div class="status">Stav: probíhá technická specifikace.</div>
+      </section>
 
-      <div class="status">Stav: probíhá technická specifikace.</div>
-    </section>
+      <!-- PROJEKT 2: RD A OBCE -->
+      <section class="project">
+        <h2>RD a obce – lokální zelené uzly energie</h2>
 
-    <!-- PROJEKT 2: RD A OBCE -->
-    <section class="project">
-      <h2>RD a obce – lokální zelené uzly energie</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Cíle projektu</h3>
+            <ul>
+              <li>Model RD + model obce</li>
+              <li>Stabilní příjem výkonu</li>
+              <li>Mini-syntetický okruh NH₃</li>
+              <li>Zajištění bezpečnosti</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Přínosy</h3>
+            <ul>
+              <li>Stabilní energie mimo počasí</li>
+              <li>Ukládání energie v NH₃</li>
+              <li>Snížení zátěže sítě</li>
+              <li>Soběstačnost pro obce</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Technologie</h3>
+            <ul>
+              <li>Řízení příjmu výkonu</li>
+              <li>Mini-syntéza NH₃</li>
+              <li>Bezpečnostní pásma</li>
+              <li>Integrace s topnými systémy</li>
+            </ul>
+          </div>
+        </div>
+        <div class="status">Stav: probíhá návrh dvou modelových lokalit.</div>
+      </section>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Cíle projektu</h3>
-          <ul>
-            <li>Model RD + model obce</li>
-            <li>Stabilní příjem výkonu</li>
-            <li>Mini-syntetický okruh NH₃</li>
-            <li>Zajištění bezpečnosti</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Přínosy</h3>
-          <ul>
-            <li>Stabilní energie mimo počasí</li>
-            <li>Ukládání energie v NH₃</li>
-            <li>Snížení zátěže sítě</li>
-            <li>Soběstačnost pro obce</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Technologie</h3>
-          <ul>
-            <li>Řízení příjmu výkonu</li>
-            <li>Mini-syntéza NH₃</li>
-            <li>Bezpečnostní pásma</li>
-            <li>Integrace s topnými systémy</li>
-          </ul>
-        </div>
-      </div>
-      <div class="status">Stav: probíhá návrh dvou modelových lokalit.</div>
-    </section>
+      <!-- PROJEKT 3: DOUPOV -->
+      <section class="project">
+        <h2>Doupov – geotermální energetický hub</h2>
 
-    <!-- PROJEKT 3: DOUPOV -->
-    <section class="project">
-      <h2>Doupov – geotermální energetický hub</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Cíle projektu</h3>
+            <ul>
+              <li>Geologické mapování</li>
+              <li>Návrh pilotního vrtu</li>
+              <li>Tepelný model lokality</li>
+              <li>Kombinace tepla a syntézy</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Přínosy</h3>
+            <ul>
+              <li>Stálý zdroj tepla</li>
+              <li>Dodávky tepla obcím</li>
+              <li>Podpora regionální obnovy</li>
+              <li>Hybridní provoz s OS energií</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Technologie</h3>
+            <ul>
+              <li>Hlubinné vrty</li>
+              <li>Tepelné čerpané okruhy</li>
+              <li>Integrace se syntézou</li>
+              <li>Řízení tepelné bilance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="status">Stav: probíhá geologická a tepelná analýza.</div>
+      </section>
 
-      <div class="grid">
-        <div class="card">
-          <h3>Cíle projektu</h3>
-          <ul>
-            <li>Geologické mapování</li>
-            <li>Návrh pilotního vrtu</li>
-            <li>Tepelný model lokality</li>
-            <li>Kombinace tepla a syntézy</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Přínosy</h3>
-          <ul>
-            <li>Stálý zdroj tepla</li>
-            <li>Dodávky tepla obcím</li>
-            <li>Podpora regionální obnovy</li>
-            <li>Hybridní provoz s OS energií</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Technologie</h3>
-          <ul>
-            <li>Hlubinné vrty</li>
-            <li>Tepelné čerpané okruhy</li>
-            <li>Integrace se syntézou</li>
-            <li>Řízení tepelné bilance</li>
-          </ul>
-        </div>
-      </div>
-      <div class="status">Stav: probíhá geologická a tepelná analýza.</div>
-    </section>
-
-  </div>
+    </div>
+  </main>
 </body>
 </html>
