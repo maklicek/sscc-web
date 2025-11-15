@@ -1,40 +1,25 @@
-<style>
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
- /* LOGO – pevná velikost */
-  img.logo-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    border-radius: 0;
-  }
- 
-
-  /* … ostatní CSS … */
-</style>
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+  <link rel="stylesheet" href="assets/css/style.css">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edukace – SSCC</title>
 
   <style>
-:root {
-  --gold: #e4c77f;
-  --gold-strong: #ffd877;
+    /* === BARVY A ZÁKLAD ========================================= */
+    :root {
+      --gold: #f4d57a;
+      --gold-strong: #ffd877;
 
-  /* sjednocené zelené */
-  --green-dark: #0a2019;     /* pozadí celé stránky + pod hlavičkou */
-  --green-mid:  #12372b;     /* karty / vnitřní bloky */
-  --header-bg:  #164033;     /* hlavička – o chlup světlejší */
+      --green-body:  #05261a;  /* hlavní tmavě zelená */
+      --green-header:#0b3a27;  /* hlavička */
+      --green-card:  #0f3f2a;  /* karty / bloky */
 
-  --text-main:  #f4f4f4;
-  --text-muted: #c9c9c9;
-}
+      --text-main:  #f4f4e8;
+      --text-muted: #d0d4c8;
+    }
 
     * {
       box-sizing: border-box;
@@ -42,99 +27,111 @@
 
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      background: var(--green-dark);
+      background: var(--green-body);
       color: var(--text-main);
       line-height: 1.6;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
-    /* HLAVIČKA */
+    /* === HLAVIČKA ============================================== */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: var(--header-bg);
-      border-bottom: 1px solid rgba(0,0,0,0.35);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      background: var(--green-header);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      border-bottom: 1px solid rgba(0,0,0,0.45);
     }
 
-    .header-inner {
+    .nav-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 8px 5%;
+      padding: 8px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 32px;
     }
 
+    /* logo + text vlevo */
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      text-decoration: none;
+      gap: 16px;
     }
 
-   
+    /* ČTVEREC – TADY SE ŘÍDÍ VELIKOST LOGA */
+    .brand-logo {
+      width: 64px;     /* klidně změň na 48 / 72 pokud budeš chtít */
+      height: 64px;
+      border-radius: 0;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+    }
+
     .brand-text {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
 
-    .brand-name {
-      font-size: 1.1rem;
+    .brand-title {
       font-weight: bold;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--gold-strong);
+      font-size: 0.95rem;
     }
 
-    .brand-sub {
+    .brand-subtitle {
       font-size: 0.8rem;
       color: var(--text-muted);
     }
 
+    /* menu vpravo */
     .main-nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.92rem;
+      gap: 14px;
+      font-size: 0.9rem;
     }
 
     .main-nav a {
-      text-decoration: none;
-      color: var(--text-main);
-      opacity: 0.8;
       padding: 4px 10px;
       border-radius: 999px;
-      transition: 0.15s ease;
+      opacity: 0.85;
+      transition: background 0.15s ease, opacity 0.15s ease;
     }
 
-    .main-nav a:hover,
-    .main-nav a:focus {
-      opacity: 1;
+    .main-nav a:hover {
       background: rgba(0,0,0,0.25);
+      opacity: 1;
     }
 
-    /* MOTTO POD HLAVIČKOU */
+    .main-nav a.active {
+      background: rgba(0,0,0,0.35);
+      opacity: 1;
+    }
 
- .site-tagline {
-  background: var(--green-dark);   /* stejná barva jako tělo stránky */
-  border-bottom: 1px solid rgba(0,0,0,0.4);
-  text-align: center;
-  padding: 8px 16px;
-  font-size: 0.95rem;
-  color: var(--text-muted);
-}
+    /* motto pod hlavičkou */
+    .site-tagline {
+      text-align: center;
+      padding: 6px 0 10px;
+      font-size: 0.9rem;
+      color: #f6e8a4;
+      border-top: 1px solid rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(0,0,0,0.35);
+      background: #0e432d;
+    }
 
-    /* OBSAH STRÁNKY */
+    /* === OBSAH STRÁNKY ========================================== */
 
     .page-main {
       padding: 32px 0 72px;
@@ -154,166 +151,89 @@
 
     h2, h3 {
       color: var(--gold);
-      margin-top: 0;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    h2:first-of-type {
+      margin-top: 24px;
     }
 
     .lead {
       max-width: 960px;
       margin-bottom: 24px;
-    }
-
-    .card {
-      background: var(--green-mid);
-      padding: 24px;
-      border-radius: 12px;
+      color: var(--text-main);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      margin-top: 24px;
+      gap: 24px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--green-card);
+      padding: 20px 22px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,0,0,0.45);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin: 8px 0 0;
     }
 
     @media (max-width: 720px) {
-      .header-inner {
+      .nav-inner {
         flex-direction: column;
         align-items: flex-start;
       }
-  
-/* LOGO V HLAVIČCE – ČTVEREC */
-.brand-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0 !important;  /* zruší kulatý tvar */
-  object-fit: cover;             /* obrázek pěkně vyplní čtverec */
-}
-/* CELÁ STRÁNKA – zelené pozadí */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #05261a;         /* hlavní tmavě zelená */
-  color: #f4f4e8;
-}
 
-/* HLAVIČKA */
-
-.site-header {
-  background: #0b3a27;         /* o něco světlejší než tělo stránky */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-/* logo + text vlevo */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-decoration: none;
-}
-
-/* TADY ŘÍDÍME VELIKOST LOGA */
-.brand-logo {
-  width: 64px;                 /* klidně změň na 48 nebo 72 */
-  height: 64px;
-  border-radius: 0;            /* čtverec, žádný kruh */
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.brand-title {
-  font-weight: bold;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #f8d36b;
-}
-
-.brand-subtitle {
-  font-size: 0.8rem;
-  color: #e3e2c4;
-}
-
-/* menu vpravo */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.9rem;
-}
-
-.main-nav a {
-  color: #f4f4e8;
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 999px;
-  opacity: 0.85;
-  transition: background 0.15s ease, opacity 0.15s ease;
-}
-
-.main-nav a:hover {
-  background: rgba(0,0,0,0.25);
-  opacity: 1;
-}
-
-/* motto pod hlavičkou */
-.site-tagline {
-  text-align: center;
-  padding: 6px 0 10px;
-  font-size: 0.9rem;
-  color: #f6e8a4;
-  border-top: 1px solid rgba(0,0,0,0.25);
-  border-bottom: 1px solid rgba(0,0,0,0.35);
-  background: #0e432d;         /* stejná / podobná jako karty */
-}
-
+      .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- JEDINÁ HLAVIČKA -->
-<header class="site-header">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <img src="assets/img/logo-sscc.png"
-           alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
-           class="brand-logo">
+  <!-- HLAVIČKA -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img
+          src="assets/img/logo-sscc.png"
+          alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
+          class="brand-logo"
+        >
 
-      <div class="brand-text">
-        <div class="brand-title">SSCC</div>
-        <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
-      </div>
-    </a>
+        <div class="brand-text">
+          <div class="brand-title">SSCC</div>
+          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
+        </div>
+      </a>
 
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="projekt-sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="spoluprace.html">Spolupráce</a>
-      <a href="konsorcium.html">Konsorcium</a>
-    </nav>
-  </div>
+      <nav class="main-nav">
+        <a href="index.html">Úvod</a>
+        <a href="projekt-sscc.html">SSCC</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="napady.html">Nápady</a>
+        <a href="edukace.html" class="active">Edukace</a>
+        <a href="spoluprace.html">Spolupráce</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </nav>
+    </div>
 
-  <div class="site-tagline">
-    Energetický systém nové generace
-  </div>
-</header>
-
-
-  <!-- MOTTO -->
-  <div class="site-tagline">
-    Energetický systém nové generace
-  </div>
+    <div class="site-tagline">
+      Energetický systém nové generace
+    </div>
+  </header>
 
   <!-- OBSAH EDUKACE -->
   <main class="page-main">
@@ -357,7 +277,7 @@ body {
         </div>
       </div>
 
-      <h2 style="margin-top:40px;">Zelený amoniak (NH₃) – nosič energie a uhlíku</h2>
+      <h2>Zelený amoniak (NH₃) – nosič energie a uhlíku</h2>
 
       <div class="grid">
         <div class="card">
@@ -387,7 +307,6 @@ body {
           </ul>
         </div>
       </div>
-
     </div>
   </main>
 </body>
