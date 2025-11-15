@@ -107,11 +107,21 @@
   }
 
   .hero-slot {
-    max-width: 1100px;
-    margin: 40px auto 0;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #262626;
+  max-width: 1100px;
+  height: 380px;          /* pevná výška místo max-height */
+  margin: 40px auto 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #262626;
+}
+
+.hero-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* vyplní rám celé */
+  object-position: center; /* ořez soustředí na střed */
+}
+
 
     /* DŮLEŽITÉ: omezit výšku */
     max-height: 420px;      /* můžeš změnit třeba na 360 / 350 podle chuti */
