@@ -63,15 +63,7 @@ a:hover{ opacity:.92; }
 }
 .brand-combo{ display:flex; align-items:center; gap:12px; }
 
-/* LOGO – větší, bez rámu a pozadí */
-.main-logo{
-  height:96px;        /* zvětšeno z 78px */
-  width:auto;
-  padding:0;          /* žádný vnitřní okraj */
-  border:none;        /* bez obrysu */
-  background:transparent;
-  box-shadow:none;
-}
+
 @media (max-width:1100px){ .main-logo{ height:84px; } }
 @media (max-width:640px){  .main-logo{ height:72px; } }
 
@@ -271,16 +263,7 @@ a:hover{ opacity:.92; }
   font-weight:800;
 }
 .card .card-desc{ color:var(--muted); }
-/* Logo – větší, čitelnější, bez “rámečkového” dojmu */
-.logo-frame{ display:flex; align-items:center; }
-.main-logo{
-  height: 92px;           /* z 78 na 92–96 podle chuti */
-  padding: 6px;           /* menší vnitřní okraj */
-  border-radius: 12px;
-  border: 1px solid rgba(255,215,90,.25); /* jemnější */
-  box-shadow: 0 0 8px rgba(255,225,120,.18);
-  background: #141b26;
-}
+
 @media (max-width: 720px){
   .main-logo{ height: 68px; }
 }
@@ -701,11 +684,7 @@ body {
   justify-content: space-between;
 }
 
-/* LOGO */
-.logo-img {
-  height: 48px;
-  width: auto;
-}
+
 
 /* MENU */
 .main-nav {
