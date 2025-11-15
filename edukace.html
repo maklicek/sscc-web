@@ -4,177 +4,184 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Edukace – SSCC</title>
-<style>
-  :root {
-    --gold: #e4c77f;
-    --gold-strong: #ffd877;
-    --green-dark: #041510;     /* hlavní pozadí stránky */
-    --green-mid: #0b261e;      /* karty / bloky */
-    --header-bg: #113329;      /* hlavička – světlejší než tělo */
-    --text-main: #f4f4f4;
-    --text-muted: #c9c9c9;
-  }
 
-  * {
-    box-sizing: border-box;
-  }
+  <style>
+    :root {
+      --gold: #e4c77f;
+      --gold-strong: #ffd877;
+      --green-dark: #041510;     /* hlavní pozadí stránky */
+      --green-mid: #0b261e;      /* karty / bloky */
+      --header-bg: #113329;      /* hlavička – světlejší než tělo */
+      --text-main: #f4f4f4;
+      --text-muted: #c9c9c9;
+    }
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: var(--green-dark);
-    color: var(--text-main);
-    line-height: 1.6;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  a {
-    color: inherit;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: var(--green-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
 
-  /* HLAVIČKA */
+    a {
+      color: inherit;
+    }
 
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--header-bg);
-    border-bottom: 1px solid rgba(0,0,0,0.35);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  }
+    /* HLAVIČKA */
 
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 8px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-  }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      border-bottom: 1px solid rgba(0,0,0,0.35);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .brand-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: contain;
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .brand-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold-strong);
-  }
-
-  .brand-sub {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .main-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 0.92rem;
-  }
-
-  .main-nav a {
-    text-decoration: none;
-    color: var(--text-main);
-    opacity: 0.8;
-    padding: 4px 10px;
-    border-radius: 999px;
-    transition: 0.15s ease;
-  }
-
-  .main-nav a:hover,
-  .main-nav a:focus {
-    opacity: 1;
-    background: rgba(0,0,0,0.25);
-  }
-
-  /* MOTTO POD HLAVIČKOU */
-
-  .site-tagline {
-    background: #0a2019;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
-    text-align: center;
-    padding: 8px 16px;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-  }
-
-  /* OBSAH STRÁNKY */
-
-  .page-main {
-    padding: 32px 0 72px;
-  }
-
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .page-title {
-    font-size: 2.1rem;
-    margin: 0 0 24px;
-    color: var(--gold);
-  }
-
-  h2, h3 {
-    color: var(--gold);
-    margin-top: 0;
-  }
-
-  .card {
-    background: var(--green-mid);
-    padding: 24px;
-    border-radius: 12px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-top: 24px;
-  }
-
-  @media (max-width: 720px) {
     .header-inner {
-      flex-direction: column;
-      align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .brand-logo {
-      width: 52px;
-      height: 52px;
-    }
-    .page-main {
-      padding-top: 24px;
-    }
-    .page-title {
-      font-size: 1.6rem;
-    }
-  }
-</style>
 
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-strong);
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.92rem;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      opacity: 0.8;
+      padding: 4px 10px;
+      border-radius: 999px;
+      transition: 0.15s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      opacity: 1;
+      background: rgba(0,0,0,0.25);
+    }
+
+    /* MOTTO POD HLAVIČKOU */
+
+    .site-tagline {
+      background: #0a2019;
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* OBSAH STRÁNKY */
+
+    .page-main {
+      padding: 32px 0 72px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-size: 2.1rem;
+      margin: 0 0 24px;
+      color: var(--gold);
+    }
+
+    h2, h3 {
+      color: var(--gold);
+      margin-top: 0;
+    }
+
+    .lead {
+      max-width: 960px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--green-mid);
+      padding: 24px;
+      border-radius: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 720px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .brand-logo {
+        width: 52px;
+        height: 52px;
+      }
+      .page-main {
+        padding-top: 24px;
+      }
+      .page-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- JEDINÁ HLAVIČKA -->
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand">
@@ -197,56 +204,24 @@
     </div>
   </header>
 
-  <!-- JEDNOTNÉ MOTTO NA VŠECH STRÁNKÁCH -->
+  <!-- MOTTO -->
   <div class="site-tagline">
     Energetický systém nové generace
   </div>
 
-  <!-- ZAČÁTEK OBSAHU STRÁNKY EDUKACE -->
+  <!-- OBSAH EDUKACE -->
   <main class="page-main">
     <div class="container">
       <h1 class="page-title">Edukace</h1>
-      <!-- tady začíná tvůj existující text stránky Edukace -->
 
-
-   <header class="site-header">
-  <div class="nav-container">
-    <img src="assets/img/logo-sscc.png" class="logo-img" alt="SSCC logo">
-
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="projekt-sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="spoluprace.html">Spolupráce</a>
-      <a href="konsorcium.html">Konsorcium</a>
-    </nav>
-  </div>
-
-  <!-- MOTTO POD HLAVIČKOU -->
-  <div class="header-motto">
-    Energetický systém nové generace
-  </div>
-</header>
-
-
-  <div class="container">
-    <!-- HLAVNI NADPIS -->
-    <h1 class="page-title">Edukace</h1>
-
-    <section class="section">
-      <h1 class="hero-title">Edukace</h1>
-      <p class="intro">
-        Energie, CO₂ a chemie kolem syntetických paliv bývají složitá témata. V edukaci je vysvětlujeme jednoduše: jak funguje CO₂ v atmosféře,
+      <p class="lead">
+        Energie, CO₂ a chemie kolem syntetických paliv bývají složitá témata.
+        V edukaci je vysvětlujeme jednoduše: jak funguje CO₂ v atmosféře,
         proč dává smysl zelený amoniak, co umí geotermie a jak do toho zapadá energie z kosmu.
       </p>
-      <div class="img-placeholder">Schéma: CO₂ → NH₃ → energie</div>
-    </section>
 
-    <!-- CO2 SEKCE -->
-    <section class="section">
       <h2>CO₂ – co to je a proč se řeší</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Základní fakta</h3>
@@ -256,6 +231,7 @@
             <li>V atmosféře zadržuje teplo – podílí se na skleníkovém efektu.</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Proč je problém dnes</h3>
           <ul>
@@ -264,6 +240,7 @@
             <li>Dopad na klima, extrémy počasí a stabilitu ekosystémů.</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>CO₂ jako zdroj</h3>
           <ul>
@@ -273,169 +250,39 @@
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- NH3 SEKCE -->
-    <section class="section">
-      <h2>Zelený amoniak (NH₃) – nosič energie a uhlíku</h2>
-      <div class="img-placeholder">Nádrž NH₃ a šipky: teplo, elektřina, chemie</div>
+      <h2 style="margin-top:40px;">Zelený amoniak (NH₃) – nosič energie a uhlíku</h2>
+
       <div class="grid">
         <div class="card">
           <h3>Co je NH₃</h3>
           <ul>
             <li>Amoniak je sloučenina dusíku a vodíku.</li>
             <li>Dnes se používá hlavně pro výrobu hnojiv a chemických meziproduktů.</li>
-            <li>„Zelený“ NH₃ vyžaduje nízkoemisní nebo obnovitelnou energii a udržitelný zdroj vstupů.</li>
+            <li>V SSCC se z něj stává flexibilní energetický nosič.</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Proč je dobrý nosič energie</h3>
           <ul>
             <li>Dá se skladovat a přepravovat na velké vzdálenosti.</li>
             <li>Umí nést energii i uhlík v jedné molekule.</li>
-            <li>Lze ho využít pro teplo, elektřinu i další chemii.</li>
+            <li>Lze ho využít pro teplo, elektřinu i chemii.</li>
           </ul>
         </div>
+
         <div class="card">
           <h3>Role v SSCC</h3>
           <ul>
             <li>NH₃ je hlavní výstup z mnoha uzlů systému SSCC.</li>
             <li>Může napájet průmysl, obce i malé lokální uzly.</li>
-            <li>Umožňuje přesouvat energii tam, kde dává největší smysl.</li>
+            <li>Umožňuje přesouvat energii tam, kde je potřeba.</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- GEOTERMIE SEKCE -->
-    <section class="section">
-      <h2>Geotermální energie – teplo zevnitř Země</h2>
-      <div class="img-placeholder">Řez podložím: geotermální vrt</div>
-      <div class="grid">
-        <div class="card">
-          <h3>Princip</h3>
-          <ul>
-            <li>Teplo z nitra Země se šíří horninami směrem k povrchu.</li>
-            <li>Ve větších hloubkách jsou vyšší teploty.</li>
-            <li>Pomocí vrtů lze teplo přivést na povrch a využít ho.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Výhody</h3>
-          <ul>
-            <li>Stabilní zdroj energie nezávislý na počasí.</li>
-            <li>Vhodný pro vytápění, průmysl i sušení.</li>
-            <li>Lze kombinovat s dalšími zdroji a syntézou.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Role v SSCC</h3>
-          <ul>
-            <li>V Doupově testujeme geotermii jako základ modulárního uzlu.</li>
-            <li>Teplo může pohánět syntézu NH₃ nebo jiné procesy.</li>
-            <li>Kombinace geotermie a dalších zdrojů zvyšuje stabilitu systému.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENERGIE Z KOSMU SEKCE -->
-    <section class="section">
-      <h2>Energie z kosmu – orbitální systémy jednoduše</h2>
-      <div class="img-placeholder">Orbitální panel → paprsek → pozemní pole</div>
-      <div class="grid">
-        <div class="card">
-          <h3>Proč je to zajímavé</h3>
-          <ul>
-            <li>Na orbitě neřešíme noc ani špatné počasí.</li>
-            <li>Výkon je stabilnější než z pozemních panelů.</li>
-            <li>Může doplňovat pozemní obnovitelné zdroje.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Jak by to mohlo fungovat</h3>
-          <ul>
-            <li>Solární panely na orbitě vyrábějí energii.</li>
-            <li>Ta se přenáší ve formě řízeného paprsku na Zemi.</li>
-            <li>Na zemi se znovu převádí na využitelnou energii pro uzly SSCC.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>V rámci SSCC</h3>
-          <ul>
-            <li>V edukaci vysvětlujeme princip a možnosti.</li>
-            <li>Detailní scénáře jsou v sekci „Nápady a hypotézy“.</li>
-            <li>Jde o jeden z dlouhodobých zdrojů energie pro systém.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- BEZPECNOST A METROLOGIE SEKCE -->
-    <section class="section">
-      <h2>Bezpečnost a metrologie</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Bezpečnost</h3>
-          <ul>
-            <li>Bezpečnostní zóny kolem přijímacích polí a technologických uzlů.</li>
-            <li>Ochranné prvky a automatické vypínání při odchylkách.</li>
-            <li>Standardy pro práci s NH₃ a dalšími látkami.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Metrologie</h3>
-          <ul>
-            <li>Měření výkonu a energie v čase.</li>
-            <li>Sledování emisí a skutečných úspor CO₂.</li>
-            <li>Transparentní data pro partnery a veřejnost.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Důvěra</h3>
-          <ul>
-            <li>Otevřenost dat tam, kde to dává smysl.</li>
-            <li>Možnost nezávislého auditu.</li>
-            <li>Jasná pravidla a procesy pro provoz.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SEKCE -->
-    <section class="section">
-      <h2>Často kladené otázky</h2>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3>Je NH₃ bezpečný?</h3>
-          <p>
-            Amoniak je běžně používaná chemikálie s jasně definovanými bezpečnostními standardy. Klíčové je správné skladování, ventilace a školení
-            personálu. SSCC staví na existujících průmyslových normách.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Proč nestačí jen klasická fotovoltaika?</h3>
-          <p>
-            Fotovoltaika je důležitá, ale je závislá na počasí, denní době a místě. SSCC se zaměřuje na stabilnější kombinace zdrojů a na možnost
-            přenášet energii v čase i prostoru pomocí NH₃.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Proč používat CO₂, když se ho chceme zbavit?</h3>
-          <p>
-            CO₂ nechceme jen ukládat nebo danit. Smyslem je část z něj použít jako vstup do užitečných procesů – například pro výrobu nosičů energie,
-            které pak snižují potřebu spalovat další fosilní paliva.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Jak daleko je to od reálného nasazení?</h3>
-          <p>
-            První kroky se odehrávají v pilotních projektech: průmyslové uzly, obce a geotermální lokality. Cílem je ověřit technologie v konkrétních
-            regionech a postupně je rozšiřovat.
-          </p>
-      </div>
+    </div>
   </main>
 </body>
 </html>
-
-
