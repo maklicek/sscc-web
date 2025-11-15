@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projekty SSCC</title>
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -100,21 +99,44 @@
       background: #1f1f1f;
     }
 
-    /* PÁSEK S NÁZVEM STRÁNKY */
+    /* LOGO + MOTTO POD HLAVIČKOU */
+
+    .site-intro {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #e4c77f;
+      margin: 0;
+    }
+
+    .site-subtitle {
+      font-size: 1.05rem;
+      color: #cccccc;
+      margin-top: 6px;
+      opacity: 0.85;
+    }
+
+    /* HERO NAD SEKCI PROJEKTŮ */
 
     .hero {
-      padding: 72px 5% 24px;
-      text-align: center;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 24px 0 0;
     }
 
     .hero span {
-      display: inline-block;
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 1.7rem;
+      font-weight: bold;
       color: #e4c77f;
     }
 
-    /* OBRÁZKY – JEDNODUCHÝ SYSTÉM */
+    /* OBRÁZKY */
 
     img {
       max-width: 100%;
@@ -122,11 +144,11 @@
       display: block;
     }
 
-    /* velký obrázek nahoře (hero) – používáme u Projektů */
+    /* velký obrázek nahoře (hero obrázek v projektech) */
     .hero-slot {
       max-width: 1100px;
       height: 420px;
-      margin: 16px auto 40px;
+      margin: 40px auto 0;
       border-radius: 16px;
       overflow: hidden;
       background: #262626;
@@ -139,7 +161,7 @@
       object-position: center;
     }
 
-    /* menší obrázek v kartě nebo sekci – pokud je někdy přidáme */
+    /* menší obrázek v kartě – kdybychom někdy použili */
     .img-slot {
       width: 100%;
       height: 220px;
@@ -179,6 +201,9 @@
       .main-nav {
         justify-content: flex-start;
       }
+      .site-title {
+        font-size: 1.4rem;
+      }
     }
   </style>
 </head>
@@ -201,16 +226,21 @@
     </div>
   </header>
 
-  <div class="hero">
-    <span>Projekty SSCC</span>
+  <!-- LOGO + MOTTO -->
+  <div class="site-intro">
+    <h1 class="site-title">SSCC — Solar & Synthetic Carbon Cycle</h1>
+    <p class="site-subtitle">Energetický systém nové generace</p>
   </div>
 
-  <main class="container">
+  <!-- NÁZEV STRÁNKY -->
+  <div class="hero"><span>Projekty SSCC</span></div>
+
+  <div class="container">
 
     <!-- PROJEKT 1: OSTRAVA -->
     <section class="project">
       <div class="hero-slot">
-        <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava">
+        <img src="assets/img/liberty.jpg" alt="Průmyslový areál – projekt Ostrava" />
       </div>
 
       <div class="grid">
@@ -281,7 +311,6 @@
           </ul>
         </div>
       </div>
-
       <div class="status">Stav: probíhá návrh dvou modelových lokalit.</div>
     </section>
 
@@ -318,10 +347,9 @@
           </ul>
         </div>
       </div>
-
       <div class="status">Stav: probíhá geologická a tepelná analýza.</div>
     </section>
 
-  </main>
+  </div>
 </body>
 </html>
