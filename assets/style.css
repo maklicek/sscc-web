@@ -731,3 +731,12 @@ h1, h2, h3 {
     margin: 0;
     padding: 0;
 }
+/* === LOGO V HLAVIČCE – pevná velikost, čtverec === */
+img.brand-logo {
+  width: 72px !important;   /* klidně si pak doladíš 60 / 80 / 96 */
+  height: 72px !important;
+  object-fit: contain;
+  border-radius: 0;         /* žádné kulaté logo */
+  margin: 0;
+  padding: 0;
+}
