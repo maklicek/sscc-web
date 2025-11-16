@@ -606,3 +606,12 @@ main img {
   margin-top: 10px;
   margin-bottom: 32px;
 }
+.lead {
+  max-width: 720px;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
