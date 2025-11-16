@@ -398,3 +398,6 @@ main img {
   display: block;
   filter: contrast(1.05) saturate(1.1);
 }
+.consorcium-photo img {
+  filter: brightness(0.96) contrast(1.04) saturate(1.05);
+}
