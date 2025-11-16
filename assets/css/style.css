@@ -1,104 +1,339 @@
-/* === LOGO — pevná velikost, čtverec === */
-.brand-logo {
-    width: 80px;         /* můžeš změnit */
-    height: 80px;
-    object-fit: contain;
-    border-radius: 0;
-    display: block;
-}
-:root {
-  --green-dark: #0a2019;
-  --green-mid:  #12372b;
-  --header-bg:  #164033;
-  --gold: #e4c77f;
-  --text-main: #f4f4f4;
-  --text-muted: #c9c9c9;
+/* =====================================================================
+   SSCC – jednotný vzhled českého webu
+   assets/css/style.css
+   ===================================================================== */
+
+/* ---------------------------
+   Základ
+---------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* celá stránka */
+:root {
+  --green-dark:  #05261a;
+  --green-mid:   #0e432d;
+  --header-bg:   #0b3a27;
+  --panel-bg:    #0b2018;
+  --panel-bg-2:  #103124;
+
+  --gold:        #e4c77f;
+  --gold-strong: #ffd877;
+
+  --text-main:   #f4f4f0;
+  --text-muted:  #c9d8ce;
+
+  --border-soft: rgba(0,0,0,0.4);
+  --shadow-soft: 0 6px 16px rgba(0,0,0,0.45);
+
+  --wrap:        1200px;
+  --space:       24px;
+}
+
+html,
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+body {
   background: var(--green-dark);
   color: var(--text-main);
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* hlavička */
+/* Základní odkazy */
+a {
+  color: var(--gold-strong);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.95;
+}
+
+/* Titulky */
+h1, h2, h3 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+/* Obecný kontejner */
+.container {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+/* Vnitřek stránek */
+.page-main {
+  padding-top: 32px;
+}
+
+/* ---------------------------
+   HLAVIČKA – jednotná všude
+---------------------------- */
+
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: var(--header-bg);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
 }
 
-.site-tagline {
-  text-align: center;
-  padding: 8px 0;
-  background: var(--green-dark);
+.nav-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* logo + text vlevo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-strong);
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
-/* === FINÁLNÍ HLAVIČKA – JEDNOTNÉ MENU NA VŠECH STRÁNKÁCH === */
 
-/* Vzhled odkazů v hlavním menu */
-header.site-header nav.main-nav a,
-header.site-header nav.main-nav a:visited {
-  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-size: 1.05rem;          /* větší písmo v menu */
+/* MENU */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.9rem;
+}
+
+.main-nav a,
+.main-nav a:visited {
+  color: var(--gold-strong);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  opacity: 0.88;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 6px 12px;
-  border-radius: 999px;
-  color: var(--gold-strong);
-  text-decoration: none;
-  opacity: 0.9;
+  transition: background 0.15s ease, opacity 0.15s ease;
 }
 
-/* hover efekt */
-header.site-header nav.main-nav a:hover,
-header.site-header nav.main-nav a:focus {
-  background: rgba(0, 0, 0, 0.25);
+.main-nav a:hover,
+.main-nav a:focus {
+  background: rgba(0,0,0,0.25);
   opacity: 1;
 }
 
-/* aktivní stránka (máš na většině stránek už použitý aria-current) */
-header.site-header nav.main-nav a[aria-current="page"] {
-  background: rgba(0, 0, 0, 0.35);
-  opacity: 1;
-}
-/* === GLOBAL HEADER FIX — POSLEDNÍ VRSTVA === */
-
-/* Vzhled odkazů v hlavním menu */
-header.site-header nav.main-nav a,
-header.site-header nav.main-nav a:visited {
-  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-size: 1rem;   /* sjednocená velikost */
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 6px 12px;
-  border-radius: 999px;
-  color: var(--gold-strong);
-  text-decoration: none;
-  opacity: 0.9;
-}
-
-/* Hover efekt */
-header.site-header nav.main-nav a:hover,
-header.site-header nav.main-nav a:focus {
-  background: rgba(0, 0, 0, 0.25);
+/* Aktivní stránka – aria-current="page" */
+.main-nav a[aria-current="page"] {
+  background: rgba(0,0,0,0.45);
   opacity: 1;
 }
 
-/* Aktivní stránka */
-header.site-header nav.main-nav a[aria-current="page"] {
-  background: rgba(0, 0, 0, 0.35);
-  opacity: 1;
-}
-
-/* Motto pod hlavičkou – stejné všude */
-header.site-header .site-tagline {
+/* MOTTO pod hlavičkou */
+.site-tagline {
+  text-align: center;
+  padding: 10px 0 12px;
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 10px 0 12px;
   color: #f6e8a4;
-  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+  background: var(--green-mid);
+}
+
+/* ---------------------------
+   Společný layout obsahu
+---------------------------- */
+
+.page-title {
+  font-size: 2.1rem;
+  margin: 0 0 24px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin: 32px 0 16px;
+}
+
+.lead,
+.intro {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 46rem;
+}
+
+/* Obecná sekce – lehčí odsazení */
+.section {
+  margin-top: 32px;
+}
+
+/* ---------------------------
+   Grid + karty (Úvod, SSCC, Projekty, Nápady…)
+---------------------------- */
+
+.cards-grid,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.55);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.card p {
+  margin-top: 0;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.card li {
+  margin-bottom: 4px;
+}
+
+/* malé štítky v kartách (Nápady, Spolupráce…) */
+.pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--gold-strong);
+  margin-bottom: 8px;
+}
+
+/* Status projektů apod. */
+.status {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ---------------------------
+   Obrázky (projekty, nápady…)
+---------------------------- */
+
+.hero-slot img,
+img.full-width {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---------------------------
+   Speciální bloky
+---------------------------- */
+
+.highlight-box,
+.contact-box {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.25);
+}
+
+.highlight-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Emailové adresy v textu */
+.email {
+  font-weight: 600;
+  color: var(--gold-strong);
+}
+
+/* ---------------------------
+   Spolupráce / Konsorcium – trošku víc „panel“
+---------------------------- */
+
+.coop-card {
+  background: linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%);
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.55);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ---------------------------
+   Responsivita
+---------------------------- */
+
+@media (max-width: 900px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .page-main .container {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
 }
