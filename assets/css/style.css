@@ -459,3 +459,38 @@ main img {
   display: block;
   clear: both;
 }
+/* EDUKACE – úvod s fotkou */
+.edu-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0 56px;
+}
+
+.edu-hero-text {
+  flex: 1.2;
+}
+
+.edu-hero-image {
+  flex: 1;
+}
+
+.edu-hero-image img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  object-fit: cover;
+}
+
+/* Na mobilu pod sebe */
+@media (max-width: 900px) {
+  .edu-hero {
+    flex-direction: column;
+  }
+
+  .edu-hero-image img {
+    max-width: 100%;
+  }
+}
