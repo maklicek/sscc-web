@@ -401,3 +401,28 @@ main img {
 .consorcium-photo img {
   filter: brightness(0.96) contrast(1.04) saturate(1.05);
 }
+.coop-flex {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 32px 0 48px;
+}
+
+.coop-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.coop-photo {
+  flex: 1;
+}
+
+.coop-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
