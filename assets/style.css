@@ -826,3 +826,16 @@ img.logo-img {
   background: rgba(0,0,0,0.35);
   opacity: 1;
 }
+/* -- NAVIGACE -- */
+.main-nav a {
+  font-size: 1rem;
+  padding: 6px 12px;
+  font-weight: 600;
+}
+
+/* -- MOTTO -- */
+.site-tagline {
+  font-size: 1.1rem;
+  padding: 10px 0 12px;
+  font-weight: 600;
+}
