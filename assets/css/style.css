@@ -342,3 +342,38 @@ main img {
   margin-left: auto;
   margin-right: auto;
 }
+/* Konsorcium – layout text + foto vedle sebe */
+.consortium-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin: 24px 0 40px;
+}
+
+.consortium-text {
+  flex: 1.4;
+  min-width: 280px;
+}
+
+.consortium-photo {
+  flex: 1;
+  max-width: 380px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+.consortium-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+/* Responsivita – na mobilu se fotka přesune pod text */
+@media (max-width: 860px) {
+  .consortium-flex {
+    flex-direction: column;
+  }
+}
