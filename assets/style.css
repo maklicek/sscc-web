@@ -744,6 +744,20 @@ img.logo-img {
   justify-content: space-between;
   gap: 32px;
 }
+/* obecně pro menu v hlavičce */
+.site-header .main-nav a,
+.site-header .main-nav a:visited {
+  color: var(--gold-strong);    /* stejné zlato jako jinde */
+  text-decoration: none;
+}
+
+/* hover / focus efekt */
+.site-header .main-nav a:hover,
+.site-header .main-nav a:focus {
+  color: var(--gold-strong);    /* klidně může zůstat stejné */
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
 
 /* logo + text vlevo */
 .brand {
