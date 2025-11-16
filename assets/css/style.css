@@ -337,3 +337,8 @@ img.full-width {
     font-size: 1.8rem;
   }
 }
+main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
