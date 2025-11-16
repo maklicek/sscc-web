@@ -35,3 +35,32 @@ body {
   background: var(--green-dark);
   color: var(--text-muted);
 }
+/* === FINÁLNÍ HLAVIČKA – JEDNOTNÉ MENU NA VŠECH STRÁNKÁCH === */
+
+/* Vzhled odkazů v hlavním menu */
+header.site-header nav.main-nav a,
+header.site-header nav.main-nav a:visited {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;          /* větší písmo v menu */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--gold-strong);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* hover efekt */
+header.site-header nav.main-nav a:hover,
+header.site-header nav.main-nav a:focus {
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+/* aktivní stránka (máš na většině stránek už použitý aria-current) */
+header.site-header nav.main-nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 1;
+}
