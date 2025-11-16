@@ -496,3 +496,34 @@ main img {
   gap: 40px;
   margin: 40px 0 56px;
 }
+/* === EDUKACE – úvodní sekce s obrázkem === */
+
+.edu-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 40px;
+  align-items: center;
+  margin: 48px 0 64px;
+}
+
+.edu-hero-text {
+  max-width: 720px;
+}
+
+.edu-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* na mobilu pod sebe */
+@media (max-width: 900px) {
+  .edu-hero {
+    grid-template-columns: 1fr;
+  }
+  .edu-hero-img {
+    order: -1;  /* fotka nad textem na úzkém displeji */
+  }
+}
