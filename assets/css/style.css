@@ -385,10 +385,16 @@ main img {
   box-shadow: 0 10px 26px rgba(0,0,0,.45);
 }
 
+.consortium-photo {
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
 .consortium-photo img {
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 4 / 3;   /* poměr stran – důležité */
   object-fit: cover;
+  border-radius: 14px;
+  display: block;
   filter: contrast(1.05) saturate(1.1);
 }
