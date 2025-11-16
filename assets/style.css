@@ -839,3 +839,20 @@ img.logo-img {
   padding: 10px 0 12px;
   font-weight: 600;
 }
+/* 1) Menu o fous větší a čitelnější */
+header.site-header nav.main-nav a,
+header.site-header nav.main-nav a:visited {
+  font-size: 1.05rem;     /* bylo 1rem */
+  padding: 8px 14px;      /* trochu víc vzduchu */
+}
+
+/* 2) Aktivní stránka ještě víc zvýrazněná */
+header.site-header nav.main-nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+}
+
+/* Motto – lehce větší, když chceš víc „statement“ */
+header.site-header .site-tagline {
+  font-size: 1.15rem;
+}
