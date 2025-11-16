@@ -459,14 +459,7 @@ main img {
   display: block;
   clear: both;
 }
-.coop-grid
-/* EDUKACE – úvod s fotkou */
-.edu-hero {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin: 40px 0 56px;
-}
+
 
 .edu-hero-text {
   flex: 1.2;
@@ -494,4 +487,12 @@ main img {
   .edu-hero-image img {
     max-width: 100%;
   }
+}
+.coop-grid
+/* EDUKACE – úvod s fotkou */
+.edu-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0 56px;
 }
