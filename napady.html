@@ -76,6 +76,29 @@
     }
 
     /* MENU */
+ 
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    .main-nav a,
+    .main-nav a:visited {
+      color: var(--gold-strong);      /* pozlacené, stejně jako jinde */
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      opacity: 0.88;
+      transition: background 0.15s ease, opacity 0.15s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      background: rgba(0,0,0,0.25);
+      opacity: 1;
+    }
 
     /* MOTTO */
     .site-tagline {
