@@ -856,3 +856,43 @@ header.site-header nav.main-nav a[aria-current="page"] {
 header.site-header .site-tagline {
   font-size: 1.15rem;
 }
+/* --- Globální layout pro obsah --- */
+
+/* pozadí + text společně */
+body {
+  background: #05261a;
+  color: #f4f4e8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* hlavní blok obsahu */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5% 80px;
+}
+
+/* fallback pro starší stránky, které používají .page nebo .page-main */
+.page,
+.page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5% 80px;
+}
+
+/* sjednocené nadpisy stránek */
+main h1:first-of-type,
+.page-main h1:first-of-type {
+  font-size: 2.2rem;
+  margin: 0 0 24px;
+  color: var(--gold);
+}
+
+/* nadpisy sekcí */
+main h2 {
+  font-size: 1.8rem;
+  margin: 32px 0 16px;
+  color: var(--gold);
+}
