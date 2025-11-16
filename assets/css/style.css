@@ -64,3 +64,41 @@ header.site-header nav.main-nav a[aria-current="page"] {
   background: rgba(0, 0, 0, 0.35);
   opacity: 1;
 }
+/* === GLOBAL HEADER FIX — POSLEDNÍ VRSTVA === */
+
+/* Vzhled odkazů v hlavním menu */
+header.site-header nav.main-nav a,
+header.site-header nav.main-nav a:visited {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;   /* sjednocená velikost */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--gold-strong);
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+/* Hover efekt */
+header.site-header nav.main-nav a:hover,
+header.site-header nav.main-nav a:focus {
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+/* Aktivní stránka */
+header.site-header nav.main-nav a[aria-current="page"] {
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 1;
+}
+
+/* Motto pod hlavičkou – stejné všude */
+header.site-header .site-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0 12px;
+  color: #f6e8a4;
+  text-align: center;
+}
