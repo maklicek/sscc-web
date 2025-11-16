@@ -482,7 +482,7 @@ main img {
 @media (max-width: 900px) {
   .edu-hero {
     flex-direction: column;
-  }
+  } 
 
   .edu-hero-image img {
     max-width: 100%;
