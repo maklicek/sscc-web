@@ -426,3 +426,22 @@ main img {
   object-fit: cover;
   box-shadow: 0 8px 22px rgba(0,0,0,0.25);
 }
+.coop-wrap {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 32px 0 48px;
+}
+
+.coop-wrap p {
+  margin-bottom: 1.2em;
+}
+
+.coop-float {
+  float: right;
+  width: 420px;
+  max-width: 50%;
+  margin: 0 0 16px 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  object-fit: cover;
+}
