@@ -912,3 +912,7 @@ main img {
     margin-top: 1.5rem;
   }
 }
+.edu-hero-img img {
+  max-width: 420px;
+  width: 100%; /* ale omezené max-width */
+}
