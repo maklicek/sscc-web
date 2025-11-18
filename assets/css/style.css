@@ -857,4 +857,13 @@ main img {
   border-radius: 12px;
   display: block;
 }
+.edu-hero {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
 
