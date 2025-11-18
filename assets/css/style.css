@@ -828,4 +828,33 @@ main img {
     max-height: 220px;
   }
 }
+.page-main .container {
+  max-width: 1200px;   /* nebo 1100 px, podle oka */
+  margin: 0 auto;
+}
+.edu-hero,
+.coop-wrap {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.edu-hero-text,
+.coop-text {
+  flex: 1 1 55%;
+}
+
+.edu-hero-img,
+.coop-img {
+  flex: 1 1 45%;
+}
+
+.edu-hero-img img,
+.coop-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
 
