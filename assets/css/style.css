@@ -980,3 +980,43 @@ main img {
     grid-template-columns: 1fr;
   }
 }
+/* ORBIT SCENÁŘE – LAYOUT */
+.orbit-scenarios {
+  padding-top: 40px;
+}
+
+.orbit-scenarios-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.orbit-scenarios-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.orbit-scenarios-list .card {
+  margin: 0;
+}
+
+.orbit-scenarios-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.orbit-caption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* MOBILNÍ ZOBRAZENÍ */
+@media (max-width: 900px) {
+  .orbit-scenarios-grid {
+    grid-template-columns: 1fr;
+  }
+}
