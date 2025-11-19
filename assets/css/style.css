@@ -916,3 +916,40 @@ main img {
   max-width: 420px;
   width: 100%; /* ale omezené max-width */
 }
+.highlight-orbit {
+  margin-top: 40px;
+  padding: 40px 0 20px;
+}
+
+.orbit-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.orbit-text {
+  flex: 1 1 480px;
+}
+
+.orbit-text h2 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.orbit-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.orbit-image {
+  flex: 1 1 420px;
+  text-align: center;
+}
+
+.orbit-image img {
+  max-width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.35);
+}
