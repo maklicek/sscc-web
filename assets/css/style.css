@@ -1025,3 +1025,8 @@ main img {
     margin: 0 auto;
     padding: 0 16px;
 }
+.section-cta,
+.coop-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
