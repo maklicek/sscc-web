@@ -1,18 +1,18 @@
 /* =====================================================================
-   SSCC – jednotný vzhled českého webu
-   assets/css/style.css
-   ===================================================================== */
+   SSCC – JEDNOTNÝ WEB
+   ČÁST 1 — ZÁKLAD, ROOT PROMĚNNÉ, TYPOGRAFIE, HLAVIČKA
+===================================================================== */
 
-/* ---------------------------
-   Základ
----------------------------- */
-
+/* Reset a box-model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Barevná paleta */
 :root {
   --green-dark:  #05261a;
   --green-mid:   #0e432d;
@@ -26,19 +26,13 @@
   --text-main:   #f4f4f0;
   --text-muted:  #c9d8ce;
 
-  --border-soft: rgba(0,0,0,0.4);
   --shadow-soft: 0 6px 16px rgba(0,0,0,0.45);
 
   --wrap:        1200px;
   --space:       24px;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
+/* Globální stylování */
 body {
   background: var(--green-dark);
   color: var(--text-main);
@@ -46,36 +40,31 @@ body {
   line-height: 1.6;
 }
 
-/* Základní odkazy */
+/* Odkazy */
 a {
   color: var(--gold-strong);
   text-decoration: none;
 }
-a:hover {
-  opacity: 0.95;
-}
+a:hover { opacity: .9; }
 
-/* Titulky */
+/* Nadpisy */
 h1, h2, h3 {
-  margin-top: 0;
   color: var(--gold);
+  margin-bottom: 0.4em;
 }
 
-/* Obecný kontejner */
+/* Max šířka všech stránek */
 .container {
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 0 24px 48px;
+  padding: 0 20px 48px;
 }
 
-/* Vnitřek stránek */
-.page-main {
-  padding-top: 32px;
-}
+.page-main { padding-top: 32px; }
 
-/* ---------------------------
-   HLAVIČKA – jednotná všude
----------------------------- */
+/* ============================================================
+   HLAVIČKA
+============================================================ */
 
 .site-header {
   position: sticky;
@@ -89,147 +78,140 @@ h1, h2, h3 {
 .nav-inner {
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 8px 24px;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 24px;
 }
 
-/* logo + text vlevo */
+/* Logo vlevo */
 .brand {
   display: flex;
   align-items: center;
   gap: 16px;
-  text-decoration: none;
 }
-
 .brand-logo {
-  width: 72px;
-  height: 72px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-  border-radius: 0;
-  flex-shrink: 0;
 }
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
 .brand-title {
-  font-weight: 800;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  font-weight: 800;
   color: var(--gold-strong);
 }
-
 .brand-subtitle {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-/* MENU */
+/* Menu */
 .main-nav {
   display: flex;
+  gap: 12px;
   flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.9rem;
 }
-
-.main-nav a,
-.main-nav a:visited {
-  color: var(--gold-strong);
-  text-decoration: none;
-  padding: 6px 12px;
+.main-nav a {
+  padding: 6px 14px;
   border-radius: 999px;
-  opacity: 0.88;
   font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  transition: background 0.15s ease, opacity 0.15s ease;
+  opacity: .85;
 }
-
-.main-nav a:hover,
-.main-nav a:focus {
+.main-nav a:hover {
   background: rgba(0,0,0,0.25);
   opacity: 1;
 }
-
-/* Aktivní stránka – aria-current="page" */
 .main-nav a[aria-current="page"] {
   background: rgba(0,0,0,0.45);
   opacity: 1;
 }
 
-/* MOTTO pod hlavičkou */
+/* Motto pod hlavičkou */
 .site-tagline {
   text-align: center;
   padding: 10px 0 12px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #f6e8a4;
-  border-top: 1px solid rgba(0,0,0,0.35);
-  border-bottom: 1px solid rgba(0,0,0,0.5);
   background: var(--green-mid);
+  border-top: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  color: #f6e8a4;
 }
 
+/* Mobilní verze */
+@media (max-width: 900px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav {
+    justify-content: flex-start;
+  }
+}
+/* =====================================================================
+   SSCC – ČÁST 2
+   GRID, KARTY, HLAVNÍ OBSAH, OBRÁZKY, SPECIÁLNÍ BLOKY
+===================================================================== */
+
 /* ---------------------------
-   Společný layout obsahu
+   TITULY + ÚVODNÍ TEXT
 ---------------------------- */
 
 .page-title {
   font-size: 2.1rem;
-  margin: 0 0 24px;
+  margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 1.6rem;
-  margin: 32px 0 16px;
-}
-
-.lead,
-.intro {
-  font-size: 1.05rem;
+.lead {
+  max-width: 720px;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  margin: 0 auto 2.5rem;
+  text-align: center;
   color: var(--text-muted);
-  max-width: 46rem;
+  opacity: .9;
 }
 
-/* Obecná sekce – lehčí odsazení */
+/* Obecná sekce */
 .section {
-  margin-top: 32px;
+  margin: 48px 0 32px;
 }
 
 /* ---------------------------
-   Grid + karty (Úvod, SSCC, Projekty, Nápady…)
+   GRID
 ---------------------------- */
 
-.cards-grid,
-.grid {
+.grid,
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
-  margin-top: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  margin-top: 22px;
 }
+
+/* ---------------------------
+   KARTY
+---------------------------- */
 
 .card {
   background: linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%);
   border-radius: 14px;
   border: 1px solid rgba(0,0,0,0.55);
+  padding: 20px 22px;
   box-shadow: var(--shadow-soft);
-  padding: 18px 20px;
 }
 
 .card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   color: var(--gold);
 }
-
 .card p {
-  margin-top: 0;
+  margin: 0 0 8px 0;
 }
-
 .card ul {
   margin: 0;
   padding-left: 20px;
@@ -238,383 +220,168 @@ h1, h2, h3 {
   margin-bottom: 4px;
 }
 
-/* malé štítky v kartách (Nápady, Spolupráce…) */
+/* Štítky */
 .pill {
   display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
   padding: 2px 8px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.25);
   color: var(--gold-strong);
-  margin-bottom: 8px;
-}
-
-/* Status projektů apod. */
-.status {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  color: var(--text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
 /* ---------------------------
-   Obrázky (projekty, nápady…)
----------------------------- */
-
-.hero-slot img,
-img.full-width {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* ---------------------------
-   Speciální bloky
+   SPECIÁLNÍ BLOKY – highlight
 ---------------------------- */
 
 .highlight-box,
 .contact-box {
-  margin-top: 20px;
-  padding: 18px 20px;
+  margin-top: 24px;
+  padding: 20px 22px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
 .highlight-box strong {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-/* Emailové adresy v textu */
+/* ---------------------------
+   EMAIL
+---------------------------- */
+
 .email {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--gold-strong);
+  margin-top: 8px;
 }
 
 /* ---------------------------
-   Spolupráce / Konsorcium – trošku víc „panel“
+   OBRÁZKY – sjednocené
 ---------------------------- */
 
-.coop-card {
-  background: linear-gradient(180deg, var(--panel-bg) 0%, var(--panel-bg-2) 100%);
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.55);
-  padding: 18px 20px;
-  box-shadow: var(--shadow-soft);
-}
-
-/* ---------------------------
-   Responsivita
----------------------------- */
-
-@media (max-width: 900px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .main-nav {
-    justify-content: flex-start;
-  }
-
-  .page-main .container {
-    padding-inline: 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .brand-logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .page-title {
-    font-size: 1.8rem;
-  }
-}
-main img {
+img,
+figure img {
+  max-width: 100%;
+  height: auto;
   display: block;
+  border-radius: 12px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Obrázky uvnitř karet */
+.card img {
+  border-radius: 10px;
+}
+
+/* Aby obrázky nebyly gigantické */
+main img {
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-/* Konsorcium – layout text + foto vedle sebe */
-.consortium-flex {
-  display: flex;
-  align-items: flex-start;
-  gap: 32px;
-  margin: 24px 0 40px;
-}
 
-.consortium-text {
-  flex: 1.4;
-  min-width: 280px;
-}
+/* ---------------------------
+   RESPONSIVITA
+---------------------------- */
 
-.consortium-photo {
-  flex: 1;
-  max-width: 380px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
-}
-
-.consortium-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  filter: contrast(1.05) saturate(1.1);
-}
-
-/* Responsivita – na mobilu se fotka přesune pod text */
-@media (max-width: 860px) {
-  .consortium-flex {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.75rem;
   }
 }
-.consortium-photo {
-  flex: 0 0 340px;       /* pevnější šířka, ať není moc široká */
-  max-width: 360px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 26px rgba(0,0,0,.45);
-}
+/* =====================================================================
+   SSCC – ČÁST 3
+   EDUKACE, NÁPADY, ORBIT, SSCC PROCESY, ILUSTRACE
+===================================================================== */
 
-.consortium-photo {
-  max-width: 420px;
-  flex-shrink: 0;
-}
-
-.consortium-photo img {
-  width: 100%;
-  aspect-ratio: 4 / 3;   /* poměr stran – důležité */
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-  filter: contrast(1.05) saturate(1.1);
-}
-.consorcium-photo img {
-  filter: brightness(0.96) contrast(1.04) saturate(1.05);
-}
-.coop-flex {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  margin: 32px 0 48px;
-}
-
-.coop-text {
-  flex: 1;
-  font-size: 1.1rem;
-  line-height: 1.55;
-}
-
-.coop-photo {
-  flex: 1;
-}
-
-.coop-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  object-fit: cover;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-}
-.coop-wrap {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin: 32px 0 48px;
-}
-
-.coop-wrap p {
-  margin-bottom: 1.2em;
-}
-
-.coop-float {
-  float: right;
-  width: 420px;
-  max-width: 50%;
-  margin: 0 0 16px 32px;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
-  object-fit: cover;
-}
-@media (max-width: 800px) {
-  .coop-float {
-    float: none;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 18px 0;
-  }
-}
-.coop-wrap::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-
-.edu-hero-text {
-  flex: 1.2;
-}
-
-.edu-hero-image {
-  flex: 1;
-}
-
-.edu-hero-image img {
-  width: 100%;
-  max-width: 520px;
-  display: block;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-  object-fit: cover;
-}
-
-/* Na mobilu pod sebe */
-@media (max-width: 900px) {
-  .edu-hero {
-    flex-direction: column;
-  } 
-
-  .edu-hero-image img {
-    max-width: 100%;
-  }
-}
-.coop-grid
-/* EDUKACE – úvod s fotkou */
-.edu-hero {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin: 40px 0 56px;
-}
-/* === EDUKACE – úvodní sekce s obrázkem === */
+/* -------------------------------------
+   EDUKACE – úvodní blok (text + obrázek)
+-------------------------------------- */
 
 .edu-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  grid-template-columns: 1.15fr 0.85fr;
   gap: 40px;
   align-items: center;
-  margin: 48px 0 64px;
+  margin: 48px 0 52px;
 }
 
 .edu-hero-text {
-  max-width: 720px;
+  max-width: 640px;
+}
+
+.edu-hero-text p {
+  margin-bottom: 1rem;
 }
 
 .edu-hero-img img {
   width: 100%;
-  height: auto;
-  display: block;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
 }
 
-/* na mobilu pod sebe */
+/* Mobil */
 @media (max-width: 900px) {
   .edu-hero {
     grid-template-columns: 1fr;
   }
-  .edu-hero-img {
-    order: -1;  /* fotka nad textem na úzkém displeji */
+  .edu-hero-img img {
+    max-width: 100%;
+    margin-top: 1.2rem;
   }
 }
-.idea-grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin-top: 2rem;
-}
 
-.idea-card {
-  background: var(--green-mid);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.idea-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.idea-card h2 {
-  color: var(--gold);
-  margin-top: 0;
-}
-/* === NÁPADY – GRID & KARTY === */
+/* -------------------------------------
+   NÁPADY – výpis tří hlavních témat
+-------------------------------------- */
 
 .idea-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  margin: 40px 0 60px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin: 40px 0 52px;
 }
 
 .idea-card {
   background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .idea-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.45);
 }
 
-/* Obrázky uvnitř karet */
 .idea-card img {
-  width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-.idea-card h2 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: var(--gold);
-  font-size: 1.35rem;
-}
-
-.idea-card p {
-  margin: 0;
-  line-height: 1.5;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-/* Text nahoře */
-.page-main .lead {
-  max-width: 760px;
-  font-size: 1.1rem;
-  opacity: 0.85;
-  margin-top: 10px;
-  margin-bottom: 32px;
-}
-.lead {
-  max-width: 720px;
-  font-size: 1.25rem;
-  line-height: 1.55;
-  margin: 0 auto 2.5rem;
-  text-align: center;
-  color: var(--text-muted);
-}
-/* === JAK SSCC FUNGUJE – text + ilustrace ====================== */
+/* -------------------------------------
+   SSCC – procesní bloky (text + obrázek)
+-------------------------------------- */
 
 .sscc-process {
   margin-top: 56px;
@@ -622,411 +389,141 @@ main img {
 
 .sscc-process-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 32px;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 40px;
 }
 
 .sscc-process-text {
-  flex: 1 1 280px;
-  max-width: 640px;
+  flex: 1 1 340px;
+  max-width: 600px;
 }
 
 .sscc-process-text h3 {
-  margin-top: 0;
+  color: var(--gold);
   margin-bottom: 10px;
-  color: var(--gold, #e4c77f);
 }
 
-.sscc-process-text p {
-  margin: 0 0 10px 0;
-}
-
-/* Obrázky / ilustrace */
 .sscc-process-figure {
   flex: 1 1 260px;
-  margin: 0;
 }
 
 .sscc-process-figure img {
   width: 100%;
-  max-height: 340px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
   object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 
-/* Druhý řádek – obrázek vlevo, text vpravo */
+/* Obrácení řádků */
 .sscc-process-row--reverse {
   flex-direction: row-reverse;
 }
 
-/* Mobil / menší šířky – pod sebe */
+/* Mobil */
 @media (max-width: 900px) {
-  .sscc-process-row,
-  .sscc-process-row--reverse {
+  .sscc-process-row {
     flex-direction: column;
   }
-
-  .sscc-process-figure img {
-    max-height: none;
-  }
-}
-.project-hero {
-  position: relative;
-  padding: 4rem 2rem;
-  color: #fff;
-  text-align: left;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 3rem;
 }
 
-.project-hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
+/* -------------------------------------
+   ORBIT – scénáře, technické možnosti
+-------------------------------------- */
 
-.project-hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.35);
-}
-
-.project-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
-.project-hero h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  color: #ffde70;
-}
-
-.project-hero p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-}
-/* === PROJEKTY – HERO A SEKCÍ BOXY ================================== */
-
-/* Velký hero blok nahoře (Ostrava) */
-.project-hero {
-  position: relative;
-  margin: 32px 0 40px;
-  padding: 32px 24px;
-  border-radius: 18px;
-  overflow: hidden;
-  color: #ffffff;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
-}
-
-.project-hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.project-hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.32);
-  transform: scale(1.03);
-}
-
-.project-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-}
-
-.project-hero h2 {
-  font-size: 2.1rem;
-  margin: 0 0 12px;
-  color: var(--gold, #e4c77f);
-}
-
-.project-hero p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-}
-
-/* Jednotný obal pro jednotlivé projekty */
-.project-section {
-  margin: 40px 0 48px;
-}
-
-/* Dvou-sloupcový layout: text + obrázek */
-.project-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 22px;
-}
-
-.project-grid--reverse {
-  grid-template-columns: minmax(0, 2.5fr) minmax(0, 3fr);
-}
-
-.project-text h2 {
-  font-size: 1.8rem;
-  margin: 0 0 10px;
-  color: var(--gold, #e4c77f);
-}
-
-.project-text p {
-  margin: 0;
-  color: #dde4dd;
-}
-
-/* Obrázek projektu */
-.project-image img {
-  width: 100%;
-  display: block;
-  border-radius: 14px;
-  object-fit: cover;
-  max-height: 260px;
-}
-
-/* Stav projektu */
-.project-status {
-  margin-top: 16px;
-  font-size: 0.98rem;
-  color: #d5decf;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(0, 0, 0, 0.35);
-}
-
-/* Responsivita – na mobilu vše pod sebe */
-@media (max-width: 820px) {
-  .project-hero {
-    padding: 24px 18px;
-  }
-
-  .project-hero h2 {
-    font-size: 1.7rem;
-  }
-
-  .project-hero p {
-    font-size: 1.02rem;
-  }
-
-  .project-grid,
-  .project-grid.project-grid--reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .project-image img {
-    max-height: 220px;
-  }
-}
-.page-main .container {
-  max-width: 1200px;   /* nebo 1100 px, podle oka */
-  margin: 0 auto;
-}
-.edu-hero,
-.coop-wrap {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
-.edu-hero-text,
-.coop-text {
-  flex: 1 1 55%;
-}
-
-.edu-hero-img,
-.coop-img {
-  flex: 1 1 45%;
-}
-
-.edu-hero-img img,
-.coop-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-}
-.edu-hero {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-/* EDUKACE – úvodní blok */
-.edu-hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  margin: 3rem 0 2rem;
-}
-
-.edu-hero-text {
-  flex: 1 1 50%;
-  max-width: 560px;
-}
-
-.edu-hero-img {
-  flex: 1 1 40%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* ať není obraz přes celou šířku jako banner */
-.edu-hero-img img {
-  max-width: 420px;
-  width: 100%;
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
-  object-fit: cover;
-}
-@media (max-width: 900px) {
-  .edu-hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .edu-hero-img {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .edu-hero-img img {
-    max-width: 100%;
-    margin-top: 1.5rem;
-  }
-}
-.edu-hero-img img {
-  max-width: 420px;
-  width: 100%; /* ale omezené max-width */
-}
-.highlight-orbit {
-  margin-top: 40px;
-  padding: 40px 0 20px;
-}
-
-.orbit-container {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.orbit-text {
-  flex: 1 1 480px;
-}
-
-.orbit-text h2 {
-  margin-bottom: 1rem;
-  color: var(--accent);
-}
-
-.orbit-text p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.orbit-image {
-  flex: 1 1 420px;
-  text-align: center;
-}
-
-.orbit-image img {
-  max-width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 0 16px rgba(0,0,0,0.35);
-}
-.orbit-highlight {
-  padding-top: 40px;
-}
-
-.orbit-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.orbit-text p {
-  margin-bottom: 1rem;
-}
-
-.orbit-image img {
-  display: block;
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* Mobilní zobrazení */
-@media (max-width: 900px) {
-  .orbit-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-/* ORBIT SCENÁŘE – LAYOUT */
 .orbit-scenarios {
-  padding-top: 40px;
+  margin-top: 60px;
 }
 
 .orbit-scenarios-grid {
   display: grid;
-  grid-template-columns: 2fr 1.3fr;
-  gap: 32px;
-  align-items: flex-start;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 34px;
+  align-items: start;
 }
 
 .orbit-scenarios-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.orbit-scenarios-list .card {
-  margin: 0;
+  gap: 18px;
 }
 
 .orbit-scenarios-figure img {
-  display: block;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.45);
 }
 
 .orbit-caption {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-top: 6px;
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-top: 4px;
 }
 
-/* MOBILNÍ ZOBRAZENÍ */
+/* Mobil */
 @media (max-width: 900px) {
   .orbit-scenarios-grid {
     grid-template-columns: 1fr;
   }
 }
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
+
+/* -------------------------------------
+   GEOTERMIE – karty + obrázek
+-------------------------------------- */
+
+.geoterm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
 }
-.section-cta,
+
+.geoterm-img img {
+  width: 100%;
+  margin-top: 14px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+}
+/* =====================================================================
+   B4 – JEDNOTNÝ LAYOUT PRO VŠECHNY STRÁNKY
+   ===================================================================== */
+
+/* Jeden globální kontejner */
+.container {
+  width: 100%;
+  max-width: 1100px;      /* sjednoceno – NE šířka 1200/1220/1280 jako kdysi */
+  margin: 0 auto;
+  padding: 0 24px;        /* stejné na všech stránkách */
+}
+
+/* Všechny sekce uvnitř stránek */
+.page-main {
+  padding-top: 32px;
+}
+
+.page-main .container {
+  max-width: 1100px;      /* odstraníme nepřesnosti z jiných sekcí */
+  padding: 0 24px;
+}
+
+/* Grid všude stabilní – žádné rozlezení */
+.grid,
+.cards-grid,
+.idea-grid,
 .coop-grid {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero bloky také sjednoceny */
+.edu-hero,
+.coop-wrap,
+.project-hero,
+.consortium-flex {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
