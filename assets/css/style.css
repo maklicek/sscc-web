@@ -598,3 +598,28 @@ main img {
   align-items: center;
   margin: 40px 0 60px;
 }
+.consortium-text {
+  max-width: 620px;
+  line-height: 1.6;
+}
+.consortium-photo {
+  width: 100%;
+  max-width: 420px;
+}
+
+.consortium-photo img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 10px 26px rgba(0,0,0,.45);
+}
+@media (max-width: 900px) {
+  .consortium-flex {
+    grid-template-columns: 1fr;
+  }
+  .consortium-photo {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
