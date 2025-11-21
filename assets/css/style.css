@@ -608,3 +608,12 @@ figcaption {
     object-fit: cover;
     border-radius: 12px;
 }
+.project-grid,
+.konsorcium-grid,
+.edu-hero {
+    align-items: flex-start;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
