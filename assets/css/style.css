@@ -627,3 +627,15 @@ main img {
     max-width: 100%;
   }
 }
+.consortium-photo img {
+    max-width: 500px;   /* nebo 520px jako ostatní obrázky */
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+}
+.consortium-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0 60px;
+}
