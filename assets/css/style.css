@@ -267,17 +267,29 @@ figcaption {
    HERO SEKCE – sjednoceno na 1100 px
 ===================================================================== */
 
+/* HERO SECTIONS — správné zarovnání */
 .edu-hero,
 .project-hero,
 .coop-wrap,
 .consortium {
   width: 100%;
-  max-width: var(--wrap);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 24px;
+  margin: 40px auto;
   box-sizing: border-box;
 }
+
+/* odstraň max-width, protože uvnitř je .container */
+.edu-hero > .container,
+.project-hero > .container,
+.coop-wrap > .container,
+.consortium > .container {
+  padding: 0;
+}
+.project-hero-bg img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
 
 /* EDU — text + obrázek */
 .edu-hero {
