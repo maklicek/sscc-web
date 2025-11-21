@@ -591,35 +591,39 @@ main img {
     max-width: 100%;
   }
 }
+/* ====== KONSORCIUM – OPRAVA LAYOUTU ====== */
+
 .consortium-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  margin: 40px 0 60px;
-}
-.consortium-text {
-  max-width: 620px;
-  line-height: 1.6;
-}
-.consortium-photo {
-  width: 100%;
-  max-width: 420px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;                /* Normální mezera */
+  margin-top: 3rem;
 }
 
+/* Levý text */
+.consortium-text {
+  flex: 1;
+  max-width: 600px;         /* Zajištěná čitelnost */
+}
+
+/* Obrázek */
 .consortium-photo img {
   width: 100%;
+  max-width: 450px;         /* OMEZENÁ šířka – toto opraví roztažení */
+  border-radius: 20px;
   display: block;
-  border-radius: 14px;
-  object-fit: cover;
-  box-shadow: 0 10px 26px rgba(0,0,0,.45);
 }
-@media (max-width: 900px) {
+
+/* Mobilní režim */
+@media (max-width: 992px) {
   .consortium-flex {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
   }
-  .consortium-photo {
+
+  .consortium-photo img {
     max-width: 100%;
-    margin-top: 20px;
   }
 }
