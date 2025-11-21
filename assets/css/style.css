@@ -395,6 +395,59 @@ figcaption {
 .sscc-process-row--reverse {
   flex-direction: row-reverse;
 }
+.project-hero {
+  width: 100%;
+  background: #082c1f;
+  padding: 3rem 0 2rem;
+}
+
+.project-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.project-hero-text {
+  flex: 1;
+}
+
+.project-hero-text h2 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.project-hero-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.project-hero-img {
+  flex: 1;
+}
+
+.project-hero-img img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 820px) {
+  .project-hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .project-hero-text {
+    padding: 0 1rem;
+  }
+}
+
 
 @media (max-width: 900px) {
   .sscc-process-row {
