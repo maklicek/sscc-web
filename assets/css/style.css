@@ -540,3 +540,54 @@ main img {
     max-width: var(--wrap);
     margin: 0 auto 48px;
 }
+/* ============================================
+   OPRAVA LAYOUTU – jednotná šířka pro stránky
+   Konsorcium / Spolupráce
+   ============================================ */
+
+.coop-wrap,
+.consortium-flex {
+  max-width: var(--wrap);
+  margin: 0 auto 64px;      /* zarovná hezky jako ostatní stránky */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Text uvnitř bloků */
+.coop-text,
+.consortium-text {
+  flex: 1 1 420px;
+}
+
+/* Obrázky uvnitř bloků */
+.coop-img,
+.consortium-photo {
+  flex: 1 1 340px;
+  max-width: 480px;
+}
+
+.coop-img img,
+.consortium-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+/* Na mobilu pod sebe */
+@media (max-width: 900px) {
+
+  .coop-wrap,
+  .consortium-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .coop-img,
+  .consortium-photo {
+    max-width: 100%;
+  }
+}
