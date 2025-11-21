@@ -1,18 +1,17 @@
 /* =====================================================================
-   SSCC – JEDNOTNÝ WEB
+   SSCC – JEDNOTNÝ WEB (FINÁLNÍ VERZE)
    ZÁKLAD, ROOT PROMĚNNÉ, TYPOGRAFIE, HLAVIČKA
 ===================================================================== */
 
-/* Reset a box-model */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
-/* Barevná paleta + systémové proměnné */
+/* Barevná paleta */
 :root {
   --green-dark:  #05261a;
   --green-mid:   #0e432d;
@@ -28,8 +27,8 @@
 
   --shadow-soft: 0 6px 16px rgba(0,0,0,0.45);
 
-  --wrap:        1100px;    /* sjednocená maximální šířka obsahu */
-  --space:       24px;
+  --wrap: 1100px;
+  --space: 24px;
 }
 
 /* Globální styly */
@@ -45,7 +44,7 @@ a {
   color: var(--gold-strong);
   text-decoration: none;
 }
-a:hover { opacity: .9; }
+a:hover { opacity: 0.9; }
 
 /* Nadpisy */
 h1, h2, h3 {
@@ -98,6 +97,7 @@ h1, h2, h3 {
   width: 70px;
   height: 70px;
   object-fit: contain;
+  border-radius: 0 !important;
 }
 .brand-title {
   text-transform: uppercase;
@@ -119,10 +119,10 @@ h1, h2, h3 {
   padding: 6px 14px;
   border-radius: 999px;
   font-weight: 700;
-  font-size: .85rem;
-  letter-spacing: .06em;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  opacity: .85;
+  opacity: 0.85;
 }
 .main-nav a:hover {
   background: rgba(0,0,0,0.25);
@@ -133,7 +133,7 @@ h1, h2, h3 {
   opacity: 1;
 }
 
-/* Motto pod hlavičkou */
+/* Motto */
 .site-tagline {
   text-align: center;
   padding: 10px 0 12px;
@@ -145,7 +145,7 @@ h1, h2, h3 {
   color: #f6e8a4;
 }
 
-/* Mobilní verze */
+/* Mobil */
 @media (max-width: 900px) {
   .nav-inner {
     flex-direction: column;
@@ -157,7 +157,7 @@ h1, h2, h3 {
 }
 
 /* =====================================================================
-   TITULY + ÚVODNÍ TEXT
+   TITULY + TEXTY
 ===================================================================== */
 
 .page-title {
@@ -172,7 +172,7 @@ h1, h2, h3 {
   margin: 0 auto 2.5rem;
   text-align: center;
   color: var(--text-muted);
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .section {
@@ -206,17 +206,21 @@ h1, h2, h3 {
   padding: 20px 22px;
   box-shadow: var(--shadow-soft);
 }
+
 .card h3 {
   margin: 0 0 10px 0;
   color: var(--gold);
 }
+
 .card p {
   margin: 0 0 8px 0;
 }
+
 .card ul {
   margin: 0;
   padding-left: 20px;
 }
+
 .card li {
   margin-bottom: 4px;
 }
@@ -233,34 +237,8 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
-
 /* =====================================================================
-   SPECIÁLNÍ BLOKY
-===================================================================== */
-
-.highlight-box,
-.contact-box {
-  margin-top: 24px;
-  padding: 20px 22px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.18);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-}
-.highlight-box strong {
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* Email */
-.email {
-  font-weight: 700;
-  color: var(--gold-strong);
-  margin-top: 8px;
-}
-
-/* =====================================================================
-   OBRÁZKY
+   OBRÁZKY – sjednocené
 ===================================================================== */
 
 img,
@@ -286,22 +264,20 @@ figcaption {
 }
 
 /* =====================================================================
-   HERO SEKCE — ŠIRŠÍ NEŽ 1100 PX
+   HERO SEKCE – sjednoceno na 1100 px
 ===================================================================== */
 
-/* HERO sekce – širší než běžný obsah */
 .edu-hero,
 .project-hero,
 .coop-wrap,
-.consortium-flex {
+.consortium {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--wrap);
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px;
   box-sizing: border-box;
 }
-
 
 /* EDU — text + obrázek */
 .edu-hero {
@@ -315,6 +291,7 @@ figcaption {
 .edu-hero-text {
   max-width: 640px;
 }
+
 .edu-hero-text p {
   margin-bottom: 1rem;
 }
@@ -325,7 +302,7 @@ figcaption {
   box-shadow: 0 10px 26px rgba(0,0,0,0.45);
 }
 
-/* Mobil */
+/* EDU mobil */
 @media (max-width: 900px) {
   .edu-hero {
     grid-template-columns: 1fr;
@@ -336,7 +313,7 @@ figcaption {
 }
 
 /* =====================================================================
-   NÁPADY
+   NÁPADY – cards
 ===================================================================== */
 
 .idea-grid {
@@ -395,6 +372,7 @@ figcaption {
 .sscc-process-figure {
   flex: 1 1 260px;
 }
+
 .sscc-process-figure img {
   width: 100%;
   border-radius: 16px;
@@ -402,7 +380,6 @@ figcaption {
   object-fit: cover;
 }
 
-/* Obrácení řádků */
 .sscc-process-row--reverse {
   flex-direction: row-reverse;
 }
@@ -412,47 +389,49 @@ figcaption {
     flex-direction: column;
   }
 }
-
 /* =====================================================================
-   KONSORCIUM – FINÁLNÍ SJEDNOCENÝ BLOK
+   KONSORCIUM — FINÁLNÍ VERZE 1100 PX
 ===================================================================== */
 
-/* Konsorcium – hero-like, širší než běžný obsah */
 .consortium {
-    width: 100%;
-    background: var(--green-dark);
-    padding: 40px 0 60px;
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  box-sizing: border-box;
 }
 
 .consortium .container {
-    max-width: 1200px;   /* hero šířka */
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0;
 }
 
 .consortium-flex {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin: 0;   /* 🔥 Tohle opraví velkou mezeru */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-
 .consortium-text {
-    flex: 1 1 420px;
-    max-width: 600px;
+  flex: 1 1 420px;
+  max-width: 600px;
 }
 
 .consortium-photo {
-    flex: 1 1 340px;
-    max-width: 480px;
+  flex: 1 1 340px;
+  max-width: 480px;
 }
 
 .consortium-photo img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 18px;
-    object-fit: cover;
-    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
 }
 
 /* Mobil */
@@ -461,7 +440,55 @@ figcaption {
     flex-direction: column;
     text-align: left;
   }
+  .consortium-photo {
+    max-width: 100%;
+  }
+  .consortium-photo img {
+    max-width: 100%;
+  }
 }
+
+/* =====================================================================
+   SPOLUPRÁCE / COOP — SJEDNOCENO
+===================================================================== */
+
+.coop-wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto 48px;
+  padding: 0 24px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.coop-text {
+  flex: 1 1 420px;
+}
+
+.coop-img {
+  flex: 1 1 340px;
+  max-width: 480px;
+}
+
+.coop-img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+/* Mobil */
+@media (max-width: 900px) {
+  .coop-wrap {
+    flex-direction: column;
+  }
+  .coop-img {
+    max-width: 100%;
+  }
+}
+
 
 /* =====================================================================
    GEOTERMIE – KARTY
@@ -489,10 +516,4 @@ figcaption {
   .page-title {
     font-size: 1.75rem;
   }
-}
-.brand-logo {
-    border-radius: 0 !important;
-}
-.brand-logo {
-  border-radius: 0 !important;
 }
