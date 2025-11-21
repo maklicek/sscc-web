@@ -599,3 +599,12 @@ figcaption {
     font-size: 1.75rem;
   }
 }
+.project-image img,
+.konsorcium-image img,
+.edu-hero-img img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;   /* ideální */
+    object-fit: cover;
+    border-radius: 12px;
+}
