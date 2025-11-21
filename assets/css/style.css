@@ -591,3 +591,10 @@ main img {
     max-width: 100%;
   }
 }
+.consortium-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 40px 0 60px;
+}
