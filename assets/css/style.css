@@ -415,41 +415,47 @@ figcaption {
    KONSORCIUM – FINÁLNÍ SJEDNOCENÝ BLOK
 ===================================================================== */
 
+/* Konsorcium – hero-like, širší než běžný obsah */
+.consortium {
+    width: 100%;
+    background: var(--green-dark);
+    padding: 40px 0 60px;
+}
+
+.consortium .container {
+    max-width: 1200px;   /* hero šířka */
+}
+
 .consortium-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-  margin: 40px auto 60px;
-  flex-wrap: wrap;
-  max-width: 1200px; /* hero → širší */
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .consortium-text {
-  flex: 1 1 420px;
-  max-width: 600px;
+    flex: 1 1 420px;
+    max-width: 600px;
 }
 
 .consortium-photo {
-  flex: 1 1 340px;
-  max-width: 480px;
+    flex: 1 1 340px;
+    max-width: 480px;
 }
 
 .consortium-photo img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.3);
 }
 
+/* Mobil */
 @media (max-width: 900px) {
   .consortium-flex {
     flex-direction: column;
     text-align: left;
-  }
-  .consortium-photo {
-    max-width: 100%;
   }
 }
 
@@ -479,4 +485,7 @@ figcaption {
   .page-title {
     font-size: 1.75rem;
   }
+}
+.brand-logo {
+    border-radius: 0 !important;
 }
