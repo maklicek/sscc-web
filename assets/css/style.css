@@ -289,17 +289,19 @@ figcaption {
    HERO SEKCE — ŠIRŠÍ NEŽ 1100 PX
 ===================================================================== */
 
+/* HERO sekce – širší než běžný obsah */
 .edu-hero,
 .project-hero,
 .coop-wrap,
-
+.consortium-flex {
   width: 100%;
-  max-width: 1200px; /* záměrně širší */
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 24px;
   box-sizing: border-box;
 }
+
 
 /* EDU — text + obrázek */
 .edu-hero {
