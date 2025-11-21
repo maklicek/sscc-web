@@ -527,3 +527,16 @@ main img {
   padding: 0 24px;
   box-sizing: border-box;
 }
+.coop-img img,
+.consortium-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+}
+.coop-wrap,
+.consortium-flex {
+    max-width: var(--wrap);
+    margin: 0 auto 48px;
+}
