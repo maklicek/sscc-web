@@ -431,7 +431,9 @@ figcaption {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
+    margin: 0;   /* 🔥 Tohle opraví velkou mezeru */
 }
+
 
 .consortium-text {
     flex: 1 1 420px;
