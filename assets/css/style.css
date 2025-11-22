@@ -291,3 +291,15 @@ img {
   margin: 60px 0 28px;
   color: var(--accent);
 }
+/* Odkazy v kartách – sjednocená moderní barva */
+.card a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.card a:hover {
+  color: #f1e3b2; /* světlejší odstín pro lepší viditelnost */
+  text-decoration: underline;
+}
