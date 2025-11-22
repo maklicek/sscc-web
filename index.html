@@ -1,47 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SolarSpace Carbon Cycle (SSCC)</title>
-    <link rel="icon" href="favicons/favicon.ico">
-    <style>
-        /* Stejný CSS jako výše – zkopíruj ho sem pro konzistenci */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: white; padding: 1rem; text-align: center; }
-        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; }
-        nav a:hover { text-decoration: underline; }
-        .lang-switch { float: right; margin-right: 1rem; }
-        main { max-width: 800px; margin: 2rem auto; padding: 1rem; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1, h2 { color: #2c3e50; }
-        footer { text-align: center; padding: 1rem; background: #2c3e50; color: white; }
-        @media (max-width: 600px) { nav ul { flex-direction: column; } }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SSCC — Úvod</title>
+  <meta name="description" content="SSCC je energetický systém, který proměňuje CO₂ a obnovitelné zdroje na stabilní energii a zelený amoniak.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+
+  <!-- Jediný CSS soubor -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index-en.html">Home<a><li>
-                <li><a href="projects.html">Projects<a><li>
-                <li><a href="project-sscc.html">Pilot Project<a><li>
-                <li><a href="education.html">Education</a><li>
-                <li><a href="ideas.html">Ideas</a><li>
-                <li><a href="consortium.html">Consortium</a><li>
-            </ul>
-            <div class="lang-switch"><a href="index.html">🇨🇿 CZ<a><div>
-        </nav>
-    </header>
-    <main>
-        <h1>SolarSpace Carbon Cycle</h1>
-        <p>A cross-disciplinary platform for research, collaboration and open education.</p>
-        <h2>Welcome</h2>
-        <p>Explore the project, running initiatives and opportunities for cooperation.</p>
-    </main>
-    <footer>
-        &copy; 2025 SolarSpace Carbon Cycle. <a href="mailto:martin.klic46@gmail.com">Contact</a>
-    </footer>
+  <!-- JEDINÁ HLAVIČKA -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo-sscc.png"
+             alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
+             class="brand-logo">
+
+        <div class="brand-text">
+          <div class="brand-title">SSCC</div>
+          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" aria-current="page">Úvod</a>
+        <a href="projekt-sscc.html">SSCC</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="napady.html">Nápady</a>
+        <a href="edukace.html">Edukace</a>
+        <a href="spoluprace.html">Spolupráce</a>
+        <a href="konsorcium.html">Konsorcium</a>
+      </nav>
+    </div>
+
+    <div class="site-tagline">
+      Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
+    </div>
+  </header>
+
+  <!-- OBSAH ÚVODNÍ STRÁNKY -->
+<main class="page-main">
+  <div class="container">
+
+    <!-- HERO ÚVODU -->
+    <section class="home-hero">
+      <h1 class="page-title">SSCC – energie z CO₂, slunce a země</h1>
+      <p class="lead">
+        SSCC (Solar &amp; Synthetic Carbon Cycle) je modulární energetický systém,
+        který využívá CO₂ jako surovinu a obnovitelné zdroje jako motor.
+        Z emisí a odpadního tepla děláme zdroj stabilní energie a nosičů uhlíku
+        pro průmysl, města i regiony.
+      </p>
+    </section>
+
+    <!-- CO SSCC PŘINÁŠÍ -->
+    <section>
+      <h2 class="section-title">Co SSCC přináší</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Proměna CO₂ na zdroj</h3>
+          <p>
+            CO₂ nevnímáme jako odpad, ale jako surovinu. Ze zachyceného CO₂
+            a obnovitelných zdrojů energie syntetizujeme nosiče – například zelený amoniak –
+            které slouží jako sklad energie i uhlíku.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Stabilní energie 24/7</h3>
+          <p>
+            Spojujeme geotermii, orbitální energii a syntézu paliv do stabilních
+            energetických uzlů. Ty umí dodávat energii i ve chvílích, kdy
+            nesvítí slunce, nefouká vítr nebo je síť přetížená.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Škálování od domu po region</h3>
+          <p>
+            Stejný princip lze použít pro rodinné domy, menší obce,
+            průmyslové areály i celé regiony. Vždy modulárně – podle místních
+            zdrojů CO₂ a energie.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Reálné pilotní projekty</h3>
+          <p>
+            SSCC ověřujeme v konkrétních lokalitách – u průmyslových zdrojů CO₂,
+            v geotermálních oblastech i v regionech, které hledají stabilní
+            bezuhlíkovou energii. Projekty stavíme společně s firmami, obcemi
+            a výzkumnými týmy.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRO KOHO TO DÁVÁ SMYSL -->
+    <section>
+      <h2 class="section-title">Pro koho SSCC dává smysl</h2>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Průmysl a energetika</h3>
+          <p>
+            Využití CO₂ ze spalin, lepší efektivita výroby, nové zdroje
+            nízkoemisních paliv a tepla. SSCC pomáhá snižovat emise a zároveň
+            vytvářet ekonomicky využitelný produkt.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Obce a města</h3>
+          <p>
+            Lokální energetické uzly napojené na obnovitelné zdroje a syntézu paliv.
+            Stabilní dodávka energie pro teplárny, budovy i městské infrastruktury,
+            méně závislé na externích šocích.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Výzkum, inovace a stát</h3>
+          <p>
+            Prostředí pro pilotní projekty, datové a geochemické modely
+            i testování nových regulací. SSCC propojuje univerzity,
+            výzkumné organizace a veřejný sektor v praktických experimentech.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA / NAPOJENÍ NA DALŠÍ STRÁNKY -->
+    <section>
+      <h2 class="section-title">Jak SSCC zapadá do většího obrazu</h2>
+      <p class="lead">
+        Úvodní stránka ukazuje, proč SSCC vzniká a co může nabídnout různým
+        partnerům. Na dalších stránkách rozvíjíme jednotlivé části do hloubky:
+      </p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Jak funguje systém SSCC</h3>
+          <p>
+            Rámec, principy a meze systému – od zachytávání CO₂ přes syntézu
+            nosičů až po energetické uzly různé velikosti.
+          </p>
+          <p><a href="projekt-sscc.html">Přejít na stránku SSCC →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Pilotní projekty</h3>
+          <p>
+            Konkrétní místa a scénáře, kde SSCC ověřujeme v praxi. Průmyslové
+            uzly, obce, geotermální regiony i připravované studie.
+          </p>
+          <p><a href="projekty.html">Podívat se na projekty →</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Nápady a další směry</h3>
+          <p>
+            Směry, které zkoumáme – energie z kosmu, podzemní CO₂ jako zdroj,
+            přeměna CO₂ na nosiče energie a materiály pro průmysl.
+          </p>
+          <p><a href="napady.html">Prozkoumat nápady →</a></p>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</main>
+
 </body>
 </html>
