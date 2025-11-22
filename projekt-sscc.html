@@ -1,347 +1,189 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SSCC – rámec a principy</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- globální CSS (pokud používáš) -->
+  <title>SSCC – Jak systém funguje</title>
+  <meta name="description" content="Jak funguje energetický systém SSCC – CO₂, syntéza, geotermie a modulární uzly.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <style>
-    :root {
-      --gold: #e4c77f;
-      --gold-strong: #ffd877;
-
-      --green-dark: #05261a;   /* pozadí celé stránky */
-      --green-mid:  #0e432d;   /* karty / panely */
-      --header-bg:  #0b3a27;   /* hlavička */
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--green-dark);
-      color: #f4f4e8;
-      line-height: 1.6;
-    }
-
-    /* HLAVIČKA */
-    .site-header {
-      background: var(--header-bg);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-    }
-
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 8px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-    }
-
-    /* logo + text vlevo */
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 0;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .brand-title {
-      font-weight: bold;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gold-strong);
-    }
-
-    .brand-subtitle {
-      font-size: 0.8rem;
-      color: #e3e2c4;
-    }
-
-    /* MENU */
-    .main-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 0.9rem;
-    }
-
-    .main-nav a {
-      color: var(--gold-strong);      /* pozlacené */
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 999px;
-      opacity: 0.88;
-      transition: background 0.15s ease, opacity 0.15s ease;
-    }
-
-    .main-nav a:hover {
-      background: rgba(0,0,0,0.25);
-      opacity: 1;
-    }
-
-    .main-nav a.active {
-      background: rgba(0,0,0,0.35);
-      opacity: 1;
-    }
-
-    /* MOTTO */
-    .site-tagline {
-      text-align: center;
-      padding: 6px 0 10px;
-      font-size: 0.9rem;
-      color: #f6e8a4;
-      border-top: 1px solid rgba(0,0,0,0.25);
-      border-bottom: 1px solid rgba(0,0,0,0.35);
-      background: var(--green-mid);
-    }
-
-    /* OBSAH STRÁNKY */
-    .page-main {
-      padding: 32px 0 72px;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .page-title {
-      font-size: 2.1rem;
-      margin: 0 0 24px;
-      color: var(--gold);
-    }
-
-    h2, h3 {
-      color: var(--gold);
-      margin-top: 0;
-    }
-
-    .section {
-      margin-bottom: 72px;
-    }
-
-    .intro {
-      max-width: 820px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      grid-gap: 28px;
-      margin-top: 24px;
-    }
-
-    .card {
-      background: var(--green-mid);
-      padding: 22px;
-      border-radius: 12px;
-    }
-
-    .img-placeholder {
-      width: 100%;
-      height: 180px;
-      background: #12372b;
-      border-radius: 12px;
-      margin: 18px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color:#c3cfc4;
-      font-size: 0.9rem;
-      border: 1px dashed rgba(255,255,255,0.25);
-    }
-
-    @media (max-width: 720px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <!-- HLAVIČKA -->
-  <header class="site-header">
-    <div class="nav-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/img/logo-sscc.png"
-             alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
-             class="brand-logo">
 
-        <div class="brand-text">
-          <div class="brand-title">SSCC</div>
-          <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
-        </div>
-      </a>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-sscc.png"
+           alt="SSCC – Solar &amp; Synthetic Carbon Cycle"
+           class="brand-logo">
 
-      <nav class="main-nav">
-        <a href="index.html">Úvod</a>
-        <a href="projekt-sscc.html" class="active">SSCC</a>
-        <a href="projekty.html">Projekty</a>
-        <a href="napady.html">Nápady</a>
-        <a href="edukace.html">Edukace</a>
-        <a href="spoluprace.html">Spolupráce</a>
-        <a href="konsorcium.html">Konsorcium</a>
-      </nav>
-    </div>
+      <div class="brand-text">
+        <div class="brand-title">SSCC</div>
+        <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
+      </div>
+    </a>
 
-    <div class="site-tagline">
-      Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
-    </div>
-  </header>
-
-  <!-- OBSAH STRÁNKY: RÁMEC A PRINCIPY -->
-  <main class="page-main">
-    <div class="container">
-
-      <section class="section">
-        <h1 class="page-title">SSCC – rámec a principy</h1>
-        <p class="intro">
-          SSCC (Solar &amp; Synthetic Carbon Cycle) je modulární energetický systém, který kombinuje zachytávání CO₂,
-          obnovitelné zdroje energie a syntézu zeleného amoniaku. Cílem je přetvořit emise a ztráty energie na stabilní
-          a využitelný zdroj pro průmysl, obce i jednotlivé domy.
-        </p>
-      </section>
-
-   <section class="sscc-process">
-  <h2 class="section-title">Jak SSCC funguje</h2>
-
-  <!-- KROK 1 – CO₂ jako vstup -->
-  <div class="sscc-process-row">
-    <div class="sscc-process-text">
-      <h3>1. CO₂ jako vstupní surovina</h3>
-      <p>
-        SSCC bere CO₂ jako surovinu, ne jako odpad. Může pocházet z průmyslových
-        spalin, z atmosféry nebo z podzemních zásob. Zachycený CO₂ se čistí,
-        stlačí a slouží jako uhlíkový vstup pro syntézu paliv, chemikálií
-        a materiálů.
-      </p>
-      <p>
-        Cílem je, aby uhlík cirkuloval v uzavřeném technickém cyklu – místo toho,
-        aby se dál hromadil v atmosféře.
-      </p>
-    </div>
-
-    <figure class="sscc-process-figure">
-      <img src="assets/img/co2-premena.png" alt="Schéma přeměny CO₂ na energonosiče">
-    </figure>
+    <nav class="main-nav">
+      <a href="index.html">Úvod</a>
+      <a href="projekt-sscc.html" aria-current="page">SSCC</a>
+      <a href="projekty.html">Projekty</a>
+      <a href="napady.html">Nápady</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="spoluprace.html">Spolupráce</a>
+      <a href="konsorcium.html">Konsorcium</a>
+    </nav>
   </div>
 
-  <!-- KROK 2 – Zdroj energie (geotermie + další obnovitelné zdroje) -->
-  <div class="sscc-process-row sscc-process-row--reverse">
-    <figure class="sscc-process-figure">
-      <img src="assets/img/geotermalní-vrt.png" alt="Geotermální vrt jako stabilní zdroj energie">
-    </figure>
-
-    <div class="sscc-process-text">
-      <h3>2. Stabilní energie pro syntézu</h3>
-      <p>
-        Pro syntézu potřebujeme spolehlivý zdroj energie. V SSCC počítáme
-        s kombinací geotermálního tepla, lokálních obnovitelných zdrojů
-        a v budoucnu i se solární energií z oběžné dráhy.
-      </p>
-      <p>
-        Geotermální vrt dodává stabilní výkon 24/7, bez závislosti na počasí.
-        Díky tomu může probíhat syntéza nosičů energie a uhlíku i v době, kdy
-        nesvítí slunce nebo fouká jen málo větru.
-      </p>
-    </div>
+  <div class="site-tagline">
+    Zelenou se naše planeta nestane díky zákazům, ale tím, že ze škodlivého děláme užitečné.
   </div>
-</section>
+</header>
 
 
-      <section class="section">
-        <h2>Pracovní proces SSCC - jak funguje</h2>
-       
-        <div class="grid">
-          <div class="card">
-            <h3>1. Energie</h3>
-            <p>
-              Systém může čerpat energii z geotermie, obnovitelných zdrojů nebo v budoucnu i z orbitálních systémů.
-              Důraz je na bezpečný a měřitelný příjem.
-            </p>
-          </div>
-          <div class="card">
-            <h3>2. CO₂</h3>
-            <p>
-              CO₂ může pocházet z průmyslových provozů, z DAC (zachytávání ze vzduchu) nebo z podzemních zásobníků.
-              Vše záleží na místních podmínkách.
-            </p>
-          </div>
-          <div class="card">
-            <h3>3. Zelený NH₃</h3>
-            <p>
-              Energie a CO₂ vstupují do syntetického okruhu, kde vzniká zelený amoniak jako hlavní nosič energie
-              a uhlíku pro další využití.
-            </p>
-          </div>
+<!-- OBSAH -->
+<main class="page-main">
+  <div class="container">
+
+    <h1 class="page-title">Jak funguje SSCC</h1>
+
+    <p class="lead">
+      SSCC – Solar & Synthetic Carbon Cycle – je energetický systém,
+      který mění CO₂ a obnovitelné zdroje na stabilní energii, teplo a syntetická paliva.
+      Stejný princip funguje pro malé obce, průmysl i celé regiony.
+    </p>
+
+
+    <!-- BLOK 1 -->
+    <section class="section">
+      <h2>1. CO₂ jako surovina</h2>
+
+      <div class="sscc-process-row">
+        <div class="sscc-process-text">
+          <h3>Zachytávání CO₂</h3>
+          <p>
+            CO₂ bereme jako vstupní uhlíkovou surovinu. Může pocházet z průmyslových komínů,
+            z okolního vzduchu (DAC) nebo z hlubinných zásob CO₂ v některých regionech.
+          </p>
+          <p>
+            Zachycený CO₂ míří přímo do syntézy nebo do meziskladu.
+          </p>
         </div>
-      </section>
 
-      <section class="section">
-        <h2>Základní prvky SSCC</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Bezpečný příjem energie</h3>
-            <p>
-              Přijímací pole s definovanými bezpečnostními zónami, automatickým řízením výkonu a ochranou proti chybám.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Metrologie a řízení</h3>
-            <p>
-              Měření výkonu, toků energie a emisí je součástí každého uzlu. Důraz na transparentnost a ověřitelnost dat.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Syntetický okruh NH₃</h3>
-            <p>
-              Modul, který převádí energii a CO₂ na NH₃, ukládá ho a umožňuje jeho využití jako paliva nebo chemického vstupu.
-            </p>
-          </div>
+        <div class="sscc-process-figure">
+          <img src="assets/img/kominy.jpg" alt="Zachytávání CO₂ z průmyslu">
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section">
-        <h2>Lokální miniuzly</h2>
-        <div class="grid">
-          <div class="card">
-            <h3>Průmyslové uzly</h3>
-            <p>
-              Například v Ostravě lze kombinovat zachytávání CO₂ z průmyslu se syntézou NH₃ a zpětným využitím energie v regionu.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Obce a města</h3>
-            <p>
-              Lokální uzly pro menší obce nebo městské části mohou stabilizovat energii a doplnit existující zdroje.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Rodinné domy</h3>
-            <p>
-              V menším měřítku lze využít prvky SSCC jako součást decentralizovaných energetických řešení pro domácnosti.
-            </p>
-          </div>
+
+    <!-- BLOK 2 -->
+    <section class="section">
+      <h2>2. Energie – geotermie, OZE a stabilní zdroje</h2>
+
+      <div class="sscc-process-row sscc-process-row--reverse">
+        <div class="sscc-process-text">
+          <h3>Stabilní energetický základ</h3>
+          <p>
+            Základem SSCC je stabilní zdroj energie: hlubinná geotermie, teplo z podloží,
+            případně doplňkové zdroje jako solární nebo větrná energie.
+          </p>
+          <p>
+            Energie se využívá pro ohřev médií, elektrolýzu, syntézu a napájení celého uzlu.
+          </p>
         </div>
-      </section>
 
-    </div>
-  </main>
+        <div class="sscc-process-figure">
+          <img src="assets/img/geotermie.jpg" alt="Geotermální energie">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOK 3 -->
+    <section class="section">
+      <h2>3. Syntéza zeleného NH₃</h2>
+
+      <div class="sscc-process-row">
+        <div class="sscc-process-text">
+          <h3>Sklad energie a uhlíku</h3>
+          <p>
+            Pomocí elektrolýzy a syntézy se CO₂ a vodík proměňují na zelený amoniak.
+            Ten slouží jako:
+          </p>
+          <ul>
+            <li>dlouhodobý zásobník energie,</li>
+            <li>uhlíkový nosič pro průmysl,</li>
+            <li>základ pro další syntetická paliva.</li>
+          </ul>
+        </div>
+
+        <div class="sscc-process-figure">
+          <img src="assets/img/co2-premena.png" alt="Přeměna CO₂ na syntetický amoniak">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOK 4 -->
+    <section class="section">
+      <h2>4. Modulární energetické uzly</h2>
+
+      <div class="sscc-process-row sscc-process-row--reverse">
+        <div class="sscc-process-text">
+          <h3>Od domu po region</h3>
+          <p>
+            Uzel SSCC může být malý jako rodinný dům nebo velký jako průmyslová oblast.
+            Každý modul obsahuje:
+          </p>
+          <ul>
+            <li>zdroj energie (geotermie, OZE),</li>
+            <li>zachytávání CO₂,</li>
+            <li>syntézu NH₃,</li>
+            <li>bezpečnostní a měřicí systém,</li>
+            <li>digitální řízení a monitoring.</li>
+          </ul>
+        </div>
+
+        <div class="sscc-process-figure">
+          <img src="assets/img/sscc-uzel.jpg" alt="Modulární energetický uzel SSCC">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BLOK 5 -->
+    <section class="section">
+      <h2>5. Propojený uhlíkový cyklus</h2>
+
+      <div class="sscc-process-row">
+        <div class="sscc-process-text">
+          <h3>Uzavřený cyklus místo odpadu</h3>
+          <p>
+            Uhlík cirkuluje v technologickém cyklu, nikoli v atmosféře.
+            CO₂ → syntéza → NH₃ → využití → zachycení → zpět do syntézy.
+          </p>
+          <p>
+            Cílem je minimalizace čistých emisí a stabilní výroba energie.
+          </p>
+        </div>
+
+        <div class="sscc-process-figure">
+          <img src="assets/img/cyklus.png" alt="Uhlíkový technologický cyklus SSCC">
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
 </body>
 </html>
