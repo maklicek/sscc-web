@@ -1,62 +1,62 @@
 /* =========================================================
-   SSCC — FRAMEWORK 1.0 (Urbanist, 1300 px)
-   Dark Technical Theme — FINAL GLOBAL VERSION
+   SSCC — B2-B MODERN FRAMEWORK (Urbanist, 1300 px)
+   Dark-Soft Theme + Light Header — FINAL
 ========================================================= */
 
-/* FONT -------------------------------------------------- */
+/* ---------- FONTS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
 
-/* ROOT -------------------------------------------------- */
+/* ---------- ROOT ---------- */
 :root {
   --max-width: 1300px;
 
-  /* Colors */
-  --bg: #0f1112;
-  --bg-header: #0b0d0e;
-  --bg-card: #151718;
-  --bg-hover: #1d1f21;
+  /* Color system */
+  --bg: #141617;                /* světlejší pozadí */
+  --bg-header: #1c1e1f;         /* světlejší, odlišená hlavička */
+  --bg-card: #1b1d1e;
+  --bg-hover: #222426;
 
-  --text: #e6e6e6;
-  --text-muted: #b8b8b8;
+  --text: #f0f0f0;
+  --text-muted: #c6c6c6;
 
-  --accent: #d5b974;
+  --accent: #d9bf78;
 
-  --radius: 0;
+  --radius: 0px;
   --radius-img: 8px;
 
   --shadow: 0 0 24px rgba(0,0,0,0.45);
 }
 
-/* GLOBAL ------------------------------------------------- */
+/* ---------- GLOBAL ---------- */
 html, body {
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--text);
   font-family: "Urbanist", sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
   border-radius: var(--radius-img);
-  display: block;
 }
 
-/* LAYOUT ------------------------------------------------- */
+/* ---------- LAYOUT ---------- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 40px 24px;
 }
 
-/* HEADER ------------------------------------------------- */
+/* ---------- HEADER ---------- */
 .site-header {
   width: 100%;
   background: var(--bg-header);
-  padding: 16px 0 22px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 14px 0 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -71,7 +71,7 @@ img {
   align-items: center;
 }
 
-/* BRAND */
+/* Brand */
 .brand {
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@ img {
 }
 
 .brand-title {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--accent);
 }
@@ -98,7 +98,7 @@ img {
   color: var(--text-muted);
 }
 
-/* NAVIGATION */
+/* ---------- NAVIGATION ---------- */
 .main-nav {
   display: flex;
   gap: 20px;
@@ -122,24 +122,26 @@ img {
   color: var(--accent);
 }
 
-/* TAGLINE */
+/* ---------- TAGLINE ---------- */
 .site-tagline {
   text-align: center;
-  margin-top: 14px;
-  font-size: 15px;
+  margin-top: 18px;
+  font-size: 20px;            /* zvětšeno */
+  font-weight: 500;
   color: var(--accent);
+  opacity: 0.95;
 }
 
-/* TYPOGRAPHY -------------------------------------------- */
+/* ---------- TITLES ---------- */
 .page-title {
-  font-size: 42px;
+  font-size: 44px;
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 22px;
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
   margin: 60px 0 28px;
   color: var(--accent);
@@ -152,45 +154,43 @@ img {
   font-size: 20px;
 }
 
-/* GRID --------------------------------------------------- */
+/* ---------- GRID ---------- */
 .grid,
 .cards-grid,
 .idea-grid,
 .project-grid {
   display: grid;
-  gap: 32px;
-}
-
-/* standard responsive grid */
-.grid,
-.cards-grid {
   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 34px;
 }
 
-/* CARDS -------------------------------------------------- */
-.card {
+/* ---------- CARDS ---------- */
+.card,
+.idea-card {
   background: var(--bg-card);
-  padding: 26px;
+  padding: 28px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
-.card h3 {
+.card h3,
+.idea-card h2 {
   color: var(--accent);
   margin-top: 0;
 }
 
 .card p,
-.card li {
+.idea-card p {
   color: var(--text-muted);
 }
 
-/* IMAGE + TEXT SPLIT ------------------------------------- */
+/* ---------- SPLIT ---------- */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .split-text {
@@ -203,123 +203,15 @@ img {
   box-shadow: var(--shadow);
 }
 
-/* IDEA CARDS (Nápady) ------------------------------------- */
-.idea-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-}
-
-.idea-card {
-  background: var(--bg-card);
-  padding: 26px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  text-align: left;
-}
-
-.idea-card img {
-  width: 100%;
-  margin-bottom: 18px;
-}
-
-.idea-card h2 {
-  color: var(--accent);
-  margin: 0 0 12px;
-}
-
-/* TAG / PILL --------------------------------------------- */
-.pill {
-  display: inline-block;
-  background: var(--bg-hover);
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 13px;
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-
-/* HIGHLIGHT BOX ------------------------------------------ */
-.highlight-box {
-  background: var(--bg-card);
-  padding: 20px;
-  border-left: 4px solid var(--accent);
-  margin-top: 22px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-/* PROJECT SECTIONS ---------------------------------------- */
-.project-section {
-  margin: 70px 0;
-}
-
-.project-grid {
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-}
-
-.project-grid--reverse {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl;
-}
-
-.project-grid--reverse > * {
-  direction: ltr;
-}
-
-.project-image img {
-  box-shadow: var(--shadow);
-}
-
-.project-text {
-  color: var(--text-muted);
-  font-size: 18px;
-}
-
-/* PROJECT HERO -------------------------------------------- */
-.project-hero {
-  position: relative;
-  margin: 40px 0 60px;
-}
-
-.project-hero img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.project-hero-content {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  background: rgba(0,0,0,0.55);
-  padding: 20px 24px;
-  border-radius: var(--radius);
-  max-width: 600px;
-  color: var(--text);
-}
-
-.project-hero-content h2 {
-  margin: 0 0 10px;
-  color: var(--accent);
-}
-
-/* RESPONSIVE ---------------------------------------------- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
-
-  .page-title {
-    font-size: 34px;
-  }
-
-  .split,
-  .project-grid,
-  .project-grid--reverse {
+  .split {
     grid-template-columns: 1fr;
   }
-
-  .project-hero-content {
-    position: static;
-    background: var(--bg-card);
-    margin-top: -20px;
+  .page-title {
+    font-size: 36px;
+  }
+  .site-tagline {
+    font-size: 18px;
   }
 }
