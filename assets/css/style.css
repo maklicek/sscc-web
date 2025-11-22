@@ -1,31 +1,33 @@
 /* =========================================================
-   SSCC — C-FINAL FRAMEWORK
-   Dark Modern Technical — Lighter Header, Better Layout
+   SSCC — C + B FRAMEWORK (Urbanist, 1300 px)
+   Lightened Technical Theme — FINAL
 ========================================================= */
 
+/* ---------- FONTS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
 
+/* ---------- ROOT ---------- */
 :root {
   --max-width: 1300px;
 
-  /* Lightened background palette */
-  --bg: #161819;
-  --bg-header: #1d1f20;
-  --bg-card: #1e2022;
-  --bg-hover: #26292b;
+  /* Color system – LIGHTENED */
+  --bg: #151718;            /* Global background */
+  --bg-header: #1b1d1e;     /* Lighter than before */
+  --bg-card: #1f2123;       /* Lighter cards */
+  --bg-hover: #2a2c2e;
 
-  --text: #e8e8e8;
-  --text-muted: #c1c1c1;
+  --text: #f2f2f2;
+  --text-muted: #c8c8c8;
 
-  --accent: #d9c07a;
+  --accent: #d9c27a;
 
-  --radius: 0;
-  --radius-img: 8px;
+  --radius: 0px;  /* sharp */
+  --radius-img: 10px;
 
-  --shadow: 0 0 22px rgba(0,0,0,0.4);
+  --shadow: 0 0 22px rgba(0,0,0,0.35);
 }
 
-/* GLOBAL */
+/* ---------- GLOBAL ---------- */
 html, body {
   margin: 0;
   padding: 0;
@@ -42,46 +44,47 @@ img {
   border-radius: var(--radius-img);
 }
 
-/* LAYOUT */
+/* ---------- LAYOUT ---------- */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 40px 24px;
 }
 
-/* HEADER */
+/* ---------- HEADER ---------- */
 .site-header {
   width: 100%;
   background: var(--bg-header);
-  padding: 20px 0 28px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 18px 0 26px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Brand */
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  color: var(--text);
+  gap: 18px;
   text-decoration: none;
+  color: var(--text);
 }
 
 .brand-logo {
-  width: 62px;
-  height: 62px;
-  object-fit: contain;
+  width: 64px;
+  height: 64px;
   border-radius: 0;
+  object-fit: contain;
 }
 
 .brand-title {
@@ -91,14 +94,14 @@ img {
 }
 
 .brand-subtitle {
-  font-size: 13px;
-  opacity: 0.8;
+  font-size: 14px;
+  color: var(--text-muted);
 }
 
-/* NAV */
+/* ---------- NAV ---------- */
 .main-nav {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 
 .main-nav a {
@@ -106,8 +109,8 @@ img {
   color: var(--text);
   font-weight: 600;
   padding: 8px 14px;
+  transition: 0.2s;
   border-radius: 6px;
-  transition: 0.25s;
 }
 
 .main-nav a:hover {
@@ -115,48 +118,51 @@ img {
 }
 
 .main-nav a[aria-current="page"] {
-  color: var(--accent);
   background: var(--bg-hover);
+  color: var(--accent);
 }
 
-/* TAGLINE */
+/* ---------- TAGLINE ---------- */
 .site-tagline {
   text-align: center;
-  margin-top: 12px;
-  font-size: 18px;     /* zvětšeno */
+  margin-top: 16px;
+  font-size: 18px;      /* bigger */
+  font-weight: 500;
   color: var(--accent);
-  opacity: 0.95;
 }
 
-/* TITLES */
+/* ---------- TITLES ---------- */
 .page-title {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 .section-title {
   font-size: 34px;
-  margin: 65px 0 28px;
+  font-weight: 700;
+  margin: 60px 0 28px;
   color: var(--accent);
 }
 
 .lead {
   max-width: 900px;
-  margin: 0 auto 50px;
+  margin: 0 auto 55px;
   color: var(--text-muted);
-  font-size: 20px;
+  font-size: 21px;
 }
 
-/* GRID & CARDS */
+/* ---------- GRID SYSTEM ---------- */
 .grid,
-.cards-grid {
+.cards-grid,
+.idea-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
   gap: 34px;
 }
 
+/* ---------- CARD ---------- */
 .card {
   background: var(--bg-card);
   padding: 28px;
@@ -165,25 +171,21 @@ img {
 }
 
 .card h3 {
-  margin-top: 0;
   color: var(--accent);
+  margin-top: 0;
 }
 
-.card p {
+.card p, .card ul {
   color: var(--text-muted);
 }
 
-/* SPLIT SECTIONS (image + text) */
+/* ---------- SPLIT BLOCK (image left / text right) ---------- */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 50px;
   align-items: center;
-  margin: 60px 0;
-}
-
-.split img {
-  box-shadow: var(--shadow);
+  margin-bottom: 70px;
 }
 
 .split-text {
@@ -191,42 +193,81 @@ img {
   color: var(--text-muted);
 }
 
-/* PROCESS ROWS FOR SSCC PAGE */
-.sscc-process-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
+.split img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-img);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- PROJECT GRID (text + image exact layout) ---------- */
+.project-grid {
+  display: flex;
+  gap: 50px;
   align-items: center;
-  margin: 55px 0;
+  margin-bottom: 50px;
+}
+
+.project-grid--reverse {
+  flex-direction: row-reverse;
+}
+
+.project-text {
+  flex: 1;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-img);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- PROCESS IMAGES FOR SSCC PAGE ---------- */
+.sscc-process-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 70px 0;
 }
 
 .sscc-process-row--reverse {
-  grid-template-columns: 1fr 1fr;
-  direction: rtl;
+  flex-direction: row-reverse;
 }
 
-.sscc-process-row--reverse > * {
-  direction: ltr;
+.sscc-process-figure img {
+  width: 100%;
+  max-width: 520px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: var(--radius-img);
+  box-shadow: var(--shadow);
 }
 
-/* MOBILE */
+/* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
+
   .split,
-  .sscc-process-row,
-  .sscc-process-row--reverse {
+  .project-grid,
+  .sscc-process-row {
     grid-template-columns: 1fr;
+    flex-direction: column !important;
   }
 
   .page-title {
-    font-size: 36px;
+    font-size: 34px;
   }
 
-  .site-tagline {
-    font-size: 16px;
+  .split img,
+  .project-image img {
+    height: auto;
   }
-}
-.split-image img {
-  width: 100%;
-  border-radius: var(--radius-img);
-  box-shadow: var(--shadow);
 }
