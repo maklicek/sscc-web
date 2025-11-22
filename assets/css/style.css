@@ -1,257 +1,288 @@
-/* =====================================================
-   SSCC – MODERN LIGHT THEME (B3)
-   Urbanist • 1300px layout • Green accents
-===================================================== */
+/* =====================================================================
+   SSCC — GLOBAL RESET
+===================================================================== */
 
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
-
-:root {
-  /* Layout */
-  --wrap: 1300px;
-  --space: 28px;
-
-  /* Colors */
-  --bg: #f8fbf9;
-  --bg-soft: #f2f7f4;
-  --bg-green: #e8f3ed;
-
-  --text: #1a1f1d;
-  --text-soft: #4f5b56;
-
-  --green: #0b5035;
-  --green-soft: #d9ebe3;
-
-  --gold: #d8b46a;
-  --gold-strong: #cfa04e;
-
-  /* UI */
-  --radius: 16px;
-  --shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
-
-/* -------------------------------
-   GLOBAL RESET
---------------------------------*/
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html, body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Urbanist', sans-serif;
+/* =====================================================================
+   ROOT VARIABLES — B2 DARK
+===================================================================== */
+
+:root {
+  --max-width: 1300px;
+  --padding: 24px;
+
+  --bg-dark: #0b1512;
+  --bg-dark-2: #0f1f1b;
+  --bg-card: #13241f;
+
+  --accent: #e7c880;
+  --accent-strong: #ffdd9b;
+
+  --text-main: #f3f3ef;
+  --text-muted: #c8d5cf;
+
+  --radius: 14px;
+  --shadow: 0 8px 26px rgba(0,0,0,0.45);
+}
+
+/* =====================================================================
+   GLOBAL STYLES
+===================================================================== */
+
+body {
+  font-family: "Urbanist", system-ui, -apple-system, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
   line-height: 1.6;
 }
 
-/* -------------------------------
-   LINKS
---------------------------------*/
+/* Links */
 a {
-  color: var(--green);
+  color: var(--accent-strong);
   text-decoration: none;
-  transition: 0.2s ease;
 }
-a:hover {
-  color: var(--gold-strong);
+a:hover { opacity: 0.85; }
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1.25;
 }
 
-/* -------------------------------
-   LAYOUT CONTAINER
---------------------------------*/
+/* Layout container */
 .container {
+  max-width: var(--max-width);
   width: 100%;
-  max-width: var(--wrap);
   margin: 0 auto;
-  padding: 0 var(--space);
+  padding: 0 var(--padding);
 }
 
-/* -------------------------------
+/* Main wrapper spacing */
+.page-main {
+  padding-top: 40px;
+}
+
+/* =====================================================================
    HEADER
---------------------------------*/
+===================================================================== */
+
 .site-header {
-  background: #ffffff;
-  box-shadow: var(--shadow);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  background: #09110f;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 15px 0 22px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.55);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .nav-inner {
-  max-width: var(--wrap);
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 16px var(--space);
+  padding: 0 var(--padding);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
+/* Brand logo */
 .brand {
   display: flex;
   align-items: center;
   gap: 14px;
-  color: var(--text);
+  color: var(--text-main);
 }
 
 .brand-logo {
-  width: 60px;
-  height: auto;
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .brand-title {
-  font-size: 22px;
+  font-size: 1.55rem;
   font-weight: 800;
-  color: var(--green);
-  letter-spacing: 0.02em;
 }
-
 .brand-subtitle {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-soft);
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
+/* NAV */
 .main-nav {
   display: flex;
-  gap: 22px;
+  gap: 18px;
 }
-
 .main-nav a {
-  padding: 8px 14px;
+  font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 999px;
-  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 50px;
+  opacity: 0.85;
 }
-
+.main-nav a[aria-current="page"],
 .main-nav a:hover {
-  background: var(--bg-green);
-}
-
-.main-nav a[aria-current="page"] {
-  background: var(--green-soft);
-  color: var(--green);
+  background: rgba(255,255,255,0.08);
+  opacity: 1;
 }
 
 /* Tagline */
 .site-tagline {
-  background: var(--bg-green);
-  padding: 10px 0;
+  margin-top: 12px;
   text-align: center;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--green);
-  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 1rem;
+  color: var(--accent-strong);
+  opacity: 0.9;
 }
 
-/* -------------------------------
-   TYPOGRAPHY
---------------------------------*/
+/* Mobile nav */
+@media (max-width: 900px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}
+
+/* =====================================================================
+   TITLES & TEXT
+===================================================================== */
+
 .page-title {
-  font-size: 42px;
-  color: var(--green);
-  margin-bottom: 12px;
-  font-weight: 800;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
 }
 
 .lead {
-  font-size: 20px;
-  color: var(--text-soft);
-  margin-bottom: 36px;
-  max-width: 820px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Sections spacing */
+.section {
+  margin: 60px 0;
 }
 
 .section-title {
-  font-size: 32px;
-  color: var(--green);
-  font-weight: 700;
-  margin: 60px 0 22px;
+  font-size: 2rem;
+  margin-bottom: 18px;
 }
 
-/* -------------------------------
-   GRID / CARDS
---------------------------------*/
+/* =====================================================================
+   GRID SYSTEM
+===================================================================== */
+
 .grid,
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-  margin-top: 20px;
-}
-
-.card {
-  background: #ffffff;
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--green);
-}
-
-.card p, .card ul {
-  color: var(--text-soft);
-  font-size: 18px;
-}
-
-.card img {
-  width: 100%;
-  border-radius: var(--radius);
-  margin-bottom: 14px;
-}
-
-/* -------------------------------
-   IMAGE + TEXT SPLIT
---------------------------------*/
+.cards-grid,
 .split {
   display: grid;
+  gap: 28px;
+}
+
+/* Auto responsive grid */
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Split layouts */
+.split {
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
   align-items: center;
-  margin-top: 40px;
 }
-
-.split img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.split-text {
-  font-size: 19px;
-  color: var(--text-soft);
-}
-
-/* -------------------------------
-   HERO STANDARD
---------------------------------*/
-.hero {
-  margin: 40px 0 50px;
-}
-
-.hero img {
-  width: 100%;
-  border-radius: var(--radius);
-}
-
-/* -------------------------------
-   RESPONSIVE
---------------------------------*/
 @media (max-width: 900px) {
   .split {
     grid-template-columns: 1fr;
   }
-  
-  .page-title {
-    font-size: 34px;
+}
+
+/* =====================================================================
+   CARDS
+===================================================================== */
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+.card p, .card li {
+  color: var(--text-muted);
+}
+
+/* Lists inside cards */
+.card ul {
+  padding-left: 20px;
+}
+
+/* =====================================================================
+   IMAGES
+===================================================================== */
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+/* Hero images */
+.home-hero img,
+.edu-hero img {
+  border-radius: 18px;
+}
+
+/* =====================================================================
+   HERO BLOCKS
+===================================================================== */
+
+.home-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.edu-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .edu-hero {
+    grid-template-columns: 1fr;
   }
 }
+
+/* =====================================================================
+   FOOTER (future)
+===================================================================== */
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
