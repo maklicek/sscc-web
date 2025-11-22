@@ -271,3 +271,23 @@ img {
     height: auto;
   }
 }
+.site-tagline {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 18px;       /* bylo 15px */
+  font-weight: 600;      /* přidáno – tučnější */
+  color: #e8d7a2;        /* světlejší odstín akcentu */
+  letter-spacing: 0.3px; /* jemné vylepšení čitelnosti */
+}
+.page-title {
+  font-size: 50px;   /* bylo ~42px */
+  font-weight: 800;  /* silnější */
+  color: var(--accent);
+  margin-bottom: 26px;
+}
+.section-title {
+  font-size: 36px;   /* bylo 32px */
+  font-weight: 700;
+  margin: 60px 0 28px;
+  color: var(--accent);
+}
