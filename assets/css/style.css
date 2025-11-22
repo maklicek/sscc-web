@@ -1,5 +1,5 @@
 /* ============================
-   GLOBAL STYLES
+   ROOT & GLOBAL
 ============================ */
 :root {
   --max-width: 1100px;
@@ -15,13 +15,22 @@ html, body {
   margin: 0;
   padding: 0;
   background: var(--bg-dark);
-  color: var(--text-light);
   font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.55;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* UNIVERSAL FIX – all images behave consistently */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 0 16px rgba(0,0,0,0.35);
 }
 
 /* ============================
-   LAYOUT WRAPPER
+   WRAPPER
 ============================ */
 .container {
   max-width: var(--max-width);
@@ -30,13 +39,13 @@ html, body {
 }
 
 /* ============================
-   HEADER + NAV
+   HEADER & NAV
 ============================ */
 .site-header {
   width: 100%;
+  padding: 12px 0 24px;
   background: var(--bg-dark);
-  padding: 10px 0 25px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-inner {
@@ -44,20 +53,20 @@ html, body {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .brand {
   display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--text-light);
   gap: 12px;
 }
 
 .brand-logo {
-  width: 52px;
-  height: auto;
+  width: 50px;
 }
 
 .brand-title {
@@ -71,122 +80,152 @@ html, body {
 }
 
 .main-nav a {
-  margin-left: 22px;
+  margin-left: 20px;
   text-decoration: none;
   color: var(--text-light);
   font-weight: 600;
   transition: 0.2s;
 }
 
-.main-nav a[aria-current="page"],
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
   color: var(--accent);
 }
 
 .site-tagline {
   text-align: center;
-  margin-top: 15px;
-  font-size: 16px;
+  margin-top: 12px;
   color: var(--accent);
+  opacity: 0.9;
 }
 
 /* ============================
-   HERO SECTION
+   PAGE TITLES
 ============================ */
-.home-hero {
-  text-align: center;
-  margin-top: 50px;
-}
-
 .page-title {
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--accent);
-}
-
-/* lead paragraph */
-.lead {
-  font-size: 20px;
-  max-width: 850px;
-  margin: 0 auto 60px;
-  color: var(--text-muted);
-}
-
-/* ============================
-   SECTION TITLES
-============================ */
-.section-title {
-  margin: 60px 0 25px;
-  font-size: 32px;
-  color: var(--accent);
+  text-align: left;
 }
 
 /* ============================
    CARDS
 ============================ */
-.cards-grid {
+.grid,
+.grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+  gap: 32px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .card {
   background: var(--bg-card);
   padding: 24px;
   border-radius: var(--radius);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
 }
 
 .card h3 {
-  margin-top: 0;
   color: var(--accent);
+  margin-top: 0;
 }
 
-.card p {
-  margin-bottom: 0;
+.card p,
+.card li {
   color: var(--text-muted);
 }
 
+.card ul {
+  padding-left: 18px;
+}
+
 /* ============================
-   IMAGE + TEXT SPLIT SECTIONS
+   HERO BLOCKS (for Jak systém funguje)
+============================ */
+.edu-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.edu-hero-text p {
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+.edu-hero img {
+  border-radius: var(--radius);
+}
+
+/* ============================
+   PROCESS SECTIONS (SSCC)
+============================ */
+.sscc-process-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.sscc-process-row--reverse {
+  direction: rtl;
+}
+
+.sscc-process-row--reverse > * {
+  direction: ltr;
+}
+
+.sscc-process-figure img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* Text in all SSCC blocks */
+.consortium-text p {
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+/* ============================
+   SPLIT (Konsorcium page)
 ============================ */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+  margin-top: 40px;
 }
 
-.split img {
-  width: 100%;
-  border-radius: var(--radius);
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.split-text {
-  font-size: 18px;
+.split-text p {
   color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* Remove huge empty gap above text */
-.split .section-title {
-  margin-top: 0;
-}
-
-/* Fix: On pages where image is right side, do not push text down */
-.split > *:first-child {
-  margin-top: 0;
+  font-size: 18px;
 }
 
 /* ============================
    RESPONSIVE
 ============================ */
 @media (max-width: 900px) {
-  .split {
+
+  .edu-hero,
+  .split,
+  .sscc-process-row {
     grid-template-columns: 1fr;
   }
-  .home-hero {
-    margin-top: 30px;
+
+  .main-nav {
+    display: none; /* simplified until mobile menu added */
+  }
+
+  .page-title {
+    text-align: center;
   }
 }
