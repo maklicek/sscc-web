@@ -348,3 +348,77 @@ img {
     border-radius: 20px;
     box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
+/* =========================================================
+   SSCC — Global Light Upgrade (Urbanist, 1300 px)
+   Lightened Dark Technical Theme — 2025 FINAL
+========================================================= */
+
+/* ---------- ROOT OVERRIDES (jemné zesvětlení) ---------- */
+:root {
+  /* původní #0f1112 → o 8 % světlejší */
+  --bg: #151719;
+
+  /* původní #0b0d0e → o 10 % světlejší */
+  --bg-header: #111315;
+
+  /* karty jen o trochu světlejší */
+  --bg-card: #1b1d1f;
+
+  /* hover také světlejší */
+  --bg-hover: #222426;
+
+  /* texty beze změny */
+  --text: #e6e6e6;
+  --text-muted: #b8b8b8;
+
+  /* akcent může zůstat */
+  --accent: #d5b974;
+
+  --radius: 0;
+  --radius-img: 8px;
+
+  --shadow: 0 0 24px rgba(0,0,0,0.45);
+}
+
+/* ---------- MOTTO (výraznější, větší) ---------- */
+.site-tagline {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 20px;          /* původně 15px */
+  font-weight: 600;         /* původně normální */
+  color: var(--accent);
+  letter-spacing: 0.4px;
+}
+
+/* ---------- H1 (větší, čistší) ---------- */
+.page-title {
+  font-size: 48px;           /* původně 42px */
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 26px;
+}
+
+/* ---------- H2 (větší a sjednocené) ---------- */
+.section-title,
+h2 {
+  font-size: 36px;           /* původně 32px */
+  font-weight: 700;
+  color: var(--accent);
+  margin: 60px 0 30px;
+}
+
+/* ---------- HERO LEAD TEXT (harmonizace) ---------- */
+.lead {
+  max-width: 900px;
+  margin: 0 auto 55px;
+  color: var(--text-muted);
+  font-size: 21px;           /* o chlup větší */
+  line-height: 1.65;
+}
+
+/* ---------- H3 jemné zvýraznění ---------- */
+h3 {
+  font-size: 22px;           /* bývalo menší */
+  font-weight: 700;
+  color: var(--accent);
+}
