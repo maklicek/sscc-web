@@ -267,3 +267,11 @@ img {
 .page-main a:hover {
   color: #e7c880;
 }
+.intro-image img {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 14px;
+  display: block;
+  margin: 40px auto;
+  opacity: 0.95;
+}
