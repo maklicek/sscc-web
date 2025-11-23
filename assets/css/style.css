@@ -258,3 +258,12 @@ img {
     max-height: 300px;
   }
 }
+.page-main a {
+  color: #c2a96c;   /* stejná zlatá jako nadpisy */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-main a:hover {
+  color: #e7c880;
+}
