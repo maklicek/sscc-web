@@ -1,6 +1,6 @@
 /* =========================================================
-   SSCC — C + B FRAMEWORK (Urbanist, 1300 px)
-   Lightened Technical Theme — FINAL
+   SSCC — Světlejší DARK (Grafitový industriální styl)
+   Modernizovaný celowebový design – listopad 2025
 ========================================================= */
 
 /* ---------- FONTS ---------- */
@@ -10,21 +10,24 @@
 :root {
   --max-width: 1300px;
 
-  /* Color system – LIGHTENED */
-  --bg: #151718;            /* Global background */
-  --bg-header: #1b1d1e;     /* Lighter than before */
-  --bg-card: #1f2123;       /* Lighter cards */
-  --bg-hover: #2a2c2e;
+  /* Lightened industrial dark */
+  --bg: #1b1d1f;            /* základní pozadí */
+  --bg-header: #1f2123;      /* světlejší hlavička */
+  --bg-card: #232527;        /* karty */
+  --bg-hover: #2c2e30;
 
-  --text: #f2f2f2;
-  --text-muted: #c8c8c8;
+  /* Text */
+  --text: #f0f0f0;
+  --text-muted: #cecece;
 
-  --accent: #d9c27a;
+  /* Zlatý akcent */
+  --accent: #d4b46a;
 
-  --radius: 0px;  /* sharp */
-  --radius-img: 10px;
+  /* Rádius */
+  --radius: 0px;            /* ostré hrany (tvrdý industriální styl) */
+  --radius-img: 8px;
 
-  --shadow: 0 0 22px rgba(0,0,0,0.35);
+  --shadow: 0 0 30px rgba(0,0,0,0.35);
 }
 
 /* ---------- GLOBAL ---------- */
@@ -34,7 +37,7 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: "Urbanist", sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 img {
@@ -44,22 +47,25 @@ img {
   border-radius: var(--radius-img);
 }
 
-/* ---------- LAYOUT ---------- */
+/* Spacing */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 45px 24px;
 }
 
-/* ---------- HEADER ---------- */
+/* =========================================================
+   HEADER
+========================================================= */
 .site-header {
   width: 100%;
   background: var(--bg-header);
-  padding: 18px 0 26px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 18px 0 22px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(6px);
 }
 
 .nav-inner {
@@ -71,20 +77,20 @@ img {
   align-items: center;
 }
 
-/* Brand */
+/* Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 18px;
-  text-decoration: none;
+  gap: 16px;
   color: var(--text);
+  text-decoration: none;
 }
 
 .brand-logo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
+  border-radius: 0;
 }
 
 .brand-title {
@@ -98,7 +104,7 @@ img {
   color: var(--text-muted);
 }
 
-/* ---------- NAV ---------- */
+/* Navigation */
 .main-nav {
   display: flex;
   gap: 22px;
@@ -106,11 +112,12 @@ img {
 
 .main-nav a {
   text-decoration: none;
+  padding: 9px 16px;
   color: var(--text);
   font-weight: 600;
-  padding: 8px 14px;
-  transition: 0.2s;
+  font-size: 15px;
   border-radius: 6px;
+  transition: 0.2s;
 }
 
 .main-nav a:hover {
@@ -122,19 +129,23 @@ img {
   color: var(--accent);
 }
 
-/* ---------- TAGLINE ---------- */
+/* Motto */
 .site-tagline {
   text-align: center;
-  margin-top: 16px;
-  font-size: 18px;      /* bigger */
-  font-weight: 500;
+  margin-top: 18px;
+  font-size: 18px;         /* větší */
+  font-weight: 600;        /* tučnější */
   color: var(--accent);
+  opacity: 0.95;
 }
 
-/* ---------- TITLES ---------- */
+/* =========================================================
+   TITLES
+========================================================= */
+
 .page-title {
-  font-size: 44px;
-  font-weight: 700;
+  font-size: 48px;        /* větší titulky */
+  font-weight: 800;
   color: var(--accent);
   margin-bottom: 26px;
 }
@@ -142,27 +153,28 @@ img {
 .section-title {
   font-size: 34px;
   font-weight: 700;
-  margin: 60px 0 28px;
+  margin: 60px 0 30px;
   color: var(--accent);
 }
 
 .lead {
   max-width: 900px;
-  margin: 0 auto 55px;
+  margin: 0 auto 50px;
   color: var(--text-muted);
   font-size: 21px;
 }
 
-/* ---------- GRID SYSTEM ---------- */
+/* =========================================================
+   GRID / CARDS
+========================================================= */
+
 .grid,
-.cards-grid,
-.idea-grid {
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 34px;
 }
 
-/* ---------- CARD ---------- */
 .card {
   background: var(--bg-card);
   padding: 28px;
@@ -175,17 +187,20 @@ img {
   margin-top: 0;
 }
 
-.card p, .card ul {
-  color: var(--text-muted);
-}
+/* =========================================================
+   SPLIT SECTIONS (obrázek + text)
+========================================================= */
 
-/* ---------- SPLIT BLOCK (image left / text right) ---------- */
 .split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 50px;
   align-items: center;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
+}
+
+.split.reverse {
+  grid-template-columns: 1.1fr 1fr;
 }
 
 .split-text {
@@ -194,310 +209,52 @@ img {
 }
 
 .split img {
-  height: 380px;
-  width: 100%;
-  object-fit: cover;
   border-radius: var(--radius-img);
   box-shadow: var(--shadow);
+  max-height: 380px;     /* menší obrázky */
+  object-fit: cover;
 }
 
-/* ---------- PROJECT GRID (text + image exact layout) ---------- */
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
 .project-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
   gap: 50px;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .project-grid--reverse {
-  flex-direction: row-reverse;
-}
-
-.project-text {
-  flex: 1;
-  font-size: 18px;
-  color: var(--text-muted);
-}
-
-.project-image {
-  flex: 1;
+  grid-template-columns: 1fr 1.1fr;
 }
 
 .project-image img {
-  width: 100%;
-  height: 420px;
+  max-height: 420px;
   object-fit: cover;
-  border-radius: var(--radius-img);
   box-shadow: var(--shadow);
 }
 
-/* ---------- PROCESS IMAGES FOR SSCC PAGE ---------- */
-.sscc-process-row {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin: 70px 0;
-}
-
-.sscc-process-row--reverse {
-  flex-direction: row-reverse;
-}
-
-.sscc-process-figure img {
-  width: 100%;
-  max-width: 520px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: var(--radius-img);
-  box-shadow: var(--shadow);
-}
-
-/* ---------- MOBILE ---------- */
+/* =========================================================
+   MOBILE
+========================================================= */
 @media (max-width: 900px) {
 
-  .split,
-  .project-grid,
-  .sscc-process-row {
-    grid-template-columns: 1fr;
-    flex-direction: column !important;
-  }
-
   .page-title {
-    font-size: 34px;
+    font-size: 36px;
   }
 
-  .split img,
-  .project-image img {
-    height: auto;
+  .split,
+  .split.reverse,
+  .project-grid,
+  .project-grid--reverse {
+    grid-template-columns: 1fr;
   }
-}
-.site-tagline {
-  text-align: center;
-  margin-top: 16px;
-  font-size: 18px;       /* bylo 15px */
-  font-weight: 600;      /* přidáno – tučnější */
-  color: #e8d7a2;        /* světlejší odstín akcentu */
-  letter-spacing: 0.3px; /* jemné vylepšení čitelnosti */
-}
-.page-title {
-  font-size: 50px;   /* bylo ~42px */
-  font-weight: 800;  /* silnější */
-  color: var(--accent);
-  margin-bottom: 26px;
-}
-.section-title {
-  font-size: 36px;   /* bylo 32px */
-  font-weight: 700;
-  margin: 60px 0 28px;
-  color: var(--accent);
-}
-/* Odkazy v kartách – sjednocená moderní barva */
-.card a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.25s;
-}
 
-.card a:hover {
-  color: #f1e3b2; /* světlejší odstín pro lepší viditelnost */
-  text-decoration: underline;
-}
-.coop-section {
-    padding: 60px 5%;
-    color: #f5f5f5;
-}
-
-.coop-section h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 40px;
-    color: #e3c885;
-}
-
-.coop-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-.coop-box {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.coop-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #e3c885;
-}
-
-.coop-box p {
-    line-height: 1.65;
-    margin-bottom: 15px;
-}
-
-.coop-image img {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
-}
-/* =========================================================
-   SSCC — Global Light Upgrade (Urbanist, 1300 px)
-   Lightened Dark Technical Theme — 2025 FINAL
-========================================================= */
-
-/* ---------- ROOT OVERRIDES (jemné zesvětlení) ---------- */
-:root {
-  /* původní #0f1112 → o 8 % světlejší */
-  --bg: #151719;
-
-  /* původní #0b0d0e → o 10 % světlejší */
-  --bg-header: #111315;
-
-  /* karty jen o trochu světlejší */
-  --bg-card: #1b1d1f;
-
-  /* hover také světlejší */
-  --bg-hover: #222426;
-
-  /* texty beze změny */
-  --text: #e6e6e6;
-  --text-muted: #b8b8b8;
-
-  /* akcent může zůstat */
-  --accent: #d5b974;
-
-  --radius: 0;
-  --radius-img: 8px;
-
-  --shadow: 0 0 24px rgba(0,0,0,0.45);
-}
-
-/* ---------- MOTTO (výraznější, větší) ---------- */
-.site-tagline {
-  text-align: center;
-  margin-top: 18px;
-  font-size: 20px;          /* původně 15px */
-  font-weight: 600;         /* původně normální */
-  color: var(--accent);
-  letter-spacing: 0.4px;
-}
-
-/* ---------- H1 (větší, čistší) ---------- */
-.page-title {
-  font-size: 48px;           /* původně 42px */
-  font-weight: 800;
-  color: var(--accent);
-  margin-bottom: 26px;
-}
-
-/* ---------- H2 (větší a sjednocené) ---------- */
-.section-title,
-h2 {
-  font-size: 36px;           /* původně 32px */
-  font-weight: 700;
-  color: var(--accent);
-  margin: 60px 0 30px;
-}
-
-/* ---------- HERO LEAD TEXT (harmonizace) ---------- */
-.lead {
-  max-width: 900px;
-  margin: 0 auto 55px;
-  color: var(--text-muted);
-  font-size: 21px;           /* o chlup větší */
-  line-height: 1.65;
-}
-
-/* ---------- H3 jemné zvýraznění ---------- */
-h3 {
-  font-size: 22px;           /* bývalo menší */
-  font-weight: 700;
-  color: var(--accent);
-}
-/* ============================================
-   SSCC — Drobné vylepšení stylů (A)
-=============================================== */
-
-/* ---------- ODKAZY (čitelné, bez modré) ---------- */
-a {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  opacity: 0.9;
-}
-
-/* ---------- CTA odkazy v kartách ---------- */
-.card a {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.card a:hover {
-  opacity: 0.85;
-}
-
-/* ---------- TEXTOVÉ ODSTUPY ---------- */
-p {
-  margin-bottom: 18px;
-}
-
-/* lepší odsazení mezi sekcemi */
-.section {
-  margin-bottom: 70px;
-}
-
-/* ---------- ODRÁŽKY (lepší čitelnost) ---------- */
-ul {
-  padding-left: 22px;
-  margin-bottom: 16px;
-}
-
-li {
-  margin-bottom: 6px;
-  line-height: 1.55;
-}
-
-/* ---------- CARD STYLING ---------- */
-.card {
-  background: var(--bg-card);
-  padding: 28px;
-  border-radius: var(--radius);
-  box-shadow: 0 0 22px rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-
-.card h3 {
-  margin-bottom: 12px;
-}
-
-.card p:last-child,
-.card ul:last-child {
-  margin-bottom: 0;
-}
-
-/* ---------- SPLIT (lepší mezery) ---------- */
-.split {
-  gap: 48px;
-}
-
-.split-text p {
-  margin-bottom: 18px;
-}
-
-/* ---------- GRID uniformita ---------- */
-.grid,
-.cards-grid {
-  gap: 36px;
+  .project-image img,
+  .split img {
+    max-height: 300px;
+  }
 }
