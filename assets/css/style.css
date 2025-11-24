@@ -302,3 +302,12 @@ img {
 .princip-image-wrapper {
   text-align: center;
 }
+.project-image {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+}
