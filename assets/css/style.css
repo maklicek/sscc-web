@@ -1,403 +1,176 @@
-/* =========================================================
-   SSCC — Světlejší DARK (Grafitový industriální styl)
-   Modernizovaný celowebový design – listopad 2025
-========================================================= */
+/* ---------------------------------------------------------
+   SSCC – Moderní vizuální styl (2025)
+   Barvy, typografie, layout, animace, split sekce, gridy
+--------------------------------------------------------- */
 
-/* ---------- FONTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap');
+/* =====================================
+   1) TYPOGRAFIE
+===================================== */
 
-/* ---------- ROOT ---------- */
-:root {
-  --max-width: 1300px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400&display=swap');
 
-  /* Lightened industrial dark */
-  --bg: #1b1d1f;            /* základní pozadí */
-  --bg-header: #1f2123;      /* světlejší hlavička */
-  --bg-card: #232527;        /* karty */
-  --bg-hover: #2c2e30;
-
-  /* Text */
-  --text: #f0f0f0;
-  --text-muted: #cecece;
-
-  /* Zlatý akcent */
-  --accent: #d4b46a;
-
-  /* Rádius */
-  --radius: 0px;            /* ostré hrany (tvrdý industriální styl) */
-  --radius-img: 8px;
-
-  --shadow: 0 0 30px rgba(0,0,0,0.35);
-}
-
-/* ---------- GLOBAL ---------- */
-html, body {
+body {
   margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Urbanist", sans-serif;
-  line-height: 1.65;
+  font-family: "Inter", sans-serif;
+  color: #111;
+  background: #f5f7fa;
+  line-height: 1.6;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius-img);
+/* Nadpisy */
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+  color: #1C3F7A;
 }
 
-/* Spacing */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* =====================================
+   2) KONTEJNERY A ZÁKLADNÍ ROZVRŽENÍ
+===================================== */
+
 .container {
-  max-width: var(--max-width);
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 45px 24px;
+  padding: 0 20px;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
+.page-main {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+  color: #1C3F7A;
+  border-left: 5px solid #2D89F0;
+  padding-left: 12px;
+}
+
+/* =====================================
+   3) NAVIGACE
+===================================== */
+
 .site-header {
-  width: 100%;
-  background: var(--bg-header);
-  padding: 18px 0 22px;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(6px);
+  background: #0A1A28;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .nav-inner {
-  max-width: var(--max-width);
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-/* Logo */
 .brand {
   display: flex;
   align-items: center;
-  gap: 16px;
-  color: var(--text);
   text-decoration: none;
 }
 
 .brand-logo {
-  width: 68px;
-  height: 68px;
-  object-fit: contain;
-  border-radius: 0;
+  width: 46px;
+  margin-right: 10px;
+}
+
+.brand-text {
+  color: #fff;
 }
 
 .brand-title {
-  font-size: 26px;
-  font-weight: 800;
-  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 .brand-subtitle {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-/* Navigation */
-.main-nav {
-  display: flex;
-  gap: 22px;
+  font-size: 0.8rem;
+  opacity: 0.7;
 }
 
 .main-nav a {
+  color: #cfd9e4;
+  margin-left: 18px;
   text-decoration: none;
-  padding: 9px 16px;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 15px;
-  border-radius: 6px;
+  font-weight: 500;
   transition: 0.2s;
 }
 
 .main-nav a:hover {
-  background: var(--bg-hover);
+  color: #2D89F0;
 }
 
 .main-nav a[aria-current="page"] {
-  background: var(--bg-hover);
-  color: var(--accent);
+  color: #FFC857;
+  font-weight: 600;
 }
 
-/* Motto */
 .site-tagline {
+  color: #d2dde8;
+  font-size: 0.9rem;
   text-align: center;
-  margin-top: 18px;
-  font-size: 18px;         /* větší */
-  font-weight: 600;        /* tučnější */
-  color: var(--accent);
-  opacity: 0.95;
+  margin-top: 10px;
 }
 
-/* =========================================================
-   TITLES
-========================================================= */
+/* =====================================
+   4) KARTY
+===================================== */
 
-.page-title {
-  font-size: 48px;        /* větší titulky */
-  font-weight: 800;
-  color: var(--accent);
-  margin-bottom: 26px;
-}
-
-.section-title {
-  font-size: 34px;
-  font-weight: 700;
-  margin: 60px 0 30px;
-  color: var(--accent);
-}
-
-.lead {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  color: var(--text-muted);
-  font-size: 21px;
-}
-
-/* =========================================================
-   GRID / CARDS
-========================================================= */
-
-.grid,
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 34px;
-}
-
-.card {
-  background: var(--bg-card);
-  padding: 28px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.card h3 {
-  color: var(--accent);
-  margin-top: 0;
-}
-
-/* =========================================================
-   SPLIT SECTIONS (obrázek + text)
-========================================================= */
-
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 50px;
-  align-items: center;
-  margin-bottom: 90px;
-}
-
-.split.reverse {
-  grid-template-columns: 1.1fr 1fr;
-}
-
-.split-text {
-  font-size: 18px;
-  color: var(--text-muted);
-}
-
-.split img {
-  border-radius: var(--radius-img);
-  box-shadow: var(--shadow);
-  max-height: 380px;     /* menší obrázky */
-  object-fit: cover;
-}
-
-/* =========================================================
-   PROJECT GRID
-========================================================= */
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  margin-bottom: 90px;
-}
-
-.project-grid--reverse {
-  grid-template-columns: 1fr 1.1fr;
-}
-
-.project-image img {
-  max-height: 420px;
-  object-fit: cover;
-  box-shadow: var(--shadow);
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 900px) {
-
-  .page-title {
-    font-size: 36px;
-  }
-
-  .split,
-  .split.reverse,
-  .project-grid,
-  .project-grid--reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .project-image img,
-  .split img {
-    max-height: 300px;
-  }
-}
-.page-main a {
-  color: #c2a96c;   /* stejná zlatá jako nadpisy */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.page-main a:hover {
-  color: #e7c880;
-}
-.intro-image img { 
-  width: 100%;
-  max-width: 1200px;
-  border-radius: 14px;
-  display: block;
-  margin: 40px auto;
-  opacity: 0.95;
-}
-.hero-image {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius: 16px;
-  margin: 0 auto;
-  display: block;
-}
-
-.hero-image-wrapper {
-  display: flex;
-  justify-content: center;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin: 40px 0;
 }
 
-.princip-image {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-  margin: 30px auto;
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.princip-image-wrapper {
-  text-align: center;
-}
-.project-image {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto 20px auto;
-  object-fit: cover;
-}
-.project-image {
-  width: 100%;
-  max-width: 320px;  /* nebo 300px */
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto 20px auto;
-  object-fit: cover;
-}
-/* HERO – obrázek */
-.hero-image-wrapper {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px;
-  margin-bottom: 3rem;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
 }
 
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* HERO – text */
-.hero-text {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 0 1rem;
-}
-
-.hero-text .page-title {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text .lead {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  opacity: 0.95;
-}
-.idea-image-wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: 2rem auto;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.idea-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.ideas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.idea-card {
-  background: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.25);
-}
-
-.idea-img {
+.card img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 1rem;
-  display: block;
+  margin-bottom: 12px;
 }
 
-.idea-card h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #e2c27a;
-}
+/* =====================================
+   5) SPLIT SEKCE (obrázek vlevo/vpravo)
+===================================== */
+
 .idea-section {
   display: flex;
-  gap: 2rem;
-  margin: 4rem 0;
   align-items: center;
+  gap: 40px;
+  margin: 70px 0;
 }
 
 .idea-section.reverse {
@@ -407,20 +180,82 @@ img {
 .idea-image-left img,
 .idea-image-right img {
   width: 100%;
-  max-width: 380px;
+  max-width: 460px;
   border-radius: 12px;
-  display: block;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
-.idea-text-right,
-.idea-text-left {
+.idea-text-left,
+.idea-text-right {
   flex: 1;
-  font-size: 1.15rem;
-  line-height: 1.6;
 }
 
-.idea-text-right h2,
-.idea-text-left h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-} 
+/* =====================================
+   6) RESPONSIVITA
+===================================== */
+
+@media (max-width: 900px) {
+  .idea-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .idea-section.reverse {
+    flex-direction: column;
+  }
+  
+  .idea-image-left img,
+  .idea-image-right img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* =====================================
+   7) ANIMACE
+===================================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease-out;
+}
+
+/* =====================================
+   8) DLOUHÉ TEKSTOVÉ BLOKY (Edukace)
+===================================== */
+
+.info-box {
+  background: #E1E8EF;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.technical-box {
+  background: #0A1A28;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.93rem;
+  margin-top: 20px;
+  border-left: 5px solid #2D89F0;
+}
