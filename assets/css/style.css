@@ -267,7 +267,7 @@ img {
 .page-main a:hover {
   color: #e7c880;
 }
-.intro-image img {
+.intro-image img { 
   width: 100%;
   max-width: 1200px;
   border-radius: 14px;
