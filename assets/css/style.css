@@ -367,3 +367,29 @@ img {
   height: auto;
   object-fit: cover;
 }
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.idea-card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+}
+
+.idea-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.idea-card h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #e2c27a;
+}
