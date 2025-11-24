@@ -320,3 +320,36 @@ img {
   margin: 0 auto 20px auto;
   object-fit: cover;
 }
+/* HERO – obrázek */
+.hero-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* HERO – text */
+.hero-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.hero-text .page-title {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text .lead {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
