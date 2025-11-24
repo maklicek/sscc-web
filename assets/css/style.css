@@ -353,3 +353,17 @@ img {
   line-height: 1.7;
   opacity: 0.95;
 }
+.idea-image-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.idea-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
