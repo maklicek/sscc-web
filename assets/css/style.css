@@ -275,3 +275,30 @@ img {
   margin: 40px auto;
   opacity: 0.95;
 }
+.hero-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 16px;
+  margin: 0 auto;
+  display: block;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.princip-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 30px auto;
+}
+
+.princip-image-wrapper {
+  text-align: center;
+}
