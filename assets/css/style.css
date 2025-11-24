@@ -393,3 +393,34 @@ img {
   margin-bottom: 0.5rem;
   color: #e2c27a;
 }
+.idea-section {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem 0;
+  align-items: center;
+}
+
+.idea-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.idea-image-left img,
+.idea-image-right img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  display: block;
+}
+
+.idea-text-right,
+.idea-text-left {
+  flex: 1;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.idea-text-right h2,
+.idea-text-left h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
