@@ -311,3 +311,12 @@ img {
   margin: 0 auto 20px auto;
   object-fit: cover;
 }
+.project-image {
+  width: 100%;
+  max-width: 320px;  /* nebo 300px */
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+}
