@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------
    SSCC – Moderní vizuální styl (2025)
-   Kompletně očištěný, sjednocený a stabilní stylesheet
+   Kompletně sjednocený stylesheet
 --------------------------------------------------------- */
 
 /* =====================================
@@ -28,28 +28,22 @@ h2 { font-size: 1.9rem; font-weight: 600; margin-bottom: 0.6rem; }
 h3 { font-size: 1.35rem; font-weight: 600; }
 
 /* =====================================
-   2) KONTEJNERY A ZÁKLADNÍ ROZVRŽENÍ
+   2) KONTEJNER – sjednocení na všech stránkách
 ===================================== */
 
 .container {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .page-main {
   padding: 40px 0;
 }
 
-.section-title {
-  font-size: 1.9rem;
-  border-left: 5px solid #2D89F0;
-  padding-left: 12px;
-  margin-bottom: 1.2rem;
-}
-
 /* =====================================
-   3) NAVIGACE
+   3) NAVIGACE – pevná, funkční, spolehlivá
 ===================================== */
 
 .site-header {
@@ -83,8 +77,15 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   transition: 0.2s;
 }
 
-.main-nav a:hover { color: #2D89F0; }
-.main-nav a[aria-current="page"] { color: #FFC857; font-weight: 600; }
+.main-nav a:hover {
+  color: #2D89F0;
+}
+
+/* 🔥 OPRAVA zvýraznění aktivní stránky */
+.main-nav a[aria-current="page"] {
+  color: #FFC857 !important;
+  font-weight: 600 !important;
+}
 
 .site-tagline {
   text-align: center;
@@ -94,50 +95,20 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 }
 
 /* =====================================
-   4) KARTY
-===================================== */
-
-.cards-grid {
-  display: grid;
-  gap: 32px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  margin: 40px 0;
-}
-
-.card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 12px;
-}
-
-/* =====================================
-   5) HERO OBRÁZEK
+   4) HERO obrázky – sjednocené
 ===================================== */
 
 .hero-image {
   width: 100%;
   max-width: 1100px;
-  border-radius: 14px;
   display: block;
   margin: 30px auto;
+  border-radius: 14px;
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
 /* =====================================
-   6) SPLIT / PROJECT GRID
+   5) Projekty, split sekce, nápady
 ===================================== */
 
 .project-section {
@@ -147,6 +118,7 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 .project-grid {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
 }
 
@@ -168,42 +140,55 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 .project-image img {
   width: 100%;
   max-width: 520px;
+  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* =====================================
-   7) NÁPADY – split sekce
+   6) Nápady – karty
 ===================================== */
 
-.idea-section {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  margin: 70px 0;
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin: 40px 0;
 }
 
-.idea-section.reverse {
-  flex-direction: row-reverse;
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.idea-image-left img,
-.idea-image-right img {
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+}
+
+.card img {
   width: 100%;
-  max-width: 460px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-.idea-text-left,
-.idea-text-right {
-  flex: 1;
+  margin-bottom: 12px;
 }
 
 /* =====================================
-   8) EDUKACE – infoboxy
+   7) Edukace – sjednocené obrázky
 ===================================== */
 
+.education-image {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Infoboxy */
 .info-box {
   background: #E1E8EF;
   padding: 20px;
@@ -217,28 +202,28 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
-  font-size: 0.93rem;
   border-left: 5px solid #2D89F0;
   font-family: "Roboto Mono", monospace;
 }
 
 /* =====================================
-   9) RESPONZIVITA
+   8) RESPONSIVITA
 ===================================== */
 
 @media (max-width: 900px) {
+
   .project-grid,
-  .project-grid.reverse,
-  .idea-section,
-  .idea-section.reverse {
+  .project-grid.reverse {
     flex-direction: column;
     text-align: center;
   }
 
-  .project-image img,
-  .idea-image-left img,
-  .idea-image-right img {
+  .project-image img {
     max-width: 100%;
+  }
+
+  .idea-section {
+    flex-direction: column;
   }
 }
 
