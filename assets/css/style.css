@@ -360,3 +360,45 @@ body, html {
     border-radius: 12px;
     object-fit: cover;
 }
+/* === Zarovnání sekcí, žádné posouvání doprava === */
+
+.project-grid,
+.split,
+.idea-section,
+.section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 40px;
+}
+.project-grid,
+.split {
+    flex-direction: row;
+}
+
+.project-grid img,
+.split img {
+    max-width: 480px;
+    border-radius: 12px;
+}
+@media (max-width: 900px) {
+    .project-grid,
+    .split,
+    .idea-section {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .project-grid img,
+    .split img,
+    .idea-section img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+.container {
+    max-width: 1080px;
+    margin: 0 auto !important;
+    padding: 0 20px;
+}
