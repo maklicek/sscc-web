@@ -267,3 +267,63 @@ h3 {
   margin: 30px auto;
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
+/* === Globální vycentrování hlavního obsahu === */
+.container,
+.page-main .container,
+.section .container {
+  max-width: 1200px;
+  margin: 0 auto !important; /* vycentrování */
+  padding: 0 24px; /* malý okraj vlevo/vpravo */
+  box-sizing: border-box;
+}
+
+/* === Oprava rozhozených sekcí === */
+.idea-section,
+.split,
+.section,
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === Obrázky – sjednocení velikosti a zarovnání === */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Pro jistotu – aby se nic netlačilo doprava === */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.page-main,
+.section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Karty v nápadech */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* Hero obrázky – centrální velikost */
+.hero-image,
+.idea-image-left img,
+.idea-image-right img,
+.split img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
