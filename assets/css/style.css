@@ -231,3 +231,22 @@ h3 { font-size: 1.35rem; font-weight: 600; }
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.5rem; }
 }
+/* ====== Fix horizontálního posunu ====== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+.hero-image, .education-image {
+    max-width: 1100px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 14px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
