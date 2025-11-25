@@ -327,3 +327,36 @@ body, html {
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+/* sjednotí střed stránky všude */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* projekty – obrázek vlevo, text vpravo */
+.project-grid,
+.split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ale na mobilech se to složí pod sebe */
+@media (max-width: 900px) {
+    .project-grid,
+    .split {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* obrázky, aby nelezly ven */
+.project-image img,
+.split img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
