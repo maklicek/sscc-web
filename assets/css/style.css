@@ -402,3 +402,51 @@ body, html {
     margin: 0 auto !important;
     padding: 0 20px;
 }
+/* === OPRAVA ROZHÁZENÉ STRÁNKY PROJEKTY === */
+
+.project-section {
+    padding: 60px 0;
+}
+
+.project-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.project-grid.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.project-image img {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Mobilní verze */
+@media (max-width: 900px) {
+    .project-grid,
+    .project-grid.reverse {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
