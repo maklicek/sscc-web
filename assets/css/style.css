@@ -228,3 +228,16 @@ body {
     display: block;
     border-radius: 12px;
 }
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.edu-img {
+    width: 420px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
