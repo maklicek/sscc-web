@@ -349,3 +349,22 @@ img {
   margin: 20px auto;
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
+/* -------------------------------------------
+   NÁPADY – Sjednocení layoutu do sloupce
+------------------------------------------- */
+
+.idea-section,
+.idea-section.reverse {
+  display: block !important;      /* zruší flexbox */
+  text-align: left !important;
+}
+
+.idea-section img,
+.idea-img {
+  width: 100%;
+  max-width: 550px;
+  display: block;
+  margin: 20px auto !important;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
