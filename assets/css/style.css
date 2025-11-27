@@ -241,3 +241,273 @@ body {
     display: block;
     margin: 20px auto;
 }
+/* ===========================================
+   ÚVODNÍ STRÁNKA – SSCC (2025 Premium Style)
+   =========================================== */
+
+/* UNIFIED SPACING */
+section {
+    margin-bottom: 90px;
+}
+
+/* -------------------------------
+   1) HERO SECTION
+--------------------------------*/
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.hero-text {
+    flex: 1.1;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    color: #13366f;
+}
+
+.hero-text .lead {
+    font-size: 1.22rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #0d6efd;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: 0.2s;
+}
+
+.cta-btn:hover {
+    background: #0b58ce;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+
+/* ---------------------------------
+   2) PROBLÉM ENERGETIKY
+-----------------------------------*/
+.problem-section h2 {
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+}
+
+.problem-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.problem-box {
+    background: #ffffff;
+    padding: 18px 20px;
+    border-left: 5px solid #bd1717;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+/* ---------------------------------
+   3) PILÍŘE SSCC
+-----------------------------------*/
+.pillars-section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.pillar {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.pillar img {
+    width: 80px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.pillar h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------
+   4) JAK SSCC FUNGUJE
+-----------------------------------*/
+.cycle-section h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cycle-flex {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.cycle-text {
+    flex: 1;
+    font-size: 1.05rem;
+}
+
+.cycle-text ul {
+    margin-top: 15px;
+    padding-left: 18px;
+}
+
+.cycle-text ul li {
+    margin-bottom: 8px;
+}
+
+.cycle-image {
+    flex: 1;
+    text-align: center;
+}
+
+.cycle-image img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
+
+
+/* ---------------------------------
+   5) VÝHODY SSCC
+-----------------------------------*/
+.benefits-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 28px;
+}
+
+.benefit {
+    background: #ffffff;
+    padding: 18px 22px;
+    border-radius: 10px;
+    border-left: 5px solid #13366f;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+
+/* ---------------------------------
+   6) KDE LZE SSCC POUŽÍT
+-----------------------------------*/
+.use-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.use-box {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    border-left: 5px solid #0d6efd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+
+/* ---------------------------------
+   7) CTA PANELY
+-----------------------------------*/
+.cta-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 24px;
+}
+
+.cta-panel {
+    display: block;
+    padding: 22px;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #111;
+    border-left: 5px solid #0d6efd;
+    transition: 0.2s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.cta-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+}
+
+
+/* ---------------------------------
+   RESPONSIVITA
+-----------------------------------*/
+@media (max-width: 900px) {
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 70%;
+    }
+
+    .cycle-flex {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1.05rem;
+    }
+}
