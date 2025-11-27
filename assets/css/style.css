@@ -1,209 +1,210 @@
 /* ---------------------------------------------------------
-   SSCC – Moderní vizuální styl (2025)
-   Kompletně sjednocený stylesheet
+   SSCC – CLEAN TECH STYLE (2025)
+   Vědecký, technický, stabilní, profesionální design
 --------------------------------------------------------- */
 
 /* =====================================
    1) TYPOGRAFIE
 ===================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background: #f5f7fa;
-  color: #111;
-  line-height: 1.6;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #f6f8fa;
+    color: #111;
+    line-height: 1.65;
 }
 
 h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-  color: #1C3F7A;
-  margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #1C3F7A;
+    margin-top: 0;
 }
 
-h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 1rem; }
-h2 { font-size: 1.9rem; font-weight: 600; margin-bottom: 0.6rem; }
+h1 { font-size: 2.45rem; font-weight: 700; margin-bottom: 1rem; }
+h2 { font-size: 1.95rem; font-weight: 600; margin-bottom: 0.75rem; }
 h3 { font-size: 1.35rem; font-weight: 600; }
 
 /* =====================================
-   2) KONTEJNER – sjednocení na všech stránkách
+   2) KONTEJNER – hlavní rozvržení
 ===================================== */
 
 .container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
-}
-
-.page-main {
-  padding: 40px 0;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 /* =====================================
-   3) NAVIGACE – pevná, funkční, spolehlivá
+   3) NAVIGACE / HLAVIČKA
 ===================================== */
 
 .site-header {
-  background: #0A1A28;
-  padding: 20px 0;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    background: #112235;
+    padding: 22px 0;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
 }
 
 .nav-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.brand { display: flex; align-items: center; text-decoration: none; }
-.brand-logo { width: 46px; margin-right: 10px; }
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 58px;
+    margin-right: 14px;
+}
 
 .brand-text { color: #fff; }
-.brand-title { font-size: 1.25rem; font-weight: 700; }
-.brand-subtitle { font-size: 0.8rem; opacity: 0.7; }
+.brand-title { font-size: 1.45rem; font-weight: 700; }
+.brand-subtitle { font-size: 0.85rem; opacity: 0.75; }
 
 .main-nav a {
-  color: #cfd9e4;
-  margin-left: 18px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
+    color: #d7e0ea;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
 .main-nav a:hover {
-  color: #2D89F0;
+    color: #2D89F0;
 }
 
-/* 🔥 OPRAVA zvýraznění aktivní stránky */
 .main-nav a[aria-current="page"] {
-  color: #FFC857 !important;
-  font-weight: 600 !important;
+    color: #FFC857 !important;
+    font-weight: 600 !important;
 }
 
 .site-tagline {
-  text-align: center;
-  margin-top: 10px;
-  color: #d2dde8;
-  font-size: 0.9rem;
+    text-align: center;
+    color: #d8e3ee;
+    margin-top: 10px;
+    font-size: 1rem;
 }
 
 /* =====================================
-   4) HERO obrázky – sjednocené
+   4) HERO OBRÁZKY – odborný styl
 ===================================== */
 
 .hero-image {
-  width: 100%;
-  max-width: 1100px;
-  display: block;
-  margin: 30px auto;
-  border-radius: 14px;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    width: 100%;
+    max-width: 720px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 /* =====================================
-   5) Projekty, split sekce, nápady
+   5) PROJEKTY – split layout
 ===================================== */
 
 .project-section {
-  padding: 60px 0;
+    padding: 60px 0;
 }
 
 .project-grid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .project-grid.reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .project-text {
-  flex: 1;
-  min-width: 280px;
+    flex: 1;
+    min-width: 300px;
 }
 
 .project-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .project-image img {
-  width: 100%;
-  max-width: 520px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 460px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+    object-fit: cover;
 }
 
 /* =====================================
-   6) Nápady – karty
+   6) NÁPADY – karty (menší obrázky)
 ===================================== */
 
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
-  margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin: 40px 0;
 }
 
 .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .card img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 12px;
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* =====================================
-   7) Edukace – sjednocené obrázky
+   7) EDUKACE – odborné obrázky + infoboxy
 ===================================== */
 
 .education-image {
-  width: 100%;
-  max-width: 900px;
-  display: block;
-  margin: 30px auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 720px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
-/* Infoboxy */
 .info-box {
-  background: #E1E8EF;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
+    background: #E1E8EF;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
 }
 
 .technical-box {
-  background: #0A1A28;
-  color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  border-left: 5px solid #2D89F0;
-  font-family: "Roboto Mono", monospace;
+    background: #0C1C2C;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 6px solid #2D89F0;
+    font-family: "Roboto Mono", monospace;
+    margin: 25px 0;
 }
 
 /* =====================================
@@ -211,55 +212,18 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 ===================================== */
 
 @media (max-width: 900px) {
+    .project-grid,
+    .project-grid.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .project-grid,
-  .project-grid.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-image img {
-    max-width: 100%;
-  }
-
-  .idea-section {
-    flex-direction: column;
-  }
+    .project-image img {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 1.9rem; }
-  h2 { font-size: 1.5rem; }
-}
-/* ====== Fix horizontálního posunu ====== */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-body, html {
-  overflow-x: hidden;
-}
-.hero-image, .education-image {
-    max-width: 1100px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 30px auto;
-    border-radius: 14px;
-    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-}
-.project-image img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.10);
-    object-fit: cover;
-}
-.card img {
-    width: 100%;
-    max-height: 160px;
-    object-fit: cover;
-    border-radius: 10px;
+    h1 { font-size: 2.0rem; }
+    h2 { font-size: 1.6rem; }
 }
