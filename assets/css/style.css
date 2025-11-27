@@ -268,3 +268,34 @@ h3 { font-size: 1.35rem; font-weight: 600; }
     display: block;
     box-shadow: 0 8px 18px rgba(0,0,0,0.14);
 }
+/* ===========================================
+   OPRAVA: Zmenšení velkých obrázků SSCC + Edukace
+=========================================== */
+
+/* SSCC hlavní schémata */
+.sscc-illustration,
+.split img,
+.project-grid img {
+    width: 100%;
+    max-width: 360px !important;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Edukace – obrázky v textu */
+.education-image,
+.page-main img {
+    width: 100%;
+    max-width: 420px !important;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Nápady – nejmenší */
+.idea-section img {
+    max-width: 300px !important;
+}
