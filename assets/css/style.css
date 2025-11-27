@@ -299,3 +299,39 @@ h3 { font-size: 1.35rem; font-weight: 600; }
 .idea-section img {
     max-width: 300px !important;
 }
+/* === Globální obrázky – technický layout === */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* === Hero obrázek – menší a technický === */
+.hero-image {
+  max-width: 900px;
+  max-height: 480px;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 14px;
+}
+
+/* === Obrázky v SSCC a Edukace === */
+.edu-img,
+.idea-section img,
+.project-image img {
+  max-height: 320px;      /* menší, technické */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  margin: 20px auto;
+}
+
+/* === Obrázky v kartách (Nápady, moduly) === */
+.card img {
+  max-height: 160px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
