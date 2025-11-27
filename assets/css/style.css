@@ -368,3 +368,56 @@ img {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
+/* ---------------------------------------------------------
+   SSCC – ROZLOŽENÍ SEKCI OBRÁZEK + TEXT
+--------------------------------------------------------- */
+
+.idea-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 80px 0;
+}
+
+.idea-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.idea-image-left img,
+.idea-image-right img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.idea-text-right,
+.idea-text-left {
+    flex: 1;
+}
+
+.idea-text-right h2,
+.idea-text-left h2 {
+    margin-top: 0;
+}
+
+/* RESPONSIVE – MOBIL */
+@media (max-width: 850px) {
+    .idea-section,
+    .idea-section.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .idea-text-right,
+    .idea-text-left {
+        text-align: left;
+    }
+
+    .idea-image-left img,
+    .idea-image-right img {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
