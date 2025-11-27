@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Edukace – SSCC</title>
-  <meta name="description" content="Výukové materiály o CO₂ cyklu, obnovitelné energii, syntéze NH₃, geotermii a principech SSCC." />
+  <meta name="description" content="Technické a populárně-naučné vysvětlení CO₂ cyklu, syntézy NH₃, geotermie, energetiky a digitálního řízení výkonu." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -35,153 +35,151 @@
   </div>
 </header>
 
+
 <main class="page-main">
-  <div class="container fade-up">
+  <div class="container">
 
     <h1 class="page-title">Edukace</h1>
     <p class="lead">
-      Edice výukových článků, které spojují populárně-naučný výklad energetiky
-      s technickými detaily. SSCC propojuje chemii, fyziku, digitální řízení
-      a obnovitelné zdroje do jednoho funkčního energetického systému.
+      Tato sekce vysvětluje principy moderní energetiky – od fyzikálních základů až po syntetickou chemii NH₃ a digitální řízení výkonu. Materiály kombinují populárně-naučné a technické vysvětlení.
     </p>
 
-    <!-- ============================= -->
-    <!-- 1) ENERGIE 101 -->
-    <!-- ============================= -->
-    <section class="edu-block">
-      <h2>Energie 101 – Základy energetiky</h2>
 
-      <p><strong>Populárně-naučně:</strong>  
-      Energie je schopnost vykonat práci. Umožňuje pohyb, ohřev vody, svícení,
-      výrobu kovů i provoz datových center. V přírodě vychází téměř vše ze
-      Slunce – přímo či nepřímo.</p>
+    <!-- 1) Energie 101 -->
+    <section class="edu-block">
+      <h2>Energie 101 – Základní fyzika a realita energetiky</h2>
+
+      <p><strong>Populárně-naučně:</strong> Energie je schopnost vykonat práci – ohřát vodu, rozsvítit žárovku nebo pohánět továrnu. V současnosti je většina lidské civilizace stále závislá na spalování uhlíku.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li><strong>Joule (J)</strong> – základní jednotka energie.</li>
-        <li><strong>kWh</strong> – 1 kWh = 3,6 milionu joulů.</li>
-        <li><strong>Výkon (W)</strong> – rychlost, jakou se energie vyrábí/spotřebovává.</li>
-        <li>Průmysl potřebuje <strong>stálý výkon</strong>, ne přerušovaný.</li>
-        <li>OZE dodávají energii proměnlivě → nutné stabilizovat.</li>
+        <li>Energie: \(E = P \cdot t\)</li>
+        <li>Výkon elektrárny (MW) udává rychlost výroby energie</li>
+        <li>Průmysl vyžaduje <em>nepřetržitý výkon</em>, ne pouze energii</li>
+        <li>OZE → proměnlivý výkon → nutnost ukládání</li>
       </ul>
+
+      <p class="info-box">
+        <strong>Rozdíl:</strong> Stabilní výkon 100 MW je ≠ od solární farmy 500 MWp, protože ta vyrábí pouze ve dne a velmi proměnlivě.
+      </p>
     </section>
 
 
-    <!-- ============================= -->
-    <!-- 2) CO₂ CYKLUS -->
-    <!-- ============================= -->
+    <!-- 2) CO2 cyklus -->
     <section class="edu-block">
-      <h2>CO₂ a technologický uhlíkový cyklus</h2>
+      <h2>CO₂ a technický uhlíkový cyklus</h2>
 
-      <img src="assets/img/CO2-kolobeh.jpg" class="edu-img" alt="Uhlíkový cyklus" style="max-width: 380px;">
+      <img src="assets/img/CO2-kolobeh.jpg" class="edu-img" alt="Uhlíkový cyklus" style="max-width:480px;">
 
-      <p><strong>Populárně-naučně:</strong>  
-      CO₂ koluje mezi atmosférou, oceány a biosférou. Lidské emise tento cyklus
-      přetížily – vypouštíme víc CO₂, než příroda stíhá ukládat.</p>
+      <p><strong>Populárně-naučně:</strong> CO₂ neustále putuje přírodou. Problém není CO₂ samotný, ale to, že spalujeme uhlík rychleji, než jej příroda dokáže ukládat.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li><strong>PCC</strong> – zachytávání CO₂ z komínů.</li>
-        <li><strong>DAC</strong> – přímé odsávání CO₂ ze vzduchu.</li>
-        <li><strong>CCU</strong> – využití CO₂ jako suroviny (chemie, paliva, NH₃).</li>
+        <li>Přírodní cyklus: rostliny → atmosféra → oceány → půda → zpět</li>
+        <li>Technický cyklus SSCC: zachytit → vyčistit → chemicky přeměnit → použít</li>
+        <li>Zachytávání:
+          <ul>
+            <li>PCC (Post-Combustion Capture): 85–95 % zachycení</li>
+            <li>DAC (Direct Air Capture): 0.5–1.2 MWh/t CO₂</li>
+          </ul>
+        </li>
       </ul>
 
-      <p>SSCC zavádí <strong>uzavřený technologický CO₂ cyklus</strong> – CO₂ neuniká do atmosféry, ale neustále cirkuluje v technologickém procesu.</p>
+      <p class="technical-box">
+        SSCC zachycený CO₂ převádí do uzavřeného technologického cyklu, nikoli do atmosféry. CO₂ → NH₃ → použití → CO₂ → syntéza → NH₃ …
+      </p>
     </section>
 
 
-    <!-- ============================= -->
-    <!-- 3) VODÍK & NH₃ -->
-    <!-- ============================= -->
+    <!-- 3) Vodík a NH3 -->
     <section class="edu-block">
       <h2>Vodík a zelený amoniak (NH₃)</h2>
 
-      <img src="assets/img/co2-premena.png" class="edu-img" alt="NH3 syntéza" style="max-width: 380px;">
+      <img src="assets/img/co2-premena.png" class="edu-img" alt="Syntéza NH3" style="max-width:480px;">
 
-      <p><strong>Populárně:</strong>  
-      Vodík je lehký plyn, který lze vyrobit elektrolýzou vody. Když se spojí s dusíkem,
-      vznikne amoniak – kapalina, kterou lze snadno skladovat a přepravovat.</p>
+      <p><strong>Populárně-naučně:</strong> Vodík má vysoký energetický obsah, ale špatně se skladuje. Amoniak je kapalina – lehce se uchovává a převáží, a přitom v sobě nese energii vodíku.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li><strong>Elektrolýza (PEM/ALK)</strong> – výroba H₂ pomocí elektřiny.</li>
-        <li><strong>N₂ z atmosféry</strong> – separace pomocí PSA/cryogeniky.</li>
-        <li><strong>Haber-Bosch</strong> – syntéza NH₃ při 150–250 bar a 380–480°C.</li>
-        <li><strong>NH₃ = kapalné úložiště energie</strong> s vysokou hustotou.</li>
+        <li>H₂ výroba: PEM nebo AEM elektrolýza</li>
+        <li>Účinnost elektrolýzy: 65–72 %</li>
+        <li>NH₃ syntéza: Haber–Bosch při 150–250 bar a 400–500 °C</li>
+        <li>NH₃ obsahuje 17,6 % vodíku → energetické médium</li>
       </ul>
 
-      <p>Amoniak je mnohem lépe skladovatelný než vodík → levnější infrastruktura.</p>
+      <p class="technical-box">
+        Reakce:  
+        \[
+        3H_2 + N_2 \rightarrow 2NH_3 \quad (\Delta H = -46 \text{ kJ/mol})
+        \]  
+        Uvolněné teplo lze rekuperovat pro další procesy.
+      </p>
     </section>
 
 
-    <!-- ============================= -->
-    <!-- 4) GEOTERMIE -->
-    <!-- ============================= -->
+    <!-- 4) Geotermální energie -->
     <section class="edu-block">
-      <h2>Geotermální energie</h2>
+      <h2>Geotermální energie – stabilní základ výkonu</h2>
 
-      <img src="assets/img/geotermalni-vrt.png" class="edu-img" alt="Geotermální vrt" style="max-width: 380px;">
+      <img src="assets/img/geotermalni-vrt.png" class="edu-img" alt="Geotermální vrt" style="max-width:480px;">
 
-      <p><strong>Populárně:</strong>  
-      Pod povrchem Země je obrovské množství tepla. Geotermální vrt umožní toto
-      teplo čerpat a využít.</p>
+      <p><strong>Populárně-naučně:</strong> Země pod námi je horká. Stačí vyvrtat dost hluboko a teplo je k dispozici nonstop.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li>Teplotní gradient: ~30 °C / km.</li>
-        <li>EGS soustavy pracují v hloubkách 4–6 km.</li>
-        <li>Výkon 10–40 MW tepla na jedno pole vrtů.</li>
-        <li>Stabilita 24/7 → ideální základ pro syntézu NH₃.</li>
+        <li>Teplotní gradient: 25–30 °C/km</li>
+        <li>Vrt 4–6 km → teplota 120–200 °C</li>
+        <li>EGS (Enhanced Geothermal Systems) → lze využít i v nepropustných horninách</li>
+        <li>Výkon jednoho vrtu: 10–40 MW tepelně</li>
       </ul>
 
-      <p>Geotermie poskytuje stabilní „základní výkon“ systému SSCC.</p>
+      <p class="info-box">
+        Geotermální výkon je stabilní 24/7 – ideální pro elektrolýzu i syntézu NH₃.
+      </p>
     </section>
 
 
-    <!-- ============================= -->
-    <!-- 5) OZE & STABILIZACE -->
-    <!-- ============================= -->
+    <!-- 5) OZE a stabilizace -->
     <section class="edu-block">
       <h2>Obnovitelné zdroje a stabilizace výkonu</h2>
 
-      <img src="assets/img/obnovitelne-zdroje.jpg" class="edu-img" alt="OZE" style="max-width: 380px;">
+      <img src="assets/img/obnovitelne-zdroje.jpg" class="edu-img" alt="Obnovitelné zdroje" style="max-width:480px;">
 
-      <p><strong>Populárně:</strong>  
-      Solární a větrná energie jsou čisté, ale proměnlivé. Ne vždy svítí nebo fouká.</p>
+      <p><strong>Populárně-naučně:</strong> Solární a větrná energie jsou skvělé, ale nespolehlivé. Když nefouká nebo nesvítí, nic se nevyrábí.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li>Fotovoltaika → hlavní zdroj levné elektřiny.</li>
-        <li>Baterie → krátkodobá stabilizace (minuty–hodiny).</li>
-        <li>NH₃ → dlouhodobé úložiště energie (dny–měsíce).</li>
-        <li>Digitální řízení výkonu → optimalizace toku energie.</li>
+        <li>OZE → proměnlivý výkon → nutnost akumulace</li>
+        <li>NH₃ a baterie tvoří hybridní úložiště</li>
+        <li>Prediktivní řízení snižuje výkyvy sítě</li>
       </ul>
 
-      <p>SSCC kombinuje všechny zdroje do stabilního celku.</p>
+      <p class="technical-box">
+        SSCC nahrazuje nestabilní OZE stabilním uzlem:  
+        OZE + geotermie + NH₃ + řízení výkonu = stabilní energetický systém.
+      </p>
     </section>
 
 
-    <!-- ============================= -->
-    <!-- 6) DIGITÁLNÍ ŘÍZENÍ -->
-    <!-- ============================= -->
+    <!-- 6) Digitální řízení -->
     <section class="edu-block">
-      <h2>Digitální řízení výkonu</h2>
+      <h2>Digitální řízení výkonu (AI a telemetrie)</h2>
 
-      <img src="assets/img/data-orbit.png" class="edu-img" alt="Digitální řízení" style="max-width: 380px;">
+      <img src="assets/img/data-orbit.png" class="edu-img" alt="Digitální řízení" style="max-width:480px;">
 
-      <p><strong>Populárně:</strong>  
-      Energetika funguje jako mozek. Sběr dat umožňuje automaticky rozhodovat,
-      jak energii distribuovat.</p>
+      <p><strong>Populárně-naučně:</strong> Energetika moderního typu funguje jako mozek. Sbírá data a řídí tok energie podle potřeby.</p>
 
       <p><strong>Technicky:</strong></p>
       <ul>
-        <li>Senzory a telemetrie → měření výkonu a stavu systému.</li>
-        <li>AI modely → predikce výroby z OZE.</li>
-        <li>Smart-grid → rozhodování o toku energie v reálném čase.</li>
-        <li>Optimalizace pro syntézu NH₃ a CO₂ cyklus.</li>
+        <li>AI predikce výkonu 48–96 h dopředu</li>
+        <li>Digitální twin energetického uzlu</li>
+        <li>Telemetrie: spotřeba, výroba, teplota, tlak, výkon</li>
+        <li>Optimalizace chodu elektrolyzérů podle ceny energie</li>
       </ul>
 
-      <p>Digitální vrstva propojuje všechny části SSCC do jednoho celku.</p>
+      <p class="info-box">
+        Digitální řízení snižuje spotřebu, prodlužuje životnost zařízení a zvyšuje stabilitu celé sítě SSCC.
+      </p>
     </section>
 
   </div>
