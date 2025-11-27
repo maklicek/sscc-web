@@ -227,3 +227,44 @@ h3 { font-size: 1.35rem; font-weight: 600; }
     h1 { font-size: 2.0rem; }
     h2 { font-size: 1.6rem; }
 }
+/* =====================================
+   OBRÁZKY – estetická optimalizace 2025
+===================================== */
+
+/* HERO – největší, ale ne přes celou stránku */
+.hero-image {
+    width: 100%;
+    max-width: 760px;
+    margin: 30px auto;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* PROJEKTY – technické obrázky vedle textu */
+.project-image img {
+    width: 100%;
+    max-width: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* NÁPADY – malé doplňkové vizuály */
+.idea-image-left img,
+.idea-image-right img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+/* EDUKACE – střední obrázky (schémata, grafy) */
+.education-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
