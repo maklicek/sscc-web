@@ -1,101 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- vlož do každé stránky, nahraď její <head> -->
+<html lang="cs">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC — SolarSpace Carbon Cycle</title>
-  <meta name="description" content="... stránkový popis ...">
-
-  <!-- Favicons (repo-relative) -->
-  <link rel="icon" href="favicons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
-  <link rel="manifest" href="favicons/site.webmanifest">
-
-  <!-- CSS (pozor: BEZ / na začátku) -->
-  <link rel="preload" href="assets/style.css?v=p1" as="style">
-  <link rel="stylesheet" href="assets/style.css?v=p1">
-  <link rel="alternate" hreflang="en" href="projects.html">
+  <title>SSCC – Jak systém funguje</title>
+  <meta name="description" content="Detailní technický popis systému SSCC – CO₂ cyklus, syntéza NH₃, geotermie a energetické moduly.">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-  <header class="site-header">
-    <div class="header-inner container">
-      <a class="brand-combo" href="index-en.html" aria-label="SSCC Home">
-        <div class="logo-frame"><img class="main-logo" src="assets/img/logo-sscc.png" alt="SSCC logo"></div>
-        <div class="brand-block"><div class="brand-name">SSCC</div><div class="brand-tagline">SolarSpace Carbon Cycle</div></div>
-      </a>
-     <nav class="site-nav">
-<a href="index.html" class="logo">SSCC</a>
-<ul class="menu">
-<li><a href="projekt-sscc.html">Projekt<a><li>
-<li><a href="projekty.html">Projekty<a><li>
-<li><a href="spoluprace.html">Spolupráce<a><li>
-<li><a href="edukace.html">Edukace<a><li>
-<li><a href="konsorcium.html">Konsorcium<a><li>
-<li class="lang">
-<a href="index-en.html" aria-label="Switch to English">EN</a>
-</li>
-</ul>
-</nav>
-      <div class="lang-switch" aria-label="Language">
-        <a class="lang" href="projekty.html">CS</a><span class="sep">|/span>
-        <a class="lang active" href="projects.html" aria-current="true">EN<a>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo-sscc.png" class="brand-logo" alt="SSCC logo" />
+      <div class="brand-text">
+        <div class="brand-title">SSCC</div>
+        <div class="brand-subtitle">Solar & Synthetic Carbon Cycle</div>
       </div>
-    </div>
-  </header>
+    </a>
 
-  <main class="page has-sun">
-    <h1 class="hero-title">Projects<h1>
-    <p class="lead">Pilot units, technological concepts and SSCC applications.<p>
-<section class="city-backdrop"><section>
-    <section class="projects-list" aria-label="Project areas">
-      <article class="project-card" id="orbit">
-        <h2 class="project-title">Orbital solar farm → power transfer<h2>
-        <p class="project-desc">Microwave/laser beaming from orbit and safe ground reception. Safety, efficiency and techno-economics studies.</p>
-      </article>
+    <nav class="main-nav">
+      <a href="index.html">Úvod</a>
+      <a href="sscc.html" aria-current="page">SSCC</a>
+      <a href="projekty.html">Projekty</a>
+      <a href="napady.html">Nápady</a>
+      <a href="edukace.html">Edukace</a>
+      <a href="konsorcium.html">Konsorcium</a>
+    </nav>
+  </div>
 
-      <article class="project-card" id="co2">
-        <h2 class="project-title">CO₂ as a working fluid<h2>
-        <p class="project-desc">High-temperature closed loops with CO₂ for efficient heat transfer and power generation.</p>
-      </article>
+  <div class="site-tagline">Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné.</div>
+</header>
 
-      <article class="project-card" id="nh3">
-        <h2 class="project-title">Carbon-negative ammonia</h2>
-        <p class="project-desc">CO₂ capture + green H₂ → NH₃. Local fuel/thermal storage with sustainable unit economics.</p>
-      </article>
 
-      <article class="project-card" id="pilots">
-        <h2 class="project-title">Pilot units<h2>
-        <p class="project-desc">Modular pilots integrating PV + storage, CCUS and NH₃ synthesis for industrial deployment.</p>
-      </article>
+<main class="page-main">
+  <div class="container fade-up">
+
+    <h1 class="page-title">Jak systém SSCC funguje</h1>
+
+    <p class="lead">
+      SSCC kombinuje zachytávání CO₂, jeho chemickou přeměnu, obnovitelné zdroje energie
+      a geotermální teplo do jednoho uzavřeného energeticko-chemického systému.  
+      Cílem je vytvořit **stabilní, cenově dostupný a uhlíkově neutrální zdroj energie 24/7**.
+    </p>
+
+
+    <!-- HERO / HLAVNÍ DIAGRAM -->
+    <section class="idea-section">
+      <div class="idea-text-left">
+        <h2>Uzavřený energeticko-chemický cyklus</h2>
+
+        <p>
+          SSCC využívá CO₂ jako surovinu namísto odpadu. Zachycený CO₂ prochází syntézou,
+          při které vzniká NH₃ – kapalina, která dokáže dlouhodobě uchovávat energii.
+        </p>
+
+        <p>
+          Díky tomu se vytváří **uzavřený technický uhlíkový cyklus**, kde CO₂ neproudí do atmosféry,
+          ale zůstává v technologické smyčce.  
+        </p>
+
+        <ul>
+          <li>Zachycení CO₂ (PCC, DAC)</li>
+          <li>Elektrolýza vody → výroba vodíku</li>
+          <li>Syntéza NH₃ (Haber–Bosch, nízkoteplotní katalýza)</li>
+          <li>NH₃ jako úložiště energie, médium i surovina</li>
+          <li>Spalování / rozklad NH₃ → teplo + dusík + voda</li>
+        </ul>
+      </div>
+
+      <div class="idea-image-right">
+        <img src="assets/img/cycle-diagram.png" alt="Technologický cyklus SSCC">
+      </div>
     </section>
-<section class="city-backdrop"><section>
-    <section class="section-cta">
-      <h2>Want to get involved?<h2>
-      <p>We collaborate with universities and industry. Your idea can grow into an SSCC project.<p>
-      <p><a class="btn-primary" href="mailto:martin.klic46@gmail.com">💡 Propose collaboration<a><p>
+
+
+
+    <!-- 1) Zachycování CO₂ -->
+    <section class="idea-section reverse">
+      <div class="idea-text-left">
+        <h2>1) Zachycování CO₂</h2>
+
+        <p>
+          SSCC používá kombinaci **PCC (post-combustion capture)** a **DAC (direct air capture)**.
+          PCC pracuje s vysokými koncentracemi CO₂ (10–20 %), což je ideální pro průmysl.
+        </p>
+
+        <p>
+          Naproti tomu DAC umí zachytávat CO₂ přímo ze vzduchu, což umožňuje provoz uzlů
+          i v místech bez velkých průmyslových emisí.
+        </p>
+
+        <ul>
+          <li>PCC účinnost: 85–95 %</li>
+          <li>DAC energetická náročnost: 0.5–1.2 MWh / t CO₂</li>
+          <li>Vysoká čistota CO₂ pro syntézu</li>
+        </ul>
+      </div>
+
+      <div class="idea-image-right">
+        <img src="assets/img/zachyceni-co2.jpg" alt="Zachycovací technologie CO₂">
+      </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-left">© 2025 <strong>SolarSpace Carbon Cycle (SSCC)<strong> Initiative · Designed & maintained by SSCC Consortium · Powered by clean energy ✶</div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="projects.html">Projects<a> · <a href="education.html">Education<a> · <a href="ideas.html">Ideas<a> · <a href="consortium.html">Consortium<a> · <a href="cooperation.html">Cooperation<a>
-      </nav>
-    </div>
-  </footer>
 
-  <script>
-  (() => {
-    const here = location.pathname.split('/').pop() || 'projects.html';
-    document.querySelectorAll('.site-nav a, .footer-links a').forEach(a => {
-      const href = a.getAttribute('href'); if (!href) return;
-      if (href === here) { a.classList.add('active'); a.setAttribute('aria-current','page'); }
-    });
-  })();
-  </script>
+
+    <!-- 2) Výroba vodíku -->
+    <section class="idea-section">
+      <div class="idea-image-left">
+        <img src="assets/img/co2-premena.png" alt="Elektrolýza a výroba vodíku">
+      </div>
+
+      <div class="idea-text-right">
+        <h2>2) Výroba vodíku pomocí elektrolýzy</h2>
+
+        <p>
+          Vodík je klíčový vstup pro syntézu NH₃. SSCC kombinuje různé typy elektrolýzy:
+        </p>
+
+        <ul>
+          <li>PEM elektrolýza – rychlá reakce, vhodná pro proměnlivý výkon</li>
+          <li>Alkalická elektrolýza – levnější provoz</li>
+          <li>SOEC – vysoká účinnost při využití geotermálního tepla</li>
+        </ul>
+
+        <p>
+          Elektrolýza umožňuje **přeměnit přebytečnou energii na chemické médium**.  
+          SSCC tak stabilizuje elektrickou síť i výrobu energie v regionech.
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- 3) Amoniak NH3 -->
+    <section class="idea-section reverse">
+      <div class="idea-text-left">
+        <h2>3) Syntéza zeleného amoniaku (NH₃)</h2>
+
+        <p>
+          Amoniak je jedním z nejefektivnějších nosičů energie. Na rozdíl od vodíku
+          má výrazně lepší skladovatelnost a logistickou infrastrukturu.
+        </p>
+
+        <p>
+          SSCC využívá modernizované nízkoteplotní katalytické metody, které umožňují
+          vyrábět NH₃ už při nižších tlacích – to redukuje energetické náklady.
+        </p>
+
+        <ul>
+          <li>Snadné skladování v nádržích</li>
+          <li>Možnost dlouhodobého uchování energie</li>
+          <li>Možnost rozkladu zpět na vodík</li>
+        </ul>
+      </div>
+
+      <div class="idea-image-right">
+        <img src="assets/img/cyklus-premeny.jpg" alt="Syntéza amoniaku">
+      </div>
+    </section>
+
+
+
+    <!-- 4) Geotermie -->
+    <section class="idea-section">
+      <div class="idea-image-left">
+        <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrty" />
+      </div>
+
+      <div class="idea-text-right">
+        <h2>4) Geotermální základ systému</h2>
+
+        <p>
+          Geotermální teplo je ideálním zdrojem stabilního výkonu.  
+          Vrty 4–6 km hluboké poskytují:
+        </p>
+
+        <ul>
+          <li>Stálou teplotu 150–200 °C</li>
+          <li>Tepelný výkon 10–40 MW</li>
+          <li>Možnost výroby elektřiny pomocí ORC cyklů</li>
+        </ul>
+
+        <p>
+          Geotermie funguje jako **základní zdroj** SSCC – stabilní 24/7, s velmi nízkými
+          provozními náklady.
+        </p>
+      </div>
+    </section>
+
+
+
+    <!-- 5) Kombinace zdrojů -->
+    <section class="idea-section reverse">
+      <div class="idea-text-left">
+        <h2>5) Propojení OZE a digitální řízení</h2>
+
+        <p>
+          SSCC dokáže kombinovat geotermii s fotovoltaikou, větrnou energií
+          i orbitálními zdroji (v budoucnu). Celý systém řídí prediktivní software,
+          který plánuje výrobu a spotřebu energie.
+        </p>
+
+        <ul>
+          <li>Vyrovnávací algoritmy</li>
+          <li>Předpověď výkonu OZE</li>
+          <li>Distribuce NH₃ podle poptávky</li>
+        </ul>
+      </div>
+
+      <div class="idea-image-right">
+        <img src="assets/img/kosmos.png" alt="Orbitální a digitální energie">
+      </div>
+    </section>
+
+
+  </div>
+</main>
+
 </body>
 </html>
