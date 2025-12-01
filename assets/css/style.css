@@ -266,3 +266,47 @@ img {
         margin: 0 auto;
     }
 }
+/* ============================================================
+   JEDNOTNÉ OBRÁZKY NAPŘÍČ WEBEM SSCC
+   ============================================================ */
+
+/* Obrázky v obsahu – sjednocený vzhled */
+.content-img,
+section img {
+    width: 100%;
+    max-width: 520px;            /* jednotná velikost */
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;           /* stejné oříznutí */
+    margin: 10px 0 30px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+
+/* Obrázky umístěné vedle textu */
+.side-img {
+    max-width: 520px;
+    flex-shrink: 0;
+}
+
+/* Kontejner pro layout text + obrázek */
+.flex-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.flex-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsivita */
+@media (max-width: 900px) {
+    .flex-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .side-img {
+        max-width: 100%;
+    }
+}
