@@ -288,7 +288,7 @@ section img {
     flex-shrink: 0;
 }
 
-/* Kontejner pro layout text + obrázek */
+/* Kontejner pro layout text + obrázek */ 
 .flex-row {
     display: flex;
     align-items: center;
