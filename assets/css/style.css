@@ -375,3 +375,39 @@ section img {
     flex-direction: column;
   }
 }
+/* Globální layout pro EDukaci, SSCC, Projekty, Nápady */
+.edu-section,
+.idea-section,
+.project-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+/* Reverzní varianta (obrázek vpravo) */
+.edu-section.reverse,
+.idea-section.reverse,
+.project-section.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Obrázky */
+.edu-section img,
+.idea-section img,
+.project-section img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Textový blok */
+.edu-text,
+.idea-text-left,
+.idea-text-right,
+.project-text {
+    flex: 1;
+    min-width: 300px;
+}
