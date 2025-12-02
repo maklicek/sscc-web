@@ -435,7 +435,7 @@ section img {
 .edu-image {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
 }
 
 .edu-image img {
