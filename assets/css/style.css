@@ -467,3 +467,40 @@ section img {
 .edu-row {
   align-items: flex-start;
 }
+.edu-heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.edu-section {
+  margin-bottom: 70px;
+}
+
+.edu-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.edu-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-text {
+  flex: 1 1 50%;
+}
+
+.edu-image {
+  flex: 1 1 45%;
+}
+
+.edu-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
