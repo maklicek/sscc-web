@@ -310,3 +310,26 @@ section img {
         max-width: 100%;
     }
 }
+.idea-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.idea-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.idea-text-left,
+.idea-text-right {
+  flex: 1;
+}
+
+.idea-image-left img,
+.idea-image-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
