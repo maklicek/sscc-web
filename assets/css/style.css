@@ -464,3 +464,6 @@ section img {
   font-weight: 700;
   max-width: 320px;
 }
+.edu-row {
+  align-items: flex-start;
+}
