@@ -333,3 +333,45 @@ section img {
   height: auto;
   border-radius: 16px;
 }
+/* =========================================================
+   EDUKACE – obrázek + text vedle sebe
+   ======================================================= */
+
+.edu-section {
+  margin-bottom: 80px;
+}
+
+.edu-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.edu-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.edu-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-text {
+  flex: 1;
+}
+
+.edu-image img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* responsivita – na mobilu pod sebe */
+@media (max-width: 860px) {
+  .edu-row,
+  .edu-row.reverse {
+    flex-direction: column;
+  }
+}
