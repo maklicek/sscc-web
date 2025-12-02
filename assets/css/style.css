@@ -506,7 +506,7 @@ section img {
 }
 /* Menší a užší boční nadpisy v edukaci */
 .edu-heading {
-  font-size: 1.25rem;        /* menší nadpis */
+  font-size: 1.2rem;        /* menší nadpis */
   width: 160px;              /* pevná šířka, aby byl v levém sloupci */
   margin: 0 0 1rem 0;
   line-height: 1.3;
