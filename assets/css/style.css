@@ -411,3 +411,49 @@ section img {
     flex: 1;
     min-width: 300px;
 }
+/* EDUKACE – dvousloupcový layout */
+.edu-section {
+  margin-bottom: 60px;
+}
+
+.edu-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.edu-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-text {
+  flex: 1;
+}
+
+.edu-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.edu-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .edu-row,
+  .edu-row.reverse {
+    flex-direction: column;
+  }
+
+  .edu-image img {
+    max-width: 100%;
+  }
+}
