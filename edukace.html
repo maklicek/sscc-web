@@ -19,7 +19,7 @@
       </div>
     </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Hlavní navigace">
       <a href="index.html">Úvod</a>
       <a href="sscc.html">SSCC</a>
       <a href="projekty.html">Projekty</a>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="site-tagline">
-    Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné. 
+    Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné.
   </div>
 </header>
 
@@ -43,12 +43,12 @@
       syntézu NH₃ a digitální řízení výkonu. Každé téma má jednoduché i odbornější vysvětlení.
     </p>
 
-    <!-- 1) ENERGIE -->
-    <section class="edu-section">
+    <!-- === 1) ENERGIE === -->
+    <section class="edu-section" id="energie">
       <h2 class="edu-heading">1. Energie</h2>
 
       <div class="edu-row">
-        <div class="edu-text">
+        <div class="edu-col edu-text">
           <p><strong>Populárně-naučně:</strong> Energie je schopnost konat práci. Když svítí žárovka, hřeje topení nebo jede vlak,
             všude dochází k přeměně energie z jednoho typu na druhý.</p>
 
@@ -62,24 +62,23 @@
 
           <p>
             SSCC kombinuje <strong>levné OZE</strong> s <strong>trvale dostupnými zdroji</strong> (geotermie) a
-            <strong> chemickým ukládáním energie</strong>, aby nahradil výpadek uhelných elektráren.
+            <strong>chemickým ukládáním energie</strong>, aby nahradil výpadek uhelných elektráren.
           </p>
         </div>
 
-        <div class="edu-image">
-          <!-- vlastní obrázek pro "Energie 101" -->
-          <img src="assets/img/energie-zaklad.jpg" alt="Energie – základní princip">  
-        </div>
+        <figure class="edu-col edu-image">
+          <img src="assets/img/energie-zaklad.jpg" alt="Základní princip energie">
+        </figure>
       </div>
     </section>
 
 
-    <!-- 2) CO2 A TECHNICKÝ CYKLUS -->
-    <section class="edu-section">
+    <!-- === 2) CO2 === -->
+    <section class="edu-section" id="co2">
       <h2 class="edu-heading">2. CO₂ v atmosféře a technický uhlíkový cyklus</h2>
 
       <div class="edu-row reverse">
-        <div class="edu-text">
+        <div class="edu-col edu-text">
           <p><strong>Populárně-naučně:</strong> V přírodě CO₂ koluje mezi oceány, atmosférou a živými organismy.
             Spalování uhlí a plynu tento cyklus rozbilo – vytváříme CO₂ rychleji, než ho planeta umí uklidit.</p>
 
@@ -96,130 +95,51 @@
           </p>
         </div>
 
-        <div class="edu-image">
+        <figure class="edu-col edu-image">
           <img src="assets/img/CO2-kolobeh.jpg" alt="Technický uhlíkový cyklus">
-        </div>
+        </figure>
       </div>
     </section>
 
 
-    <!-- 3) VODÍK A ZELENÝ AMONIAK -->
-    <section class="edu-section">
+    <!-- === 3) NH3 === -->
+    <section class="edu-section" id="nh3">
       <h2 class="edu-heading">3. Vodík a zelený amoniak (NH₃)</h2>
 
       <div class="edu-row">
-        <div class="edu-text">
-          <p><strong>Populárně-naučně:</strong> Vodík je lehký plyn, který dokáže uchovat energii. Když se spojí s dusíkem,
-            vzniká amoniak – stabilní kapalina, kterou lze skladovat a převážet jako palivo nebo surovinu.</p>
+        <div class="edu-col edu-text">
+          <p><strong>Populárně-naučně:</strong> Vodík je lehký plyn, který uchovává energii. Když se spojí s dusíkem,
+            vznikne amoniak – stabilní kapalina vhodná jako palivo nebo surovina.</p>
 
           <p><strong>Technicky:</strong></p>
           <ul>
             <li>H₂ se vyrábí elektrolýzou vody (9–12 kWh/kg H₂).</li>
-            <li>NH₃ vzniká z H₂ a N₂ v syntéze při 100–200 bar a 350–550&nbsp;°C.</li>
-            <li>Energetická hustota NH₃ ≈ 18,6&nbsp;MJ/l – vhodná pro chemické zásobníky energie.</li>
+            <li>NH₃ vzniká z H₂ a N₂ při 100–200 bar a 350–550 °C.</li>
+            <li>Energetická hustota NH₃ ≈ 18,6 MJ/l – vhodná pro chemické zásobníky energie.</li>
           </ul>
 
-          <p>
-            <strong>NH₃ ani čistý H₂ nejsou určeny pro vytápění rodinných domů.</strong>
-            V SSCC slouží jako médium pro průmyslové procesy, turbíny a dlouhodobé ukládání energie.
-          </p>
+          <p><strong>NH₃ ani čistý H₂ nejsou určeny pro vytápění domů.</strong>
+            V SSCC slouží pro průmyslové procesy, turbíny a dlouhodobé ukládání energie.</p>
         </div>
 
-        <div class="edu-image">
+        <figure class="edu-col edu-image">
           <img src="assets/img/co2-premena.png" alt="Syntéza vodíku a amoniaku">
-        </div>
+        </figure>
       </div>
     </section>
 
 
-    <!-- 4) GEOTERMÁLNÍ ENERGIE -->
-    <section class="edu-section">
+    <!-- === 4) GEOTERMIE === -->
+    <section class="edu-section" id="geotermie">
       <h2 class="edu-heading">4. Geotermální energie</h2>
 
       <div class="edu-row reverse">
-        <div class="edu-text">
+        <div class="edu-col edu-text">
           <p><strong>Populárně-naučně:</strong> Pod zemí je obrovské množství tepla. Hluboký vrt dokáže toto teplo čerpat
-            a přivést na povrch – jako přírodní „kotel“, který nehasne.</p>
+            a přivést na povrch – jako přírodní kotel, který nehasne.</p>
 
           <p><strong>Technicky:</strong></p>
           <ul>
-            <li>Teplotní gradient ~25–30&nbsp;°C/km.</li>
-            <li>EGS systémy: vrty 3–6&nbsp;km, teplota 130–200&nbsp;°C.</li>
-            <li>Výkon jednotek: jednotky až desítky MW tepla a elektřiny 24/7.</li>
-          </ul>
-
-          <p>
-            V SSCC slouží geotermie jako <strong>stabilní základní zdroj výkonu</strong>, na který se navazuje elektrolýza
-            a syntéza NH₃.
-          </p>
-        </div>
-
-        <div class="edu-image">
-          <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrt">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 5) OZE A STABILIZACE -->
-    <section class="edu-section">
-      <h2 class="edu-heading">5. Obnovitelné zdroje a stabilizace výkonu</h2>
-
-      <div class="edu-row">
-        <div class="edu-text">
-          <p><strong>Populárně-naučně:</strong> Solární a větrné elektrárny jsou čisté a levné, ale proměnlivé.
-            Když nesvítí a nefouká, výroba klesá.</p>
-
-          <p><strong>Technicky:</strong></p>
-          <ul>
-            <li>Fotovoltaika a vítr mají nízké provozní náklady, ale nestálý výkon.</li>
-            <li>Krátkodobé výkyvy vyrovnávají baterie a akumulace tepla.</li>
-            <li>Dlouhodobé sezónní rozdíly pokrývají chemické zásobníky (NH₃) a geotermie.</li>
-          </ul>
-
-          <p>
-            SSCC skládá tyto technologie do jednoho celku: <strong>levné, ale proměnlivé OZE</strong> +
-            <strong> stabilní geotermie</strong> + <strong>chemické ukládání energie</strong>.
-          </p>
-        </div>
-
-        <div class="edu-image">
-          <img src="assets/img/obnovitelne-zdroje.jpg" alt="Obnovitelné zdroje energie">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 6) DIGITÁLNÍ ŘÍZENÍ -->
-    <section class="edu-section">
-      <h2 class="edu-heading">6. Digitální řízení výkonu a data</h2>
-
-      <div class="edu-row reverse">
-        <div class="edu-text">
-          <p><strong>Populárně-naučně:</strong> Moderní energetika funguje jako mozek – sbírá data a automaticky
-            rozhoduje, kam energii poslat, aby vše běželo plynule.</p>
-
-          <p><strong>Technicky:</strong></p>
-          <ul>
-            <li>Prediktivní modely (AI) předpovídají výrobu z OZE a poptávku.</li>
-            <li>Telemetrie sleduje stav uzlů SSCC v reálném čase.</li>
-            <li>Smart-grid systémy řídí distribuci výkonu a tok NH₃ / H₂ mezi uzly.</li>
-          </ul>
-
-          <p>
-            Datová vrstva spojuje jednotlivé části SSCC do jednoho
-            <strong> digitálního energetického ekosystému</strong>.
-          </p>
-        </div>
-
-        <div class="edu-image">
-          <img src="assets/img/data-orbit.png" alt="Digitální řízení a data">
-        </div>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-</body>
-</html>
+            <li>Teplotní gradient ~25–30 °C/km.</li>
+            <li>EGS systémy: vrty 3–6 km, teplota 130–200 °C.</li>
+            <li>Výkon j
