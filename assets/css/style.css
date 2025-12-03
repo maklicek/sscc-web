@@ -676,3 +676,26 @@ body {
 .theme-toggle:hover {
   background: rgba(212, 169, 79, 0.15);
 }
+/* OVERRIDE HLAVIČKY – JEMNĚ SVĚTLEJŠÍ LUXUSNÍ TÓN */
+.site-header {
+  background: #1b1f22 !important; /* ne černá, ale grafitová */
+  padding: 26px 0 30px;
+  color: #d4a94f;
+  position: relative;
+}
+
+/* nový jemný zlatý svit */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  height: 16px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(212, 169, 79, 0.4),
+    transparent 70%
+  );
+  pointer-events: none;
+}
