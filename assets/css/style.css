@@ -757,3 +757,65 @@ body {
   font-size: 18px;
   margin-top: 8px;
 }
+/* === LUXUSNÍ SVĚTLEJŠÍ HLAVIČKA === */
+
+.site-header {
+  background: #3a3f44 !important;     /* světlejší grafit */
+  padding: 28px 0 32px;
+  color: #d8b24a !important;
+  border-bottom: 1px solid rgba(216, 178, 74, 0.25); /* jemná zlatá linka */
+}
+
+/* glow efekt – jemný, ne tmavý */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 20px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(216, 178, 74, 0.18),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* === NAVIGACE === */
+
+.site-header .main-nav a {
+  color: #d8b24a !important;     /* stejná zlata jako logo */
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #fff7da !important;     /* světlá zlatá / bílo-zlatá */
+}
+
+.site-header .main-nav a[aria-current="page"] {
+  color: #8de86d !important;     /* aktivní odkaz – čitelnější zelená */
+  font-weight: 600;
+}
+
+/* === MOTTO === */
+
+.site-tagline {
+  color: #2dd06a !important;     /* sytější čitelnější zelená */
+  font-size: 19px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* === TLAČÍTKO TMA / SVĚTLO === */
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(216, 178, 74, 0.6) !important;
+  color: #f5d98a !important;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
