@@ -735,3 +735,25 @@ body {
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.18) !important;
 }
+/* === Navigační texty v hlavičce – ZLATÁ a čitelné === */
+
+.site-header .main-nav a {
+  color: #e7c46a !important;       /* čistá luxusní zlatá */
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #fff4ce !important;       /* světlejší zlatá při hoveru */
+}
+
+/* aktivní odkaz – zelené zvýraznění ponecháme */
+.site-header .main-nav a[aria-current="page"] {
+  color: #8de86d !important;
+  font-weight: 600;
+}
+.site-tagline {
+  color: #33d46f !important; /* jasnější zelená, dobře viditelná */
+  font-size: 18px;
+  margin-top: 8px;
+}
