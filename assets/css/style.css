@@ -512,3 +512,58 @@ body {
   line-height: 1.78 !important;
   max-width: 880px;
 }
+/* === LUXUSNÍ ČERNO-ZLATÁ HLAVIČKA – VARIANTA B === */
+
+.site-header {
+  background: #000; /* hluboká černá */
+  padding: 26px 0 30px;
+  border-bottom: 1px solid rgba(212, 169, 79, 0.35); /* jemná zlatá linka */
+}
+
+/* Větší logo */
+.brand-logo {
+  height: 74px;       /* původně 48 / 64 → teď výraznější, ale stále elegantní */
+  margin-right: 16px;
+}
+
+/* Zlatá z loga (ladí s logem, ne křiklavá) */
+:root {
+  --gold: #d4a94f;    /* hlavní zlatá */
+  --gold-soft: #c89b40;
+  --text-darkgreen: #0f3d24; /* motto */
+}
+
+.brand-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.brand-subtitle {
+  font-size: 0.92rem;
+  margin-top: 2px;
+  color: var(--gold-soft);
+  opacity: 0.95;
+}
+
+.main-nav a {
+  color: var(--gold);
+  font-weight: 600;
+  margin-left: 24px;
+  transition: 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: #f0d48a; /* světlejší zlatá při hoveru */
+}
+
+/* Motto pod hlavičkou */
+.site-tagline {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-darkgreen); /* tmavě zelená */
+  letter-spacing: 0.3px;
+}
