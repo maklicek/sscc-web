@@ -699,3 +699,39 @@ body {
   );
   pointer-events: none;
 }
+/* === SVĚTLEJŠÍ GRAFITOVÁ HLAVIČKA + JEMNÝ GOLD GLOW === */
+
+.site-header {
+  background: #2b2f33 !important;  /* NOVÝ světlejší grafit */
+  padding: 26px 0 30px;
+  color: #d4a94f;
+  position: relative;
+}
+
+/* glow světlejší a jemnější */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -14px;
+  height: 16px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(212, 169, 79, 0.32),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* přepínač – světlejší varianta */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(212, 169, 79, 0.55) !important;
+  color: #f2d489 !important;
+  transition: 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
