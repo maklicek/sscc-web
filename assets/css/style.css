@@ -335,4 +335,56 @@ footer {
     height: 44px;
   }
 }
+/* ----------------------------------------------------
+   HYBRIDNÍ ÚVOD – profesionální text + přínosy + obrázek
+---------------------------------------------------- */
+
+.intro-section {
+  margin: 40px 0 80px;
+}
+
+.intro-text {
+  font-size: 1.12rem;
+  max-width: 900px;
+  margin-bottom: 32px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.intro-benefits {
+  list-style: none;
+  margin: 0 0 46px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px 24px;
+}
+
+.intro-benefits li {
+  padding-left: 22px;
+  position: relative;
+  font-size: 1.05rem;
+  color: #222;
+}
+
+.intro-benefits li::before {
+  content: "✔";
+  color: #00a878;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.intro-image {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
 
