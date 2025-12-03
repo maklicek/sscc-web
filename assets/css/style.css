@@ -988,3 +988,45 @@ body {
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.20) !important;
 }
+/* === SVĚTLÁ A SOTVA TEPLÁ LUXUSNÍ HLAVIČKA === */
+
+.site-header {
+  background: #e9ebee !important;     /* čistý, světlý, jemný */
+  padding: 18px 0 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+/* žádný glow ani tmavé efekty – čistý look */
+.site-header::after {
+  display: none !important;
+}
+
+/* === MENU — zlato konečně vynikne === */
+.site-header .main-nav a {
+  color: #b9922d !important;   /* krásná sytá zlato-brušovaná */
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.site-header .main-nav a:hover {
+  color: #d8b24a !important;   /* světlejší zlato */
+}
+
+/* aktivní stránka */
+.site-header .main-nav a[aria-current="page"] {
+  color: #41b052 !important;   /* svěží zelená */
+  font-weight: 700;
+}
+
+/* slogan */
+.site-tagline {
+  color: #27a151 !important;   /* tmavší zelená */
+  font-weight: 600;
+}
+
+/* tlačítko light/dark */
+.theme-toggle {
+  background: white !important;
+  border: 1px solid #b9922d !important;
+  color: #b9922d !important;
+}
