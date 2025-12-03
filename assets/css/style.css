@@ -659,3 +659,20 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
+.theme-toggle {
+  position: absolute;
+  right: 40px;
+  top: 32px;
+  background: transparent;
+  border: 1px solid var(--header-text);
+  color: var(--header-text);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(212, 169, 79, 0.15);
+}
