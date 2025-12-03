@@ -819,3 +819,88 @@ body {
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.18) !important;
 }
+/* === SVĚTLEJŠÍ LUXUSNÍ HLAVIČKA (varianta 2) === */
+
+.site-header {
+  background: linear-gradient(
+      to bottom,
+      #484f57 0%,       /* světlejší grafit */
+      #2f3439 100%      /* jemné stmavení dolů */
+  ) !important;
+  padding: 30px 0 34px;
+  color: #d8b24a !important;
+  border-bottom: 1px solid rgba(216, 178, 74, 0.30);
+  position: relative;
+}
+
+/* jemný podsvit pod hlavičkou */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 22px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(216, 178, 74, 0.22),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* === ZVĚTŠENÉ LOGO (cca +18 %) === */
+
+.brand-logo {
+  width: 78px !important;   /* původně ~65px */
+  height: auto;
+}
+
+/* text vedle loga trochu větší */
+.brand-title {
+  font-size: 28px !important;
+}
+
+.brand-subtitle {
+  font-size: 14px !important;
+  opacity: 0.9;
+}
+
+/* === NAVIGACE – jasnější zlato === */
+
+.site-header .main-nav a {
+  color: #e4c56b !important;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #fff5d1 !important;
+}
+
+.site-header .main-nav a[aria-current="page"] {
+  color: #8de86d !important;
+  font-weight: 600;
+}
+
+/* === MOTTO – výraznější zelená === */
+
+.site-tagline {
+  color: #33d46f !important;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* === PŘEPÍNAČ === */
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(216, 178, 74, 0.6) !important;
+  color: #f7d892 !important;
+  transition: 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
