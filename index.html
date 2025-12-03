@@ -160,6 +160,7 @@
 
   </div>
 </main>
+
 <script>
   const toggle = document.getElementById("themeToggle");
 
@@ -174,7 +175,7 @@
     }
   });
 
-  // při načtení stránky použít poslední volbu
+  // aplikace poslední volby uživatele
   const saved = localStorage.getItem("theme");
   if (saved === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
