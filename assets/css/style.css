@@ -468,3 +468,47 @@ body {
   line-height: 1.78 !important;
   max-width: 880px;
 }
+/* Logo větší */
+.brand-logo {
+  height: 78px !important;
+  width: auto;
+  border-radius: 0 !important;
+}
+
+/* Nová, sytější zelená */
+:root {
+  --accent-green: #00c16a;
+}
+
+/* Motto výrazné */
+.site-tagline {
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--accent-green) !important;
+  margin-bottom: 14px;
+}
+
+/* Aktivní položka */
+.main-nav a[aria-current="page"] {
+  background: #d8fbe8 !important;
+  color: #009b52 !important;
+  font-weight: 700;
+}
+
+/* Hover */
+.main-nav a:hover {
+  background: #e8fcef !important;
+  color: #009b52 !important;
+}
+
+/* Větší text globálně */
+body {
+  font-size: 1.12rem;
+  line-height: 1.72;
+}
+
+.lead {
+  font-size: 1.25rem !important;
+  line-height: 1.78 !important;
+  max-width: 880px;
+}
