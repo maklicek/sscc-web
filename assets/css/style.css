@@ -1072,3 +1072,80 @@ body {
   border: 1px solid #b9922d !important;
   color: #b9922d !important;
 }
+/* === FIXNÍ HLAVIČKA – ZŮSTÁVÁ PŘILEPENÁ NAHOŘE === */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #e9ebee !important;     /* světlá, čistá */
+  
+  padding: 10px 0 12px;                /* HLAVNÍ ZMENŠENÍ VÝŠKY */
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow: 0 6px 14px rgba(0,0,0,0.10);  /* JEMNÝ STÍN POD HLAVIČKOU */
+}
+
+/* Aby obsah nepřejel pod fixní hlavičku */
+body {
+  padding-top: 120px;   /* přesná rezerva podle výšky hlavičky */
+}
+
+
+/* === LOGO – OPRAVDU VĚTŠÍ === */
+.brand-logo {
+  width: 95px !important;   /* ještě větší než dříve */
+  height: auto !important;
+}
+
+/* text u loga */
+.brand-title {
+  font-size: 32px !important;
+  font-weight: 700;
+  color: #b9922d !important;
+}
+
+.brand-subtitle {
+  font-size: 14px !important;
+  color: #b9922d !important;
+  opacity: 0.9;
+}
+
+
+/* === MOTTO BLÍŽE K DOLNÍMU OKRAJI === */
+.site-tagline {
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  color: #27a151 !important;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* === NAVIGACE === */
+.site-header .main-nav a {
+  color: #b9922d !important;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.site-header .main-nav a:hover {
+  color: #d8b24a !important;
+}
+
+.site-header .main-nav a[aria-current="page"] {
+  color: #41b052 !important;
+  font-weight: 700;
+}
+
+
+/* === SWITCH DARK/LIGHT === */
+.theme-toggle {
+  background: #fff !important;
+  border: 1px solid #b9922d !important;
+  color: #b9922d !important;
+  padding: 4px 10px !important;
+  border-radius: 8px;
+}
