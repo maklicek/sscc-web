@@ -904,3 +904,87 @@ body {
 .theme-toggle:hover {
   background: rgba(255, 255, 255, 0.16) !important;
 }
+/* === ČISTÁ A SVĚTLEJŠÍ HLAVIČKA — PREMIUM MODE === */
+
+.site-header {
+  background: #42484e !important; /* světlejší grafit, ne rozmazaný */
+  padding: 18px 0 20px;           /* snížená výška */
+  border-bottom: 1px solid rgba(216, 178, 74, 0.35);
+  position: relative;
+}
+
+/* jemný podsvit pod hlavičkou */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 16px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(216, 178, 74, 0.22),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* === ZVĚTŠENÉ LOGO (skutečně) === */
+.brand-logo {
+  width: 85px !important;   /* původně cca 65px – nyní +20 až 25 % */
+  height: auto !important;
+}
+
+/* text vedle loga sladíme s velikostí loga */
+.brand-title {
+  font-size: 30px !important;
+  color: #e6c36d !important;  /* syté zlato */
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  font-size: 14px !important;
+  color: #e6c36d !important;
+  opacity: 0.9;
+}
+
+/* === NAVIGACE — výrazné zlato === */
+
+.site-header .main-nav a {
+  color: #f0d998 !important;    /* jasné, čisté zlato */
+  font-weight: 600 !important;  /* výraznější, čitelné */
+  font-size: 17px;
+  transition: 0.22s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: #fff4d1 !important;    /* velmi světlé zlato */
+  transform: translateY(-1px);  /* jemné vizuální zvednutí */
+}
+
+.site-header .main-nav a[aria-current="page"] {
+  color: #98f07e !important;     /* aktivní = zelená */
+  font-weight: 700 !important;
+}
+
+/* === MOTTO === */
+
+.site-tagline {
+  color: #2edc6f !important;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* === TLAČÍTKO TMA/SVĚTLO === */
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border: 1px solid rgba(216, 178, 74, 0.7) !important;
+  color: #fce7b0 !important;
+  transition: 0.25s ease-in-out;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+}
