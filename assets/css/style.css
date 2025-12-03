@@ -567,3 +567,95 @@ body {
   color: var(--text-darkgreen); /* tmavě zelená */
   letter-spacing: 0.3px;
 }
+/* === LUXUSNÍ HLAVIČKA – SVĚTLEJŠÍ VARIANTA + GOLD GLOW === */
+
+:root {
+  --gold: #d4a94f;
+  --gold-soft: #c89b40;
+  --dark-green: #0f3d24;
+
+  /* světelný režim */
+  --header-bg: #111416;
+  --header-text: var(--gold);
+  --tagline-color: var(--dark-green);
+  --page-bg: #f3f5f7;
+  --text-color: #1b1b1b;
+}
+
+/* Tmavý režim */
+[data-theme="dark"] {
+  --header-bg: #000;
+  --header-text: #e2c884;
+  --tagline-color: #8fcfaa;
+  --page-bg: #0d0f10;
+  --text-color: #e6e6e6;
+}
+
+/* HLAVIČKA */
+.site-header {
+  background: var(--header-bg);
+  padding: 26px 0 30px;
+  color: var(--header-text);
+  position: relative;
+}
+
+/* jemný zlatý glow pod hlavičkou */
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 18px;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(212, 169, 79, 0.45),
+    transparent 70%
+  );
+}
+
+/* Větší logo */
+.brand-logo {
+  height: 70px;
+  margin-right: 14px;
+}
+
+/* Texty */
+.brand-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--header-text);
+}
+
+.brand-subtitle {
+  font-size: 0.92rem;
+  color: var(--gold-soft);
+  opacity: 0.95;
+}
+
+.main-nav a {
+  color: var(--header-text);
+  font-weight: 600;
+  margin-left: 22px;
+  transition: 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: #f0d48a;
+}
+
+.site-tagline {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--tagline-color);
+}
+
+/* Podklad stránky */
+body {
+  background: var(--page-bg);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
