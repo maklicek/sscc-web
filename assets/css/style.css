@@ -387,4 +387,41 @@ footer {
   border-radius: 18px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
+/* HLAVIČKA – GOLD VARIANTA */
+.main-nav a {
+  color: #3a3325 !important;  /* tmavě zlatohnědá */
+}
+
+.main-nav a:hover {
+  background: #f7efdb !important;
+  color: #b58b35 !important;
+}
+
+.main-nav a[aria-current="page"] {
+  background: #f3e4c2 !important;
+  color: #8b6a28 !important;
+  font-weight: 700;
+}
+
+.site-tagline {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #caa75e !important;   /* GOLD */
+  opacity: 1;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.brand-title {
+  color: #8b6a28 !important;
+}
+
+.brand-subtitle {
+  color: #6d5732 !important;
+}
+
+/* Logo bez kulatých rohů */
+.brand-logo {
+  border-radius: 0 !important;
+}
 
