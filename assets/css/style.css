@@ -114,3 +114,106 @@ body {
   justify-content: flex-start;
   gap: 40px;
 }
+/* === SVĚTLÁ LUXUSNÍ HLAVIČKA – FINÁLNÍ VERZE === */
+
+.site-header {
+  background: #e9ebee !important;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+/* Rezerva, aby obsah nezačínal pod hlavičkou */
+body {
+  padding-top: 120px !important;
+}
+
+/* vnitřní layout */
+.nav-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+/* LOGO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 95px !important;
+  height: auto !important;
+}
+
+.brand-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b9922d;
+}
+
+.brand-subtitle {
+  font-size: 14px;
+  color: #b9922d;
+  opacity: 0.85;
+}
+
+/* NAVIGACE */
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: #b9922d;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #d8b24a !important;
+}
+
+.main-nav a[aria-current="page"],
+.main-nav a.active {
+  color: #41b052 !important;
+  font-weight: 700;
+}
+
+/* MOTTO */
+.site-tagline {
+  color: #27a151;
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* TLAČÍTKO – theme switch */
+.theme-toggle {
+  margin-left: auto;
+  background: white;
+  border: 1px solid #b9922d;
+  color: #b9922d;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.theme-toggle:hover {
+  background: #fff7e0;
+}
