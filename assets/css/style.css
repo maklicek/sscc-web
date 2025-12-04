@@ -217,3 +217,114 @@ body {
 .theme-toggle:hover {
   background: #fff7e0;
 }
+/* === FINÁLNÍ HLAVIČKA SSCC === */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #f4f5f7;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 14px 0 10px;
+}
+
+.nav-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 64px;
+  width: auto;
+}
+
+.brand-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #b9922d;
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  margin-top: -3px;
+  color: #b9922d;
+  opacity: 0.9;
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b9922d;
+  transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #d8b24a;
+}
+
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+  color: #41b052 !important;
+  font-weight: 700;
+}
+
+.site-tagline {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #27a151;
+  padding-top: 6px;
+}
+
+/* === HAMBURGER PRO MOBIL === */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b9922d;
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #f4f5f7;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 18px;
+    display: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+}
