@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   SSCC – GLOBAL CLEAN STYLE (FINAL VERSION)
+   SSCC – FINAL CLEAN GLOBAL STYLE
 ---------------------------------------------------- */
 
 /* RESET */
@@ -16,6 +16,7 @@ body {
   background: #f5f7fa;
   color: #1a1a1a;
   line-height: 1.65;
+  font-size: 1.1rem;
 }
 
 /* Images */
@@ -37,7 +38,7 @@ a:hover { color: #0d47a1; }
 }
 
 /* ----------------------------------------------------
-   HEADER – FINAL MODERN VARIANT A
+   HEADER
 ---------------------------------------------------- */
 
 .site-header {
@@ -75,16 +76,22 @@ a:hover { color: #0d47a1; }
   border-radius: 0;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
 .brand-title {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: #1a1a1a;
 }
 
 .brand-subtitle {
-  font-size: 0.85rem;
-  color: #444;
-  margin-top: -2px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: -4px;
 }
 
 /* NAVIGATION */
@@ -103,13 +110,11 @@ a:hover { color: #0d47a1; }
   transition: 0.2s ease;
 }
 
-/* Hover */
 .main-nav a:hover {
   background: #e8fcef;
   color: #009b52;
 }
 
-/* Active */
 .main-nav a.active,
 .main-nav a[aria-current="page"] {
   background: #d8fbe8;
@@ -139,9 +144,7 @@ a:hover { color: #0d47a1; }
   color: #1a1a1a;
 }
 
-/* Mobile nav */
 @media (max-width: 900px) {
-
   .hamburger { display: block; }
 
   .main-nav {
@@ -166,387 +169,31 @@ a:hover { color: #0d47a1; }
 }
 
 /* ----------------------------------------------------
-   PAGE CONTENT
+   HERO BANNER – FINAL VERSION
 ---------------------------------------------------- */
-
-.page-main {
-  padding: 48px 0 80px;
-}
-
-.page-title {
-  font-size: 2.6rem;
-  font-weight: 800;
-  margin-bottom: 24px;
-}
-
-.lead {
-  font-size: 1.25rem;
-  line-height: 1.78;
-  max-width: 880px;
-  margin-bottom: 40px;
-  color: #444;
-}
-
-/* CARDS */
-.card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 28px;
-  margin-bottom: 34px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-}
-
-/* --------------------------------------*
-/* =========================================================
-   HERO – ABSTRAKTNÍ ENERGETICKÉ LINIE + ZLATÝ TEXT
-   (nízký premium banner)
-   ========================================================= */
-
-.hero {
-  width: 100%;
-  height: 300px; /* nízký a elegantní */
-  background: url("assets/img/hero-energy-lines.jpg") center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-/* Jemný zlatý filtr */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(185,146,45,0.18),
-    rgba(185,146,45,0.05)
-  );
-  pointer-events: none;
-}
-
-/* Text uvnitř */
-.hero-content {
-  position: relative;
-  text-align: center;
-  max-width: 900px;
-  padding: 0 20px;
-}
-
-.hero-content h1 {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #b9922d; /* ZLATO */
-  margin-bottom: 12px;
-  text-shadow: 0 0 8px rgba(255,255,255,0.25);
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  color: #d8b24a; /* světlejší zlato */
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* Mobilní verze */
-@media (max-width: 800px) {
-  .hero {
-    height: 220px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.1rem;
-  }
-
-  .hero-content p {
-    font-size: 1.05rem;
-  }
-}
-/* === HERO BANNER – ÚZKÝ, CELOŠÍŘKOVÝ, ELEGANTNÍ === */
 
 .hero-banner {
   width: 100%;
-  height: 250px; /* varianta B */
-  position: relative;
+  height: 250px;             /* FINÁLNÍ VÝŠKA */
   overflow: hidden;
-  margin-bottom: 40px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .hero-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  filter: brightness(0.92);
-}
-
-/* jemný zlatý filtr přes obrázek */
-.hero-banner .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(212, 169, 79, 0.18),
-    rgba(245, 245, 245, 0.35)
-  );
-  pointer-events: none;
-}
-/* ÚZKÝ HERO BANNER POD HLAVIČKOU */
-.hero-banner {
-  width: 100%;
-  height: 180px;               /* úzký, nerušivý pruh */
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 40px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;           /* vyplní prostor bez deformace */
-  object-position: center;     /* střed obrazu */
-  filter: brightness(85%);     /* jemné ztmavení pro eleganci */
-}
-
-.hero-banner .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.0),
-    rgba(255,255,255,0.4)
-  );
-}
-/* ---------------------------------------------
-   HERO BANNER (bez textu, úzký pod hlavičku)
----------------------------------------------- */
-
-.hero-banner {
-  width: 100%;
-  height: 180px;              /* můžeš změnit na 150–220px */
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 20px;        /* odstup od dalšího obsahu */
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* zachová poměr stran */
-  object-position: center;    /* střed obrázku */
-  opacity: 0.92;              /* lehké ztlumení */
-  display: block;
-}
-
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 40%;
-  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.25));
-  pointer-events: none;
-}
-/* ----------------------------------------------------
-   HERO BANNER – ÚVODNÍ OBRÁZEK POD HLAVIČKOU
----------------------------------------------------- */
-
-.hero-banner {
-  width: 100%;
-  height: 380px; /* původně ~270px → +40 % výšky */
-  overflow: hidden;
-  position: relative;
-  margin-top: 0;
-  padding: 0;
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: brightness(0.92); /* lehké ztmavení pro lepší čitelnost textu */
-}
-
-/* Překryv pro jemné zlatavé zabarvení */
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.10),
-      rgba(255, 255, 255, 0.25)
-  );
-  pointer-events: none;
-}
-
-
-/* ----------------------------------------------------
-   HLAVIČKA – ZAROVNÁNÍ LOGA A TEXTU
----------------------------------------------------- */
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.15;
-  margin-top: 2px; /* přesné dorovnání vertikálně */
-}
-
-.brand-title {
-  font-size: 1.55rem;
-  font-weight: 800;
-  margin-bottom: 2px;
-}
-
-.brand-subtitle {
-  font-size: 0.78rem;
-  opacity: 0.8;
-  margin-top: -2px;
-}
-
-
-/* ----------------------------------------------------
-   HLAVNÍ NADPIS POD HERO OBRÁZKEM
----------------------------------------------------- */
-
-.page-main {
-  pad
-/* === HERO BANNER – FINÁLNÍ VERZE (výška +40 %, posun nahoru, čistý vzhled) === */
-
-.hero-banner {
-  width: 100%;
-  height: 360px;                       /* původně ~250px → +40 % */
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 20px;                 /* menší mezera pod obrázkem */
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;          /* ukáže horní část obrázku */
-  filter: brightness(0.88);             /* lehký tlumící filtr pro profesionální look */
-  transition: opacity 1.4s ease;        /* připraveno pro fade-in */
-  opacity: 1;
-}
-
-.hero-banner.fade-in img {
-  opacity: 1;
-  transform: none;
-}
-
-/* Zlato-průhledná jemná vrstva přes obrázek (volitelné) */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
-  pointer-events: none;
-}
-/* ---------------------------------------------
-   HERO – větší výška + posunutí obsahu dolů
---------------------------------------------- */
-
-.hero-banner {
-  width: 100%;
-  height: 360px;                  /* původní cca 260 → +40% */
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 20px;            /* menší mezera pod obrázkem */
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;    /* ↓ POSUN OBSAHU DOLŮ – ukáže více horní části obrázku */
+  object-position: center 18%;   /* FINÁLNÍ POSUN – vidět více horní části */
   opacity: 0;
-  animation: heroFade 1.6s ease-out forwards;
+  filter: brightness(0.9);
+  animation: heroFade 1.4s ease-out forwards;
 }
 
-/* jemné stmavení (zůstává, ale mírnější) */
-.hero-overlay {
+.hero-banner .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.18);
-}
-
-/* Fade-in animace */
-@keyframes heroFade {
-  from { opacity: 0; transform: scale(1.03); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-/* ---------------------------------------------
-   OBRÁZKY VE ZBYTKU STRÁNKY – sjednocená menší velikost
---------------------------------------------- */
-
-.edu-image img,
-.page-main img {
-  max-width: 760px;     /* nepřesahuje textový sloupec */
-  width: 100%;
-  margin: 20px auto;
-  display: block;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-/* ----------------------------------------------------
-   HERO BANNER – FINÁLNÍ VERZE D
-   Úzký, luxusní, s fade-in animací, horní část obrázku
----------------------------------------------------- */
-
-.hero-banner {
-  width: 100%;
-  height: 200px;                /* tvoje volba: varianta C */
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;          /* menší mezera pod bannerem */
-}
-
-/* Obrázek */
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;            /* žádná deformace */
-  object-position: center top;  /* tvoje volba: ukázat horní část obrázku */
-  opacity: 0;
-  animation: heroFade 1.4s ease-out forwards;
-  filter: brightness(0.90);     /* decentní tlumení */
-}
-
-/* jemné dolní stmavení (volitelné) */
-.hero-banner::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 45%;
-  background: linear-gradient(
-      to bottom,
-      rgba(255,255,255,0),
-      rgba(0,0,0,0.28)
-  );
   pointer-events: none;
 }
 
@@ -561,37 +208,94 @@ a:hover { color: #0d47a1; }
     transform: scale(1);
   }
 }
-/* === HERO BANNER – FINÁLNÍ, FUNKČNÍ, BEZ KONFLIKTŮ === */
 
-.hero-banner {
-  width: 100%;
-  height: 360px;          /* zvýšená výška +40 % */
-  overflow: hidden;
-  position: relative;
+/* ----------------------------------------------------
+   PAGE CONTENT
+---------------------------------------------------- */
+
+.page-main {
+  padding: 40px 0 80px;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 800;
   margin-bottom: 20px;
 }
 
-/* OBRÁZEK – vidět více horní části */
-.hero-banner img {
+.lead {
+  font-size: 1.22rem;
+  line-height: 1.78;
+  max-width: 880px;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+/* ----------------------------------------------------
+   UNIVERSAL IMAGE STYLE (EDU, PROJECTS…)
+---------------------------------------------------- */
+
+.edu-image img,
+.page-main img {
+  max-width: 760px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;  /* ← TADY POSOUVÁŠ OBSAH OBRÁZKU NAHORU/DOLŮ */
-  filter: brightness(0.88);
-  opacity: 0;
-  animation: heroFade 1.3s ease-out forwards;
+  margin: 20px auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-/* Jemné stmavení */
-.hero-banner .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.18);
-  pointer-events: none;
+/* ----------------------------------------------------
+   EDU SECTION
+---------------------------------------------------- */
+
+.edu-section {
+  background: #fff;
+  padding: 36px 32px;
+  margin: 42px 0;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-/* Fade-in animace */
-@keyframes heroFade {
-  from { opacity: 0; transform: scale(1.03); }
-  to   { opacity: 1; transform: scale(1); }
+.edu-heading {
+  font-size: 1.9rem;
+  font-weight: 800;
+  border-left: 6px solid #1976d2;
+  padding-left: 14px;
+  margin-bottom: 22px;
+}
+
+.edu-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.edu-row.reverse { flex-direction: row-reverse; }
+
+.edu-col { flex: 1; }
+
+.edu-text p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .edu-row,
+  .edu-row.reverse {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+
+footer {
+  background: #0d47a1;
+  color: #fff;
+  padding: 36px 0;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
