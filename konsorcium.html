@@ -11,6 +11,8 @@
 
 <header class="site-header">
   <div class="nav-inner">
+    <button id="themeToggle" class="theme-toggle">☀️ / 🌙</button>
+
     <a href="index.html" class="brand">
       <img src="assets/img/logo-sscc.png" class="brand-logo" alt="SSCC logo" />
       <div class="brand-text">
@@ -25,7 +27,10 @@
       <a href="projekty.html">Projekty</a>
       <a href="napady.html">Nápady</a>
       <a href="edukace.html">Edukace</a>
-      <a href="konsorcium.html" aria-current="page">Konsorcium</a>
+      <a href="konsorcium.html">Konsorcium</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="dokumentace.html">Dokumentace</a>
+      <a href="ai.html">Data & AI řízení</a>
     </nav>
   </div>
 
@@ -33,6 +38,7 @@
     Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné.
   </div>
 </header>
+
 
 
 
@@ -254,6 +260,21 @@
 
   </div>
 </main>
+<script>
+  // Automatické zvýraznění aktivní položky v menu
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    navLinks.forEach((link) => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
