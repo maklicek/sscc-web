@@ -20,6 +20,8 @@
       </div>
     </a>
 
+    <button id="navToggle" class="hamburger">☰</button>
+
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Úvod</a>
       <a href="sscc.html">SSCC</a>
@@ -32,16 +34,19 @@
       <a href="ai.html">Data & AI řízení</a>
     </nav>
 
-    <button id="navToggle" class="hamburger">
-      ☰
-    </button>
-
   </div>
 
   <div class="site-tagline">
     Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné.
   </div>
 </header>
+
+<script>
+  document.getElementById("navToggle").onclick = () => {
+    document.getElementById("mainNav").classList.toggle("open");
+  };
+</script>
+
 
 <!-- ========================= -->
 <!--       HLAVNÍ OBSAH       -->
