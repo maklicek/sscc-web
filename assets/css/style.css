@@ -363,3 +363,71 @@ a:hover { color: #0d47a1; }
   background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.25));
   pointer-events: none;
 }
+/* ----------------------------------------------------
+   HERO BANNER – ÚVODNÍ OBRÁZEK POD HLAVIČKOU
+---------------------------------------------------- */
+
+.hero-banner {
+  width: 100%;
+  height: 380px; /* původně ~270px → +40 % výšky */
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  padding: 0;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92); /* lehké ztmavení pro lepší čitelnost textu */
+}
+
+/* Překryv pro jemné zlatavé zabarvení */
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.10),
+      rgba(255, 255, 255, 0.25)
+  );
+  pointer-events: none;
+}
+
+
+/* ----------------------------------------------------
+   HLAVIČKA – ZAROVNÁNÍ LOGA A TEXTU
+---------------------------------------------------- */
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+  margin-top: 2px; /* přesné dorovnání vertikálně */
+}
+
+.brand-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.brand-subtitle {
+  font-size: 0.78rem;
+  opacity: 0.8;
+  margin-top: -2px;
+}
+
+
+/* ----------------------------------------------------
+   HLAVNÍ NADPIS POD HERO OBRÁZKEM
+---------------------------------------------------- */
+
+.page-main {
+  pad
