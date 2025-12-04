@@ -178,6 +178,14 @@
     </div>
   </div>
 </section>
+<script>
+  const path = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".main-nav a").forEach(a => {
+    if (a.getAttribute("href") === path) {
+      a.classList.add("active");
+    }
+  });
+</script>
 
 
 </body>
