@@ -1155,3 +1155,20 @@ body {
   border-radius: 6px;
   font-weight: 600;
 }
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* zabrání zalamování */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; /* brand se nebude lámat */
+  gap: 12px;
+}
+
+.brand-text {
+  white-space: nowrap; /* celý text zůstane v jednom řádku */
+}
