@@ -431,3 +431,35 @@ a:hover { color: #0d47a1; }
 
 .page-main {
   pad
+/* === HERO BANNER – FINÁLNÍ VERZE (výška +40 %, posun nahoru, čistý vzhled) === */
+
+.hero-banner {
+  width: 100%;
+  height: 360px;                       /* původně ~250px → +40 % */
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;                 /* menší mezera pod obrázkem */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;          /* ukáže horní část obrázku */
+  filter: brightness(0.88);             /* lehký tlumící filtr pro profesionální look */
+  transition: opacity 1.4s ease;        /* připraveno pro fade-in */
+  opacity: 1;
+}
+
+.hero-banner.fade-in img {
+  opacity: 1;
+  transform: none;
+}
+
+/* Zlato-průhledná jemná vrstva přes obrázek (volitelné) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
