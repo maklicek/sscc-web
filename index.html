@@ -23,12 +23,15 @@
     </a>
 
     <nav class="main-nav">
-      <a href="index.html" aria-current="page">Úvod</a>
+      <a href="index.html">Úvod</a>
       <a href="sscc.html">SSCC</a>
       <a href="projekty.html">Projekty</a>
       <a href="napady.html">Nápady</a>
       <a href="edukace.html">Edukace</a>
       <a href="konsorcium.html">Konsorcium</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="dokumentace.html">Dokumentace</a>
+      <a href="ai.html">Data & AI řízení</a>
     </nav>
   </div>
 
@@ -199,6 +202,21 @@
   if (saved === "dark") {
     document.documentElement.setAttribute("data-theme", "dark");
   }
+</script>
+<script>
+  // Automatické zvýraznění aktivní položky v menu
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    navLinks.forEach((link) => {
+      const linkPage = link.getAttribute("href");
+
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
 </script>
 
 </body>
