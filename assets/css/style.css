@@ -1172,3 +1172,13 @@ body {
 .brand-text {
   white-space: nowrap; /* celý text zůstane v jednom řádku */
 }
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* posune vše vlevo */
+  gap: 40px; /* mezera mezi logem a menu */
+}
+
+.main-nav {
+  margin-left: 20px; /* jemné posunutí vlevo */
+}
