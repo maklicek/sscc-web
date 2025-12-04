@@ -332,3 +332,34 @@ a:hover { color: #0d47a1; }
     rgba(255,255,255,0.4)
   );
 }
+/* ---------------------------------------------
+   HERO BANNER (bez textu, úzký pod hlavičku)
+---------------------------------------------- */
+
+.hero-banner {
+  width: 100%;
+  height: 180px;              /* můžeš změnit na 150–220px */
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;        /* odstup od dalšího obsahu */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* zachová poměr stran */
+  object-position: center;    /* střed obrázku */
+  opacity: 0.92;              /* lehké ztlumení */
+  display: block;
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.25));
+  pointer-events: none;
+}
