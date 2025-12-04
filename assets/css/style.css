@@ -1321,7 +1321,7 @@ body {
     flex-direction: column;
     padding: 80px 20px;
     gap: 20px;
-    transition: right 0.3s ease;
+    transition: right 0.3s ease; 
     z-index: 1000;
   }
 
