@@ -1149,3 +1149,9 @@ body {
   padding: 4px 10px !important;
   border-radius: 8px;
 }
+.main-nav a.active {
+  background-color: #d8ffe4; /* stejná barva jako u aria-current */
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
