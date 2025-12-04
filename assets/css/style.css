@@ -463,3 +463,50 @@ a:hover { color: #0d47a1; }
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
   pointer-events: none;
 }
+/* ---------------------------------------------
+   HERO – větší výška + posunutí obsahu dolů
+--------------------------------------------- */
+
+.hero-banner {
+  width: 100%;
+  height: 360px;                  /* původní cca 260 → +40% */
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;            /* menší mezera pod obrázkem */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;    /* ↓ POSUN OBSAHU DOLŮ – ukáže více horní části obrázku */
+  opacity: 0;
+  animation: heroFade 1.6s ease-out forwards;
+}
+
+/* jemné stmavení (zůstává, ale mírnější) */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+}
+
+/* Fade-in animace */
+@keyframes heroFade {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ---------------------------------------------
+   OBRÁZKY VE ZBYTKU STRÁNKY – sjednocená menší velikost
+--------------------------------------------- */
+
+.edu-image img,
+.page-main img {
+  max-width: 760px;     /* nepřesahuje textový sloupec */
+  width: 100%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
