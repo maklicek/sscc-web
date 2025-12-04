@@ -328,3 +328,117 @@ body {
   }
 
 }
+/* === SVĚTLÁ LUXUSNÍ HLAVIČKA — FINÁLNÍ VARIANTA === */
+
+.site-header {
+  background: #e9ebee;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.nav-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 95px;
+  height: auto;
+}
+
+.brand-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #b9922d;
+}
+
+.brand-subtitle {
+  font-size: 14px;
+  color: #b9922d;
+  opacity: 0.85;
+}
+
+/* Navigace */
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: #b9922d;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: #d8b24a;
+}
+
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+  color: #41b052;
+  font-weight: 700;
+}
+
+/* Motto */
+.site-tagline {
+  color: #27a151;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b9922d;
+}
+
+/* Mobilní verze */
+@media (max-width: 900px) {
+  
+  .hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #e9ebee;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 18px;
+    display: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+}
