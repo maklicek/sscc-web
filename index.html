@@ -5,10 +5,312 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SSCC – Úvod</title>
   <meta name="description" content="SSCC propojuje CO₂, geotermii, OZE a chemickou syntézu do jednoho energetického systému.">
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- =======================================
+       INLINE FINAL STYLE.CSS  (varianta B)
+  ======================================== -->
+  <style>
+
+/* ----------------------------------------------------
+   SSCC – FINAL CLEAN GLOBAL STYLE
+---------------------------------------------------- */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter","Segoe UI",sans-serif;
+  background: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.65;
+  font-size: 1.1rem;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Links */
+a { text-decoration: none; color: #1976d2; }
+a:hover { color: #0d47a1; }
+
+/* Container */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ----------------------------------------------------
+   HEADER
+---------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e5e9ef;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  padding: 10px 0 6px;
+}
+
+.nav-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 78px;
+  width: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.brand-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.brand-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-top: -4px;
+}
+
+/* NAVIGATION */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.main-nav a {
+  padding: 6px 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #1a1a1a;
+  transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: #e8fcef;
+  color: #009b52;
+}
+
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
+  background: #d8fbe8;
+  color: #009b52;
+  font-weight: 700;
+}
+
+/* TAGLINE */
+.site-tagline {
+  text-align: center;
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: #00c16a;
+  margin: 6px 0 14px;
+}
+
+/* ----------------------------------------------------
+   HAMBURGER MENU
+---------------------------------------------------- */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a1a;
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: block; }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    gap: 16px;
+    display: none;
+  }
+
+  .main-nav.open { display: flex; }
+
+  .nav-inner {
+    justify-content: space-between;
+  }
+}
+
+/* ----------------------------------------------------
+   HERO BANNER – FINAL VERSION (250px, center 18%)
+---------------------------------------------------- */
+
+.hero-banner {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  opacity: 0;
+  filter: brightness(0.9);
+  animation: heroFade 1.4s ease-out forwards;
+}
+
+.hero-banner .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+  pointer-events: none;
+}
+
+/* Fade-in */
+@keyframes heroFade {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ----------------------------------------------------
+   PAGE CONTENT
+---------------------------------------------------- */
+
+.page-main {
+  padding: 40px 0 80px;
+}
+
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 1.22rem;
+  line-height: 1.78;
+  max-width: 880px;
+  margin-bottom: 32px;
+  color: #444;
+}
+
+/* ----------------------------------------------------
+   UNIVERSAL IMAGES
+---------------------------------------------------- */
+
+.edu-image img,
+.page-main img {
+  max-width: 760px;
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ----------------------------------------------------
+   EDU SECTION
+---------------------------------------------------- */
+
+.edu-section {
+  background: #fff;
+  padding: 36px 32px;
+  margin: 42px 0;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.edu-heading {
+  font-size: 1.9rem;
+  font-weight: 800;
+  border-left: 6px solid #1976d2;
+  padding-left: 14px;
+  margin-bottom: 22px;
+}
+
+.edu-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.edu-row.reverse { flex-direction: row-reverse; }
+
+.edu-col { flex: 1; }
+
+.edu-text p {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .edu-row,
+  .edu-row.reverse {
+    flex-direction: column;
+  }
+}
+
+/* ----------------------------------------------------
+   FOOTER
+---------------------------------------------------- */
+
+footer {
+  background: #0d47a1;
+  color: #fff;
+  padding: 36px 0;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+  </style>
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="nav-inner">
     <a href="index.html" class="brand">
@@ -39,7 +341,7 @@
   </div>
 </header>
 
-<!-- HERO BANNER -->
+<!-- HERO -->
 <section class="hero-banner">
     <img src="assets/img/vyroba-amoniaku.jpg" alt="Energetická infrastruktura">
     <div class="hero-overlay"></div>
@@ -47,195 +349,99 @@
 
 <main class="page-main container">
 
-    <h1 class="page-title">
-        Energie, která je spolehlivá za každého počasí
-    </h1>
+    <h1 class="page-title">Energie, která je spolehlivá za každého počasí</h1>
 
     <p class="lead">
         SSCC vytváří nový typ energetického systému, který spojuje obnovitelné zdroje,
         pokročilou chemii a digitální řízení výkonu. Cílem je stabilní, dlouhodobě
-        uložitelná a cenově dostupná energie pro obce, průmysl i celou energetickou infrastrukturu. Tento systém se z ekonomických důvodů, vyplatí pouze u průmyslových objektů nebo ve větších městech.
+        uložitelná a cenově dostupná energie pro obce, průmysl i celou infrastrukturu.
     </p>
 
-    <!-- BENEFITS -->
+    <!-- BENEFITY -->
     <section class="card">
         <h2>Stabilní výkon 24/7</h2>
-        <p>
-            SSCC kombinuje více zdrojů a ukládání energie tak, aby byl výkon dostupný kdykoli.
-        </p>
+        <p>SSCC kombinuje více zdrojů a ukládání energie tak, aby byl výkon dostupný kdykoli.</p>
 
         <h2>Energetická nezávislost</h2>
-        <p>
-            Lokální systémy dokáží snížit závislost na dovozu elektřiny i paliv.
-        </p>
+        <p>Lokální systémy dokáží snížit závislost na dovozu elektřiny i paliv.</p>
 
         <h2>Dlouhodobé ukládání energie</h2>
-        <p>
-            Energie lze ukládat na měsíce díky syntéze amoniaku a uzavřenému cyklu CO₂.
-        </p>
+        <p>Energii lze ukládat na měsíce díky syntéze amoniaku a uzavřenému cyklu CO₂.</p>
     </section>
 
 </main>
 
-    <!-- TECHNOLOGICKÉ BLOKY – ZŮSTÁVAJÍ, ALE NENÍ TO ÚVOD -->
-    
-    <!-- 1) PILÍŘ: GEOTERMIE -->
-    <section class="edu-section">
-      <h2 class="edu-heading">Stabilní základní výkon díky geotermii</h2>
-
-      <div class="edu-row">
-        <div class="edu-col edu-text">
-          <p>
-            Geotermální zdroje poskytují nepřetržitý tepelný tok, který lze využít pro výrobu elektřiny,
-            procesní teplo i elektrolýzu. V kombinaci s chemickým ukládáním tvoří geotermie stabilní základ
-            celého systému SSCC.
-          </p>
-
-          <p>
-            Tím vzniká infrastruktura, která dokáže vyrovnat výkyvy obnovitelných zdrojů a zajistit
-            nepřerušovaný provoz energetických jednotek.
-          </p>
-        </div>
-
-        <div class="edu-col edu-image">
-          <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrt">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 2) PILÍŘ: CO₂ jako surovina -->
-    <section class="edu-section">
-      <h2 class="edu-heading">CO₂ jako průmyslová surovina</h2>
-
-      <div class="edu-row reverse">
-        <div class="edu-col edu-text">
-          <p>
-            V SSCC se CO₂ stává vstupem pro chemické reakce – nikoliv odpadem.
-            Lze z něj vytvářet syntetická paliva, amoniak nebo průmyslové chemikálie,
-            které jsou součástí uzavřeného uhlíkového cyklu.
-          </p>
-
-          <p>
-            Tím vzniká nový průmyslový ekosystém, který přeměňuje zbytkový CO₂
-            na hodnotné produkty a výrazně snižuje celkové emise.
-          </p>
-        </div>
-
-        <div class="edu-col edu-image">
-          <img src="assets/img/CO2-kolobeh.jpg" alt="CO₂ cyklus">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 3) PILÍŘ: AMONIAK -->
-    <section class="edu-section">
-      <h2 class="edu-heading">Amoniak jako energetický zásobník</h2>
-
-      <div class="edu-row">
-        <div class="edu-col edu-text">
-          <p>
-            Amoniak umožňuje ukládat energii v měsíčním až sezónním měřítku.
-            Lze jej vyrábět v době přebytků elektřiny a využít zpětně, kdy je potřeba stabilní výkon.
-          </p>
-
-          <p>
-            Spojením elektrolýzy, syntézy a energetického využití NH₃ získává systém flexibilitu,
-            kterou běžná bateriová řešení nedosahují.
-          </p>
-        </div>
-
-        <div class="edu-col edu-image">
-          <img src="assets/img/co2-premena.png" alt="Syntéza amoniaku">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 4) PILÍŘ: OZE -->
-    <section class="edu-section">
-      <h2 class="edu-heading">Obnovitelné zdroje jako levný základ</h2>
-
-      <div class="edu-row reverse">
-        <div class="edu-col edu-text">
-          <p>
-            Solární a větrná energie tvoří levný vstup do celého cyklu. Jejich proměnlivost je
-            vyrovnávána chemickým ukládáním a stabilními zdroji, takže výsledkem je plynulý výkon.
-          </p>
-
-          <p>
-            Díky energetickému cyklu SSCC lze využít maximum výroby z OZE a předejít
-            výpadkům výkonu, aniž by bylo nutné nasazovat obrovská bateriová úložiště.
-          </p>
-        </div>
-
-        <div class="edu-col edu-image">
-          <img src="assets/img/obnovitelne-zdroje.jpg" alt="Obnovitelné zdroje energie">
-        </div>
-      </div>
-    </section>
-
+<!-- EDU BLOKY -->
+<section class="edu-section">
+  <h2 class="edu-heading">Stabilní základní výkon díky geotermii</h2>
+  <div class="edu-row">
+    <div class="edu-col edu-text">
+      <p>Geotermální zdroje poskytují nepřetržitý tepelný tok...</p>
+      <p>Tím vzniká infrastruktura, která dokáže vyrovnat výkyvy OZE...</p>
+    </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrt">
+    </div>
   </div>
-</main>
+</section>
 
+<section class="edu-section">
+  <h2 class="edu-heading">CO₂ jako průmyslová surovina</h2>
+  <div class="edu-row reverse">
+    <div class="edu-col edu-text">
+      <p>V SSCC se CO₂ stává vstupem pro chemické reakce...</p>
+      <p>Tím vzniká nový průmyslový ekosystém...</p>
+    </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/CO2-kolobeh.jpg" alt="CO₂ cyklus">
+    </div>
+  </div>
+</section>
+
+<section class="edu-section">
+  <h2 class="edu-heading">Amoniak jako energetický zásobník</h2>
+  <div class="edu-row">
+    <div class="edu-col edu-text">
+      <p>Amoniak umožňuje ukládat energii v měsíčním až sezónním měřítku...</p>
+      <p>Systém získává flexibilitu...</p>
+    </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/co2-premena.png" alt="Syntéza amoniaku">
+    </div>
+  </div>
+</section>
+
+<section class="edu-section">
+  <h2 class="edu-heading">Obnovitelné zdroje jako levný základ</h2>
+  <div class="edu-row reverse">
+    <div class="edu-col edu-text">
+      <p>Solární a větrná energie tvoří levný vstup...</p>
+      <p>Díky SSCC lze využít maximum výroby OZE...</p>
+    </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/obnovitelne-zdroje.jpg" alt="Obnovitelné zdroje">
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 SSCC — Solar & Synthetic Carbon Cycle
+</footer>
 
 <script>
-  const toggle = document.getElementById("themeToggle");
-
-  toggle.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    if (current === "dark") {
-      document.documentElement.removeAttribute("data-theme");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
+  // Mobile nav toggle
+  document.getElementById("navToggle").addEventListener("click", () => {
+    document.getElementById("mainNav").classList.toggle("open");
   });
 
-  // aplikace poslední volby uživatele
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-</script>
-<script>
-  // Automatické zvýraznění aktivní položky v menu
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".main-nav a");
-
-    navLinks.forEach((link) => {
-      const linkPage = link.getAttribute("href");
-
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
-<script>
+  // Highlight active page
   const path = window.location.pathname.split("/").pop();
   document.querySelectorAll(".main-nav a").forEach(a => {
     if (a.getAttribute("href") === path) {
       a.classList.add("active");
+      a.setAttribute("aria-current", "page");
     }
   });
-</script>
-<script>
-// Highlight active navigation
-document.querySelectorAll(".main-nav a").forEach(link => {
-  if (link.href === window.location.href) {
-    link.classList.add("active");
-    link.setAttribute("aria-current", "page");
-  }
-});
-
-// Mobile nav toggle
-document.getElementById("navToggle").addEventListener("click", () => {
-  document.getElementById("mainNav").classList.toggle("open");
-});
 </script>
 
 </body>
