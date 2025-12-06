@@ -4,195 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SSCC – Úvod</title>
-
-  <style>
-/* ----------------------------------------------------
-   SSCC – FINAL CLEAN STYLE (INLINE VERSION)
----------------------------------------------------- */
-
-/* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: "Inter","Segoe UI",sans-serif;
-  background: #f5f7fa;
-  color: #1a1a1a;
-  line-height: 1.7;
-  font-size: 1.08rem;
-}
-
-/* GLOBALS */
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 14px;
-}
-
-/* ----------------------------------------------------
-   HEADER
----------------------------------------------------- */
-.site-header {
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e5e9ef;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  padding: 8px 0 2px;
-}
-
-.nav-inner {
-  max-width: 1250px; margin: 0 auto;
-  padding: 10px 28px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand-logo { height: 78px; border-radius: 0; }
-
-.brand-title { font-size: 1.75rem; font-weight: 800; }
-.brand-subtitle { font-size: 0.8rem; opacity: 0.75; margin-top: -4px; }
-
-.main-nav { display: flex; gap: 26px; }
-.main-nav a {
-  padding: 6px 10px;
-  font-size: 1.05rem; font-weight: 600;
-  border-radius: 8px;
-  color: #1a1a1a;
-  transition: 0.2s ease;
-}
-.main-nav a:hover { background: #e8fcef; color: #009b52; }
-.main-nav a.active { background: #d8fbe8; color: #009b52; }
-
-.site-tagline {
-  text-align: center;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #00b867;
-  padding-bottom: 8px;
-}
-
-/* ----------------------------------------------------
-   HERO
----------------------------------------------------- */
-.hero-banner {
-  width: 100%; height: 250px; overflow: hidden;
-  position: relative;
-}
-.hero-banner img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center 18%;
-  opacity: 0; filter: brightness(0.9);
-  animation: heroFade 1.3s ease forwards;
-}
-.hero-overlay {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,0.18);
-}
-@keyframes heroFade {
-  from { opacity: 0; transform: scale(1.03); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-/* ----------------------------------------------------
-   INTRO BLOCK – odborný úvod
----------------------------------------------------- */
-.intro {
-  margin-top: 50px;
-}
-.intro h1 {
-  font-size: 2.45rem;
-  font-weight: 800;
-  margin-bottom: 22px;
-}
-.intro p {
-  max-width: 880px;
-  font-size: 1.15rem;
-  color: #3a3a3a;
-  margin-bottom: 18px;
-}
-
-/* THREE COLUMN CARDS */
-.intro-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top: 36px;
-}
-.intro-card {
-  background: #fff;
-  padding: 26px;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-.intro-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-/* ----------------------------------------------------
-   EDU BLOCKS – sloupcové rozložení
----------------------------------------------------- */
-.edu-section {
-  margin-top: 70px;
-  padding: 40px 32px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-
-.edu-heading {
-  font-size: 1.85rem;
-  font-weight: 800;
-  border-left: 6px solid #1976d2;
-  padding-left: 14px;
-  margin-bottom: 22px;
-}
-
-.edu-row {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.edu-row.reverse {
-  grid-template-columns: 0.9fr 1.1fr;
-}
-
-.edu-text p { color: #333; margin-bottom: 14px; }
-
-/* Smaller images than before */
-.edu-image img {
-  max-width: 90%;
-  margin: 0 auto;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 900px) {
-  .intro-cards { grid-template-columns: 1fr; }
-  .edu-row, .edu-row.reverse { grid-template-columns: 1fr; }
-}
-
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
-footer {
-  background: #0d47a1;
-  color: #fff;
-  text-align: center;
-  padding: 40px 0;
-  margin-top: 60px;
-  border-radius: 0;
-}
-  </style>
+  <meta name="description" content="Integrovaná energetická infrastruktura pro města, průmysl a průmyslové cykly.">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -201,14 +14,16 @@ footer {
   <div class="nav-inner">
     <a href="index.html" class="brand">
       <img src="assets/img/logo-sscc.png" class="brand-logo" alt="SSCC logo">
-      <div>
+      <div class="brand-text">
         <div class="brand-title">SSCC</div>
         <div class="brand-subtitle">Solar & Synthetic Carbon Cycle</div>
       </div>
     </a>
 
+    <button id="navToggle" class="hamburger">☰</button>
+
     <nav class="main-nav" id="mainNav">
-      <a href="index.html" class="active">Úvod</a>
+      <a href="index.html">Úvod</a>
       <a href="sscc.html">SSCC</a>
       <a href="projekty.html">Projekty</a>
       <a href="napady.html">Nápady</a>
@@ -225,122 +40,172 @@ footer {
   </div>
 </header>
 
+<!-- HERO BANNER -->
 <section class="hero-banner">
   <img src="assets/img/vyroba-amoniaku.jpg" alt="Energetická infrastruktura">
   <div class="hero-overlay"></div>
 </section>
 
-<main class="container page-main">
+<main class="page-main container">
 
-  <!-- INTRO -->
-  <section class="intro">
-    <h1>Energie, která funguje i tam, kde běžné zdroje selhávají</h1>
+<h1 class="page-title">Integrovaná energetická infrastruktura pro 21. století</h1>
 
-    <p>
-      SSCC propojuje geotermální energii, obnovitelné zdroje, syntézu amoniaku,
-      recyklaci CO₂ a digitální řízení výkonu do jednoho uzavřeného cyklu.  
-      Systém umožňuje dlouhodobé ukládání energie, stabilní provoz bez ohledu na počasí
-      a vznik lokální průmyslové infrastruktury.
-    </p>
+<p class="lead">
+  Současná energetická soustava vznikala po desítky let jako kombinace centralizovaných
+  elektráren, distribučních sítí a dílčích lokálních zdrojů. Dnešní svět však vyžaduje systém,
+  který je flexibilní, škálovatelný, odolný vůči výkyvům klimatu a schopný dlouhodobého ukládání
+  energie. SSCC představuje komplexní koncept, který integruje elektrickou výrobu, teplo,
+  chemickou syntézu, průmyslové využití CO₂ a sezónní zásobníky energie v jeden funkční celek.
+</p>
 
-    <p>
-      Cílem není konkurovat klasické síťové energetice, ale nabídnout řešení tam,
-      kde dnešní systémy nedokáží zajistit dostatek výkonu, spolehlivosti
-      nebo dlouhodobé energetické nezávislosti.
-    </p>
+<p class="lead">
+  Nejde o jednu technologii, ale o modulární infrastrukturu. Každý prvek – od solárních polí,
+  geotermálních vrtů a tepelných čerpadel po syntézu amoniaku nebo průmyslové využití CO₂ –
+  je součástí širokého energetického a průmyslového ekosystému. SSCC umožňuje městům,
+  podnikům i energetickým celkům navrhnout a postavit vlastní, lokálně optimalizovaný zdroj
+  energie a tepla s dlouhodobou stabilitou.
+</p>
 
-    <!-- THREE CARDS -->
-    <div class="intro-cards">
-      <div class="intro-card">
-        <h3>Proč SSCC vzniká</h3>
-        <p>Současné energetické systémy kombinují nízkou stabilitu OZE s vysokou cenou dlouhodobého ukládání. SSCC řeší obojí vytvořením uzavřeného cyklu bez ztrát uhlíku.</p>
-      </div>
+<!-- =====================================================
+     TŘÍSLOUPCOVÉ ODBORNÉ BLOKY
+===================================================== -->
 
-      <div class="intro-card">
-        <h3>Jak SSCC funguje</h3>
-        <p>Geotermie poskytuje stabilní základ, OZE dodávají špičkovou energii a chemická syntéza ji ukládá do amoniaku. CO₂ zůstává v uzavřené smyčce.</p>
-      </div>
+<section class="edu-section">
 
-      <div class="intro-card">
-        <h3>Co SSCC přináší</h3>
-        <p>Stabilní výkon 24/7, nízké provozní náklady, sezonní úložiště, možnost lokální výroby paliv i průmyslovou soběstačnost pro města a areály.</p>
-      </div>
+  <h2 class="edu-heading">Energetický mix budoucnosti</h2>
+
+  <div class="edu-row">
+    <div class="edu-col edu-text">
+      <p>
+        Budoucí energetická infrastruktura není založena na jednom dominantním zdroji, ale na kombinaci technologií.
+        Solární energie poskytuje levnou a hojnou elektřinu během dne, větrná energetika doplňuje výrobu v noci
+        a geotermální systémy zajišťují stabilní základní výkon bez ohledu na počasí. Tepelná čerpadla umožňují efektivní přenos tepla
+        mezi městskými částmi a průmyslovými objekty, čímž vytvářejí decentralizované teplárenské celky.
+      </p>
+      <p>
+        SSCC všechny tyto zdroje integruje do jednoho řídicího a provozního rámce. Vyrovnávání výkonu neprobíhá
+        jen pomocí akumulace, ale i chytrým rozložením průmyslové výroby, tepelného zatížení a syntetických cyklů.
+      </p>
     </div>
-  </section>
 
-  <!-- GEOTERMIE -->
-  <section class="edu-section">
-    <h2 class="edu-heading">Geotermie jako stabilní základ systému</h2>
-
-    <div class="edu-row">
-      <div class="edu-text">
-        <p>Geotermální energie poskytuje dlouhodobý, stabilní a prakticky nepřerušovaný tepelný tok. V SSCC se využívá nejen pro přímou výrobu tepla a elektřiny, ale i jako zdroj energie pro elektrolýzu a další procesy syntézy.</p>
-
-        <p>Díky stabilnímu teplu dokáže SSCC fungovat i v obdobích nízké výroby OZE a stabilizuje tak celý cyklus. Geotermie je tak páteří provozu.</p>
-      </div>
-
-      <div class="edu-image">
-        <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrt">
-      </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/obnovitelne-zdroje.jpg" alt="Obnovitelné zdroje">
     </div>
-  </section>
+  </div>
 
-  <!-- CO2 -->
-  <section class="edu-section">
-    <h2 class="edu-heading">CO₂ jako vstupní surovina, nikoli odpad</h2>
+</section>
+<!-- =====================================================
+     GEOTERMIE – STABILNÍ ZÁKLAD ENERGETICKÉ INFRASTRUKTURY
+===================================================== -->
+<section class="edu-section">
+  <h2 class="edu-heading">Geotermie jako stabilní základní výkon</h2>
 
-    <div class="edu-row reverse">
-      <div class="edu-text">
-        <p>CO₂ v systému neuniká do atmosféry, ale vrací se zpět do syntézy. Reaguje s vodíkem z elektrolýzy a vytváří chemikálie a paliva, která zůstávají v uzavřeném cyklu.</p>
+  <div class="edu-row">
+    <div class="edu-col edu-text">
+      <p>
+        Geotermální energie představuje jeden z nejspolehlivějších zdrojů tepla i elektřiny.
+        Na rozdíl od solárních a větrných systémů nekolísá v čase — teplotní gradient zemské kůry
+        je prakticky konstantní. To umožňuje provozovat geotermální okruhy jako stabilní
+        „baseload“, který tvoří základní výkon celé infrastruktury SSCC.
+      </p>
 
-        <p>Tento přístup je průmyslově škálovatelný a umožňuje ekonomické využití zachyceného CO₂. SSCC tak přináší nejen energetickou stabilitu, ale i cirkulaci uhlíku bez emisí.</p>
-      </div>
+      <p>
+        V městských oblastech lze využívat středně hluboké vrty (1–3 km) pro dodávku tepla do
+        horkovodů a současně jako zdroj pro tepelná čerpadla s vysokým COP. V průmyslových
+        areálech mohou hluboké vrty sloužit pro kombinovanou výrobu elektřiny a tepla.
+      </p>
 
-      <div class="edu-image">
-        <img src="assets/img/CO2-kolobeh.jpg" alt="Uzavřený CO₂ cyklus">
-      </div>
+      <p>
+        Geotermie zároveň zlepšuje ekonomiku celého systému: poskytuje stabilní základ provozu,
+        na který se vrstvy OZE a chemického ukládání energie mohou bezpečně napojit.
+      </p>
     </div>
-  </section>
 
-  <!-- AMONIAK -->
-  <section class="edu-section">
-    <h2 class="edu-heading">Amoniak jako dlouhodobý energetický zásobník</h2>
-
-    <div class="edu-row">
-      <div class="edu-text">
-        <p>Amoniak umožňuje ukládat velké množství energie v měsíčním až sezónním měřítku. Je vyráběn v době nadbytku elektřiny a využívá se pro výrobu tepla, elektřiny nebo syntézu v době nedostatku.</p>
-
-        <p>Tím systém získává flexibilitu, kterou běžné baterie nebo vodík nedokážou poskytnout – amoniak je levný, skladovatelný a bezpečně dopravitelný.</p>
-      </div>
-
-      <div class="edu-image">
-        <img src="assets/img/co2-premena.png" alt="Syntéza amoniaku">
-      </div>
+    <div class="edu-col edu-image">
+      <img src="assets/img/geotermalni-vrt.png" alt="Geotermální vrt">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- OZE -->
-  <section class="edu-section">
-    <h2 class="edu-heading">Obnovitelné zdroje jako levný energetický základ</h2>
 
-    <div class="edu-row reverse">
-      <div class="edu-text">
-        <p>Solární a větrná energie tvoří levný primární vstup do cyklu. Jejich variabilita je kompenzována stabilním geotermálním základem a dlouhodobým uložením do amoniaku.</p>
+<!-- =====================================================
+     CO₂ – SUROVINA, NE ODPAD
+===================================================== -->
+<section class="edu-section">
+  <h2 class="edu-heading">CO₂ jako p
+<!-- =====================================================
+     ZÁVĚREČNÉ SHRNUTÍ – PROČ SSCC
+===================================================== -->
+<section class="edu-section">
+  <h2 class="edu-heading">Proč SSCC představuje nový směr energetiky</h2>
 
-        <p>Díky tomu může SSCC efektivně využít maximum výroby z OZE, omezit potřebu baterií a nahradit záložní fosilní zdroje.</p>
-      </div>
+  <div class="edu-row">
+    <div class="edu-col edu-text">
+      <p>
+        Současná energetická infrastruktura je založená na oddělených technologiích – výroba
+        elektřiny, teplo, průmyslová chemie a ukládání energie fungují většinou izolovaně.
+        To vede k nízké efektivitě, vysokým nákladům a neschopnosti kompenzovat výkyvy obnovitelných
+        zdrojů.
+      </p>
 
-      <div class="edu-image">
-        <img src="assets/img/obnovitelne-zdroje.jpg" alt="Obnovitelné zdroje energie">
-      </div>
+      <p>
+        SSCC kombinuje geotermii, solární energii, průmyslové tepelné cykly, syntézu amoniaku,
+        zachytávání CO₂, tepelná čerpadla i řízení pomocí dat a AI do jednoho provázaného systému.
+        Díky tomu dokáže pracovat stabilně, reagovat na měnící se podmínky a ukládat energii v
+        dlouhodobém horizontu.
+      </p>
+
+      <p>
+        Tento přístup není konkurencí pro existující energetiku – je jejím logickým rozšířením,
+        které umožňuje městům, obcím i průmyslu získat větší soběstačnost a nižší provozní náklady.
+        SSCC je platforma, která propojuje energetiku s chemickým a teplárenským průmyslem.
+      </p>
+
+      <p>
+        Budoucnost nebude o jediném zdroji, ale o chytrém propojení mnoha technologií do jednoho
+        stabilního celku. Právě to SSCC nabízí.
+      </p>
     </div>
-  </section>
 
-</main>
+    <div class="edu-col edu-image">
+      <img src="assets/img/infrastruktura.jpg" alt="Integrovaná energetická infrastruktura">
+    </div>
+  </div>
+</section>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer>
-  © 2025 SSCC — Solar & Synthetic Carbon Cycle
+  © 2025 SSCC — Solar & Synthetic Carbon Cycle  
 </footer>
+
+
+<!-- =====================================================
+     SCRIPTS — CLEAN FINAL VERSION
+===================================================== -->
+
+<script>
+  // Toggle mobilního menu
+  const navToggle = document.getElementById("navToggle");
+  const mainNav   = document.getElementById("mainNav");
+
+  navToggle.addEventListener("click", () => {
+    mainNav.classList.toggle("open");
+  });
+
+  // Zvýraznění aktivní položky menu
+  document.addEventListener("DOMContentLoaded", () => {
+    const path = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".main-nav a").forEach(link => {
+      if (link.getAttribute("href") === path) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
