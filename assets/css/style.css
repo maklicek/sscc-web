@@ -362,3 +362,141 @@ footer {
   display: block;
   border-radius: 12px;
 }
+/* ============================================
+   GLOBAL LAYOUT EXPANSION
+============================================ */
+
+body {
+    background: #f5f7fa;
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+/* Container přes celou šířku + širší text */
+.section-wide {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 60px 60px;
+}
+
+/* Širší hlavní odstavec */
+.section-wide p {
+    max-width: 1100px;
+    margin-bottom: 22px;
+}
+
+/* ============================================
+   TYPOGRAFIE – ODBORNĚJŠÍ, ČITELNĚJŠÍ
+============================================ */
+
+.section-wide h1,
+.section-wide h2 {
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.section-wide h1 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.section-wide h2 {
+    font-size: 2.1rem;
+    margin-top: 60px;
+    margin-bottom: 18px;
+    border-left: 6px solid #1976d2;
+    padding-left: 14px;
+}
+
+/* Dlouhé odborné odstavce */
+.long-text {
+    max-width: 1200px;
+    font-size: 1.18rem;
+    line-height: 1.82;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   OBRÁZKY V ODBORNÝCH SEKČÍCH
+============================================ */
+
+.section-image {
+    width: 42%;
+    min-width: 420px;
+    float: right;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.section-block::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ============================================
+   SEKCE – HLUBOKÉ ODBORNÉ BLOKY
+============================================ */
+
+.section-block {
+    background: #fff;
+    padding: 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    margin-bottom: 60px;
+}
+
+/* ============================================
+   GRID 3-SLOUPEČKY PRO „Mix – Syntéza – Města“
+============================================ */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 28px 28px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.info-card img {
+    max-height: 180px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* ============================================
+   RESPONSIVITA
+============================================ */
+
+@media (max-width: 1100px) {
+    .section-image {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-wide {
+        padding: 40px 26px;
+    }
+}
+
