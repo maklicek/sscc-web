@@ -500,3 +500,105 @@ body {
     }
 }
 
+/* ============================================
+   WIDER CONTENT LAYOUT
+============================================ */
+
+.page-main {
+  max-width: 1400px;
+  padding: 40px 40px 80px;
+}
+
+/* ============================================
+   THREE COLUMN EXPERT BLOCKS
+============================================ */
+
+.tri-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 50px 0;
+}
+
+.tri-col {
+  background: #ffffff;
+  padding: 26px 26px 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.tri-col:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.tri-col h2 {
+  margin-bottom: 14px;
+  font-size: 1.45rem;
+}
+
+/* ============================================
+   EDU SECTIONS BLOKY
+============================================ */
+
+.edu-section {
+  background: #ffffff;
+  padding: 40px;
+  margin: 50px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.edu-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-bottom: 30px;
+  border-left: 6px solid #1976d2;
+  padding-left: 14px;
+}
+
+.edu-row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.edu-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.edu-col {
+  flex: 1;
+}
+
+/* obrázky uvnitř odborných sekcí */
+.edu-image img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ============================================
+   RESPONSIVE – TABLET & MOBILE
+============================================ */
+
+@media (max-width: 1100px) {
+  .tri-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-row,
+  .edu-row.reverse {
+    flex-direction: column;
+  }
+
+  .edu-image img {
+    margin-top: 20px;
+  }
+
+  .page-main {
+    padding: 20px;
+  }
+}
