@@ -211,4 +211,11 @@ footer {
     font-size: 38px;
   }
 }
+.edu-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
 
