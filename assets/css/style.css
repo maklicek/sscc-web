@@ -1,7 +1,3 @@
-/* ----------------------------------------------------
-   SSCC – FINAL CLEAN GLOBAL STYLE
----------------------------------------------------- */
-
 /* RESET */
 * {
   margin: 0;
@@ -9,510 +5,123 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Inter","Segoe UI",sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   background: #f5f7fa;
-  color: #1a1a1a;
-  line-height: 1.65;
-  font-size: 1.1rem;
+  color: #1b1b1b;
+  line-height: 1.7;
+  font-size: 1.15rem;
 }
 
-/* Images */
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 14px;
-}
-
-/* Links */
-a { text-decoration: none; color: #1976d2; }
-a:hover { color: #0d47a1; }
-
-/* Container */
-.container {
-  max-width: 1180px;
+/* WIDTH CONTROL */
+.container,
+.page-main {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 40px;
 }
 
-/* ----------------------------------------------------
-   HEADER
----------------------------------------------------- */
-
+/* HEADER */
 .site-header {
+  background: #fff;
+  padding: 12px 0 8px;
+  border-bottom: 1px solid #e3e6ea;
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e5e9ef;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  padding: 10px 0 6px;
 }
 
 .nav-inner {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 10px 28px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 26px;
 }
 
-/* BRAND */
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .brand-logo {
-  height: 78px;
-  width: auto;
-  border-radius: 0;
+  height: 68px;
 }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.15;
-}
-
-.brand-title {
-  font-size: 1.75rem;
-  font-weight: 800;
-}
-
-.brand-subtitle {
-  font-size: 0.8rem;
-  opacity: 0.8;
-  margin-top: -4px;
-}
-
-/* NAVIGATION */
 .main-nav {
   display: flex;
-  align-items: center;
-  gap: 26px;
+  gap: 22px;
 }
 
 .main-nav a {
-  padding: 6px 10px;
-  font-size: 1.05rem;
+  color: #1b1b1b;
   font-weight: 600;
+  padding: 6px 10px;
   border-radius: 8px;
-  color: #1a1a1a;
-  transition: 0.2s ease;
 }
 
 .main-nav a:hover {
-  background: #e8fcef;
-  color: #009b52;
+  background: #e7f6ff;
+  color: #0077cc;
 }
 
-.main-nav a.active,
-.main-nav a[aria-current="page"] {
-  background: #d8fbe8;
-  color: #009b52;
-  font-weight: 700;
+.main-nav a.active {
+  background: #d8efff;
+  color: #0066b3;
 }
 
-/* TAGLINE */
-.site-tagline {
-  text-align: center;
-  font-size: 1.22rem;
-  font-weight: 600;
-  color: #00c16a;
-  margin: 6px 0 14px;
-}
-
-/* ----------------------------------------------------
-   HAMBURGER MENU
----------------------------------------------------- */
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #1a1a1a;
-}
-
-@media (max-width: 900px) {
-  .hamburger { display: block; }
-
-  .main-nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(12px);
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    gap: 16px;
-    display: none;
-  }
-
-  .main-nav.open { display: flex; }
-
-  .nav-inner {
-    justify-content: space-between;
-  }
-}
-
-/* ----------------------------------------------------
-   HERO BANNER – FINAL VERSION
----------------------------------------------------- */
-
+/* HERO */
 .hero-banner {
-  width: 100%;
-  height: 250px;             /* FINÁLNÍ VÝŠKA */
+  height: 280px;
   overflow: hidden;
+  width: 100%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .hero-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;   /* FINÁLNÍ POSUN – vidět více horní části */
+  object-position: center 20%;
   opacity: 0;
-  filter: brightness(0.9);
-  animation: heroFade 1.4s ease-out forwards;
+  animation: fadeIn 1.3s ease-out forwards;
+  filter: brightness(0.92);
 }
 
-.hero-banner .hero-overlay {
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.03); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.18);
-  pointer-events: none;
 }
 
-/* Fade-in animace */
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: scale(1.03);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* ----------------------------------------------------
-   PAGE CONTENT
----------------------------------------------------- */
-
-.page-main {
-  padding: 40px 0 80px;
-}
-
+/* HEADINGS */
 .page-title {
-  font-size: 2.4rem;
+  font-size: 2.7rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 
 .lead {
   font-size: 1.22rem;
-  line-height: 1.78;
-  max-width: 880px;
-  margin-bottom: 32px;
+  max-width: 1050px;
+  margin-bottom: 26px;
   color: #444;
 }
 
-/* ----------------------------------------------------
-   UNIVERSAL IMAGE STYLE (EDU, PROJECTS…)
----------------------------------------------------- */
-
-.edu-image img,
-.page-main img {
-  max-width: 760px;
-  width: 100%;
-  margin: 20px auto;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
-/* ----------------------------------------------------
-   EDU SECTION
----------------------------------------------------- */
-
-.edu-section {
-  background: #fff;
-  padding: 36px 32px;
-  margin: 42px 0;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-.edu-heading {
-  font-size: 1.9rem;
-  font-weight: 800;
-  border-left: 6px solid #1976d2;
-  padding-left: 14px;
-  margin-bottom: 22px;
-}
-
-.edu-row {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.edu-row.reverse { flex-direction: row-reverse; }
-
-.edu-col { flex: 1; }
-
-.edu-text p {
-  margin-bottom: 16px;
-  color: #333;
-}
-
-@media (max-width: 900px) {
-  .edu-row,
-  .edu-row.reverse {
-    flex-direction: column;
-  }
-}
-
-/* ----------------------------------------------------
-   FOOTER
----------------------------------------------------- */
-
-footer {
-  background: #0d47a1;
-  color: #fff;
-  padding: 36px 0;
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-}
-.hero-banner {
-  width: 100%;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.hero-banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;  /* ← tvoje finální nastavení */
-  filter: brightness(0.88);
-  opacity: 0;
-  animation: heroFade 1.3s ease-out forwards;
-}
-
-.hero-banner .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.18);
-  pointer-events: none;
-}
-
-@keyframes heroFade {
-  from { opacity: 0; transform: scale(1.03); }
-  to   { opacity: 1; transform: scale(1); }
-}
-/* --- TŘÍSLOUPCOVÉ BLOKY --- */
-
-.tri-blocks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  margin: 40px 0 60px;
-}
-
-.tri-block {
-  background: #ffffff;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-
-.tri-block h2 {
-  font-size: 1.55rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.tri-block p {
-  margin-bottom: 14px;
-  color: #333;
-}
-
-.tri-block img {
-  width: 100%;
-  max-width: 420px;
-  margin: 18px auto 0;
-  display: block;
-  border-radius: 12px;
-}
-/* ============================================
-   GLOBAL LAYOUT EXPANSION
-============================================ */
-
-body {
-    background: #f5f7fa;
-    font-size: 1.15rem;
-    line-height: 1.75;
-}
-
-/* Container přes celou šířku + širší text */
-.section-wide {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 60px 60px;
-}
-
-/* Širší hlavní odstavec */
-.section-wide p {
-    max-width: 1100px;
-    margin-bottom: 22px;
-}
-
-/* ============================================
-   TYPOGRAFIE – ODBORNĚJŠÍ, ČITELNĚJŠÍ
-============================================ */
-
-.section-wide h1,
-.section-wide h2 {
-    font-weight: 800;
-    line-height: 1.25;
-}
-
-.section-wide h1 {
-    font-size: 3rem;
-    margin-bottom: 24px;
-}
-
-.section-wide h2 {
-    font-size: 2.1rem;
-    margin-top: 60px;
-    margin-bottom: 18px;
-    border-left: 6px solid #1976d2;
-    padding-left: 14px;
-}
-
-/* Dlouhé odborné odstavce */
-.long-text {
-    max-width: 1200px;
-    font-size: 1.18rem;
-    line-height: 1.82;
-    margin-bottom: 20px;
-}
-
-/* ============================================
-   OBRÁZKY V ODBORNÝCH SEKČÍCH
-============================================ */
-
-.section-image {
-    width: 42%;
-    min-width: 420px;
-    float: right;
-    margin-left: 40px;
-    margin-bottom: 20px;
-    border-radius: 14px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-}
-
-.section-block::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* ============================================
-   SEKCE – HLUBOKÉ ODBORNÉ BLOKY
-============================================ */
-
-.section-block {
-    background: #fff;
-    padding: 50px 50px;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    margin-bottom: 60px;
-}
-
-/* ============================================
-   GRID 3-SLOUPEČKY PRO „Mix – Syntéza – Města“
-============================================ */
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-    margin-top: 50px;
-}
-
-.info-card {
-    background: #fff;
-    padding: 28px 28px;
-    border-radius: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: 0.25s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-.info-card img {
-    max-height: 180px;
-    margin-bottom: 12px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* ============================================
-   RESPONSIVITA
-============================================ */
-
-@media (max-width: 1100px) {
-    .section-image {
-        float: none;
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-wide {
-        padding: 40px 26px;
-    }
-}
-
-/* ============================================
-   WIDER CONTENT LAYOUT
-============================================ */
-
-.page-main {
-  max-width: 1400px;
-  padding: 40px 40px 80px;
-}
-
-/* ============================================
-   THREE COLUMN EXPERT BLOCKS
-============================================ */
-
+/* THREE COLUMNS */
 .tri-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -521,70 +130,69 @@ body {
 }
 
 .tri-col {
-  background: #ffffff;
-  padding: 26px 26px 32px;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: 0.25s ease;
-}
-
-.tri-col:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 .tri-col h2 {
   margin-bottom: 14px;
-  font-size: 1.45rem;
+  font-size: 1.55rem;
+  font-weight: 700;
 }
 
-/* ============================================
-   EDU SECTIONS BLOKY
-============================================ */
-
+/* PROFESSIONAL SECTIONS */
 .edu-section {
-  background: #ffffff;
-  padding: 40px;
-  margin: 50px 0;
+  background: #fff;
+  padding: 50px;
   border-radius: 20px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin: 50px 0;
 }
 
 .edu-heading {
   font-size: 2rem;
   font-weight: 800;
-  color: #0d47a1;
-  margin-bottom: 30px;
-  border-left: 6px solid #1976d2;
+  border-left: 6px solid #0077cc;
   padding-left: 14px;
+  margin-bottom: 30px;
 }
 
 .edu-row {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
 }
 
 .edu-row.reverse {
   flex-direction: row-reverse;
 }
 
-.edu-col {
-  flex: 1;
+.edu-text p {
+  margin-bottom: 18px;
+  font-size: 1.13rem;
+  color: #333;
 }
 
-/* obrázky uvnitř odborných sekcí */
 .edu-image img {
   width: 100%;
+  max-width: 480px;
   border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.12);
 }
 
-/* ============================================
-   RESPONSIVE – TABLET & MOBILE
-============================================ */
+/* FOOTER */
+footer {
+  background: #0046a3;
+  color: #fff;
+  padding: 28px;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.95rem;
+}
 
-@media (max-width: 1100px) {
+/* MOBILE FIXES */
+@media (max-width: 900px) {
   .tri-columns {
     grid-template-columns: 1fr;
   }
@@ -594,11 +202,7 @@ body {
     flex-direction: column;
   }
 
-  .edu-image img {
-    margin-top: 20px;
-  }
-
-  .page-main {
-    padding: 20px;
+  .hero-banner {
+    height: 180px;
   }
 }
