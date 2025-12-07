@@ -239,4 +239,115 @@ footer {
   font-weight: 900;
   color: #154d9c;
 }
+/* ============================================================
+   FULLWIDTH A BAREVNÉ SEKCE — NOVÉ PRO LAYOUT C4
+============================================================ */
 
+.fullwidth {
+  width: 100vw;
+  margin-left: calc(50% - 50vw); /* roztáhne sekci přes celou šířku okna */
+  padding: 60px 8vw;
+  box-sizing: border-box;
+}
+
+.emphasis-blue {
+  background: #e8f1ff;
+  border-left: 8px solid #3b7cff;
+}
+
+.emphasis-green {
+  background: #e9f8ef;
+  border-left: 8px solid #28a745;
+}
+
+.emphasis-yellow {
+  background: #fff8e1;
+  border-left: 8px solid #ffb300;
+}
+
+.fullwidth p {
+  max-width: 1500px;
+  margin: 0 auto 22px auto;
+  font-size: 20px;
+}
+
+/* Extra odstup mezi fullwidth bloky */
+.fullwidth + .fullwidth {
+  margin-top: 50px;
+}
+/* ============================================================
+   NOVÉ 2-SLOUPCOVÉ BLOKY PRO C4
+============================================================ */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1.7fr 1.3fr;
+  gap: 48px;
+  margin: 40px 0;
+  align-items: start;
+}
+
+.two-col.reverse {
+  grid-template-columns: 1.3fr 1.7fr;
+}
+
+.two-col p {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.two-col img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+/* ============================================================
+   3-SLOUPCOVÉ INSIGHT BOXY
+============================================================ */
+
+.tri-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  margin: 60px 0 90px;
+}
+
+.tri-col {
+  background: white;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  border-top: 6px solid #0b66e4;
+}
+
+.tri-col:nth-child(2) {
+  border-top-color: #28a745;
+}
+
+.tri-col:nth-child(3) {
+  border-top-color: #ff9800;
+}
+
+.tri-col h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.tri-col p {
+  font-size: 19px;
+  line-height: 1.65;
+}
+@media (max-width: 1100px) {
+  .two-col,
+  .two-col.reverse,
+  .tri-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .fullwidth {
+    padding: 50px 30px;
+    margin-left: 0;
+    width: 100%;
+  }
+}
