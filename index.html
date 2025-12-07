@@ -1,631 +1,419 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SSCC – Solar & Synthetic Carbon Cycle</title>
-  <meta name="description" content="Integrovaný energetický rámec SSCC propojuje geotermii, obnovitelné zdroje, chemickou syntézu a digitální řízení do jednoho stabilního energetického systému.">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SSCC – Solar & Synthetic Carbon Cycle</title>
 
-  <!-- INLINE STYLING PRO INDEX (můžeš později rozdělit do style.css) -->
-  <style>
-    /* =========================================
-       RESET & TYPOGRAFIE
-    ========================================== */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* ---------------------------------------------------
+   ZÁKLADNÍ NASTAVENÍ
+--------------------------------------------------- */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f3f6fa;
+  color: #222;
+  line-height: 1.65;
+}
 
-    body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-      font-size: 18px;
-      background: #f3f6fa;
-      color: #202733;
-    }
+h1, h2, h3 {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+p { margin: 0 0 15px 0; }
 
-    a {
-      color: #0b66e4;
-      text-decoration: none;
-    }
+/* Kontejnery */
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+/* ---------------------------------------------------
+   HERO SEKCE
+--------------------------------------------------- */
+.hero {
+  width: 100%;
+  height: 420px;
+  background: url('vyroba-amoniaku.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
 
-    .container {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.0),
+    rgba(0,0,0,0.55)
+  );
+}
 
-    /* =========================================
-       HLAVIČKA & NAVIGACE
-    ========================================== */
-    .site-header {
-      background: #ffffff;
-      border-bottom: 1px solid #d5d9e0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+.hero-text {
+  position: relative;
+  color: white;
+  z-index: 2;
+  max-width: 900px;
+}
 
-    .nav-inner {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 10px 40px 6px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
 
-    .brand {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-    }
+.hero-text p {
+  font-size: 20px;
+  opacity: 0.95;
+}
 
-    .brand-title {
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      color: #003b8d;
-    }
+/* ---------------------------------------------------
+   ÚVODNÍ TEXT
+--------------------------------------------------- */
+.full-block {
+  background: white;
+  padding: 50px 35px;
+  margin-top: -40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
 
-    .brand-subtitle {
-      font-size: 12px;
-      margin-top: 2px;
-      color: #4a5563;
-    }
+/* ---------------------------------------------------
+   3-SLOUPCOVÝ BLOK (INSIGHTY)
+--------------------------------------------------- */
+.three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 50px 0;
+}
 
-    .main-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
+.insight-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 6px solid #3378ff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
 
-    .main-nav a {
-      font-size: 15px;
-      font-weight: 600;
-      padding: 6px 10px;
-      border-radius: 999px;
-      color: #1f2933;
-      text-decoration: none;
-      transition: background 0.18s ease, color 0.18s ease;
-    }
+/* ---------------------------------------------------
+   DVOU SLOUPCOVÝ ODBORNÝ BLOK
+--------------------------------------------------- */
+.two-cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  margin: 40px 0;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
 
-    .main-nav a:hover {
-      background: #e3f2fd;
-      color: #0b66e4;
-    }
+.two-cols img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 220px;
+}
 
-    .main-nav a.active,
-    .main-nav a[aria-current="page"] {
-      background: #0b66e4;
-      color: #ffffff;
-    }
+/* Barevné mutace odborných sekcí */
+.bg-blue { background: #e9f2ff; }
+.bg-green { background: #e8f9ed; }
+.bg-yellow { background: #fff5da; }
 
-    .site-tagline {
-      text-align: center;
-      font-size: 15px;
-      font-weight: 600;
-      color: #0a8f5b;
-      padding: 4px 12px 12px;
-    }
+/* ---------------------------------------------------
+   ASYMETRICKÝ 3-SLOUPCOVÝ ODBORNÝ BLOK
+--------------------------------------------------- */
+.asym-3cols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 25px;
+  margin: 40px 0;
+}
 
-    /* =========================================
-       HERO – OBRÁZEK POD HLAVIČKOU
-    ========================================== */
-    .hero-banner {
-      width: 100%;
-      height: 260px;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid #d5d9e0;
-    }
+.asym-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
 
-    .hero-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 18%; /* vidět horní část obrázku */
-      filter: brightness(0.9);
-      opacity: 0;
-      transform: scale(1.02);
-      animation: heroFade 1.4s ease-out forwards;
-    }
+/* ---------------------------------------------------
+   DVOUSLOUPEC PRO TEXT-TEXT
+--------------------------------------------------- */
+.two-text-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 30px;
+  background: #eef5ff;
+  border-radius: 12px;
+  margin: 40px 0;
+}
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.35), transparent 55%),
-                  linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.05));
-      pointer-events: none;
-    }
+/* ---------------------------------------------------
+   TŘÍBODOVÁ SEKCE (BUDOUCÍ TECHNOLOGIE)
+--------------------------------------------------- */
+.tech-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 50px 0;
+}
 
-    @keyframes heroFade {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+.tech-box {
+  background: #e8f9f1;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-    /* =========================================
-       HLAVNÍ OBSAH
-    ========================================== */
-    .page-main {
-      padding: 40px 0 80px;
-    }
+/* ---------------------------------------------------
+   FOOTER
+--------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 14px;
+  color: #666;
+}
 
-    .page-title {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 18px;
-      color: #111827;
-      max-width: 1100px;
-    }
 
-    .lead {
-      max-width: 1100px;
-      font-size: 19px;
-      color: #344054;
-      margin-bottom: 18px;
-    }
+/* ---------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------- */
+@media(max-width: 900px) {
+  .three-cols,
+  .asym-3cols,
+  .tech-3 {
+    grid-template-columns: 1fr;
+  }
 
-    .lead + .lead {
-      margin-top: 4px;
-    }
+  .two-cols {
+    grid-template-columns: 1fr;
+  }
 
-    /* malý vizuální oddělovač mezi úvodem a další částí */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent, #cbd5e1, transparent);
-      margin: 30px 0 24px;
-    }
+  .two-text-cols {
+    grid-template-columns: 1fr;
+  }
 
-    /* =========================================
-       TŘÍSLOUPCOVÉ BLOKY
-    ========================================== */
-    .tri-columns {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-bottom: 40px;
-    }
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p { font-size: 16px; }
+}
 
-    .tri-col {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 22px 22px 20px;
-      box-shadow: 0 3px 10px rgba(15,23,42,0.06);
-      border-top: 4px solid #0b66e4;
-    }
-
-    .tri-col:nth-child(2) {
-      border-top-color: #0a8f5b;
-    }
-
-    .tri-col:nth-child(3) {
-      border-top-color: #b8860b;
-    }
-
-    .tri-col h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #111827;
-    }
-
-    .tri-col p {
-      font-size: 16px;
-      color: #364152;
-      margin-bottom: 10px;
-    }
-
-    /* =========================================
-       ODBORNÉ SEKCE (1 sloupec)
-    ========================================== */
-    .expert-section {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 26px 26px 24px;
-      margin-bottom: 26px;
-      box-shadow: 0 4px 14px rgba(15,23,42,0.06);
-    }
-
-    /* střídání barevného tónu kvůli čtivosti */
-    .expert-section.alt-blue {
-      background: #eef4ff;
-    }
-
-    .expert-section.alt-green {
-      background: #e8f7f0;
-    }
-
-    .expert-section.alt-gold {
-      background: #faf3e0;
-    }
-
-    .expert-section h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #111827;
-    }
-
-    .expert-section p {
-      font-size: 17px;
-      color: #263445;
-      margin-bottom: 10px;
-    }
-
-    .expert-section p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* =========================================
-       DVOUSLOUPCOVÉ ODBORNÉ SEKCE (2/3 TEXT, 1/3 DOPLNĚK)
-       (zatím bez obrázků – pravý sloupec využíváme na shrnutí)
-    ========================================== */
-    .expert-two-cols {
-      display: grid;
-      grid-template-columns: 2.2fr 1fr;
-      gap: 24px;
-      align-items: flex-start;
-    }
-
-    .expert-two-cols .col-main p {
-      font-size: 17px;
-      margin-bottom: 10px;
-    }
-
-    .expert-two-cols .col-side {
-      font-size: 15px;
-      background: rgba(255,255,255,0.6);
-      border-radius: 14px;
-      padding: 14px 14px 12px;
-      border: 1px dashed rgba(15,23,42,0.15);
-    }
-
-    .expert-two-cols .col-side strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    /* =========================================
-       FOOTER
-    ========================================== */
-    footer {
-      margin-top: 40px;
-      padding: 22px 16px 24px;
-      text-align: center;
-      background: #003b8d;
-      color: #e5f0ff;
-      font-size: 14px;
-    }
-
-    /* =========================================
-       RESPONSIVE
-    ========================================== */
-    @media (max-width: 1100px) {
-      .container {
-        padding: 0 20px;
-      }
-
-      .nav-inner {
-        padding: 10px 20px 6px;
-      }
-
-      .tri-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .expert-two-cols {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .page-title {
-        font-size: 26px;
-      }
-
-      .lead {
-        font-size: 17px;
-      }
-
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .main-nav {
-        gap: 10px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <div class="brand-title">SSCC</div>
-      <div class="brand-subtitle">Solar &amp; Synthetic Carbon Cycle</div>
-    </a>
-
-    <nav class="main-nav" id="mainNav">
-      <a href="index.html" class="active" aria-current="page">Úvod</a>
-      <a href="sscc.html">SSCC</a>
-      <a href="projekty.html">Projekty</a>
-      <a href="napady.html">Nápady</a>
-      <a href="edukace.html">Edukace</a>
-      <a href="technologie.html">Technologie</a>
-      <a href="ai.html">Data &amp; AI řízení</a>
-    </nav>
+<!-- ---------------------------------------------------
+     HERO
+----------------------------------------------------- -->
+<section class="hero">
+  <div class="container hero-text">
+    <h1>Integrovaná energetická infrastruktura pro města, průmysl a budoucí energetiku</h1>
+    <p>SSCC spojuje elektřinu, teplo, chemii, geotermii a digitalizaci do jediného funkčního systému.</p>
   </div>
-
-  <div class="site-tagline">
-    Zelenou se planeta nestane zákazy, ale tím, že ze škodlivého děláme užitečné.
-  </div>
-</header>
-
-<!-- HERO OBRÁZEK POD HLAVIČKOU -->
-<section class="hero-banner">
-  <img src="assets/img/vyroba-amoniaku.jpg" alt="Výroba amoniaku a energetická infrastruktura">
-  <div class="hero-overlay"></div>
 </section>
 
-<main class="page-main">
-  <div class="container">
+<div class="container">
 
-    <!-- ÚVOD – PROČ SE MĚNÍ ENERGETIKA -->
-    <h1 class="page-title">
-      Integrovaná energetická infrastruktura pro města, průmysl a budoucí energetiku
-    </h1>
+<!-- ---------------------------------------------------
+     ÚVODNÍ BLOK
+----------------------------------------------------- -->
+<section class="full-block">
+  <p>
+    Energetika vstupuje do éry, kdy nestačí pouze „vyměnit staré zdroje za nové“. 
+    Fyzikální limity sítí, omezený prostor pro rozvoj OZE, sezónní nerovnováhy výroby a chybějící
+    dlouhodobé ukládání energie vyžadují novou infrastrukturu.
+  </p>
+  <p>
+    SSCC není technologie, ale <strong>architektura</strong> — rámec, který spojuje elektřinu, teplo, chemická média,
+    průmyslové teplo, geotermii a autonomní řízení do jednoho celku. Tento celek je stabilní, škálovatelný
+    a funguje v jakémkoli regionálním nebo městském prostředí.
+  </p>
+</section>
 
-    <p class="lead">
-      Energetika vstoupila do období, kdy nestačí „nahradit staré zdroje novými“.
-      Problémy jsou hlubší: fyzikální limity přenosových soustav, sezónní nerovnováha výroby,
-      rostoucí zátěž měst, průmyslové teplo s nízkým využitím, omezený prostor pro nové zdroje
-      a chybějící levné dlouhodobé ukládání energie.
-    </p>
 
-    <p class="lead">
-      SSCC není jeden produkt ani jedna technologie. Je to <strong>infrastrukturní rámec</strong>,
-      který propojuje elektřinu, teplo, chemická média, geotermii a digitální řízení do jednoho
-      funkčního systému. Cílem není „jen“ nízkouhlíkový zdroj, ale architektura, která vydrží
-      desetiletí, škáluje se a dává prostor novým vědeckým objevům.
-    </p>
+<!-- ---------------------------------------------------
+     TŘI INSIGHTY
+----------------------------------------------------- -->
+<section class="three-cols">
 
-    <p class="lead">
-      Stejný princip lze použít v městech, průmyslových areálech i na úrovni regionů:
-      stabilní základní výkon, chytré využití obnovitelných zdrojů, dlouhodobá akumulace pomocí
-      chemie a lokální energetické uzly, které se dokáží rozhodovat samy.
-    </p>
-
-    <div class="section-divider"></div>
-
-    <!-- TŘI KLÍČOVÉ PILÍŘE -->
-    <section class="tri-columns">
-      <div class="tri-col">
-        <h2>Energetická infrastruktura nové generace</h2>
-        <p>
-          Moderní infrastruktura nestojí na jednom zdroji, ale na řízené kombinaci, kde každý prvek
-          plní jinou fyzikální i provozní roli. Solární a větrná energetika poskytují velmi levnou
-          energii, ale s velkou variabilitou v čase. Geotermie a průmyslové teplo zajišťují stabilitu.
-        </p>
-        <p>
-          Místo jedné centrální elektrárny vzniká síť modulárních uzlů, které integrují výrobu,
-          transformaci, akumulaci i distribuci energie přímo u odběratelů.
-        </p>
-      </div>
-
-      <div class="tri-col">
-        <h2>Chemická média jako nosiče energie</h2>
-        <p>
-          Krátkodobé výkyvy zvládnou baterie. Sezónní akumulaci – týdny až měsíce – ekonomicky
-          zvládnou pouze <strong>chemická média</strong>: vodík, amoniak, metanol, syntetické
-          uhlovodíky nebo formiáty.
-        </p>
-        <p>
-          Tato média umožňují ukládat energii ve velkých objemech, převádět ji mezi sektory
-          (elektřina–teplo–paliva) a přenášet na dlouhé vzdálenosti bez závislosti na stavu sítě.
-        </p>
-      </div>
-
-      <div class="tri-col">
-        <h2>Městské a průmyslové energetické celky</h2>
-        <p>
-          SSCC umožňuje navrhovat <strong>lokální energetické celky</strong>, které kombinují
-          solární parky, geotermální vrty, tepelná čerpadla, horkovody, elektrolýzu, syntézu NH₃/CO₂
-          a recyklaci odpadního tepla v jednom propojeném systému.
-        </p>
-        <p>
-          Výsledkem je energetická soběstačnost, nižší provozní náklady, lepší využití lokálních zdrojů
-          a menší závislost na externích šocích.
-        </p>
-      </div>
-    </section>
-
-    <!-- GEOTERMIE -->
-    <section class="expert-section">
-      <h2>Geotermální systémy: stabilní výkon i v zimě</h2>
-
-      <div class="expert-two-cols">
-        <div class="col-main">
-          <p>
-            Většina geologických struktur ve střední Evropě poskytuje gradient 25–35 °C/km.
-            To umožňuje dosahovat pracovních teplot 90–160 °C bez extrémně hlubokých vrtů.
-            Takové teploty jsou ideální pro <strong>ORC cykly</strong>, vysokovýkonná tepelná čerpadla,
-            dálkové vytápění i průmyslové technologické okruhy.
-          </p>
-          <p>
-            Moderní geotermální soustavy používají dvou- či vícevrtové okruhy, kde cirkuluje voda
-            nebo CO₂ jako pracovní médium. Superkritický CO₂ nabízí vysokou tepelnou kapacitu,
-            nízké viskozitní ztráty a velmi efektivní přenos energie mezi hlubokým rezervoárem
-            a povrchovou technologií.
-          </p>
-          <p>
-            Geotermie tak tvoří teplotní a výkonový „baseload“ – základ, na kterém mohou
-            stabilně běžet elektrolýzery, syntetické reaktory i městské horkovody,
-            nezávisle na ročním období.
-          </p>
-        </div>
-        <div class="col-side">
-          <strong>Praktické využití:</strong>
-          <p>• městské teplárenské smyčky</p>
-          <p>• předehřev pro elektrolýzu a chemické reaktory</p>
-          <p>• ORC výroba elektřiny ze středních teplot</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CO2 -->
-    <section class="expert-section alt-blue">
-      <h2>CO₂ jako cirkulující médium, nikoli odpad</h2>
-      <p>
-        V systému SSCC není CO₂ koncový odpad, ale <strong>cirkulující médium</strong>. Lze jej zachytit
-        přímo z atmosféry (DAC), z odpadních plynů spaloven, rafinerií, cementáren, oceláren nebo
-        z biogenních procesů (bioplyn, fermentace). Zachycený CO₂ se vrací do chemických procesů,
-        kde slouží jako nosič uhlíku.
-      </p>
-      <p>
-        Přes syntézu s vodíkem (z elektrolýzy) vznikají paliva jako metanol, syntetická nafta,
-        kerosin, formiáty nebo uhlíkové materiály. Navazuje se tak <strong>uzavřený uhlíkový okruh</strong>:
-        elektřina → H₂ → syntéza → palivo → využití → CO₂ → záchyt → syntéza.
-      </p>
-      <p>
-        CO₂ lze využít také jako pracovní médium v superkritických turbínách s vysokou účinností,
-        v teplonosných okruzích a hybridních systémech, kde spojuje svět tepla, mechaniky
-        a chemie v jednom infrastrukturním řešení.
-      </p>
-    </section>
-
-    <!-- NH3 -->
-    <section class="expert-section alt-green">
-      <h2>Amoniak: nejefektivnější médium pro sezónní akumulaci</h2>
-      <p>
-        Amoniak (NH₃) kombinuje vysokou energetickou hustotu, existující globální infrastrukturu,
-        jednoduché skladování a možnost syntézy z dusíku (N₂) a vodíku (H₂). Moderní katalytické
-        procesy umožňují snižovat teploty a tlaky, takže výroba čpavku již nemusí být pouze doménou
-        obřích chemických závodů.
-      </p>
-      <p>
-        V koncepci SSCC lze budovat <strong>regionální a městské jednotky</strong> pro výrobu NH₃
-        z přebytků obnovitelné energie. Uložený amoniak tak slouží jako sezónní zásobník energie
-        – v létě se syntetizuje, v zimě se využívá.
-      </p>
-      <p>
-        Amoniak lze spalovat (v upravených motorech nebo turbínách), krakovat na vodík pro palivové články
-        nebo využít v SOFC článcích s elektrickou účinností přes 60 %. Oproti bateriím nabízí možnost
-        ukládat energii na měsíce, s nízkými samovybíjecími ztrátami a s možností transportu.
-      </p>
-    </section>
-
-    <!-- OZE + TEPLO -->
-    <section class="expert-section alt-gold">
-      <h2>Solární energie, tepelná čerpadla a městské teplárenské okruhy</h2>
-      <p>
-        Solární energetika poskytuje jedny z nejnižších nákladů na kWh, ale výkon je koncentrovaný
-        do dne a léta. Skutečný potenciál získává až propojením s <strong>tepelnými čerpadly,
-        vodními zásobníky, geotermií a průmyslovým teplem</strong>.
-      </p>
-      <p>
-        V městském prostředí lze budovat okruhy, kde se spojují: geotermální vrty, centrální i lokální
-        tepelná čerpadla, vodní a akumulační zásobníky, odpadní teplo z průmyslu a budov,
-        doplněné o sorpci či částečný záchyt CO₂ v místech s vyšší koncentrací spalin.
-      </p>
-      <p>
-        Tyto okruhy mohou celoročně zásobovat celé městské čtvrti teplem i chladem bez potřeby
-        spalovat fosilní paliva. Stejný princip lze přenést do průmyslových parků a technologických
-        zón, kde se integruje procesní teplo, chladicí systémy a energetické zásobníky.
-      </p>
-    </section>
-
-    <!-- PROPOJENÍ ELEKTŘINY, TEPLA A CHEMIE -->
-    <section class="expert-section">
-      <h2>Propojení elektřiny, tepla a chemie do jednoho systému</h2>
-      <p>
-        Klíčovým rozdílem oproti klasické energetice je pohled na systém jako na <strong>toky energie</strong>,
-        nikoli na jednotlivé stroje. Elektřina z OZE napájí elektrolýzu, geotermie stabilizuje
-        teplotní režim procesů, průmyslové zbytkové teplo se vrací do okruhů, CO₂ a NH₃ cirkulují
-        jako média, nikoli odpady.
-      </p>
-      <p>
-        Takto navržená infrastruktura dokáže fungovat i během dlouhých bezvětrných období,
-        zimních inverzí nebo extrémních letních špiček. Neřeší pouze „kolik MW postavit“, ale
-        <strong>jak energie proudí</strong>, transformuje se a vrací zpět.
-      </p>
-    </section>
-
-    <!-- ENERGETICKÉ UZLY S AUTONOMNÍM ŘÍZENÍM -->
-    <section class="expert-section alt-blue">
-      <h2>Lokální energetické uzly s autonomním řízením</h2>
-      <p>
-        SSCC pracuje s konceptem <strong>lokálních autonomních uzlů</strong>, které dokáží samostatně
-        řídit výrobu, akumulaci i distribuci energie. Využívají předpověď počasí, stav zásobníků,
-        spotřebitelské profily, průmyslovou poptávku i aktuální ceny na trzích.
-      </p>
-      <p>
-        Digitální modely umožňují minimalizovat ztráty, zvyšovat účinnost, řídit cyklus CO₂/NH₃,
-        přepínat mezi režimy výroby tepla, elektřiny a syntetických paliv a reagovat na mimořádné
-        události bez zásahu operátora.
-      </p>
-    </section>
-
-    <!-- BUDOUCÍ TECHNOLOGIE -->
-    <section class="expert-section alt-green">
-      <h2>Budoucí technologie: od atmosférické vlhkosti po odpadní vody</h2>
-      <p>
-        Výzkum přináší technologie, které mohou během 5–15 let zásadně změnit podobu infrastruktury.
-        Patří sem generátory získávající elektřinu z atmosférické vlhkosti, zařízení s 24/7 provozem
-        nezávislým na slunečním záření či větru, pokročilé sorbenty pro záchyt CO₂ nebo mikrobiální
-        syntézy využívající odpadní proudy.
-      </p>
-      <p>
-        Další potenciál leží v <strong>energetickém využití odpadních vod</strong> – vysoký obsah
-        dusíku, fosforu a organiky lze využít pro výrobu bioplynu, elektřiny, hnojiv i dalších
-        chemických médií. SSCC je navrženo tak, aby tyto nové technologie bylo možné postupně
-        integrovat bez přestavby celé infrastruktury.
-      </p>
-    </section>
-
-    <!-- EKONOMIKA -->
-    <section class="expert-section alt-gold">
-      <h2>Ekonomika a systémové přínosy SSCC</h2>
-      <p>
-        Kombinace dlouhodobé akumulace, stabilních tepelných zdrojů a chemické syntézy umožňuje
-        vytvářet energetické systémy s nízkými provozními náklady, vysokou účinností a dlouhou
-        životností. Část výkonu se přenáší z okamžiku výroby do období potřeby, což snižuje tlak
-        na špičkové zdroje.
-      </p>
-      <p>
-        SSCC zároveň snižuje nároky na centrální přenosové soustavy – významná část energie se
-        vyrábí a zpracovává lokálně, v rámci měst, regionů a průmyslových uzlů. Místo extrémních
-        investic do rozvodných sítí je možné investovat do chytrých lokálních celků s přímým
-        vlivem na kvalitu života obyvatel a konkurenceschopnost průmyslu.
-      </p>
-    </section>
-
+  <div class="insight-box">
+    <h3>Energetická infrastruktura nové generace</h3>
+    <p>Model řízené kombinace zdrojů – solární výkon, geotermální teplo, průmyslové zbytkové teplo a chytré smyčky.</p>
   </div>
-</main>
+
+  <div class="insight-box">
+    <h3>Chemická média jako nosiče energie</h3>
+    <p>Sezónní ukládání přes vodík, amoniak, syntetická paliva a formiáty. Přenos energie v čase i prostoru.</p>
+  </div>
+
+  <div class="insight-box">
+    <h3>Městské a průmyslové celky</h3>
+    <p>Modulární energetické uzly, které pracují autonomně a kombinují elektřinu, teplo a chemii.</p>
+  </div>
+
+</section>
+
+
+<!-- ---------------------------------------------------
+     GEOTERMIE — TEXT + OBRÁZEK
+----------------------------------------------------- -->
+<section class="two-cols">
+  <div>
+    <h2>Geotermální systémy: stabilní výkon i v zimě</h2>
+    <p>
+      Střední Evropa nabízí gradient 25–35 °C/km, což umožňuje dosahovat teplot 90–160 °C bez extrémních hloubek.
+      Ideální pro ORC cykly, vysokovýkonná tepelná čerpadla a městské okruhy.
+    </p>
+    <p>
+      Dvou- a vícevrtové systémy umožňují cirkulaci vody nebo CO₂. Superkritický CO₂ poskytuje výtečnou tepelnou kapacitu
+      a minimální viskozitu pro efektivní přenos energie.
+    </p>
+  </div>
+
+  <!-- zástupný obrázek -->
+  <img src="geotermie.jpg" alt="Geotermie">
+</section>
+
+
+<!-- ---------------------------------------------------
+     CO2 — PLNOŠÍŘKA MODRÁ
+----------------------------------------------------- -->
+<section class="full-block bg-blue">
+  <h2>CO₂ jako cirkulující médium, nikoli odpad</h2>
+  <p>
+    CO₂ lze zachytávat z atmosféry, průmyslu nebo bioplynu. V SSCC funguje jako aktivní médium —
+    vstupuje do syntézy metanolu, formiátů a uhlíkových materiálů.
+  </p>
+  <p>
+    CO₂ také slouží jako pracovní médium v turbínách s vysokou účinností a v hybridních tepelných systémech.
+  </p>
+</section>
+
+
+<!-- ---------------------------------------------------
+     AMONIAK — OBRÁZEK + TEXT
+----------------------------------------------------- -->
+<section class="two-cols bg-green">
+  <img src="amoniak.jpg" alt="Amoniak">
+
+  <div>
+    <h2>Amoniak: nejefektivnější sezónní akumulace</h2>
+    <p>
+      Amoniak kombinuje vysokou energetickou hustotu, snadné skladování a existující infrastrukturu.
+      Díky katalytickým procesům jej lze vyrábět i regionálně.
+    </p>
+    <p>
+      Slouží jako sezónní zásobník energie i jako médium pro výrobu elektřiny či vodíku.
+    </p>
+  </div>
+</section>
+
+
+<!-- ---------------------------------------------------
+     SOLÁR + OKRUHY — ASYMETRIE
+----------------------------------------------------- -->
+<section class="asym-3cols bg-yellow">
+  <div class="asym-box">
+    <h3>Solární energie</h3>
+    <p>Nejnižší cena výkonu, vysoká modularita, vhodná pro městské střechy i průmyslové haly.</p>
+  </div>
+
+  <div class="asym-box">
+    <h3>Tepelná čerpadla</h3>
+    <p>Napojení na vodní okruhy, možnost kombinace s geotermií a průmyslovým teplem.</p>
+  </div>
+
+  <div class="asym-box">
+    <h3>Městské okruhy</h3>
+    <p>Celoroční teplo a chlazení bez spalování fosilních paliv, pro čtvrti i technoparky.</p>
+  </div>
+</section>
+
+
+<!-- ---------------------------------------------------
+     PROPOJENÍ – 1 SLOUPEC
+----------------------------------------------------- -->
+<section class="full-block bg-blue">
+  <h2>Propojení elektřiny, tepla a chemie do jednoho systému</h2>
+  <p>
+    SSCC pracuje s tokem energie, ne se zdroji samostatně. Elektřina napájí elektrolýzu,
+    geotermální teplo stabilizuje procesy, CO₂ a NH₃ cirkulují jako média.
+  </p>
+  <p>
+    Taková infrastruktura funguje i během zimních inverzí, letních špiček a bezvětrných období.
+  </p>
+</section>
+
+
+<!-- ---------------------------------------------------
+     LOKÁLNÍ UZLY – TEXT + TEXT
+----------------------------------------------------- -->
+<section class="two-text-cols">
+  <div>
+    <h3>Autonomní energetické uzly</h3>
+    <p>
+      Lokální uzly dokáží samostatně řídit výrobu, akumulaci i distribuci energie pomocí predikcí a dat.
+    </p>
+  </div>
+
+  <div>
+    <h3>Digitální řízení</h3>
+    <p>
+      Algoritmy optimalizují tok energie, přepínají mezi výrobními režimy a minimalizují ztráty.
+    </p>
+  </div>
+</section>
+
+
+<!-- ---------------------------------------------------
+     BUDOUCÍ TECHNOLOGIE – 3 BOXY
+----------------------------------------------------- -->
+<section class="tech-3">
+  <div class="tech-box">
+    <h3>Atmosférická energie</h3>
+    <p>Generátory využívající vlhkost vzduchu k výrobě elektřiny 24/7.</p>
+  </div>
+
+  <div class="tech-box">
+    <h3>Pokročilá katalýza</h3>
+    <p>Nové materiály umožňují nízkoteplotní syntézu NH₃ a dalších chemických médií.</p>
+  </div>
+
+  <div class="tech-box">
+    <h3>Odpadní proudy</h3>
+    <p>Dusík, fosfor a organika z odpadních vod mohou sloužit jako zdroj energie.</p>
+  </div>
+</section>
+
+
+<!-- ---------------------------------------------------
+     EKONOMIKA
+----------------------------------------------------- -->
+<section class="full-block bg-yellow">
+  <h2>Ekonomika a systémové přínosy</h2>
+  <p>
+    Spojením dlouhodobé akumulace, stabilních zdrojů a chemie lze budovat systémy
+    s nízkými provozními náklady a vysokou stabilitou.
+  </p>
+  <p>
+    SSCC snižuje tlak na přenosové soustavy a umožňuje rozvoj regionální soběstačnosti.
+  </p>
+</section>
+
+</div>
 
 <footer>
-  © 2025 SSCC — Solar &amp; Synthetic Carbon Cycle
+  © 2025 SSCC — Solar & Synthetic Carbon Cycle
 </footer>
 
 </body>
