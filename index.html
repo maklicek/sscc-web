@@ -135,34 +135,51 @@ nav a:hover {
    TŘÍSLOUPCOVÉ BOXY
 ------------------------------------------------------- */
 
-.three-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* nebo 1.5fr 1fr 1fr */
-  gap: 40px;
-  margin: 60px 0;
-}
+/* TŘI KARTY POD ÚVODEM */
 
+.three-boxes {
+  display: flex;
+  gap: 32px;
+  margin: 60px 0;
+  align-items: stretch;          /* všechny boxy stejně vysoké podle nejvyššího */
+}
 
 .box {
+  flex: 1 1 0;                   /* všechny tři dostanou stejný prostor */
+  padding: 28px 26px;
   background: #ffffff;
-  padding: 28px 32px;
-  border-radius: 22px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.09);
   font-size: 18px;
-  line-height: 1.65;
-
-  /* ✨ Opravy problémů */
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: visible !important;
-  display: block;
+  line-height: 1.6;
+  /* DŮLEŽITÉ: žádná pevná výška, žádné ořezávání */
+  height: auto;
+  min-height: 260px;             /* jen aby krátké karty nebyly mrňavé */
+  overflow: visible;
 }
 
-.box-blue { border-color: #1e66ff; }
-.box-green { border-color: #1fa56c; }
-.box-orange { border-color: #e59a2f; }
+.box h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+}
 
-.box p { font-size: 18px; }
+/* barevné „lišty“ vlevo */
+.box-blue {
+  border-left: 6px solid #2563eb;
+}
+.box-green {
+  border-left: 6px solid #059669;
+}
+.box-orange {
+  border-left: 6px solid #f59e0b;
+}
+
+/* responzivita – na mobilu pod sebe */
+@media (max-width: 900px) {
+  .three-boxes {
+    flex-direction: column;
+  }
+}
 
 /* -------------------------------------------------------
    GEOTERMIE – 2 SLOUPCE
