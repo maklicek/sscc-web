@@ -136,18 +136,26 @@ nav a:hover {
 ------------------------------------------------------- */
 
 .three-boxes {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* nebo 1.5fr 1fr 1fr */
+  gap: 40px;
+  margin: 60px 0;
 }
 
+
 .box {
-  background: white;
-  padding: 35px;
-  border-radius: 18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  flex: 1;
-  border-left: 10px solid;
+  background: #ffffff;
+  padding: 28px 32px;
+  border-radius: 22px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  font-size: 18px;
+  line-height: 1.65;
+
+  /* ✨ Opravy problémů */
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  display: block;
 }
 
 .box-blue { border-color: #1e66ff; }
@@ -193,6 +201,18 @@ nav a:hover {
 .co2-block h2 {
   font-size: 34px;
   color: #154d9c;
+}
+.two-boxes {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* nebo 1fr 2fr */
+  gap: 50px;
+  margin: 80px 0;
+}
+.fullwidth-block {
+  width: 100%;
+  padding: 60px 50px;
+  border-radius: 22px;
+  background: #eef4ff;
 }
 
 /* -------------------------------------------------------
@@ -357,7 +377,7 @@ nav a:hover {
 <div class="three-boxes">
   <div class="box box-blue">
     <h3>Energetická infrastruktura nové generace</h3>
-    <p>Stabilita vzniká kombinací solární energie, geotermie, TČ, průmyslového tepla a akumulace.Energetická infrastruktura nové generace
+    <p>Stabilita vzniká kombinací solární energie, geotermie, TČ, průmyslového tepla a akumulace.
 
 Současná energetika se nachází v transformačním období, které nemá za posledních 150 let obdoby. Tradiční centralizované systémy byly navrženy pro svět s převahou stabilních zdrojů, nízkou poptávkou a minimální fluktuací výkonu. Dnešní energetika je však definována decentralizací, vysokým podílem proměnlivých zdrojů a tlakem na účinné řízení elektřiny, tepla a chemických médií. Nová infrastruktura musí být schopna tyto rozdílné toky kombinovat, stabilizovat a přetvářet do podoby, která zaručuje spolehlivost i v extrémních provozních podmínkách.
 
