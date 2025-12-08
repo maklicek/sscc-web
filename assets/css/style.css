@@ -1,87 +1,81 @@
-/* ============================================
-   ZÁKLADNÍ RESET & TYPOGRAFIE
-============================================ */
-* {
+/* ============================================================
+   ZÁKLADNÍ NASTAVENÍ
+============================================================ */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+  background: #f4f5f7;
+  color: #1e1e1e;
+  line-height: 1.6;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  line-height: 1.65;
-  font-size: 19px;
-  background: #f3f6fa;
-  color: #222;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* Kontejnery */
+/* Layout */
 .container {
-  width: 100%;
-  max-width: 1500px;
+  width: min(1100px, 92%);
   margin: 0 auto;
-  padding: 40px 50px;
 }
 
-/* ============================================
+/* ============================================================
    HLAVIČKA A NAVIGACE
-============================================ */
+============================================================ */
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #d5d9e0;
-  padding: 10px 0 20px;
+  background: #0b1f36;
+  color: white;
+  padding: 18px 0 10px 0;
 }
 
 .nav-inner {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.brand-logo {
-  width: 48px;
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
 
 .brand-title {
-  font-size: 26px;
-  font-weight: 800;
-  color: #003b8d;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
 }
 
 .brand-subtitle {
   font-size: 13px;
-  margin-top: -4px;
-  color: #444;
+  opacity: 0.75;
+  margin-top: -3px;
 }
 
 .main-nav a {
-  margin-left: 22px;
+  margin-left: 20px;
+  color: #d2d8e2;
   text-decoration: none;
-  font-weight: 600;
-  color: #003b8d;
+  font-weight: 500;
+  transition: 0.25s;
 }
 
-.main-nav a.active {
-  border-bottom: 2px solid #0b66e4;
+.main-nav a:hover,
+.main-nav .active {
+  color: white;
 }
 
-/* ============================================
-   HERO
-============================================ */
+.site-tagline {
+  text-align: center;
+  padding: 8px 0 12px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ============================================================
+   HERO BANNER
+============================================================ */
 .hero-banner {
-  width: 100%;
-  height: 350px;
   position: relative;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -91,146 +85,105 @@ body {
   object-fit: cover;
 }
 
-.hero-overlay {
+.hero-banner .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.28);
+  background: linear-gradient(
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.45)
+  );
 }
 
-/* ============================================
-   NADPISY A TEXTY
-============================================ */
-
-.page-title {
-  font-size: 48px;
-  font-weight: 800;
-  max-width: 1200px;
-  margin-bottom: 40px;
-  color: #111;
+/* ============================================================
+   ÚVODNÍ FULLWIDTH BLOK
+============================================================ */
+.full-block {
+  background: white;
+  padding: 50px 40px;
+  margin-top: -40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.lead {
-  max-width: 1200px;
-  font-size: 22px;
+.full-block h1 {
+  font-size: 36px;
   margin-bottom: 25px;
+  font-weight: 900;
 }
 
-/* ============================================
-   TŘÍSLOUPCOVÉ BLOKY (1/3-1/3-1/3)
-============================================ */
-.tri-columns {
+/* ============================================================
+   3-SLOUPCOVÝ INSIGHT BLOK (fancy3)
+============================================================ */
+.fancy3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin: 60px 0 80px;
-}
-
-.tri-col {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
-
-.tri-col h2 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-/* ============================================
-   DVOUSLOUPCOVÉ ODBORNÉ SEKCE (2/3 TEXT, 1/3 IMG)
-============================================ */
-.edu-section {
-  background: #fff;
-  margin: 40px auto;
-  padding: 50px;
-  border-radius: 18px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-}
-
-.edu-heading {
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 40px;
-  border-left: 6px solid #0b66e4;
-  padding-left: 15px;
-}
-
-.edu-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: start;
-}
-
-/* Obrácené rozložení */
-.edu-row.reverse {
-  grid-template-columns: 1fr 2fr;
-}
-
-.edu-text p {
-  margin-bottom: 18px;
-  font-size: 20px;
-}
-
-.edu-image img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-
-/* ============================================
-   FOOTER
-============================================ */
-footer {
-  margin-top: 80px;
-  padding: 30px;
-  text-align: center;
-  background: #003b8d;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* ============================================
-   RESPONSIVE
-============================================ */
-@media (max-width: 1100px) {
-
-  .tri-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .edu-row,
-  .edu-row.reverse {
-    grid-template-columns: 1fr;
-  }
-
-  .page-title {
-    font-size: 38px;
-  }
-}
-.edu-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-.expert-block {
-  width: 100%;
-  padding: 60px 70px;
+  gap: 35px;
   margin: 60px 0;
-  border-radius: 22px;
-  line-height: 1.75;
-  font-size: 20px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
 }
 
+.fancy3 .tri-col {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: 0.25s;
+}
+
+.fancy3 .tri-col:hover {
+  transform: translateY(-4px);
+}
+
+/* Barevné akcenty */
+.fancy3 .blue   { border-left: 10px solid #3078e8; }
+.fancy3 .green  { border-left: 10px solid #1fa86a; }
+.fancy3 .orange { border-left: 10px solid #e59a32; }
+
+.fancy3 h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* ============================================================
+   2-SLOUPCOVÉ BLOKY
+============================================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 50px;
+  margin: 70px 0;
+  align-items: center;
+}
+
+.two-col.reverse {
+  grid-template-columns: 1.2fr 1.6fr;
+}
+
+.two-col img {
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ============================================================
+   GEOTERMIE BLOK
+============================================================ */
+.geo-block h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #0b4b74;
+  font-weight: 900;
+}
+
+/* ============================================================
+   MODRÝ CO₂ BLOK — fullwidth
+============================================================ */
 .co2-block {
-  background: #e8f1ff;      /* jemně modrý tón – vědecký, čistý */
-  border-left: 10px solid #3d7be0;
+  background: #e7f0ff;
+  border-left: 12px solid #3d7be0;
+  padding: 50px 40px;
+  border-radius: 16px;
+  margin: 80px 0;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
 }
 
 .co2-block h2 {
@@ -239,115 +192,164 @@ footer {
   font-weight: 900;
   color: #154d9c;
 }
+
 /* ============================================================
-   FULLWIDTH A BAREVNÉ SEKCE — NOVÉ PRO LAYOUT C4
+   ZELENÝ NH₃ BLOK — 2 sloupce reverse
 ============================================================ */
-
-.fullwidth {
-  width: 100vw;
-  margin-left: calc(50% - 50vw); /* roztáhne sekci přes celou šířku okna */
-  padding: 60px 8vw;
-  box-sizing: border-box;
+.nh3-block {
+  background: #e8f8ef;
+  border-left: 12px solid #25a168;
+  padding: 50px 40px;
+  border-radius: 16px;
+  margin: 80px 0;
 }
 
-.emphasis-blue {
-  background: #e8f1ff;
-  border-left: 8px solid #3b7cff;
+.nh3-block h2 {
+  font-size: 32px;
+  color: #0b6b42;
+  font-weight: 900;
+  margin-bottom: 22px;
 }
 
-.emphasis-green {
-  background: #e9f8ef;
-  border-left: 8px solid #28a745;
+/* ============================================================
+   SOLAR BLOCK — asymetrický 3-sloupec
+============================================================ */
+.solar-block {
+  background: #fff7e5;
+  border-left: 12px solid #e8a93c;
+  padding: 50px 40px;
+  border-radius: 18px;
+  margin: 80px 0;
 }
 
-.emphasis-yellow {
-  background: #fff8e1;
-  border-left: 8px solid #ffb300;
+.solar-block h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #b06b00;
 }
 
-.fullwidth p {
-  max-width: 1500px;
-  margin: 0 auto 22px auto;
+.three-flex {
+  display: flex;
+  gap: 40px;
+}
+
+.col-large { flex: 1.4; }
+.col-mid   { flex: 1;   }
+.col-small { flex: 1;   }
+
+.solar-block p {
   font-size: 20px;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
-/* Extra odstup mezi fullwidth bloky */
-.fullwidth + .fullwidth {
-  margin-top: 50px;
-}
 /* ============================================================
-   NOVÉ 2-SLOUPCOVÉ BLOKY PRO C4
+   FULLWIDTH EMPHASIS BLOCK
 ============================================================ */
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1.7fr 1.3fr;
-  gap: 48px;
-  margin: 40px 0;
-  align-items: start;
+.full-emphasis {
+  background: #dfeaff;
+  padding: 50px 40px;
+  border-radius: 18px;
+  border-left: 12px solid #5c7de6;
+  margin: 80px 0;
 }
 
-.two-col.reverse {
-  grid-template-columns: 1.3fr 1.7fr;
+.full-emphasis h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 22px;
 }
 
-.two-col p {
-  font-size: 20px;
-  line-height: 1.65;
-}
-
-.two-col img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
-}
 /* ============================================================
-   3-SLOUPCOVÉ INSIGHT BOXY
+   2-SLOUPCOVÝ TEXT BLOCK (bez obrázků)
 ============================================================ */
+.pure-text {
+  margin: 60px 0;
+}
 
-.tri-columns {
+.pure-text h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  font-weight: 900;
+}
+
+/* ============================================================
+   FUTURE BLOCK — 3 boxy
+============================================================ */
+.future-block {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 38px;
-  margin: 60px 0 90px;
+  gap: 35px;
+  margin: 70px 0;
 }
 
-.tri-col {
+.future-block .tri-col {
   background: white;
-  padding: 32px;
-  border-radius: 18px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  border-top: 6px solid #0b66e4;
+  padding: 28px;
+  border-radius: 16px;
+  border-left: 8px solid #888;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.09);
 }
 
-.tri-col:nth-child(2) {
-  border-top-color: #28a745;
-}
-
-.tri-col:nth-child(3) {
-  border-top-color: #ff9800;
-}
-
-.tri-col h2 {
-  font-size: 26px;
+.future-block h3 {
+  margin-top: 0;
+  font-size: 22px;
   font-weight: 800;
-  margin-bottom: 14px;
 }
 
-.tri-col p {
-  font-size: 19px;
-  line-height: 1.65;
+/* ============================================================
+   ZÁVĚR – ŽLUTÝ BLOCK
+============================================================ */
+.conclusion {
+  background: #fff8d9;
+  border-left: 12px solid #e2c040;
+  padding: 50px 40px;
+  border-radius: 16px;
+  margin: 80px 0;
 }
+
+.conclusion h2 {
+  font-size: 32px;
+  color: #8a6b00;
+  margin-bottom: 22px;
+  font-weight: 900;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  background: #0b1f36;
+  color: white;
+  margin-top: 80px;
+  font-size: 14px;
+}
+
+/* ============================================================
+   RESPONSIVE VERZE
+============================================================ */
 @media (max-width: 1100px) {
-  .two-col,
-  .two-col.reverse,
-  .tri-columns {
+  .three-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .fancy3 {
     grid-template-columns: 1fr;
   }
-
-  .fullwidth {
-    padding: 50px 30px;
-    margin-left: 0;
-    width: 100%;
+  .two-col,
+  .two-col.reverse {
+    grid-template-columns: 1fr;
+  }
+  .future-block {
+    grid-template-columns: 1fr;
+  }
+  .full-block {
+    margin-top: 0;
   }
 }
+
