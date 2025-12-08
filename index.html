@@ -4,8 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SSCC – Solar & Synthetic Carbon Cycle</title>
-
-  <!-- C4 využívá externí CSS, aby HTML nenarostlo přes limit -->
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -18,7 +16,7 @@
       <div class="brand-subtitle">Solar & Synthetic Carbon Cycle</div>
     </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="mainNav">
       <a href="index.html" class="active">Úvod</a>
       <a href="sscc.html">SSCC</a>
       <a href="projekty.html">Projekty</a>
@@ -37,70 +35,63 @@
 
 <!-- HERO -->
 <section class="hero-banner">
-  <img src="assets/img/vyroba-amoniaku.jpg" alt="Energetická infrastruktura">
+  <img src="assets/img/vyroba-amoniaku.jpg" alt="SSCC Hero">
   <div class="hero-overlay"></div>
 </section>
 
 
+
 <main class="page-main container">
 
-<!-- ÚVOD -->
-<h1 class="page-title">
-  Integrovaná energetická infrastruktura pro města, průmysl a budoucí energetiku
-</h1>
+<!-- =========================================================
+   ÚVODNÍ PLNOŠÍŘKOVÝ TEXT
+========================================================= -->
+<section class="full-block intro-block">
+  <h1>Integrovaná energetická infrastruktura pro města, průmysl a budoucí energetiku</h1>
 
-<p class="lead">
-  Energetika stojí před největší transformací za posledních sto let. Nejde pouze o náhradu
-  klasických zdrojů, ale o změnu celého systému — propojení elektřiny, tepla, chemie,
-  geologie a digitálního řízení do jednoho funkčního celku.
-</p>
+  <p>
+    Energetika prochází největší transformací za posledních 150 let. Starý centralizovaný model přenosu a výroby
+    naráží na fyzikální limity, ekonomickou neudržitelnost i sezónní nerovnováhy. Moderní systémy musí být
+    modulární, decentralizované, propojené a inteligentně řízené — nikoli závislé na jednom typu zdroje.
+  </p>
 
-<p class="lead">
-  SSCC je infrastrukturní rámec, který umožňuje stavět energetické celky schopné fungovat
-  stabilně i tehdy, kdy solární a větrné zdroje vyrábějí minimum. Využívá propojení
-  obnovitelných zdrojů, geotermie, chemických médií a sezónní akumulace tak, aby byla energie
-  dostupná vždy, v každém ročním období.
-</p>
-<!-- ============================================================
-     TŘI HLAVNÍ PILÍŘE – 3 SLOUPCE (C4 LAYOUT)
-============================================================ -->
+  <p>
+    SSCC představuje nový infrastrukturní rámec: propojení elektřiny, tepla, geotermie, chemické syntézy,
+    akumulace a digitálního řízení do jednoho funkčního organismu. Největší sílu získává ve chvíli, kdy jednotlivé
+    technologické celky začnou sdílet energii, teplo i materiály, a tím se navzájem stabilizovat.
+  </p>
+</section>
 
-<section class="tri-columns c4-variant">
-  
-  <div class="tri-col">
+
+
+<!-- =========================================================
+   TŘI INSIGHT BOXY – 3 SLoupce
+========================================================= -->
+<section class="tri-columns fancy3">
+
+  <div class="tri-col blue">
     <h2>Energetická infrastruktura nové generace</h2>
     <p>
-      Moderní infrastruktura není založena na jednom zdroji. Stabilitu zajišťuje vyvážená
-      kombinace solární energie, větrných zdrojů, geotermie a chemické akumulace. Každý
-      zdroj plní jinou funkci a společně tvoří systém odolný proti výkyvům počasí.
-    </p>
-    <p>
-      Modulární energetické uzly lze stavět v městských čtvrtích, obcích i průmyslových zónách,
-      kde nahrazují centralizované teplárenské a elektrárenské systémy.
+      Budoucí energetika nestojí na jednom zdroji. Stabilita vzniká kombinací solární energie,
+      geotermie, tepelných čerpadel, průmyslového tepla a akumulace. Výsledkem jsou modulární uzly,
+      které lze budovat v městech i průmyslových areálech.
     </p>
   </div>
 
-  <div class="tri-col">
+  <div class="tri-col green">
     <h2>Chemická média jako nosiče energie</h2>
     <p>
-      Krátkodobou akumulaci řeší baterie, ale sezónní ukládání energie je doménou chemických médií:
-      vodíku, amoniaku, metanolu či syntetických uhlovodíků. Nabízejí možnost přenést energii
-      v prostoru i čase, a to s minimálními ztrátami.
-    </p>
-    <p>
-      Díky recyklaci CO₂ vzniká uzavřený uhlíkový okruh, který snižuje emise bez nutnosti
-      omezovat průmyslový výkon.
+      Krátkodobé výkyvy vyřeší baterie — ale sezónní akumulaci zajistí jen chemická média:
+      vodík, amoniak, metanol, syntetické uhlovodíky. Ty umožňují uchovat a převést energii tam,
+      kde je potřeba, i po měsících.
     </p>
   </div>
 
-  <div class="tri-col">
-    <h2>Městské a průmyslové celky</h2>
+  <div class="tri-col orange">
+    <h2>Městské a průmyslové energetické celky</h2>
     <p>
-      Lokální SSCC celky spojují solární výrobu, geotermii, tepelná čerpadla, horkovody,
-      elektrolýzu, syntézu a sezónní zásobníky energie. Fungují jako integrované ekosystémy.
-    </p>
-    <p>
-      Výsledkem je energetická stabilita, nízké provozní náklady a vysoká míra soběstačnosti.
+      Kombinace geotermie, TČ, solární energie, zásobníků a chemických procesů vytváří lokální
+      infrastruktury schopné poskytovat teplo, elektřinu i syntetická paliva s nízkými náklady.
     </p>
   </div>
 
@@ -109,69 +100,222 @@
 
 
 
-<!-- ============================================================
-     ODBORNÉ SEKCE – GEOTERMIE
-============================================================ -->
-
-<section class="two-col-section geotermie-block">
-  <div class="col text">
+<!-- =========================================================
+   GEOTERMIE – 2 sloupce + obrázek
+========================================================= -->
+<section class="two-col geo-block">
+  <div>
     <h2>Geotermální systémy: stabilní výkon i v zimě</h2>
 
     <p>
-      Geotermální zdroje poskytují teplo nezávislé na počasí. Typické evropské lokality
-      nabízejí teplotní gradient 25–35 °C na kilometr hloubky, což umožňuje získat 90–160 °C
-      tepelné energie bez extrémních hloubek. Tyto teploty jsou ideální pro ORC cykly,
-      vysokovýkonná tepelná čerpadla a dálkové vytápění.
+      Geotermální zdroje nabízí stabilní tepelný výkon po celý rok. Teplotní gradient většiny
+      evropských lokalit umožňuje získat 90–160 °C bez extrémních hloubek. Tyto teploty jsou ideální
+      pro ORC cykly, vysokovýkonná tepelná čerpadla nebo průmyslové procesy.
     </p>
 
     <p>
-      Superkritický CO₂ může fungovat jako pracovní médium s vysokou tepelnou kapacitou,
-      nízkými viskozitními ztrátami a možností přenosu energie na velké vzdálenosti.
-      Tím se geotermie stává stabilním tepelným pilířem, ideálním pro provoz
-      syntetických procesů v zimním období.
+      Superkritický CO₂ jako médium snižuje viskozitní ztráty a zvyšuje tepelnou kapacitu,
+      čímž umožňuje efektivnější přenos energie. Geotermie tak tvoří tepelný základ celého SSCC systému.
     </p>
   </div>
 
-  <div class="col image">
-    <!-- místo pro malý obrázek později -->
+  <div>
+    <img src="assets/img/geo-small.png" alt="Geotermie">
   </div>
 </section>
+
+
+
+
+<!-- =========================================================
+   CO₂ – plná šířka modrá sekce
+========================================================= -->
 <section class="expert-block co2-block">
   <h2>CO₂ jako cirkulující médium a základ syntetické energetiky</h2>
 
   <p>
-    V systému SSCC není CO₂ odpadem, ale aktivním pracovním médiem, které lze řídit,
-    recyklovat a znovu využívat jako vstup pro chemickou syntézu nebo teplonosné okruhy.
+    V SSCC není CO₂ odpad, ale surovina a pracovní médium. Lze jej recyklovat, využít v syntéze,
+    uchovávat jako teplo nebo používat v superkritických okruzích. Díky stabilní struktuře je ideální
+    pro uzavřené cykly a pro vysokoteplotní teplonosné systémy.
   </p>
 
   <p>
-    Díky stabilní molekulární struktuře je CO₂ ideální pro uzavřené tepelné a energetické cykly.
-  </p>
-  <p>
-    V superkritickém režimu nabízí CO₂ vysokou energetickou hustotu,
-    velmi nízké viskozitní ztráty a schopnost přenášet teplo efektivněji
-    než voda nebo pára. Díky tomu je ideální pro moderní turbínové systémy
-    i teplonosné průmyslové okruhy.
+    Superkritický CO₂ má nízkou viskozitu, vysokou hustotu energie a mimořádnou schopnost transportu tepla.
+    Umožňuje provoz turbín s vyšší účinností a zlepšuje celkovou stabilitu energetických okruhů.
   </p>
 
   <p>
-    V kombinaci s obnovitelnou elektřinou a vodíkem může být CO₂ přeměněn
-    na metanol, formiáty nebo syntetické uhlovodíky, čímž vzniká uzavřený
-    uhlíkový cyklus vhodný pro městské i průmyslové celky.
-  </p>
-  <p>
-    Největší výhodou CO₂-centrických systémů je jejich škálovatelnost.  
-    Stejná technologie může fungovat v měřítku jedné budovy, městské části,
-    průmyslového parku nebo celého regionu. Každý energetický uzel může
-    řídit vlastní tok uhlíku a tepla, což výrazně snižuje potřebu dálkových
-    přenosových soustav.
-  </p>
-
-  <p>
-    V infrastruktuře SSCC se CO₂ stává nejen médiem, ale i nástrojem
-    k optimalizaci energetických toků. Jeho vlastnosti umožňují
-    spojovat elektrickou energii, teplo a chemii do jednoho integrovaného
-    celku, který se dokáže přizpůsobit krátkodobým i dlouhodobým
-    změnám výroby a spotřeby.
+    V chemické syntéze tvoří CO₂ základní vstup pro výrobu metanolu, formiátů, syntetických paliv
+    nebo polymerních prekurzorů. Vzniká tak dynamický uhlíkový cyklus, který minimalizuje emise
+    bez omezení průmyslové produkce.
   </p>
 </section>
+
+
+
+
+<!-- =========================================================
+   NH₃ – 2 sloupce, zelený tón
+========================================================= -->
+<section class="two-col nh3-block reverse">
+  <div>
+    <img src="assets/img/nh3-small.png" alt="Amoniak">
+  </div>
+
+  <div>
+    <h2>Amoniak: nejefektivnější médium pro sezónní akumulaci energie</h2>
+
+    <p>
+      Amoniak je jedním z nejefektivnějších médií pro dlouhodobou energetickou akumulaci.
+      Oproti bateriím může ukládat energii na měsíce bez výrazných ztrát a lze jej snadno
+      přepravovat nebo skladovat.
+    </p>
+
+    <p>
+      Moderní katalytické procesy umožňují decentralizovanou výrobu NH₃ i pro města nebo průmyslové zóny.
+      Lze jej spalovat, krakovat na vodík nebo používat v SOFC článcích s vysokou účinností.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- =========================================================
+   SOLAR BLOCK – 3 sloupce asymetrické
+========================================================= -->
+<section class="expert-block solar-block">
+  <h2>Solární energie, tepelná čerpadla a městské teplárenské okruhy</h2>
+
+  <div class="three-flex">
+
+    <div class="col-large">
+      <p>
+        Solární energie je dnes nejlevnější zdroj výroby elektřiny, ale její proměnlivost
+        vyžaduje chytré propojení s akumulací tepla, geotermií a průmyslovým teplem.
+      </p>
+    </div>
+
+    <div class="col-mid">
+      <p>
+        Kombinace fotovoltaiky a tepelných čerpadel umožňuje dosáhnout účinnosti 300–500 %
+        a zásadně zlepšit městské teplárenské okruhy.
+      </p>
+    </div>
+
+    <div class="col-small">
+      <p>
+        Tyto prvky lze propojit do prediktivně řízených systémů, které zásobují celé čtvrti
+        bez nutnosti spalování fosilních paliv.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- =========================================================
+   PROPOJENÍ
+========================================================= -->
+<section class="expert-block full-emphasis">
+  <h2>Propojení elektřiny, tepla a chemie do jednoho systému</h2>
+
+  <p>
+    SSCC vytváří synergický energetický organismus. Elektřina napájí elektrolýzu,
+    odpadní teplo zvyšuje účinnost syntézy, geotermie stabilizuje zimní provoz
+    a CO₂ je vstupem pro chemickou výrobu.
+  </p>
+
+  <p>
+    Systém funguje jako integrovaný tok energie, kde každá kilowatthodina může být převedena,
+    uložena nebo využita s maximální účinností.
+  </p>
+</section>
+
+
+
+
+<!-- =========================================================
+   UZLY – 2 sloupce text + text
+========================================================= -->
+<section class="two-col pure-text">
+  <div>
+    <h2>Lokální autonomní energetické uzly</h2>
+    <p>
+      SSCC pracuje s konceptem místních uzlů, které samostatně optimalizují výrobu, akumulaci,
+      distribuci i chemickou syntézu. Využívají prediktivní AI modely a pružně reagují na poptávku.
+    </p>
+  </div>
+
+  <div>
+    <p>
+      Díky tomu lze provozovat energetiku blíže místu spotřeby, s nižšími ztrátami
+      a vyšší spolehlivostí. Uzel může napájet čtvrť, továrnu nebo celý region.
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- =========================================================
+   BUDOUCNOST – 3 BOXy
+========================================================= -->
+<section class="tri-columns future-block">
+
+  <div class="tri-col">
+    <h3>Atmosférické generátory</h3>
+    <p>
+      Nové technologie získávají elektřinu přímo z vlhkosti vzduchu, 24/7,
+      nezávisle na slunci či větru.
+    </p>
+  </div>
+
+  <div class="tri-col">
+    <h3>Pokročilé katalýzy</h3>
+    <p>
+      Nízkoteplotní syntéza umožní decentralizovanou výrobu paliv a chemických médií.
+    </p>
+  </div>
+
+  <div class="tri-col">
+    <h3>Recyklace odpadních proudů</h3>
+    <p>
+      Průmyslové odpady lze přetvářet na užitečná média: elektřinu, teplo nebo syntetické plyny.
+    </p>
+  </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+   ZÁVĚR – EKONOMIKA
+========================================================= -->
+<section class="expert-block conclusion yellow">
+  <h2>Ekonomika a systémové přínosy</h2>
+
+  <p>
+    SSCC umožňuje budovat stabilní a nízkonákladové energetické celky, které odlehčují sítím,
+    využívají lokální zdroje a stabilizují průmysl i města.
+  </p>
+
+  <p>
+    Kombinace chemické akumulace, tepla a obnovitelné elektřiny vytváří výkonný,
+    odolný a dlouhodobě udržitelný energetický systém.
+  </p>
+</section>
+
+
+
+</main>
+
+<footer>
+  © 2025 SSCC — Solar & Synthetic Carbon Cycle
+</footer>
+
+</body>
+</html>
