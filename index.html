@@ -111,24 +111,44 @@ nav a:hover {
 ------------------------------------------------------- */
 
 .intro-block {
-  background: white;
-  padding: 40px 50px;
+  background: #ffffff;
+  padding: 60px 50px;
   border-radius: 18px;
-  margin-bottom: 60px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  margin: 60px auto;
+  max-width: 1100px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
 }
 
-.intro-block p {
-  font-size: 20px;
-  margin-bottom: 18px;
+.intro-inner p {
+  font-size: 21px;
+  line-height: 1.75;
+  margin-bottom: 22px;
 }
 
-.intro-nav {
+.highlight-box {
+  background: #e8f0ff;
+  border-left: 8px solid #2f6fe4;
+  padding: 22px 28px;
+  border-radius: 10px;
   margin-top: 25px;
-  padding: 18px;
-  background: #eef4ff;
-  border-left: 6px solid #4a7bdc;
-  border-radius: 8px;
+}
+
+.hero {
+  background: #6c6c6c; /* toto si můžeš vyměnit za image overlay */
+  padding: 120px 40px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  opacity: 0.95;
 }
 
 /* -------------------------------------------------------
@@ -361,10 +381,36 @@ nav a:hover {
 ------------------------------------------------------ -->
 
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-text">
+  <div class="hero-content">
     <h1>Integrovaná energetická infrastruktura pro města, průmysl a budoucí energetiku</h1>
     <p>SSCC propojuje elektřinu, teplo, chemii, akumulaci a digitální řízení do jednoho funkčního organismu.</p>
+  </div>
+</section>
+
+<section class="intro-block">
+  <div class="intro-inner">
+    <p>
+      Současná energetika prochází největší transformací za posledních 150 let.  
+      Tradiční centralizované modely narážejí na limity, zatímco poptávka po flexibilitě,
+      decentralizaci a dlouhodobé akumulaci rychle roste. Moderní infrastruktura musí umět
+      kombinovat proměnlivé zdroje, chemické procesy, teplo i digitální řízení tak, aby
+      vznikl jeden stabilní celek.
+    </p>
+
+    <p>
+      SSCC (Solar & Synthetic Carbon Cycle) definuje novou infrastrukturu: propojení elektřiny,
+      tepla, geotermie, syntéz, sezónní chemické akumulace a autonomního řízení do jediného
+      energetického organismu. Tento systém dramaticky snižuje ztráty, zvyšuje bezpečnost dodávek
+      a umožňuje dlouhodobou stabilitu i v zimních měsících.
+    </p>
+
+    <div class="highlight-box">
+      <p>
+        Jednotlivé oblasti SSCC — geotermie, CO₂ cyklus, syntetická média (NH₃, metanol, vodík),
+        solární okruhy, autonomní uzly i budoucí technologie — jsou detailně zpracovány
+        v samostatných technických kapitolách dostupných v horním menu.
+      </p>
+    </div>
   </div>
 </section>
 
