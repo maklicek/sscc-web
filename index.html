@@ -1,157 +1,42 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSCC – Modern UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSCC – Skeleton Step 1</title>
 
-<style>
-/* ------------------------ */
-/* Modern Glass Navigation   */
-/* ------------------------ */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  background: rgba(10, 20, 40, 0.55);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 8px 36px;
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 0;
-}
-
-.brand-title {
-  font-size: 22px;
-  font-weight: 900;
-  color: #ffffff;
-}
-
-.brand-subtitle {
-  font-size: 12px;
-  opacity: 0.8;
-  color: #dbe4ff;
-}
-
-.main-nav a {
-  color: #dce6ff;
-  font-size: 15px;
-  padding: 6px 4px;
-  margin-left: 16px;
-  transition: 0.2s ease;
-  border-bottom: 2px solid transparent;
-}
-
-.main-nav a:hover {
-  color: #ffffff;
-  border-bottom-color: #73a2ff;
-}
-
-.main-nav a.active {
-  border-bottom-color: #8bb0ff;
-  color: #ffffff;
-}
-
-/* ------------------------ */
-/* HERO modernized          */
-/* ------------------------ */
-.hero {
-  position: relative;
-  height: 420px;
-  background-image: url("assets/img/vyroba-amoniaku.jpg");
-  background-size: cover;
-  background-position: center 15%;
-}
-
-.hero::after {
-  content:"";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.50)
-  );
-}
-
-.hero-inner {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 40px 90px;
-  color: #ffffff;
-}
-
-.hero h1 {
-  font-size: 42px;
-  font-weight: 900;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.55);
-  margin-bottom: 16px;
-}
-
-.hero p {
-  font-size: 20px;
-  max-width: 760px;
-  opacity: 0.95;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.55);
-}
-
-/* -------------------------- */
-/* Placeholder content block  */
-/* -------------------------- */
-.content {
-  padding: 60px;
-  font-family: Arial, sans-serif;
-}
-.box {
-  background: #fff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.05);
-}
-
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="nav-inner">
-    <div>
-      <div class="brand-title">SSCC</div>
-      <div class="brand-subtitle">Solar & Synthetic Carbon Cycle</div>
+    <div class="nav-inner">
+
+        <!-- Placeholder logo (P2) -->
+        <div class="logo-placeholder"></div>
+
+        <button id="navToggle" class="hamburger">☰</button>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="#" class="active">Úvod</a>
+            <a href="#">SSCC systém</a>
+            <a href="#">Technologie</a>
+            <a href="#">Aplikace</a>
+            <a href="#">Data & AI řízení</a>
+        </nav>
     </div>
-    <nav class="main-nav">
-      <a href="#" class="active">Úvod</a>
-      <a href="#">SSCC systém</a>
-      <a href="#">Technologie</a>
-      <a href="#">Aplikace</a>
-      <a href="#">Data &amp; AI řízení</a>
-    </nav>
-  </div>
 </header>
 
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-kicker">Integrovaná energetická infrastruktura</div>
-    <h1>SSCC propojuje elektřinu, teplo, chemii a data do jednoho funkčního systému</h1>
-    <p>Modernizovaná verze hero sekce s glass efekty, lepší čitelností a hlubším kontrastem.</p>
-  </div>
+    <div class="hero-inner">
+        <h1>SSCC – Integrovaná energetická infrastruktura</h1>
+        <p>Skeleton Step 1 – struktura připravena pro obsah Kroku 2.</p>
+    </div>
 </section>
 
-<main class="content">
-  <div class="box">
-    <h2>Test obsahu</h2>
-    <p>Toto je zjednodušená ukázka. V další verzi mohu do ZIP vložit kompletní přepracovaný web.</p>
-  </div>
-</main>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
