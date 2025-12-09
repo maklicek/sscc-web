@@ -1,240 +1,137 @@
-/* ===========================
-   ROOT VARIABLES
-=========================== */
-:root {
-    --nav-bg: rgba(15, 25, 45, 0.55);
-    --nav-border: rgba(255,255,255,0.08);
-    --text-light: #e4edff;
-    --text-white: #ffffff;
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSCC – Integrovaná energetická infrastruktura</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-    --hero-height: 420px;
+<body>
 
-    --bg-light: #f3f5f8;
-    --card-bg: #ffffff;
-    --shadow: 0 8px 26px rgba(0,0,0,0.06);
-}
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header">
+    <div class="nav-inner">
+        <div class="logo-placeholder"></div>
 
-/* ===========================
-   RESET
-=========================== */
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-    font-family:"Inter", system-ui, sans-serif;
-    background: var(--bg-light);
-    color:#1e1e1e;
-    line-height: 1.6;
-}
+        <button id="navToggle" class="hamburger">☰</button>
 
-/* ===========================
-   NAVIGATION
-=========================== */
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(18px);
-    background: var(--nav-bg);
-    border-bottom: 1px solid var(--nav-border);
-    padding: 10px 36px;
-}
+        <nav class="main-nav" id="mainNav">
+            <a href="#" class="active">Úvod</a>
+            <a href="#">SSCC systém</a>
+            <a href="#">Technologie</a>
+            <a href="#">Aplikace</a>
+            <a href="#">Data & AI řízení</a>
+        </nav>
+    </div>
+</header>
 
-.nav-inner {
-    max-width:1200px;
-    margin:0 auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-inner">
+        <h1>SSCC – Integrovaná energetická infrastruktura</h1>
+        <p>Skeleton Step 1 – struktura připravena pro obsah Kroku 2.</p>
+    </div>
+</section>
 
-.logo-placeholder {
-    width:120px;
-    height:32px;
-}
+<main class="homepage">
 
-.hamburger {
-    display:none;
-    font-size:26px;
-    background:none;
-    border:none;
-    color:var(--text-light);
-}
+<!-- ================= INTRO ================= -->
+<section class="intro-section section">
+    <div class="container intro-center">
+        <h2>[Hlavní claim – bude doplněn v Kroku 3]</h2>
+        <p>[Krátký úvodní text – placeholder]</p>
+        <a href="#" class="btn-primary">Zjistit více</a>
+    </div>
+</section>
 
-.main-nav a {
-    color:var(--text-light);
-    margin-left:16px;
-    padding-bottom:3px;
-    border-bottom:2px solid transparent;
-    transition:0.2s;
-}
+<!-- ================= BENEFITY ================= -->
+<section class="benefits-section section">
+    <div class="container">
+        <div class="benefits-grid">
 
-.main-nav a:hover,
-.main-nav a.active {
-    color:var(--text-white);
-    border-bottom-color: var(--text-white);
-}
+            <div class="benefit-box">
+                <h3>Benefit 1</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-/* ===========================
-   HERO
-=========================== */
-.hero {
-    height: var(--hero-height);
-    background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
-                url("../img/hero-bg.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    color: white;
-}
+            <div class="benefit-box">
+                <h3>Benefit 2</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-.hero-inner {
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 40px;
-}
+            <div class="benefit-box">
+                <h3>Benefit 3</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-.hero h1 {
-    font-size:40px;
-    margin-bottom:16px;
-}
+            <div class="benefit-box">
+                <h3>Benefit 4</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-.hero p {
-    font-size:20px;
-    opacity:0.9;
-}
+        </div>
+    </div>
+</section>
 
-/* ===========================
-   GLOBAL LAYOUT
-=========================== */
-.section {
-    padding: 80px 0;
-}
+<!-- ================= JAK SSCC FUNGUJE ================= -->
+<section class="section how-section">
+    <div class="container">
+        <h2>Jak SSCC funguje</h2>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
+        <div class="how-grid">
+            <div class="how-item">
+                <h3>Propojené energie</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-/* ===========================
-   BUTTONS
-=========================== */
-.btn-primary,
-.btn-secondary {
-    display: inline-block;
-    padding: 12px 26px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s ease;
-}
+            <div class="how-item">
+                <h3>Stabilita systému</h3>
+                <p>[Placeholder text]</p>
+            </div>
 
-.btn-primary {
-    background: #3b82f6;
-    color: white;
-}
+            <div class="how-item">
+                <h3>Chemická akumulace</h3>
+                <p>[Placeholder text]</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-.btn-primary:hover {
-    background: #1e63d6;
-}
+<!-- ================= TECHNOLOGIE ================= -->
+<section class="tech-section section">
+    <div class="container">
+        <h2>Technologie SSCC</h2>
 
-.btn-secondary {
-    background: #e5e7eb;
-    color: #1f2937;
-}
+        <div class="tech-grid">
+            <div class="tech-card">Geotermie</div>
+            <div class="tech-card">CO₂ cyklus</div>
+            <div class="tech-card">Amoniak</div>
+            <div class="tech-card">Obnovitelné zdroje</div>
+        </div>
+    </div>
+</section>
 
-.btn-secondary:hover {
-    background: #d1d5db;
-}
+<!-- ================= APLIKACE ================= -->
+<section class="apps-section section">
+    <div class="container">
+        <h2>Aplikace SSCC</h2>
 
-/* ===========================
-   BENEFITS GRID
-=========================== */
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-}
+        <div class="app-grid">
+            <div class="app-card">Městské okruhy</div>
+            <div class="app-card">Průmyslové celky</div>
+            <div class="app-card">Autonomní uzly</div>
+        </div>
+    </div>
+</section>
 
-.benefit-box {
-    background: var(--card-bg);
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-}
+</main>
 
-/* ===========================
-   HOW (Jak SSCC funguje)
-=========================== */
-.how-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
+<script>
+document.getElementById("navToggle").onclick = () => {
+    document.getElementById("mainNav").classList.toggle("open");
+};
+</script>
 
-.how-item {
-    background: var(--card-bg);
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-}
-
-/* ===========================
-   TECHNOLOGIE GRID
-=========================== */
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-}
-
-.tech-card {
-    background: var(--card-bg);
-    padding: 32px 20px;
-    border-radius: 16px;
-    text-align: center;
-    font-weight: 700;
-    box-shadow: var(--shadow);
-}
-
-/* ===========================
-   APLIKACE GRID
-=========================== */
-.app-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-.app-card {
-    background: var(--card-bg);
-    padding: 32px 20px;
-    border-radius: 16px;
-    text-align: center;
-    font-weight: 700;
-    box-shadow: var(--shadow);
-}
-
-/* ===========================
-   RESPONSIVE RULES
-=========================== */
-@media (max-width: 1000px) {
-    .benefits-grid { grid-template-columns: repeat(2,1fr); }
-    .tech-grid { grid-template-columns: repeat(2,1fr); }
-    .app-grid { grid-template-columns: repeat(2,1fr); }
-}
-
-@media (max-width: 700px) {
-    .benefits-grid,
-    .tech-grid,
-    .app-grid,
-    .how-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hamburger { display:block; }
-    .main-nav { display:none; flex-direction:column; }
-    .main-nav.open { display:flex; }
-}
-
-/* ===========================
-   END OF FILE
-=========================== */
+</body>
+</html>
