@@ -491,4 +491,71 @@ p {
     height: auto;
     display: block;
 }
+/* --- HLAVIČKA --- */
+.site-header {
+    background: #3e4349;
+    padding: 12px 0;
+}
+
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-nav a {
+    color: #e6e6e6;
+    margin-left: 32px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* --- PODHLAVIČKA (LOGO + MOTTO) --- */
+
+.subheader {
+    background: #2e3338;
+    padding: 18px 0;
+}
+
+.subheader-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.subheader-logo {
+    height: 58px;
+    width: auto;
+}
+
+.subheader-text {
+    color: #d8d8d8;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+/* --- HERO --- */
+
+.hero-small {
+    height: 40vh;
+    min-height: 260px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-small .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
 
