@@ -337,3 +337,44 @@ p {
         font-size: 26px;
     }
 }
+/* HLAVIČKA – styl B */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 14px 40px;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.main-nav a {
+    margin-left: 26px;
+    color: #e2e8f0;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
