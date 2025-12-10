@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSCC systém – Integrovaná energetická infrastruktura</title>
+    <title>SSCC systém – Integrovaná energetická platforma</title>
     <link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 
@@ -14,7 +14,7 @@
         <div class="logo">SSCC</div>
         <nav class="main-nav">
             <a href="index.html">Úvod</a>
-            <a class="active" href="sscc-system.html">SSCC systém</a>
+            <a href="#" class="active">SSCC systém</a>
             <a href="technologie.html">Technologie</a>
             <a href="aplikace.html">Aplikace</a>
             <a href="data-ai.html">Data & AI řízení</a>
@@ -22,44 +22,104 @@
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-inner">
+<main class="page-content">
+
+    <!-- ÚVODNÍ ODBORNÝ BLOK -->
+    <section class="text-section narrow">
         <h1>SSCC systém</h1>
-        <p>Nový model energetické infrastruktury, který propojuje teplo, chemii a elektřinu do jednoho řízeného celku.</p>
-    </div>
-</section>
+        <p>
+            SSCC (Smart Synthetic Carbon Cycle) představuje energetickou platformu, která propojuje obnovitelné zdroje,
+            geotermální teplo a chemické nosiče energie do jednoho fungujícího celku. Na rozdíl od konvenčních modelů,
+            které pouze vyrovnávají výkon, SSCC řídí toky energie a hmoty v reálném čase a umožňuje zajistit stabilní,
+            dlouhodobě predikovatelný výkon i při výrazných výkyvech výroby z OZE.
+        </p>
+        <p>
+            Základní vlastností systému je schopnost převádět přebytečnou elektrickou energii do chemických médií
+            s vysokou energetickou hustotou a následně je využívat k dodávkám elektřiny, tepla nebo průmyslových surovin.
+            SSCC tím rozšiřuje možnosti energetické infrastruktury výrazně za rámec bateriových úložišť nebo tradičních
+            flexibilních zdrojů.
+        </p>
+    </section>
 
-<main class="section">
-    <div class="container">
+    <!-- BLOK 1 — ARCHITEKTURA SYSTÉMU -->
+    <section class="text-section">
+        <h2>Architektura a hlavní komponenty systému</h2>
 
-        <h2>Co tvoří SSCC</h2>
-        <p class="section-lead">
-            SSCC je modulární systém skládající se z propojených energetických uzlů,
-            které dokáží vyrábět, ukládat a dodávat výkon podle aktuální potřeby.
+        <img src="img/schema-sscc.png" alt="Schéma SSCC" class="side-img">
+
+        <p>
+            SSCC je tvořen sadou modulárních technologických celků, které lze kombinovat podle požadované kapacity
+            a funkce. Jednotlivé komponenty jsou navrženy tak, aby byly vzájemně propojené jak materiálově,
+            tak energeticky, a byly řízené jednotným datovým modelem.
         </p>
 
-        <div class="tech-grid">
-            <div class="tech-card">
-                <h3>Výrobní uzel</h3>
-                <p>Solární, větrná a geotermální energie jako základ celého systému.</p>
-            </div>
+        <ul>
+            <li><strong>Energetické vstupy:</strong> solární a větrné zdroje, geotermální teplo, recirkulovaný CO₂.</li>
+            <li><strong>Chemická akumulace:</strong> vodík, amoniak, syntetické uhlovodíky a další nosiče energie.</li>
+            <li><strong>Výrobní a zpětné procesy:</strong> elektrolýza, syntéza NH₃, spalovací nebo katalytická zařízení.</li>
+            <li><strong>Distribuce a výměníkové systémy:</strong> teplo, pára, elektřina, technologická média.</li>
+            <li><strong>Datový a řízený provoz:</strong> model predikce, optimalizace toků, řízení výkonu a spotřeby.</li>
+        </ul>
 
-            <div class="tech-card">
-                <h3>Ukládací uzel</h3>
-                <p>Přeměna přebytků na syntetická média – NH₃, H₂, CO₂-cyklus.</p>
-            </div>
+        <p>
+            Modulární přístup umožňuje vytvářet malé lokální systémy pro obce nebo průmysl, ale i rozsáhlé regionální
+            struktury propojené do robustní sítě. Každý funkční celek zůstává autonomní, což výrazně zvyšuje
+            provozní bezpečnost a snižuje riziko výpadků.
+        </p>
+    </section>
 
-            <div class="tech-card">
-                <h3>Výkonový uzel</h3>
-                <p>Dodávka elektřiny, tepla a chemických produktů při poklesu výroby.</p>
-            </div>
-        </div>
+    <!-- BLOK 2 — PROCESNÍ TOKY -->
+    <section class="text-section">
+        <h2>Řízení toků energie a hmoty</h2>
 
-        <a href="#" class="btn-primary mt-lg">Detailní struktura systému</a>
+        <p>
+            SSCC pracuje na principu uzavřených energetických a materiálových cyklů. Primární energie z OZE je
+            využívána k provozu procesů, které vytvářejí chemické zásobníky s dlouhodobou stabilitou. Chemické
+            nosiče mohou být dále transformovány podle aktuální poptávky po výkonu.
+        </p>
 
-    </div>
+        <p><strong>Hlavní toky:</strong></p>
+        <ol>
+            <li><strong>Elektrická energie → vodík:</strong> elektrolýza využívá přebytky elektřiny k výrobě H₂.</li>
+            <li><strong>Vodík → amoniak:</strong> syntéza NH₃ umožňuje kompaktní a dlouhodobé uložení energie.</li>
+            <li><strong>Amoniak → výkon:</strong> zpětná konverze na elektřinu, teplo a průmyslové vstupy.</li>
+            <li><strong>CO₂ cyklus:</strong> recirkulace CO₂ zvyšuje účinnost procesů a podporuje uzavřený uhlíkový tok.</li>
+        </ol>
+
+        <p>
+            Tímto způsobem lze zajistit stabilní provoz po dlouhé časové intervaly – od hodin po týdny až měsíce –
+            a překonat limity bateriových systémů nebo krátkodobých vyrovnávacích zdrojů.
+        </p>
+    </section>
+
+    <!-- BLOČEK 3 — ROLE DAT A ŘÍZENÍ -->
+    <section class="text-section">
+        <h2>Řídicí vrstvy a datový model</h2>
+
+        <p>
+            Provoz SSCC je řízen víceúrovňovým datovým modelem, který pracuje s predikcí výroby z OZE, dynamikou
+            spotřeby, chemickými procesy a kapacitou akumulace. Tento model rozhoduje o tom, kdy se energie ukládá,
+            kdy převádí do chemických médií a kdy se dodává zpět do sítě nebo do technologických celků.
+        </p>
+
+        <p>
+            Řídicí vrstva pracuje v reálném čase a optimalizuje tok energie i hmoty s ohledem na:
+        </p>
+
+        <ul>
+            <li>aktuální poptávku po elektrickém výkonu, teple nebo průmyslových médiích,</li>
+            <li>predikci výroby solárních a větrných elektráren,</li>
+            <li>optimální provozní podmínky pro chemické procesy,</li>
+            <li>dostupnou kapacitu akumulačních médií.</li>
+        </ul>
+
+        <p>
+            Výsledkem je vysoce stabilní energetický systém schopný adaptace na měnící se podmínky bez zásadních
+            ztrát účinnosti nebo výkonu.
+        </p>
+    </section>
+
 </main>
 
 </body>
 </html>
-
