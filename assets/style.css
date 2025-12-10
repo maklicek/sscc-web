@@ -1,21 +1,18 @@
 /* ----------------------------------------------------
-   SSCC – STYLE 3A (Modern Tech / AI Design)
+   SSCC – STYLE 3A CLEAN (Modern Tech / AI Design)
+   Sloučená, očištěná a optimalizovaná verze
 ---------------------------------------------------- */
 
 /* ---------- ROOT VARIABLES ---------- */
 :root {
     --primary-500: #3B82F6;
     --primary-600: #2563EB;
-    --primary-700: #1D4ED8;
 
     --dark-900: #0F172A;
     --dark-700: #1E293B;
 
     --light-50: #F8FAFC;
     --light-100: #F1F5F9;
-
-    --accent-cyan: #22D3EE;
-    --accent-violet: #8B5CF6;
 
     --radius-lg: 18px;
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
@@ -51,10 +48,10 @@ body {
 
 .nav-inner {
     max-width: var(--container-width);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
 }
 
 .main-nav a {
@@ -71,21 +68,34 @@ body {
     border-bottom-color: white;
 }
 
-/* ---------- HERO SECTION ---------- */
+/* ---------- HERO SECTION (FINAL, CLEAN) ---------- */
 
 .hero {
-    height: 480px;
+    height: 520px;
     color: white;
     display: flex;
     align-items: center;
     text-align: center;
     padding: 0 20px;
 
-    background: linear-gradient(
-        180deg,
-        var(--dark-900) 0%,
-        var(--dark-700) 100%
-    );
+    background:
+        linear-gradient(
+            180deg,
+            #0f172a 0%,
+            #1e293b 60%,
+            #334155 100%
+        );
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pokud se vloží obrázek */
+.hero.has-image {
+    background-image: url('assets/img/hero-ai.jpg');
+    background-blend-mode: overlay;
 }
 
 .hero-inner {
@@ -104,15 +114,51 @@ body {
     opacity: 0.85;
 }
 
-/* ---------- SECTIONS ---------- */
+/* ---------- TYPOGRAPHY ---------- */
 
-.section {
-    padding: 90px 20px;
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--dark-900);
+    margin-bottom: 16px;
+    line-height: 1.25;
 }
 
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
+h1 { font-size: 48px; }
+h2 { font-size: 34px; margin-top: 40px; }
+h3 { font-size: 22px; margin-top: 20px; }
+
+p {
+    margin-bottom: 18px;
+    line-height: 1.7;
+    color: #334155;
+}
+
+/* ---------- SPACING SYSTEM ---------- */
+
+.section { padding: 110px 24px; }
+.section-sm { padding: 60px 24px; }
+
+.mt-lg { margin-top: 80px; }
+.mt-md { margin-top: 40px; }
+.mt-sm { margin-top: 20px; }
+
+/* ---------- IMAGE / ICON BLOCKS ---------- */
+
+.img-box {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
 }
 
 /* ---------- BUTTONS ---------- */
@@ -134,7 +180,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ---------- BENEFIT BOXES ---------- */
+/* ---------- BENEFIT GRID ---------- */
 
 .benefits-grid {
     margin-top: 60px;
@@ -176,137 +222,16 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 900px) {
-
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .how-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-}
-/* ---------- HERO STATIC BACKGROUND (1C) ---------- */
-
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/img/hero-static.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.35;
-    z-index: -1;
-}
-/* ---------- TYPOGRAPHY (H1–H3) ---------- */
-
-h1, h2, h3 {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-weight: 700;
-    color: var(--dark-900);
-    margin-bottom: 16px;
-    line-height: 1.25;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 34px;
-    margin-top: 40px;
-}
-
-h3 {
-    font-size: 22px;
-    margin-top: 20px;
-}
-
-p {
-    margin-bottom: 18px;
-    line-height: 1.7;
-    color: #334155;
-}
-/* ---------- SPACING SYSTEM ---------- */
-
-.section {
-    padding: 110px 24px;
-}
-
-.section-sm {
-    padding: 60px 24px;
-}
-
-.mt-lg { margin-top: 80px; }
-.mt-md { margin-top: 40px; }
-.mt-sm { margin-top: 20px; }
-/* ---------- IMAGE / ICON BLOCKS ---------- */
-
-.img-box {
-    width: 100%;
-    height: 180px;
-    border-radius: var(--radius-lg);
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-lg);
-}
-
-.icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 16px;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
-}
-/* ---------- HERO IMAGE / GRADIENT ---------- */
-
-.hero {
-    height: 520px;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #0f172a 0%,
-            #1e293b 60%,
-            #334155 100%
-        );
-
-    background-size: cover;
-    background-position: center;
-}
-
-/* OPTION: pokud vložíš obrázek */
-.hero.has-image {
-    background-image: url('assets/img/hero-ai.jpg');
-    background-blend-mode: overlay;
-}
-/* ---------- RESPONSIVE EXTENDED ---------- */
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 1200px) {
     .benefits-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 900px) {
+
     h1 { font-size: 38px; }
     h2 { font-size: 28px; }
     h3 { font-size: 20px; }
@@ -316,14 +241,17 @@ p {
     .benefits-grid {
         grid-template-columns: 1fr;
     }
+
+    .how-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 600px) {
+
     .hero { height: 380px; }
 
-    .section {
-        padding: 70px 20px;
-    }
+    .section { padding: 70px 20px; }
 
     .nav-inner {
         flex-direction: column;
