@@ -558,4 +558,52 @@ p {
     inset: 0;
     background: rgba(0,0,0,0.25);
 }
+/* HLAVIČKA – FINÁLNÍ VERZE */
+.site-header {
+    width: 100%;
+    background-color: #3b3f47; /* tmavá šedá */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 40px;
+    box-sizing: border-box;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 4px;
+}
+
+.motto {
+    font-size: 13px;
+    color: #ddd;
+    opacity: 0.9;
+    margin-top: -6px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom: 2px solid #ffffff;
+}
 
