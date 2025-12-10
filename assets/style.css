@@ -337,67 +337,52 @@ p {
         font-size: 26px;
     }
 }
-/* ==== HLAVIČKA – FINÁLNÍ A ČISTÁ VERZE ==== */
 
+/* HLAVIČKA – FINÁLNÍ VERZE */
 .site-header {
     width: 100%;
-    background: #3b3f47;
+    background-color: #3b3f47;
     color: #fff;
-    padding: 14px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px 40px;
     box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-/* LEVÁ ČÁST – logo + motto */
 .header-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.header-left img {
-    height: 58px;
+.logo {
+    height: 60px;
     width: auto;
-    display: block;
     margin-bottom: 4px;
 }
 
-.header-left .motto {
-    font-size: 14px;
-    opacity: 0.85;
-    color: #e4e4e4;
-    margin-top: -4px;
+.motto {
+    font-size: 13px;
+    color: #ddd;
+    opacity: 0.9;
+    margin-top: -6px;
 }
 
-/* NAVIGACE */
 .main-nav {
     display: flex;
     gap: 28px;
+    font-size: 15px;
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    border-bottom-color: #ffffff;
-}
-
-/* HERO posun kvůli fixní hlavičce */
-.hero,
-.hero-small {
-    margin-top: 94px !important;
+    border-bottom: 2px solid #ffffff;
 }
