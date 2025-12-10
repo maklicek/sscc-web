@@ -9,63 +9,162 @@
 
 <body>
 
+<!-- HLAVIČKA (stejná jako na indexu) -->
 <header class="site-header">
     <div class="nav-inner">
         <div class="logo">SSCC</div>
+
         <nav class="main-nav">
             <a href="index.html">Úvod</a>
-            <a href="sscc-system.html">SSCC systém</a>
-            <a class="active" href="technologie.html">Technologie</a>
+            <a href="system.html">SSCC systém</a>
+            <a href="technologie.html" class="active">Technologie</a>
             <a href="aplikace.html">Aplikace</a>
-            <a href="data-ai.html">Data & AI řízení</a>
+            <a href="data.html">Data & AI řízení</a>
         </nav>
     </div>
 </header>
 
-<section class="hero">
-    <div class="hero-inner">
+<!-- HERO – nízký, technický, bez nadpisu -->
+<section class="hero hero-small" style="background-image:url('assets/img/tech-hero.jpg');">
+    <div class="overlay"></div>
+</section>
+
+<!-- ÚVODNÍ BLOK -->
+<section class="section">
+    <div class="container narrow">
         <h1>Technologické pilíře SSCC</h1>
-        <p>Energie, chemie a teplo v jednom integrovaném systému řízeném v reálném čase.</p>
+        <p>
+            SSCC je modulární energetický systém založený na synergii několika technologických oblastí:
+            tepelné integrace, elektrolýzy, syntetické chemie a energetické konverze. Tyto prvky tvoří
+            jeden funkční celek, který umožňuje stabilní a predikovatelnou výrobu energie i v podmínkách,
+            kde výkon obnovitelných zdrojů výrazně kolísá.
+        </p>
     </div>
 </section>
 
-<main class="section">
-    <div class="container">
-
-        <h2>Klíčové technologie</h2>
-
-        <div class="tech-grid">
-            <div class="tech-card">
-                <h3>Geotermální výkon</h3>
-                <p>Zajišťuje stabilní základní výkon a tepelnou efektivitu procesů.</p>
-            </div>
-
-            <div class="tech-card">
-                <h3>Elektrolýza a vodík</h3>
-                <p>Flexibilní přeměna přebytků energie na univerzální médium.</p>
-            </div>
-
-            <div class="tech-card">
-                <h3>Amoniak (NH₃)</h3>
-                <p>Transportovatelná chemická baterie pro dlouhodobé úložiště energie.</p>
-            </div>
-
-            <div class="tech-card">
-                <h3>CO₂ syntetický cyklus</h3>
-                <p>Uzavřený cyklus umožňuje tvorbu syntetických paliv i nízkoemisní výrobu.</p>
-            </div>
-        </div>
-
-        <div class="section mt-lg">
-            <h2>Digitální řízení a automatizace</h2>
+<!-- BLOK 1 – Geotermie a tepelná integrace -->
+<section class="section tech-block">
+    <div class="container split">
+        <div class="text">
+            <h2>Geotermální základní výkon a tepelná integrace</h2>
             <p>
-                SSCC využívá modely predikce výroby, poptávky a stavu zásobníků. 
-                AI řízení umožňuje optimalizovat tok energie mezi uzly.
+                Geotermální teplo představuje nepřetržitý a stabilní zdroj energie, který slouží jako
+                teplotní základ pro celý SSCC. Teplo se využívá pro ohřev pracovních médií, podporu
+                syntetických procesů a pro zvýšení energetické účinnosti celého systému.
+            </p>
+            <p>
+                Tepelná integrace umožňuje sdílení tepla mezi jednotlivými procesy, čímž se výrazně snižují
+                energetické ztráty a zvyšuje celková efektivita. SSCC pracuje s detailními tepelnými mapami,
+                které řídí tok tepla v reálném čase.
             </p>
         </div>
 
+        <div class="image small">
+            <img src="assets/img/geo-small.jpg" alt="Geotermální integrace">
+        </div>
     </div>
-</main>
+</section>
+
+<!-- BLOK 2 – Elektrolýza -->
+<section class="section tech-block">
+    <div class="container split reverse">
+        <div class="text">
+            <h2>Výkonná elektrolýza a vodíkové hospodářství</h2>
+            <p>
+                Elektrolýza představuje vstupní článek pro výrobu vodíku, který slouží jako klíčová surovina
+                pro syntetické a energetické procesy. SSCC využívá pokročilé typy elektrolyzérů
+                (alkalické, PEM i vysokoteplotní SOEC) podle potřeb konkrétní instalace.
+            </p>
+            <p>
+                Provoz elektrolýzy je řízen výkonovou optimalizací, která reaguje na přebytky nebo nedostatek
+                elektřiny z OZE. Tím se udržují nízké provozní náklady a vysoká energetická účinnost.
+            </p>
+        </div>
+
+        <div class="image small">
+            <img src="assets/img/electrolyzer.jpg" alt="Elektrolýza">
+        </div>
+    </div>
+</section>
+
+<!-- BLOK 3 – Syntéza amoniaku -->
+<section class="section tech-block">
+    <div class="container split">
+        <div class="text">
+            <h2>Syntéza amoniaku (NH₃)</h2>
+            <p>
+                Amoniak je efektivní médium pro dlouhodobé ukládání energie díky vysoké energetické hustotě,
+                stabilitě a snadné přepravě. Moderní nízkotlaké Haber–Boschovy procesy umožňují flexibilní provoz
+                a vysokou účinnost syntézy.
+            </p>
+            <p>
+                SSCC využívá amoniak jako víceúčelové médium: lze jej spalovat pro zpětnou výrobu elektřiny a tepla,
+                využít jako chemickou surovinu nebo skladovat jako strategickou energetickou rezervu.
+            </p>
+        </div>
+
+        <div class="image small">
+            <img src="assets/img/vyroba-amoniaku.jpg" alt="Výroba amoniaku">
+        </div>
+    </div>
+</section>
+
+<!-- BLOK 4 – CO₂ cyklus -->
+<section class="section tech-block">
+    <div class="container split reverse">
+        <div class="text">
+            <h2>CO₂ cyklus a syntetické uhlovodíky</h2>
+            <p>
+                Recirkulovaný CO₂ funguje jako pracovní médium i chemická surovina. Umožňuje uzavřený uhlíkový okruh,
+                který výrazně snižuje externí emise a zlepšuje uhlíkovou bilanci celého systému.
+            </p>
+            <p>
+                SSCC umožňuje syntézu methanolu, syntetického metanu či kapalných uhlovodíků, které lze použít
+                jako flexibilní energetické zásobníky nebo jako vstupy pro chemický průmysl.
+            </p>
+        </div>
+
+        <div class="image small">
+            <img src="assets/img/co2-cycle.jpg" alt="CO₂ cyklus">
+        </div>
+    </div>
+</section>
+
+<!-- BLOK 5 – Energetická konverze -->
+<section class="section tech-block">
+    <div class="container split">
+        <div class="text">
+            <h2>Energetická konverze a kogenerace</h2>
+            <p>
+                Energie uložená v chemických médiích se může zpětně přeměnit na elektřinu, teplo nebo průmyslové
+                vstupy. SSCC podporuje různé typy konverze: spalování, katalytické procesy i vysokoteplotní jednotky.
+            </p>
+            <p>
+                Díky kogeneraci lze současně vyrábět elektřinu i teplo a dosahovat tak vysoké účinnosti.
+                Zároveň je možné pokrývat procesní teplo pro průmysl nebo dálkové vytápění.
+            </p>
+        </div>
+
+        <div class="image small">
+            <img src="assets/img/kogenerace.jpg" alt="Energetická konverze">
+        </div>
+    </div>
+</section>
+
+<!-- BLOK 6 – Integrační vrstva -->
+<section class="section">
+    <div class="container narrow">
+        <h2>Integrační vrstva a řízení toků</h2>
+        <p>
+            Všechny technologické prvky SSCC jsou řízeny společnou integrační vrstvou. Ta optimalizuje tok energie
+            i hmoty v reálném čase na základě provozních dat, predikcí výroby z OZE a aktuálních požadavků na výkon.
+        </p>
+        <p>
+            Integrační vrstva pracuje s tepelnými mapami, tlakovými mapami, chemickými přebytky a dostupností médií.
+            Díky tomu dokáže SSCC fungovat jako jeden vyrovnaný celek s vysokou stabilitou a predikovatelností.
+        </p>
+    </div>
+</section>
 
 </body>
 </html>
