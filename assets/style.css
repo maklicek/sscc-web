@@ -485,4 +485,10 @@ p {
 .main-nav a.active {
     border-bottom: 2px solid white;
 }
+/* Logo – pevná velikost */
+.site-header .logo img {
+    width: 140px;      /* nastavíme pevnou šířku */
+    height: auto;
+    display: block;
+}
 
