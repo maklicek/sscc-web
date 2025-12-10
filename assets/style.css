@@ -240,3 +240,93 @@ p {
     line-height: 1.7;
     color: #334155;
 }
+/* ---------- SPACING SYSTEM ---------- */
+
+.section {
+    padding: 110px 24px;
+}
+
+.section-sm {
+    padding: 60px 24px;
+}
+
+.mt-lg { margin-top: 80px; }
+.mt-md { margin-top: 40px; }
+.mt-sm { margin-top: 20px; }
+/* ---------- IMAGE / ICON BLOCKS ---------- */
+
+.img-box {
+    width: 100%;
+    height: 180px;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-lg);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+}
+/* ---------- HERO IMAGE / GRADIENT ---------- */
+
+.hero {
+    height: 520px;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0f172a 0%,
+            #1e293b 60%,
+            #334155 100%
+        );
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* OPTION: pokud vložíš obrázek */
+.hero.has-image {
+    background-image: url('assets/img/hero-ai.jpg');
+    background-blend-mode: overlay;
+}
+/* ---------- RESPONSIVE EXTENDED ---------- */
+
+@media (max-width: 1200px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 900px) {
+    h1 { font-size: 38px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 20px; }
+
+    .hero { height: 440px; }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero { height: 380px; }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
