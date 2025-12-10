@@ -378,3 +378,65 @@ p {
     color: #ffffff;
     border-bottom-color: #ffffff;
 }
+/* HLAVIČKA */
+.site-header {
+    width: 100%;
+    padding: 14px 40px;
+    background: #2d3340;   /* technicky tlumená šedá/ocelová */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-img {
+    height: 34px;
+    width: auto;
+}
+
+.tagline {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 3px;
+}
+
+/* NAVIGACE */
+.main-nav {
+    display: flex;
+    gap: 26px;
+}
+
+.main-nav a {
+    color: #dce1ea;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: white;
+}
+
+.main-nav a.active {
+    font-weight: 600;
+    color: white;
+    border-bottom: 2px solid #5daeff;
+    padding-bottom: 3px;
+}
+
+/* ÚPRAVA HERO kvůli fixní hlavičce */
+.hero {
+    margin-top: 80px !important;
+}
+
