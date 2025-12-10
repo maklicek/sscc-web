@@ -295,3 +295,45 @@ p {
         max-width: 360px;
     }
 }
+/* ---------------------------------------------
+   HERO IMAGE – přes celou šířku, 40–50 % výšky
+--------------------------------------------- */
+
+.hero-image {
+    width: 100%;
+    height: 45vh; /* přesně uprostřed tvého rozsahu 40–50 % */
+    overflow: hidden;
+}
+
+.hero-image .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXT POD HERO */
+.hero-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--dark-900);
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #334155;
+    line-height: 1.65;
+    max-width: 760px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-image {
+        height: 35vh;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+}
