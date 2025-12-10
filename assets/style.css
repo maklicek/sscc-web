@@ -1,6 +1,6 @@
 /* ----------------------------------------------------
-   SSCC – STYLE 3A CLEAN (Modern Tech / AI Design)
-   Sloučená, očištěná a optimalizovaná verze
+   SSCC – STYLE 3A (Final Clean Production Version)
+   Minimalistický, odborný, technický design
 ---------------------------------------------------- */
 
 /* ---------- ROOT VARIABLES ---------- */
@@ -18,9 +18,12 @@
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
 
     --container-width: 1200px;
+
+    --text-dark: #1E293B;
+    --text-muted: #475569;
 }
 
-/* ---------- GLOBAL ---------- */
+/* ---------- GLOBAL RESET ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -30,33 +33,66 @@
 body {
     font-family: 'Inter', system-ui, sans-serif;
     background: var(--light-50);
-    color: #1e293b;
+    color: var(--text-dark);
     line-height: 1.65;
 }
 
-/* ---------- NAVIGATION ---------- */
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--dark-900);
+}
 
+h1 { font-size: 48px; margin-bottom: 20px; }
+h2 { font-size: 34px; margin-bottom: 20px; margin-top: 40px; }
+h3 { font-size: 22px; margin-bottom: 12px; margin-top: 12px; }
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.section-lead {
+    font-size: 19px;
+    color: var(--text-dark);
+    margin-bottom: 32px;
+}
+
+/* ---------- LAYOUT ---------- */
+.section {
+    padding: 100px 24px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* ---------- NAVIGATION ---------- */
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 14px 40px;
-    background: rgba(15, 23, 42, 0.65);
+    background: rgba(15,23,42,0.75);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-inner {
     max-width: var(--container-width);
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 }
 
 .main-nav a {
     color: #e2e8f0;
     margin-left: 22px;
+    text-decoration: none;
     font-weight: 500;
     border-bottom: 2px solid transparent;
     transition: 0.2s;
@@ -64,12 +100,11 @@ body {
 
 .main-nav a:hover,
 .main-nav a.active {
-    color: white;
     border-bottom-color: white;
+    color: white;
 }
 
-/* ---------- HERO SECTION (FINAL, CLEAN) ---------- */
-
+/* ---------- HERO SECTION ---------- */
 .hero {
     height: 520px;
     color: white;
@@ -85,16 +120,12 @@ body {
             #1e293b 60%,
             #334155 100%
         );
-
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden;
 }
 
-/* Pokud se vloží obrázek */
 .hero.has-image {
-    background-image: url('assets/img/hero-ai.jpg');
     background-blend-mode: overlay;
 }
 
@@ -103,75 +134,23 @@ body {
     margin: 0 auto;
 }
 
-.hero h1 {
-    font-size: 52px;
-    font-weight: 800;
-    margin-bottom: 16px;
-}
-
 .hero p {
-    font-size: 22px;
-    opacity: 0.85;
-}
-
-/* ---------- TYPOGRAPHY ---------- */
-
-h1, h2, h3 {
-    font-weight: 700;
-    color: var(--dark-900);
-    margin-bottom: 16px;
-    line-height: 1.25;
-}
-
-h1 { font-size: 48px; }
-h2 { font-size: 34px; margin-top: 40px; }
-h3 { font-size: 22px; margin-top: 20px; }
-
-p {
-    margin-bottom: 18px;
-    line-height: 1.7;
-    color: #334155;
-}
-
-/* ---------- SPACING SYSTEM ---------- */
-
-.section { padding: 110px 24px; }
-.section-sm { padding: 60px 24px; }
-
-.mt-lg { margin-top: 80px; }
-.mt-md { margin-top: 40px; }
-.mt-sm { margin-top: 20px; }
-
-/* ---------- IMAGE / ICON BLOCKS ---------- */
-
-.img-box {
-    width: 100%;
-    height: 180px;
-    border-radius: var(--radius-lg);
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-lg);
-}
-
-.icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 16px;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+    font-size: 20px;
+    opacity: 0.9;
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 /* ---------- BUTTONS ---------- */
-
 .btn-primary {
     display: inline-block;
     padding: 14px 30px;
-    margin-top: 20px;
-    border-radius: 12px;
     background: var(--primary-500);
     color: white;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
+    margin-top: 20px;
     transition: 0.2s ease;
 }
 
@@ -180,10 +159,9 @@ p {
     transform: translateY(-2px);
 }
 
-/* ---------- BENEFIT GRID ---------- */
-
+/* ---------- BENEFITS GRID ---------- */
 .benefits-grid {
-    margin-top: 60px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -202,12 +180,6 @@ p {
 }
 
 /* ---------- HOW IT WORKS ---------- */
-
-.how-section {
-    background: var(--light-100);
-    border-top: 1px solid rgba(0,0,0,0.05);
-}
-
 .how-grid {
     display: grid;
     margin-top: 40px;
@@ -222,9 +194,20 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- CTA SECTION ---------- */
+.cta-section {
+    padding: 140px 24px;
+    text-align: center;
+    background: var(--dark-900);
+    color: white;
+}
 
-@media (max-width: 1200px) {
+.cta-section p {
+    color: #e2e8f0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1100px) {
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -234,23 +217,17 @@ p {
 
     h1 { font-size: 38px; }
     h2 { font-size: 28px; }
-    h3 { font-size: 20px; }
 
     .hero { height: 440px; }
 
-    .benefits-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .benefits-grid,
     .how-grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 600px) {
-
     .hero { height: 380px; }
-
     .section { padding: 70px 20px; }
 
     .nav-inner {
