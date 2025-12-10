@@ -337,273 +337,67 @@ p {
         font-size: 26px;
     }
 }
-/* HLAVIČKA – styl B */
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 40px;
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+/* ==== HLAVIČKA – FINÁLNÍ A ČISTÁ VERZE ==== */
 
-.nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo a {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
-
-.main-nav a {
-    margin-left: 26px;
-    color: #e2e8f0;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 3px;
-    transition: 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-/* HLAVIČKA */
 .site-header {
     width: 100%;
+    background: #3b3f47;
+    color: #fff;
     padding: 14px 40px;
-    background: #2d3340;   /* technicky tlumená šedá/ocelová */
-    color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-.header-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.logo-img {
-    height: 34px;
-    width: auto;
-}
-
-.tagline {
-    font-size: 13px;
-    opacity: 0.75;
-    margin-top: 3px;
-}
-
-/* NAVIGACE */
-.main-nav {
-    display: flex;
-    gap: 26px;
-}
-
-.main-nav a {
-    color: #dce1ea;
-    text-decoration: none;
-    font-size: 16px;
-    transition: 0.2s ease;
-}
-
-.main-nav a:hover {
-    color: white;
-}
-
-.main-nav a.active {
-    font-weight: 600;
-    color: white;
-    border-bottom: 2px solid #5daeff;
-    padding-bottom: 3px;
-}
-
-/* ÚPRAVA HERO kvůli fixní hlavičce */
-.hero {
-    margin-top: 80px !important;
-}
-/* HLAVIČKA */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 40px;
-    background: #5a5e68;
-    color: white;
-}
-
-/* Levá část: logo + motto */
-.header-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.site-logo {
-    height: 66px;
-    width: auto;
-    margin-bottom: 4px;
-}
-
-.site-subtitle {
-    font-size: 14px;
-    opacity: 0.85;
-    margin-top: -4px;
-}
-
-/* Navigace */
-.main-nav {
-    display: flex;
-    gap: 26px;
-}
-
-.main-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    padding-bottom: 3px;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom: 2px solid white;
-}
-/* Logo – pevná velikost */
-.site-header .logo img {
-    width: 140px;      /* nastavíme pevnou šířku */
-    height: auto;
-    display: block;
-}
-/* --- HLAVIČKA --- */
-.site-header {
-    background: #3e4349;
-    padding: 12px 0;
-}
-
-.nav-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.main-nav a {
-    color: #e6e6e6;
-    margin-left: 32px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-}
-
-/* --- PODHLAVIČKA (LOGO + MOTTO) --- */
-
-.subheader {
-    background: #2e3338;
-    padding: 18px 0;
-}
-
-.subheader-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.subheader-logo {
-    height: 58px;
-    width: auto;
-}
-
-.subheader-text {
-    color: #d8d8d8;
-    font-size: 15px;
-    letter-spacing: 0.3px;
-}
-
-/* --- HERO --- */
-
-.hero-small {
-    height: 40vh;
-    min-height: 260px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.hero-small .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-}
-/* HLAVIČKA – FINÁLNÍ VERZE */
-.site-header {
-    width: 100%;
-    background-color: #3b3f47; /* tmavá šedá */
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 40px;
-    box-sizing: border-box;
-}
-
+/* LEVÁ ČÁST – logo + motto */
 .header-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.logo {
-    height: 60px;
+.header-left img {
+    height: 58px;
     width: auto;
+    display: block;
     margin-bottom: 4px;
 }
 
-.motto {
-    font-size: 13px;
-    color: #ddd;
-    opacity: 0.9;
-    margin-top: -6px;
+.header-left .motto {
+    font-size: 14px;
+    opacity: 0.85;
+    color: #e4e4e4;
+    margin-top: -4px;
 }
 
+/* NAVIGACE */
 .main-nav {
     display: flex;
     gap: 28px;
-    font-size: 15px;
 }
 
 .main-nav a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 16px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    border-bottom: 2px solid #ffffff;
-} 
+    border-bottom-color: #ffffff;
+}
 
+/* HERO posun kvůli fixní hlavičce */
+.hero,
+.hero-small {
+    margin-top: 94px !important;
+}
