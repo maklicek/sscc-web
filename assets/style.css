@@ -1,20 +1,18 @@
 :root {
-    /* ECO SOFT */
-    --page-bg:   #E7F4EE;   /* pozadí stránky */
-    --header-bg: #C9E4D6;   /* hlavička – o něco tmavší */
-    --hero-overlay-top:    rgba(15, 23, 42, 0.55);
-    --hero-overlay-bottom: rgba(15, 23, 42, 0.25);
+    --page-bg:   #E7F4EE;  /* světlejší pozadí stránky */
+    --header-bg: #C2E0D1;  /* o trochu tmavší hlavička */
 
-    --dark-900: #0F172A;
+    --dark-900:  #0F172A;
 
     --radius-lg: 18px;
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
 
     --container-width: 1200px;
 
-    --text-dark: #1E293B;
+    --text-dark:  #1E293B;
     --text-muted: #475569;
 }
+
 
 /* ---------- GLOBAL RESET ---------- */
 * {
