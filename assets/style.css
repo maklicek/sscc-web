@@ -44,9 +44,9 @@ h1, h2, h3 {
     color: var(--dark-900);
 }
 
-h1 { font-size: 48px; margin-bottom: 20px; }
-h2 { font-size: 34px; margin-bottom: 20px; margin-top: 40px; }
-h3 { font-size: 22px; margin-bottom: 12px; margin-top: 12px; }
+h1 { font-size: 52px; margin-bottom: 22px; }
+h2 { font-size: 38px; margin-bottom: 20px; margin-top: 42px; }
+h3 { font-size: 24px; margin-bottom: 14px; margin-top: 14px; }
 
 p {
     color: var(--text-muted);
