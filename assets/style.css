@@ -399,17 +399,22 @@ h2, h3 {
    CTA SEKCE + TLAČÍTKA
 ============================================ */
 
+/* CTA sekce – světlejší, nižší */
 .cta-section {
-    padding: 120px 24px;
+    padding: 70px 24px 60px;       /* původně 120px 24px */
     text-align: center;
-    background: var(--dark-900);
-    color: white;
+    background: #D3E7E0;           /* světle zelenkavá, navazuje na stránku */
+    color: var(--dark-900);
+}
+
+.cta-section h2 {
+    color: var(--dark-900);
 }
 
 .cta-section p {
-    color: #e2e8f0;
+    color: var(--text-muted);      /* sjednocení s textem na stránce */
     max-width: 760px;
-    margin: 20px auto 40px;
+    margin: 14px auto 30px;        /* menší mezery */
 }
 
 /* hlavní tlačítko */
