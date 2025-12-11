@@ -1,6 +1,10 @@
+/* ============================================
+   ZÁKLADNÍ NASTAVENÍ A PROMĚNNÉ
+============================================ */
+
 :root {
-    --page-bg:   #E7F4EE;  /* světlejší pozadí stránky */
-    --header-bg: #C2E0D1;  /* o něco tmavší hlavička */
+    --page-bg:   #E7F4EE;   /* pozadí stránky */
+    --header-bg: #C2E0D1;   /* o něco tmavší hlavička */
 
     --dark-900:  #0F172A;
 
@@ -12,32 +16,8 @@
     --text-dark:  #1E293B;
     --text-muted: #475569;
 }
-body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--page-bg);
-    color: var(--text-dark);
-    line-height: 1.65;
-}
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    width: 100%;
-    background-color: var(--header-bg);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 16px 40px;
-}
-
-
-
-/* ---------- GLOBAL RESET ---------- */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -51,7 +31,7 @@ body {
     line-height: 1.65;
 }
 
-/* ---------- TYPOGRAFIE ---------- */
+/* TYPOGRAFIE */
 h1, h2, h3 {
     font-weight: 700;
     line-height: 1.25;
@@ -74,7 +54,7 @@ p {
     margin-bottom: 32px;
 }
 
-/* ---------- LAYOUT ---------- */
+/* LAYOUT SEKCÍ */
 .section {
     padding: 100px 24px;
 }
@@ -84,9 +64,9 @@ p {
     margin: 0 auto;
 }
 
-/* ====================================================
+/* ============================================
    HLAVIČKA
-==================================================== */
+============================================ */
 
 .site-header {
     position: sticky;
@@ -111,13 +91,13 @@ p {
     gap: 20px;
 }
 
-.logo {
+.site-logo {
     height: 90px;
     width: auto;
     display: block;
 }
 
-.motto {
+.site-motto {
     font-size: 18px;
     font-weight: 600;
     color: #C58A1F;
@@ -165,40 +145,36 @@ p {
     }
 }
 
-/* ====================================================
-   HERO – PŘES CELOU ŠÍŘKU, 40–50 % VIEWPORTU
-==================================================== */
+/* ============================================
+   HERO – ÚVODNÍ OBRÁZEK
+============================================ */
 
-.hero-landing {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;          /* natáhne hero přes celý viewport i při max-width containeru */
-
-    min-height: 45vh;
+.hero {
+    width: 100%;
+    min-height: 50vh;                /* cca polovina výšky okna */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
+    position: relative;
     display: flex;
     align-items: flex-end;
     padding: 48px 40px;
 }
 
-/* tmavý překryv pro lepší čitelnost textu */
-.hero-landing::before {
+/* tmavší overlay kvůli čitelnosti textu */
+.hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
         180deg,
-        var(--hero-overlay-top),
-        var(--hero-overlay-bottom)
+        rgba(15, 23, 42, 0.40),
+        rgba(15, 23, 42, 0.10)
     );
 }
 
-.hero-landing-inner {
+.hero-inner {
     position: relative;
     max-width: var(--container-width);
     margin: 0 auto;
@@ -206,42 +182,39 @@ p {
     color: #fff;
 }
 
-.hero-landing-title {
+.hero-title {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 12px;
 }
 
-.hero-landing-subtitle {
+.hero-subtitle {
     font-size: 18px;
     max-width: 720px;
     text-shadow: 0 4px 12px rgba(0,0,0,0.45);
 }
 
-/* jednoduchá mobilní úprava */
+/* HERO – mobil */
 @media (max-width: 768px) {
-    .hero-landing {
+    .hero {
         padding: 32px 20px;
-        min-height: 50vh;
+        min-height: 55vh;
     }
 
-    .hero-landing-title {
+    .hero-title {
         font-size: 26px;
     }
 
-    .hero-landing-subtitle {
+    .hero-subtitle {
         font-size: 16px;
-    }
-
-    .section {
-        padding: 70px 20px;
     }
 }
 
-/* ====================================================
+/* ============================================
    GRIDY A KARTY
-==================================================== */
+============================================ */
 
+/* BENEFITY */
 .benefits-grid {
     margin-top: 40px;
     display: grid;
@@ -249,6 +222,7 @@ p {
     gap: 30px;
 }
 
+/* JAK SSCC FUNGUJE */
 .how-grid {
     display: grid;
     margin-top: 40px;
@@ -256,25 +230,9 @@ p {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.tech-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.app-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
 /* společný styl kartiček */
 .benefit-box,
-.how-item,
-.tech-card,
-.app-card {
+.how-item {
     background: #fff;
     padding: 26px;
     border-radius: var(--radius-lg);
@@ -289,16 +247,30 @@ p {
     transform: translateY(-4px);
 }
 
-.tech-card .icon,
-.app-card .icon {
-    height: 40px;
-    width: auto;
-    margin-bottom: 14px;
+/* RESPONSIVE GRIDY */
+@media (max-width: 1100px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* CTA sekce */
+@media (max-width: 800px) {
+    .benefits-grid,
+    .how-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   CTA SEKCE
+============================================ */
+
 .cta-section {
-    padding: 140px 24px;
+    padding: 120px 24px;
     text-align: center;
     background: var(--dark-900);
     color: white;
@@ -306,42 +278,23 @@ p {
 
 .cta-section p {
     color: #e2e8f0;
+    max-width: 760px;
+    margin: 20px auto 40px;
 }
 
-/* responsivita gridů */
-@media (max-width: 1100px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .app-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.btn-primary {
+    display: inline-block;
+    background: #0F172A;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.2s ease;
 }
 
-@media (max-width: 800px) {
-    .benefits-grid,
-    .how-grid,
-    .tech-grid,
-    .app-grid {
-        grid-template-columns: 1fr;
-    }
-}
-.hero {
-    width: 100%;
-    min-height: 45vh;          /* cca půlka výšky okna */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero-small {
-    min-height: 45vh;          /* můžeš upravit na 40/50 podle oka */
-}
-
-/* tenhle prázdný blok nejspíš ani nepotřebuješ */
-.hero-image {
-    display: none;
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
 }
