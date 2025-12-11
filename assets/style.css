@@ -359,17 +359,22 @@ h2, h3 {
     .app-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 800px) {
     .benefits-grid,
     .how-grid,
     .tech-grid,
-    .app-grid {
+    .app-grid,
+    .data-grid {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ============================================
    CTA SEKCE + TLAČÍTKA
@@ -404,4 +409,18 @@ h2, h3 {
 .btn-primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+/* DATA & AI – mřížka karet */
+.data-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.data-card {
+    background: #fff;
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
