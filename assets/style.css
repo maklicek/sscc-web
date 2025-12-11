@@ -64,6 +64,23 @@ p {
     max-width: var(--container-width);
     margin: 0 auto;
 }
+/* ÚVODNÍ HEADER SEKCÍ */
+.page-header {
+    padding: 80px 24px 60px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 26px;
+    color: var(--dark-900);
+}
+
+.page-header p {
+    font-size: 18px;
+    max-width: 820px;
+    margin-bottom: 18px;
+    color: var(--text-muted);
+}
 
 /* ============================================
    HLAVIČKA
