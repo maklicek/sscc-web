@@ -113,6 +113,296 @@
         </p>
     </div>
 </section>
+<section class="section" id="oze">
+    <div class="container">
+        <h2>Obnovitelné zdroje a profil výroby</h2>
+
+        <p>
+            SSCC je navrženo pro prostředí s vysokým podílem proměnlivé výroby z OZE. Základní vstupní veličinou
+            nejsou jen instalované výkony, ale časové profily výroby a jejich korelace. Z praktického hlediska
+            rozlišujeme tři dominantní zdroje: fotovoltaiku, větrnou energii a vodní zdroje (včetně PVE).
+        </p>
+
+        <h3>Fotovoltaika</h3>
+        <p>
+            Typický kapacitní faktor pozemních FVE ve střední Evropě se pohybuje v rozmezí
+            <strong>10–13&nbsp;%</strong>. Výroba je silně koncentrována do 5–6 hodin okolo solárního poledne,
+            s výrazným sezónním rozdílem (letní maximum vs. zimní minimum v poměru 3–4 : 1).
+            V soustavě SSCC se fotovoltaika používá primárně pro:
+        </p>
+        <ul>
+            <li>napájení elektrolýzy a nízkoteplotních procesů v době přebytku,</li>
+            <li>přímou dodávku do sítě v době vysoké poptávky, pokud není kapacita akumulace zaplněna,</li>
+            <li>krátkodobé korekce výpadků jiných zdrojů v lokálním měřítku.</li>
+        </ul>
+
+        <h3>Větrná energie</h3>
+        <p>
+            Větrné elektrárny dosahují ve vhodných lokalitách kapacitních faktorů <strong>25–40&nbsp;%</strong>.
+            Výroba vykazuje nižší denní cykličnost než fotovoltaika, ale vyšší epizodickou variabilitu
+            v řádu dnů. Pro SSCC je klíčová skutečnost, že větrný profil je částečně nekorelovaný
+            s fotovoltaikou – umožňuje tedy:
+        </p>
+        <ul>
+            <li>využít elektrolyzéry a procesní jednotky s vyšší roční dobou využití,</li>
+            <li>snižovat požadavky na krátkodobou akumulaci,</li>
+            <li>lépe vyhlazovat sezónní rozdíly (zimní větrné epizody vs. letní solární maximum).</li>
+        </ul>
+
+        <h3>Vodní zdroje a PVE</h3>
+        <p>
+            Kde jsou k dispozici, plní vodní zdroje (včetně přečerpávacích elektráren) roli
+            <em>rychlé výkonové rezervy</em>. V modelu SSCC umožňují:
+        </p>
+        <ul>
+            <li>reagovat v minutovém až hodinovém horizontu na odchylky výkonu OZE,</li>
+            <li>připravit prostor pro pomalejší chemickou akumulaci (NH₃, H₂, teplo),</li>
+            <li>minimalizovat nutnost záložních fosilních zdrojů.</li>
+        </ul>
+
+        <h3>Impulzy pro dimenzování SSCC</h3>
+        <p>
+            Pro návrh SSCC jsou zásadní následující parametry:
+        </p>
+        <ul>
+            <li>časové řady výkonu OZE s rozlišením minuty až 15&nbsp;min,</li>
+            <li>rozložení „přebytečné“ výroby nad lokální spotřebou,</li>
+            <li>délka období s nedostatkem výroby (vícedenní až vícetýdenní bezvětří a nízké osvitové podmínky),</li>
+            <li>kombinace korelujících a nekorelujících zdrojů (PV vs. vítr vs. geotermie).</li>
+        </ul>
+    </div>
+</section>
+<section class="section" id="geotermie">
+    <div class="container">
+        <h2>Geotermální zdroje a teplotní úrovně</h2>
+
+        <p>
+            Geotermální zdroje v SSCC neplní primárně roli samostatného zdroje elektřiny, ale slouží jako
+            stabilní nízko- až středněteplotní tepelné pole pro procesní a akumulační operace. Rozlišujeme tři
+            základní teplotní úrovně:
+        </p>
+
+        <ul>
+            <li><strong>nízkopotenciální teplo</strong> (40–90&nbsp;°C) – vhodné pro vytápění, předhřev, nízkoteplotní ORC,</li>
+            <li><strong>středněpotenciální teplo</strong> (90–150&nbsp;°C) – vhodné pro absorpční chlazení, intenzivnější ORC,</li>
+            <li><strong>vysokopotenciální teplo</strong> (&gt;150&nbsp;°C) – v některých lokalitách použitelné i pro parní cyklus.</li>
+        </ul>
+
+        <h3>Integrace s chemickými procesy</h3>
+        <p>
+            V SSCC se geotermální teplo využívá zejména k:
+        </p>
+        <ul>
+            <li>předehřevu vstupních proudů pro syntézu NH₃ a dalších médií,</li>
+            <li>stabilizaci teplotních hladin v tepelných zásobnících (PCM, voda, solné směsi),</li>
+            <li>dodávce nízkopotenciálního tepla pro průmyslové a komunální využití (vytápění, sušení).</li>
+        </ul>
+
+        <p>
+            V porovnání s klasickým fosilním „utility“ teplem má geotermie výhodu v nízké variabilitě a
+            předvídatelnosti. To umožňuje optimalizovat elektrickou část systému: elektrolýza a výkonové
+            špičky se více opírají o OZE, zatímco geotermie zajišťuje za „kulisy“ tepelné bilance.
+        </p>
+
+        <h3>Limity a vhodné aplikace</h3>
+        <p>
+            Geotermální zdroje mají lokální charakter. Pro SSCC dává smysl zejména:
+        </p>
+        <ul>
+            <li>v lokalitách s existujícími vrty a průmyslovou infrastrukturní základnou,</li>
+            <li>v kombinaci s procesy, které umí využít teplo v širokém rozsahu (např. multi-effect destilace, sušení, ORC),</li>
+            <li>tam, kde geotermie snižuje potřebu fosilních nebo elektrických zdrojů tepla v jádrových procesech.</li>
+        </ul>
+    </div>
+</section>
+<section class="section" id="h2">
+    <div class="container">
+        <h2>Výroba vodíku a elektrolyzéry</h2>
+
+        <p>
+            Vodík je v SSCC primárním meziproduktem pro syntézu amoniaku, metanolu nebo jiných syntetických médií.
+            Klíčovým parametrem není jen účinnost elektrolýzy, ale schopnost flexibilního provozu v závislosti
+            na dostupnosti elektřiny z OZE.
+        </p>
+
+        <h3>Typy elektrolýzy</h3>
+        <ul>
+            <li>
+                <strong>Alkalická elektrolýza (AEL)</strong> – komerčně ověřená technologie, typická účinnost
+                <strong>60–70&nbsp;% LHV</strong>, omezená flexibilita (pomalejší náběh, omezené částečné zatížení).
+            </li>
+            <li>
+                <strong>PEM elektrolýza</strong> – vyšší dynamika, vhodná pro přímé napojení na OZE,
+                účinnost <strong>60–75&nbsp;% LHV</strong>, vyšší CAPEX.
+            </li>
+            <li>
+                <strong>SOEC (vysokoteplotní)</strong> – potenciálně účinnost &gt;80&nbsp;% díky dodávce tepla,
+                ale technologicky náročnější, vhodná pro integraci s vysokoteplotními procesy (např. NH₃, CO₂-reforming).
+            </li>
+        </ul>
+
+        <h3>Provozní strategie v SSCC</h3>
+        <p>
+            V SSCC se uvažují dva základní režimy provozu elektrolýzy:
+        </p>
+        <ul>
+            <li>
+                <strong>OZE-following</strong>: výkon elektrolýzy kopíruje dostupnou nadvýrobu z OZE.
+                Výhodou je nízká cena vstupní elektřiny, nevýhodou je nižší roční doba využití a tlak na dimenzování
+                akumulace H₂/NH₃.
+            </li>
+            <li>
+                <strong>Mixed-mode</strong>: část výkonu je provozována stabilně (např. na základě PPA),
+                zbylá část modulárně následuje OZE. To umožňuje lépe využít investici do technologie
+                a zároveň absorbovat krátkodobé přebytky.
+            </li>
+        </ul>
+
+        <p>
+            Z hlediska návrhu SSCC je kritické sladit:
+        </p>
+        <ul>
+            <li>instalovaný výkon elektrolýzy,</li>
+            <li>kapacitu chemické akumulace (NH₃, H₂ v zásobnících),</li>
+            <li>profil a kapacitu navazujících syntetických procesů.</li>
+        </ul>
+    </div>
+</section>
+<section class="section" id="nh3">
+    <div class="container">
+        <h2>Syntéza amoniaku a role NH₃ v SSCC</h2>
+
+        <p>
+            Amoniak plní v SSCC dvě klíčové funkce: je dlouhodobým energetickým nosičem a zároveň chemickým
+            produktem s vlastním trhem (hnojiva, chemie). Z procesního hlediska jde o modifikovaný
+            Haber–Boschův proces napojený na obnovitelný vodík a geotermální či odpadní teplo.
+        </p>
+
+        <h3>Provozní rozsahy a účinnosti</h3>
+        <p>
+            Konvenční jednotky syntézy NH₃ pracují typicky při <strong>p = 130–200&nbsp;bar</strong> a
+            <strong>T = 400–480&nbsp;°C</strong> s Fe-katalyzátory. V kontextu SSCC uvažujeme:
+        </p>
+        <ul>
+            <li>
+                <strong>Vysokotlaké schéma</strong> integrované s geotermálním nebo odpadním teplem,
+                kde je teplo využito pro předehřev směsi a regeneraci tepla v rekuperační síti.
+            </li>
+            <li>
+                <strong>Středotlaké varianty</strong> (80–120&nbsp;bar) s moderními katalyzátory,
+                kde se část ztráty rovnovážného výtěžku kompenzuje vyšší recirkulací a vhodným uspořádáním reaktorů.
+            </li>
+        </ul>
+
+        <p>
+            Celková energetická náročnost výroby NH₃ z obnovitelného H₂ se včetně elektrolýzy typicky pohybuje
+            v intervalu <strong>8–12&nbsp;MWh<sub>el</sub>/t NH₃</strong>. Cílem SSCC je pomocí tepelné integrace
+            a optimalizace recirkulace dostat systém do spodní poloviny tohoto rozmezí.
+        </p>
+
+        <h3>NH₃ jako energetický nosič</h3>
+        <p>
+            Amoniak má objemovou energetickou hustotu cca <strong>11–12&nbsp;MWh/t</strong> (LHV) a lze jej skladovat
+            v kapalné formě při mírně zvýšeném tlaku nebo při teplotách okolo −33&nbsp;°C. Ve srovnání s čistým H₂:
+        </p>
+        <ul>
+            <li>je logisticky výrazně jednodušší (existující infrastruktura, zkušenosti z hnojivového průmyslu),</li>
+            <li>umožňuje akumulaci v řádu týdnů až měsíců,</li>
+            <li>je vhodný pro velké regionální huby, nikoli pro malá lokální úložiště.</li>
+        </ul>
+
+        <h3>Limity použití</h3>
+        <p>
+            NH₃ není vhodný pro krátkodobé vyrovnávání v minutovém až hodinovém měřítku – zde zůstávají
+            efektivnější baterie, PVE nebo superkapacity. V SSCC je proto amoniak koncipován jako
+            <em>sezonní nebo mezisezónní zásobník</em>, z něhož se energie vrací zpět
+            přes spalovací, elektrochemické nebo krakovací procesy v době nedostatku OZE.
+        </p>
+    </div>
+</section>
+<section class="section" id="co2">
+    <div class="container">
+        <h2>Uzavřené CO₂–cykly a uhlíková bilance</h2>
+
+        <p>
+            Uzavřený CO₂–cyklus v SSCC neznamená „nulové emise“, ale kontrolovaný tok uhlíku v rámci
+            definovaného procesního okruhu. CO₂ je zachytáván, přepracováván do syntetických paliv
+            nebo chemikálií a znovu vracen do okruhu, místo aby byl trvale emitován do atmosféry.
+        </p>
+
+        <h3>Zdroje CO₂</h3>
+        <ul>
+            <li>biogenní CO₂ (bioplynárny, spalování biomasy),</li>
+            <li>procesní CO₂ z výroby vápna, cementu, chemických provozů,</li>
+            <li>CO₂ z výstupu spalovacích jednotek SSCC (zpětné zachytávání).</li>
+        </ul>
+
+        <h3>Využití CO₂ v SSCC</h3>
+        <p>
+            CO₂ lze využít pro:
+        </p>
+        <ul>
+            <li>syntézu metanolu a dalších C1-chemikálií,</li>
+            <li>syntézu syntetických uhlovodíků (Fischer–Tropsch),</li>
+            <li>přípravu pracovních médií pro tepelné cykly (např. sCO₂ turbíny).</li>
+        </ul>
+
+        <p>
+            Z hlediska uhlíkové bilance je zásadní rozlišovat:
+        </p>
+        <ul>
+            <li><strong>uzavřený cyklus</strong> – CO₂ se po spálení produktu vrací zpět do stejného okruhu,</li>
+            <li><strong>polouzavřený cyklus</strong> – část CO₂ se ukládá (CCS/U), část se recykluje,</li>
+            <li><strong>otevřený cyklus</strong> – CO₂ slouží jen jako médium, ale není plně recyklován.</li>
+        </ul>
+
+        <p>
+            Cílem SSCC je minimalizovat „čerstvé“ fosilní vstupy uhlíku a maximalizovat využití biogenního
+            nebo recyklovaného CO₂ za podmínky, že energetická bilance celého cyklu zůstává kladná.
+        </p>
+    </div>
+</section>
+<section class="section" id="teplo">
+    <div class="container">
+        <h2>Tepelná integrace a zásobníky</h2>
+
+        <p>
+            Tepelná integrace je jedním z hlavních nástrojů, jak v SSCC zvyšovat účinnost a snižovat CAPEX
+            i OPEX. Nejde jen o „využití odpadního tepla“, ale o systematický návrh sítí výměníků,
+            akumulace a teplotních úrovní.
+        </p>
+
+        <h3>Typy tepelných zásobníků</h3>
+        <ul>
+            <li><strong>senzibilní</strong> – voda, oleje, soli (rozsah teplot od 0 do ~500&nbsp;°C),</li>
+            <li><strong>latentní</strong> – PCM materiály s fázovým přechodem (20–250&nbsp;°C podle typu materiálu),</li>
+            <li><strong>termochemické</strong> – sorpční systémy a chemické páry pro dlouhodobou akumulaci.</li>
+        </ul>
+
+        <h3>Integrace s procesy SSCC</h3>
+        <p>
+            Rozdělíme-li procesy na „zdroje“ a „spotřebiče“ tepla, dostaneme několik typických vazeb:
+        </p>
+        <ul>
+            <li>
+                vysokoteplotní odpadní teplo ze syntézy (NH₃, metanol) → předehřev vstupních směsí,
+                generace páry, nabíjení vysokoteplotních zásobníků,
+            </li>
+            <li>
+                nízkopotenciální teplo z kompresí a kondenzací → vytápění, sušení, absorpční chlazení,
+            </li>
+            <li>
+                geotermální teplo → stabilizace teplot zásobníků, základní vytápění, nízkoteplotní ORC.
+            </li>
+        </ul>
+
+        <p>
+            Na rozdíl od čistě elektrických systémů vyžaduje SSCC multi-energetický návrh:
+            elektrická, chemická a tepelná akumulace se musí dimenzovat společně. Předimenzování
+            jednoho typu zásobníku typicky vede k nevyužití potenciálu jiného a ke zvýšení celkových nákladů.
+        </p>
+    </div>
+</section>
 
 <!-- další sekce: OZE, geotermie, H2, CO2, teplo... -->
 
