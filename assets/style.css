@@ -431,3 +431,61 @@ p {
 .main-nav a.active {
     border-bottom: 2px solid #ffffff;
 }
+/* === SSCC – FINÁLNÍ HLAVIČKA === */
+
+.site-header {
+    width: 100%;
+    background: #3b3f47;
+    color: white;
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* LEVÁ ČÁST (logo + motto) */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* STŘEDOVÉ ZAROVNÁNÍ */
+    justify-content: center;
+    text-align: center;         /* motto uprostřed */
+}
+
+.site-logo {
+    height: 70px;
+    width: auto;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.site-motto {
+    font-size: 14px;
+    color: #e5e5e5;
+    opacity: 0.9;
+    max-width: 460px;
+}
+
+/* PRAVÁ ČÁST (navigace) */
+.main-nav {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom-color: white;
+}
