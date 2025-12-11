@@ -403,6 +403,189 @@
         </p>
     </div>
 </section>
+<section class="section" id="bilance">
+    <div class="container">
+        <h2>Energetické bilance a integrační limity SSCC</h2>
+
+        <p>
+            Návrh systému SSCC se opírá o plnou energetickou bilanci zahrnující elektrické, tepelné a chemické toky.
+            Základním kritériem je minimalizace ztrát při převodu mezi jednotlivými „energetickými doménami“:
+            elektrickou, tepelnou a chemickou.
+        </p>
+
+        <h3>Základní rovnovážná podmínka</h3>
+        <p>
+            Pro stabilní provoz musí platit:
+        </p>
+
+        <pre>E_OZE + E_geoterm + E_recyklace ≥ E_elektr + E_chem + E_teplo + ztráty</pre>
+
+        <p>
+            Kde jednotlivé členy vyjadřují:
+        </p>
+
+        <ul>
+            <li><strong>E_OZE</strong> – elektřina dodaná z obnovitelných zdrojů,</li>
+            <li><strong>E_geoterm</strong> – stabilní tepelný tok ze země,</li>
+            <li><strong>E_recyklace</strong> – energie získaná zpětným využitím médií (NH₃, H₂, CO₂),</li>
+            <li><strong>E_chem</strong> – chemické reakce spotřebovávající energii,</li>
+            <li><strong>E_teplo</strong> – tepelné spotřeby procesů,</li>
+            <li><strong>E_elektr</strong> – spotřeba elektřiny v pohonech, kompresích, elektrolýze.</li>
+        </ul>
+
+        <p>
+            Typickým integračním limitem je ne součet výkonů, ale <strong>časová struktura</strong> jejich dostupnosti.
+        </p>
+
+        <h3>Epizodické limity systému</h3>
+        <p>
+            Systém je nutno navrhnout proti následujícím událostem:
+        </p>
+
+        <ul>
+            <li><strong>dlouhé období bezvětří</strong> (5–15 dní),</li>
+            <li><strong>zimní období nízkých osvitů</strong> (listopad–leden),</li>
+            <li><strong>nárazové vysoké odběry tepla</strong> u průmyslových aplikací,</li>
+            <li><strong>krátkodobé nestability</strong> v horizontu minut až hodin.</li>
+        </ul>
+
+        <p>
+            Právě tyto epizody definují kapacitu amoniakové, tepelné a elektrické akumulace.
+        </p>
+    </div>
+</section>
+<section class="section" id="control">
+    <div class="container">
+        <h2>Procesní dynamika, řízení a regulační struktury</h2>
+
+        <p>
+            SSCC je systém se stovkami až tisíci vzájemně vázaných procesních toků. Klíčovým stavebním prvkem
+            je vícevrstvé řízení: od primárních fyzikálních smyček až po prediktivní optimalizační nadřazené řízení.
+        </p>
+
+        <h3>Primární regulační okruhy</h3>
+        <ul>
+            <li>řízení průtoku H₂, N₂ a recyklu NH₃ v reaktorech,</li>
+            <li>řízení teplotních hladin (výparníky, kondenzátory, zásobníky),</li>
+            <li>řízení kompresorů a odstředivých separátorů,</li>
+            <li>řízení napětí a proudu v elektrolýze.</li>
+        </ul>
+
+        <h3>Prediktivní řízení a AI</h3>
+        <p>
+            Nadřazená úroveň pracuje s prediktivními modely OZE, cen energií a stavu akumulace.
+            Používají se modely typu:
+        </p>
+
+        <ul>
+            <li><strong>MPC (Model Predictive Control)</strong> – optimalizace výkonového rozdělení,</li>
+            <li><strong>AI-based forecasting</strong> – předpovědi výroby OZE, spotřeby tepla a cen,</li>
+            <li><strong>digitální dvojčata</strong> – simulace chemických reaktorů a energetických toků.</li>
+        </ul>
+
+        <p>
+            Cílem je minimalizovat přepínací cykly, teplotní šoky reaktorů a provozní náklady.
+        </p>
+    </div>
+</section>
+<section class="section" id="materialy">
+    <div class="container">
+        <h2>Materiálové limity a provozní životnost komponent</h2>
+
+        <p>
+            Procesy SSCC probíhají při vysokých teplotách, tlacích a cyklickém namáhání.
+            Návrh materiálů proto zásadně ovlivňuje spolehlivost a životnost systému.
+        </p>
+
+        <h3>Typická procesní namáhání</h3>
+        <ul>
+            <li>tepelná únava při cyklickém zatěžování (reaktory NH₃, výměníky),</li>
+            <li>koroze způsobená NH₃, H₂, H₂O, CO₂ a stopovými látkami,</li>
+            <li>mechanické napětí při vysokém tlaku (až 150–200 bar),</li>
+            <li>sintr a degradace katalyzátorů.</li>
+        </ul>
+
+        <h3>Kritické komponenty</h3>
+        <ul>
+            <li><strong>katalyzátory NH₃</strong> – životnost 3–10 let podle podmínek,</li>
+            <li><strong>membrány PEM elektrolýzy</strong> – životnost 30–80 tisíc hodin,</li>
+            <li><strong>kompresory H₂</strong> – dominantní spotřebič údržby,</li>
+            <li><strong>zásobníky NH₃ a H₂</strong> – přísné normy pro úniky a tlaková zařízení.</li>
+        </ul>
+
+        <p>
+            Odborná optimalizace materiálů je klíčem k dosažení nízkých provozních nákladů.
+        </p>
+    </div>
+</section>
+<section class="section" id="economics">
+    <div class="container">
+        <h2>Ekonomika a optimalizace CAPEX/OPEX</h2>
+
+        <p>
+            Ekonomické hodnocení SSCC je založeno na několika hlavních nákladových blocích:
+            elektrolýza, komprese, syntéza NH₃, akumulace a řízení. Celkovou cenu pak určuje
+            dynamika provozu a stupeň integrace s průmyslovými odběry.
+        </p>
+
+        <h3>Hlavní CAPEX položky</h3>
+        <ul>
+            <li>elektrolýzery (400–1100 €/kW v závislosti na typu),</li>
+            <li>kompresní systémy,</li>
+            <li>reaktorové okruhy NH₃ a separace,</li>
+            <li>zásobníky NH₃/H₂/tepla,</li>
+            <li>digitální dvojče a řídicí systémy.</li>
+        </ul>
+
+        <h3>OPEX faktory</h3>
+        <ul>
+            <li>elektřina (dominantní položka, 60–85 %),</li>
+            <li>údržba a regenerace katalyzátorů,</li>
+            <li>spotřeba chemikálií (N₂, voda, inertní plyny),</li>
+            <li>náklady na personál a provozní řízení.</li>
+        </ul>
+
+        <p>
+            Optimalizace OPEX probíhá zejména pomocí:
+        </p>
+
+        <ul>
+            <li>prediktivního plánování spotřeby elektřiny,</li>
+            <li>úzkého propojení s trhem s flexibilitou,</li>
+            <li>využití tepla namísto elektřiny, kdykoli je to možné,</li>
+            <li>modulárního návrhu jednotek pro lepší odstávky.</li>
+        </ul>
+    </div>
+</section>
+<section class="section" id="roadmap">
+    <div class="container">
+        <h2>Roadmapa výzkumu a budoucí technologie</h2>
+
+        <p>
+            SSCC je otevřená platforma navržená tak, aby do ní bylo možné integrovat nové technologie podle toho,
+            jak budou postupovat výzkum, průmysl a dostupnost komponent. Perspektivní oblasti zahrnují:
+        </p>
+
+        <ul>
+            <li>
+                <strong>Pokročilá elektrolýza</strong> – vysokoteplotní SOEC, hybridní AEL/PEM systémy,
+                integrace s recyklací tepla.
+            </li>
+            <li>
+                <strong>Syntéza při nízkém tlaku</strong> – inovativní katalyzátory pro NH₃ a metanol, 
+                plazmové procesy, elektrochemická syntéza.
+            </li>
+            <li>
+                <strong>Systémy H₂ bez komprese</strong> – LOHC, kovové hydridy a nové typy adsorbentů.</li>
+            <li>
+                <strong>Termochemická akumulace</strong> s dlouhodobým uložením energie.</li>
+            <li>
+                <strong>sCO₂ Braytonovy cykly</strong> pro konverzi tepla na elektřinu s vysokou účinností.</li>
+            <li>
+                <strong>Plně autonomní provoz</strong> pomocí AI, digitálních dvojčat a prediktivních modelů.</li>
+        </ul>
+    </div>
+</section>
 
 <!-- další sekce: OZE, geotermie, H2, CO2, teplo... -->
 
