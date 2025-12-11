@@ -3,8 +3,8 @@
 ============================================ */
 
 :root {
-    --page-bg:   #E7F4EE;   /* pozadí stránky */
-    --header-bg: #C2E0D1;   /* o něco tmavší hlavička */
+    --page-bg:   #E8F5EF;   /* pozadí stránky */
+    --header-bg: #C9E3D6;   /* o něco tmavší hlavička */
 
     --dark-900:  #0F172A;
 
@@ -84,10 +84,10 @@ p {
     padding: 16px 40px;
 }
 
-/* LEVÁ ČÁST – logo + motto */
+/* LEVÁ ČÁST – logo + textový blok */
 .header-left {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 20px;
 }
 
@@ -97,12 +97,25 @@ p {
     display: block;
 }
 
-.site-motto {
+/* blok vpravo od loga: název + motto */
+.brand-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.brand-name {
     font-size: 18px;
     font-weight: 600;
-    color: #C58A1F;
-    line-height: 1.3;
-    padding-bottom: 8px;
+    color: #0F172A;
+}
+
+.site-motto {
+    font-size: 15px;
+    font-weight: 500;
+    color: #C58A1F;   /* zlatavá, ladí s logem */
+    line-height: 1.4;
 }
 
 /* NAVIGACE */
@@ -146,19 +159,21 @@ p {
 }
 
 /* ============================================
-   HERO – ÚVODNÍ OBRÁZEK
+   HERO – ÚVODNÍ OBRÁZEK (jen na indexu)
 ============================================ */
 
 .hero {
     width: 100%;
-    min-height: 40vh;                /* cca polovina výšky okna */
+    min-height: 50vh;                /* cca polovina výšky okna */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;             /* vertikální střed */
+    justify-content: center;         /* horizontální střed */
+    text-align: center;
     padding: 48px 40px;
 }
 
@@ -169,8 +184,8 @@ p {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(15, 23, 42, 0.40),
-        rgba(15, 23, 42, 0.10)
+        rgba(15, 23, 42, 0.60),
+        rgba(15, 23, 42, 0.35)
     );
 }
 
@@ -179,19 +194,21 @@ p {
     max-width: var(--container-width);
     margin: 0 auto;
     width: 100%;
-    color: #fff;
+    color: #F9FAFB;
 }
 
 .hero-title {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    color: #F9FAFB;
 }
 
 .hero-subtitle {
     font-size: 18px;
     max-width: 720px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    margin: 0 auto;
+    color: #E5E7EB;
 }
 
 /* HERO – mobil */
