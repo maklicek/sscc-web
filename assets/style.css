@@ -3,25 +3,34 @@
 ============================================ */
 
 :root {
-    --page-bg:   #E8F5EF;   /* pozadí stránky */
-    --header-bg: #C9E3D6;   /* o něco tmavší hlavička */
+    /* pozadí stránky a hlavičky */
+    --page-bg:   #E8F5EF;
+    --header-bg: #C9E3D6;
 
+    /* tmavé texty */
     --dark-900:  #0F172A;
+    --text-dark: #1E293B;
+    --text-muted:#475569;
 
+    /* layout & efekty */
     --radius-lg: 18px;
     --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
 
     --container-width: 1200px;
-
-    --text-dark:  #1E293B;
-    --text-muted: #475569;
 }
 
-/* RESET */
+/* ============================================
+   RESET
+============================================ */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
 }
 
 body {
@@ -31,55 +40,77 @@ body {
     line-height: 1.65;
 }
 
-/* TYPOGRAFIE */
+/* ============================================
+   TYPOGRAFIE
+============================================ */
+
 h1, h2, h3 {
     font-weight: 700;
     line-height: 1.25;
     color: var(--dark-900);
 }
 
-h1 { font-size: 52px; margin-bottom: 22px; }
-h2, h3 {scroll-margin-top: 120px; /* aby se nadpis při skrolu nezajel pod header */
+/* hlavní nadpis stránky */
+h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 32px;
 }
 
+/* nadpis sekcí */
+h2 {
+    font-size: 34px;
+    margin-top: 70px;
+    margin-bottom: 22px;
+}
 
+/* nadpis boxů / kroků */
+h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* odstavce */
 p {
+    font-size: 18px;
+    line-height: 1.68;
     color: var(--text-muted);
     margin-bottom: 18px;
-    font-size: 17px;
 }
 
+/* úvodní text sekcí */
 .section-lead {
     font-size: 19px;
     color: var(--text-dark);
     margin-bottom: 32px;
+    max-width: 820px;
 }
 
-/* LAYOUT SEKCÍ */
+/* aby se nadpisy neztratily pod sticky hlavičkou při skrolu na kotvy */
+h2, h3 {
+    scroll-margin-top: 120px;
+}
+
+/* ============================================
+   LAYOUT SEKCÍ
+============================================ */
+
 .section {
-    padding: 100px 24px;
+    padding: 70px 24px;
 }
 
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
 }
-/* ÚVODNÍ HEADER SEKCÍ */
-.page-header {
-    padding: 80px 24px 60px;
-}
 
-.page-header h1 {
-    font-size: 42px;
-    margin-bottom: 26px;
-    color: var(--dark-900);
+/* úvodní sekce podstránek („page header“) */
+.page-header {
+    padding: 120px 24px 60px; /* kompenzace sticky headeru */
 }
 
 .page-header p {
-    font-size: 18px;
     max-width: 820px;
-    margin-bottom: 18px;
-    color: var(--text-muted);
 }
 
 /* ============================================
@@ -99,7 +130,7 @@ p {
     justify-content: space-between;
     align-items: center;
 
-   padding: 12px 40px;   /* bylo 16px 40px – o trochu nižší header */
+    padding: 12px 40px;
 }
 
 /* LEVÁ ČÁST – logo + textový blok */
@@ -110,11 +141,10 @@ p {
 }
 
 .site-logo {
-    height: 80px;         /* místo 90px */
-    max-height: 12vh;     /* pro velmi nízké displeje */
+    height: 80px;
+    max-height: 12vh;
     width: auto;
     display: block;
-}
 }
 
 /* blok vpravo od loga: název + motto */
@@ -218,14 +248,18 @@ p {
 }
 
 .hero-title {
-    font-size: 36px;         /* o trochu větší */
-    letter-spacing: 0.02em;  /* malinko otevřít */
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #F9FAFB;
 }
 
 .hero-subtitle {
-    font-size: 19px;
+    font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #E5E7EB;
 }
-
 
 /* HERO – mobil */
 @media (max-width: 768px) {
@@ -247,7 +281,7 @@ p {
    GRIDY A KARTY
 ============================================ */
 
-/* BENEFITY */
+/* BENEFITY – 4 boxy */
 .benefits-grid {
     margin-top: 40px;
     display: grid;
@@ -255,7 +289,7 @@ p {
     gap: 30px;
 }
 
-/* JAK SSCC FUNGUJE */
+/* JAK SSCC FUNGUJE – 3 kroky */
 .how-grid {
     display: grid;
     margin-top: 40px;
@@ -299,7 +333,7 @@ p {
 }
 
 /* ============================================
-   CTA SEKCE
+   CTA SEKCE + TLAČÍTKA
 ============================================ */
 
 .cta-section {
@@ -315,6 +349,7 @@ p {
     margin: 20px auto 40px;
 }
 
+/* hlavní tlačítko */
 .btn-primary {
     display: inline-block;
     background: #0F172A;
@@ -330,8 +365,4 @@ p {
 .btn-primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
-}
-/* Stránky bez hero – menší mezera pod hlavičkou u první sekce */
-.page-top {
-    padding-top: 80px;   /* můžeš klidně snížit/zvýšit podle oka */
 }
