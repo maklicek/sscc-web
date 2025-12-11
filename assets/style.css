@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   SSCC – STYLE 3A (Final Clean Production Version)
+   SSCC – STYLE 3A (Clean Production Version)
    Minimalistický, odborný, technický design
 ---------------------------------------------------- */
 
@@ -70,41 +70,83 @@ p {
     margin: 0 auto;
 }
 
-/* ---------- NAVIGATION ---------- */
+/* ====================================================
+   HLAVIČKA – JEDNOTNÁ VERZE PRO VŠECHNY STRÁNKY
+==================================================== */
+
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 14px 40px;
-    background: rgba(15,23,42,0.75);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    width: 100%;
+    background-color: #3b3f47; /* tmavá šedá */
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-sizing: border-box;
 }
 
-.nav-inner {
-    max-width: var(--container-width);
+/* Levá část: logo + motto */
+.header-left {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* <img class="logo"> */
+.logo {
+    height: 60px;     /* velikost loga */
+    width: auto;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* <div class="motto"> */
+.motto {
+    font-size: 13px;
+    color: #ddd;
+    opacity: 0.9;
+    margin-top: -4px;
+}
+
+/* Navigace vpravo */
+.main-nav {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
 }
 
 .main-nav a {
-    color: #e2e8f0;
-    margin-left: 22px;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
+    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-    transition: 0.2s;
+    transition: 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
-    border-bottom-color: white;
-    color: white;
+    border-bottom: 2px solid #ffffff;
 }
 
-/* ---------- HERO SECTION ---------- */
+/* Responsivní hlavička */
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+/* ====================================================
+   HERO BLOKY
+==================================================== */
+
+/* 1) Klasický gradientový hero (pokud ho někde používáš) */
 .hero {
     height: 520px;
     color: white;
@@ -141,104 +183,7 @@ p {
     margin: 0 auto;
 }
 
-/* ---------- BUTTONS ---------- */
-.btn-primary {
-    display: inline-block;
-    padding: 14px 30px;
-    background: var(--primary-500);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: 0.2s ease;
-}
-
-.btn-primary:hover {
-    background: var(--primary-600);
-    transform: translateY(-2px);
-}
-
-/* ---------- BENEFITS GRID ---------- */
-.benefits-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.benefit-box {
-    background: white;
-    padding: 28px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    transition: 0.2s;
-}
-
-.benefit-box:hover {
-    transform: translateY(-4px);
-}
-
-/* ---------- HOW IT WORKS ---------- */
-.how-grid {
-    display: grid;
-    margin-top: 40px;
-    gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.how-item {
-    background: white;
-    padding: 28px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-
-/* ---------- CTA SECTION ---------- */
-.cta-section {
-    padding: 140px 24px;
-    text-align: center;
-    background: var(--dark-900);
-    color: white;
-}
-
-.cta-section p {
-    color: #e2e8f0;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1100px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-
-    h1 { font-size: 38px; }
-    h2 { font-size: 28px; }
-
-    .hero { height: 440px; }
-
-    .benefits-grid,
-    .how-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero { height: 380px; }
-    .section { padding: 70px 20px; }
-
-    .nav-inner {
-        flex-direction: column;
-        gap: 12px;
-    }
-}
-/* ----------------------------------------------------
-   HERO – TECHNICKÁ VERZE (obrázek 30 %, typografie menší)
----------------------------------------------------- */
-
+/* 2) „Technický“ hero – text + obrázek ~30 % šířky */
 .hero-tech {
     padding: 80px 0;
     background: var(--light-50);
@@ -272,7 +217,7 @@ p {
 }
 
 .hero-tech-img {
-    flex: 0 0 30%; /* varianta B */
+    flex: 0 0 30%;
 }
 
 .hero-tech-img img {
@@ -282,26 +227,10 @@ p {
     object-fit: cover;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .hero-tech-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-tech-img {
-        flex: 0 0 auto;
-        width: 80%;
-        max-width: 360px;
-    }
-}
-/* ---------------------------------------------
-   HERO IMAGE – přes celou šířku, 40–50 % výšky
---------------------------------------------- */
-
+/* 3) Hero image přes celou šířku, 40–50 % výšky okna */
 .hero-image {
     width: 100%;
-    height: 45vh; /* přesně uprostřed tvého rozsahu 40–50 % */
+    height: 45vh; /* střed mezi 40–50 % */
     overflow: hidden;
 }
 
@@ -312,7 +241,16 @@ p {
     display: block;
 }
 
-/* TEXT POD HERO */
+/* Text pod hero image */
+.hero-text {
+    padding: 60px 24px 40px;
+}
+
+.hero-text .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
 .hero-text h1 {
     font-size: 32px;
     font-weight: 700;
@@ -327,8 +265,23 @@ p {
     max-width: 760px;
 }
 
-/* RESPONSIVE */
+/* HERO – RESPONSIVE úpravy */
 @media (max-width: 900px) {
+    .hero {
+        height: 440px;
+    }
+
+    .hero-tech-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-tech-img {
+        flex: 0 0 auto;
+        width: 80%;
+        max-width: 360px;
+    }
+
     .hero-image {
         height: 35vh;
     }
@@ -338,54 +291,126 @@ p {
     }
 }
 
-
-/* === HLAVIČKA – FINÁLNÍ VERZE === */
-
-.site-header {
-    width: 100%;
-    background-color: #3b3f47;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 40px;
-    box-sizing: border-box;
+@media (max-width: 600px) {
+    .hero {
+        height: 380px;
+    }
+    .section {
+        padding: 70px 20px;
+    }
 }
 
-.header-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* ====================================================
+   GRIDY A KARTY (benefity, jak systém funguje, ... )
+==================================================== */
+
+/* BENEFITY */
+.benefits-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
-.site-logo {
-    height: 66px;
+.benefit-box {
+    background: white;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: 0.2s;
+}
+
+.benefit-box:hover {
+    transform: translateY(-4px);
+}
+
+/* HOW IT WORKS */
+.how-grid {
+    display: grid;
+    margin-top: 40px;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.how-item {
+    background: white;
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Technologie – karty */
+.tech-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.tech-card {
+    background: #fff;
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-card .icon {
+    height: 40px;
     width: auto;
-    display: block;
-    margin-bottom: 4px;
+    margin-bottom: 14px;
 }
 
-.site-motto {
-    font-size: 13px;
-    color: #ddd;
-    opacity: 0.9;
-    margin-top: -2px;
+/* Aplikační scénáře – karty */
+.app-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.main-nav {
-    display: flex;
-    gap: 28px;
-    font-size: 15px;
+.app-card {
+    background: #fff;
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
+.app-card .icon {
+    height: 40px;
+    width: auto;
+    margin-bottom: 14px;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom: 2px solid #ffffff;
+/* CTA sekce */
+.cta-section {
+    padding: 140px 24px;
+    text-align: center;
+    background: var(--dark-900);
+    color: white;
+}
+
+.cta-section p {
+    color: #e2e8f0;
+}
+
+/* GRID – responsivita */
+@media (max-width: 1100px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .app-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .benefits-grid,
+    .how-grid,
+    .tech-grid,
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
 }
