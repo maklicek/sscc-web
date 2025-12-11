@@ -81,7 +81,7 @@ p {
     justify-content: space-between;
     align-items: center;
 
-    padding: 16px 40px;
+   padding: 12px 40px;   /* bylo 16px 40px – o trochu nižší header */
 }
 
 /* LEVÁ ČÁST – logo + textový blok */
@@ -92,9 +92,11 @@ p {
 }
 
 .site-logo {
-    height: 90px;
+    height: 80px;         /* místo 90px */
+    max-height: 12vh;     /* pro velmi nízké displeje */
     width: auto;
     display: block;
+}
 }
 
 /* blok vpravo od loga: název + motto */
