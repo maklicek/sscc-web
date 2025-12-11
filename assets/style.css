@@ -70,45 +70,6 @@ p {
     margin: 0 auto;
 }
 
-/* ====================================================
-   HLAVIČKA – JEDNOTNÁ VERZE PRO VŠECHNY STRÁNKY
-==================================================== */
-
-.site-header {
-    width: 100%;
-    background-color: #3b3f47; /* tmavá šedá */
-    color: #fff;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 10px 40px;
-    box-sizing: border-box;
-}
-
-/* Levá část: logo + motto */
-.header-left {
-   .header-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* LOGO – pevná výška, logo se nezvětší přes header */
-.logo {
-    height: 66px;
-    width: auto;
-    display: block;
-    margin-bottom: 4px;
-}
-
-/* MOTTO POD LOGEM */
-.motto {
-    font-size: 13px;
-    color: #ddd;
-    opacity: 0.9;
-    margin-top: -2px;
-}
-
 
 /* Navigace vpravo */
 .main-nav {
@@ -415,4 +376,58 @@ p {
     .app-grid {
         grid-template-columns: 1fr;
     }
+}
+/* === HLAVIČKA – JEDNOTNÁ VERZE === */
+
+.site-header {
+    width: 100%;
+    background-color: #3b3f47;      /* tmavá šedá */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    position: sticky;               /* drží se nahoře při scrollu */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.site-logo {
+    height: 48px;                   /* konzistentní malá hlavička */
+    width: auto;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.site-motto {
+    font-size: 13px;
+    color: #ddd;
+    opacity: 0.9;
+    margin-top: -2px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom: 2px solid #ffffff;
 }
