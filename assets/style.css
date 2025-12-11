@@ -118,59 +118,70 @@ h2, h3 {
     max-width: 820px;
 }
 
-/* ============================================
-   HLAVIČKA
-============================================ */
-
+/* HLAVIČKA */
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    width: 100%;
-    background-color: var(--header-bg);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 12px 40px;
+    padding: 14px 40px;
+    background: #d6e9df; /* mírně tmavší než pozadí webu, ale jemné */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* LEVÁ ČÁST – logo + textový blok */
+/* Logo + značka */
 .header-left {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
 }
 
 .site-logo {
-    height: 80px;
-    max-height: 12vh;
+    height: 64px;
     width: auto;
-    display: block;
 }
 
-/* blok vpravo od loga: název + motto */
 .brand-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
 }
 
 .brand-name {
     font-size: 18px;
     font-weight: 600;
-    color: #0F172A;
+    margin-bottom: 3px;
+    color: #002b22;
 }
 
 .site-motto {
-    font-size: 15px;
-    font-weight: 500;
-    color: #C58A1F;   /* zlatavá, ladí s logem */
-    line-height: 1.4;
+    font-size: 14px;
+    color: #2f4f44;
+    opacity: 0.9;
+}
+
+/* Navigace */
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #003025;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.25s ease;
+}
+
+.main-nav a:hover {
+    border-bottom: 2px solid #003025;
+    opacity: 0.75;
+}
+
+.main-nav a.active {
+    border-bottom: 2px solid #003025;
+    font-weight: 600;
 }
 
 /* NAVIGACE */
