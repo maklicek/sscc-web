@@ -380,47 +380,73 @@ p {
 
 /* === HLAVIČKA – sjednocená verze pro všechny stránky === */
 
+/* === HLAVIČKA – JEDNOTNÝ STYL === */
+
 .site-header {
-    width: 100%;
-    background: #3b3f47;
-    color: #ffffff;
-    padding: 12px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    width: 100%;
     box-sizing: border-box;
+
+    /* světle zelenkavé pozadí, trochu tmavší než stránka */
+    background-color: #D3ECDD;
+
+    /* jemný stín, ať se oddělí od obsahu */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 40px;
 }
 
-/* LEVÁ ČÁST: logo + motto (pod sebou, vycentrované) */
+/* LEVÁ ČÁST – logo + motto vedle sebe */
 .header-left {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    gap: 18px;           /* mezera mezi logem a mottem */
 }
 
-/* napojení na HTML: <img class="logo"> */
-.site-logo,
+/* logo – větší, ale držíme poměr stran */
 .logo {
-    height: 70px;       /* klidně uprav na 60 nebo 80 podle oka */
+    height: 72px;        /* můžeš upravit na 80px, když budeš chtít ještě větší */
     width: auto;
     display: block;
-    margin-bottom: 6px;
 }
 
-/* napojení na HTML: <div class="motto"> */
-.site-motto,
+/* motto – vedle loga, větším a zlatým písmem */
 .motto {
-    font-size: 16px;    /* větší písmo pro motto */
+    font-size: 17px;     /* větší text */
+    font-weight: 600;
+    color: #C58A1F;      /* zlatavá barva textu */
+    line-height: 1.3;
+    white-space: nowrap; /* ať se nezalamuje na dva řádky, pokud to jde */
+}
+
+/* NAVIGACE VPRAVO */
+.main-nav {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;     /* o něco větší než dřív */
+}
+
+/* odkazy v menu – tmavší text, bez podtržení */
+.main-nav a {
+    color: #1E293B;      /* tmavě šedozelená / modrošedá */
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
     font-weight: 500;
-    color: #f1f5f9;
-    opacity: 0.95;
-    max-width: 520px;
+    transition: 0.2s ease;
+}
+
+/* hover + aktivní položka */
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom-color: #1E293B;
 }
 
 /* PRAVÁ ČÁST: navigace */
