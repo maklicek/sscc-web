@@ -96,8 +96,9 @@ h2, h3 {
 ============================================ */
 
 .section {
-    padding: 70px 24px;
+    padding: 60px 24px;
 }
+
 
 .container {
     max-width: var(--container-width);
@@ -106,7 +107,11 @@ h2, h3 {
 
 /* úvodní sekce podstránek („page header“) */
 .page-header {
-    padding: 120px 24px 60px; /* kompenzace sticky headeru */
+    padding: 110px 24px 50px;
+}
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 28px;
 }
 
 .page-header p {
@@ -206,6 +211,11 @@ h2, h3 {
         gap: 18px;
         font-size: 16px;
     }
+}
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom-color: #1E293B;
+    color: #0F172A;
 }
 
 /* ============================================
@@ -324,14 +334,23 @@ h2, h3 {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
-
-/* společný styl kartiček */
 .benefit-box,
 .how-item {
     background: #fff;
     padding: 26px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* společný hover pro všechny typy karet */
+.benefit-box:hover,
+.how-item:hover,
+.tech-card:hover,
+.app-card:hover,
+.data-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
 }
 
 .benefit-box {
@@ -410,6 +429,12 @@ h2, h3 {
     transform: translateY(-1px);
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
 }
+.btn-primary:hover {
+    background: #111827; /* o chloupek tmavší než základ */
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+
 /* DATA & AI – mřížka karet */
 .data-grid {
     margin-top: 40px;
