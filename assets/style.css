@@ -87,26 +87,28 @@ p {
 
 /* Levá část: logo + motto */
 .header-left {
+   .header-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* <img class="logo"> */
+/* LOGO – pevná výška, logo se nezvětší přes header */
 .logo {
-    height: 60px;     /* velikost loga */
+    height: 66px;
     width: auto;
     display: block;
     margin-bottom: 4px;
 }
 
-/* <div class="motto"> */
+/* MOTTO POD LOGEM */
 .motto {
     font-size: 13px;
     color: #ddd;
     opacity: 0.9;
-    margin-top: -4px;
+    margin-top: -2px;
 }
+
 
 /* Navigace vpravo */
 .main-nav {
