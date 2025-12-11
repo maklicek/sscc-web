@@ -329,3 +329,19 @@ p {
         grid-template-columns: 1fr;
     }
 }
+.hero {
+    width: 100%;
+    min-height: 45vh;          /* cca půlka výšky okna */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-small {
+    min-height: 45vh;          /* můžeš upravit na 40/50 podle oka */
+}
+
+/* tenhle prázdný blok nejspíš ani nepotřebuješ */
+.hero-image {
+    display: none;
+}
