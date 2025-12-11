@@ -1,6 +1,6 @@
 :root {
     --page-bg:   #E7F4EE;  /* světlejší pozadí stránky */
-    --header-bg: #C2E0D1;  /* o trochu tmavší hlavička */
+    --header-bg: #C2E0D1;  /* o něco tmavší hlavička */
 
     --dark-900:  #0F172A;
 
@@ -12,6 +12,29 @@
     --text-dark:  #1E293B;
     --text-muted: #475569;
 }
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--page-bg);
+    color: var(--text-dark);
+    line-height: 1.65;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 40px;
+}
+
 
 
 /* ---------- GLOBAL RESET ---------- */
@@ -305,8 +328,4 @@ p {
     .app-grid {
         grid-template-columns: 1fr;
     }
-}
-.site-header {
-    background-color: #b7dccd !important;
-    border-bottom: 3px solid #7aa88b !important;
 }
