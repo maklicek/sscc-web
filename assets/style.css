@@ -308,3 +308,7 @@ p {
         grid-template-columns: 1fr;
     }
 }
+.site-header {
+    background-color: #b7dccd !important;
+    border-bottom: 3px solid #7aa88b !important;
+}
