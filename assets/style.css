@@ -314,3 +314,7 @@ p {
     transform: translateY(-1px);
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
 }
+/* Stránky bez hero – menší mezera pod hlavičkou u první sekce */
+.page-top {
+    padding-top: 80px;   /* můžeš klidně snížit/zvýšit podle oka */
+}
