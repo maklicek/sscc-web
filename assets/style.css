@@ -69,42 +69,6 @@ p {
     max-width: var(--container-width);
     margin: 0 auto;
 }
-
-
-/* Navigace vpravo */
-.main-nav {
-    display: flex;
-    gap: 28px;
-    font-size: 15px;
-}
-
-.main-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom: 2px solid #ffffff;
-}
-
-/* Responsivní hlavička */
-@media (max-width: 900px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .main-nav {
-        margin-top: 10px;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-}
-
 /* ====================================================
    HERO BLOKY
 ==================================================== */
@@ -190,19 +154,6 @@ p {
     object-fit: cover;
 }
 
-/* 3) Hero image přes celou šířku, 40–50 % výšky okna */
-.hero-image {
-    width: 100%;
-    height: 45vh; /* střed mezi 40–50 % */
-    overflow: hidden;
-}
-
-.hero-image .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
 /* Text pod hero image */
 .hero-text {
@@ -378,9 +329,9 @@ p {
     }
 }
 
-/* === HLAVIČKA – sjednocená verze pro všechny stránky === */
-
-/* === HLAVIČKA – JEDNOTNÝ STYL === */
+/* ====================================================
+   HLAVIČKA – JEDNOTNÝ STYL PRO VŠECHNY STRÁNKY
+==================================================== */
 
 .site-header {
     position: sticky;
@@ -393,7 +344,7 @@ p {
     /* světle zelenkavé pozadí, trochu tmavší než stránka */
     background-color: #D3ECDD;
 
-    /* jemný stín, ať se oddělí od obsahu */
+    /* jemný stín pod hlavičkou */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 
     display: flex;
@@ -403,41 +354,41 @@ p {
     padding: 10px 40px;
 }
 
-/* LEVÁ ČÁST – logo + motto vedle sebe */
+/* LEVÁ ČÁST – logo + motto */
 .header-left {
     display: flex;
-    align-items: center;
-    gap: 18px;           /* mezera mezi logem a mottem */
+    align-items: flex-end;   /* zarovnání k dolní linii hlavičky */
+    gap: 20px;
 }
 
-/* logo – větší, ale držíme poměr stran */
+/* logo – větší, zachovaný poměr stran */
 .logo {
-    height: 72px;        /* můžeš upravit na 80px, když budeš chtít ještě větší */
+    height: 90px;            /* můžeš kdyžtak zkusit 80–100 px podle oka */
     width: auto;
     display: block;
 }
 
-/* motto – vedle loga, větším a zlatým písmem */
+/* motto – větší, zlaté, opticky u spodní hrany hlavičky */
 .motto {
-    font-size: 17px;     /* větší text */
+    font-size: 18px;
     font-weight: 600;
-    color: #C58A1F;      /* zlatavá barva textu */
+    color: #C58A1F;          /* zlatavá barva */
     line-height: 1.3;
-    white-space: nowrap; /* ať se nezalamuje na dva řádky, pokud to jde */
+    padding-bottom: 8px;     /* „posadí“ motto blíž spodku hlavičky */
 }
 
 /* NAVIGACE VPRAVO */
 .main-nav {
     display: flex;
-    gap: 30px;
-    font-size: 16px;     /* o něco větší než dřív */
+    gap: 32px;
+    font-size: 17px;          /* větší titulky v menu */
 }
 
-/* odkazy v menu – tmavší text, bez podtržení */
+/* odkazy v menu – tmavý text, bez podtržení */
 .main-nav a {
-    color: #1E293B;      /* tmavě šedozelená / modrošedá */
+    color: #1E293B;
     text-decoration: none;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     font-weight: 500;
     transition: 0.2s ease;
@@ -447,4 +398,23 @@ p {
 .main-nav a:hover,
 .main-nav a.active {
     border-bottom-color: #1E293B;
+}
+
+/* RESPONSIVE – na mobilu logo + motto nad menu */
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-left {
+        align-items: center;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 16px;
+    }
 }
