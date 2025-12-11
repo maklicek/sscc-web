@@ -303,6 +303,20 @@ h2, h3 {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+/* APLIKACE – mřížka scénářů použití */
+.app-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.app-card {
+    background: #fff;
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
 
 .tech-card {
     background: #fff;
@@ -341,13 +355,18 @@ h2, h3 {
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .app-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 800px) {
+
 @media (max-width: 800px) {
     .benefits-grid,
     .how-grid,
-    .tech-grid {
+    .tech-grid,
+    .app-grid {
         grid-template-columns: 1fr;
     }
 }
