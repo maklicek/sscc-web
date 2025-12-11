@@ -378,13 +378,13 @@ p {
     }
 }
 
-/* === SSCC – FINÁLNÍ HLAVIČKA === */
+/* === HLAVIČKA – sjednocená verze pro všechny stránky === */
 
 .site-header {
     width: 100%;
     background: #3b3f47;
-    color: white;
-    padding: 14px 40px;
+    color: #ffffff;
+    padding: 12px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -392,32 +392,38 @@ p {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-sizing: border-box;
 }
 
-/* LEVÁ ČÁST (logo + motto) */
+/* LEVÁ ČÁST: logo + motto (pod sebou, vycentrované) */
 .header-left {
     display: flex;
     flex-direction: column;
-    align-items: center;        /* STŘEDOVÉ ZAROVNÁNÍ */
+    align-items: center;
     justify-content: center;
-    text-align: center;         /* motto uprostřed */
+    text-align: center;
 }
 
-.site-logo {
-    height: 70px;
+/* napojení na HTML: <img class="logo"> */
+.site-logo,
+.logo {
+    height: 70px;       /* klidně uprav na 60 nebo 80 podle oka */
     width: auto;
     display: block;
     margin-bottom: 6px;
 }
 
-.site-motto {
-    font-size: 14px;
-    color: #e5e5e5;
-    opacity: 0.9;
-    max-width: 460px;
+/* napojení na HTML: <div class="motto"> */
+.site-motto,
+.motto {
+    font-size: 16px;    /* větší písmo pro motto */
+    font-weight: 500;
+    color: #f1f5f9;
+    opacity: 0.95;
+    max-width: 520px;
 }
 
-/* PRAVÁ ČÁST (navigace) */
+/* PRAVÁ ČÁST: navigace */
 .main-nav {
     display: flex;
     gap: 28px;
@@ -434,5 +440,24 @@ p {
 
 .main-nav a:hover,
 .main-nav a.active {
-    border-bottom-color: white;
+    border-bottom-color: #ffffff;
+}
+
+/* RESPONSIVE – úzké obrazovky */
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-left {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
 }
