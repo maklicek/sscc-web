@@ -59,22 +59,33 @@ h1 {
 
 /* nadpis sekcí */
 h2 {
-    font-size: 34px;
-    margin-top: 70px;
-    margin-bottom: 22px;
+    font-size: 38px;
+    margin-bottom: 16px;   /* místo 20 px */
+    margin-top: 32px;      /* místo 42 px */
 }
 
-/* nadpis boxů / kroků */
 h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 18px;      /* jen malý odstup nad podnadpisy */
 }
+
+/* pokud máš globálně .section: */
+.section {
+    padding: 80px 24px;    /* místo 100px 24px – stránka bude kompaktnější */
+}
+
 
 /* odstavce */
 p {
     font-size: 18px;
     line-height: 1.68;
+  p {
     color: var(--text-muted);
+    margin-bottom: 12px;   /* menší mezera mezi odstavci */
+    font-size: 16px;       /* o chlup menší text, čitelnější v delších blocích */
+}
+
     margin-bottom: 18px;
 }
 
