@@ -342,7 +342,7 @@ h2, h3 {
 .tech-card {
     background: #fff;
     padding: 26px;
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-lg); 
     box-shadow: var(--shadow-lg);
 }
 .benefit-box,
