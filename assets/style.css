@@ -494,3 +494,158 @@ h2, h3 {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
 }
+/* =========================
+   GLOBAL – jemnější mezery (všechny stránky)
+========================= */
+h1 { margin-bottom: 18px; }
+h2 { margin: 32px 0 14px; }
+h3 { margin: 20px 0 10px; }
+p  { margin-bottom: 14px; line-height: 1.7; }
+
+/* sekce obecně – o něco kompaktnější */
+.section { padding: 72px 24px; }
+.section.section-compact { padding: 40px 24px; }
+
+/* =========================
+   ODBORNÁ STRÁNKA – layout
+========================= */
+body.expert-page .container {
+  max-width: 1400px;            /* odborná stránka může být širší */
+}
+
+/* dvousloupcový layout: levý TOC + obsah */
+.expert-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* levý panel */
+.expert-toc {
+  position: sticky;
+  top: 110px;                   /* dle výšky hlavičky */
+  align-self: start;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.55);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.expert-toc h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.expert-toc details {
+  margin-top: 10px;
+}
+
+.expert-toc summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--dark-900);
+  list-style: none;
+}
+
+.expert-toc summary::-webkit-details-marker { display:none; }
+
+.expert-toc ul {
+  margin: 10px 0 0;
+  padding-left: 16px;
+}
+
+.expert-toc li { margin: 8px 0; }
+
+.expert-toc a {
+  color: #1e293b;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.expert-toc a:hover {
+  border-bottom-color: #1e293b;
+}
+
+.expert-toc .toc-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* hlavní obsah – klíčové: nic ho nesmí „zužovat“ */
+.expert-content {
+  width: 100%;
+  max-width: none;              /* tohle řeší úzký sloupec */
+  min-width: 0;
+}
+
+/* kotvy: aby se po kliknutí netrefil nadpis pod sticky hlavičku */
+.expert-content section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* technický „lead“ nahoře – menší mezera pod hlavičkou */
+.expert-hero {
+  padding-top: 36px;
+  padding-bottom: 10px;
+}
+
+/* dvousloupcové čtení: použij jen na dlouhé bloky */
+.two-col {
+  column-count: 2;
+  column-gap: 56px;
+}
+
+.two-col > * {
+  break-inside: avoid;
+}
+
+/* Nadpisy přes oba sloupce (lepší orientace) */
+.two-col h2,
+.two-col h3 {
+  column-span: all;
+}
+
+/* malý „callout“ řádků typu Klíčový problém / Co je důležité… */
+.key-lines {
+  margin: 10px 0 14px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.6);
+  border-left: 4px solid rgba(15,23,42,0.35);
+  border-radius: 12px;
+}
+
+.key-lines p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* tlačítko nahoru */
+.to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(15,23,42,0.9);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  opacity: 0.95;
+}
+
+.to-top:hover { opacity: 1; }
+
+/* responsivita */
+@media (max-width: 1100px) {
+  .expert-layout { grid-template-columns: 1fr; }
+  .expert-toc { position: relative; top: auto; }
+  .two-col { column-count: 1; }
+}
