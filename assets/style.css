@@ -649,3 +649,188 @@ body.expert-page .container {
   .expert-toc { position: relative; top: auto; }
   .two-col { column-count: 1; }
 }
+/* ==========================
+   GLOBAL – sjednocení mezer
+   ========================== */
+:root{
+  --page-bg: #E7F4EE;
+  --header-bg: #CFE8DC;           /* o chlup tmavší než stránka */
+  --text-dark: #0f172a;
+  --text-muted: rgba(15, 23, 42, 0.72);
+  --card-bg: rgba(255,255,255,0.78);
+  --card-border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 10px 26px rgba(0,0,0,0.08);
+  --radius: 18px;
+
+  --space-1: 10px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 36px;
+  --space-5: 52px;
+}
+
+body{
+  background: var(--page-bg);
+  color: var(--text-dark);
+}
+
+p{ margin: 0 0 var(--space-2); }
+h1,h2,h3{ margin: 0 0 var(--space-2); }
+.section{ padding: var(--space-4) 24px; }            /* dříve bývá 60–80px */
+.section.section-compact{ padding: var(--space-3) 24px; }
+
+.container{
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ==========================
+   HEADER – sjednocení barvy + jemnější shadow
+   ========================== */
+header.site-header{
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* ==========================
+   ODBORNÍCI – layout
+   ========================== */
+.page-layout{
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr); /* minmax(0,1fr) = zásadní proti přetékání */
+  gap: 34px;
+  align-items: start;
+}
+
+@media (max-width: 1020px){
+  .page-layout{ grid-template-columns: 1fr; }
+  .toc{
+    position: relative;
+    top: 0;
+  }
+}
+
+.toc{
+  position: sticky;
+  top: 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 18px;
+}
+
+.toc h3{
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+
+.toc details summary{
+  cursor: pointer;
+  font-weight: 700;
+  margin: 10px 0 8px;
+  list-style: none;
+}
+.toc details summary::-webkit-details-marker{ display:none; }
+
+.toc ul{
+  margin: 0 0 8px;
+  padding-left: 16px;
+}
+.toc li{ margin: 6px 0; }
+
+.toc a{
+  color: rgba(15,23,42,0.88);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.toc a:hover{
+  border-bottom-color: rgba(15,23,42,0.28);
+}
+
+.toc .toc-footer{
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* „Nahoru“ tlačítko (i jako link) */
+.back-to-top{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,0.14);
+  background: rgba(255,255,255,0.55);
+  text-decoration: none;
+  color: rgba(15,23,42,0.86);
+  font-weight: 600;
+}
+.back-to-top:hover{
+  background: rgba(255,255,255,0.8);
+}
+
+/* hlavní obsah odborné stránky */
+.main-content{
+  width: 100%;
+  min-width: 0; /* opět zásadní */
+}
+
+/* Kapitoly */
+.tech-section{
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(15,23,42,0.08);
+}
+.tech-section:last-child{ border-bottom: none; }
+
+.tech-section h2{
+  font-size: clamp(26px, 2.4vw, 40px);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.tech-section h3{
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+/* Dvě vrstvy: callout + hlubší text */
+.callout{
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(15,23,42,0.10);
+  border-left: 6px solid rgba(15,23,42,0.35);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 14px 0 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.callout p{ margin-bottom: 8px; }
+.callout p:last-child{ margin-bottom: 0; }
+
+/* Dva široké sloupce – dlouhé odborné texty */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+@media (max-width: 960px){
+  .two-col{ grid-template-columns: 1fr; }
+}
+
+.small-note{
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* Zmenšení „spodních“ odstavců (poznámky) na 50 % */
+.mini{
+  font-size: 50%;
+  line-height: 1.35;
+  opacity: 0.9;
+}
