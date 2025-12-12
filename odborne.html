@@ -3,285 +3,407 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SSCC – Technické detaily pro odborníky</title>
-  <link rel="stylesheet" href="assets/style.css?v=99">
+  <title>SSCC – Pro odborníky</title>
+  <link rel="stylesheet" href="assets/style.css?v=99" />
 </head>
 
-<body class="expert-page" id="top">
+<body id="top">
 
-  <!-- HLAVIČKA – použij tu stejnou jako na ostatních stránkách -->
-  <header class="site-header">
-    <div class="header-left">
-      <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
-      <div class="brand-text">
-        <div class="brand-title">SolarSpace Carbon Cycle – SSCC</div>
-        <div class="site-motto">Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.</div>
+<header class="site-header">
+  <div class="header-left">
+    <img src="assets/img/logo-sscc.png" alt="SolarSpace Carbon Cycle – SSCC" class="site-logo">
+    <div class="site-motto">
+      <div class="site-title">SolarSpace Carbon Cycle – SSCC</div>
+      <div class="site-tagline">Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.</div>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <a href="index.html">Úvod</a>
+    <a href="sscc-system.html">SSCC systém</a>
+    <a href="technologie.html">Technologie</a>
+    <a href="aplikace.html">Aplikace</a>
+    <a href="data-ai.html">Data &amp; AI řízení</a>
+    <a href="odborne.html" class="active">Pro odborníky</a>
+  </nav>
+</header>
+
+<section class="section section-compact">
+  <div class="container">
+    <h1>SSCC – technické detaily pro odborníky</h1>
+    <p>
+      Stránka je určena pro odbornou veřejnost, technologické partnery a výzkumné týmy.
+      Shrnuje fyzikální, procesní a integrační limity prvků SSCC – včetně otevřených výzkumných směrů.
+    </p>
+    <p>
+      Nejde o marketingový přehled. Cílem je technický rámec: rozsahy výkonů, teplot, tlaků, účinností,
+      omezení a důsledky pro návrh.
+    </p>
+  </div>
+</section>
+
+<section class="section section-compact">
+  <div class="container page-layout">
+
+    <!-- LEVÝ TOC -->
+    <aside class="toc" aria-label="Obsah">
+      <h3>Obsah</h3>
+
+      <details open>
+        <summary>Zdrojová část</summary>
+        <ul>
+          <li><a href="#oze">OZE a profil výroby</a></li>
+          <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
+        </ul>
+      </details>
+
+      <details open>
+        <summary>Konverze a akumulace</summary>
+        <ul>
+          <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
+          <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
+          <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
+          <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Další odborné oblasti</summary>
+        <ul>
+          <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
+          <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
+          <li><a href="#materials">Materiály, degradace, životnost</a></li>
+          <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
+          <li><a href="#roadmap">Roadmapa výzkumu</a></li>
+        </ul>
+      </details>
+
+      <a class="back-to-top" href="#top">Nahoru</a>
+      <div class="toc-footer">
+        Tip: pokud začne být stránka dlouhá, přidáme „sub-TOC“ u každé kapitoly nebo rozsekáme do 2 podstránek
+        (Zdrojová část / Konverze &amp; akumulace).
       </div>
-    </div>
+    </aside>
 
-    <nav class="main-nav">
-      <a href="index.html">Úvod</a>
-      <a href="sscc-system.html">SSCC systém</a>
-      <a href="technologie.html">Technologie</a>
-      <a href="aplikace.html">Aplikace</a>
-      <a href="data-ai.html">Data & AI řízení</a>
-      <a href="odborne.html" class="active">Pro odborníky</a>
-    </nav>
-  </header>
+    <!-- PRAVÝ OBSAH -->
+    <main class="main-content">
 
-  <!-- ÚVOD -->
-  <section class="section expert-hero">
-    <div class="container">
-      <h1>SSCC – technické detaily pro odborníky</h1>
-      <p class="section-lead">
-        Stránka je určena pro odbornou veřejnost, technologické partnery a výzkumné týmy. Shrnuje fyzikální,
-        procesní a integrační limity prvků SSCC – včetně otevřených výzkumných směrů.
-      </p>
-      <p>
-        Nejde o marketingový přehled. Cílem je technický rámec: rozsahy výkonů, teplot, tlaků, účinností,
-        omezení a důsledky pro návrh.
-      </p>
-    </div>
-  </section>
+      <!-- OZE -->
+      <section id="oze" class="tech-section">
+        <h2>Obnovitelné zdroje a profil výroby</h2>
 
-  <!-- LAYOUT: TOC + OBSAH -->
-  <section class="section section-compact">
-    <div class="container expert-layout">
-
-      <!-- LEVÝ TOC -->
-      <aside class="expert-toc" aria-label="Obsah">
-        <h3>Obsah</h3>
-
-        <details open>
-          <summary>Zdrojová část</summary>
-          <ul>
-            <li><a href="#oze">OZE a profil výroby</a></li>
-            <li><a href="#geotermie">Geotermie a teplotní úrovně</a></li>
-          </ul>
-        </details>
-
-        <details open>
-          <summary>Konverze a akumulace</summary>
-          <ul>
-            <li><a href="#vodik">Výroba vodíku a elektrolyzéry</a></li>
-            <li><a href="#amoniak">Syntéza amoniaku a role NH₃</a></li>
-            <li><a href="#co2">Uzavřené CO₂ cykly a uhlíková bilance</a></li>
-            <li><a href="#teplo">Tepelná integrace a zásobníky</a></li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>Další odborné oblasti</summary>
-          <ul>
-            <li><a href="#bilance">Energetické bilance a integrační limity</a></li>
-            <li><a href="#dynamika">Procesní dynamika, stabilita a řízení</a></li>
-            <li><a href="#materialy">Materiálové limity, degradace, životnost</a></li>
-            <li><a href="#ekonomika">Ekonomika CAPEX/OPEX a citlivosti</a></li>
-            <li><a href="#roadmapa">Roadmapa výzkumu a budoucí technologie</a></li>
-          </ul>
-        </details>
-
-        <div class="toc-note">
-          Tip: Pokud bude stránka dlouhá, dáme ještě „sub-TOC“ v každé kapitole (vpravo) nebo rozsekáme na 2 podstránky.
+        <div class="callout">
+          <p><strong>Klíčový problém:</strong> variabilita (minuty–sezóny), korelace zdrojů, omezení sítě a ceny.</p>
+          <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
+          <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂-cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
         </div>
-      </aside>
 
-      <!-- PRAVÝ OBSAH -->
-      <main class="expert-content">
+        <div class="two-col">
+          <div>
+            <p>
+              Pro návrh SSCC je zásadní rozlišit krátkodobé fluktuace (minuty–hodiny), denní a týdenní strukturu (počasí)
+              a sezonní rozdíly. V praxi často nejde o „kolik kW máme“, ale <strong>kdy</strong> a <strong>jak dlouho</strong>
+              vzniká přebytek a zda jej limituje síť, akumulace nebo cena <em>curtailmentu</em>.
+            </p>
 
-        <!-- OZE -->
-        <section id="oze" class="two-col">
-          <h2>Obnovitelné zdroje a profil výroby</h2>
+            <h3>Fotovoltaika</h3>
+            <p>
+              FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
+              a nízkoteplotních procesů v době přebytků a pro snížení potřeby fosilní špičky. Kritické je sladění výkonu
+              elektrolýzy s reálnou dostupností přebytků, nikoli s instalovaným FV výkonem.
+            </p>
 
-          <div class="key-lines">
-            <p><strong>Klíčový problém:</strong> variabilita (minuty–sezóny), korelace zdrojů, omezení sítě a ceny.</p>
-            <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
-            <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂ cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
+            <h3>Větrná energie</h3>
+            <p>
+              Vítr může být méně korelovaný s denním cyklem, ale přináší delší „větrná okna“ i období bezvětří. Pro SSCC je
+              cenný zejména tam, kde zvyšuje počet hodin s přebytkem a umožní vyšší průměrné využití elektrolýzy v režimu
+              <em>mixed-mode</em> (část výkonu stabilně, část následuje OZE).
+            </p>
           </div>
 
-          <p>
-            SSCC je navržen pro prostředí s vysokým podílem proměnlivé výroby. Pro návrh je zásadní rozlišit krátkodobé
-            fluktuace (minuty–hodiny), denní a týdenní strukturu (počasí) a sezónní rozdíly. V praxi rozhoduje i to, zda
-            je omezujícím faktorem síť, akumulace, nebo cena „curtailmentu“.
-          </p>
+          <div>
+            <h3>Vodní zdroje a PVE</h3>
+            <p>
+              Tam, kde existují vodní zdroje nebo přečerpávací elektrárny, lze SSCC dimenzovat s menší potřebou krátkodobé
+              akumulace a více se opřít o chemické nosiče pro týdny až měsíce. PVE často řeší hodiny–dny, zatímco H₂/NH₃ řeší
+              dny–sezóny.
+            </p>
 
-          <h3>Fotovoltaika</h3>
-          <p>
-            FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
-            a nízkoteplotních procesů v době přebytků a pro snížení potřeby fosilní špičky. Kritické je sladění výkonu
-            elektrolýzy s reálnou dostupností přebytků, nikoli s instalovaným FV výkonem.
-          </p>
+            <h3>Dopady a „cena“ OZE v území (nezanedbávat)</h3>
+            <p>
+              U větrných parků je nutné počítat s lokálními dopady (hluk, stroboskopický efekt, změna proudění v krajině,
+              fragmentace biotopů). Tyto faktory nejsou jen „politika“ – mohou reálně limitovat dosažitelnou instalaci,
+              a tím i bilanci přebytků pro SSCC. Pro vnitrozemské státy navíc hraje roli dostupnost vhodných lokalit a
+              přenosové kapacity.
+            </p>
 
-          <h3>Větrná energie</h3>
-          <p>
-            Větrná výroba je méně korelovaná s denním cyklem, ale nese delší „větrná okna“ i „bezvětří“. Pro SSCC je často
-            výhodná pro vyšší roční využití elektrolyzérů v režimu „polozáklad“ (mixed-mode), protože zvyšuje počet hodin
-            s přebytkem – za cenu vyšších nároků na integraci a infrastrukturu.
-          </p>
+            <h3>Impulzy pro dimenzování SSCC</h3>
+            <ul>
+              <li>kolik hodin v roce existuje přebytek nad lokální spotřebu,</li>
+              <li>jak často nastávají souvislé deficitní bloky (dny bez přebytků),</li>
+              <li>cena omezení (curtailment) vs. cena chemické akumulace,</li>
+              <li>omezení přenosové sítě a lokální regulační požadavky.</li>
+            </ul>
+          </div>
+        </div>
 
-          <h3>Externí dopady a limity (technické i společenské)</h3>
-          <p>
-            U větru i FV (a obecně OZE) je potřeba posuzovat nejen LCOE, ale i systémové náklady: připojení, posílení sítě,
-            regulační služby, akustické/ekologické dopady, konflikty v území a akceptaci. Pro vnitrozemské státy může být
-            kombinace větru, importu a chemické akumulace racionálnější než maximalizace lokální instalace za každou cenu.
-          </p>
+        <p class="mini small-note">
+          Poznámka: Konkrétní číselné parametry (CF, LCOE, limity hluku, atd.) doplníme podle regionu (ČR/EU) a typu projektu,
+          aby to nebyl „generický text pro celý svět“.
+        </p>
+      </section>
 
-          <h3>Impulzy pro dimenzování SSCC</h3>
-          <ul>
-            <li>kolik hodin/rok vznikají přebytky nad lokální spotřebu a jak jsou seskupené,</li>
-            <li>jak často nastávají souvislé deficitní bloky (dny bez přebytků),</li>
-            <li>cena omezení (curtailment) vs. cena chemické akumulace,</li>
-            <li>omezení přenosové soustavy a lokální regulační požadavky.</li>
-          </ul>
-        </section>
+      <!-- GEOTERMIE -->
+      <section id="geo" class="tech-section">
+        <h2>Geotermie a teplotní úrovně</h2>
 
-        <!-- GEOTERMIE -->
-        <section id="geotermie" class="two-col">
-          <h2>Geotermální zdroje a teplotní úrovně</h2>
+        <div class="callout">
+          <p><strong>Klíč:</strong> teplotní úroveň (nízko/středně/vysokoteplotní) rozhoduje o tom, co lze integrovat přímo.</p>
+          <p><strong>Smysl v SSCC:</strong> stabilní tepelný základ pro procesy, zlepšení účinnosti a snížení nároků na elektřinu.</p>
+        </div>
 
-          <div class="key-lines">
-            <p><strong>Role v SSCC:</strong> stabilní „heat backbone“ pro procesy, regenerace a snížení elektrických špiček.</p>
-            <p><strong>Kritické parametry:</strong> teplotní hladina, průtok, mineralizace, reinjekce, sezónní režim.</p>
+        <div class="two-col">
+          <div>
+            <p>
+              Geotermie je pro SSCC atraktivní tím, že poskytuje relativně stabilní zdroj tepla. Nejde jen o „kolik MW_th“,
+              ale jaká je dostupná teplota a jak dobře ji lze spárovat s procesními uzly (předohřevy, reboilery, sušení,
+              nízkoteplotní separace).
+            </p>
+
+            <h3>Nízkoteplotní a středněteplotní režim</h3>
+            <p>
+              Typicky podporuje teplovodní systémy, předohřevy a snížení elektrického příkonu pomocných technologií.
+              V návrhu SSCC je často cennější „spolehlivý baseload tepla“ než další proměnlivá elektřina.
+            </p>
           </div>
 
-          <p>
-            Geotermie je zajímavá tím, že poskytuje relativně stabilní tepelný tok. Neřeší sama o sobě elektrický deficit,
-            ale výrazně zlepšuje účinnost a provozní stabilitu procesních uzlů (zejména tam, kde by se jinak teplo vyrábělo
-            elektřinou). Z praktického hlediska je klíčové, jakou teplotní úroveň lze dlouhodobě a bezpečně získat a jaká
-            je chemie fluidu (koroze, úsady, provozní dostupnost).
-          </p>
+          <div>
+            <h3>Vysokoteplotní režim</h3>
+            <p>
+              Ve vysokých teplotách se otevírá možnost efektivnější procesní integrace a v některých konceptech i vazba na
+              pokročilé cykly/konverze. Prakticky však přibývají požadavky na geologii, vrty, materiály a dlouhodobou stabilitu.
+            </p>
 
-          <h3>Teplotní mapování procesů</h3>
-          <p>
-            SSCC je typicky multi-úrovňový systém: nízkoteplotní okruhy (předehřevy, regenerace), střední úrovně (procesní
-            teplo, sušení, rekuperace) a vysoce-teplotní uzly (dle zvolené technologie). Návrh stojí na „pinch“ logice:
-            nejdříve maximalizovat rekuperaci a teprve potom dimenzovat externí zdroj tepla.
-          </p>
+            <h3>Integrační omezení</h3>
+            <ul>
+              <li>teplotní skluz a návrhové ΔT v výměnících,</li>
+              <li>chemie vody/solanek, koroze a zanášení,</li>
+              <li>dlouhodobé udržení průtoku a teploty (depletion management).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-          <h3>Integrace do sítě tepla</h3>
-          <p>
-            Pokud existuje odběr tepla (město/průmysl), geotermie umožní stabilní základ, zatímco SSCC akumulace pokryje
-            špičky a výpadky. Důležité je oddělit „teplo pro proces“ a „teplo pro distribuci“ (teplotní úrovně, výměníky,
-            bezpečnostní separace).
-          </p>
-        </section>
+      <!-- H2 -->
+      <section id="h2" class="tech-section">
+        <h2>Výroba vodíku a elektrolýza</h2>
 
-        <!-- VODÍK -->
-        <section id="vodik" class="two-col">
-          <h2>Výroba vodíku a elektrolyzéry</h2>
+        <div class="callout">
+          <p><strong>Rozhodnutí:</strong> Alkalická vs. PEM vs. SOEC není „jen účinnost“, ale dynamika, čistota, tlak, CAPEX.</p>
+          <p><strong>Pro SSCC:</strong> důležitý je režim (OZE-following vs. mixed-mode) a dopady na životnost.</p>
+        </div>
 
-          <div class="key-lines">
-            <p><strong>Rozhodnutí:</strong> technologie elektrolyzéru vs. dynamika, účinnost, CAPEX a provozní režim.</p>
-            <p><strong>Režimy:</strong> OZE-following (levná elektřina, nízké využití) vs. mixed-mode (vyšší využití).</p>
+        <div class="two-col">
+          <div>
+            <h3>Režimy provozu</h3>
+            <p><strong>OZE-following:</strong> výkon kopíruje přebytek – výhoda nízká cena vstupu, nevýhoda nižší využití a cyklování.</p>
+            <p><strong>Mixed-mode:</strong> část výkonu stabilně („polozáklad“), část modulárně následuje OZE – lepší využití investice.</p>
+
+            <h3>Co sledovat</h3>
+            <ul>
+              <li>degradace a cyklování (start/stop, rampy),</li>
+              <li>čistota H₂ a kompatibilita s následnou syntézou,</li>
+              <li>tlaková úroveň a komprese (energetická penalizace).</li>
+            </ul>
           </div>
 
-          <p>
-            V SSCC je H₂ primární mezistupeň: buď se využije přímo, nebo se převádí na médium s vyšší hustotou a lepší
-            logistikou (typicky NH₃). Z hlediska návrhu je klíčové sladit instalovaný výkon elektrolyzérů s profilem
-            přebytků a s navazující kapacitou syntézy a zásobníků.
-          </p>
+          <div>
+            <h3>Integrace do SSCC</h3>
+            <p>
+              V SSCC je vodík mezistupeň – klíčové je sladit elektrolýzu s kapacitou chemické akumulace (NH₃/H₂/CO₂ média),
+              s teplotní integrací a s požadavky na bezpečnost (zónování, detekce, ventilace).
+            </p>
 
-          <h3>Dynamika a degradace</h3>
-          <p>
-            Rychlé rampy a časté start/stop zvyšují nároky na řízení a mohou zhoršovat životnost některých uzlů. Proto se v
-            návrhu často hledá kompromis: část výkonu stabilně (základ), část flexibilně (přebytky).
-          </p>
+            <p class="small-note">
+              Pozn.: Pokud chcete „vědeckou“ vrstvu ještě víc, doplníme i blok: Faradayova účinnost, limitující odpory,
+              dynamické modely a vliv provozních teplot na degradaci.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <h3>Bezpečnost a infrastruktura</h3>
-          <p>
-            H₂ vyžaduje disciplínu v detekci úniků, ventilaci a zónování. Zároveň platí, že levná výroba H₂ nestačí – rozhoduje
-            i komprese, sušení/čištění, skladování a návazné procesy.
-          </p>
-        </section>
+      <!-- NH3 -->
+      <section id="nh3" class="tech-section">
+        <h2>Syntéza amoniaku a role NH₃ v SSCC</h2>
 
-        <!-- AMONIAK -->
-        <section id="amoniak" class="two-col">
-          <h2>Syntéza amoniaku a role NH₃ v SSCC</h2>
+        <div class="callout">
+          <p><strong>Role:</strong> NH₃ jako nosič energie (měsíce), logistika, zpětná konverze na výkon/teplo nebo průmyslový vstup.</p>
+          <p><strong>Omezení:</strong> tlak/teplota syntézy, dynamika, čistota, bezpečnost, NOx při využití.</p>
+        </div>
 
-          <div class="key-lines">
-            <p><strong>Proč NH₃:</strong> vyšší hustota energie, snadnější skladování/transport než H₂, dlouhodobá stabilita.</p>
-            <p><strong>Integrace:</strong> teplo a recirkulace jsou často rozhodující pro účinnost a ekonomiku.</p>
+        <div class="two-col">
+          <div>
+            <h3>Proč NH₃</h3>
+            <p>
+              NH₃ je atraktivní díky energetické hustotě a skladovatelnosti. Pro SSCC řeší „týdny až sezóny“, kde baterie ani PVE
+              typicky nestačí. Výhodou je i existující průmyslová infrastruktura; nevýhodou je toxikologie a nároky na bezpečnost.
+            </p>
+
+            <h3>„Zelený“ amoniak – více cest</h3>
+            <p>
+              Kromě klasické syntézy existují směry výzkumu (např. elektrochemické a biologické cesty fixace dusíku). Tyto směry jsou
+              zatím často na nižších TRL, ale dávají smysl jako „roadmapa“, která odlišuje odbornou část webu od běžných claimů.
+            </p>
           </div>
 
-          <p>
-            NH₃ je kandidát pro sezónní akumulaci a pro logistiku energie. Klíčové je, zda SSCC NH₃ „pálí“ zpět na energii,
-            využívá ho jako průmyslový produkt, nebo obojí. Každý scénář mění návrh čištění, skladů, bezpečnosti a přeměny.
-          </p>
+          <div>
+            <h3>Praktická integrační témata</h3>
+            <ul>
+              <li>stabilita syntézy vs. dynamika přítoku H₂,</li>
+              <li>teplotní integrace (rekuperace tepla),</li>
+              <li>bezpečnostní zónování, detekce a havarijní režimy,</li>
+              <li>zpětné využití: štěpení, spalování, palivové články (volba podle účelu).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-          <h3>Výzkumné směry (bez marketingu)</h3>
-          <p>
-            Vedle klasické syntézy existují výzkumné směry pro nízkotlaké/nižší-teplotní cesty, elektrochemickou syntézu
-            či biologické cesty fixace dusíku. Prakticky je potřeba hodnotit TRL, škálování, separace produktu a skutečnou
-            energetickou bilanci v reálném provozu.
-          </p>
-        </section>
+      <!-- CO2 -->
+      <section id="co2" class="tech-section">
+        <h2>Uzavřené CO₂-cykly a uhlíková bilance</h2>
 
-        <!-- CO2 -->
-        <section id="co2" class="two-col">
-          <h2>Uzavřené CO₂ cykly a uhlíková bilance</h2>
-          <p>
-            Pro „carbon-cycle“ koncept je zásadní definovat hranici systému: odkud CO₂ přichází, kde se váže, kde vzniká a
-            jak je měřen. V uzavřených cyklech rozhoduje čistota proudů, energetická náročnost separací a to, zda CO₂ funguje
-            jako pracovní médium, surovina nebo obojí.
-          </p>
+        <div class="callout">
+          <p><strong>Smysl:</strong> CO₂ jako pracovní médium a surovina; cílem je uzavřít uhlíkový tok a snížit čisté emise.</p>
+          <p><strong>Riziko:</strong> bilance musí sedět procesně (průtoky) i systémově (hranice systému, zdroje CO₂).</p>
+        </div>
 
-          <h3>Co musí být transparentní</h3>
-          <ul>
-            <li>materiálová bilance (toky C, H, N, O),</li>
-            <li>energetická bilance separací a kompresí,</li>
-            <li>definice „emise“ vs. „recirkulace“ (aby se nemíchaly pojmy).</li>
-          </ul>
-        </section>
+        <div class="two-col">
+          <div>
+            <p>
+              U „uzavřených cyklů“ je klíčové přesně definovat hranice systému. Jinak vzniká dojem uzavřenosti, ale ve skutečnosti se
+              emise pouze přesunou do upstreamu (elektřina, doprava, chemikálie).
+            </p>
+            <h3>Co musí být na stole</h3>
+            <ul>
+              <li>materiálová bilance: odkud CO₂ přichází, kam jde, kde se ztrácí,</li>
+              <li>energetická bilance: co stojí separace/komprese/ohřev,</li>
+              <li>provozní režimy: steady-state vs. cyklování s OZE.</li>
+            </ul>
+          </div>
 
-        <!-- TEPLO -->
-        <section id="teplo" class="two-col">
-          <h2>Tepelná integrace a zásobníky</h2>
-          <p>
-            Tady typicky „vyhrajete“ nebo „prohrajete“ ekonomiku: rekuperace, výměníky, teplotní mapování a vhodný typ
-            zásobníku (krátkodobý vs. sezónní). Bez dobré tepelné integrace se systém zbytečně elektrifikuje a prodražuje.
-          </p>
-        </section>
+          <div>
+            <h3>Výzkumné směry</h3>
+            <p>
+              Pro „vědeckou“ část webu se hodí uvádět i otevřené otázky: nové katalyzátory, procesní intenzifikace, membrány,
+              pokročilé separace, vyšší integrace tepla a systémové řízení v čase.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <!-- DALŠÍ OBLASTI – zatím kostra (doplníme) -->
-        <section id="bilance">
-          <h2>Energetické bilance a integrační limity</h2>
-          <p>Sem doplníme: bilanční rovnice, typické „bottle-necks“, omezení sítě, regulační služby, curtailment.</p>
-        </section>
+      <!-- HEAT -->
+      <section id="heat" class="tech-section">
+        <h2>Tepelná integrace a zásobníky</h2>
 
-        <section id="dynamika">
-          <h2>Procesní dynamika, stabilita a řízení</h2>
-          <p>Sem doplníme: model predikce, MPC/optimalizace, provozní módy, start/stop strategie.</p>
-        </section>
+        <div class="callout">
+          <p><strong>SSCC není jen elektřina:</strong> teplo často rozhoduje o účinnosti i ekonomice.</p>
+          <p><strong>Cíl:</strong> minimalizovat ztráty, stabilizovat procesní teploty a oddělit časové škály (minuty vs. dny).</p>
+        </div>
 
-        <section id="materialy">
-          <h2>Materiálové limity, degradace, životnost</h2>
-          <p>Sem doplníme: korozní režimy, katalyzátory, cyklické namáhání, servisní intervaly.</p>
-        </section>
+        <div class="two-col">
+          <div>
+            <h3>Integrace</h3>
+            <p>
+              Bez tepelné integrace se SSCC snadno „rozpadne“ na drahé ostrovy technologií. V návrhu proto typicky potřebujete mapu
+              teplotních úrovní a výměníkovou síť, která dává smysl v různých režimech provozu.
+            </p>
+          </div>
+          <div>
+            <h3>Zásobníky</h3>
+            <p>
+              Tepelné zásobníky (krátko- i střednědobé) pomáhají vyhladit provoz a zvýšit využití klíčových uzlů, aniž by se vše
+              muselo „lámat“ přes elektřinu.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="ekonomika">
-          <h2>Ekonomika CAPEX/OPEX a citlivosti</h2>
-          <p>Sem doplníme: citlivost na cenu elektřiny, využití zařízení, cena NH₃/H₂, cena tepla, diskont.</p>
-        </section>
+      <!-- DALŠÍ ODBORNÉ -->
+      <section id="limits" class="tech-section">
+        <h2>Integrační limity a energetická bilance</h2>
+        <div class="two-col">
+          <div>
+            <p>
+              Tady doporučuji dát místo „marketingových“ frází konkrétní rozhodovací strom: co je limitující (síť / teplo / katalýza /
+              bezpečnost / finance) a jak se to projeví ve velikosti uzlů.
+            </p>
+          </div>
+          <div>
+            <p class="small-note">
+              Pokud chcete, doplním i šablonu tabulky: vstupy, výstupy, účinnosti, ztráty, časové škály, typická rizika.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section id="roadmapa" class="two-col">
-          <h2>Roadmapa výzkumu a budoucí technologie</h2>
-          <p>
-            Tato část je vhodná pro „vědce a výrobce“: co je reálně blízko (integrace, účinnosti, materiály) a co je
-            spekulativní (orbital solar power, off-planet zdroje). Klíč bude držet to jasně oddělené: TRL a časový horizont.
-          </p>
+      <section id="control" class="tech-section">
+        <h2>Procesní dynamika a řízení</h2>
+        <p>
+          Pro odborníky je atraktivní ukázat, že SSCC řeší „multi-timescale“ řízení: predikce OZE, plánování zásob, omezení ramp,
+          bezpečnostní interlocky a optimalizaci cílové funkce (cena, emise, disponibilita).
+        </p>
+      </section>
 
-          <h3>Kontroverze a „nepohodlné“ věci</h3>
-          <p>
-            Patří sem i dopady větru (hluk, krajina, ekologie) a otázka, co dává smysl pro vnitrozemí. Technická stránka má
-            být schopná tyto argumenty pojmenovat bez ideologie a bez marketingu.
-          </p>
-        </section>
+      <section id="materials" class="tech-section">
+        <h2>Materiály, degradace a životnost</h2>
+        <p>
+          Zde dává smysl mluvit o realitě: koroze, zanášení, katalyzátory, cyklování, provozní okna, údržba a dostupnost náhradních dílů.
+        </p>
+      </section>
 
-      </main>
-    </div>
-  </section>
+      <section id="economics" class="tech-section">
+        <h2>Ekonomika (CAPEX/OPEX)</h2>
+        <p>
+          U odborné části je důležité ukázat, že ekonomika není „jedno číslo“: je to citlivost na využití, cenu elektřiny, cenu
+          omezení výroby, náklady na bezpečnost a integraci tepla.
+        </p>
+      </section>
 
-  <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
+      <section id="roadmap" class="tech-section">
+        <h2>Roadmapa výzkumu a otevřené směry</h2>
+        <p>
+          Sem patří právě věci, které jste zmiňoval: nové cesty k NH₃ (biologické/elektrochemické), nové katalyzátory, vyšší teploty,
+          „power-to-X“ řetězce, a i vzdálenější koncepty (orbital solar, dlouhodobě – mimo krátký investiční horizont).
+        </p>
+        <a class="back-to-top" href="#top">Nahoru</a>
+      </section>
+
+      <p class="mini small-note">
+        Tento obsah je záměrně psaný jako „technický rámec“. Pokud chcete, doplním u každé kapitoly konkrétní „otázky pro projekt“:
+        jaké vstupy potřebujeme, co měříme, jaké jsou rozhodovací hranice.
+      </p>
+
+    </main>
+  </div>
+</section>
+
+<script>
+  // jemné posunutí scrollu kvůli sticky headeru (pokud header překrývá nadpisy)
+  // nastavte hodnotu podle reálné výšky hlavičky
+  const HEADER_OFFSET = 110;
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id === '#') return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      const y = el.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+      history.pushState(null, '', id);
+    });
+  });
+</script>
 
 </body>
 </html>
