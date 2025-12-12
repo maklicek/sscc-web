@@ -64,6 +64,17 @@
             flex: 1;
             min-width: 0;
         }
+@media (min-width: 1200px) {
+    .expert-text {
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    /* volitelné – podnadpisy začínají v novém sloupci */
+    .expert-text h3 {
+        break-before: column;
+    }
+}
 
 
         /* Mobil: TOC nad textem */
