@@ -64,17 +64,6 @@
             flex: 1;
             min-width: 0;
         }
-@media (min-width: 1200px) {
-    .expert-text {
-        column-count: 2;
-        column-gap: 40px;
-    }
-
-    /* volitelné – podnadpisy začínají v novém sloupci */
-    .expert-text h3 {
-        break-before: column;
-    }
-}
 
 
         /* Mobil: TOC nad textem */
@@ -175,32 +164,67 @@
         <div class="main-content">
 
             <!-- 1) OZE -->
-     <section class="section section-compact" id="oze">
+<section class="section section-compact" id="oze">
     <div class="container">
         <h2>Obnovitelné zdroje a profil výroby</h2>
 
-        <div class="expert-text">
-            <p>SSCC je navrženo pro prostředí s vysokým podílem proměnlivé výroby z OZE…</p>
+        <p>
+            SSCC je navrženo pro prostředí s vysokým podílem proměnlivé výroby z OZE.
+            Základní vstupní veličinou nejsou jen instalované výkony, ale časové profily výroby
+            a jejich korelace. Z praktického hlediska rozlišujeme tři dominantní zdroje:
+            fotovoltaiku, větrnou energii a vodní zdroje (včetně PVE).
+        </p>
 
-            <h3>Fotovoltaika</h3>
-            <p>Typický kapacitní faktor…</p>
-            <ul>…</ul>
+        <h3>Fotovoltaika</h3>
+        <p>
+            Typický kapacitní faktor pozemních FVE ve střední Evropě se pohybuje v rozmezí
+            <strong>10–13&nbsp;%</strong>. Výroba je silně koncentrovaná do 5–6 hodin okolo solárního poledne,
+            s výrazným sezónním rozdílem (letní maximum vs. zimní minimum v poměru 3–4 : 1).
+            V soustavě SSCC se fotovoltaika používá primárně pro:
+        </p>
+        <ul>
+            <li>napájení elektrolýzy a nízkoteplotních procesů v době přebytku,</li>
+            <li>přímou dodávku do sítě v době vysoké poptávky, pokud není kapacita akumulace zaplněna,</li>
+            <li>krátkodobé korekce výpadků jiných zdrojů v lokálním měřítku.</li>
+        </ul>
 
-            <h3>Větrná energie</h3>
-            <p>…</p>
-            <ul>…</ul>
+        <h3>Větrná energie</h3>
+        <p>
+            Větrné zdroje mají ve střední Evropě typický kapacitní faktor <strong>25–40&nbsp;%</strong>
+            podle typu turbíny a lokality. Z pohledu SSCC jsou klíčové dvě vlastnosti:
+        </p>
+        <ul>
+            <li>lepší sezónní vyrovnanost ve srovnání s FVE,</li>
+            <li>výrazně delší doby souvislé výroby (hodiny až desítky hodin).</li>
+        </ul>
+        <p>
+            Větrné zdroje se v systému SSCC uplatňují jako základní „práce“ pro elektrolýzu
+            a pro napájení stabilních tepelných procesů.
+        </p>
 
-            <h3>Vodní zdroje a PVE</h3>
-            <p>…</p>
-            <ul>…</ul>
+        <h3>Vodní zdroje a PVE</h3>
+        <p>
+            Vodní elektrárny a přečerpávací elektrárny (PVE) představují v SSCC jednak lokální
+            zdroj špičkového výkonu, jednak doplněk dlouhodobé chemické akumulace. PVE se
+            používají přednostně pro:
+        </p>
+        <ul>
+            <li>vykrývání rychlých změn zatížení,</li>
+            <li>stabilizaci sítě v případě výpadků či náhlého nárůstu poptávky,</li>
+            <li>pokrytí krátkodobých deficitů výroby z OZE v řádu hodin.</li>
+        </ul>
 
-            <h3>Impulzy pro dimenzování SSCC</h3>
-            <p>…</p>
-            <ul>…</ul>
-        </div>
+        <h3>Impulzy pro dimenzování SSCC</h3>
+        <p>
+            Z hlediska návrhu SSCC je klíčové sladit instalovaný výkon obnovitelných zdrojů
+            s kapacitou chemické akumulace (NH<sub>3</sub>, H<sub>2</sub> a zásobníky tepla)
+            a s kapacitou navazujících syntetických procesů. Typické poměry výkonu OZE
+            k výkonu chemických konverzí se pohybují v intervalu <strong>1,2–2,5 : 1</strong>,
+            podle požadované míry soběstačnosti a délky období bez OZE.
+        </p>
     </div>
 </section>
-<section class="section section-compact" id="oze">
+
     <div class="container">
         <h2>Obnovitelné zdroje a profil výroby</h2>
 
@@ -228,31 +252,8 @@
 
 
             <!-- 2) GEOTERMIE -->
-          <section class="section section-compact" id="oze">
-    <div class="container">
-        <h2>Obnovitelné zdroje a profil výroby</h2>
-
-        <div class="expert-text">
-            <p>SSCC je navrženo pro prostředí s vysokým podílem proměnlivé výroby z OZE…</p>
-
-            <h3>Fotovoltaika</h3>
-            <p>Typický kapacitní faktor…</p>
-            <ul>…</ul>
-
-            <h3>Větrná energie</h3>
-            <p>…</p>
-            <ul>…</ul>
-
-            <h3>Vodní zdroje a PVE</h3>
-            <p>…</p>
-            <ul>…</ul>
-
-            <h3>Impulzy pro dimenzování SSCC</h3>
-            <p>…</p>
-            <ul>…</ul>
-        </div>
-    </div>
-</section>
+      
+  
 
             <!-- 3) H2 -->
             <section class="section section-compact" id="h2">
