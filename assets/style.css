@@ -942,3 +942,89 @@ main{ padding-top: 24px; }
   transition: transform .15s ease, opacity .15s ease;
 }
 .back-to-top:hover{ transform: translateY(-2px); }
+/* =========================
+   ODBORNÁ STRÁNKA – STABILNÍ LAYOUT (HOTFIX)
+   vložte NA KONEC style.css
+========================= */
+
+body.page-odborne .container{
+  max-width: 1320px;
+}
+
+/* Levý TOC + pravý obsah */
+body.page-odborne .page-layout{
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+/* Zásadní proti „úzkému sloupci“ */
+body.page-odborne .main-content{
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+}
+
+/* TOC */
+body.page-odborne .toc{
+  position: sticky;
+  top: 110px; /* dle reálné výšky headeru */
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+}
+
+/* Dva široké sloupce uvnitř kapitoly */
+body.page-odborne .two-col{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* Responsivita */
+@media (max-width: 1020px){
+  body.page-odborne .page-layout{ grid-template-columns: 1fr; }
+  body.page-odborne .toc{ position: relative; top: 0; max-height: none; }
+  body.page-odborne .two-col{ grid-template-columns: 1fr; }
+}
+
+/* ===== Mezery: nadpis nemá být „nalepený“ nahoře ===== */
+body.page-odborne .tech-section{
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(15,23,42,0.08);
+}
+
+body.page-odborne .tech-section h2{
+  margin: 0 0 12px;         /* žádná mezera nad h2 uvnitř sekce */
+}
+
+body.page-odborne .tech-section h3{
+  margin: 18px 0 8px;
+}
+
+body.page-odborne .tech-section p{
+  margin: 0 0 14px;
+}
+
+/* Callout: trochu níž od nadpisu */
+body.page-odborne .callout{
+  margin: 14px 0 18px;
+}
+
+/* „Nahoru“ – sjednotit, ať se nepřebíjí s linkem v TOC */
+body.page-odborne a.back-to-top{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  background: rgba(15,23,42,0.88);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
