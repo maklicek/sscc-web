@@ -834,3 +834,74 @@ header.site-header{
   line-height: 1.35;
   opacity: 0.9;
 }
+/* === TYPO & SPACING RESET (globálně) === */
+:root{
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 36px;
+  --space-6: 48px;
+}
+
+/* Odstavce – menší a konzistentní mezery */
+p{ margin: 0 0 var(--space-3); }
+p:last-child{ margin-bottom: 0; }
+
+/* Nadpisy – víc nahoře, míň dole (aby nebyly „nalepené“ na text nad nimi) */
+h1,h2,h3,h4{
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-2);
+  line-height: 1.15;
+}
+h1:first-child, h2:first-child{ margin-top: 0; }
+
+/* Sekce – zmenšit „obří“ paddingy */
+.section{ padding: 56px 24px; }          /* dřív bývá 80+ */
+.section.section-compact{ padding: 32px 24px; }
+
+/* Pokud máš někde extra velké mezery pod hlavičkou */
+main{ padding-top: 24px; }
+/* === ODBORNE: LAYOUT === */
+.page-odborne .page-layout{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+/* Levý TOC panel */
+.page-odborne .toc{
+  position: sticky;
+  top: 110px;                 /* uprav podle výšky hlavičky */
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  background: rgba(255,255,255,0.55);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+/* Pravý obsah – ať se nikdy „nezlomí“ do úzkého sloupce */
+.page-odborne .main-content{
+  min-width: 0;
+}
+
+/* Vlastní kapitoly: dvě textové kolony uvnitř kapitoly */
+.page-odborne .topic{
+  padding-top: 6px;
+}
+.page-odborne .topic-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 44px;
+  align-items: start;
+}
+@media (max-width: 1100px){
+  .page-odborne .page-layout{ grid-template-columns: 1fr; }
+  .page-odborne .toc{ position: relative; top: 0; max-height: none; }
+  .page-odborne .topic-grid{ grid-template-columns: 1fr; }
+}
