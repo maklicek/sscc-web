@@ -1,6 +1,19 @@
 /* ============================================
    ZÁKLADNÍ NASTAVENÍ A PROMĚNNÉ
 ============================================ */
+.toc-back {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1E293B;
+    opacity: 0.75;
+}
+
+.toc-back:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
 
 :root {
     /* pozadí stránky a hlavičky */
@@ -127,6 +140,11 @@ h2, h3 {
 
 .page-header p {
     max-width: 820px;
+}
+/* menší „spodní“ odstavec v úvodu odborné stránky */
+.page-header .intro-note {
+    font-size: 0.8em;      /* cca 80 % základního textu – poznámkový charakter */
+    max-width: 760px;
 }
 
 /* HLAVIČKA */
