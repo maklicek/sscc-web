@@ -905,3 +905,40 @@ main{ padding-top: 24px; }
   .page-odborne .toc{ position: relative; top: 0; max-height: none; }
   .page-odborne .topic-grid{ grid-template-columns: 1fr; }
 }
+/* === PRO/CON BOX === */
+.procon{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 18px 0 0;
+}
+.procon .card{
+  background: rgba(255,255,255,0.6);
+  border-radius: 16px;
+  padding: 14px 14px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+.procon .card h4{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.procon ul{ margin: 0; padding-left: 18px; }
+.procon li{ margin: 6px 0; }
+@media (max-width: 900px){
+  .procon{ grid-template-columns: 1fr; }
+}
+.back-to-top{
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.back-to-top:hover{ transform: translateY(-2px); }
