@@ -12,10 +12,13 @@
 
 <header class="site-header">
   <div class="header-left">
-    <img src="assets/img/logo-sscc.png" alt="SolarSpace Carbon Cycle – SSCC" class="site-logo">
-    <div class="site-motto">
-      <div class="site-title">SolarSpace Carbon Cycle – SSCC</div>
-      <div class="site-tagline">Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.</div>
+    <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+
+    <div class="brand-block">
+      <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
+      <div class="site-motto">
+        Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
+      </div>
     </div>
   </div>
 
@@ -28,6 +31,7 @@
     <a href="odborne.html" class="active">Pro odborníky</a>
   </nav>
 </header>
+
 
 <section class="section section-compact">
   <div class="container">
@@ -365,37 +369,67 @@
         </div>
       </section>
 
-      <section id="control" class="tech-section">
-        <h2>Procesní dynamika a řízení</h2>
-        <p>
-         Procesní dynamika a řízení v systému SSCC
+    <section id="control" class="tech-section">
+  <h2>Procesní dynamika a řízení</h2>
 
-Energetické systémy byly po většinu své historie navrhovány jako stacionární. Výroba, přenos i spotřeba energie probíhaly v relativně pomalých a předvídatelných režimech, kde byl výkon řízen primárně dostupností zdroje a dlouhodobým plánováním. Řízení mělo korekční charakter – vyrovnávalo odchylky, nikoli samotnou podstatu systému.
+  <div class="callout">
+    <p><strong>Pointa:</strong> v SSCC není řízení „nadstavba“, ale součást fyzikální struktury systému.</p>
+    <p><strong>Problém:</strong> SSCC spojuje procesy s různými časovými konstantami (sekundy → sezóny).</p>
+    <p><strong>Cíl řízení:</strong> udržet provozní integritu (rezervy, degradovaný režim, prevence destruktivního cyklování).</p>
+  </div>
 
-Nástup obnovitelných zdrojů tuto představu zásadně narušil. Energetika se z podstaty statického problému změnila na problém dynamický, charakterizovaný rychlými změnami výkonu, nejistotou vstupů a silnou závislostí na časovém průběhu výroby. V tomto prostředí již nestačí dimenzovat systém podle jmenovitých výkonů; rozhodující se stává časová struktura energie.
+  <h3>Od stacionární energetiky k dynamickému systému</h3>
+  <p>
+    Energetické systémy byly dlouho navrhovány jako stacionární: výroba, přenos i spotřeba probíhaly v relativně pomalých
+    a předvídatelných režimech. Řízení mělo převážně korekční charakter – vyrovnávalo odchylky, nikoli samotnou podstatu systému.
+  </p>
+  <p>
+    Nástup obnovitelných zdrojů tuto představu narušil. Energetika se stala dynamickým problémem:
+    rychlé změny výkonu, nejistota vstupů a vysoká citlivost na časový průběh výroby.
+    V tomto prostředí už nestačí dimenzovat systém podle jmenovitých výkonů – rozhodující je časová struktura energie.
+  </p>
 
-SSCC (Smart Synthetic Carbon Cycle) vzniká právě v tomto bodě zlomu. Neřeší pouze přeměnu energie mezi formami, ale především sladění procesů s radikálně odlišnými časovými konstantami:
+  <h3>Konflikt časových škál v SSCC</h3>
+  <p>
+    SSCC neřeší jen převody energie mezi formami, ale sladění procesů s odlišnými časovými konstantami:
+  </p>
+  <ul>
+    <li><strong>elektrické toky</strong> – reakce v řádu sekund až minut,</li>
+    <li><strong>elektrochemické a syntetické procesy</strong> – řád hodin,</li>
+    <li><strong>zásoby chemických médií a tepla</strong> – řád dnů až sezón.</li>
+  </ul>
+  <p>
+    Bez aktivního řízení vzniká strukturální konflikt: rychlé fluktuace elektrické části se přenášejí do pomalých procesů,
+    které na ně nejsou fyzikálně ani materiálově připraveny. Důsledkem není jen ztráta účinnosti, ale degradace,
+    nestabilita a v krajním případě kolaps provozu.
+  </p>
 
-elektrické toky reagují v řádu sekund až minut,
+  <h3>Řízení jako integrální část systému</h3>
+  <p>
+    Řízení v SSCC není volitelná nadstavba ani „optimalizační modul“. Je to mechanismus, který vytváří smysluplnou vazbu mezi:
+    výrobou elektřiny, chemickou konverzí, akumulací a zpětnou dodávkou energie. Bez této vazby systém není funkční celek,
+    ale soubor oddělených technologií.
+  </p>
 
-elektrochemické a syntetické procesy v řádu hodin,
+  <h3>Primární cíl: integrita v čase</h3>
+  <p>
+    Základním cílem řízení není maximalizace účinnosti ani minimalizace nákladů. Primární je udržení provozní integrity:
+    oddělení časových škál, omezení destruktivních režimů a vytvoření stabilního rámce, ve kterém má optimalizace vůbec smysl.
+  </p>
 
-zásoby chemických médií a tepla v řádu dnů až sezón.
+  <h3>Co dává smysl doplnit v další vrstvě</h3>
+  <ul>
+    <li>hierarchické řízení (rychlé ochrany vs. plánování zásob),</li>
+    <li>prediktivní řízení (MPC) pro energii i média,</li>
+    <li>omezení ramp, start/stop a „health-aware“ strategie (životnost),</li>
+    <li>cilové funkce: cena, emise, disponibilita, bezpečnostní marže.</li>
+  </ul>
 
-Tyto procesy spolu nejsou přirozeně kompatibilní. Bez aktivního řízení vzniká strukturální konflikt: rychlé fluktuace elektrické části se přenášejí do pomalých chemických procesů, které na ně nejsou fyzikálně ani materiálově připraveny. Výsledkem není pouze ztráta účinnosti, ale nestabilita, degradace a v krajním případě kolaps provozu.
-
-Z tohoto pohledu není řízení v SSCC volitelnou nadstavbou ani optimalizačním nástrojem. Řízení je integrální součástí fyzikální struktury systému. Teprve prostřednictvím řízení vzniká smysluplná vazba mezi výrobou elektřiny, chemickou konverzí, akumulací a zpětnou dodávkou energie. Bez této vazby nelze systém považovat za funkční celek, ale pouze za soubor oddělených technologií.
-
-Cílem řízení SSCC proto není primárně maximalizace účinnosti nebo minimalizace nákladů. Základním cílem je udržení provozní integrity systému v čase:
-oddělení časových škál, omezení destruktivních provozních režimů a vytvoření stabilního rámce, ve kterém má optimalizace vůbec smysl.
-
-Teprve na tomto základě lze uvažovat o pokročilých řídicích strategiích – hierarchickém řízení, prediktivních modelech, optimalizaci toků energie a hmoty či ekonomických cílových funkcích. Tyto nástroje nejsou příčinou funkčnosti SSCC, ale jejím důsledkem.
-
-Poznámka k charakteru kapitoly
-
-Tato kapitola se záměrně nezabývá konkrétní implementací řídicích algoritmů. Jejím cílem je vymezit fyzikální a systémový rámec, ve kterém dává řízení smysl, a ukázat, že bez něj SSCC nemůže existovat jako stabilní energetická infrastruktura.
-        </p>
-      </section>
+  <p class="small-note">
+    Tato kapitola záměrně nepopisuje konkrétní algoritmy. Vymezuje rámec, proč je řízení podmínkou stability SSCC
+    a proč bez něj nelze systém považovat za infrastrukturu.
+  </p>
+</section>
 
       <section id="materials" class="tech-section">
         <h2>Materiály, degradace a životnost</h2>
