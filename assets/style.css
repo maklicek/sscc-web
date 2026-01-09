@@ -1,1052 +1,31 @@
-/* ============================================
-   ZÁKLADNÍ NASTAVENÍ A PROMĚNNÉ
-============================================ */
-.toc-back {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 13px;
-    text-decoration: none;
-    color: #1E293B;
-    opacity: 0.75;
-}
+/* =========================================================
+   SSCC – style.css (konsolidovaná verze)
+   Struktura:
+   1) BASE (variables + reset + typography + layout)
+   2) COMPONENTS (header/nav/hero/cards/grids/cta/buttons)
+   3) PAGES (page-scoped pravidla)
+   4) PATCH / OVERRIDES (držet na konci)
+========================================================= */
+
+/* =========================================================
+   1) BASE
+========================================================= */
 
-.toc-back:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-
-:root {
-    /* pozadí stránky a hlavičky */
-    --page-bg:   #E8F5EF;
-    --header-bg: #C9E3D6;
-
-    /* tmavé texty */
-    --dark-900:  #0F172A;
-    --text-dark: #1E293B;
-    --text-muted:#475569;
-
-    /* layout & efekty */
-    --radius-lg: 18px;
-    --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
-
-    --container-width: 1200px;
-}
-
-/* ============================================
-   RESET
-============================================ */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    min-height: 100%;
-}
-
-body {
-    font-family: 'Inter', system-ui, sans-serif;
-    background: var(--page-bg);
-    color: var(--text-dark);
-    line-height: 1.65;
-}
-
-/* ============================================
-   TYPOGRAFIE
-============================================ */
-
-h1, h2, h3 {
-    font-weight: 700;
-    line-height: 1.25;
-    color: var(--dark-900);
-}
-
-/* hlavní nadpis stránky */
-h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 32px;
-}
-
-/* nadpis sekcí */
-h2 {
-    font-size: 38px;
-    margin-bottom: 16px;   /* místo 20 px */
-    margin-top: 32px;      /* místo 42 px */
-}
-
-h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-top: 18px;      /* jen malý odstup nad podnadpisy */
-}
-
-/* pokud máš globálně .section: */
-.section {
-    padding: 80px 24px;    /* místo 100px 24px – stránka bude kompaktnější */
-}
-
-
-/* odstavce */
-p {
-    font-size: 18px;
-    line-height: 1.68;
-  p {
-    color: var(--text-muted);
-    margin-bottom: 12px;   /* menší mezera mezi odstavci */
-    font-size: 16px;       /* o chlup menší text, čitelnější v delších blocích */
-}
-
-    margin-bottom: 18px;
-}
-
-/* úvodní text sekcí */
-.section-lead {
-    font-size: 19px;
-    color: var(--text-dark);
-    margin-bottom: 32px;
-    max-width: 820px;
-}
-
-/* aby se nadpisy neztratily pod sticky hlavičkou při skrolu na kotvy */
-h2, h3 {
-    scroll-margin-top: 120px;
-}
-
-/* ============================================
-   LAYOUT SEKCÍ
-============================================ */
-
-.section {
-    padding: 60px 24px;
-}
-
-
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-}
-
-/* úvodní sekce podstránek („page header“) */
-.page-header {
-    padding: 110px 24px 50px;
-}
-.page-header h1 {
-    font-size: 42px;
-    margin-bottom: 28px;
-}
-
-.page-header p {
-    max-width: 820px;
-}
-/* menší „spodní“ odstavec v úvodu odborné stránky */
-.page-header .intro-note {
-    font-size: 0.8em;      /* cca 80 % základního textu – poznámkový charakter */
-    max-width: 760px;
-}
-
-/* HLAVIČKA */
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 14px 40px;
-    background: #d6e9df; /* mírně tmavší než pozadí webu, ale jemné */
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Logo + značka */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.site-logo {
-    height: 74px;
-    width: auto;
-}
-
-.brand-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.brand-name {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 3px;
-    color: #002b22;
-}
-
-.site-motto {
-    font-size: 18px;
-    color: #2f4f44;
-    opacity: 1,2;
-}
-
-/* Navigace */
-.main-nav {
-    display: flex;
-    gap: 32px;
-}
-
-.main-nav a {
-    font-size: 16px;
-    text-decoration: none;
-    color: #003025;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    transition: 0.25s ease;
-}
-
-.main-nav a:hover {
-    border-bottom: 2px solid #003025;
-    opacity: 0.75;
-}
-
-.main-nav a.active {
-    border-bottom: 2px solid #003025;
-    font-weight: 600;
-}
-
-/* NAVIGACE */
-.main-nav {
-    display: flex;
-    gap: 32px;
-    font-size: 17px;
-}
-
-.main-nav a {
-    color: #1E293B;
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    font-weight: 500;
-    transition: 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom-color: #1E293B;
-}
-
-/* RESPONSIVE – hlavička */
-@media (max-width: 900px) {
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .header-left {
-        align-items: center;
-    }
-
-    .main-nav {
-        flex-wrap: wrap;
-        gap: 18px;
-        font-size: 16px;
-    }
-}
-.main-nav a:hover,
-.main-nav a.active {
-    border-bottom-color: #1E293B;
-    color: #0F172A;
-}
-
-/* ============================================
-   HERO – ÚVODNÍ OBRÁZEK (jen na indexu)
-============================================ */
-
-.hero {
-    width: 100%;
-    min-height: 50vh;                /* cca polovina výšky okna */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
-    display: flex;
-    align-items: center;             /* vertikální střed */
-    justify-content: center;         /* horizontální střed */
-    text-align: center;
-    padding: 48px 40px;
-}
-
-/* tmavší overlay kvůli čitelnosti textu */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(15, 23, 42, 0.60),
-        rgba(15, 23, 42, 0.35)
-    );
-}
-
-.hero-inner {
-    position: relative;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    width: 100%;
-    color: #F9FAFB;
-}
-
-.hero-title {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: #F9FAFB;
-}
-
-.hero-subtitle {
-    font-size: 18px;
-    max-width: 720px;
-    margin: 0 auto;
-    color: #E5E7EB;
-}
-
-/* HERO – mobil */
-@media (max-width: 768px) {
-    .hero {
-        padding: 32px 20px;
-        min-height: 55vh;
-    }
-
-    .hero-title {
-        font-size: 26px;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-}
-
-/* ============================================
-   GRIDY A KARTY
-============================================ */
-
-/* BENEFITY – 4 boxy */
-.benefits-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-/* JAK SSCC FUNGUJE – 3 kroky */
-.how-grid {
-    display: grid;
-    margin-top: 40px;
-    gap: 32px;
-    grid-template-columns: repeat(3, 1fr);
-}
-/* TECHNOLOGIE – mřížka modulů */
-.tech-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-/* APLIKACE – mřížka scénářů použití */
-.app-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.app-card {
-    background: #fff;
-    padding: 26px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-
-.tech-card {
-    background: #fff;
-    padding: 26px;
-    border-radius: var(--radius-lg); 
-    box-shadow: var(--shadow-lg);
-}
-.benefit-box,
-.how-item {
-    background: #fff;
-    padding: 26px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* společný hover pro všechny typy karet */
-.benefit-box:hover,
-.how-item:hover,
-.tech-card:hover,
-.app-card:hover,
-.data-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
-}
-
-.benefit-box {
-    transition: 0.2s;
-}
-
-.benefit-box:hover {
-    transform: translateY(-4px);
-}
-
-/* RESPONSIVE GRIDY */
-@media (max-width: 1100px) {
-    .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .how-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .app-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .data-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 800px) {
-    .benefits-grid,
-    .how-grid,
-    .tech-grid,
-    .app-grid,
-    .data-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* ============================================
-   CTA SEKCE + TLAČÍTKA
-============================================ */
-
-/* CTA sekce – světlejší, nižší */
-.cta-section {
-    padding: 70px 24px 60px;       /* původně 120px 24px */
-    text-align: center;
-    background: #D3E7E0;           /* světle zelenkavá, navazuje na stránku */
-    color: var(--dark-900);
-}
-
-.cta-section h2 {
-    color: var(--dark-900);
-}
-
-.cta-section p {
-    color: var(--text-muted);      /* sjednocení s textem na stránce */
-    max-width: 760px;
-    margin: 14px auto 30px;        /* menší mezery */
-}
-
-/* hlavní tlačítko */
-.btn-primary {
-    display: inline-block;
-    background: #0F172A;
-    color: #fff;
-    padding: 14px 30px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.2s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
-}
-.btn-primary:hover {
-    background: #111827; /* o chloupek tmavší než základ */
-    transform: translateY(-1px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
-}
-
-/* DATA & AI – mřížka karet */
-.data-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.data-card {
-    background: #fff;
-    padding: 26px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-}
-/* =========================
-   GLOBAL – jemnější mezery (všechny stránky)
-========================= */
-h1 { margin-bottom: 18px; }
-h2 { margin: 32px 0 14px; }
-h3 { margin: 20px 0 10px; }
-p  { margin-bottom: 14px; line-height: 1.7; }
-
-/* sekce obecně – o něco kompaktnější */
-.section { padding: 72px 24px; }
-.section.section-compact { padding: 40px 24px; }
-
-/* =========================
-   ODBORNÁ STRÁNKA – layout
-========================= */
-body.expert-page .container {
-  max-width: 1400px;            /* odborná stránka může být širší */
-}
-
-/* dvousloupcový layout: levý TOC + obsah */
-.expert-layout {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 48px;
-  align-items: start;
-}
-
-/* levý panel */
-.expert-toc {
-  position: sticky;
-  top: 110px;                   /* dle výšky hlavičky */
-  align-self: start;
-  padding: 18px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.55);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
-}
-
-.expert-toc h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.expert-toc details {
-  margin-top: 10px;
-}
-
-.expert-toc summary {
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--dark-900);
-  list-style: none;
-}
-
-.expert-toc summary::-webkit-details-marker { display:none; }
-
-.expert-toc ul {
-  margin: 10px 0 0;
-  padding-left: 16px;
-}
-
-.expert-toc li { margin: 8px 0; }
-
-.expert-toc a {
-  color: #1e293b;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.expert-toc a:hover {
-  border-bottom-color: #1e293b;
-}
-
-.expert-toc .toc-note {
-  margin-top: 14px;
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-/* hlavní obsah – klíčové: nic ho nesmí „zužovat“ */
-.expert-content {
-  width: 100%;
-  max-width: none;              /* tohle řeší úzký sloupec */
-  min-width: 0;
-}
-
-/* kotvy: aby se po kliknutí netrefil nadpis pod sticky hlavičku */
-.expert-content section[id] {
-  scroll-margin-top: 120px;
-}
-
-/* technický „lead“ nahoře – menší mezera pod hlavičkou */
-.expert-hero {
-  padding-top: 36px;
-  padding-bottom: 10px;
-}
-
-/* dvousloupcové čtení: použij jen na dlouhé bloky */
-.two-col {
-  column-count: 2;
-  column-gap: 56px;
-}
-
-.two-col > * {
-  break-inside: avoid;
-}
-
-/* Nadpisy přes oba sloupce (lepší orientace) */
-.two-col h2,
-.two-col h3 {
-  column-span: all;
-}
-
-/* malý „callout“ řádků typu Klíčový problém / Co je důležité… */
-.key-lines {
-  margin: 10px 0 14px;
-  padding: 12px 14px;
-  background: rgba(255,255,255,0.6);
-  border-left: 4px solid rgba(15,23,42,0.35);
-  border-radius: 12px;
-}
-
-.key-lines p {
-  margin: 6px 0;
-  font-size: 15px;
-}
-
-/* tlačítko nahoru */
-.to-top {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 999;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: rgba(15,23,42,0.9);
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
-  opacity: 0.95;
-}
-
-.to-top:hover { opacity: 1; }
-
-/* responsivita */
-@media (max-width: 1100px) {
-  .expert-layout { grid-template-columns: 1fr; }
-  .expert-toc { position: relative; top: auto; }
-  .two-col { column-count: 1; }
-}
-/* ==========================
-   GLOBAL – sjednocení mezer
-   ========================== */
 :root{
-  --page-bg: #E7F4EE;
-  --header-bg: #CFE8DC;           /* o chlup tmavší než stránka */
-  --text-dark: #0f172a;
-  --text-muted: rgba(15, 23, 42, 0.72);
-  --card-bg: rgba(255,255,255,0.78);
-  --card-border: rgba(15, 23, 42, 0.12);
-  --shadow: 0 10px 26px rgba(0,0,0,0.08);
-  --radius: 18px;
-
-  --space-1: 10px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 36px;
-  --space-5: 52px;
-}
-
-body{
-  background: var(--page-bg);
-  color: var(--text-dark);
-}
-
-p{ margin: 0 0 var(--space-2); }
-h1,h2,h3{ margin: 0 0 var(--space-2); }
-.section{ padding: var(--space-4) 24px; }            /* dříve bývá 60–80px */
-.section.section-compact{ padding: var(--space-3) 24px; }
-
-.container{
-  width: min(1240px, calc(100% - 48px));
-  margin: 0 auto;
-}
-
-/* ==========================
-   HEADER – sjednocení barvy + jemnější shadow
-   ========================== */
-header.site-header{
-  background: var(--header-bg);
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
-
-/* ==========================
-   ODBORNÍCI – layout
-   ========================== */
-.page-layout{
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr); /* minmax(0,1fr) = zásadní proti přetékání */
-  gap: 34px;
-  align-items: start;
-}
-
-@media (max-width: 1020px){
-  .page-layout{ grid-template-columns: 1fr; }
-  .toc{
-    position: relative;
-    top: 0;
-  }
-}
-
-.toc{
-  position: sticky;
-  top: 18px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 18px 18px;
-}
-
-.toc h3{
-  font-size: 16px;
-  margin-bottom: 10px;
-  letter-spacing: 0.2px;
-}
-
-.toc details summary{
-  cursor: pointer;
-  font-weight: 700;
-  margin: 10px 0 8px;
-  list-style: none;
-}
-.toc details summary::-webkit-details-marker{ display:none; }
-
-.toc ul{
-  margin: 0 0 8px;
-  padding-left: 16px;
-}
-.toc li{ margin: 6px 0; }
-
-.toc a{
-  color: rgba(15,23,42,0.88);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-.toc a:hover{
-  border-bottom-color: rgba(15,23,42,0.28);
-}
-
-.toc .toc-footer{
-  margin-top: 14px;
-  font-size: 12.5px;
-  color: var(--text-muted);
-  line-height: 1.45;
-}
-
-/* „Nahoru“ tlačítko (i jako link) */
-.back-to-top{
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 14px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(15,23,42,0.14);
-  background: rgba(255,255,255,0.55);
-  text-decoration: none;
-  color: rgba(15,23,42,0.86);
-  font-weight: 600;
-}
-.back-to-top:hover{
-  background: rgba(255,255,255,0.8);
-}
-
-/* hlavní obsah odborné stránky */
-.main-content{
-  width: 100%;
-  min-width: 0; /* opět zásadní */
-}
-
-/* Kapitoly */
-.tech-section{
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(15,23,42,0.08);
-}
-.tech-section:last-child{ border-bottom: none; }
-
-.tech-section h2{
-  font-size: clamp(26px, 2.4vw, 40px);
-  letter-spacing: -0.02em;
-  margin-bottom: 10px;
-}
-.tech-section h3{
-  font-size: 18px;
-  margin-top: 18px;
-}
-
-/* Dvě vrstvy: callout + hlubší text */
-.callout{
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(15,23,42,0.10);
-  border-left: 6px solid rgba(15,23,42,0.35);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin: 14px 0 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-.callout p{ margin-bottom: 8px; }
-.callout p:last-child{ margin-bottom: 0; }
-
-/* Dva široké sloupce – dlouhé odborné texty */
-.two-col{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
-  align-items: start;
-}
-@media (max-width: 960px){
-  .two-col{ grid-template-columns: 1fr; }
-}
-
-.small-note{
-  font-size: 12.5px;
-  color: var(--text-muted);
-  margin-top: 10px;
-}
-
-/* Zmenšení „spodních“ odstavců (poznámky) na 50 % */
-.mini{
-  font-size: 50%;
-  line-height: 1.35;
-  opacity: 0.9;
-}
-/* === TYPO & SPACING RESET (globálně) === */
-:root{
-  --space-1: 8px;
-  --space-2: 12px;
-  --space-3: 16px;
-  --space-4: 24px;
-  --space-5: 36px;
-  --space-6: 48px;
-}
-
-/* Odstavce – menší a konzistentní mezery */
-p{ margin: 0 0 var(--space-3); }
-p:last-child{ margin-bottom: 0; }
-
-/* Nadpisy – víc nahoře, míň dole (aby nebyly „nalepené“ na text nad nimi) */
-h1,h2,h3,h4{
-  margin-top: var(--space-6);
-  margin-bottom: var(--space-2);
-  line-height: 1.15;
-}
-h1:first-child, h2:first-child{ margin-top: 0; }
-
-/* Sekce – zmenšit „obří“ paddingy */
-.section{ padding: 56px 24px; }          /* dřív bývá 80+ */
-.section.section-compact{ padding: 32px 24px; }
-
-/* Pokud máš někde extra velké mezery pod hlavičkou */
-main{ padding-top: 24px; }
-/* === ODBORNE: LAYOUT === */
-.page-odborne .page-layout{
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 40px;
-  align-items: start;
-}
-
-/* Levý TOC panel */
-.page-odborne .toc{
-  position: sticky;
-  top: 110px;                 /* uprav podle výšky hlavičky */
-  max-height: calc(100vh - 140px);
-  overflow: auto;
-  background: rgba(255,255,255,0.55);
-  border-radius: 18px;
-  padding: 18px 18px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-}
-
-/* Pravý obsah – ať se nikdy „nezlomí“ do úzkého sloupce */
-.page-odborne .main-content{
-  min-width: 0;
-}
-
-/* Vlastní kapitoly: dvě textové kolony uvnitř kapitoly */
-.page-odborne .topic{
-  padding-top: 6px;
-}
-.page-odborne .topic-grid{
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: 44px;
-  align-items: start;
-}
-@media (max-width: 1100px){
-  .page-odborne .page-layout{ grid-template-columns: 1fr; }
-  .page-odborne .toc{ position: relative; top: 0; max-height: none; }
-  .page-odborne .topic-grid{ grid-template-columns: 1fr; }
-}
-/* === PRO/CON BOX === */
-.procon{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 18px 0 0;
-}
-.procon .card{
-  background: rgba(255,255,255,0.6);
-  border-radius: 16px;
-  padding: 14px 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
-}
-.procon .card h4{
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-.procon ul{ margin: 0; padding-left: 18px; }
-.procon li{ margin: 6px 0; }
-@media (max-width: 900px){
-  .procon{ grid-template-columns: 1fr; }
-}
-.back-to-top{
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(15, 23, 42, 0.85);
-  color: #fff;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-  cursor: pointer;
-  transition: transform .15s ease, opacity .15s ease;
-}
-.back-to-top:hover{ transform: translateY(-2px); }
-/* =========================
-   ODBORNÁ STRÁNKA – STABILNÍ LAYOUT (HOTFIX)
-   vložte NA KONEC style.css
-========================= */
-
-body.page-odborne .container{
-  max-width: 1320px;
-}
-
-/* Levý TOC + pravý obsah */
-body.page-odborne .page-layout{
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 40px;
-  align-items: start;
-}
-
-/* Zásadní proti „úzkému sloupci“ */
-body.page-odborne .main-content{
-  min-width: 0;
-  width: 100%;
-  max-width: none;
-}
-
-/* TOC */
-body.page-odborne .toc{
-  position: sticky;
-  top: 110px; /* dle reálné výšky headeru */
-  max-height: calc(100vh - 140px);
-  overflow: auto;
-}
-
-/* Dva široké sloupce uvnitř kapitoly */
-body.page-odborne .two-col{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 28px;
-  align-items: start;
-}
-
-/* Responsivita */
-@media (max-width: 1020px){
-  body.page-odborne .page-layout{ grid-template-columns: 1fr; }
-  body.page-odborne .toc{ position: relative; top: 0; max-height: none; }
-  body.page-odborne .two-col{ grid-template-columns: 1fr; }
-}
-
-/* ===== Mezery: nadpis nemá být „nalepený“ nahoře ===== */
-body.page-odborne .tech-section{
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(15,23,42,0.08);
-}
-
-body.page-odborne .tech-section h2{
-  margin: 0 0 12px;         /* žádná mezera nad h2 uvnitř sekce */
-}
-
-body.page-odborne .tech-section h3{
-  margin: 18px 0 8px;
-}
-
-body.page-odborne .tech-section p{
-  margin: 0 0 14px;
-}
-
-/* Callout: trochu níž od nadpisu */
-body.page-odborne .callout{
-  margin: 14px 0 18px;
-}
-
-/* „Nahoru“ – sjednotit, ať se nepřebíjí s linkem v TOC */
-body.page-odborne a.back-to-top{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  background: rgba(15,23,42,0.88);
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-}
-/* ============================================
-   STABILIZAČNÍ PATCH – VLOŽ NA KONEC style.css
-   Cíl: odstranit kolize, úzký obsah, divné mezery
-============================================ */
-
-/* 1) Bezpečná typografie a mezery napříč webem */
-:root{
+  /* Barvy */
   --page-bg:   #E8F5EF;
   --header-bg: #C9E3D6;
 
   --dark-900:  #0F172A;
   --text-dark: #1E293B;
-  --text-muted: rgba(15,23,42,0.72);
+  --text-muted:#475569;
 
+  /* Layout */
+  --container-width: 1200px;
   --radius-lg: 18px;
   --shadow-lg: 0 12px 32px rgba(0,0,0,0.08);
 
-  --container-width: 1200px;
-
+  /* Mezery (konzistentní rytmus) */
   --space-1: 8px;
   --space-2: 12px;
   --space-3: 16px;
@@ -1055,32 +34,28 @@ body.page-odborne a.back-to-top{
   --space-6: 48px;
 }
 
+/* Reset */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html, body{ min-height:100%; }
+
 body{
+  font-family: 'Inter', system-ui, sans-serif;
   background: var(--page-bg);
   color: var(--text-dark);
   line-height: 1.65;
 }
 
-.container{
-  max-width: var(--container-width);
-  margin: 0 auto;
-}
-
-/* Sekce: kompaktnější, konzistentní */
-.section{ padding: 56px 24px; }
-.section.section-compact{ padding: 32px 24px; }
-
-/* Nadpisy: ať nejsou nalepené shora */
-h1,h2,h3,h4{
+/* Typografie */
+h1, h2, h3, h4{
+  color: var(--dark-900);
   line-height: 1.15;
   margin: 0 0 var(--space-2);
-  color: var(--dark-900);
+  font-weight: 700;
 }
-h1{ font-size: 42px; font-weight: 800; }
-h2{ font-size: clamp(26px, 2.4vw, 40px); margin-top: var(--space-6); }
-h3{ font-size: 18px; margin-top: var(--space-5); }
+h1{ font-size: 48px; font-weight: 800; margin-bottom: var(--space-5); }
+h2{ font-size: 38px; margin-top: var(--space-6); }
+h3{ font-size: 24px; margin-top: var(--space-5); }
 
-/* Odstavce: opravuje i problém s neplatným vnořením p{} */
 p{
   margin: 0 0 var(--space-3);
   color: var(--text-muted);
@@ -1090,28 +65,83 @@ p{
 p:last-child{ margin-bottom: 0; }
 
 /* Kotvy pod sticky header */
-section[id], h2, h3{ scroll-margin-top: 120px; }
+section[id], h2, h3 { scroll-margin-top: 120px; }
 
-/* 2) Header – sjednocení, odstranění opacity chyby */
+/* Layout */
+.container{
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Sekce */
+.section{ padding: 56px 24px; }
+.section.section-compact{ padding: 32px 24px; }
+
+.section-lead{
+  font-size: 19px;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  max-width: 820px;
+}
+
+/* Page header (úvod podstránek) */
+.page-header{ padding: 110px 24px 50px; }
+.page-header h1{ font-size: 42px; margin-bottom: 28px; }
+.page-header p{ max-width: 820px; }
+.page-header .intro-note{
+  font-size: 0.8em;
+  max-width: 760px;
+}
+
+/* =========================================================
+   2) COMPONENTS
+========================================================= */
+
+/* Header */
 .site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 14px 40px;
   background: var(--header-bg);
   border-bottom: 1px solid rgba(15,23,42,0.08);
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
+/* Logo + značka */
+.header-left{
+  display:flex;
+  align-items:center;
+  gap: 18px;
+}
+.site-logo{ height: 74px; width:auto; }
+
+.brand-block{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.brand-name{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: #002b22;
+}
 .site-motto{
-  opacity: 1; /* oprava: opacity nemůže být 1,2 */
+  font-size: 18px;
+  color: #2f4f44;
+  opacity: 1; /* oprava: dříve bylo 1,2 */
 }
 
-/* 3) Navigace – jedna definice, bez duplicit */
+/* Navigace – jedna definice */
 .main-nav{
-  display: flex;
+  display:flex;
   gap: 32px;
   font-size: 17px;
 }
 .main-nav a{
   color: #1E293B;
-  text-decoration: none;
+  text-decoration:none;
   padding-bottom: 4px;
   border-bottom: 2px solid transparent;
   font-weight: 500;
@@ -1123,56 +153,251 @@ section[id], h2, h3{ scroll-margin-top: 120px; }
   color: #0F172A;
 }
 
-/* 4) ODBORNÁ STRÁNKA – stabilní layout (page-odborne) */
-body.page-odborne .container{
-  max-width: 1320px; /* odborná stránka může být širší */
+/* Header responsivně */
+@media (max-width: 900px){
+  .site-header{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .header-left{ align-items:center; }
+  .main-nav{
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 16px;
+  }
 }
 
-/* Dvou-sloupcový layout: TOC + obsah */
+/* Hero (index) */
+.hero{
+  width:100%;
+  min-height:50vh;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding: 48px 40px;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.60),
+    rgba(15, 23, 42, 0.35)
+  );
+}
+.hero-inner{
+  position:relative;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  width:100%;
+  color:#F9FAFB;
+}
+.hero-title{
+  font-size: 36px;
+  font-weight:700;
+  margin-bottom: 16px;
+  color:#F9FAFB;
+}
+.hero-subtitle{
+  font-size: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+  color:#E5E7EB;
+}
+@media (max-width: 768px){
+  .hero{ padding: 32px 20px; min-height: 55vh; }
+  .hero-title{ font-size: 26px; }
+  .hero-subtitle{ font-size: 16px; }
+}
+
+/* Gridy */
+.benefits-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:30px;
+}
+.how-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:32px;
+}
+.tech-grid,
+.app-grid,
+.data-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:30px;
+}
+
+/* Karty */
+.benefit-box,
+.how-item,
+.tech-card,
+.app-card,
+.data-card{
+  background:#fff;
+  padding:26px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.benefit-box:hover,
+.how-item:hover,
+.tech-card:hover,
+.app-card:hover,
+.data-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+}
+
+/* Responsivní gridy */
+@media (max-width: 1100px){
+  .benefits-grid{ grid-template-columns: repeat(2, 1fr); }
+  .how-grid{ grid-template-columns: repeat(2, 1fr); }
+  .tech-grid, .app-grid, .data-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 800px){
+  .benefits-grid, .how-grid, .tech-grid, .app-grid, .data-grid{ grid-template-columns: 1fr; }
+}
+
+/* CTA */
+.cta-section{
+  padding: 70px 24px 60px;
+  text-align:center;
+  background:#D3E7E0;
+  color: var(--dark-900);
+}
+.cta-section h2{ color: var(--dark-900); }
+.cta-section p{
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 14px auto 30px;
+}
+
+/* Button */
+.btn-primary{
+  display:inline-block;
+  background:#0F172A;
+  color:#fff;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+  transition: 0.2s ease;
+}
+.btn-primary:hover{
+  background:#111827;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+}
+
+/* Drobnosti */
+.toc-back{
+  display:inline-block;
+  margin-top:12px;
+  font-size:13px;
+  text-decoration:none;
+  color:#1E293B;
+  opacity:0.75;
+}
+.toc-back:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+/* =========================================================
+   3) PAGES
+========================================================= */
+
+/* ========== ODBORNÁ STRÁNKA (page-odborne) ========== */
+
+body.page-odborne .container{
+  max-width: 1320px;
+}
+
+/* Layout: TOC + obsah */
 body.page-odborne .page-layout{
-  display: grid;
+  display:grid;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 40px;
-  align-items: start;
+  align-items:start;
 }
 
-/* Zásadní proti “úzkému sloupci” */
-body.page-odborne .main-content{
-  min-width: 0;
-  width: 100%;
-  max-width: none;
-}
-
-/* TOC sticky – respektuje header */
+/* TOC panel */
 body.page-odborne .toc{
   position: sticky;
   top: 110px;
   max-height: calc(100vh - 140px);
   overflow: auto;
-
   background: rgba(255,255,255,0.55);
   border: 1px solid rgba(15,23,42,0.12);
   border-radius: 18px;
   padding: 18px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.06);
 }
+body.page-odborne .toc h3{
+  font-size: 16px;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+body.page-odborne .toc details summary{
+  cursor:pointer;
+  font-weight:700;
+  margin: 10px 0 8px;
+  list-style:none;
+}
+body.page-odborne .toc details summary::-webkit-details-marker{ display:none; }
+body.page-odborne .toc ul{ margin: 0 0 8px; padding-left: 16px; }
+body.page-odborne .toc li{ margin: 6px 0; }
+body.page-odborne .toc a{
+  color: rgba(15,23,42,0.88);
+  text-decoration:none;
+  border-bottom: 1px solid transparent;
+}
+body.page-odborne .toc a:hover{
+  border-bottom-color: rgba(15,23,42,0.28);
+}
+body.page-odborne .toc .toc-footer{
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: rgba(15,23,42,0.72);
+  line-height: 1.45;
+}
 
-/* Odborné sekce – mezery a rytmus */
+/* Pravý obsah */
+body.page-odborne .main-content{
+  width:100%;
+  min-width:0;
+}
+
+/* Kapitoly */
 body.page-odborne .tech-section{
   padding: 28px 0;
   border-bottom: 1px solid rgba(15,23,42,0.08);
 }
-body.page-odborne .tech-section:last-child{ border-bottom: none; }
+body.page-odborne .tech-section:last-child{ border-bottom:none; }
 
 body.page-odborne .tech-section h2{
-  margin: 0 0 12px; /* žádná mezera nad h2 uvnitř sekce */
+  font-size: clamp(26px, 2.4vw, 40px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
 }
 body.page-odborne .tech-section h3{
+  font-size: 18px;
   margin: 18px 0 8px;
 }
-body.page-odborne .tech-section p{
-  margin: 0 0 14px;
-}
+body.page-odborne .tech-section p{ margin: 0 0 14px; }
 
 /* Callout */
 body.page-odborne .callout{
@@ -1187,17 +412,17 @@ body.page-odborne .callout{
 body.page-odborne .callout p{ margin-bottom: 8px; }
 body.page-odborne .callout p:last-child{ margin-bottom: 0; }
 
-/* Dva široké sloupce uvnitř kapitoly – GRID (ne column-count) */
+/* Dvou-sloupec uvnitř kapitoly (stabilní GRID) */
 body.page-odborne .two-col{
-  display: grid;
+  display:grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 28px;
-  align-items: start;
+  align-items:start;
 }
 
-/* Pro/Con box */
+/* Pro/Con */
 body.page-odborne .procon{
-  display: grid;
+  display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin: 18px 0 0;
@@ -1212,38 +437,41 @@ body.page-odborne .procon .card h4{
   margin: 0 0 8px;
   font-size: 16px;
 }
-body.page-odborne .procon ul{ margin: 0; padding-left: 18px; }
+body.page-odborne .procon ul{ margin:0; padding-left: 18px; }
 body.page-odborne .procon li{ margin: 6px 0; }
 
 /* Poznámky */
 body.page-odborne .small-note{
   font-size: 12.5px;
-  color: var(--text-muted);
+  color: rgba(15,23,42,0.72);
   margin-top: 10px;
 }
 body.page-odborne .mini{
-  font-size: 80%;     /* 50 % bylo příliš malé, to už je skoro nečitelné */
+  font-size: 80%; /* 50 % bylo už příliš malé */
   line-height: 1.35;
   opacity: 0.9;
 }
 
-/* 5) Back-to-top: vyřešit konflikt “link v TOC” vs “floating button”
-   - link v TOC necháme jako normální link (bez fixed)
-   - floating uděláme jen pro .to-top (pokud ho použiješ) */
+/* „Nahoru“ link v TOC (normální, ne fixed) */
 body.page-odborne aside.toc a.back-to-top{
-  position: static;
-  width: auto;
-  height: auto;
-  border-radius: 999px;
   display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
   padding: 10px 14px;
-  background: rgba(255,255,255,0.55);
-  color: rgba(15,23,42,0.86);
+  border-radius: 999px;
   border: 1px solid rgba(15,23,42,0.14);
+  background: rgba(255,255,255,0.55);
+  text-decoration: none;
+  color: rgba(15,23,42,0.86);
+  font-weight: 600;
   box-shadow: none;
 }
+body.page-odborne aside.toc a.back-to-top:hover{
+  background: rgba(255,255,255,0.8);
+}
 
-/* Pokud chceš floating, používej třídu .to-top (doporučeno) */
+/* Plovoucí „Nahoru“ – používej třídu .to-top */
 a.to-top{
   position: fixed;
   right: 22px;
@@ -1252,19 +480,30 @@ a.to-top{
   height: 44px;
   border-radius: 999px;
   background: rgba(15,23,42,0.88);
-  color: #fff;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  color:#fff;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  transition: transform .15s ease, opacity .15s ease;
 }
 a.to-top:hover{ transform: translateY(-2px); }
 
-/* Responsivita odborné stránky */
+/* Odborná stránka – responsivita */
 @media (max-width: 1020px){
   body.page-odborne .page-layout{ grid-template-columns: 1fr; }
-  body.page-odborne .toc{ position: relative; top: 0; max-height: none; }
+  body.page-odborne .toc{ position: relative; top: 0; max-height:none; }
   body.page-odborne .two-col{ grid-template-columns: 1fr; }
   body.page-odborne .procon{ grid-template-columns: 1fr; }
 }
+
+/* =========================================================
+   4) PATCH / OVERRIDES (držet na konci)
+   Pravidla:
+   - primárně scoped selektory (body.page-XYZ ...)
+   - žádné nové globální koncepty
+   - každá změna: krátký důvod + datum
+========================================================= */
+
+/* (zatím prázdné) */
