@@ -53,6 +53,29 @@
 </section>
 
 <!-- ARCHITEKTURA SYSTÉMU -->
+    Architektura systému SSCC je navržena jako modulární soustava technologických bloků, které lze kombinovat podle místních podmínek a cílové funkce systému. Neexistuje jedna povinná konfigurace, která by byla vhodná pro všechny projekty. Základním principem je sladění toků elektřiny, tepla a chemických médií tak, aby systém jako celek pracoval stabilně v čase a dokázal reagovat na proměnlivou výrobu i spotřebu.
+
+Základní architektura se skládá z několika funkčních vrstev, které spolu úzce spolupracují, ale mohou být navrhovány i nasazovány postupně.
+
+První vrstvu tvoří zdroje energie. Patří sem obnovitelné zdroje, zejména fotovoltaické a větrné elektrárny, případně vodní zdroje, a dále stabilní zdroje tepla, například geotermální systémy nebo průmyslové odpadní teplo. Úkolem této vrstvy je dodávat primární energii do systému, přičemž její charakter je typicky proměnlivý v čase a často omezený kapacitou přenosové sítě.
+
+Druhou vrstvu představuje elektrická integrace a stabilizace. Zahrnuje výkonovou elektroniku, transformaci napětí, řízení toků mezi AC a DC částmi systému a napojení na distribuční nebo přenosovou soustavu. Tato vrstva umožňuje, aby se SSCC choval jako aktivní energetický uzel, který nejen odebírá a dodává energii, ale také se podílí na stabilizaci napětí, výkonu a v některých případech i frekvence.
+
+Třetí vrstvu tvoří elektrochemická konverze, zejména výroba vodíku elektrolýzou. V této části se přebytečná elektrická energie převádí do chemické formy, která je vhodná pro další zpracování nebo dlouhodobé skladování. Pro návrh této vrstvy je klíčové, zda má elektrolýza pracovat převážně v režimu sledování obnovitelných zdrojů, nebo v kombinovaném režimu se stabilní základní zátěží. Tomu odpovídá volba technologie, dimenzování i strategie řízení.
+
+Čtvrtou vrstvu tvoří chemická syntéza a zpracování médií. Typicky jde o syntézu amoniaku, případně dalších syntetických paliv nebo chemických meziproduktů. V této vrstvě se rozhoduje o tom, jaká média budou v systému sloužit jako dlouhodobý energetický nosič a jaká budou využívána jako surovina pro další průmyslové procesy. Tato část systému má obvykle pomalejší dynamiku než elektrická část, a proto vyžaduje stabilizované vstupy a pečlivou integraci s akumulačními a tepelnými systémy.
+
+Pátou vrstvu tvoří akumulace, a to jak elektrická, tak tepelná a chemická. Elektrická akumulace slouží především k vyhlazování krátkodobých výkyvů a k podpoře stability provozu. Tepelné zásobníky umožňují oddělit výrobu a spotřebu tepla v čase a zvyšují účinnost celého systému díky rekuperaci odpadního tepla z procesů. Chemická akumulace v podobě vodíku, amoniaku nebo jiných médií umožňuje ukládat energii v řádu dnů až měsíců, což je klíčové pro překlenutí sezónních rozdílů výroby a spotřeby.
+
+Šestou vrstvu představuje zpětná konverze a využití energie. Patří sem zařízení pro výrobu elektřiny a tepla z uložených médií, průmyslové využití vodíku nebo amoniaku, případně jejich distribuce do navazujících provozů. Volba způsobu využití významně ovlivňuje celkovou energetickou bilanci systému a jeho ekonomiku, protože různé cesty mají odlišnou účinnost i investiční náročnost.
+
+Sedmou, průřezovou vrstvou je řízení a datová integrace. Řídicí systém propojuje všechny technologické části do jednoho funkčního celku a zajišťuje, že jednotlivé procesy spolupracují v souladu s fyzikálními omezeními i provozními cíli. Řízení pracuje s predikcemi výroby z obnovitelných zdrojů, s odhadem spotřeby, se stavem zásobníků i s informacemi o síti a cenách energie. Jeho úkolem není pouze optimalizovat účinnost, ale především zajistit dlouhodobou stabilitu a provozní bezpečnost systému.
+
+Důležitým rysem architektury SSCC je práce s různými časovými měřítky. Elektrická část reaguje v řádu sekund až minut, elektrochemické procesy v řádu hodin a chemická akumulace v řádu dnů až sezón. Architektura systému je proto navržena tak, aby tyto časové vrstvy byly odděleny pomocí akumulace a řízení, a aby rychlé fluktuace nepoškozovaly pomalejší a citlivější procesy.
+
+Z hlediska návrhu projektu nevede architektura SSCC k jedné typické velikosti nebo konfiguraci. Klíčové je analyzovat místní profil výroby a spotřeby, dostupné zdroje tepla, omezení sítě a požadovanou míru energetické odolnosti. Na základě těchto vstupů se volí, které vrstvy systému mají být v dané lokalitě zastoupeny a v jakém měřítku. V některých projektech může být dominantní role chemické akumulace, jinde naopak stabilizace distribuční sítě a práce s teplem.
+
+SSCC tak není jedním zařízením, ale systémovou architekturou, která propojuje energetiku a průmyslové procesy do jednoho plánovatelného celku. Jeho hlavním přínosem není jen výroba energie, ale schopnost řídit její tok v čase, mezi různými formami a mezi různými sektory infrastruktury.
 <section class="section">
     <div class="container">
         <h2>Architektura SSCC</h2>
