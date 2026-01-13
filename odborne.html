@@ -463,23 +463,7 @@
   </div>
 </section>
 
-<script>
-  // jemné posunutí scrollu kvůli sticky headeru (pokud header překrývá nadpisy)
-  // nastavte hodnotu podle reálné výšky hlavičky
-  const HEADER_OFFSET = 110;
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', (e) => {
-      const id = a.getAttribute('href');
-      if (!id || id === '#') return;
-      const el = document.querySelector(id);
-      if (!el) return;
-      e.preventDefault();
-      const y = el.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-      history.pushState(null, '', id);
-    });
-  });
-</script>
+
 
 <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
 <body id="top" class="page-odborne">
