@@ -551,3 +551,9 @@ ul ul, ul ol, ol ul, ol ol{
 .section .container p{
   max-width: 900px;
 }
+/* PATCH: nadpisy uvnitř karet nemají mít velký margin-top */
+.tech-card h3,
+.how-item h3,
+.benefit-box h3{
+  margin-top: 0;
+}
