@@ -507,3 +507,26 @@ a.to-top:hover{ transform: translateY(-2px); }
 ========================================================= */
 
 /* (zatím prázdné) */
+/* PATCH: seznamy – po resetu potřebují explicitní odsazení */
+ul, ol{
+  padding-left: 22px;
+  margin: 0 0 var(--space-3);
+}
+
+li{
+  margin: 6px 0;
+}
+
+ul ul, ul ol, ol ul, ol ol{
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+/* PATCH: první nadpis v sekci nemá mít extra margin-top */
+.section > .container > h2:first-child,
+.section > .container > h3:first-child{
+  margin-top: 0;
+}
+/* PATCH: maximální šířka textu v běžných sekcích */
+.section .container p{
+  max-width: 900px;
+}
