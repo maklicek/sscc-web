@@ -506,30 +506,14 @@ a.to-top:hover{ transform: translateY(-2px); }
    - každá změna: krátký důvod + datum
 ========================================================= */
 
-/* (zatím prázdné) */
-/* PATCH: seznamy – po resetu potřebují explicitní odsazení */
-ul, ol{
-  padding-left: 22px;
-  margin: 0 0 var(--space-3);
-}
+/* =========================================================
+   4) PATCH / OVERRIDES (držet na konci)
+   Pravidla:
+   - primárně scoped selektory (body.page-XYZ ...)
+   - žádné nové globální koncepty
+   - každá změna: krátký důvod + datum
+========================================================= */
 
-li{
-  margin: 6px 0;
-}
-
-ul ul, ul ol, ol ul, ol ol{
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-/* PATCH: první nadpis v sekci nemá mít extra margin-top */
-.section > .container > h2:first-child,
-.section > .container > h3:first-child{
-  margin-top: 0;
-}
-/* PATCH: maximální šířka textu v běžných sekcích */
-.section .container p{
-  max-width: 900px;
-}
 /* PATCH: seznamy – po resetu potřebují explicitní odsazení */
 ul, ol{
   padding-left: 22px;
@@ -542,6 +526,7 @@ ul ul, ul ol, ol ul, ol ol{
 }
 
 /* PATCH: první nadpis v sekci nemá mít extra margin-top */
+.section > .container > h1:first-child,
 .section > .container > h2:first-child,
 .section > .container > h3:first-child{
   margin-top: 0;
@@ -551,10 +536,13 @@ ul ul, ul ol, ol ul, ol ol{
 .section .container p{
   max-width: 900px;
 }
-/* PATCH: nadpisy uvnitř karet nemají mít velký margin-top */
-.tech-card h3,
+
+/* PATCH: nadpisy v kartách bez velkého margin-top */
+.benefit-box h3,
 .how-item h3,
-.benefit-box h3{
+.tech-card h3,
+.app-card h3,
+.data-card h3{
   margin-top: 0;
 }
 
@@ -571,42 +559,3 @@ ul ul, ul ol, ol ul, ol ol{
 .callout p{ margin-bottom: 8px; }
 .callout p:last-child{ margin-bottom: 0; }
 .callout ul{ margin: 0; padding-left: 18px; }
-/* PATCH: seznamy po resetu potřebují explicitní odsazení */
-ul, ol{
-  padding-left: 22px;
-  margin: 0 0 var(--space-3);
-}
-li{ margin: 6px 0; }
-ul ul, ul ol, ol ul, ol ol{
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-/* PATCH: první nadpis v sekci nemá mít extra margin-top */
-.section > .container > h2:first-child,
-.section > .container > h3:first-child{
-  margin-top: 0;
-} 
-
-/* PATCH: globální callout (aby fungoval i mimo odbornou stránku) */
-.callout{
-  background: rgba(255,255,255,0.6);
-  border: 1px solid rgba(15,23,42,0.10);
-  border-left: 6px solid rgba(15,23,42,0.35);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin: 18px 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-.callout p{ margin-bottom: 8px; }
-.callout p:last-child{ margin-bottom: 0; }
-.callout ul{ margin: 0; padding-left: 18px; }
-
-/* PATCH: nadpisy v kartách bez velkého margin-top */
-.benefit-box h3,
-.how-item h3,
-.tech-card h3,
-.app-card h3,
-.data-card h3{
-  margin-top: 0;
-}
