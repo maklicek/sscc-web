@@ -569,3 +569,16 @@ ul ul, ul ol, ol ul, ol ol{
 }
 .callout p{ margin-bottom: 8px; }
 .callout p:last-child{ margin-bottom: 0; }
+/* PATCH: callout jako globální komponenta */
+.callout{
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(15,23,42,0.10);
+  border-left: 6px solid rgba(15,23,42,0.35);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 18px 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.callout p{ margin-bottom: 8px; }
+.callout p:last-child{ margin-bottom: 0; }
+.callout ul{ margin: 0; padding-left: 18px; }
