@@ -586,7 +586,7 @@ ul ul, ul ol, ol ul, ol ol{
 .section > .container > h2:first-child,
 .section > .container > h3:first-child{
   margin-top: 0;
-}
+} 
 
 /* PATCH: globální callout (aby fungoval i mimo odbornou stránku) */
 .callout{
