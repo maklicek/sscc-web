@@ -34,408 +34,246 @@
 </header>
 
 <!-- HLAVNÍ OBSAH STRÁNKY (bez hero) -->
+
 <section class="page-header section">
-    <div class="container">
-        <h1>SSCC – Integrovaný energetický systém</h1>
+  <div class="container">
+    <h1>SSCC – Integrovaný energetický systém</h1>
 
-        <p>
-            SSCC (Smart Synthetic Carbon Cycle) je energetický systém nové generace, který propojuje obnovitelné zdroje,
-            geotermální teplo, syntetická média a datově řízené řízení do jednoho funkčního celku. Cílem je zajistit
-            stabilní, dlouhodobě uložitelný a ekonomicky predikovatelný výkon i v prostředí výrazně kolísající výroby z OZE.
-        </p>
+    <p>
+      SSCC (Smart Synthetic Carbon Cycle) je energetický systém nové generace, který propojuje obnovitelné zdroje,
+      geotermální teplo, syntetická média a datově řízené řízení do jednoho funkčního celku. Cílem je zajistit
+      stabilní, dlouhodobě uložitelný a ekonomicky predikovatelný výkon i v prostředí výrazně kolísající výroby z OZE.
+    </p>
 
-          <p>
-            Na rozdíl od klasických soustav, které pouze balancují výkon v hodinovém měřítku, SSCC pracuje s energetickými
-            i hmotnostními toky. Umožňuje ukládat energii v chemických médiích (NH₃, H₂, uzavřené CO₂–cykly) a následně ji
-            využívat v době, kdy ji síť nejvíce potřebuje – v řádu dnů, týdnů i měsíců.
-        </p>
-    </div>
-</section>
-<section>
-  <h2>Proč SSCC jako „system-of-systems“</h2>
-
-  <p>Moderní infrastruktura již nefunguje jako soubor izolovaných sektorů, ale jako vzájemně provázaný ekosystém, ve kterém změna v jedné oblasti okamžitě ovlivňuje ostatní. Výroba, energetika, doprava, logistika, vodní hospodářství a kritické služby jsou stále více závislé na stejných zdrojích a sdílené kapacitě.</p>
-
-  <p>Tradiční řídicí systémy jsou optimalizovány pro jednotlivé domény – například pro stabilitu elektrické sítě, plynulost výroby nebo řízení dopravy. Chybí jim však schopnost koordinovat rozhodování napříč sektory a lokalitami, a tím řešit konflikty mezi konkurenčními cíli, jako jsou náklady, emise, dostupnost zdrojů a provozní bezpečnost.</p>
-
-  <p>SSCC je proto navržen jako systém nad systémy, který:</p>
-  <ul>
-    <li>propojuje existující řídicí a informační systémy do jednotného rozhodovacího rámce,</li>
-    <li>umožňuje sdílení flexibility mezi sektory (např. mezi výrobou, akumulací a spotřebou),</li>
-    <li>optimalizuje chování celku místo dílčích částí,</li>
-    <li>a podporuje koordinované krizové řízení při rozsáhlých incidentech.</li>
-  </ul>
-
-  <p>Tento přístup je klíčový zejména v prostředí s vysokým podílem obnovitelných zdrojů, elektrifikací dopravy a rostoucí volatilitou poptávky i výroby, kde již nestačí lokální optimalizace jednotlivých subsystémů.</p>
-
-  <p>SSCC tak vytváří společnou řídicí a optimalizační vrstvu, která umožňuje postupný přechod od sektorově řízené infrastruktury k integrovanému a adaptivnímu systému schopnému reagovat na dlouhodobé strategické cíle i krátkodobé provozní výkyvy.</p>
-</section>
-
-<section>
-  <h2>SSCC – Architektura systému</h2>
-
-  <p>SSCC (System-of-Systems Control Center) je koordinační a optimalizační řídicí systém pro komplexní infrastruktury, které kombinují energetiku, výrobu, dopravu, logistiku a kritické služby. Nejde o náhradu stávajících řídicích systémů (SCADA, EMS, BMS, DCS), ale o nadřazenou vrstvu, která tyto systémy propojuje, slaďuje jejich chování a optimalizuje celek napříč sektory a lokalitami.</p>
-
-  <p>Klíčovou vlastností SSCC je schopnost současně:</p>
-  <ul>
-    <li>zajišťovat bezpečný a stabilní provoz v reálném čase na úrovni jednotlivých lokalit,</li>
-    <li>koordinovat zdroje a zátěže mezi různými subsystémy,</li>
-    <li>a optimalizovat chování celého systému na základě predikcí a strategických cílů.</li>
-  </ul>
-
-  <p>Architektura je proto navržena jako vícevrstvý kyber-fyzický systém s vysokou mírou lokální autonomie, doplněný o regionální a centrální optimalizační vrstvy, které umožňují plánování, simulace a krizové řízení v širším měřítku.</p>
-
- <h3>1. Přehled architektury SSCC (vrstvy)</h3>
-<p>SSCC je koncipován jako vícevrstvý kyber-fyzický řídicí systém s lokální autonomií a centrální optimalizací:</p>
-
-<ol>
-  <li>
-    <strong>Fyzická vrstva (Field Layer)</strong>
-    <ul>
-      <li>výrobní technologie, energetické zdroje, úložiště, sítě, vozidla, budovy</li>
-      <li>senzory, měřidla, akční členy, PLC, BMS, EMS</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Lokální řídicí vrstva – Edge (Local Control Layer)</strong>
-    <ul>
-      <li>lokální řadiče, gateway, mikrodatacentra</li>
-      <li>řízení v reálném čase, bezpečné provozní režimy, ostrovní provoz</li>
-      <li>schopnost autonomního fungování bez připojení k centrále</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Koordinační vrstva (Coordination Layer)</strong>
-    <ul>
-      <li>agregace dat z více lokalit a subsystémů</li>
-      <li>vyrovnávání zátěží a přesměrování toků energie, materiálu a dopravy</li>
-      <li>regionální a sektorová optimalizace</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Centrální optimalizační vrstva (System Intelligence Layer)</strong>
-    <ul>
-      <li>predikce, simulace scénářů a plánování provozu</li>
-      <li>optimalizace nákladů, emisí a provozní spolehlivosti</li>
-      <li>strategické řízení systému a krizové plánování</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>Aplikační a integrační vrstva (Application &amp; Integration Layer)</strong>
-    <ul>
-      <li>rozhraní API pro města, podniky, operátory a krizové řízení</li>
-      <li>dashboardy, reporting a integrace se stávajícími systémy</li>
-    </ul>
-  </li>
-</ol>
-
-<h3>2. Hlavní funkční moduly SSCC</h3>
-
-<h4>2.1 Sběr dat a telemetrie (Data Acquisition &amp; Telemetry)</h4>
-<ul>
-  <li>sběr dat z energetiky (výroba, spotřeba, kvalita sítě)</li>
-  <li>sběr dat z výroby, logistiky a dopravy</li>
-  <li>sběr dat z environmentálních a provozních senzorů</li>
-  <li>normalizace dat a časová synchronizace</li>
-  <li>lokální bufferování při výpadku spojení</li>
-</ul>
-
-<h4>2.2 Lokální autonomie a bezpečnost (Local Autonomy &amp; Safety)</h4>
-<ul>
-  <li>lokální rozhodování v řádu milisekund až sekund</li>
-  <li>bezpečnostní provozní režimy:
-    <ul>
-      <li>black-start (řízené spuštění po výpadku)</li>
-      <li>ostrovní provoz (island mode)</li>
-      <li>nouzové odstávky a ochranné zásahy</li>
-    </ul>
-  </li>
-  <li>ochrana infrastruktury, technologií i osob</li>
-</ul>
-<h4>2.3 Orchestrace zdrojů (Resource Orchestration)</h4>
-<ul>
-  <li>koordinace využití:
-    <ul>
-      <li>energie</li>
-      <li>výkonu zařízení</li>
-      <li>kapacit výroby</li>
-      <li>skladů a přepravy</li>
-    </ul>
-  </li>
-  <li>řešení konfliktů mezi subsystémy (např. výroba vs. energetika)</li>
-  <li>slaďování provozních plánů napříč sektory</li>
-</ul>
-
-<h4>2.4 Predikce a simulace (Prediction &amp; Simulation)</h4>
-<ul>
-  <li>krátkodobé i dlouhodobé predikce:
-    <ul>
-      <li>poptávky</li>
-      <li>výroby z obnovitelných zdrojů</li>
-      <li>poruch a degradace zařízení</li>
-      <li>dopravních a logistických toků</li>
-    </ul>
-  </li>
-  <li>digitální dvojčata klíčových částí infrastruktury</li>
-  <li>testování provozních scénářů typu „co když“</li>
-</ul>
-
-<h4>2.5 Optimalizace a řídicí politiky (Optimization &amp; Policy Engine)</h4>
-<ul>
-  <li>vícekriteriální optimalizace s ohledem na:
-    <ul>
-      <li>náklady</li>
-      <li>emise</li>
-      <li>provozní spolehlivost</li>
-      <li>bezpečnost</li>
-    </ul>
-  </li>
-  <li>převod strategických cílů na konkrétní provozní pravidla</li>
-  <li>dynamické přizpůsobování politik řízení podle aktuální situace</li>
-</ul>
-
-<h4>2.6 Interoperabilita a integrační rozhraní (Interoperability &amp; API Gateway)</h4>
-<ul>
-  <li>standardizovaná rozhraní pro:
-    <ul>
-      <li>energetické dispečinky</li>
-      <li>průmyslové řídicí systémy</li>
-      <li>městské platformy</li>
-      <li>státní a regionální krizové systémy</li>
-    </ul>
-  </li>
-  <li>řízení přístupových práv a autentizace</li>
-  <li>auditovatelnost integrací a přenosů dat</li>
-</ul>
-<section>
-  <h2>Implementační model SSCC</h2>
-
-  <p>SSCC je navržen tak, aby bylo možné jej zavádět postupně, bez nutnosti náhrady stávajících řídicích systémů a bez rizika narušení provozu. Implementace probíhá ve fázích, které umožňují plynulý přechod od pouhého sběru dat až k plně koordinovanému řízení napříč sektory.</p>
-
-  <h3>Fáze 1 – Připojení dat (Read-only režim)</h3>
-  <ul>
-    <li>napojení na existující SCADA, EMS, BMS, DCS a další systémy</li>
-    <li>sběr a konsolidace telemetrie bez zásahů do řízení</li>
-    <li>vytvoření jednotného provozního obrazu infrastruktury</li>
-    <li>minimální regulatorní a provozní riziko</li>
-  </ul>
-
-  <h3>Fáze 2 – Analýza, predikce a simulace</h3>
-  <ul>
-    <li>aktivace predikčních modelů a digitálních dvojčat</li>
-    <li>simulace scénářů bez vlivu na reálný provoz</li>
-    <li>identifikace úzkých míst, ztrát a nevyužité flexibility</li>
-    <li>příprava optimalizačních politik</li>
-  </ul>
-
-  <h3>Fáze 3 – Asistované řízení vybraných subsystémů</h3>
-  <ul>
-    <li>SSCC generuje doporučení a provozní plány</li>
-    <li>lidský operátor schvaluje nebo upravuje zásahy</li>
-    <li>postupné zapojování říditelných zdrojů a zátěží</li>
-    <li>budování důvěry v automatizované rozhodování</li>
-  </ul>
-
-  <h3>Fáze 4 – Plná koordinace a optimalizace systému</h3>
-  <ul>
-    <li>automatizované řízení napříč energetikou, výrobou a logistikou</li>
-    <li>regionální a mezioborová koordinace zdrojů</li>
-    <li>aktivní krizové řízení a adaptivní provozní politiky</li>
-    <li>dlouhodobá optimalizace nákladů, emisí a spolehlivosti</li>
-  </ul>
-
-  <h3>Průřezové principy implementace</h3>
-  <ul>
-    <li>zachování certifikovaných bezpečnostních a ochranných funkcí v lokálních systémech</li>
-    <li>oddělení experimentální a produkční logiky (shadow mode)</li>
-    <li>možnost návratu k předchozím konfiguracím</li>
-    <li>postupné rozšiřování rozsahu řízení podle připravenosti organizace</li>
-  </ul>
-</section>
-
-  <h2>SSCC – Škálování, redundance a odolnost</h2>
-
-  <h3>3.1 Nasazení a škálování</h3>
-  <p>SSCC je navržen pro provoz ve třech měřítkách, která lze kombinovat:</p>
-  <ul>
-    <li><strong>Single-site (lokalita)</strong> – jedna továrna, ostrov, kampus, logistický areál nebo městský celek; důraz na lokální autonomii a nízkou latenci.</li>
-    <li><strong>Multi-site (síť lokalit)</strong> – koordinace více objektů v rámci města nebo regionu; vyrovnávání zátěží a sdílení flexibility.</li>
-    <li><strong>System-of-systems (region / stát)</strong> – strategické plánování, krizové řízení, standardizovaná interoperabilita a governance.</li>
-  </ul>
-  <p>Škálování je primárně horizontální: přidání nové lokality znamená přidání edge uzlů a jejich registraci do koordinační vrstvy bez zásahu do jádra systému.</p>
-
-  <h3>3.2 Redundance a vysoká dostupnost</h3>
-  <ul>
-    <li><strong>Edge autonomie jako primární fallback</strong> – při výpadku centrály zůstává lokalita provozuschopná.</li>
-    <li><strong>Redundance řídicích uzlů</strong> – active-passive nebo active-active režimy podle požadavků na dostupnost.</li>
-    <li><strong>Redundance konektivity</strong> – více nezávislých tras a operátorů, lokální bufferování dat.</li>
-    <li><strong>Redundance dat</strong> – replikace konfigurací, verzování plánů, oddělení provozních a analytických dat.</li>
-  </ul>
-
-  <h3>3.3 Provozní odolnost (Operational Resilience)</h3>
-  <ul>
-    <li><strong>Graceful degradation</strong> – přechod do konzervativních režimů při omezení zdrojů.</li>
-    <li><strong>Prioritizace kritických funkcí</strong> – zdravotnictví, voda, bezpečnost, klíčová výroba.</li>
-    <li><strong>Režimy izolace</strong> – ostrovní provoz, sektorové oddělení infrastruktury.</li>
-    <li><strong>Black-start a řízená obnova</strong> – postupné připojování zátěží podle stability a priorit.</li>
-    <li><strong>Provozní guardrails</strong> – hard bezpečnostní limity a soft optimalizační limity.</li>
-  </ul>
-<section>
-  <h2>SSCC – Bezpečnost, governance a provozní řízení</h2>
-
-  <h3>4.1 Role a odpovědnosti</h3>
-  <ul>
-    <li><strong>Operátor infrastruktury</strong> – dohled v reálném čase, řešení incidentů, přechody do bezpečných režimů.</li>
-    <li><strong>Systémový dispečer / koordinátor</strong> – schvalování a úprava taktických plánů, řešení konfliktů mezi lokalitami.</li>
-    <li><strong>Správce politik a modelů</strong> – nastavení optimalizačních cílů, krizových scénářů a digitálních dvojčat.</li>
-    <li><strong>Bezpečnostní a compliance role</strong> – audit přístupů, změn konfigurací a regulatorní dohled.</li>
-    <li><strong>Integrátoři třetích stran</strong> – přístup výhradně přes API s omezenými oprávněními.</li>
-  </ul>
-
-  <h3>4.2 Řízení přístupů</h3>
-  <ul>
-    <li>Role-based access control (RBAC).</li>
-    <li>Jednoznačná identita každého zařízení.</li>
-    <li>Oddělení monitorovacích a řídicích oprávnění.</li>
-    <li>Princip čtyř očí pro kritické změny.</li>
-  </ul>
-
-  <h3>4.3 Change Management</h3>
-  <ul>
-    <li>Verzování konfigurací a politik.</li>
-    <li>Testování na digitálním dvojčeti před nasazením.</li>
-    <li>Postupné rollouty na vybrané lokality.</li>
-    <li>Shadow mode pro nové modely.</li>
-  </ul>
-
-  <h3>4.4 Auditovatelnost a vysvětlitelnost</h3>
-  <ul>
-    <li>Ukládání rozhodovacího kontextu.</li>
-    <li>Archivace výstupů optimalizace.</li>
-    <li>Evidence skutečně provedených zásahů.</li>
-    <li>Podpora regulatorních a forenzních auditů.</li>
-  </ul>
-
-  <h3>4.5 Krizové režimy</h3>
-  <ul>
-    <li>Předdefinované spouštěcí podmínky.</li>
-    <li>Jasně dané priority a povolené akce.</li>
-    <li>Automatická nebo potvrzená aktivace.</li>
-    <li>Řízený návrat do normálního provozu.</li>
-  </ul>
-
-  <h3>4.6 Vztah ke stávajícím systémům</h3>
-  <ul>
-    <li>SSCC je koordinační a optimalizační nadstavba, nikoli náhrada certifikovaných ochran.</li>
-    <li>Respektování e
-<section>
-  <h2>SSCC – Vazba architektury na aplikační scénáře</h2>
-
-  <p>Tato kapitola ukazuje, že jednotlivé aplikační scénáře nepředstavují různé systémy, ale různé konfigurace téhož řídicího a optimalizačního jádra SSCC. Rozdíly jsou zejména v typech připojených fyzických systémů, časových měřítkách řízení, vahách optimalizačních kritérií a definici krizových režimů.</p>
-
-  <h3>5.1 Průmyslové areály a výrobní podniky</h3>
-  <p><strong>Dominantní cíle:</strong> stabilita výroby, minimalizace prostojů, řízení energetických špiček, ochrana citlivých technologií.</p>
-  <p><strong>Aktivní moduly:</strong> Local Autonomy &amp; Safety, Resource Orchestration, Prediction &amp; Simulation, Optimization &amp; Policy Engine.</p>
-  <p><strong>Typické režimy:</strong> řízení odběrových špiček, ostrovní provoz při výpadku sítě, koordinace údržby s dostupností energie.</p>
-
-  <h3>5.2 Města a městská infrastruktura</h3>
-  <p><strong>Dominantní cíle:</strong> kontinuita služeb, bezpečnost obyvatel, řízení zátěže infrastruktury, podpora nízkoemisního provozu.</p>
-  <p><strong>Aktivní moduly:</strong> Coordination Layer, Interoperability &amp; API, Optimization &amp; Policy Engine, krizové režimy.</p>
-  <p><strong>Typické režimy:</strong> řízení nabíjení EV a MHD, prioritizace kritických budov, řízené omezení spotřeby při nedostatku energie.</p>
-
-  <h3>5.3 OZE parky a hybridní energetické systémy</h3>
-  <p><strong>Dominantní cíle:</strong> maximalizace využití výroby, stabilita sítě, efektivní práce s akumulací.</p>
-  <p><strong>Aktivní moduly:</strong> Prediction &amp; Simulation, Resource Orchestration, Local Autonomy, Optimization &amp; Policy Engine.</p>
-  <p><strong>Typické režimy:</strong> vyrovnávání fluktuací výroby, koordinace více zdrojů, optimalizace toků energie.</p>
-
-  <h3>5.4 Ostrovy a izolované soustavy</h3>
-  <p><strong>Dominantní cíle:</strong> soběstačnost, extrémní provozní spolehlivost, minimalizace dovozu paliv.</p>
-  <p><strong>Aktivní moduly:</strong> Local Autonomy &amp; Safety, Prediction &amp; Simulation, Optimization &amp; Policy Engine, krizové režimy.</p>
-  <p><strong>Typické režimy:</strong> black-start jako rutinní procedura, dynamické přepínání zdrojů, dlouhodobé plánování spotřeby.</p>
-
-  <h3>5.5 Logistická centra a dopravní uzly</h3>
-  <p><strong>Dominantní cíle:</strong> plynulost toků, sladění energie, kapacit a časových oken, minimalizace zpoždění.</p>
-  <p><strong>Aktivní moduly:</strong> Resource Orchestration, Prediction &amp; Simulation, Coordination Layer, Optimization &amp; Policy Engine.</p>
-  <p><strong>Typické režimy:</strong> řízení nabíjení flotil, přesměrování toků při výpadcích, sladění energetických špiček s provozem.</p>
-
-  <h3>5.6 Zemědělství a potravinové systémy</h3>
-  <p><strong>Dominantní cíle:</strong> stabilita produkce, minimalizace ztrát, efektivní využití vody a energie.</p>
-  <p><strong>Aktivní moduly:</strong> Prediction &amp; Simulation, Resource Orchestration, Local Autonomy &amp; Safety, Optimization &amp; Policy Engine.</p>
-  <p><strong>Typické režimy:</strong> adaptivní zavlažování, řízení chlazení skladů podle dostupnosti energie, koordinace zpracování a distribuce.</p>
-
-  <h3>Shrnutí role SSCC napříč scénáři</h3>
-  <ol>
-    <li><strong>Stabilizace provozu v reálném čase</strong> – lokální bezpečnost, ochrana infrastruktury, autonomní reakce.</li>
-    <li><strong>Koordinace zdrojů napříč subsystémy</strong> – energie, výroba, doprava a zásoby jsou řízeny jako celek.</li>
-    <li><strong>Optimalizace celého systému v čase</strong> – souhra technologií podle aktuálních i predikovaných podmínek.</li>
-  </ol>
+    <p>
+      Na rozdíl od klasických soustav, které pouze balancují výkon v hodinovém měřítku, SSCC pracuje s energetickými
+      i hmotnostními toky. Umožňuje ukládat energii v chemických médiích (NH₃, H₂, uzavřené CO₂–cykly) a následně ji
+      využívat v době, kdy ji síť nejvíce potřebuje – v řádu dnů, týdnů i měsíců.
+    </p>
+  </div>
 </section>
 
 <!-- PROVOZNÍ REŽIMY -->
 <section class="section">
-    <div class="container">
-        <h2>Provozní režimy SSCC</h2>
+  <div class="container">
+    <h2>Provozní režimy SSCC</h2>
 
-        <p class="section-lead">
-            Systém je navržen tak, aby byl schopen flexibilně měnit tok energie a hmoty v závislosti na
-            aktuální situaci – od přebytků výroby z OZE po kritické nedostatky v síti.
+    <p class="section-lead">
+      Systém je navržen tak, aby byl schopen flexibilně měnit tok energie a hmoty v závislosti na
+      aktuální situaci – od přebytků výroby z OZE po kritické nedostatky v síti.
+    </p>
+
+    <div class="benefits-grid">
+      <div class="benefit-box">
+        <h3>Režim akumulace</h3>
+        <p>
+          V dobách přebytků výroby SSCC převádí elektřinu do chemických médií a tepla. Tím snižuje
+          nutnost omezovat výkon OZE a zvyšuje využití instalovaného výkonu.
         </p>
+      </div>
 
-        <div class="benefits-grid">
+      <div class="benefit-box">
+        <h3>Režim podpory sítě</h3>
+        <p>
+          Při nízké výrobě nebo výpadcích SSCC dodává elektřinu a teplo zpět do sítě, případně
+          přímo k průmyslovým odběratelům. Systém se chová jako řízený zdroj základního nebo
+          špičkového výkonu.
+        </p>
+      </div>
 
-            <div class="benefit-box">
-                <h3>Režim akumulace</h3>
-                <p>
-                    V dobách přebytků výroby SSCC převádí elektřinu do chemických médií a tepla. Tím snižuje
-                    nutnost omezovat výkon OZE a zvyšuje využití instalovaného výkonu.
-                </p>
-            </div>
+      <div class="benefit-box">
+        <h3>Režim průmyslové výroby</h3>
+        <p>
+          V průmyslových lokalitách může SSCC prioritně vyrábět chemické produkty (NH₃, H₂, CO₂-streamy)
+          a zbytkovou energii využít pro stabilizaci lokální sítě nebo pro vytápění.
+        </p>
+      </div>
 
-            <div class="benefit-box">
-                <h3>Režim podpory sítě</h3>
-                <p>
-                    Při nízké výrobě nebo výpadcích SSCC dodává elektřinu a teplo zpět do sítě, případně
-                    přímo k průmyslovým odběratelům. Systém se chová jako řízený zdroj základního nebo
-                    špičkového výkonu.
-                </p>
-            </div>
-
-            <div class="benefit-box">
-                <h3>Režim průmyslové výroby</h3>
-                <p>
-                    V průmyslových lokalitách může SSCC prioritně vyrábět chemické produkty (NH₃, H₂, CO₂-streamy)
-                    a zbytkovou energii využít pro stabilizaci lokální sítě nebo pro vytápění.
-                </p>
-            </div>
-
-            <div class="benefit-box">
-                <h3>Ostrovní a nouzový provoz</h3>
-                <p>
-                    Systém lze navrhnout tak, aby v případě krizových stavů fungoval v ostrovním režimu a
-                    udržel klíčovou infrastrukturu v provozu i při delších výpadcích přenosové soustavy.
-                </p>
-            </div>
-
-        </div> 
+      <div class="benefit-box">
+        <h3>Ostrovní a nouzový provoz</h3>
+        <p>
+          Systém lze navrhnout tak, aby v případě krizových stavů fungoval v ostrovním režimu a
+          udržel klíčovou infrastrukturu v provozu i při delších výpadcích přenosové soustavy.
+        </p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- PROČ ŘÍZENÍ „SYSTEM-OF-SYSTEMS“ -->
+<section class="section">
+  <div class="container">
+    <h2>Proč je SSCC řízen jako „system-of-systems“</h2>
+
+    <p>
+      Moderní infrastruktura již nefunguje jako soubor izolovaných sektorů, ale jako vzájemně provázaný ekosystém, ve kterém změna v jedné oblasti okamžitě ovlivňuje ostatní. Výroba, energetika, doprava, logistika, vodní hospodářství a kritické služby jsou stále více závislé na stejných zdrojích a sdílené kapacitě.
+    </p>
+
+    <p>
+      Tradiční řídicí systémy jsou optimalizovány pro jednotlivé domény – například pro stabilitu elektrické sítě, plynulost výroby nebo řízení dopravy. Chybí jim však schopnost koordinovat rozhodování napříč sektory a lokalitami, a tím řešit konflikty mezi konkurenčními cíli, jako jsou náklady, emise, dostupnost zdrojů a provozní bezpečnost.
+    </p>
+
+    <p>SSCC je proto navržen jako systém nad systémy, který:</p>
+    <ul>
+      <li>propojuje existující řídicí a informační systémy do jednotného rozhodovacího rámce,</li>
+      <li>umožňuje sdílení flexibility mezi sektory (např. mezi výrobou, akumulací a spotřebou),</li>
+      <li>optimalizuje chování celku místo dílčích částí,</li>
+      <li>podporuje koordinované krizové řízení při rozsáhlých incidentech.</li>
+    </ul>
+
+    <p>
+      Tento přístup je klíčový zejména v prostředí s vysokým podílem obnovitelných zdrojů, elektrifikací dopravy a rostoucí volatilitou poptávky i výroby, kde již nestačí lokální optimalizace jednotlivých subsystémů.
+    </p>
+  </div>
+</section>
+
+<!-- ŘÍZENÍ A KOORDINACE (CONTROL CENTER) -->
+<section class="section">
+  <div class="container">
+    <h2>Řízení a koordinace systému (SSCC Control Center)</h2>
+
+    <p>
+      Následující kapitola popisuje řídicí a koordinační vrstvu SSCC, která propojuje stávající řídicí systémy (SCADA, EMS, BMS, DCS), sjednocuje rozhodování napříč lokalitami a optimalizuje celek podle provozních a strategických cílů.
+    </p>
+
+    <h3>Přehled architektury (vrstvy)</h3>
+    <p>Řídicí architektura je koncipována jako vícevrstvý kyber-fyzický systém s lokální autonomií a centrální optimalizací:</p>
+
+    <ol>
+      <li>
+        <strong>Fyzická vrstva (Field Layer)</strong>
+        <ul>
+          <li>výrobní technologie, energetické zdroje, úložiště, sítě, vozidla, budovy</li>
+          <li>senzory, měřidla, akční členy, PLC, BMS, EMS</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Lokální řídicí vrstva – Edge (Local Control Layer)</strong>
+        <ul>
+          <li>lokální řadiče, gateway, mikrodatacentra</li>
+          <li>řízení v reálném čase, bezpečné provozní režimy, ostrovní provoz</li>
+          <li>schopnost autonomního fungování bez připojení k centrále</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Koordinační vrstva (Coordination Layer)</strong>
+        <ul>
+          <li>agregace dat z více lokalit a subsystémů</li>
+          <li>vyrovnávání zátěží a přesměrování toků energie, materiálu a dopravy</li>
+          <li>regionální a sektorová optimalizace</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Centrální optimalizační vrstva (System Intelligence Layer)</strong>
+        <ul>
+          <li>predikce, simulace scénářů a plánování provozu</li>
+          <li>optimalizace nákladů, emisí a provozní spolehlivosti</li>
+          <li>strategické řízení systému a krizové plánování</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Aplikační a integrační vrstva (Application &amp; Integration Layer)</strong>
+        <ul>
+          <li>rozhraní API pro města, podniky, operátory a krizové řízení</li>
+          <li>dashboardy, reporting, integrace se stávajícími systémy</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h3>Hlavní funkční moduly</h3>
+
+    <h4>Sběr dat a telemetrie (Data Acquisition &amp; Telemetry)</h4>
+    <ul>
+      <li>sběr dat z energetiky (výroba, spotřeba, kvalita sítě)</li>
+      <li>sběr dat z výroby, logistiky a dopravy</li>
+      <li>sběr dat z environmentálních a provozních senzorů</li>
+      <li>normalizace dat a časová synchronizace</li>
+      <li>lokální bufferování při výpadku spojení</li>
+    </ul>
+
+    <h4>Lokální autonomie a bezpečnost (Local Autonomy &amp; Safety)</h4>
+    <ul>
+      <li>lokální rozhodování v řádu milisekund až sekund</li>
+      <li>bezpečnostní provozní režimy:
+        <ul>
+          <li>black-start (řízené spuštění po výpadku)</li>
+          <li>ostrovní provoz (island mode)</li>
+          <li>nouzové odstávky a ochranné zásahy</li>
+        </ul>
+      </li>
+      <li>ochrana infrastruktury, technologií i osob</li>
+    </ul>
+
+    <h4>Orchestrace zdrojů (Resource Orchestration)</h4>
+    <ul>
+      <li>koordinace využití energie, výkonu zařízení, kapacit výroby, skladů a přepravy</li>
+      <li>řešení konfliktů mezi subsystémy (např. výroba vs. energetika)</li>
+      <li>slaďování provozních plánů napříč sektory</li>
+    </ul>
+
+    <h4>Predikce a simulace (Prediction &amp; Simulation)</h4>
+    <ul>
+      <li>krátkodobé i dlouhodobé predikce poptávky, výroby z obnovitelných zdrojů, poruch a dopravních toků</li>
+      <li>digitální dvojčata klíčových částí infrastruktury</li>
+      <li>testování provozních scénářů typu „co když“</li>
+    </ul>
+
+    <h4>Optimalizace a řídicí politiky (Optimization &amp; Policy Engine)</h4>
+    <ul>
+      <li>vícekriteriální optimalizace (náklady, emise, spolehlivost, bezpečnost)</li>
+      <li>převod strategických cílů na konkrétní provozní pravidla</li>
+      <li>dynamické přizpůsobování politik řízení podle situace</li>
+    </ul>
+
+    <h4>Interoperabilita a integrační rozhraní (Interoperability &amp; API Gateway)</h4>
+    <ul>
+      <li>standardizovaná rozhraní pro dispečinky, průmyslové systémy, městské platformy a krizové řízení</li>
+      <li>řízení přístupových práv a autentizace</li>
+      <li>auditovatelnost integrací a přenosů dat</li>
+    </ul>
+
+    <!-- Sem vlož blok "Tok dat a řízení v SSCC" (už máš hotový) -->
+  </div>
+</section>
+
+<!-- NASAZENÍ A PROVOZ -->
+<section class="section">
+  <div class="container">
+    <h2>Nasazení a provoz</h2>
+
+    <h3>Implementační model</h3>
+    <!-- sem vlož svůj blok "Implementační model SSCC" -->
+
+    <h3>Škálování, redundance a odolnost</h3>
+    <!-- sem vlož svůj blok "Škálování, redundance a odolnost" -->
+
+    <h3>Bezpečnost a governance</h3>
+    <!-- sem vlož svůj blok "Bezpečnost, governance a provozní řízení" (a oprav useknutý řádek) -->
+  </div>
+</section>
+
+<!-- POUŽITÍ V PRAXI -->
+<section class="section">
+  <div class="container">
+    <h2>Použití v praxi</h2>
+    <!-- sem vlož "Vazba architektury na aplikační scénáře" -->
+  </div>
 </section>
 
 <!-- ZÁVĚR / CTA -->
 <section class="cta-section">
-    <div class="container">
-        <h2>SSCC jako platforma pro stabilní energetiku</h2>
-
-        <p>
-            SSCC není jen jeden projekt, ale škálovatelná platforma – od jednotlivých energetických uzlů
-            až po komplexní regionální infrastruktury. Lze ji integrovat do stávajících provozů i plánovat
-            jako základ nových průmyslových zón.
-        </p>
-
-    </div>
+  <div class="container">
+    <h2>SSCC jako platforma pro stabilní energetiku</h2>
+    <p>
+      SSCC není jen jeden projekt, ale škálovatelná platforma – od jednotlivých energetických uzlů
+      až po komplexní regionální infrastruktury. Lze ji integrovat do stávajících provozů i plánovat
+      jako základ nových průmyslových zón.
+    </p>
+  </div>
 </section>
 
 </body>
