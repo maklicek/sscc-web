@@ -49,14 +49,14 @@
 <section class="page-header section">
   <div class="container">
 
-    <p class="small-note">
-        SSCC je navrženo jako System-of-Systems: síť autonomních uzlů,
-z nichž každý obsahuje vlastní fyzické technologie a lokální řízení,
-zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstvou.
-      Tato architektura přímo navazuje na problémy popsané ve části
-      <a href="smysl-sscc.html">Smysl SSCC</a> — variabilitu výroby, časový nesoulad,
-      krizové režimy a potřebu dlouhodobé energetické rezervy.
-    </p>
+<p class="small-note">
+  SSCC je navrženo jako <strong>System-of-Systems</strong>: síť autonomních uzlů, z nichž každý má vlastní
+  fyzické technologie a lokální řízení (Edge). Spolupráci uzlů zajišťují nadřazené vrstvy
+  <strong>koordinace</strong> a <strong>centrální optimalizace</strong>.
+  Tato architektura přímo navazuje na problémy popsané ve části
+  <a href="smysl-sscc.html">Smysl SSCC</a> — variabilitu výroby, časový nesoulad, krizové režimy a potřebu
+  dlouhodobé energetické rezervy.
+</p>
 
     <h1>SSCC – Integrovaný energetický systém</h1>
 
@@ -89,16 +89,16 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
   <div class="container">
     <h2>Provozní režimy SSCC</h2>
 
-    <p class="section-lead">
-        <p class="section-lead">
+<p class="section-lead">
   SSCC je navržen jako <strong>vícevrstvý System-of-Systems</strong>, tvořený
   energetickými uzly, které jsou propojeny společnou datovou a řídicí vrstvou.
   Nejde o jeden centrální zdroj, ale o koordinovanou síť technologií a lokalit.
 </p>
 
-      Systém je navržen tak, aby byl schopen flexibilně měnit tok energie a hmoty v závislosti na
-      aktuální situaci – od přebytků výroby z OZE po kritické nedostatky v síti.
-    </p>
+<p>
+  Systém je navržen tak, aby byl schopen flexibilně měnit tok energie a hmoty v závislosti na
+  aktuální situaci – od přebytků výroby z OZE po kritické nedostatky v síti.
+</p>
 
     <div class="benefits-grid">
       <div class="benefit-box">
@@ -140,7 +140,7 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
 <!-- PROČ „SYSTEM-OF-SYSTEMS“ (most k řízení) -->
 <section class="section">
   <div class="container">
-    <h2>Proč je SSCC řízen jako „system-of-systems“</h2>
+  <h2>Proč je SSCC navržen jako systém nad systémy (System-of-Systems)</h2>
 
     <p>
       Moderní infrastruktura již nefunguje jako soubor izolovaných sektorů, ale jako vzájemně provázaný ekosystém, ve kterém změna v jedné oblasti okamžitě ovlivňuje ostatní. Výroba, energetika, doprava, logistika, vodní hospodářství a kritické služby jsou stále více závislé na stejných zdrojích a sdílené kapacitě.
@@ -171,10 +171,8 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
 <!-- ŘÍZENÍ A KOORDINACE (Control Center) -->
 <section class="section">
   <div class="container">
-    <h2>Řízení a koordinace systému (SSCC Control Center)</h2>
-
     <p>
-      SSCC Control Center (System-of-Systems Control Center) je koordinační a optimalizační řídicí vrstva, která propojuje stávající řídicí systémy (SCADA, EMS, BMS, DCS), slaďuje jejich chování a optimalizuje provoz napříč lokalitami a sektory.
+    SSCC Control Center je koordinační a optimalizační řídicí vrstva, která propojuje stávající řídicí systémy (SCADA, EMS, BMS, DCS), slaďuje jejich chování a optimalizuje provoz napříč lokalitami a sektory.
     </p>
 
     <h3>Přehled architektury (vrstvy)</h3>
@@ -238,8 +236,14 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
     </div>
   </div>
 </section>
+</ol>
 
-    <h2>Role řízení v architektuře SSCC</h2>
+<section class="section section-compact">
+
+</section>
+
+<h3>Hlavní funkční moduly</h3>
+
 
     <p class="section-lead">
       Architektura SSCC není statická. Jednotlivé vrstvy a technologické moduly
@@ -294,6 +298,8 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
     </ul>
 
     <h4>Orchestrace zdrojů (Resource Orchestration)</h4>
+    <li><strong>orchestrace a dispatch</strong> – převod plánů do konkrétních setpointů, limitů a priorit pro uzly a zařízení</li>
+
     <ul>
       <li>koordinace využití energie, výkonu zařízení, kapacit výroby, skladů a přepravy</li>
       <li>řešení konfliktů mezi subsystémy (např. výroba vs. energetika)</li>
@@ -594,7 +600,9 @@ zatímco jejich spolupráce je zajištěna koordinační a optimalizační vrstv
     </p>
   </div>
 </section>
-<a href="technologie.html" class="btn-primary">Jak je systém realizován technologicky</a>
+  <a href="technologie.html" class="btn-primary">Jak je systém realizován technologicky</a>
+  </div>
+</section>
 
 </body>
 </html>
