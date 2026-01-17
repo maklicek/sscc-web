@@ -558,3 +558,7 @@ ul ul, ul ol, ol ul, ol ol{
 
 /* DEBUG: pokud tohle nefunguje, CSS je rozbité výše */
 html{ outline: 0px solid transparent; }
+/* DEBUG – dočasně */
+body{ outline: 4px solid red; }
+
+
