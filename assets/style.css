@@ -556,9 +556,9 @@ ul ul, ul ol, ol ul, ol ol{
   padding-left: 22px;
 }
 
-/* DEBUG: pokud tohle nefunguje, CSS je rozbité výše */
-html{ outline: 0px solid transparent; }
-/* DEBUG – dočasně */
-body{ outline: 4px solid red; }
+/* Anchor offset pro fixní hlavičku */
+section[id]{
+  scroll-margin-top: 120px; /* uprav dle výšky headeru */
+}
 
 
