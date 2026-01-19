@@ -293,67 +293,70 @@
         <li>podporuje koordinované krizové řízení při rozsáhlých incidentech.</li>
       </ul>
     </div>
-  </section>
+  </section><!-- ŘÍZENÍ A KOORDINACE -->
+<section class="section">
+  <div class="container">
+    <h2>Řízení a koordinace systému (SSCC Control Center)</h2>
 
-  <!-- ŘÍZENÍ A KOORDINACE -->
-  <section class="section">
-    <div class="container">
-      <h2>Řízení a koordinace systému (SSCC Control Center)</h2>
+    <p>
+      SSCC Control Center je <strong>koordinační a optimalizační řídicí vrstva</strong>, která propojuje stávající
+      řídicí systémy (SCADA, EMS, BMS, DCS), sjednocuje jejich provozní obraz a zajišťuje
+      <strong>orchestraci a dispečerské řízení (dispatch)</strong> napříč uzly, technologiemi a sektory.
+    </p>
 
-      <p>
-        SSCC Control Center je koordinační a optimalizační řídicí vrstva, která propojuje stávající řídicí systémy
-        (SCADA, EMS, BMS, DCS), slaďuje jejich chování a optimalizuje provoz napříč lokalitami a sektory.
-      </p>
+    <h3>Přehled architektury (vrstvy)</h3>
+    <p>
+      Řídicí architektura je koncipována jako vícevrstvý kyber-fyzický systém s lokální autonomií (Edge)
+      a nadřazenou koordinací a centrální optimalizací:
+    </p>
 
-      <h3>Přehled architektury (vrstvy)</h3>
-      <p>
-        Řídicí architektura je koncipována jako vícevrstvý kyber-fyzický systém s lokální autonomií a centrální optimalizací:
-      </p>
+    <ol>
+      <li>
+        <strong>Fyzická vrstva (Field)</strong>
+        <ul>
+          <li>výrobní technologie, energetické zdroje, úložiště, sítě, vozidla, budovy</li>
+          <li>senzory, měřidla, akční členy, PLC, BMS, EMS</li>
+        </ul>
+      </li>
 
-      <ol>
-        <li>
-          <strong>Fyzická vrstva (Field Layer)</strong>
-          <ul>
-            <li>výrobní technologie, energetické zdroje, úložiště, sítě, vozidla, budovy</li>
-            <li>senzory, měřidla, akční členy, PLC, BMS, EMS</li>
-          </ul>
-        </li>
+      <li>
+        <strong>Lokální řídicí vrstva – Edge (Local Control)</strong>
+        <ul>
+          <li>lokální řadiče, gateway, mikrodatacentra</li>
+          <li>řízení v reálném čase, bezpečné provozní režimy, ostrovní provoz</li>
+          <li>schopnost autonomního fungování bez připojení k centrále</li>
+        </ul>
+      </li>
 
-        <li>
-          <strong>Lokální řídicí vrstva – Edge (Local Control Layer)</strong>
-          <ul>
-            <li>lokální řadiče, gateway, mikrodatacentra</li>
-            <li>řízení v reálném čase, bezpečné provozní režimy, ostrovní provoz</li>
-            <li>schopnost autonomního fungování bez připojení k centrále</li>
-          </ul>
-        </li>
+      <li>
+        <strong>Koordinační vrstva (Coordination)</strong>
+        <ul>
+          <li>agregace dat z více lokalit a subsystémů</li>
+          <li>vyrovnávání zátěží a přesměrování toků energie, materiálu a dopravy</li>
+          <li>regionální a sektorová optimalizace</li>
+        </ul>
+      </li>
 
-        <li>
-          <strong>Koordinační vrstva (Coordination Layer)</strong>
-          <ul>
-            <li>agregace dat z více lokalit a subsystémů</li>
-            <li>vyrovnávání zátěží a přesměrování toků energie, materiálu a dopravy</li>
-            <li>regionální a sektorová optimalizace</li>
-          </ul>
-        </li>
+      <li>
+        <strong>Centrální optimalizace (System Intelligence)</strong>
+        <ul>
+          <li>predikce, simulace scénářů a plánování provozu</li>
+          <li>optimalizace nákladů, emisí a provozní spolehlivosti</li>
+          <li>strategické řízení systému a krizové plánování</li>
+        </ul>
+      </li>
 
-        <li>
-          <strong>Centrální optimalizační vrstva (System Intelligence Layer)</strong>
-          <ul>
-            <li>predikce, simulace scénářů a plánování provozu</li>
-            <li>optimalizace nákladů, emisí a provozní spolehlivosti</li>
-            <li>strategické řízení systému a krizové plánování</li>
-          </ul>
-        </li>
+      <li>
+        <strong>Aplikační a integrační vrstva (Application &amp; Integration)</strong>
+        <ul>
+          <li>rozhraní API pro města, podniky, operátory a krizové řízení</li>
+          <li>dashboardy, reporting a integrace se stávajícími systémy</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
 
-        <li>
-          <strong>Aplikační a integrační vrstva (Application &amp; Integration Layer)</strong>
-          <ul>
-            <li>rozhraní API pro města, podniky, operátory a krizové řízení</li>
-            <li>dashboardy, reporting a integrace se stávajícími systémy</li>
-          </ul>
-        </li>
-      </ol>
 
       <div class="callout">
         <p><strong>Jak se orchestrace promítá do řízení:</strong></p>
