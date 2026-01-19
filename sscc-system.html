@@ -56,15 +56,16 @@
   <!-- STRUKTURA SSCC (callout) -->
   <section class="section section-compact">
     <div class="container">
-      <div class="callout">
-        <p><strong>Jak je SSCC strukturován:</strong></p>
-        <ul>
-          <li><strong>Uzel</strong> – fyzická lokalita s technologiemi výroby, konverze, akumulace a spotřeby,</li>
-          <li><strong>Vrstvy</strong> – Field → Edge → Coordination → System Intelligence → Application &amp; Integration,</li>
-          <li><strong>Orchestrace</strong> – koordinace provozu uzlů a technologií v čase (plány → setpointy, limity, priority),</li>
-          <li><strong>Síť uzlů</strong> – regionální nebo sektorová infrastruktura zvyšující odolnost a efektivitu.</li>
-        </ul>
-      </div>
+    <div class="callout">
+  <p><strong>Jak je SSCC strukturován:</strong></p>
+  <ul>
+    <li><strong>Uzel</strong> – fyzická lokalita s technologiemi výroby, konverze, akumulace a spotřeby,</li>
+    <li><strong>Vrstvy</strong> – Field → Edge → Coordination → System Intelligence → Application &amp; Integration,</li>
+    <li><strong>Orchestrace</strong> – koordinace a dispečerské řízení (dispatch): plány → setpointy, limity, priority,</li>
+    <li><strong>Síť uzlů</strong> – sdílení flexibility a koordinace mezi lokalitami pro vyšší odolnost a efektivitu.</li>
+  </ul>
+</div>
+
     </div>
   </section>
 
@@ -380,19 +381,21 @@
       <li>lokální bufferování při výpadku spojení</li>
     </ul>
 
-    <h3>Lokální autonomie a bezpečnost (Local Autonomy &amp; Safety)</h3>
-    <ul>
-      <li>lokální rozhodování v řádu milisekund až sekund</li>
-      <li>bezpečnostní provozní režimy: black-start, ostrovní provoz, nouzové odstávky</li>
-      <li>ochrana infrastruktury, technologií i osob</li>
-    </ul>
+   <h3>Lokální autonomie a bezpečnost (Local Autonomy &amp; Safety)</h3>
+<ul>
+  <li>lokální rozhodování v řádu ms–s</li>
+  <li>bezpečnostní režimy: <strong>black-start</strong>, <strong>island mode</strong>, <strong>emergency shutdown</strong></li>
+  <li>ochrana infrastruktury, technologií i osob</li>
+</ul>
 
-    <h3>Orchestrace zdrojů (Resource Orchestration)</h3>
-    <ul>
-      <li>koordinace energie, výkonu zařízení, kapacit výroby, skladů a přepravy</li>
-      <li>řešení konfliktů mezi subsystémy</li>
-      <li>plány → setpointy, limity, priority (dispatch)</li>
-    </ul>
+
+   <h3>Orchestrace zdrojů (Resource Orchestration)</h3>
+<ul>
+  <li>koordinace energie, výkonu zařízení a dostupných kapacit (výroba, úložiště, přeprava)</li>
+  <li>řešení konfliktů mezi subsystémy (např. výroba vs. energetika)</li>
+  <li><strong>dispatch (dispečerské řízení)</strong>: plány → setpointy, limity, priority v čase</li>
+</ul>
+
 
     <h3>Predikce a simulace (Prediction &amp; Simulation)</h3>
     <ul>
