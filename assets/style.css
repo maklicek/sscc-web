@@ -560,5 +560,6 @@ ul ul, ul ol, ol ul, ol ol{
 section[id]{
   scroll-margin-top: 120px; /* uprav dle výšky headeru */
 }
+#nasazeni { scroll-margin-top: 120px; }
 
 
