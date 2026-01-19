@@ -293,7 +293,9 @@
         <li>podporuje koordinované krizové řízení při rozsáhlých incidentech.</li>
       </ul>
     </div>
-  </section><!-- ŘÍZENÍ A KOORDINACE -->
+  </section>
+    
+    <!-- ŘÍZENÍ A KOORDINACE -->
 <section class="section">
   <div class="container">
     <h2>Řízení a koordinace systému (SSCC Control Center)</h2>
@@ -357,18 +359,19 @@
   </div>
 </section>
 
-
-      <div class="callout">
-        <p><strong>Jak se orchestrace promítá do řízení:</strong></p>
-        <ul>
-          <li><strong>Orchestrace</strong> převádí politiky a plány do setpointů, limitů a priorit pro uzly a zařízení.</li>
-          <li><strong>Koordinace</strong> řeší konflikty (např. výroba vs. energetika) a sdílí flexibilitu mezi subsystémy.</li>
-          <li><strong>System Intelligence</strong> pracuje s predikcemi a scénáři („co když“) pro taktický a strategický horizont.</li>
-        </ul>
-      </div>
-
+<!-- ROLE ORCHESTRACE A KOORDINACE -->
+<section class="section section-compact">
+  <div class="container">
+    <div class="callout">
+      <p><strong>Jak se orchestrace promítá do řízení:</strong></p>
+      <ul>
+        <li><strong>Orchestrace</strong> převádí politiky a plány do setpointů, limitů a priorit pro uzly a zařízení.</li>
+        <li><strong>Koordinace</strong> řeší konflikty (např. výroba vs. energetika) a sdílí flexibilitu mezi subsystémy.</li>
+        <li><strong>System Intelligence</strong> pracuje s predikcemi a scénáři („co když“) pro taktický a strategický horizont.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
 
  <!-- HLAVNÍ FUNKČNÍ MODULY -->
 <section class="section">
@@ -427,9 +430,132 @@
 <section class="section">
   <div class="container">
     <h2>Tok dat a řízení</h2>
+<!-- TOK DAT A ŘÍZENÍ -->
+<section class="section" id="toky">
+  <div class="container">
+    <h2>Tok dat a řízení</h2>
 
-    <!-- VLOŽ SEM SVŮJ CELÝ BLOK "Tok dat a řízení" -->
-    <!-- (ten, co už máš hotový, bez placeholder komentářů) -->
+    <p class="section-lead">
+      SSCC spojuje fyzické děje v uzlech s rozhodovací logikou ve vrstvách řízení.
+      Data tečou „nahoru“ (Field → Edge → Coordination → System Intelligence) a řízení teče „dolů“
+      (plány/politiky → koordinace → setpointy → akce v technologii).
+    </p>
+
+    <h3>Základní datové proudy (nahoru)</h3>
+    <p>
+      Systém sbírá několik typů dat, která se na Edge normalizují, časově synchronizují a při výpadku spojení bufferují:
+    </p>
+
+    <ol>
+      <li>
+        <strong>Telemetrie v reálném čase (ms–s)</strong>
+        <ul>
+          <li>měření (napětí, proud, frekvence, výkon, průtoky, tlak, teplota, vibrace)</li>
+          <li>stavové signály (on/off, porucha, alarm, limit)</li>
+          <li>události (odpojení, přepnutí, trip)</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Provozní data (sekundy–minuty)</strong>
+        <ul>
+          <li>spotřeby po celcích (linky, objekty, uzly)</li>
+          <li>dostupnost zařízení (derating, kapacita, SOC úložišť)</li>
+          <li>provozní režimy (síťový / ostrovní provoz, priority zátěží)</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Agregace a KPI (minuty–hodiny)</strong>
+        <ul>
+          <li>účinnosti, ztráty, výkonnost, emise, náklady</li>
+          <li>SLA a spolehlivostní metriky</li>
+          <li>kapacitní limity a přetížení</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Kontextová data (minuty–dny)</strong>
+        <ul>
+          <li>předpovědi počasí pro obnovitelné zdroje</li>
+          <li>ceny energií / tarify</li>
+          <li>plány výroby, logistická okna, servisní plán</li>
+          <li>incidenty a provozní omezení</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p class="small-note">
+      Tok dat: <strong>Field → Edge → Coordination → System Intelligence</strong>.
+      Edge zajišťuje filtraci, validaci, časové značky a lokální cache při výpadku konektivity.
+    </p>
+
+    <h3>Řídicí proudy (dolů)</h3>
+    <p>
+      Řízení se vrací zpět do uzlů ve vrstvách — od okamžitých ochran po plány a strategické politiky:
+    </p>
+
+    <ol>
+      <li>
+        <strong>Bezpečnostní zásahy (ms–s)</strong>
+        <ul>
+          <li>okamžité příkazy: odpojit, omezit, přepnout režim</li>
+          <li>provádí se lokálně (PLC/Edge) bez čekání na centrálu</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Setpointy a limity (sekundy–minuty)</strong>
+        <ul>
+          <li>žádaný výkon, rampy, proudové limity, cíle SOC</li>
+          <li>priority zátěží a limity zařízení</li>
+          <li>lokální validace proveditelnosti (accept/reject)</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Plány a dispatch (minuty–hodiny)</strong>
+        <ul>
+          <li>plán výroby/spotřeby, strategie úložišť</li>
+          <li>přesměrování toků (energie, materiál, logistika) dle kapacit</li>
+        </ul>
+      </li>
+
+      <li>
+        <strong>Strategické politiky (hodiny–dny)</strong>
+        <ul>
+          <li>váhy optimalizačních kritérií (náklady/emise/spolehlivost/bezpečnost)</li>
+          <li>krizové režimy a jejich spouštěcí podmínky</li>
+          <li>compliance a auditní pravidla</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p class="small-note">
+      Tok řízení: <strong>System Intelligence → Coordination → Edge → Field</strong>.
+      Coordination rozpadá plán na lokality, Edge jej převádí do setpointů a uplatní lokální guardrails.
+    </p>
+
+    <h3>Rozhodovací smyčky podle časových měřítek</h3>
+    <ul>
+      <li><strong>Ochranná smyčka (ms–s)</strong> – PLC/ochrany/Edge; fyzická bezpečnost a stabilita.</li>
+      <li><strong>Provozní smyčka (sekundy–minuty)</strong> – Edge + Coordination; režimy, odchylky, lokální vyrovnání.</li>
+      <li><strong>Taktická smyčka (minuty–hodiny)</strong> – Coordination + System Intelligence; dispatch, přesuny zátěže, práce s predikcí.</li>
+      <li><strong>Strategická smyčka (dny–měsíce)</strong> – cíle, SLA, krizové scénáře, plán kapacit.</li>
+    </ul>
+
+    <h3>Chování při výpadku spojení</h3>
+    <ul>
+      <li><strong>Edge odpojen bez incidentu:</strong> pokračuje podle posledního platného plánu, data se bufferují a po obnově dosynchronizují.</li>
+      <li><strong>Edge odpojen + incident:</strong> lokální autonomie a bezpečnost; shedování neprioritní zátěže, omezení výkonu, ostrovní režim/black-start dle potřeby.</li>
+      <li><strong>Obnovení spojení:</strong> reconciliation (skutečnost vs. plán), dohnání cílových stavů (např. SOC), auditní záznam.</li>
+    </ul>
+
+    <p>
+      <a class="toc-back" href="#top">Nahoru</a>
+    </p>
+  </div>
+</section>
 
   </div>
 </section>
