@@ -557,7 +557,12 @@ ul ul, ul ol, ol ul, ol ol{
 }
 
 /* Anchor offset pro (případně) vyšší hlavičku */
-section[id] { scroll-margin-top: 110px; }
+
+html { scroll-behavior: smooth; }
+.page-header{ padding: 44px 24px 40px; }
+
+/* Kotvy: hlavička je statická, offset není potřeba */
+section[id] { scroll-margin-top: 0; }
 
 html { scroll-behavior: smooth; }
 
