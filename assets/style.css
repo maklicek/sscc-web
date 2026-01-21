@@ -566,6 +566,8 @@ section[id]{
 
 /* nebo bezpečněji jen na sekce s ID */
 section[id]{ scroll-margin-top: 110px; }
+/* aby anchor (#toky, #nasazeni) neskákal pod fixní hlavičku */
+:target { scroll-margin-top: 110px; }
 
 
 
