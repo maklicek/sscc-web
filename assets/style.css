@@ -85,7 +85,7 @@ section[id], h2, h3 { scroll-margin-top: 120px; }
 }
 
 /* Page header (úvod podstránek) */
-.page-header{ padding: 110px 24px 50px; }
+.page-header{ padding:  32px 24px 36px; }
 .page-header h1{ font-size: 42px; margin-bottom: 28px; }
 .page-header p{ max-width: 820px; }
 .page-header .intro-note{
@@ -556,18 +556,11 @@ ul ul, ul ol, ol ul, ol ol{
   padding-left: 22px;
 }
 
-/* Anchor offset pro (případně) vyšší hlavičku */
+/* Anchor / scroll */
+html{ scroll-behavior: smooth; }
 
-html { scroll-behavior: smooth; }
-.page-header{ padding: 44px 24px 40px; }
-
-/* Kotvy: hlavička je statická, offset není potřeba */
-section[id] { scroll-margin-top: 0; }
-
-html { scroll-behavior: smooth; }
-
+/* Nižší odsazení úvodního bloku (statická hlavička) */
 .page-header{ padding: 32px 24px 36px; }
 
-.page-header + .section h2{
-  margin-top: 0;
-}
+/* První H2 hned po úvodu bez extra mezery */
+.page-header + .section h2{ margin-top: 0; }
