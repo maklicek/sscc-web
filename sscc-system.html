@@ -527,9 +527,13 @@
 
     <h3>Chování při výpadku spojení</h3>
     <ul>
-      <li><strong>Edge odpojen bez incidentu:</strong> pokračuje podle posledního platného plánu, data se bufferují a po obnově dosynchronizují.</li>
-      <li><strong>Edge odpojen + incident:</strong> lokální autonomie a bezpečnost; shedování neprioritní zátěže, omezení výkonu, ostrovní režim/black-start dle potřeby.</li>
-      <li><strong>Obnovení spojení:</strong> reconciliation (skutečnost vs. plán), dohnání cílových stavů (nap…)</li>
+   <ul>
+  <li><strong>Edge odpojen bez incidentu:</strong> pokračuje podle posledního platného plánu, data se bufferují a po obnově dosynchronizují.</li>
+  <li><strong>Edge odpojen + incident:</strong> lokální autonomie a bezpečnost; shedování neprioritní zátěže, omezení výkonu, ostrovní režim/black-start dle potřeby.</li>
+  <li><strong>Obnovení spojení:</strong> reconciliation (skutečnost vs. plán), dohnání cílových stavů (např. SOC), auditní záznam.</li>
+</ul>
+
+
     </ul>
 
     <p><a class="toc-back" href="#top">Nahoru</a></p>
@@ -537,7 +541,7 @@
 </section>
 
 <!-- NASAZENÍ A PROVOZ -->
-<a href="sscc-system.html#nasazeni">Nasazení</a>
+<section class="section" id="nasazeni">
   <div class="container">
     <h2>Nasazení a provoz</h2>
 
@@ -552,8 +556,11 @@
       <li><strong>Testování</strong> – FAT/SAT, ostrovní režimy, black-start scénáře, kyberbezpečnostní validace.</li>
       <li><strong>Uvedení do provozu</strong> – ramp-up, ladění politik, nastavení SLA, reporting.</li>
     </ol>
+
+    <p><a class="toc-back" href="#top">Nahoru</a></p>
   </div>
 </section>
+
 
 <!-- CTA -->
 <section class="cta-section">
