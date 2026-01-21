@@ -1,246 +1,256 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data &amp; AI řízení SSCC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data &amp; AI řízení SSCC</title>
 
-    <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 
 <body>
 
-<!-- HLAVIČKA -->
-<header class="site-header">
+  <!-- HLAVIČKA -->
+  <header class="site-header">
     <div class="header-left">
-        <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+      <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
 
-        <div class="brand-block">
-            <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
-            <div class="site-motto">
-                Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
-            </div>
+      <div class="brand-block">
+        <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
+        <div class="site-motto">
+          Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
         </div>
+      </div>
     </div>
 
     <nav class="main-nav">
-        <a href="index.html">Úvod</a>
-        <a href="smysl-sscc.html">Smysl SSCC</a>
-
-        <a href="sscc-system.html">SSCC systém</a>
-        <a href="technologie.html">Technologie</a>
-        <a href="aplikace.html">Aplikace</a>
-        <a href="data-ai.html" class="active">Data &amp; AI řízení</a>
-        <a href="odborne.html">Pro odborníky</a>
+      <a href="index.html">Úvod</a>
+      <a href="smysl-sscc.html">Smysl SSCC</a>
+      <a href="sscc-system.html">SSCC systém</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="aplikace.html">Aplikace</a>
+      <a href="data-ai.html" class="active">Data &amp; AI řízení</a>
+      <a href="odborne.html">Pro odborníky</a>
     </nav>
-</header>
+  </header>
 
+  <main id="top">
 
-<!-- ÚVODNÍ BLOK STRÁNKY -->
-<section class="page-header section">
-  <div class="container">
-      <p class="section-lead">
-  Datová a řídicí vrstva plní v SSCC roli <strong>orchestrace systému</strong>:
-  nerozhoduje o jednotlivých ventilech, ale o tom, jak mají celé uzly a technologie
-  pracovat v čase.
-</p>
-      </p>
-Datová vrstva neřídí jednotlivá zařízení, ale orchestruje chování subsystémů
-v čase tak, aby byly odděleny rychlé a pomalé procesy a zachována provozní integrita.
-      </p>
+    <!-- ÚVODNÍ BLOK STRÁNKY -->
+    <section class="page-header section">
+      <div class="container">
 
-    <h1>Data &amp; AI řízení SSCC</h1>
+        <h1>Data &amp; AI řízení SSCC</h1>
 
-    <p class="section-lead">
-      Aplikační scénáře SSCC se liší prostředím i provozními cíli, ale všechny mají společné jedno:
-      bez koordinovaného řízení by se z integrované infrastruktury stal jen soubor oddělených technologií.
-      Právě datová a řídicí vrstva zajišťuje, že se systém chová jako jeden celek.
-    </p>
+        <p class="section-lead">
+          Datová a řídicí vrstva plní v SSCC roli <strong>orchestrace systému</strong>:
+          nerozhoduje o jednotlivých ventilech, ale o tom, jak mají celé uzly a technologie
+          pracovat v čase.
+        </p>
 
-    <p>
-      Řízení SSCC nepracuje pouze s elektřinou, ale současně s toky tepla a chemických médií.
-      Musí sladit rychlé změny výkonu s pomalými procesy syntézy a se stavem zásobníků v řádu dnů až týdnů.
-      To vyžaduje prediktivní modely, optimalizaci v čase a průběžnou adaptaci na reálný stav infrastruktury.
-    </p>
+        <p>
+          Datová vrstva neřídí jednotlivá zařízení, ale orchestruje chování subsystémů v čase tak,
+          aby byly odděleny rychlé a pomalé procesy a zachována provozní integrita.
+        </p>
 
-    <p>
-      Cílem není jen minimalizace nákladů, ale udržení provozní integrity systému:
-      stabilita, bezpečnost, dostupnost výkonu a schopnost fungovat i v omezených režimech.
-    </p>
-  </div>
-</section>
+        <p class="section-lead">
+          Aplikační scénáře SSCC se liší prostředím i provozními cíli, ale všechny mají společné jedno:
+          bez koordinovaného řízení by se z integrované infrastruktury stal jen soubor oddělených technologií.
+          Právě datová a řídicí vrstva zajišťuje, že se systém chová jako jeden celek.
+        </p>
 
+        <p>
+          Řízení SSCC nepracuje pouze s elektřinou, ale současně s toky tepla a chemických médií.
+          Musí sladit rychlé změny výkonu s pomalými procesy syntézy a se stavem zásobníků v řádu dnů až týdnů.
+          To vyžaduje prediktivní modely, optimalizaci v čase a průběžnou adaptaci na reálný stav infrastruktury.
+        </p>
 
-<!-- DATOVÁ ARCHITEKTURA -->
-<section class="section">
-    <div class="container">
+        <p>
+          Cílem není jen minimalizace nákladů, ale udržení provozní integrity systému:
+          stabilita, bezpečnost, dostupnost výkonu a schopnost fungovat i v omezených režimech.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- DATOVÁ ARCHITEKTURA -->
+    <section class="section">
+      <div class="container">
         <h2>Datová architektura SSCC</h2>
 
         <p class="section-lead">
-            SSCC pracuje s daty ze senzorů, SCADA systémů, trhu s energiemi i externích předpovědí. Všechna data
-            jsou sjednocena v datovém modelu, který popisuje energetické i hmotnostní toky v systému.
+          SSCC pracuje s daty ze senzorů, SCADA systémů, trhu s energiemi i externích předpovědí. Všechna data
+          jsou sjednocena v datovém modelu, který popisuje energetické i hmotnostní toky v systému.
         </p>
 
         <div class="how-grid">
 
-            <div class="how-item">
-                <h3>Sběr a normalizace dat</h3>
-                <p>
-                    Senzory v technologických uzlech, měření výroby a spotřeby, ceny energií, počasí, stavy zásobníků –
-                    data z různých zdrojů se sjednocují do společného formátu. Součástí je kontrola kvality a
-                    filtrace chybných hodnot.
-                </p>
-            </div>
+          <div class="how-item">
+            <h3>Sběr a normalizace dat</h3>
+            <p>
+              Senzory v technologických uzlech, měření výroby a spotřeby, ceny energií, počasí, stavy zásobníků –
+              data z různých zdrojů se sjednocují do společného formátu. Součástí je kontrola kvality a
+              filtrace chybných hodnot.
+            </p>
+          </div>
 
-            <div class="how-item">
-                <h3>Integrační a datová vrstva</h3>
-                <p>
-                    Datová vrstva propojuje SCADA, ERP, prediktivní modely i externí služby. Umožňuje přístup
-                    v reálném čase pro operátory i algoritmy řízení a vytváří konzistentní „jediný zdroj pravdy“
-                    o stavu systému.
-                </p>
-            </div>
+          <div class="how-item">
+            <h3>Integrační a datová vrstva</h3>
+            <p>
+              Datová vrstva propojuje SCADA, ERP, prediktivní modely i externí služby. Umožňuje přístup
+              v reálném čase pro operátory i algoritmy řízení a vytváří konzistentní „jediný zdroj pravdy“
+              o stavu systému.
+            </p>
+          </div>
 
-            <div class="how-item">
-                <h3>Digitální dvojče SSCC</h3>
-                <p>
-                    Digitální twin simuluje chování systému v různých scénářích. Na základě provozních dat
-                    a fyzikálních modelů dokáže předpovídat chování médií, zásobníků i sítě a vyhodnocovat dopad
-                    plánovaných změn ještě před jejich nasazením.
-                    „Na stránce SSCC systém popisujeme architekturu řízení, zde se zaměřujeme na datový model, digitální dvojče a AI funkce.“
-                </p>
-            </div>
+          <div class="how-item">
+            <h3>Digitální dvojče SSCC</h3>
+            <p>
+              Digitální twin simuluje chování systému v různých scénářích. Na základě provozních dat
+              a fyzikálních modelů dokáže předpovídat chování médií, zásobníků i sítě a vyhodnocovat dopad
+              plánovaných změn ještě před jejich nasazením.
+            </p>
+            <p class="small-note">
+              Na stránce „SSCC systém“ popisujeme architekturu řízení; zde se zaměřujeme na datový model,
+              digitální dvojče a AI funkce.
+            </p>
+          </div>
 
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- AI A POKROČILÉ ŘÍZENÍ -->
-<section class="section">
-    <div class="container">
+    <!-- AI A POKROČILÉ ŘÍZENÍ -->
+    <section class="section">
+      <div class="container">
+
         <p class="small-note">
-  Orchestrace odděluje rychlé regulační smyčky zařízení od strategického řízení
-  energetických a hmotnostních toků v horizontu hodin až týdnů.
-</p>
+          Orchestrace odděluje rychlé regulační smyčky zařízení od strategického řízení
+          energetických a hmotnostních toků v horizontu hodin až týdnů.
+        </p>
 
         <h2>AI a pokročilé řízení provozu</h2>
 
         <p class="section-lead">
-            Umělá inteligence a pokročilé algoritmy řízení jsou v SSCC nadstavbou nad klasickým procesním řízením.
-            Neřídí jednotlivé ventily a čerpadla, ale rozhodují o tom, jak má celý systém pracovat v čase.
+          Umělá inteligence a pokročilé algoritmy řízení jsou v SSCC nadstavbou nad klasickým procesním řízením.
+          Neřídí jednotlivé ventily a čerpadla, ale rozhodují o tom, jak má celý systém pracovat v čase.
         </p>
 
         <div class="data-grid">
 
-            <div class="data-card">
-                <h3>Prediktivní řízení výroby a akumulace</h3>
-                <p>
-                    Algoritmy předpovídají výrobu z OZE, poptávku po energii a stav zásobníků. Na základě toho
-                    plánují, kdy akumulovat energii do chemických médií a kdy ji uvolnit zpět do sítě tak, aby
-                    byl výkon stabilní a ekonomicky optimalizovaný.
-                </p>
-            </div>
+          <div class="data-card">
+            <h3>Prediktivní řízení výroby a akumulace</h3>
+            <p>
+              Algoritmy předpovídají výrobu z OZE, poptávku po energii a stav zásobníků. Na základě toho
+              plánují, kdy akumulovat energii do chemických médií a kdy ji uvolnit zpět do sítě tak, aby
+              byl výkon stabilní a ekonomicky optimalizovaný.
+            </p>
+          </div>
 
-            <div class="data-card">
-                <h3>Optimalizace portfolia médií</h3>
-                <p>
-                    SSCC může pracovat s více médii zároveň (NH₃, H₂, CO₂–cykly, teplo). AI modely vyhodnocují,
-                    jaké médium je v daný okamžik nejvýhodnější využít pro akumulaci nebo dodávku – podle
-                    ceny, dostupné kapacity a budoucích potřeb.
-                </p>
-            </div>
+          <div class="data-card">
+            <h3>Optimalizace portfolia médií</h3>
+            <p>
+              SSCC může pracovat s více médii zároveň (NH₃, H₂, CO₂–cykly, teplo). AI modely vyhodnocují,
+              jaké médium je v daný okamžik nejvýhodnější využít pro akumulaci nebo dodávku – podle
+              ceny, dostupné kapacity a budoucích potřeb.
+            </p>
+          </div>
 
-            <div class="data-card">
-                <h3>Detekce anomálií a podpora operátorů</h3>
-                <p>
-                    Sledování odchylek od běžného chování zařízení i celé soustavy. Systém upozorňuje na anomálie,
-                    které mohou znamenat technický problém, kybernetický útok nebo neoptimální stav provozu
-                    a navrhuje operátorům možné kroky.
-                </p>
-            </div>
+          <div class="data-card">
+            <h3>Detekce anomálií a podpora operátorů</h3>
+            <p>
+              Sledování odchylek od běžného chování zařízení i celé soustavy. Systém upozorňuje na anomálie,
+              které mohou znamenat technický problém, kybernetický útok nebo neoptimální stav provozu
+              a navrhuje operátorům možné kroky.
+            </p>
+          </div>
 
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- CO Z TOHO MÁ PROVOZOVATEL -->
-<section class="section">
-    <div class="container">
+    <!-- CO Z TOHO MÁ PROVOZOVATEL -->
+    <section class="section">
+      <div class="container">
         <h2>Co přináší datově řízený provoz</h2>
 
         <p class="section-lead">
-            Datová vrstva a AI nejsou samoúčelné – jejich smyslem je zlepšit provozní a ekonomické parametry
-            celého systému a snížit rizika spojená s provozem energetiky a chemických technologií.
+          Datová vrstva a AI nejsou samoúčelné – jejich smyslem je zlepšit provozní a ekonomické parametry
+          celého systému a snížit rizika spojená s provozem energetiky a chemických technologií.
         </p>
 
         <div class="benefits-grid">
 
-            <div class="benefit-box">
-                <h3>Vyšší využití OZE</h3>
-                <p>
-                    Přebytky výroby nejsou omezovány, ale řízeně ukládány do médií a tepla. Systém dokáže využít
-                    instalovaný výkon obnovitelných zdrojů naplno.
-                </p>
-            </div>
+          <div class="benefit-box">
+            <h3>Vyšší využití OZE</h3>
+            <p>
+              Přebytky výroby nejsou omezovány, ale řízeně ukládány do médií a tepla. Systém dokáže využít
+              instalovaný výkon obnovitelných zdrojů naplno.
+            </p>
+          </div>
 
-            <div class="benefit-box">
-                <h3>Nižší provozní náklady</h3>
-                <p>
-                    Optimalizací toků energie a médií se snižují ztráty, provoz v neefektivních režimech
-                    i potřeba nárazových nákupů energie na trhu v době vysokých cen.
-                </p>
-            </div>
+          <div class="benefit-box">
+            <h3>Nižší provozní náklady</h3>
+            <p>
+              Optimalizací toků energie a médií se snižují ztráty, provoz v neefektivních režimech
+              i potřeba nárazových nákupů energie na trhu v době vysokých cen.
+            </p>
+          </div>
 
-            <div class="benefit-box">
-                <h3>Lepší plánování investic</h3>
-                <p>
-                    Díky datům a digitálnímu dvojčeti lze simulovat dopad nových technologií a rozšíření systému,
-                    a rozhodovat se tak na základě čísel, nikoli odhadů.
-                </p>
-            </div>
+          <div class="benefit-box">
+            <h3>Lepší plánování investic</h3>
+            <p>
+              Díky datům a digitálnímu dvojčeti lze simulovat dopad nových technologií a rozšíření systému,
+              a rozhodovat se tak na základě čísel, nikoli odhadů.
+            </p>
+          </div>
 
-            <div class="benefit-box">
-                <h3>Bezpečnější a transparentní provoz</h3>
-                <p>
-                    Kontinuální monitoring, historické záznamy a analýza anomálií zvyšují bezpečnost provozu
-                    a usnadňují plnění regulatorních i interních požadavků.
-                </p>
-            </div>
+          <div class="benefit-box">
+            <h3>Bezpečnější a transparentní provoz</h3>
+            <p>
+              Kontinuální monitoring, historické záznamy a analýza anomálií zvyšují bezpečnost provozu
+              a usnadňují plnění regulatorních i interních požadavků.
+            </p>
+          </div>
 
         </div>
-    </div>
-</section>
+      </div>
+    </section>
+
     <!-- MOST: DATA & AI → PRO ODBORNÍKY -->
-<section class="section section-compact">
-  <div class="container">
+    <section class="section section-compact">
+      <div class="container">
 
-    <h2>Technické limity a návrhové otázky</h2>
+        <h2>Technické limity a návrhové otázky</h2>
 
-    <p>
-      Datové a řídicí modely musí respektovat fyzikální, chemické a procesní limity
-      jednotlivých technologií. Návrh SSCC proto vyžaduje detailní technickou analýzu.
-    </p>
+        <p>
+          Datové a řídicí modely musí respektovat fyzikální, chemické a procesní limity
+          jednotlivých technologií. Návrh SSCC proto vyžaduje detailní technickou analýzu.
+        </p>
 
-    <p>
-      V odborné části jsou shrnuty klíčové parametry, omezení a otevřené výzkumné otázky.
-    </p>
+        <p>
+          V odborné části jsou shrnuty klíčové parametry, omezení a otevřené výzkumné otázky.
+        </p>
 
-    <a href="odborne.html" class="btn-primary">Technické detaily pro odborníky</a>
+        <a href="odborne.html" class="btn-primary">Technické detaily pro odborníky</a>
 
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Chcete posoudit datový a řídicí model pro vaši lokalitu?</h2>
-    <p>
-      Pokud máte základní telemetrii (výroba/spotřeba), informace o zdrojích a omezeních sítě,
-      lze navrhnout datový model, predikce a optimalizační smyčky tak, aby SSCC přinášel měřitelný efekt.
-    </p>
-  </div>
-</section>
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Chcete posoudit datový a řídicí model pro vaši lokalitu?</h2>
+        <p>
+          Pokud máte základní telemetrii (výroba/spotřeba), informace o zdrojích a omezeních sítě,
+          lze navrhnout datový model, predikce a optimalizační smyčky tak, aby SSCC přinášel měřitelný efekt.
+        </p>
+      </div>
+    </section>
 
+  </main>
+
+  <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
 
 </body>
 </html>
