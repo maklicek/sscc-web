@@ -569,5 +569,7 @@ section[id]{ scroll-margin-top: 110px; }
 /* aby anchor (#toky, #nasazeni) neskákal pod fixní hlavičku */
 :target { scroll-margin-top: 110px; }
 
+html { scroll-behavior: smooth; }
+#toky, #nasazeni, #moduly { scroll-margin-top: 90px; } /* uprav číslo dle výšky hlavičky */
 
 
