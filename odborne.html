@@ -32,192 +32,141 @@
     <a href="odborne.html" class="active">Pro odborníky</a>
   </nav>
 </header>
-
-<main id="top">
-<!-- PRO ODBORNÍKY – ÚVOD -->
-<section class="page-header section">
-  <div class="container">
-    <h1>SSCC – technická architektura pro odborníky</h1>
-
-    <p class="section-lead">
-      Tato část je určena pro výzkumné instituce, technické partnery, systémové integrátory
-      a orgány veřejné správy, které se podílejí na návrhu, provozu nebo regulaci energetických
-      a průmyslových systémů.
-    </p>
-
-    <p>
-      SSCC je navržen jako <strong>System-of-Systems</strong>, který propojuje energetiku,
-      průmyslové technologie, akumulaci, logistiku a datové řízení do jednoho
-      koordinovaného provozního rámce.
-    </p>
-  </div>
-</section>
-
-<!-- ARCHITEKTURA SYSTEM-OF-SYSTEMS -->
-<section class="section">
-  <div class="container">
-    <h2>Architektura System-of-Systems</h2>
-
-    <p>
-      SSCC neřídí jednotlivá zařízení, ale koordinuje již existující řídicí systémy
-      prostřednictvím vícevrstvé architektury:
-    </p>
-
-    <ul>
-      <li><strong>Field</strong> – technologie, zdroje, sítě, úložiště, výrobní linky</li>
-      <li><strong>Edge</strong> – lokální řízení, ochrany, autonomie uzlu</li>
-      <li><strong>Coordination</strong> – agregace dat, regionální optimalizace</li>
-      <li><strong>System Intelligence</strong> – predikce, plánování, strategie</li>
-      <li><strong>Application & Integration</strong> – API, reporting, napojení institucí</li>
-    </ul>
-
-    <p class="small-note">
-      Tato architektura umožňuje kombinovat centralizované plánování s lokální autonomií
-      a zachovat provoz i při výpadcích komunikace.
-    </p>
-  </div>
-</section>
-
-<!-- INTEGRACE SE STÁVAJÍCÍ INFRASTRUKTUROU -->
-<section class="section">
-  <div class="container">
-    <h2>Integrace se stávající infrastrukturou</h2>
-
-    <p>
-      SSCC je navržen jako nadstavbová řídicí vrstva nad existujícími systémy:
-    </p>
-
-    <ul>
-      <li>SCADA / EMS energetických provozů</li>
-      <li>DCS průmyslových technologií</li>
-      <li>BMS budov a kampusů</li>
-      <li>Logistické a výrobní plánovací systémy</li>
-    </ul>
-
-    <p>
-      Integrace probíhá pomocí standardních protokolů (OPC-UA, MQTT, REST, IEC 61850 dle domény)
-      a pomocí integračních bran na úrovni Edge a Coordination.
-    </p>
-  </div>
-</section>
-
-<!-- DATA A AI ARCHITEKTURA -->
-<section class="section">
-  <div class="container">
-    <h2>Datová architektura a AI řízení</h2>
-
-    <p>
-      Datová vrstva SSCC pracuje s několika časovými horizonty:
-    </p>
-
-    <ul>
-      <li>telemetrie v reálném čase</li>
-      <li>provozní agregace</li>
-      <li>predikční modely</li>
-      <li>dlouhodobé scénáře</li>
-    </ul>
-
-    <p>
-      AI nástroje se využívají zejména pro:
-    </p>
-
-    <ul>
-      <li>predikci výroby z OZE</li>
-      <li>detekci anomálií</li>
-      <li>optimalizaci dispatchingu</li>
-      <li>hodnocení provozních scénářů</li>
-    </ul>
-
-    <p>
-      Modely pracují nad digitálními dvojčaty uzlů i celých regionálních konfigurací.
-    </p>
-  </div>
-</section>
-
-<!-- BEZPEČNOST A SPOLEHLIVOST -->
-<section class="section">
-  <div class="container">
-    <h2>Bezpečnost, spolehlivost a krizové režimy</h2>
-
-    <ul>
-      <li>oddělení provozní a optimalizační vrstvy</li>
-      <li>lokální ochrany bez závislosti na síti</li>
-      <li>fail-safe režimy a ostrovní provoz</li>
-      <li>auditovatelnost rozhodnutí</li>
-    </ul>
-
-    <p>
-      Architektura odpovídá principům kritické infrastruktury a umožňuje certifikaci
-      dle sektorových bezpečnostních rámců.
-    </p>
-  </div>
-</section>
-
-<!-- VÝZKUMNÁ TÉMATA -->
-<section class="section">
-  <div class="container">
-    <h2>Výzkumná a vývojová témata</h2>
-
-    <ul>
-      <li>vícekomoditní optimalizace (energie + chemie + logistika)</li>
-      <li>dlouhodobá akumulace energie v chemických médiích</li>
-      <li>koordinace decentralizovaných uzlů</li>
-      <li>AI pro provozní řízení infrastruktury</li>
-      <li>odolnost regionálních energetických soustav</li>
-    </ul>
-
-    <p>
-      SSCC je otevřen pro spolupráci s univerzitami, výzkumnými centry i průmyslovými partnery.
-    </p>
-  </div>
-</section>
-
-<!-- NAVIGAČNÍ ODKAZY -->
-<section class="section section-compact">
-  <div class="container">
-    <p>
-      Pro detailní technické části pokračujte:
-    </p>
-
-    <ul>
-      <li><a href="sscc-system.html">Architektura systému</a></li>
-      <li><a href="data-ai.html">Data &amp; AI řízení</a></li>
-      <li><a href="technologie.html">Použité technologie</a></li>
-      <li><a href="projekty.html">Pilotní projekty</a></li>
-    </ul>
-
-    <p><a class="toc-back" href="#top">Nahoru</a></p>
-  </div>
-</section>
+  <main id="top">
 
   <!-- PRO ODBORNÍKY – ÚVOD -->
   <section class="page-header section">
     <div class="container">
-
-      <h1>SSCC – technické detaily pro odborníky</h1>
+      <h1>SSCC – technická architektura pro odborníky</h1>
 
       <p class="section-lead">
-        Stránka je určena pro odbornou veřejnost, technologické partnery a výzkumné týmy.
-        Shrnuje fyzikální, procesní a integrační limity prvků SSCC – včetně otevřených výzkumných směrů.
+        Tato část je určena pro výzkumné instituce, technické partnery, systémové integrátory
+        a orgány veřejné správy, které se podílejí na návrhu, provozu nebo regulaci energetických
+        a průmyslových systémů.
       </p>
 
       <p>
-        Nejde o marketingový přehled. Cílem je technický rámec: rozsahy výkonů, teplot, tlaků, účinností,
-        omezení a důsledky pro návrh.
+        SSCC je navržen jako <strong>System-of-Systems</strong>, který propojuje energetiku,
+        průmyslové technologie, akumulaci, logistiku a datové řízení do jednoho
+        koordinovaného provozního rámce.
       </p>
+    </div>
+  </section>
+
+  <!-- ARCHITEKTURA SYSTEM-OF-SYSTEMS -->
+  <section class="section">
+    <div class="container">
+      <h2>Architektura System-of-Systems</h2>
 
       <p>
-        Datová vrstva neřídí jednotlivá zařízení, ale orchestruje chování subsystémů v čase tak,
-        aby byly odděleny rychlé a pomalé procesy a zachována provozní integrita.
+        SSCC neřídí jednotlivá zařízení, ale koordinuje již existující řídicí systémy
+        prostřednictvím vícevrstvé architektury:
       </p>
 
+      <ul>
+        <li><strong>Field</strong> – technologie, zdroje, sítě, úložiště, výrobní linky</li>
+        <li><strong>Edge</strong> – lokální řízení, ochrany, autonomie uzlu</li>
+        <li><strong>Coordination</strong> – agregace dat, regionální optimalizace</li>
+        <li><strong>System Intelligence</strong> – predikce, plánování, strategie</li>
+        <li><strong>Application &amp; Integration</strong> – API, reporting, napojení institucí</li>
+      </ul>
+
+      <p class="small-note">
+        Tato architektura umožňuje kombinovat centralizované plánování s lokální autonomií
+        a zachovat provoz i při výpadcích komunikace.
+      </p>
+    </div>
+  </section>
+
+  <!-- INTEGRACE SE STÁVAJÍCÍ INFRASTRUKTUROU -->
+  <section class="section">
+    <div class="container">
+      <h2>Integrace se stávající infrastrukturou</h2>
+
+      <p>SSCC je navržen jako nadstavbová řídicí vrstva nad existujícími systémy:</p>
+
+      <ul>
+        <li>SCADA / EMS energetických provozů</li>
+        <li>DCS průmyslových technologií</li>
+        <li>BMS budov a kampusů</li>
+        <li>Logistické a výrobní plánovací systémy</li>
+      </ul>
+
+      <p>
+        Integrace probíhá pomocí standardních protokolů (OPC-UA, MQTT, REST, IEC 61850 dle domény)
+        a pomocí integračních bran na úrovni Edge a Coordination.
+      </p>
+    </div>
+  </section>
+
+  <!-- DATA A AI ARCHITEKTURA -->
+  <section class="section">
+    <div class="container">
+      <h2>Datová architektura a AI řízení</h2>
+
+      <p>Datová vrstva SSCC pracuje s několika časovými horizonty:</p>
+
+      <ul>
+        <li>telemetrie v reálném čase</li>
+        <li>provozní agregace</li>
+        <li>predikční modely</li>
+        <li>dlouhodobé scénáře</li>
+      </ul>
+
+      <p>AI nástroje se využívají zejména pro:</p>
+
+      <ul>
+        <li>predikci výroby z OZE</li>
+        <li>detekci anomálií</li>
+        <li>optimalizaci dispatchingu</li>
+        <li>hodnocení provozních scénářů</li>
+      </ul>
+
+      <p>Modely pracují nad digitálními dvojčaty uzlů i celých regionálních konfigurací.</p>
+    </div>
+  </section>
+
+  <!-- BEZPEČNOST A SPOLEHLIVOST -->
+  <section class="section">
+    <div class="container">
+      <h2>Bezpečnost, spolehlivost a krizové režimy</h2>
+
+      <ul>
+        <li>oddělení provozní a optimalizační vrstvy</li>
+        <li>lokální ochrany bez závislosti na síti</li>
+        <li>fail-safe režimy a ostrovní provoz</li>
+        <li>auditovatelnost rozhodnutí</li>
+      </ul>
+
+      <p>
+        Architektura odpovídá principům kritické infrastruktury a umožňuje certifikaci
+        dle sektorových bezpečnostních rámců.
+      </p>
+    </div>
+  </section>
+
+  <!-- VÝZKUMNÁ TÉMATA -->
+  <section class="section">
+    <div class="container">
+      <h2>Výzkumná a vývojová témata</h2>
+
+      <ul>
+        <li>vícekomoditní optimalizace (energie + chemie + logistika)</li>
+        <li>dlouhodobá akumulace energie v chemických médiích</li>
+        <li>koordinace decentralizovaných uzlů</li>
+        <li>AI pro provozní řízení infrastruktury</li>
+        <li>odolnost regionálních energetických soustav</li>
+      </ul>
+
+      <p>
+        SSCC je otevřen pro spolupráci s univerzitami, výzkumnými centry i průmyslovými partnery.
+      </p>
     </div>
   </section>
 
   <!-- TERMINOLOGIE / ARCHITEKTURA -->
   <section class="section section-compact">
     <div class="container">
-
       <div class="tech-section">
         <h2>Základní architektura SSCC (terminologie)</h2>
 
@@ -232,73 +181,66 @@
         <p class="small-note">
           Tyto pojmy jsou používány napříč celým webem a tvoří základní rámec popisu SSCC.
         </p>
-      </div>
 
+        <p class="small-note">
+          Související: <a href="smysl-sscc.html">Smysl SSCC</a>
+        </p>
+      </div>
     </div>
   </section>
 
-    <a href="smysl-sscc.html">Smysl SSCC</a>
+  <!-- OBSAH + TOC LAYOUT -->
+  <section class="section section-compact">
+    <div class="container page-layout">
 
-    <h1>SSCC – technické detaily pro odborníky</h1>
-    <p>
-      Stránka je určena pro odbornou veřejnost, technologické partnery a výzkumné týmy.
-      Shrnuje fyzikální, procesní a integrační limity prvků SSCC – včetně otevřených výzkumných směrů.
-    </p>
-    <p>
-      Nejde o marketingový přehled. Cílem je technický rámec: rozsahy výkonů, teplot, tlaků, účinností,
-      omezení a důsledky pro návrh.
-    </p>
-     </p>
-    Datová vrstva neřídí jednotlivá zařízení, ale orchestruje chování subsystémů
-v čase tak, aby byly odděleny rychlé a pomalé procesy a zachována provozní integrita.
-     </p>
-  </div>
-</section>
+      <!-- LEVÝ TOC -->
+      <aside class="toc" aria-label="Obsah">
+        <h3>Obsah</h3>
 
-<section class="section section-compact">
-  <div class="container page-layout">
+        <details open>
+          <summary>Zdrojová část</summary>
+          <ul>
+            <li><a href="#oze">OZE a profil výroby</a></li>
+            <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
+          </ul>
+        </details>
 
-    <!-- LEVÝ TOC -->
-    <aside class="toc" aria-label="Obsah">
-      <h3>Obsah</h3>
+        <details open>
+          <summary>Konverze a akumulace</summary>
+          <ul>
+            <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
+            <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
+            <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
+            <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
+          </ul>
+        </details>
 
-      <details open>
-        <summary>Zdrojová část</summary>
-        <ul>
-          <li><a href="#oze">OZE a profil výroby</a></li>
-          <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
-        </ul>
-      </details>
+        <details>
+          <summary>Další odborné oblasti</summary>
+          <ul>
+            <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
+            <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
+            <li><a href="#materials">Materiály, degradace, životnost</a></li>
+            <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
+            <li><a href="#roadmap">Roadmapa výzkumu</a></li>
+          </ul>
+        </details>
 
-      <details open>
-        <summary>Konverze a akumulace</summary>
-        <ul>
-          <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
-          <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
-          <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
-          <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
-        </ul>
-      </details>
+        <a class="back-to-top" href="#top">Nahoru</a>
+        <div class="toc-footer"></div>
+      </aside>
 
-      <details>
-        <summary>Další odborné oblasti</summary>
-        <ul>
-          <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
-          <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
-          <li><a href="#materials">Materiály, degradace, životnost</a></li>
-          <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
-          <li><a href="#roadmap">Roadmapa výzkumu</a></li>
-        </ul>
-      </details>
+      <!-- PRAVÝ OBSAH -->
+      <div class="main-content">
 
-      <a class="back-to-top" href="#top">Nahoru</a>
-      <div class="toc-footer">
-       
-      </div>
-    </aside>
+      </div><!-- /.main-content -->
 
-    <!-- PRAVÝ OBSAH -->
-    <main class="main-content">
+    </div><!-- /.container.page-layout -->
+  </section>
+
+</main>
+
+<a class="to-top" href="#top" aria-label="Nahoru">↑</a>
 
       <!-- OZE -->
       <section id="oze" class="tech-section">
