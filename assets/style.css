@@ -566,3 +566,8 @@ section[id] { scroll-margin-top: 0; }
 
 html { scroll-behavior: smooth; }
 
+.page-header{ padding: 32px 24px 36px; }
+
+.page-header + .section h2{
+  margin-top: 0;
+}
