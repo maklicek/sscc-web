@@ -65,7 +65,6 @@ p{
 p:last-child{ margin-bottom: 0; }
 
 /* Kotvy pod sticky header */
-section[id], h2, h3 { scroll-margin-top: 120px; }
 
 /* Layout */
 .container{
@@ -500,10 +499,6 @@ a.to-top:hover{ transform: translateY(-2px); }
 
 /* =========================================================
    4) PATCH / OVERRIDES (držet na konci)
-   Pravidla:
-   - primárně scoped selektory (body.page-XYZ ...)
-   - žádné nové globální koncepty
-   - každá změna: krátký důvod + datum
 ========================================================= */
 
 /* PATCH: seznamy – po resetu potřebují explicitní odsazení */
@@ -537,7 +532,7 @@ ul ul, ul ol, ol ul, ol ol{
 .data-card h3{
   margin-top: 0;
 }
- 
+
 /* PATCH: callout jako globální komponenta */
 .callout{
   background: rgba(255,255,255,0.6);
@@ -550,17 +545,13 @@ ul ul, ul ol, ol ul, ol ol{
 }
 .callout p{ margin-bottom: 8px; }
 .callout p:last-child{ margin-bottom: 0; }
-
-.callout ul{
-  margin: 0;
-  padding-left: 22px;
-}
+.callout ul{ margin: 0; padding-left: 22px; }
 
 /* Anchor / scroll */
 html{ scroll-behavior: smooth; }
 
-/* Nižší odsazení úvodního bloku (statická hlavička) */
-.page-header{ padding: 32px 24px 36px; }
+/* Kotvy: hlavička je statická */
+section[id], h2, h3 { scroll-margin-top: 0; }
 
 /* První H2 hned po úvodu bez extra mezery */
 .page-header + .section h2{ margin-top: 0; }
