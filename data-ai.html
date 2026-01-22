@@ -37,36 +37,31 @@
     <!-- ÚVODNÍ BLOK STRÁNKY -->
     <section class="page-header section">
       <div class="container">
-        <h1>Data &amp; AI řízení SSCC</h1>
+       <h1>Data &amp; AI řízení SSCC</h1>
 
-        <p class="section-lead">
-          Datová a řídicí vrstva plní v SSCC roli <strong>orchestrace systému</strong>:
-          nerozhoduje o jednotlivých ventilech, ale o tom, jak mají celé uzly a technologie pracovat v čase.
-        </p>
+<p class="section-lead">
+  Datová a řídicí vrstva v SSCC zajišťuje <strong>orchestraci uzlů a technologií v čase</strong>.
+  Neřídí jednotlivé ventily; nastavuje režimy provozu, priority a cíle tak, aby systém držel stabilitu,
+  bezpečnost a kapacitní limity napříč elektřinou, teplem i chemickými médii.
+</p>
 
-        <p>
-          Datová vrstva neřídí jednotlivá zařízení, ale orchestruje chování subsystémů v čase tak,
-          aby byly odděleny rychlé a pomalé procesy a zachována provozní integrita.
-        </p>
+<p>
+  Řízení SSCC pracuje s více časovými měřítky: od minutových rozhodnutí (dispatch, setpointy a limity),
+  přes hodinové plánování (přesuny zátěže, práce se zásobníky), až po taktické a strategické politiky
+  (SLA, krizové režimy, compliance, audit).
+</p>
 
-        <p>
-          Aplikační scénáře SSCC se liší prostředím i provozními cíli, ale všechny mají společné jedno:
-          bez koordinovaného řízení by se z integrované infrastruktury stal jen soubor oddělených technologií.
-          Právě datová a řídicí vrstva zajišťuje, že se systém chová jako jeden celek.
-        </p>
+<p>
+  AI zde není „magie“, ale sada nástrojů pro predikci, detekci anomálií a rozhodování v nejistotě.
+  Výstupem nejsou grafy pro prezentaci, ale <strong>konkrétní provozní plán</strong> a průběžné korekce
+  podle reálných dat ze zařízení.
+</p>
 
-        <p>
-          Řízení SSCC nepracuje pouze s elektřinou, ale současně s toky tepla a chemických médií.
-          Musí sladit rychlé změny výkonu s pomalými procesy syntézy a se stavem zásobníků v řádu dnů až týdnů.
-          To vyžaduje prediktivní modely, optimalizaci v čase a průběžnou adaptaci na reálný stav infrastruktury.
-        </p>
-
-        <p>
-          Cílem není jen minimalizace nákladů, ale udržení provozní integrity systému:
-          stabilita, bezpečnost, dostupnost výkonu a schopnost fungovat i v omezených režimech.
-        </p>
-      </div>
-    </section>
+<p>
+  Primárním cílem není maximalizace účinnosti za každou cenu, ale <strong>provozní integrita</strong>:
+  oddělení časových škál, prevence destruktivního cyklování a schopnost bezpečně fungovat i při omezené konektivitě
+  nebo v degradovaných režimech.
+</p>
 
     <!-- DATOVÁ ARCHITEKTURA -->
     <section class="section">
@@ -74,82 +69,162 @@
         <h2>Datová architektura SSCC</h2>
 
         <p class="section-lead">
-          SSCC pracuje s daty ze senzorů, SCADA systémů, trhu s energiemi i externích předpovědí.
-          Všechna data jsou sjednocena v datovém modelu, který popisuje energetické i hmotnostní toky v systému.
+          Datový model sjednocuje telemetrii, stavové signály a kontextová data (počasí, tarify, plány výroby),
+  aby bylo možné řídit tok energie a médií napříč uzly. Klíčové je časové značkování, validace kvality dat
+  a dohledatelnost rozhodnutí (audit).
         </p>
 
         <div class="how-grid">
           <div class="how-item">
             <h3>Sběr a normalizace dat</h3>
             <p>
-              Senzory v technologických uzlech, měření výroby a spotřeby, ceny energií, počasí, stavy zásobníků –
-              data z různých zdrojů se sjednocují do společného formátu. Součástí je kontrola kvality a filtrace chybných hodnot.
+              Zdrojem jsou senzory a řídicí systémy (SCADA/EMS/BMS/DCS), měření kvality sítě, stav zásobníků,
+  logistické a výrobní plány i externí předpovědi. Na Edge probíhá normalizace, časová synchronizace,
+  filtrace chybných hodnot a bufferování při výpadku spojení.
             </p>
           </div>
 
           <div class="how-item">
             <h3>Integrační a datová vrstva</h3>
             <p>
-              Datová vrstva propojuje SCADA, ERP, prediktivní modely i externí služby. Umožňuje přístup
-              v reálném čase pro operátory i algoritmy řízení a vytváří konzistentní „jediný zdroj pravdy“ o stavu systému.
+  Integrační vrstva sjednocuje přístup k datům a poskytuje konzistentní „provozní obraz“ systému.
+  Typicky zahrnuje event-stream (události a alarmy), time-series (telemetrie) a model aktiv (asset model),
+  nad kterým běží reporting, dispečerské funkce a optimalizační smyčky.
             </p>
           </div>
 
           <div class="how-item">
             <h3>Digitální dvojče SSCC</h3>
             <p>
-              Digitální twin simuluje chování systému v různých scénářích. Na základě provozních dat a fyzikálních modelů
-              dokáže předpovídat chování médií, zásobníků i sítě a vyhodnocovat dopad plánovaných změn ještě před jejich nasazením.
+            Digitální dvojče propojuje fyzikální a procesní modely s provozními daty tak, aby bylo možné
+  simulovat scénáře („co když“), odhadovat dopady změn a předpovídat vývoj zásobníků, teplotních úrovní
+  a kapacitních omezení. Slouží jako základ pro plánování a validaci řídicích politik.
             </p>
             <p class="small-note">
-              Na stránce „SSCC systém“ popisujeme architekturu řízení; zde se zaměřujeme na datový model,
-              digitální dvojče a AI funkce.
+              V praxi je rozhodující, aby twin respektoval limity zařízení (rampy, start/stop, provozní okna) a uměl
+  pracovat s nejistotou vstupů (počasí, ceny, dostupnost zařízení).
             </p>
           </div>
         </div>
       </div>
     </section>
+<!-- VRSTVY ŘÍZENÍ (stručný rámec) -->
+<section class="section">
+  <div class="container">
+    <h2>Vrstvy řízení a odpovědnosti</h2>
+
+    <p class="section-lead">
+      Řízení SSCC je hierarchické: rychlé ochrany a bezpečnostní funkce zůstávají lokálně,
+      zatímco nadřazené vrstvy koordinují tok energie a médií v čase. Cílem je oddělit časové škály
+      a zabránit tomu, aby fluktuace elektřiny destabilizovala pomalé procesy (syntéza, teplo, zásoby).
+    </p>
+
+    <div class="how-grid">
+
+      <div class="how-item">
+        <h3>Field (technologie)</h3>
+        <p>
+          Fyzické procesy a zařízení: zdroje, úložiště, konverze, sítě, výrobní linky, budovy.
+          Zde probíhá měření a akce v řádu ms–s (senzory, akční členy).
+        </p>
+        <p class="small-note">
+          Odpovědnost: fyzická bezpečnost, provozní limity zařízení, kvalita měření.
+        </p>
+      </div>
+
+      <div class="how-item">
+        <h3>Edge (lokální autonomie)</h3>
+        <p>
+          Lokální řídicí vrstva (PLC/řadiče/gateway) provádí rychlé zásahy, validaci proveditelnosti
+          a udržuje bezpečný provoz i při výpadku konektivity. Zajišťuje časové značky, filtraci a buffer.
+        </p>
+        <p class="small-note">
+          Odpovědnost: ochrany, ostrovní režim, lokální guardrails, fallback podle posledního plánu.
+        </p>
+      </div>
+
+      <div class="how-item">
+        <h3>Coordination (koordinace uzlů)</h3>
+        <p>
+          Agreguje data z více lokalit a subsystémů, řeší konflikty mezi spotřebou/výrobou,
+          přesměrování toků a rozpad plánů na lokální cíle. Typicky rozhoduje v minutách až hodinách.
+        </p>
+        <p class="small-note">
+          Odpovědnost: dispatch mezi uzly, limity a priority, vyrovnávání zátěže.
+        </p>
+      </div>
+
+      <div class="how-item">
+        <h3>System Intelligence (plánování a strategie)</h3>
+        <p>
+          Predikce, scénáře a optimalizace v delších horizontech. Vytváří politiky řízení a provozní plány
+          (cena/emise/spolehlivost/bezpečnost), které se překládají do konkrétních cílů pro Coordination/Edge.
+        </p>
+        <p class="small-note">
+          Odpovědnost: více-kriteriální optimalizace, krizové režimy, SLA, kapacitní plánování.
+        </p>
+      </div>
+
+      <div class="how-item">
+        <h3>Application &amp; Integration (rozhraní)</h3>
+        <p>
+          API, dashboardy, reporting, napojení na operátory, podniky a veřejnou správu.
+          Zajišťuje auditní stopu a řízení přístupů (kdo vidí co, kdo smí měnit politiky a limity).
+        </p>
+        <p class="small-note">
+          Odpovědnost: integrace, governance, audit, export dat a provozních metrik.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="small-note">
+      Pozn.: Detailní architekturu a vazby mezi vrstvami popisuje stránka „SSCC systém“. Zde uvádíme pouze
+      rámec odpovědností, aby bylo jasné, co v SSCC dělá datová/řídicí vrstva a co zůstává na úrovni zařízení.
+    </p>
+  </div>
+</section>
 
     <!-- AI A POKROČILÉ ŘÍZENÍ -->
     <section class="section">
       <div class="container">
         <p class="small-note">
-          Orchestrace odděluje rychlé regulační smyčky zařízení od strategického řízení energetických
-          a hmotnostních toků v horizontu hodin až týdnů.
+         Řízení je hierarchické: rychlé ochrany zůstávají lokálně (PLC/Edge), zatímco datová vrstva řeší
+  koordinaci a plánování v horizontu hodin až týdnů.
         </p>
 
         <h2>AI a pokročilé řízení provozu</h2>
 
         <p class="section-lead">
-          Umělá inteligence a pokročilé algoritmy řízení jsou v SSCC nadstavbou nad klasickým procesním řízením.
-          Neřídí jednotlivé ventily a čerpadla, ale rozhodují o tom, jak má celý systém pracovat v čase.
+           AI a pokročilé algoritmy podporují provozní rozhodování tam, kde je systém nelineární,
+  vícekomoditní (elektřina + teplo + média) a řízený pod nejistotou. Výsledkem je plán a průběžné korekce,
+  které respektují bezpečnostní a procesní limity.
         </p>
 
         <div class="data-grid">
           <div class="data-card">
             <h3>Prediktivní řízení výroby a akumulace</h3>
             <p>
-              Algoritmy předpovídají výrobu z OZE, poptávku po energii a stav zásobníků. Na základě toho plánují,
-              kdy akumulovat energii do chemických médií a kdy ji uvolnit zpět do sítě tak, aby byl výkon stabilní
-              a ekonomicky optimalizovaný.
+             Predikce pokrývá výrobu z OZE, poptávku, dostupnost zařízení a stav zásobníků (SOC, zásoby médií, teplotní kapacity).
+  Na této bázi se počítá dispatch: kdy ukládat přebytky do H₂/NH₃/tepla a kdy dodávat zpět výkon nebo teplo,
+  s omezením ramp a minimalizací destruktivního cyklování.
             </p>
           </div>
 
           <div class="data-card">
             <h3>Optimalizace portfolia médií</h3>
             <p>
-              SSCC může pracovat s více médii zároveň (NH₃, H₂, CO₂–cykly, teplo). AI modely vyhodnocují,
-              jaké médium je v daný okamžik nejvýhodnější využít pro akumulaci nebo dodávku – podle ceny,
-              dostupné kapacity a budoucích potřeb.
-            </p>
+             V praxi nejde o jedno médium, ale o volbu mezi více cestami akumulace a dodávky. Optimalizace porovnává
+  účinnosti, dostupné kapacity, bezpečnostní omezení, ceny a očekávané budoucí potřeby. Výstupem jsou cíle
+  a limity pro jednotlivé subsystémy, nikoli mikromanagement zařízení.
           </div>
 
           <div class="data-card">
             <h3>Detekce anomálií a podpora operátorů</h3>
             <p>
-              Sledování odchylek od běžného chování zařízení i celé soustavy. Systém upozorňuje na anomálie,
-              které mohou znamenat technický problém, kybernetický útok nebo neoptimální stav provozu,
-              a navrhuje operátorům možné kroky.
+             Anomálie se posuzují vůči „normálu“ systému (stavové modely, statistika, provozní okna). Cílem je včasná
+  identifikace degradace, chybných senzorů, neobvyklých energetických toků nebo kybernetických incidentů.
+  Systém poskytuje vysvětlení, dopad na provoz a doporučené kroky v rámci povolených režimů.
             </p>
           </div>
         </div>
@@ -162,8 +237,9 @@
         <h2>Co přináší datově řízený provoz</h2>
 
         <p class="section-lead">
-          Datová vrstva a AI nejsou samoúčelné – jejich smyslem je zlepšit provozní a ekonomické parametry
-          celého systému a snížit rizika spojená s provozem energetiky a chemických technologií.
+          Smyslem datové vrstvy je převést variabilitu zdrojů a nejistotu vstupů do řízeného provozu:
+  snížit ztráty, omezit rizikové režimy, zvýšit disponibilitu a mít dohledatelné rozhodnutí
+  pro interní řízení i regulátora.
         </p>
 
         <div class="benefits-grid">
@@ -208,12 +284,14 @@
         <h2>Technické limity a návrhové otázky</h2>
 
         <p>
-          Datové a řídicí modely musí respektovat fyzikální, chemické a procesní limity jednotlivých technologií.
-          Návrh SSCC proto vyžaduje detailní technickou analýzu.
+         Řídicí a datové modely musí respektovat procesní limity technologií (rampy, start/stop, teplotní okna,
+  čistoty, tlakové úrovně) a zároveň síťová omezení a bezpečnostní požadavky. Bez těchto guardrails je optimalizace
+  jen matematika bez provozní hodnoty.
         </p>
 
         <p>
-          V odborné části jsou shrnuty klíčové parametry, omezení a otevřené výzkumné otázky.
+         V odborné části jsou shrnuty typické integrační limity, rizika cyklování a otevřené výzkumné otázky
+  (modelování degradace, MPC, vícekomoditní dispatch, robustní řízení v nejistotě).
         </p>
 
         <a href="odborne.html" class="btn-primary">Technické detaily pro odborníky</a>
