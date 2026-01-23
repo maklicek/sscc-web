@@ -723,4 +723,28 @@ body.page-odborne .toc{ position: sticky; z-index: 20; }
   padding-left: 18px;
 }
 .decision-box li{ margin: 6px 0; }
+/* Decision tree (lehké a čitelné) */
+.decision-tree{
+  margin: 16px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.decision-tree li{
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(15,23,42,0.10);
+}
+.decision-tree li strong{
+  color: rgba(15,23,42,0.88);
+}
+.decision-tree .branch{
+  margin-top: 10px;
+  padding-left: 18px;
+  border-left: 3px solid rgba(15,23,42,0.18);
+}
+.decision-tree .branch p{
+  margin: 8px 0 0;
+}
 
