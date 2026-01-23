@@ -618,3 +618,6 @@ main{
   min-height: 0;
   overflow: visible;
 }
+html, body{ height:auto; }
+body{ overflow-x:hidden; overflow-y:auto; }
+main{ height:auto; min-height:0; overflow:visible; }
