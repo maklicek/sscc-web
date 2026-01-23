@@ -1129,8 +1129,114 @@
       <li>náklady na integraci tepla (vazba na <a href="#heat">Heat</a>).</li>
     </ul>
   </div>
-
 </section>
+    <!-- ROADMAP -->
+<section id="roadmap" class="tech-section">
+  <h2>Roadmapa výzkumu (směry a demonstrace)</h2>
+
+  <div class="callout callout--info">
+    <p><strong>Účel:</strong> ukázat, že SSCC není „jedna technologie“, ale trajektorie vývoje od pilotních uzlů k regionální orchestrace.</p>
+    <p><strong>Použití:</strong> podklad pro konsorcia, granty, demonstrátory a plán TRL.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Krátkodobě (0–2 roky)</h3>
+      <ul>
+        <li>sběr dat a baseline bilance (energie/teplo/média) pro vybranou lokalitu,</li>
+        <li>pilotní režimy řízení (predikce OZE, dispatching, základní MPC),</li>
+        <li>integrace Edge/Coordination: měření, protokoly, bezpečnostní oddělení IT/OT,</li>
+        <li>provozní „health-aware“ limity: rampy, start/stop, degradace.</li>
+      </ul>
+
+      <h3>Střednědobě (2–5 let)</h3>
+      <ul>
+        <li>hybridní uzly (H₂ + teplo + NH₃ buffer) v reálném provozu,</li>
+        <li>standardizovaná šablona uzlu (I/O, bilance, režimy, zónování),</li>
+        <li>auditovatelné rozhodování (logování, verze modelů, vysvětlitelnost),</li>
+        <li>řízení zásob a krizové režimy (ostrovní provoz, degradované módy).</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Dlouhodobě (5+ let)</h3>
+      <ul>
+        <li>regionální koordinace více uzlů (multi-node orchestrace),</li>
+        <li>pokročilá integrace CO₂ toků (CCU/DAC) s teplotní sítí,</li>
+        <li>optimalizace více komodit (energie + teplo + chemie + logistika),</li>
+        <li>škálování a replikovatelnost: katalog uzlů a referenční architektury.</li>
+      </ul>
+
+      <div class="decision-box">
+        <h4>Metriky úspěchu (doporučené)</h4>
+        <ul>
+          <li>roční využití klíčových uzlů (capacity factor),</li>
+          <li>stabilita režimů (počet destruktivních cyklů, rampy),</li>
+          <li>reálná disponibilita (availability) a OPEX v čase,</li>
+          <li>emisní bilance v jasně definované hranici systému (scope).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a class="back-to-top" href="#top">Nahoru</a>
+</section>
+
+<!-- NAVIGATION BRIDGE -->
+<section id="navigation-bridge" class="tech-section">
+  <h2>Most zpět k systémovému smyslu</h2>
+
+  <p>
+    Pokud chceš projít SSCC ve „správném návrhovém směru“ od problému ke konkrétnímu řešení,
+    doporučujeme tuto posloupnost:
+  </p>
+
+  <div class="decision-box">
+    <h4>Doporučené čtení (návrhový řetězec)</h4>
+    <ul>
+      <li><strong>Smysl:</strong> <a href="smysl-sscc.html">proč systém vzniká a jaký problém řeší</a></li>
+      <li><strong>Systém:</strong> <a href="sscc-system.html">jak je architektura vrstev a uzlů strukturována</a></li>
+      <li><strong>Technologie:</strong> <a href="technologie.html">jaké bloky tvoří fyzickou a chemickou vrstvu</a></li>
+      <li><strong>Data &amp; AI:</strong> <a href="data-ai.html">jak probíhá orchestrace, predikce a řízení režimů</a></li>
+      <li><strong>Odborníci:</strong> tato stránka – integrační limity, bilance a provozní realita</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap;">
+    <a href="smysl-sscc.html" class="btn-primary">Smysl SSCC</a>
+    <a href="sscc-system.html" class="btn-primary">SSCC systém</a>
+    <a href="data-ai.html" class="btn-primary">Data &amp; AI</a>
+  </div>
+
+  <p class="mini small-note" style="margin-top: 12px;">
+    Pozn.: Odkazy jsou záměrně „most“ – aby odborný obsah nebyl izolovaný a šel použít jako součást návrhové dokumentace.
+  </p>
+
+  <a class="back-to-top" href="#top">Nahoru</a>
+</section>
+
+<!-- DOC STATUS -->
+<section class="tech-section" id="doc-status">
+  <div class="callout callout--ok">
+    <p><strong>Stav dokumentu:</strong> pracovní technický rámec (living document)</p>
+    <p><strong>Verze:</strong> Draft v0.9 — leden 2026</p>
+    <p><strong>Účel:</strong> podklad pro diskusi s partnery, projektový návrh a formulaci výzkumných a demonstračních projektů.</p>
+  </div>
+
+  <p class="small-note">
+    Tento dokument je záměrně strukturován jako návrhový rámec, nikoli jako finální technická specifikace.
+    Konkrétní dimenze uzlů, parametry technologií a ekonomické scénáře se liší podle lokality, dostupné infrastruktury
+    a cílů projektu.
+  </p>
+
+  <p class="mini small-note">
+    Pokud tento obsah používáte jako podklad pro projektovou dokumentaci, doporučujeme doplnit:
+    regionální data, regulační omezení, bezpečnostní studii a ekonomické scénáře.
+  </p>
+
+  <a class="back-to-top" href="#top">Nahoru</a>
+</section>
+
 <section class="tech-section" id="doc-status">
   <div class="callout callout--ok">
     <p><strong>Stav dokumentu:</strong> pracovní technický rámec (living document)</p>
@@ -1149,6 +1255,9 @@
     regionální data, regulační omezení, bezpečnostní studii a ekonomické scénáře.
   </p>
 </section>
+    </div><!-- /.main-content -->
+  </div><!-- /.container.page-layout -->
+</section><!-- /.section.section-compact -->
 
   </main>
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
