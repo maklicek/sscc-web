@@ -603,3 +603,18 @@ main{
 .tech-section:last-of-type{
   padding-bottom: 120px;
 }
+/* FIX: stránka musí být scrollovatelná (kotvy + nezmizí obsah) */
+html, body{
+  height: auto;
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main{
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+}
