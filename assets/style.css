@@ -621,3 +621,31 @@ main{
 html, body{ height:auto; }
 body{ overflow-x:hidden; overflow-y:auto; }
 main{ height:auto; min-height:0; overflow:visible; }
+/* FIX: odborná stránka musí scrollovat (kotvy + nezmizí obsah) */
+body.page-odborne{
+  overflow-y: auto;
+}
+
+body.page-odborne main,
+body.page-odborne .main-content,
+body.page-odborne .page-layout{
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+:root{ --scroll-offset: 120px; } /* uprav dle výšky headeru */
+section[id]{ scroll-margin-top: var(--scroll-offset); }
+body.page-odborne .toc{
+  position: sticky;
+  z-index: 5;
+}
+body.page-odborne .main-content{
+  padding-bottom: 120px; /* kvůli .to-top */
+}
+body.page-odborne .toc{ z-index: 5; }
+body.page-odborne main,
+body.page-odborne .main-content,
+body.page-odborne .page-layout{
+  height: auto !important;
+  overflow: visible !important;
+}
