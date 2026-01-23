@@ -195,37 +195,98 @@
   <div class="container page-layout">
 
     <!-- LEVÝ TOC -->
-    <aside class="toc" aria-label="Obsah">
-      <h3>Obsah</h3>
+  <aside class="toc" aria-label="Obsah">
+  <h3>Obsah</h3>
 
-      <details open>
-        <summary>Zdrojová část</summary>
-        <ul>
-          <li><a href="#oze">OZE a profil výroby</a></li>
-          <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
-        </ul>
-      </details>
+  <details open>
+    <summary>Zdrojová část</summary>
+    <ul>
+      <li><a href="#oze">OZE a profil výroby</a></li>
+      <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
+    </ul>
+  </details>
 
-      <details open>
-        <summary>Konverze a akumulace</summary>
-        <ul>
-          <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
-          <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
-          <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
-          <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
-        </ul>
-      </details>
+  <details open>
+    <summary>Konverze a akumulace</summary>
+    <ul>
+      <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
+      <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
+      <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
+      <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
+    </ul>
+  </details>
 
-      <details>
-        <summary>Další odborné oblasti</summary>
-        <ul>
-          <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
-          <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
-          <li><a href="#materials">Materiály, degradace, životnost</a></li>
-          <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
-          <li><a href="#roadmap">Roadmapa výzkumu</a></li>
-        </ul>
-      </details>
+  <details>
+    <summary>Další odborné oblasti</summary>
+    <ul>
+      <li><a href="#limits">Integrační limity &amp; bilance</a></li>
+      <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
+      <li><a href="#materials">Materiály a životnost</a></li>
+      <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
+      <li><a href="#roadmap">Roadmapa výzkumu</a></li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Metodika a navigace</summary>
+    <ul>
+      <li><a href="#how-to-use">Jak s tím pracovat</a></li>
+      <li><a href="#navigation-bridge">Most ke konceptu</a></li>
+      <li><a href="#doc-status">Stav dokumentu</a></li>
+    </ul>
+  </details>
+</aside>
+
+      </aside>
+
+<!-- PRAVÝ OBSAH -->
+<div class="main-content">
+
+  <!-- tady mají být VŠECHNY tech-section: oze, geo, h2, nh3, co2, heat, limits, control, materials, economics, roadmap -->
+
+  <section class="tech-section" id="how-to-use">
+    <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
+
+    <div class="callout callout--info">
+      <p><strong>Účel:</strong> tento dokument není „popis technologií“, ale návrhový rámec pro dimenzování a provoz SSCC v reálném území.</p>
+      <p><strong>Výsledek:</strong> konfigurace uzlů, velikosti bloků, zásoby médií a provozní strategie v čase.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h3>3 kroky návrhu (doporučený postup)</h3>
+        <ol>
+          <li>
+            <strong>Data a omezení území</strong><br>
+            Získej hodinový profil výroby/spotřeby, limity připojení, ceny elektřiny v čase a lokální restrikce (hluk, ochranná pásma, bezpečnost).
+          </li>
+          <li>
+            <strong>Limitující faktor → návrhový strom</strong><br>
+            Použij kapitolu <a href="#limits">Integrační limity</a> a určete, co je primární „bottleneck“ (síť/teplo/média/bezpečnost/ekonomika).
+          </li>
+          <li>
+            <strong>Dimenzování uzlů a provozní strategie</strong><br>
+            Dimenzuj H₂/NH₃/CO₂/teplo podle profilů přebytků/deficitů a navrhni řízení režimů (mixed-mode, bufferování, zásoby, degradované režimy).
+          </li>
+        </ol>
+      </div>
+
+      <div>
+        <!-- druhý sloupec (legenda) pokračuje sem -->
+      </div>
+    </div>
+  </section>
+
+  <!-- sem pak patří #navigation-bridge, #doc-status atd. -->
+
+</div><!-- /.main-content -->
+
+</div><!-- /.container.page-layout -->
+</section><!-- /.section.section-compact -->
+
+
+
+    
 <section class="tech-section" id="how-to-use">
   <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
 
@@ -1151,7 +1212,24 @@
   </div>
 
 </section>
+<section class="tech-section" id="doc-status">
+  <div class="callout callout--ok">
+    <p><strong>Stav dokumentu:</strong> pracovní technický rámec (living document)</p>
+    <p><strong>Verze:</strong> Draft v0.9 — leden 2026</p>
+    <p><strong>Účel:</strong> podklad pro diskusi s partnery, projektový návrh a formulaci výzkumných a demonstračních projektů.</p>
+  </div>
 
+  <p class="small-note">
+    Tento dokument je záměrně strukturován jako návrhový rámec, nikoli jako finální technická specifikace.
+    Konkrétní dimenze uzlů, parametry technologií a ekonomické scénáře se liší podle lokality, dostupné infrastruktury
+    a cílů projektu.
+  </p>
+
+  <p class="mini small-note">
+    Pokud tento obsah používáte jako podklad pro projektovou dokumentaci, doporučujeme doplnit:
+    regionální data, regulační omezení, bezpečnostní studii a ekonomické scénáře.
+  </p>
+</section>
 
   </main>
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
