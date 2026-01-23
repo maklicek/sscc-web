@@ -190,117 +190,121 @@
     </div>
   </section>
 
-  <!-- OBSAH + TOC LAYOUT -->
-  <section class="section section-compact">
-    <div class="container page-layout">
+ <!-- OBSAH + TOC LAYOUT -->
+<section class="section section-compact">
+  <div class="container page-layout">
 
-      <!-- LEVÝ TOC -->
-      <aside class="toc" aria-label="Obsah">
-        <h3>Obsah</h3>
+    <!-- LEVÝ TOC -->
+    <aside class="toc" aria-label="Obsah">
+      <h3>Obsah</h3>
 
-        <details open>
-          <summary>Zdrojová část</summary>
-          <ul>
-            <li><a href="#oze">OZE a profil výroby</a></li>
-            <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
-          </ul>
-        </details>
+      <details open>
+        <summary>Zdrojová část</summary>
+        <ul>
+          <li><a href="#oze">OZE a profil výroby</a></li>
+          <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
+        </ul>
+      </details>
 
-        <details open>
-          <summary>Konverze a akumulace</summary>
-          <ul>
-            <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
-            <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
-            <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
-            <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
-          </ul>
-        </details>
+      <details open>
+        <summary>Konverze a akumulace</summary>
+        <ul>
+          <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
+          <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
+          <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
+          <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
+        </ul>
+      </details>
 
-        <details>
-          <summary>Další odborné oblasti</summary>
-          <ul>
-            <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
-            <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
-            <li><a href="#materials">Materiály, degradace, životnost</a></li>
-            <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
-            <li><a href="#roadmap">Roadmapa výzkumu</a></li>
-          </ul>
-        </details>
-        <div class="toc-footer"></div>
-      </aside>
+      <details>
+        <summary>Další odborné oblasti</summary>
+        <ul>
+          <li><a href="#limits">Integrační limity &amp; energetická bilance</a></li>
+          <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
+          <li><a href="#materials">Materiály, degradace, životnost</a></li>
+          <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
+          <li><a href="#roadmap">Roadmapa výzkumu</a></li>
+        </ul>
+      </details>
 
-      <!-- PRAVÝ OBSAH -->
-      <div class="main-content">
+      <div class="toc-footer"></div>
+    </aside>
 
-      </div><!-- /.main-content -->
+    <!-- PRAVÝ OBSAH -->
+    <div class="main-content">
 
-    </div><!-- /.container.page-layout -->
- </section>
-    
- <!-- OZE -->
-<section id="oze" class="tech-section">
-  <h2>Obnovitelné zdroje a profil výroby</h2>
+      <!-- OZE -->
+      <section id="oze" class="tech-section">
+        <h2>Obnovitelné zdroje a profil výroby</h2>
 
-  <div class="callout">
-    <p><strong>Klíčový problém:</strong> variabilita (minuty–sezóny), korelace zdrojů, omezení sítě a ceny.</p>
-    <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
-    <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂-cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
-  </div>
+        <div class="callout">
+          <p><strong>Klíčový problém:</strong> variabilita (minuty–sezóny), korelace zdrojů, omezení sítě a ceny.</p>
+          <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
+          <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂-cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
+        </div>
 
-  <div class="two-col">
-    <div>
-      <p>
-        Pro návrh SSCC je zásadní rozlišit krátkodobé fluktuace (minuty–hodiny), denní a týdenní strukturu (počasí)
-        a sezonní rozdíly. V praxi často nejde o „kolik kW máme“, ale <strong>kdy</strong> a <strong>jak dlouho</strong>
-        vzniká přebytek a zda jej limituje síť, akumulace nebo cena <em>curtailmentu</em>.
-      </p>
+        <div class="two-col">
+          <div>
+            <p>
+              Pro návrh SSCC je zásadní rozlišit krátkodobé fluktuace (minuty–hodiny), denní a týdenní strukturu (počasí)
+              a sezonní rozdíly. V praxi často nejde o „kolik kW máme“, ale <strong>kdy</strong> a <strong>jak dlouho</strong>
+              vzniká přebytek a zda jej limituje síť, akumulace nebo cena <em>curtailmentu</em>.
+            </p>
 
-      <h3>Fotovoltaika</h3>
-      <p>
-        FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
-        a nízkoteplotních procesů v době přebytků a pro snížení potřeby fosilní špičky. Kritické je sladění výkonu
-        elektrolýzy s reálnou dostupností přebytků, nikoli s instalovaným FV výkonem.
-      </p>
+            <h3>Fotovoltaika</h3>
+            <p>
+              FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
+              a nízkoteplotních procesů v době přebytků a pro snížení potřeby fosilní špičky. Kritické je sladění výkonu
+              elektrolýzy s reálnou dostupností přebytků, nikoli s instalovaným FV výkonem.
+            </p>
 
-      <h3>Větrná energie</h3>
-      <p>
-        Vítr může být méně korelovaný s denním cyklem, ale přináší delší „větrná okna“ i období bezvětří. Pro SSCC je
-        cenný zejména tam, kde zvyšuje počet hodin s přebytkem a umožní vyšší průměrné využití elektrolýzy v režimu
-        <em>mixed-mode</em> (část výkonu stabilně, část následuje OZE).
-      </p>
-    </div>
+            <h3>Větrná energie</h3>
+            <p>
+              Vítr může být méně korelovaný s denním cyklem, ale přináší delší „větrná okna“ i období bezvětří. Pro SSCC je
+              cenný zejména tam, kde zvyšuje počet hodin s přebytkem a umožní vyšší průměrné využití elektrolýzy v režimu
+              <em>mixed-mode</em> (část výkonu stabilně, část následuje OZE).
+            </p>
+          </div>
 
-    <div>
-      <h3>Vodní zdroje a PVE</h3>
-      <p>
-        Tam, kde existují vodní zdroje nebo přečerpávací elektrárny, lze SSCC dimenzovat s menší potřebou krátkodobé
-        akumulace a více se opřít o chemické nosiče pro týdny až měsíce. PVE často řeší hodiny–dny, zatímco H₂/NH₃ řeší
-        dny–sezóny.
-      </p>
+          <div>
+            <h3>Vodní zdroje a PVE</h3>
+            <p>
+              Tam, kde existují vodní zdroje nebo přečerpávací elektrárny, lze SSCC dimenzovat s menší potřebou krátkodobé
+              akumulace a více se opřít o chemické nosiče pro týdny až měsíce. PVE často řeší hodiny–dny, zatímco H₂/NH₃ řeší
+              dny–sezóny.
+            </p>
 
-      <h3>Dopady a „cena“ OZE v území (nezanedbávat)</h3>
-      <p>
-        U větrných parků je nutné počítat s lokálními dopady (hluk, stroboskopický efekt, změna proudění v krajině,
-        fragmentace biotopů). Tyto faktory nejsou jen „politika“ – mohou reálně limitovat dosažitelnou instalaci,
-        a tím i bilanci přebytků pro SSCC. Pro vnitrozemské státy navíc hraje roli dostupnost vhodných lokalit a
-        přenosové kapacity.
-      </p>
+            <h3>Dopady a „cena“ OZE v území (nezanedbávat)</h3>
+            <p>
+              U větrných parků je nutné počítat s lokálními dopady (hluk, stroboskopický efekt, změna proudění v krajině,
+              fragmentace biotopů). Tyto faktory nejsou jen „politika“ – mohou reálně limitovat dosažitelnou instalaci,
+              a tím i bilanci přebytků pro SSCC. Pro vnitrozemské státy navíc hraje roli dostupnost vhodných lokalit a
+              přenosové kapacity.
+            </p>
 
-      <h3>Impulzy pro dimenzování SSCC</h3>
-      <ul>
-        <li>kolik hodin v roce existuje přebytek nad lokální spotřebu,</li>
-        <li>jak často nastávají souvislé deficitní bloky (dny bez přebytků),</li>
-        <li>cena omezení (curtailment) vs. cena chemické akumulace,</li>
-        <li>omezení přenosové sítě a lokální regulační požadavky.</li>
-      </ul>
+            <h3>Impulzy pro dimenzování SSCC</h3>
+            <ul>
+              <li>kolik hodin v roce existuje přebytek nad lokální spotřebu,</li>
+              <li>jak často nastávají souvislé deficitní bloky (dny bez přebytků),</li>
+              <li>cena omezení (curtailment) vs. cena chemické akumulace,</li>
+              <li>omezení přenosové sítě a lokální regulační požadavky.</li>
+            </ul>
 
-      <p class="mini small-note">
-        Poznámka: Konkrétní číselné parametry (CF, LCOE, limity hluku, atd.) doplníme podle regionu (ČR/EU) a typu projektu,
-        aby to nebyl „generický text pro celý svět“.
-      </p>
-    </div>
-  </div>
+            <p class="mini small-note">
+              Poznámka: Konkrétní číselné parametry (CF, LCOE, limity hluku, atd.) doplníme podle regionu (ČR/EU) a typu projektu,
+              aby to nebyl „generický text pro celý svět“.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- sem přijde #geo, #h2, #nh3 ... všechny další sekce -->
+
+    </div><!-- /.main-content -->
+
+  </div><!-- /.container.page-layout -->
 </section>
+
   </main>
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
 </body>
