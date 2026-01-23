@@ -649,3 +649,40 @@ body.page-odborne .page-layout{
   height: auto !important;
   overflow: visible !important;
 }
+/* =========================================================
+   EMERGENCY FIX – page-odborne: vrať scroll + klikatelné kotvy
+   (dej na úplný konec CSS)
+========================================================= */
+
+html, body{ height: auto !important; }
+
+body.page-odborne{
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* nejčastější viníci: main/wrappery s 100vh + overflow hidden */
+body.page-odborne main,
+body.page-odborne .container,
+body.page-odborne .page-layout,
+body.page-odborne .main-content{
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* pokud máš nějaký globální wrapper, zkusíme ho „odjistit“ taky */
+body.page-odborne .page,
+body.page-odborne .site,
+body.page-odborne .layout,
+body.page-odborne .content,
+body.page-odborne .wrapper{
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* aby TOC bylo klikací a nic ho nepřekrývalo */
+body.page-odborne .toc{ position: sticky; z-index: 20; }
