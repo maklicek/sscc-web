@@ -297,6 +297,340 @@
           </div>
         </div>
       </section>
+<!-- GEOTERMIE -->
+<section id="geo" class="tech-section">
+  <h2>Geotermie a teplotní úrovně</h2>
+
+  <div class="callout">
+    <p><strong>Klíč:</strong> teplotní úroveň (nízko/středně/vysokoteplotní) rozhoduje o tom, co lze integrovat přímo.</p>
+    <p><strong>Smysl v SSCC:</strong> stabilní tepelný základ pro procesy, zlepšení účinnosti a snížení nároků na elektřinu.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <p>
+        Geotermie je pro SSCC atraktivní tím, že poskytuje relativně stabilní zdroj tepla. Nejde jen o „kolik MW<sub>th</sub>“,
+        ale jaká je dostupná teplota a jak dobře ji lze spárovat s procesními uzly (předohřevy, reboilery, sušení,
+        nízkoteplotní separace).
+      </p>
+
+      <h3>Nízkoteplotní a středněteplotní režim</h3>
+      <p>
+        Typicky podporuje teplovodní systémy, předohřevy a snížení elektrického příkonu pomocných technologií.
+        V návrhu SSCC je často cennější „spolehlivý baseload tepla“ než další proměnlivá elektřina.
+      </p>
+    </div>
+
+    <div>
+      <h3>Vysokoteplotní režim</h3>
+      <p>
+        Ve vysokých teplotách se otevírá možnost efektivnější procesní integrace a v některých konceptech i vazba na pokročilé cykly.
+        Prakticky však přibývají požadavky na geologii, vrty, materiály a dlouhodobou stabilitu.
+      </p>
+
+      <h3>Integrační omezení</h3>
+      <ul>
+        <li>teplotní skluz a návrhové ΔT ve výměnících,</li>
+        <li>chemie vody/solanek, koroze a zanášení,</li>
+        <li>dlouhodobé udržení průtoku a teploty (depletion management).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- H2 -->
+<section id="h2" class="tech-section">
+  <h2>Výroba vodíku a elektrolýza</h2>
+
+  <div class="callout">
+    <p><strong>Rozhodnutí:</strong> Alkalická vs. PEM vs. SOEC není „jen účinnost“, ale dynamika, čistota, tlak a CAPEX.</p>
+    <p><strong>Pro SSCC:</strong> klíčový je režim (OZE-following vs. mixed-mode) a dopady na životnost.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Režimy provozu</h3>
+      <p><strong>OZE-following:</strong> výkon kopíruje přebytek – výhoda nízká cena vstupu, nevýhoda nižší využití a cyklování.</p>
+      <p><strong>Mixed-mode:</strong> část výkonu stabilně („polozáklad“), část modulárně následuje OZE – lepší využití investice.</p>
+
+      <h3>Co sledovat</h3>
+      <ul>
+        <li>degradace a cyklování (start/stop, rampy),</li>
+        <li>čistota H₂ a kompatibilita s následnou syntézou,</li>
+        <li>tlaková úroveň a komprese (energetická penalizace).</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Integrace do SSCC</h3>
+      <p>
+        V SSCC je vodík mezistupeň – klíčové je sladit elektrolýzu s kapacitou chemické akumulace (NH₃/H₂/CO₂ média),
+        s teplotní integrací a s požadavky na bezpečnost (zónování, detekce, ventilace).
+      </p>
+
+      <p class="small-note">
+        Pozn.: Pokud chcete „vědeckou“ vrstvu ještě víc, doplníme: Faradayova účinnost, limitující odpory,
+        dynamické modely a vliv provozních teplot na degradaci.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- NH3 -->
+<section id="nh3" class="tech-section">
+  <h2>Syntéza amoniaku a role NH₃ v SSCC</h2>
+
+  <div class="callout">
+    <p><strong>Role:</strong> NH₃ jako nosič energie (měsíce), logistika, zpětná konverze na výkon/teplo nebo průmyslový vstup.</p>
+    <p><strong>Omezení:</strong> tlak/teplota syntézy, dynamika, čistota, bezpečnost, NOₓ při využití.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Proč NH₃</h3>
+      <p>
+        NH₃ je atraktivní díky energetické hustotě a skladovatelnosti. Pro SSCC řeší „týdny až sezóny“, kde baterie ani PVE
+        typicky nestačí. Výhodou je existující průmyslová infrastruktura; nevýhodou toxikologie a nároky na bezpečnost.
+      </p>
+
+      <div class="procon">
+        <div class="card">
+          <h4>Proč ano</h4>
+          <ul>
+            <li>vyšší objemová energetická hustota než H₂ (jednodušší logistika)</li>
+            <li>dlouhodobé skladování bez extrémních tlaků</li>
+            <li>existující průmyslové know-how a infrastruktura (hnojiva)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Proč ne</h4>
+          <ul>
+            <li>toxický – detekce úniků, bezpečnostní zóny</li>
+            <li>NOₓ při spalování – vyžaduje čištění / vhodnou technologii</li>
+            <li>úzká místa: katalyzátory, čistota, integrace tepla</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>„Zelený“ amoniak – více cest</h3>
+      <p>
+        Kromě klasické syntézy existují směry výzkumu (elektrochemické i biologické cesty fixace dusíku).
+        Často jsou zatím na nižších TRL, ale dávají smysl jako roadmapa odborné části.
+      </p>
+    </div>
+
+    <div>
+      <h3>Praktická integrační témata</h3>
+      <ul>
+        <li>stabilita syntézy vs. dynamika přítoku H₂,</li>
+        <li>teplotní integrace (rekuperace tepla),</li>
+        <li>bezpečnostní zónování, detekce a havarijní režimy,</li>
+        <li>zpětné využití: štěpení, spalování, palivové články (volba podle účelu).</li>
+      </ul>
+
+      <p class="small-note">
+        Pozn.: Uveďte (u konkrétního projektu) preferovaný scénář využití NH₃ – „palivo“, „chemická surovina“ nebo „sezónní zásoba“.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CO2 -->
+<section id="co2" class="tech-section">
+  <h2>Uzavřené CO₂-cykly a uhlíková bilance</h2>
+
+  <div class="callout">
+    <p><strong>Smysl:</strong> CO₂ jako pracovní médium a surovina; cílem je uzavřít uhlíkový tok a snížit čisté emise.</p>
+    <p><strong>Riziko:</strong> bilance musí sedět procesně (průtoky) i systémově (hranice systému, zdroje CO₂).</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <p>
+        U „uzavřených cyklů“ je klíčové přesně definovat hranice systému. Jinak vzniká dojem uzavřenosti, ale ve skutečnosti se
+        emise přesunou do upstreamu (elektřina, doprava, chemikálie).
+      </p>
+
+      <h3>Co musí být na stole</h3>
+      <ul>
+        <li>materiálová bilance: odkud CO₂ přichází, kam jde, kde se ztrácí,</li>
+        <li>energetická bilance: kolik stojí separace/komprese/ohřev,</li>
+        <li>provozní režimy: steady-state vs. cyklování s OZE.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Výzkumné směry</h3>
+      <p>
+        Pro odbornou část webu se hodí uvádět i otevřené otázky: nové katalyzátory, procesní intenzifikace, membrány,
+        pokročilé separace, vyšší integrace tepla a systémové řízení v čase.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HEAT -->
+<section id="heat" class="tech-section">
+  <h2>Tepelná integrace a zásobníky</h2>
+
+  <div class="callout">
+    <p><strong>SSCC není jen elektřina:</strong> teplo často rozhoduje o účinnosti i ekonomice.</p>
+    <p><strong>Cíl:</strong> minimalizovat ztráty, stabilizovat procesní teploty a oddělit časové škály (minuty vs. dny).</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Integrace</h3>
+      <p>
+        Bez tepelné integrace se SSCC snadno „rozpadne“ na drahé ostrovy technologií. V návrhu proto typicky potřebujete mapu
+        teplotních úrovní a výměníkovou síť, která dává smysl v různých režimech provozu.
+      </p>
+    </div>
+
+    <div>
+      <h3>Zásobníky</h3>
+      <p>
+        Tepelné zásobníky (krátko- i střednědobé) pomáhají vyhladit provoz a zvýšit využití klíčových uzlů, aniž by se vše
+        muselo „lámat“ přes elektřinu.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- LIMITS -->
+<section id="limits" class="tech-section">
+  <h2>Integrační limity a energetická bilance</h2>
+
+  <div class="two-col">
+    <div>
+      <p>
+        Zde dává smysl uvést rozhodovací strom: co je limitující (síť / teplo / katalýza / bezpečnost / finance)
+        a jak se to projeví ve velikosti uzlů.
+      </p>
+
+      <h3>Typické limitující faktory</h3>
+      <ul>
+        <li>síť: připojitelnost, rezervovaný výkon, regulační požadavky,</li>
+        <li>teplo: dostupná teplotní úroveň a výměníkové plochy,</li>
+        <li>materiály: koroze, zanášení, katalyzátorové jedy,</li>
+        <li>provoz: cyklování a degradační mechanismy,</li>
+        <li>bezpečnost: zónování, havarijní scénáře, legislativa.</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="small-note">
+        Doporučení: sem se hodí i tabulka „vstupy / výstupy / účinnosti / ztráty / časové škály / rizika“ pro každý uzel.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTROL -->
+<section id="control" class="tech-section">
+  <h2>Procesní dynamika a řízení</h2>
+
+  <div class="callout">
+    <p><strong>Pointa:</strong> v SSCC není řízení „nadstavba“, ale součást fyzikální struktury systému.</p>
+    <p><strong>Problém:</strong> SSCC spojuje procesy s různými časovými konstantami (sekundy → sezóny).</p>
+    <p><strong>Cíl řízení:</strong> udržet provozní integritu (rezervy, degradovaný režim, prevence destruktivního cyklování).</p>
+  </div>
+
+  <h3>Konflikt časových škál</h3>
+  <p>
+    SSCC nespojuje jen formy energie, ale sladění procesů s odlišnými časovými konstantami: elektrické toky (sekundy–minuty),
+    elektrochemie a syntéza (hodiny) a zásoby médií/tepla (dny–sezóny). Bez řízení se rychlé fluktuace přenášejí do pomalých procesů,
+    což vede k degradaci a nestabilitě.
+  </p>
+
+  <h3>Co doplnit v další vrstvě</h3>
+  <ul>
+    <li>hierarchické řízení (rychlé ochrany vs. plánování zásob),</li>
+    <li>prediktivní řízení (MPC) pro energii i média,</li>
+    <li>omezení ramp, start/stop a „health-aware“ strategie (životnost),</li>
+    <li>cílové funkce: cena, emise, disponibilita, bezpečnostní marže.</li>
+  </ul>
+
+  <p class="small-note">
+    Tato kapitola záměrně nepopisuje konkrétní algoritmy. Vymezuje rámec, proč je řízení podmínkou stability SSCC.
+  </p>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials" class="tech-section">
+  <h2>Materiály, degradace a životnost</h2>
+
+  <div class="two-col">
+    <div>
+      <p>
+        Zde dává smysl mluvit o realitě: koroze, zanášení, katalyzátory, cyklování, provozní okna, údržba a dostupnost náhradních dílů.
+      </p>
+
+      <h3>Proč je to klíčové</h3>
+      <ul>
+        <li>životnost určuje CAPEX rozpočítaný na jednotku výstupu,</li>
+        <li>degradace mění účinnost a bezpečnostní marže,</li>
+        <li>údržba určuje disponibilitu uzlů a stabilitu systému.</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="small-note">
+        Doporučení: uveďte typické „failure modes“ pro každou technologii a vazbu na provozní režimy (cyklování vs. steady).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ECONOMICS -->
+<section id="economics" class="tech-section">
+  <h2>Ekonomika (CAPEX/OPEX)</h2>
+
+  <div class="two-col">
+    <div>
+      <p>
+        U odborné části je důležité ukázat, že ekonomika není „jedno číslo“. Je to citlivost na využití,
+        cenu elektřiny, cenu omezení výroby (curtailment), bezpečnost a integraci tepla.
+      </p>
+
+      <h3>Hlavní hybatele</h3>
+      <ul>
+        <li>využití (capacity factor) klíčových uzlů,</li>
+        <li>cena vstupní elektřiny v čase,</li>
+        <li>náklady na média (voda, dusík),</li>
+        <li>náklady na bezpečnost a legislativní požadavky,</li>
+        <li>náklady na údržbu a disponibilitu.</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="small-note">
+        Pokud chcete, doplním šablonu „citlivostní analýzy“ (scénáře ceny elektřiny, využití, CAPEX, diskont).
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="tech-section">
+  <h2>Roadmapa výzkumu a otevřené směry</h2>
+
+  <p>
+    Sem patří směry, které odlišují odbornou část webu od běžných claimů: nové cesty k NH₃ (biologické/elektrochemické),
+    nové katalyzátory, vyšší integrace tepla, procesní intenzifikace, robustní řízení a systémové plánování.
+  </p>
+
+  <ul>
+    <li>NH₃ syntéza s vyšší dynamikou a nižším tlakem</li>
+    <li>membránové separace a procesní intenzifikace</li>
+    <li>multi-commodity optimalizace v čase (energie + média)</li>
+    <li>health-aware řízení pro prodloužení životnosti</li>
+  </ul>
+
+  <p class="small-note">
+    Doporučení: roadmapu držte vázanou na TRL a na „co to přinese“ pro systém (účinnost, stabilita, náklady, bezpečnost).
+  </p>
+</section>
 
   </main>
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
