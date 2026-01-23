@@ -226,9 +226,107 @@
           <li><a href="#roadmap">Roadmapa výzkumu</a></li>
         </ul>
       </details>
+<section class="tech-section" id="how-to-use">
+  <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
+
+  <div class="callout callout--info">
+    <p><strong>Účel:</strong> tento dokument není „popis technologií“, ale návrhový rámec pro dimenzování a provoz SSCC v reálném území.</p>
+    <p><strong>Výsledek:</strong> konfigurace uzlů, velikosti bloků, zásoby médií a provozní strategie v čase.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>3 kroky návrhu (doporučený postup)</h3>
+      <ol>
+        <li>
+          <strong>Data a omezení území</strong><br>
+          Získej hodinový profil výroby/spotřeby, limity připojení, ceny elektřiny v čase a lokální restrikce (hluk, ochranná pásma, bezpečnost).
+        </li>
+        <li>
+          <strong>Limitující faktor → návrhový strom</strong><br>
+          Použij kapitolu <a href="#limits">Integrační limity</a> a určete, co je primární „bottleneck“ (síť/teplo/média/bezpečnost/ekonomika).
+        </li>
+        <li>
+          <strong>Dimenzování uzlů a provozní strategie</strong><br>
+          Dimenzuj H₂/NH₃/CO₂/teplo podle profilů přebytků/deficitů a navrhni řízení režimů (mixed-mode, bufferování, zásoby, degradované režimy).
+        </li>
+      </ol>
+
+      <div class="decision-box">
+        <h4>Minimální sada vstupů (bez toho to nejde)</h4>
+        <ul>
+          <li>hodinová data: výroba/spotřeba + ceny elektřiny + curtailment (nebo odhad),</li>
+          <li>síť: max příkon/výkon, rampy, regulační požadavky,</li>
+          <li>teplo: dostupné teplotní úrovně a odběry,</li>
+          <li>média: zdroje a čistoty H₂/N₂/CO₂/vody,</li>
+          <li>bezpečnost a území: zónování a reálné limity lokality.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div>
+      <h3>Legenda časových škál (proč je to klíčové)</h3>
+      <p>
+        SSCC je „systém časových škál“. Rozpadává se, pokud se rychlé fluktuace přenášejí do pomalých procesů.
+        Řízení a zásobníky existují primárně proto, aby se tyto škály oddělily.
+      </p>
+
+      <ul>
+        <li><strong>ms–sekundy:</strong> ochrany, bezpečnost, lokální regulace (nesmí být přepsáno optimalizací)</li>
+        <li><strong>minuty:</strong> regulace výkonu, krátkodobé vyhlazení, ochrana proti rampám</li>
+        <li><strong>hodiny:</strong> elektrolýza, syntézy, rekuperace tepla, bufferování toků</li>
+        <li><strong>dny:</strong> zásoby médií, plánování režimů, údržba, dostupnost uzlů</li>
+        <li><strong>týdny–sezóny:</strong> NH₃/CO₂ strategie, krizové režimy, systémová odolnost</li>
+      </ul>
+
+      <div class="decision-box">
+        <h4>Pravidlo stability SSCC</h4>
+        <ul>
+          <li>rychlé změny řeš krátkodobě (řízení + zásobníky),</li>
+          <li>pomalé procesy drž ve stabilním provozním okně,</li>
+          <li>dlouhodobé zásoby používej pro strategie, ne pro „hasení minutových výkyvů“.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-section" id="navigation-bridge">
+  <h2>Most zpět k systémovému smyslu</h2>
+
+  <p>
+    Pokud chceš projít SSCC ve „správném návrhovém směru“ od problému ke konkrétnímu řešení,
+    doporučujeme tuto posloupnost:
+  </p>
+
+  <div class="decision-box">
+    <h4>Doporučené čtení (návrhový řetězec)</h4>
+    <ul>
+      <li><strong>Smysl:</strong> <a href="smysl-sscc.html">proč systém vzniká a jaký problém řeší</a></li>
+      <li><strong>Systém:</strong> <a href="sscc-system.html">jak je architektura vrstev a uzlů strukturována</a></li>
+      <li><strong>Technologie:</strong> <a href="technologie.html">jaké bloky tvoří fyzickou a chemickou vrstvu</a></li>
+      <li><strong>Data &amp; AI:</strong> <a href="data-ai.html">jak probíhá orchestrace, predikce a řízení režimů</a></li>
+      <li><strong>Odborníci:</strong> tato stránka – integrační limity, bilance a provozní realita</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap;">
+    <a href="smysl-sscc.html" class="btn-primary">Smysl SSCC</a>
+    <a href="sscc-system.html" class="btn-primary">SSCC systém</a>
+    <a href="data-ai.html" class="btn-primary">Data &amp; AI</a>
+  </div>
+
+  <p class="mini small-note" style="margin-top: 12px;">
+    Pozn.: Odkazy jsou záměrně „most“ – aby odborný obsah nebyl izolovaný a šel použít jako součást návrhové dokumentace.
+  </p>
+
+  <a class="back-to-top" href="#top">Nahoru</a>
+</section>
 
       <div class="toc-footer"></div>
     </aside>
+<li><a href="#how-to-use">Jak s tím pracovat (metodika)</a></li>
+<li><a href="#navigation-bridge">Most zpět k systémovému smyslu</a></li>
 
     <!-- PRAVÝ OBSAH -->
     <div class="main-content">
@@ -673,32 +771,116 @@
 
 <!-- LIMITS -->
 <section id="limits" class="tech-section">
-  <h2>Integrační limity a energetická bilance</h2>
+  <h2>Integrační limity a energetická bilance (návrhový strom)</h2>
+
+  <div class="callout">
+    <p><strong>Princip:</strong> velikost uzlů SSCC neurčuje „instalovaný výkon“, ale limitující faktor systému (síť / teplo / média / bezpečnost / finance).</p>
+    <p><strong>Cíl:</strong> převést reálná omezení do dimenzí uzlů (MW, t/den, m³ zásob, teplotní hladiny) a do provozních režimů.</p>
+  </div>
 
   <div class="two-col">
     <div>
-      <p>
-        Zde dává smysl uvést rozhodovací strom: co je limitující (síť / teplo / katalýza / bezpečnost / finance)
-        a jak se to projeví ve velikosti uzlů.
-      </p>
+      <h3>Návrhový strom (od limitu k dimenzi)</h3>
 
-      <h3>Typické limitující faktory</h3>
-      <ul>
-        <li>síť: připojitelnost, rezervovaný výkon, regulační požadavky,</li>
-        <li>teplo: dostupná teplotní úroveň a výměníkové plochy,</li>
-        <li>materiály: koroze, zanášení, katalyzátorové jedy,</li>
-        <li>provoz: cyklování a degradační mechanismy,</li>
-        <li>bezpečnost: zónování, havarijní scénáře, legislativa.</li>
+      <ul class="decision-tree">
+        <li>
+          <strong>Krok 1: Je limitující připojení k síti?</strong>
+          <div class="branch">
+            <p><strong>Ano →</strong> dimenzuj elektrolýzu podle rezervovaného příkonu a pravidel ramp; přebytky řeš řízením a zásobami (NH₃/teplo).</p>
+            <p><strong>Ne →</strong> pokračuj na teplo a média.</p>
+          </div>
+        </li>
+
+        <li>
+          <strong>Krok 2: Je limitující teplotní úroveň a teplo?</strong>
+          <div class="branch">
+            <p><strong>Ano →</strong> nejdřív navrhni teplotní mapu a výměníkovou síť; bez tepla se zvýší elektrický příkon a OPEX.</p>
+            <p><strong>Ne →</strong> pokračuj na média (H₂/N₂/CO₂) a logistiku.</p>
+          </div>
+        </li>
+
+        <li>
+          <strong>Krok 3: Je limitující dostupnost a kvalita médií?</strong>
+          <div class="branch">
+            <p><strong>Ano →</strong> dimenzuj separace/čištění (N₂, CO₂, voda) a definuj požadavky čistoty pro katalyzátory; jinak poroste degradace.</p>
+            <p><strong>Ne →</strong> pokračuj na bezpečnost a územní omezení.</p>
+          </div>
+        </li>
+
+        <li>
+          <strong>Krok 4: Je limitující bezpečnost a umístění (zejména NH₃, tlakové systémy)?</strong>
+          <div class="branch">
+            <p><strong>Ano →</strong> omez velikosti zásob, zvaž modularitu a rozdělení uzlu; bezpečnostní zónování může být tvrdší limit než technologie.</p>
+            <p><strong>Ne →</strong> pokračuj na ekonomiku.</p>
+          </div>
+        </li>
+
+        <li>
+          <strong>Krok 5: Je limitující ekonomika (CAPEX/OPEX, využití)?</strong>
+          <div class="branch">
+            <p><strong>Ano →</strong> zvyš využití (mixed-mode), zlepši integraci tepla, uprav velikost zásob a zaměř se na stabilnější provozní režimy.</p>
+            <p><strong>Ne →</strong> systém je dimenzovatelný podle cílové produkce a strategie zásob.</p>
+          </div>
+        </li>
       </ul>
+
+      <p class="small-note">
+        Pozn.: Strom je záměrně univerzální. V konkrétním projektu se pořadí kroků často „prohodí“ podle lokality (síť vs. teplo vs. bezpečnost).
+      </p>
     </div>
 
     <div>
-      <p class="small-note">
-        Doporučení: sem se hodí i tabulka „vstupy / výstupy / účinnosti / ztráty / časové škály / rizika“ pro každý uzel.
+      <h3>Energetická bilance: minimální rámec</h3>
+      <p>
+        Bilance není jen účinnost elektrolýzy. Je to součet ztrát a penalizací napříč uzly: komprese, separace, ohřevy/chlazení,
+        recyklace, zásobníky, pomocné okruhy a režimy provozu.
       </p>
+
+      <div class="decision-box">
+        <h4>Co musí být v bilanci vždy</h4>
+        <ul>
+          <li>elektrická bilance (příkon, komprese, pomocné systémy),</li>
+          <li>tepelná bilance (zdroje/spotřeby, rekuperace, zásobníky),</li>
+          <li>hmotnostní bilance médií (H₂, NH₃, CO₂, N₂, voda),</li>
+          <li>časová bilance (hodiny/dny/sezóny) – oddělení časových škál.</li>
+        </ul>
+      </div>
+
+      <div class="decision-box">
+        <h4>Typická „úzká místa“ (průřez)</h4>
+        <ul>
+          <li>komprese (H₂/CO₂) a s tím spojené energetické ztráty,</li>
+          <li>stabilita syntéz vs. proměnlivý přítok (NH₃),</li>
+          <li>kvalita médií a ochrana katalyzátorů (degradace),</li>
+          <li>bezpečnostní zónování a reálná použitelnost lokality.</li>
+        </ul>
+      </div>
     </div>
   </div>
+
+  <h3>Šablona tabulky pro projekt (doplníš čísla)</h3>
+  <p class="small-note">
+    Doporučení: vlož jako tabulku nebo „cards“. Níže je rámec, který lze snadno převést do HTML tabulky.
+  </p>
+
+  <div class="decision-box">
+    <h4>Uzly – vstupy / výstupy / časové škály / rizika</h4>
+    <ul>
+      <li><strong>OZE:</strong> profil přebytků (h/rok), max připojitelný výkon, curtailment</li>
+      <li><strong>H₂:</strong> MW, turndown, rampy, čistota, tlak; riziko: cyklování, degradace</li>
+      <li><strong>NH₃:</strong> t/den, zásoba (dny–měsíce), bezpečnost; riziko: stabilita syntézy, NOₓ při využití</li>
+      <li><strong>CO₂:</strong> zdroj, kvalita, kWh/t na separaci/kompresi; riziko: upstream emise, sorbenty</li>
+      <li><strong>Heat:</strong> teplotní hladiny, zásobníky, výměníky; riziko: ztráty, nestabilita teplot</li>
+      <li><strong>Control:</strong> strategie režimů, MPC/scénáře, health-aware; riziko: přenos fluktuací do pomalých procesů</li>
+    </ul>
+  </div>
+
+  <p class="small-note">
+    Vazby: <a href="#economics">Ekonomika</a> (citlivosti), <a href="#control">Řízení</a> (oddělení časových škál),
+    <a href="#heat">Heat</a> (účinnost), <a href="#materials">Materiály</a> (OPEX a disponibilita).
+  </p>
 </section>
+
 
 <!-- CONTROL -->
 <section id="control" class="tech-section">
