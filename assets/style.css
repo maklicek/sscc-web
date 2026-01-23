@@ -586,3 +586,11 @@ section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset); }
 @media (min-width: 900px){
   .two-col{ grid-template-columns: 1fr 1fr; }
 }
+.tech-section{
+  padding: var(--space-6) var(--space-5);
+}
+.tech-section > *{
+  max-width: 1100px;      /* uprav dle tvého containeru */
+  margin-left: auto;
+  margin-right: auto;
+}
