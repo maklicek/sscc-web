@@ -703,4 +703,24 @@ body.page-odborne .toc{ position: sticky; z-index: 20; }
   margin: 0;
   padding-left: 18px;
 }
+/* Decision / checklist box – pro odborné kapitoly */
+.decision-box{
+  background: rgba(15,23,42,0.04);
+  border: 1px dashed rgba(15,23,42,0.25);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+.decision-box h4{
+  font-size: 14px;
+  margin: 0 0 8px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  color: rgba(15,23,42,0.86);
+}
+.decision-box ul{
+  margin: 0;
+  padding-left: 18px;
+}
+.decision-box li{ margin: 6px 0; }
 
