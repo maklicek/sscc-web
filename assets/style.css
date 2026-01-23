@@ -569,3 +569,20 @@ section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset); }
 /* První H2/H3 hned po úvodu bez extra mezery */
 .page-header + .section h2,
 .page-header + .section h3{ margin-top: 0; }
+.tech-section{
+  padding: var(--space-6) 0;
+}
+
+.tech-section > h2:first-child,
+.tech-section > h3:first-child{
+  margin-top: 0;
+}
+.two-col{
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px){
+  .two-col{ grid-template-columns: 1fr 1fr; }
+}
