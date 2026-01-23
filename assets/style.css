@@ -686,3 +686,4 @@ body.page-odborne .wrapper{
 
 /* aby TOC bylo klikací a nic ho nepřekrývalo */
 body.page-odborne .toc{ position: sticky; z-index: 20; }
+
