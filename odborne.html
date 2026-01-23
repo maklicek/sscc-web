@@ -190,209 +190,128 @@
     </div>
   </section>
 
- <!-- OBSAH + TOC LAYOUT -->
+<!-- OBSAH + TOC LAYOUT -->
 <section class="section section-compact">
   <div class="container page-layout">
 
     <!-- LEVÝ TOC -->
-  <aside class="toc" aria-label="Obsah">
-  <h3>Obsah</h3>
+    <aside class="toc" aria-label="Obsah">
+      <h3>Obsah</h3>
 
-  <details open>
-    <summary>Zdrojová část</summary>
-    <ul>
-      <li><a href="#oze">OZE a profil výroby</a></li>
-      <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
-    </ul>
-  </details>
-
-  <details open>
-    <summary>Konverze a akumulace</summary>
-    <ul>
-      <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
-      <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
-      <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
-      <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Další odborné oblasti</summary>
-    <ul>
-      <li><a href="#limits">Integrační limity &amp; bilance</a></li>
-      <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
-      <li><a href="#materials">Materiály a životnost</a></li>
-      <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
-      <li><a href="#roadmap">Roadmapa výzkumu</a></li>
-    </ul>
-  </details>
-
-  <details>
-    <summary>Metodika a navigace</summary>
-    <ul>
-      <li><a href="#how-to-use">Jak s tím pracovat</a></li>
-      <li><a href="#navigation-bridge">Most ke konceptu</a></li>
-      <li><a href="#doc-status">Stav dokumentu</a></li>
-    </ul>
-  </details>
-</aside>
-
-      </aside>
-
-<!-- PRAVÝ OBSAH -->
-<div class="main-content">
-
-  <!-- tady mají být VŠECHNY tech-section: oze, geo, h2, nh3, co2, heat, limits, control, materials, economics, roadmap -->
-
-  <section class="tech-section" id="how-to-use">
-    <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
-
-    <div class="callout callout--info">
-      <p><strong>Účel:</strong> tento dokument není „popis technologií“, ale návrhový rámec pro dimenzování a provoz SSCC v reálném území.</p>
-      <p><strong>Výsledek:</strong> konfigurace uzlů, velikosti bloků, zásoby médií a provozní strategie v čase.</p>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3>3 kroky návrhu (doporučený postup)</h3>
-        <ol>
-          <li>
-            <strong>Data a omezení území</strong><br>
-            Získej hodinový profil výroby/spotřeby, limity připojení, ceny elektřiny v čase a lokální restrikce (hluk, ochranná pásma, bezpečnost).
-          </li>
-          <li>
-            <strong>Limitující faktor → návrhový strom</strong><br>
-            Použij kapitolu <a href="#limits">Integrační limity</a> a určete, co je primární „bottleneck“ (síť/teplo/média/bezpečnost/ekonomika).
-          </li>
-          <li>
-            <strong>Dimenzování uzlů a provozní strategie</strong><br>
-            Dimenzuj H₂/NH₃/CO₂/teplo podle profilů přebytků/deficitů a navrhni řízení režimů (mixed-mode, bufferování, zásoby, degradované režimy).
-          </li>
-        </ol>
-      </div>
-
-      <div>
-        <!-- druhý sloupec (legenda) pokračuje sem -->
-      </div>
-    </div>
-  </section>
-
-  <!-- sem pak patří #navigation-bridge, #doc-status atd. -->
-
-</div><!-- /.main-content -->
-
-</div><!-- /.container.page-layout -->
-</section><!-- /.section.section-compact -->
-
-
-
-    
-<section class="tech-section" id="how-to-use">
-  <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
-
-  <div class="callout callout--info">
-    <p><strong>Účel:</strong> tento dokument není „popis technologií“, ale návrhový rámec pro dimenzování a provoz SSCC v reálném území.</p>
-    <p><strong>Výsledek:</strong> konfigurace uzlů, velikosti bloků, zásoby médií a provozní strategie v čase.</p>
-  </div>
-
-  <div class="two-col">
-    <div>
-      <h3>3 kroky návrhu (doporučený postup)</h3>
-      <ol>
-        <li>
-          <strong>Data a omezení území</strong><br>
-          Získej hodinový profil výroby/spotřeby, limity připojení, ceny elektřiny v čase a lokální restrikce (hluk, ochranná pásma, bezpečnost).
-        </li>
-        <li>
-          <strong>Limitující faktor → návrhový strom</strong><br>
-          Použij kapitolu <a href="#limits">Integrační limity</a> a určete, co je primární „bottleneck“ (síť/teplo/média/bezpečnost/ekonomika).
-        </li>
-        <li>
-          <strong>Dimenzování uzlů a provozní strategie</strong><br>
-          Dimenzuj H₂/NH₃/CO₂/teplo podle profilů přebytků/deficitů a navrhni řízení režimů (mixed-mode, bufferování, zásoby, degradované režimy).
-        </li>
-      </ol>
-
-      <div class="decision-box">
-        <h4>Minimální sada vstupů (bez toho to nejde)</h4>
+      <details open>
+        <summary>Zdrojová část</summary>
         <ul>
-          <li>hodinová data: výroba/spotřeba + ceny elektřiny + curtailment (nebo odhad),</li>
-          <li>síť: max příkon/výkon, rampy, regulační požadavky,</li>
-          <li>teplo: dostupné teplotní úrovně a odběry,</li>
-          <li>média: zdroje a čistoty H₂/N₂/CO₂/vody,</li>
-          <li>bezpečnost a území: zónování a reálné limity lokality.</li>
+          <li><a href="#oze">OZE a profil výroby</a></li>
+          <li><a href="#geo">Geotermie a teplotní úrovně</a></li>
         </ul>
-      </div>
-    </div>
+      </details>
 
-    <div>
-      <h3>Legenda časových škál (proč je to klíčové)</h3>
-      <p>
-        SSCC je „systém časových škál“. Rozpadává se, pokud se rychlé fluktuace přenášejí do pomalých procesů.
-        Řízení a zásobníky existují primárně proto, aby se tyto škály oddělily.
-      </p>
-
-      <ul>
-        <li><strong>ms–sekundy:</strong> ochrany, bezpečnost, lokální regulace (nesmí být přepsáno optimalizací)</li>
-        <li><strong>minuty:</strong> regulace výkonu, krátkodobé vyhlazení, ochrana proti rampám</li>
-        <li><strong>hodiny:</strong> elektrolýza, syntézy, rekuperace tepla, bufferování toků</li>
-        <li><strong>dny:</strong> zásoby médií, plánování režimů, údržba, dostupnost uzlů</li>
-        <li><strong>týdny–sezóny:</strong> NH₃/CO₂ strategie, krizové režimy, systémová odolnost</li>
-      </ul>
-
-      <div class="decision-box">
-        <h4>Pravidlo stability SSCC</h4>
+      <details open>
+        <summary>Konverze a akumulace</summary>
         <ul>
-          <li>rychlé změny řeš krátkodobě (řízení + zásobníky),</li>
-          <li>pomalé procesy drž ve stabilním provozním okně,</li>
-          <li>dlouhodobé zásoby používej pro strategie, ne pro „hasení minutových výkyvů“.</li>
+          <li><a href="#h2">Výroba vodíku a elektrolýza</a></li>
+          <li><a href="#nh3">Syntéza amoniaku a role NH₃</a></li>
+          <li><a href="#co2">Uzavřené CO₂-cykly a bilance</a></li>
+          <li><a href="#heat">Tepelná integrace a zásobníky</a></li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
+      </details>
 
-<section class="tech-section" id="navigation-bridge">
-  <h2>Most zpět k systémovému smyslu</h2>
+      <details>
+        <summary>Další odborné oblasti</summary>
+        <ul>
+          <li><a href="#limits">Integrační limity &amp; bilance</a></li>
+          <li><a href="#control">Procesní dynamika &amp; řízení</a></li>
+          <li><a href="#materials">Materiály a životnost</a></li>
+          <li><a href="#economics">Ekonomika (CAPEX/OPEX)</a></li>
+          <li><a href="#roadmap">Roadmapa výzkumu</a></li>
+        </ul>
+      </details>
 
-  <p>
-    Pokud chceš projít SSCC ve „správném návrhovém směru“ od problému ke konkrétnímu řešení,
-    doporučujeme tuto posloupnost:
-  </p>
-
-  <div class="decision-box">
-    <h4>Doporučené čtení (návrhový řetězec)</h4>
-    <ul>
-      <li><strong>Smysl:</strong> <a href="smysl-sscc.html">proč systém vzniká a jaký problém řeší</a></li>
-      <li><strong>Systém:</strong> <a href="sscc-system.html">jak je architektura vrstev a uzlů strukturována</a></li>
-      <li><strong>Technologie:</strong> <a href="technologie.html">jaké bloky tvoří fyzickou a chemickou vrstvu</a></li>
-      <li><strong>Data &amp; AI:</strong> <a href="data-ai.html">jak probíhá orchestrace, predikce a řízení režimů</a></li>
-      <li><strong>Odborníci:</strong> tato stránka – integrační limity, bilance a provozní realita</li>
-    </ul>
-  </div>
-
-  <div style="margin-top: 18px; display: flex; gap: 14px; flex-wrap: wrap;">
-    <a href="smysl-sscc.html" class="btn-primary">Smysl SSCC</a>
-    <a href="sscc-system.html" class="btn-primary">SSCC systém</a>
-    <a href="data-ai.html" class="btn-primary">Data &amp; AI</a>
-  </div>
-
-  <p class="mini small-note" style="margin-top: 12px;">
-    Pozn.: Odkazy jsou záměrně „most“ – aby odborný obsah nebyl izolovaný a šel použít jako součást návrhové dokumentace.
-  </p>
-
-  <a class="back-to-top" href="#top">Nahoru</a>
-</section>
-
-      <div class="toc-footer"></div>
+      <details>
+        <summary>Metodika a navigace</summary>
+        <ul>
+          <li><a href="#how-to-use">Jak s tím pracovat</a></li>
+          <li><a href="#navigation-bridge">Most ke konceptu</a></li>
+          <li><a href="#doc-status">Stav dokumentu</a></li>
+        </ul>
+      </details>
     </aside>
-<li><a href="#how-to-use">Jak s tím pracovat (metodika)</a></li>
-<li><a href="#navigation-bridge">Most zpět k systémovému smyslu</a></li>
 
     <!-- PRAVÝ OBSAH -->
     <div class="main-content">
 
-      <!-- OZE -->
+      <!-- METODIKA (ponech pouze JEDNOU) -->
+      <section class="tech-section" id="how-to-use">
+        <h2>Jak s tímto rámcem pracovat (metodika pro návrh SSCC)</h2>
+
+        <div class="callout callout--info">
+          <p><strong>Účel:</strong> tento dokument není „popis technologií“, ale návrhový rámec pro dimenzování a provoz SSCC v reálném území.</p>
+          <p><strong>Výsledek:</strong> konfigurace uzlů, velikosti bloků, zásoby médií a provozní strategie v čase.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>3 kroky návrhu (doporučený postup)</h3>
+            <ol>
+              <li>
+                <strong>Data a omezení území</strong><br>
+                Získej hodinový profil výroby/spotřeby, limity připojení, ceny elektřiny v čase a lokální restrikce (hluk, ochranná pásma, bezpečnost).
+              </li>
+              <li>
+                <strong>Limitující faktor → návrhový strom</strong><br>
+                Použij kapitolu <a href="#limits">Integrační limity</a> a určete, co je primární „bottleneck“ (síť/teplo/média/bezpečnost/ekonomika).
+              </li>
+              <li>
+                <strong>Dimenzování uzlů a provozní strategie</strong><br>
+                Dimenzuj H₂/NH₃/CO₂/teplo podle profilů přebytků/deficitů a navrhni řízení režimů (mixed-mode, bufferování, zásoby, degradované režimy).
+              </li>
+            </ol>
+
+            <div class="decision-box">
+              <h4>Minimální sada vstupů (bez toho to nejde)</h4>
+              <ul>
+                <li>hodinová data: výroba/spotřeba + ceny elektřiny + curtailment (nebo odhad),</li>
+                <li>síť: max příkon/výkon, rampy, regulační požadavky,</li>
+                <li>teplo: dostupné teplotní úrovně a odběry,</li>
+                <li>média: zdroje a čistoty H₂/N₂/CO₂/vody,</li>
+                <li>bezpečnost a území: zónování a reálné limity lokality.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h3>Legenda časových škál (proč je to klíčové)</h3>
+            <p>
+              SSCC je „systém časových škál“. Rozpadává se, pokud se rychlé fluktuace přenášejí do pomalých procesů.
+              Řízení a zásobníky existují primárně proto, aby se tyto škály oddělily.
+            </p>
+
+            <ul>
+              <li><strong>ms–sekundy:</strong> ochrany, bezpečnost, lokální regulace (nesmí být přepsáno optimalizací)</li>
+              <li><strong>minuty:</strong> regulace výkonu, krátkodobé vyhlazení, ochrana proti rampám</li>
+              <li><strong>hodiny:</strong> elektrolýza, syntézy, rekuperace tepla, bufferování toků</li>
+              <li><strong>dny:</strong> zásoby médií, plánování režimů, údržba, dostupnost uzlů</li>
+              <li><strong>týdny–sezóny:</strong> NH₃/CO₂ strategie, krizové režimy, systémová odolnost</li>
+            </ul>
+
+            <div class="decision-box">
+              <h4>Pravidlo stability SSCC</h4>
+              <ul>
+                <li>rychlé změny řeš krátkodobě (řízení + zásobníky),</li>
+                <li>pomalé procesy drž ve stabilním provozním okně,</li>
+                <li>dlouhodobé zásoby používej pro strategie, ne pro „hasení minutových výkyvů“.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a class="back-to-top" href="#top">Nahoru</a>
+      </section>
+    </div><!-- /.main-content -->
+  </div><!-- /.container.page-layout -->
+</section><!-- /.section.section-compact -->
+
+    <!-- OZE -->
       <section id="oze" class="tech-section">
         <h2>Obnovitelné zdroje a profil výroby</h2>
 
@@ -401,15 +320,6 @@
           <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
           <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂-cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
         </div>
-
-        <div class="two-col">
-          <div>
-            <p>
-              Pro návrh SSCC je zásadní rozlišit krátkodobé fluktuace (minuty–hodiny), denní a týdenní strukturu (počasí)
-              a sezonní rozdíly. V praxi často nejde o „kolik kW máme“, ale <strong>kdy</strong> a <strong>jak dlouho</strong>
-              vzniká přebytek a zda jej limituje síť, akumulace nebo cena <em>curtailmentu</em>.
-            </p>
-
             <h3>Fotovoltaika</h3>
             <p>
               FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
