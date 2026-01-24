@@ -879,12 +879,9 @@ body.page-odborne .site-logo{
   z-index: 100;
 }
 
-/* =========================================
-   EXPANDED HEADER: only on homepage
-   (body.page-home)
-========================================= */
+/* Home: jen drobné odlišení, BEZ rozbití zarovnání */
 body.page-home .site-header{
-  padding: 16px 24px;
+  padding: 14px var(--page-pad); /* sjednoceno */
 }
 
 body.page-home .site-motto{
@@ -892,14 +889,22 @@ body.page-home .site-motto{
   margin-top: 6px;
 }
 
+/* volitelné: na home může být název o chlup menší, ale ne drasticky */
 body.page-home .brand-name{
-  font-size: 16px;
+  font-size: 20px;
 }
+
+/* NIKDY nenastavuj width loga; drž pouze výšku */
 body.page-home .site-logo{
-  width: 56px;
+  height: 88px;
+  width: auto;
 }
+
 /* Sjednocení bočního odsazení: hlavička vs. obsah */
-:root{ --page-pad: 40px; }
+:root{
+  --page-pad: 40px;
+  --page-pad-mobile: 20px;
+}
 
 /* Sekce – sjednocený boční padding */
 .section{ padding: 56px var(--page-pad); }
@@ -919,10 +924,6 @@ body.page-home .site-logo{
   .site-header{ padding-left: var(--page-pad-mobile); padding-right: var(--page-pad-mobile); }
 }
 
-/* na mobilu ať to není moc široké */
-@media (max-width: 900px){
-  :root{ --page-pad: 20px; }
-}
 /* Header: větší logo a brand */
 .site-logo{ height: 88px; }      /* bylo 74px */
 .brand-name{
@@ -944,3 +945,4 @@ body.page-home .site-logo{
   flex-wrap: wrap;  /* když je málo místa, ať se to zalomí kontrolovaně */
   justify-content: flex-end;
 }
+.site-logo{ height: 88px; width:auto; }
