@@ -996,3 +996,56 @@ body.page-home .site-logo{
 .page-header h1{
   margin-bottom: 18px;   /* bylo 28px */
 }
+/* =========================================================
+   HEADER – finální kompaktní layout (desktop)
+   dej na ÚPLNÝ konec style.css
+========================================================= */
+
+/* Zruš „homepage“ výjimky, ať je hlavička jednotná všude */
+body.page-home .site-header{ padding: 8px 16px !important; }
+body.page-home .site-logo{ height: 64px !important; width: auto !important; }
+body.page-home .brand-name{ font-size: 20px !important; }
+
+/* Kompaktní hlavička + víc vlevo */
+.site-header{
+  padding: 8px 16px !important;   /* víc vlevo než 24px */
+  gap: 16px;
+  flex-wrap: nowrap;              /* drž to v jednom řádku (desktop) */
+}
+
+/* Klíčové: odjistit min-width, která ti rozhazuje layout */
+.header-left{
+  min-width: 0 !important;        /* zruší staré min-width:360px */
+  gap: 12px;
+}
+
+/* Logo + brand kompaktně */
+.site-logo{ height: 64px; width: auto; }
+
+.brand-name{
+  font-size: 20px;
+  line-height: 1.1;
+}
+
+.site-motto{
+  font-size: 14px;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Navigace: ať je výš a napravo (a nezůstává „utopená“) */
+.main-nav{
+  margin-left: auto;              /* posune nav napravo */
+  align-items: center;
+  gap: 22px;
+  font-size: 16px;
+  flex-wrap: wrap;                /* když dojde místo, zalomí se kontrolovaně */
+}
+
+/* Nav linky méně vysoké = opticky „výš“ */
+.main-nav a{
+  padding: 2px 0;                 /* místo velkých paddingů */
+  line-height: 1.2;
+}
+.page-header{ padding-top: 10px; }
+.page-header h1{ margin-bottom: 14px; }
