@@ -891,3 +891,35 @@ body.page-home .brand-name{
 body.page-home .site-logo{
   width: 56px;
 }
+/* Sjednocení bočního odsazení: hlavička vs. obsah */
+:root{ --page-pad: 40px; }
+
+.site-header{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
+.section{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
+.page-header{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
+
+/* na mobilu ať to není moc široké */
+@media (max-width: 900px){
+  :root{ --page-pad: 20px; }
+}
+/* Header: větší logo a brand */
+.site-logo{ height: 88px; }      /* bylo 74px */
+.brand-name{
+  font-size: 22px;              /* bylo 18px */
+  font-weight: 700;             /* bylo 600 */
+  letter-spacing: .2px;
+}
+.site-motto{
+  font-size: 16px;              /* bylo 18px, ale 18 je už hodně "tlusté" */
+  line-height: 1.25;
+}
+.site-header{
+  gap: 18px;
+}
+.header-left{
+  min-width: 360px; /* aby brand měl prostor */
+}
+.main-nav{
+  flex-wrap: wrap;  /* když je málo místa, ať se to zalomí kontrolovaně */
+  justify-content: flex-end;
+}
