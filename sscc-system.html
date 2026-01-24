@@ -24,17 +24,15 @@
       </div>
     </div>
 
-    <nav class="main-nav">
-      <p class="small-note">
-      <a href="index.html">Úvod</a>
-      <a href="smysl-sscc.html">Smysl SSCC</a>
-      <a href="sscc-system.html" class="active">SSCC systém</a>
-      <a href="technologie.html">Technologie</a>
-      <a href="aplikace.html">Aplikace</a>
-      <a href="data-ai.html">Data &amp; AI řízení</a>
-      <a href="odborne.html">Pro odborníky</a>
-    </nav>
-  </header>
+   <nav class="main-nav">
+  <a href="index.html">Úvod</a>
+  <a href="smysl-sscc.html">Smysl SSCC</a>
+  <a href="sscc-system.html" class="active">SSCC systém</a>
+  <a href="technologie.html">Technologie</a>
+  <a href="aplikace.html">Aplikace</a>
+  <a href="data-ai.html">Data &amp; AI řízení</a>
+  <a href="odborne.html">Pro odborníky</a>
+</nav>
 
   <main>
 
@@ -51,6 +49,16 @@
   <p><strong>TL;DR:</strong> SSCC je síť energetických uzlů, kde se přebytky elektřiny převádějí do tepla a chemických médií (H₂/NH₃/CO₂) a zpět, řízeně v čase.</p>
   <p><strong>Co je uzel:</strong> lokalita + technologie + lokální autonomie (Edge) + koordinace nadřazenou vrstvou.</p>
 </div>
+
+<p class="small-note">
+  Na této stránce:
+  <a href="#node">Uzel</a> ·
+  <a href="#layers">Vrstvy</a> ·
+  <a href="#flows">Toky</a> ·
+  <a href="#integration">Integrace</a> ·
+  <a href="#navigation-bridge">Kam dál</a>
+</p>
+
 
         <p class="small-note">
           Související: <a href="smysl-sscc.html">Smysl SSCC</a> ·
@@ -205,17 +213,25 @@
               <li>logistika a plánování: ERP/MES (dle provozu)</li>
             </ul>
           </div>
+          <div class="decision-box">
+  <h4>Technické principy</h4>
+  <ul>
+    <li>standardní rozhraní (OPC-UA, MQTT, REST, IEC 61850 dle domény),</li>
+    <li>oddělení IT/OT,</li>
+    <li>fail-safe lokální režimy při výpadku komunikace,</li>
+    <li>auditovatelnost rozhodnutí (logování, verze modelů).</li>
+  </ul>
+</div>
 
-          <div>
-            <div class="decision-box">
-              <h4>Technické principy</h4>
-              <ul>
-                <li>standardní rozhraní (OPC-UA, MQTT, REST, IEC 61850 dle domény),</li>
-                <li>oddělení IT/OT,</li>
-                <li>fail-safe lokální režimy při výpadku komunikace,</li>
-                <li>auditovatelnost rozhodnutí (logování, verze modelů).</li>
-              </ul>
-              <div class="decision-box">
+<div class="decision-box">
+  <h4>Integrace bez výměny infrastruktury</h4>
+  <ul>
+    <li>SSCC se napojuje jako nadřazená orchestrace, ne jako náhrada PLC/DCS.</li>
+    <li>Lokální režimy musí fungovat i při ztrátě spojení.</li>
+    <li>Rozhodnutí jsou logována (audit) a verzována (modely/politiky).</li>
+  </ul>
+</div>
+
   <h4>Integrace bez výměny infrastruktury</h4>
   <ul>
     <li>SSCC se napojuje jako nadřazená orchestrace, ne jako náhrada PLC/DCS.</li>
