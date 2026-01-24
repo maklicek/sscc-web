@@ -955,3 +955,44 @@ body.page-home .site-logo{
   margin: 0 auto;
   padding: 0 var(--page-pad);
 }
+/* =========================================
+   HEADER – kompaktnější a víc vlevo
+========================================= */
+
+.site-header{
+  padding: 8px 24px;            /* bylo ~14px 40px */
+  align-items: center;
+}
+
+/* brand víc vlevo – žádné extra odsazení */
+.header-left{
+  gap: 14px;                    /* menší mezera mezi logem a textem */
+}
+
+/* logo trochu menší, ale pořád dominantní */
+.site-logo{
+  height: 64px;                 /* bylo 88px */
+  width: auto;
+}
+
+/* název víc kompaktní */
+.brand-name{
+  font-size: 20px;              /* bylo 22px */
+  line-height: 1.1;
+}
+
+/* motto menší, ať hlavička neroste do výšky */
+.site-motto{
+  font-size: 14px;
+  line-height: 1.2;
+}
+.main-nav{
+  font-size: 16px;     /* bylo 17px */
+  align-items: center;
+}
+.page-header{
+  padding: 18px var(--page-pad) 28px;   /* bylo 32px … 36px */
+}
+.page-header h1{
+  margin-bottom: 18px;   /* bylo 28px */
+}
