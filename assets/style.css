@@ -796,3 +796,11 @@ body.page-odborne .toc{
 .decision-box li{ margin: 6px 0; }
 
 .back-to-top{ display:inline-block; margin-top: 18px; }
+/* FIX: header musí být vidět na všech stránkách */
+header,
+.site-header{
+  display: block !important;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
