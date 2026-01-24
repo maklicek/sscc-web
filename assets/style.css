@@ -756,3 +756,12 @@ body.page-odborne .toc{ position: sticky; z-index: 20; }
   z-index: 50;
 }
 
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+@media (max-width: 900px){
+  .two-col{ grid-template-columns: 1fr; }
+}
