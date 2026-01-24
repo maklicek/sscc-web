@@ -1,346 +1,333 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aplikační scénáře SSCC</title>
 
-  <link rel="stylesheet" href="assets/style.css?v=3">
+  <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 
-<body>
+<body class="page-aplikace" id="top">
 
-<!-- HLAVIČKA -->
-<header class="site-header">
-  <div class="header-left">
-    <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+  <!-- HLAVIČKA – jednotná pro celý web -->
+  <header class="site-header">
+    <div class="header-left">
+      <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
 
-    <div class="brand-block">
-      <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
-      <div class="site-motto">
-        Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
+      <div class="brand-block">
+        <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
+        <div class="site-motto">
+          Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
+        </div>
       </div>
     </div>
-  </div>
 
-  <nav class="main-nav">
-    <a href="index.html">Úvod</a>
-    <a href="smysl-sscc.html">Smysl SSCC</a>
+    <nav class="main-nav">
+      <a href="index.html">Úvod</a>
+      <a href="smysl-sscc.html">Smysl SSCC</a>
+      <a href="sscc-system.html">SSCC systém</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="aplikace.html" class="active">Aplikace</a>
+      <a href="data-ai.html">Data &amp; AI řízení</a>
+      <a href="odborne.html">Pro odborníky</a>
+    </nav>
+  </header>
 
-    <a href="sscc-system.html">SSCC systém</a>
-    <a href="technologie.html">Technologie</a>
-    <a href="aplikace.html" class="active">Aplikace</a>
-    <a href="data-ai.html">Data &amp; AI řízení</a>
-    <a href="odborne.html">Pro odborníky</a>
-  </nav>
-</header>
+  <main>
 
-<!-- ÚVOD -->
-<section class="page-header section">
-  <div class="container">
- <p class="section-lead">
-  V aplikačních scénářích se SSCC neprojevuje jako jednotlivá technologie,
-  ale jako <strong>energetický uzel</strong> nebo síť uzlů, které stabilizují
-  provoz konkrétní lokality nebo regionu.
-</p>
-    </p>
-V každém scénáři vystupuje SSCC jako jeden nebo více koordinovaných uzlů,
-jejichž konfigurace se přizpůsobuje místním zdrojům, infrastruktuře a rizikům. 
-    </p>
-    <h1>Aplikační scénáře SSCC</h1>
-
-    <p>
-      Tato stránka shrnuje typické situace, kde má SSCC v praxi největší přínos.
-      Nejde o „seznam odvětví“, ale o mapu problémů: kde se vyplatí stabilizace výkonu,
-      dlouhodobá akumulace a integrace toků elektřiny – tepla – chemických médií.
-    </p>
-<p class="small-note">
-  Aplikační scénáře nejsou „různé systémy“, ale různé konfigurace téhož jádra SSCC.
-  Navazují na <a href="sscc-system.html">architekturu systému</a> a využívají
-  <a href="technologie.html">technologické moduly</a> podle podmínek lokality.
-</p>
-
-    <p>Pro rychlou orientaci obvykle platí tři signály vhodnosti:</p>
-
-    <ol>
-      <li>opakující se přebytky nebo deficity v řádu hodin až dnů,</li>
-      <li>omezení sítě, vysoké špičky nebo nízká odolnost provozu,</li>
-      <li>smysluplné využití tepla nebo procesní integrace.</li>
-    </ol>
-
-    <p>Pokud se potkávají alespoň dva z těchto bodů, má SSCC vysoký potenciál přínosu.</p>
-    <p class="small-note">
-  V každém scénáři se liší konfigurace uzlu, ale architektura vrstev
-  a princip orchestrace zůstávají stejné.
-</p>
-  </div>
-</section>
-
-
-<!-- SCÉNÁŘE -->
-<section class="section">
-  <div class="container">
-    <h2>Scénáře, kde SSCC typicky dává smysl</h2>
-
-    <p class="section-lead">
-      Níže uvedené scénáře se liší, ale mají společný princip: SSCC nepřidává jen „další zdroj“, ale snižuje zranitelnost systému a zlepšuje využití dostupné energie v čase.
-    </p>
-
-    <div class="app-grid">
-      <div class="app-card">
-        <h3>Průmyslové areály a chemické provozy</h3>
-
-        <p>
-          Provozy s vysokou spotřebou elektřiny a tepla, kde výpadky nebo výkonové špičky
-          znamenají reálné ekonomické ztráty a kde lze část energie převádět do chemických
-          médií nebo využít procesní teplo.
+    <!-- ÚVOD -->
+    <section class="page-header section">
+      <div class="container">
+        <p class="section-lead">
+          V aplikačních scénářích se SSCC neprojevuje jako jednotlivá technologie,
+          ale jako <strong>energetický uzel</strong> nebo síť uzlů, které stabilizují
+          provoz konkrétní lokality nebo regionu.
         </p>
 
-        <p><strong>Kdy dává smysl:</strong></p>
+        <p>
+          V každém scénáři vystupuje SSCC jako jeden nebo více koordinovaných uzlů,
+          jejichž konfigurace se přizpůsobuje místním zdrojům, infrastruktuře a rizikům.
+        </p>
+
+        <h1>Aplikační scénáře SSCC</h1>
+
+        <p>
+          Tato stránka shrnuje typické situace, kde má SSCC v praxi největší přínos.
+          Nejde o „seznam odvětví“, ale o mapu problémů: kde se vyplatí stabilizace výkonu,
+          dlouhodobá akumulace a integrace toků elektřiny – tepla – chemických médií.
+        </p>
+
+        <p class="small-note">
+          Aplikační scénáře nejsou „různé systémy“, ale různé konfigurace téhož jádra SSCC.
+          Navazují na <a href="sscc-system.html">architekturu systému</a> a využívají
+          <a href="technologie.html">technologické moduly</a> podle podmínek lokality.
+        </p>
+
+        <p>Pro rychlou orientaci obvykle platí tři signály vhodnosti:</p>
+
+        <ol>
+          <li>opakující se přebytky nebo deficity v řádu hodin až dnů,</li>
+          <li>omezení sítě, vysoké špičky nebo nízká odolnost provozu,</li>
+          <li>smysluplné využití tepla nebo procesní integrace.</li>
+        </ol>
+
+        <p>
+          Pokud se potkávají alespoň dva z těchto bodů, má SSCC vysoký potenciál přínosu.
+        </p>
+
+        <p class="small-note">
+          V každém scénáři se liší konfigurace uzlu, ale architektura vrstev a princip orchestrace zůstávají stejné.
+        </p>
+      </div>
+    </section>
+
+    <!-- SCÉNÁŘE -->
+    <section class="section" id="scenare">
+      <div class="container">
+        <h2>Scénáře, kde SSCC typicky dává smysl</h2>
+
+        <p class="section-lead">
+          Níže uvedené scénáře se liší, ale mají společný princip: SSCC nepřidává jen „další zdroj“,
+          ale snižuje zranitelnost systému a zlepšuje využití dostupné energie v čase.
+        </p>
+
+        <div class="app-grid">
+
+          <div class="app-card">
+            <h3>Průmyslové areály a chemické provozy</h3>
+            <p>
+              Provozy s vysokou spotřebou elektřiny a tepla, kde výpadky nebo výkonové špičky
+              znamenají reálné ekonomické ztráty a kde lze část energie převádět do chemických
+              médií nebo využít procesní teplo.
+            </p>
+
+            <p><strong>Kdy dává smysl:</strong></p>
+            <ul>
+              <li>kontinuální nebo polo-kontinuální výroba citlivá na výpadky,</li>
+              <li>možnost tepelné integrace (odpadní teplo, stabilní teplotní úrovně),</li>
+              <li>zájem o H₂ / NH₃ jako médium, surovinu nebo dlouhodobou rezervu.</li>
+            </ul>
+
+            <p>
+              <strong>Typické výstupy:</strong>
+              stabilizovaný odběr, snížení špiček, dlouhodobá energetická rezerva, lepší využití tepla.
+            </p>
+          </div>
+
+          <div class="app-card">
+            <h3>Městské a regionální energetické uzly (stabilizace sítě)</h3>
+            <p>
+              SSCC funguje jako stabilizační vrstva pro lokální distribuční soustavy,
+              teplárenské uzly a místa s omezeními sítě. Nejde o náhradu přenosové soustavy,
+              ale o zpevnění kritických bodů a lepší řízení lokální energetické bilance.
+            </p>
+
+            <p><strong>Kdy dává smysl:</strong></p>
+            <ul>
+              <li>přetížené rozvodny nebo vedení, výrazné sezónní špičky,</li>
+              <li>kombinace více zdrojů a více typů spotřeb v jednom uzlu,</li>
+              <li>požadavek na vyšší odolnost a řízený provoz při poruchách.</li>
+            </ul>
+
+            <p>
+              <strong>Typické výstupy:</strong>
+              vyrovnání špiček, delší provoz v omezeném režimu, stabilnější lokální energetická bilance.
+            </p>
+          </div>
+
+          <div class="app-card">
+            <h3>Ostrovní a odlehlé lokality</h3>
+            <p>
+              Lokality bez robustní přenosové soustavy, kde je klíčová stabilita
+              a dlouhodobá energetická rezerva, často s omezenými možnostmi dovozu paliv.
+              SSCC zde slouží jako integrační vrstva mezi lokálními zdroji, akumulací
+              a řízením spotřeby.
+            </p>
+
+            <p><strong>Kdy dává smysl:</strong></p>
+            <ul>
+              <li>nespolehlivé nebo žádné napojení na přenosovou soustavu,</li>
+              <li>vysoké logistické náklady na dovoz paliv,</li>
+              <li>požadavek na provoz v řádu dnů až týdnů bez externích dodávek.</li>
+            </ul>
+
+            <p>
+              <strong>Typické výstupy:</strong>
+              omezení závislosti na dieselových agregátech, stabilnější ostrovní provoz, vyšší provozní autonomie.
+            </p>
+          </div>
+
+          <div class="app-card">
+            <h3>Logistické uzly a přístavy</h3>
+            <p>
+              Místa s koncentrací energeticky náročných operací a potenciální poptávkou
+              po chemických médiích pro průmysl nebo dopravu. SSCC zde může fungovat
+              jako kombinace stabilního energetického zázemí a infrastruktury pro práci
+              s médii tam, kde to dává technický i bezpečnostní smysl.
+            </p>
+
+            <p><strong>Kdy dává smysl:</strong></p>
+            <ul>
+              <li>výrazné výkonové špičky (jeřáby, chlazení, nabíjení, provoz techniky),</li>
+              <li>poptávka po H₂ / NH₃ v rámci areálu nebo blízkého průmyslu,</li>
+              <li>prostorové a bezpečnostní možnosti pro práci s médii.</li>
+            </ul>
+
+            <p>
+              <strong>Typické výstupy:</strong>
+              stabilnější provoz infrastruktury, energetické zázemí pro lokální média, vyrovnání výkonových špiček.
+            </p>
+          </div>
+
+          <div class="app-card">
+            <h3>Agrární a potravinářské provozy</h3>
+            <p>
+              Provozy, kde se potkává energie, teplo a výrazná sezónnost výroby,
+              často s vysokou citlivostí na cenu a dostupnost energie. SSCC zde
+              posiluje stabilitu provozu a umožňuje lepší využití lokálních zdrojů
+              i odpadního tepla.
+            </p>
+
+            <p><strong>Kdy dává smysl:</strong></p>
+            <ul>
+              <li>sezónní špičky spotřeby a citlivost na výkyvy cen,</li>
+              <li>využitelné teplo (zpracování, sušení, chlazení),</li>
+              <li>větší areály, kde se projeví ekonomika měřítka.</li>
+            </ul>
+
+            <p>
+              <strong>Typické výstupy:</strong>
+              stabilnější energetická bilance, lepší využití lokálních zdrojů, snížení provozních rizik.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTUPNÉ NASAZENÍ -->
+    <section class="section" id="rust">
+      <div class="container">
+        <h2>Jak nasazení SSCC obvykle roste</h2>
+
+        <p class="section-lead">
+          SSCC se zpravidla nenasazuje jako jednorázový „megaprojekt“.
+          Praktická cesta je postupná, řízená daty a provozní zkušeností.
+        </p>
+
+        <div class="benefits-grid">
+          <div class="benefit-box">
+            <h3>Pilot – ověření v konkrétních podmínkách</h3>
+            <p>
+              Jeden uzel s jasně definovanými cíli: stabilizace, řízení,
+              bezpečnost a sběr provozních dat. Cílem není jen technická
+              funkčnost, ale pochopení místní energetické reality.
+            </p>
+            <p><strong>Výstup:</strong> provozní model, reálná účinnost, ekonomické parametry v dané lokalitě.</p>
+          </div>
+
+          <div class="benefit-box">
+            <h3>Lokální uzel – infrastrukturní funkce</h3>
+            <p>
+              SSCC začíná poskytovat reálnou službu: vyrovnání špiček,
+              práce s přebytky a zvýšení spolehlivosti provozu areálu
+              nebo části sítě.
+            </p>
+            <p><strong>Výstup:</strong> stabilnější provoz, nižší riziko výpadků, lepší využití lokálních zdrojů.</p>
+          </div>
+
+          <div class="benefit-box">
+            <h3>Regionální síť uzlů – koordinace a odolnost</h3>
+            <p>
+              Více uzlů s koordinovaným řízením umožňuje systémové efekty:
+              lepší využití zdrojů, vyšší odolnost a stabilnější provoz sítě.
+            </p>
+            <p><strong>Výstup:</strong> přínos není jen lokální, ale systémový – pro energetiku i průmysl.</p>
+          </div>
+
+          <div class="benefit-box">
+            <h3>Dlouhodobý směr – média jako část infrastruktury</h3>
+            <p>
+              V delším horizontu může část energie cestovat i jako médium
+              (např. NH₃) v rámci průmyslových a logistických toků.
+              Ne jako náhrada vedení, ale jako doplněk tam, kde to dává smysl.
+            </p>
+            <p><strong>Výstup:</strong> propojení energetiky a průmyslových řetězců v jednom plánovacím rámci.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOST: APLIKACE → DATA & AI -->
+    <section class="section" id="bridge-data">
+      <div class="container">
+        <h2>Proč různé scénáře vyžadují inteligentní řízení</h2>
+
+        <p class="section-lead">
+          Aplikační scénáře SSCC se liší prostředím, cíli i provozními omezeními,
+          ale všechny mají společné jedno: rozhodování v čase mezi konkurenčními prioritami.
+        </p>
+
+        <p>
+          V jednom okamžiku je výhodné akumulovat energii, v jiném ji dodat do sítě,
+          jindy upřednostnit průmyslovou výrobu, teplo pro město nebo zachování
+          strategických rezerv. Tyto volby nelze řídit statickými pravidly —
+          závisí na vývoji počasí, spotřeby, cen, stavu zařízení i rizik v síti.
+        </p>
+
+        <p>Jakmile systém pracuje s více zdroji, médii a lokalitami, vznikají konflikty mezi cíli:</p>
+
         <ul>
-          <li>kontinuální nebo polo-kontinuální výroba citlivá na výpadky,</li>
-          <li>možnost tepelné integrace (odpadní teplo, stabilní teplotní úrovně),</li>
-          <li>zájem o H₂ / NH₃ jako médium, surovinu nebo dlouhodobou rezervu.</li>
+          <li>ekonomika vs. bezpečnost dodávek,</li>
+          <li>krátkodobá optimalizace vs. dlouhodobá stabilita,</li>
+          <li>lokální výhody vs. regionální rovnováha systému.</li>
         </ul>
 
         <p>
-          <strong>Typické výstupy:</strong>
-          stabilizovaný odběr, snížení špiček, dlouhodobá energetická rezerva,
-          lepší využití tepla.
+          SSCC proto není řízeno jen pomocí klasického dispečinku,
+          ale využívá datový model, predikce a optimalizační algoritmy,
+          které umožňují plánovat a řídit provoz v různých časových měřítcích.
+        </p>
+
+        <p style="margin-top: 18px;">
+          <a href="data-ai.html" class="btn-primary">Jak funguje Data &amp; AI řízení SSCC</a>
         </p>
       </div>
+    </section>
 
-      <div class="app-card">
-        <h3>Městské a regionální energetické uzly (stabilizace sítě)</h3>
+    <section class="section section-compact">
+      <div class="container">
+        <h2>Co umožňuje řídit tyto scénáře v reálném čase</h2>
 
         <p>
-          SSCC funguje jako stabilizační vrstva pro lokální distribuční soustavy,
-          teplárenské uzly a místa s omezeními sítě. Nejde o náhradu přenosové soustavy,
-          ale o zpevnění kritických bodů a lepší řízení lokální energetické bilance.
+          To, že SSCC zvládá různé provozní scénáře, není dáno jen technologií,
+          ale především datovým modelem, predikcí a optimalizačním řízením.
         </p>
 
-        <p><strong>Kdy dává smysl:</strong></p>
-        <ul>
-          <li>přetížené rozvodny nebo vedení, výrazné sezónní špičky,</li>
-          <li>kombinace více zdrojů a více typů spotřeb v jednom uzlu,</li>
-          <li>požadavek na vyšší odolnost a řízený provoz při poruchách.</li>
-        </ul>
-
         <p>
-          <strong>Typické výstupy:</strong>
-          vyrovnání špiček, delší provoz v omezeném režimu,
-          stabilnější lokální energetická bilance.
+          Bez datové vrstvy by systém nebyl schopen reagovat na změny v čase,
+          koordinovat více lokalit ani předcházet krizovým stavům.
+        </p>
+
+        <a href="data-ai.html" class="btn-primary">Řízení a optimalizace (Data &amp; AI)</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Máte lokalitu nebo scénář k posouzení?</h2>
+        <p>
+          Pokud máte základní profil spotřeby (den/týden), dostupné zdroje (OZE/teplo) a případná omezení sítě,
+          dá se rychle určit, zda SSCC v daném místě dává smysl – a v jakém měřítku.
         </p>
       </div>
+    </section>
 
-      <div class="app-card">
-        <h3>Ostrovní a odlehlé lokality</h3>
+  </main>
 
-        <p>
-          Lokality bez robustní přenosové soustavy, kde je klíčová stabilita
-          a dlouhodobá energetická rezerva, často s omezenými možnostmi dovozu paliv.
-          SSCC zde slouží jako integrační vrstva mezi lokálními zdroji, akumulací
-          a řízením spotřeby.
-        </p>
-
-        <p><strong>Kdy dává smysl:</strong></p>
-        <ul>
-          <li>nespolehlivé nebo žádné napojení na přenosovou soustavu,</li>
-          <li>vysoké logistické náklady na dovoz paliv,</li>
-          <li>požadavek na provoz v řádu dnů až týdnů bez externích dodávek.</li>
-        </ul>
-
-        <p>
-          <strong>Typické výstupy:</strong>
-          omezení závislosti na dieselových agregátech,
-          stabilnější ostrovní provoz, vyšší provozní autonomie.
-        </p>
-      </div>
-
-      <div class="app-card">
-        <h3>Logistické uzly a přístavy</h3>
-
-        <p>
-          Místa s koncentrací energeticky náročných operací a potenciální poptávkou
-          po chemických médiích pro průmysl nebo dopravu. SSCC zde může fungovat
-          jako kombinace stabilního energetického zázemí a infrastruktury pro práci
-          s médii tam, kde to dává technický i bezpečnostní smysl.
-        </p>
-
-        <p><strong>Kdy dává smysl:</strong></p>
-        <ul>
-          <li>výrazné výkonové špičky (jeřáby, chlazení, nabíjení, provoz techniky),</li>
-          <li>poptávka po H₂ / NH₃ v rámci areálu nebo blízkého průmyslu,</li>
-          <li>prostorové a bezpečnostní možnosti pro práci s médii.</li>
-        </ul>
-
-        <p>
-          <strong>Typické výstupy:</strong>
-          stabilnější provoz infrastruktury, energetické zázemí pro lokální média,
-          vyrovnání výkonových špiček.
-        </p>
-      </div>
-
-      <div class="app-card">
-        <h3>Agrární a potravinářské provozy</h3>
-
-        <p>
-          Provozy, kde se potkává energie, teplo a výrazná sezónnost výroby,
-          často s vysokou citlivostí na cenu a dostupnost energie. SSCC zde
-          posiluje stabilitu provozu a umožňuje lepší využití lokálních zdrojů
-          i odpadního tepla.
-        </p>
-
-        <p><strong>Kdy dává smysl:</strong></p>
-        <ul>
-          <li>sezónní špičky spotřeby a citlivost na výkyvy cen,</li>
-          <li>využitelné teplo (zpracování, sušení, chlazení),</li>
-          <li>větší areály, kde se projeví ekonomika měřítka.</li>
-        </ul>
-
-        <p>
-          <strong>Typické výstupy:</strong>
-          stabilnější energetická bilance, lepší využití lokálních zdrojů,
-          snížení provozních rizik.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POSTUPNÉ NASAZENÍ -->
-<section class="section">
-  <div class="container">
-    <h2>Jak nasazení SSCC obvykle roste</h2>
-
-    <p class="section-lead">
-      SSCC se zpravidla nenasazuje jako jednorázový „megaprojekt“.
-      Praktická cesta je postupná, řízená daty a provozní zkušeností.
-    </p>
-
-    <div class="benefits-grid">
-      <div class="benefit-box">
-        <h3>Pilot – ověření v konkrétních podmínkách</h3>
-        <p>
-          Jeden uzel s jasně definovanými cíli: stabilizace, řízení,
-          bezpečnost a sběr provozních dat. Cílem není jen technická
-          funkčnost, ale pochopení místní energetické reality.
-        </p>
-        <p><strong>Výstup:</strong> provozní model, reálná účinnost, ekonomické parametry v dané lokalitě.</p>
-      </div>
-
-      <div class="benefit-box">
-        <h3>Lokální uzel – infrastrukturní funkce</h3>
-        <p>
-          SSCC začíná poskytovat reálnou službu: vyrovnání špiček,
-          práce s přebytky a zvýšení spolehlivosti provozu areálu
-          nebo části sítě.
-        </p>
-        <p><strong>Výstup:</strong> stabilnější provoz, nižší riziko výpadků, lepší využití lokálních zdrojů.</p>
-      </div>
-
-      <div class="benefit-box">
-        <h3>Regionální síť uzlů – koordinace a odolnost</h3>
-        <p>
-          Více uzlů s koordinovaným řízením umožňuje systémové efekty:
-          lepší využití zdrojů, vyšší odolnost a stabilnější provoz sítě.
-        </p>
-        <p><strong>Výstup:</strong> přínos není jen lokální, ale systémový – pro energetiku i průmysl.</p>
-      </div>
-
-      <div class="benefit-box">
-        <h3>Dlouhodobý směr – média jako část infrastruktury</h3>
-        <p>
-          V delším horizontu může část energie cestovat i jako médium
-          (např. NH₃) v rámci průmyslových a logistických toků.
-          Ne jako náhrada vedení, ale jako doplněk tam, kde to dává smysl.
-        </p>
-        <p><strong>Výstup:</strong> propojení energetiky a průmyslových řetězců v jednom plánovacím rámci.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- MOST: OD APLIKAČNÍCH SCÉNÁŘŮ K DATOVÉMU A AI ŘÍZENÍ -->
-<section class="section">
-  <div class="container">
-
-    <h2>Proč různé scénáře vyžadují inteligentní řízení</h2>
-
-    <p class="section-lead">
-      Aplikační scénáře SSCC se liší prostředím, cíli i provozními omezeními,
-      ale všechny mají společné jedno: rozhodování v čase mezi
-      konkurenčními prioritami.
-    </p>
-
-    <p>
-      V jednom okamžiku je výhodné akumulovat energii, v jiném ji dodat do sítě,
-      jindy upřednostnit průmyslovou výrobu, teplo pro město nebo zachování
-      strategických rezerv. Tyto volby nelze řídit statickými pravidly —
-      závisí na vývoji počasí, spotřeby, cen, stavu zařízení i rizik v síti.
-    </p>
-
-    <p>
-      Jakmile systém pracuje s více zdroji, médii a lokalitami, vznikají
-      konflikty mezi cíli:
-    </p>
-
-    <ul>
-      <li>ekonomika vs. bezpečnost dodávek,</li>
-      <li>krátkodobá optimalizace vs. dlouhodobá stabilita,</li>
-      <li>lokální výhody vs. regionální rovnováha systému.</li>
-    </ul>
-
-    <p>
-      Právě zde se z technického řešení stává systém nad systémy.
-      SSCC proto není řízeno jen pomocí klasického dispečinku,
-      ale využívá datový model, predikce a optimalizační algoritmy,
-      které umožňují plánovat a řídit provoz v různých časových měřítcích.
-    </p>
-
-    <p>
-      Následující kapitola popisuje, jak funguje datová architektura,
-      prediktivní modely a role umělé inteligence v řízení celého systému.
-    </p>
-
-    <p style="margin-top: 18px;">
-      <a href="data-ai.html" class="btn-primary">Jak funguje Data &amp; AI řízení SSCC</a>
-    </p>
-
-  </div>
-</section>
-<!-- MOST: APLIKACE → DATA & AI -->
-<section class="section section-compact">
-  <div class="container">
-
-    <h2>Co umožňuje řídit tyto scénáře v reálném čase</h2>
-
-    <p>
-      To, že SSCC zvládá různé provozní scénáře, není dáno jen technologií,
-      ale především datovým modelem, predikcí a optimalizačním řízením.
-    </p>
-
-    <p>
-      Bez datové vrstvy by systém nebyl schopen reagovat na změny v čase,
-      koordinovat více lokalit ani předcházet krizovým stavům.
-    </p>
-
-    <a href="data-ai.html" class="btn-primary">Jak funguje řízení a optimalizace</a>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Máte lokalitu nebo scénář k posouzení?</h2>
-    <p>
-      Pokud máte základní profil spotřeby (den/týden), dostupné zdroje (OZE/teplo) a případná omezení sítě,
-      dá se rychle určit, zda SSCC v daném místě dává smysl – a v jakém měřítku.
-    </p>
-  </div>
-</section>
- </main> 
-<a class="to-top" href="#top" aria-label="Nahoru">↑</a>
+  <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
 
 </body>
 </html>
