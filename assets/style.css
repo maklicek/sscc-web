@@ -33,6 +33,13 @@
   --space-5: 36px;
   --space-6: 48px;
 }
+:root{
+  /* ... tvoje stávající proměnné ... */
+
+  /* sjednocený boční padding webu */
+  --page-pad: 40px;
+  --page-pad-mobile: 20px;
+}
 
 /* Reset */
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -894,9 +901,23 @@ body.page-home .site-logo{
 /* Sjednocení bočního odsazení: hlavička vs. obsah */
 :root{ --page-pad: 40px; }
 
-.site-header{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
-.section{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
-.page-header{ padding-left: var(--page-pad); padding-right: var(--page-pad); }
+/* Sekce – sjednocený boční padding */
+.section{ padding: 56px var(--page-pad); }
+.section.section-compact{ padding: 32px var(--page-pad); }
+
+/* Page header (úvod podstránek) */
+.page-header{ padding: 32px var(--page-pad) 36px; }
+
+/* Header */
+.site-header{ padding: 14px var(--page-pad); }
+
+/* Mobil */
+@media (max-width: 900px){
+  .section{ padding-left: var(--page-pad-mobile); padding-right: var(--page-pad-mobile); }
+  .section.section-compact{ padding-left: var(--page-pad-mobile); padding-right: var(--page-pad-mobile); }
+  .page-header{ padding-left: var(--page-pad-mobile); padding-right: var(--page-pad-mobile); }
+  .site-header{ padding-left: var(--page-pad-mobile); padding-right: var(--page-pad-mobile); }
+}
 
 /* na mobilu ať to není moc široké */
 @media (max-width: 900px){
@@ -913,9 +934,9 @@ body.page-home .site-logo{
   font-size: 16px;              /* bylo 18px, ale 18 je už hodně "tlusté" */
   line-height: 1.25;
 }
-.site-header{
-  gap: 18px;
-}
+.site-header{ gap: 18px; }
+.main-nav{ flex-wrap: wrap; justify-content: flex-end; }
+
 .header-left{
   min-width: 360px; /* aby brand měl prostor */
 }
