@@ -583,9 +583,6 @@ section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset); }
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 900px){
-  .two-col{ grid-template-columns: 1fr 1fr; }
-}
 .tech-section{
   padding: var(--space-6) var(--space-5);
 }
@@ -686,49 +683,7 @@ body.page-odborne .wrapper{
 
 /* aby TOC bylo klikací a nic ho nepřekrývalo */
 body.page-odborne .toc{ position: sticky; z-index: 20; }
-.decision-box{
-  background: rgba(15,23,42,0.04);
-  border: 1px dashed rgba(15,23,42,0.25);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin: 18px 0;
-}
-.decision-box h4{
-  font-size: 14px;
-  margin-bottom: 8px;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-}
-.decision-box ul{
-  margin: 0;
-  padding-left: 18px;
-}
-/* Decision / checklist box – pro odborné kapitoly */
-.decision-box{
-  background: rgba(15,23,42,0.04);
-  border: 1px dashed rgba(15,23,42,0.25);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin: 18px 0;
-}
-.decision-box h4{
-  font-size: 14px;
-  margin: 0 0 8px;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-  color: rgba(15,23,42,0.86);
-}
-.decision-box ul{
-  margin: 0;
-  padding-left: 18px;
-}
-.decision-box li{ margin: 6px 0; }
-/* Decision tree (lehké a čitelné) */
-.decision-tree{
-  margin: 16px 0 0;
-  padding-left: 0;
-  list-style: none;
-}
+
 .decision-tree li{
   margin: 10px 0;
   padding: 12px 14px;
@@ -762,6 +717,82 @@ body.page-odborne .toc{ position: sticky; z-index: 20; }
   gap: 18px;
 }
 
-@media (max-width: 900px){
-  .two-col{ grid-template-columns: 1fr; }
+/* =========================================================
+   FINAL FIX (keep at very end)
+   - stable scrolling
+   - reliable anchors
+   - predictable 2-col layout
+   - safe floating "to top"
+========================================================= */
+
+/* 1) kotvy (aby se nadpis neschoval pod header) */
+:root{ --scroll-offset: 120px; }  /* uprav dle výšky headeru */
+section[id]{ scroll-margin-top: var(--scroll-offset); }
+
+/* 2) zajisti scroll (když by někde bylo 100vh / overflow hidden) */
+html, body{
+  height: auto !important;
 }
+
+body{
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+main{
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  padding-bottom: 120px; /* rezerva pro .to-top */
+}
+
+/* 3) layout pro odborné stránky */
+body.page-odborne .page-layout,
+body.page-odborne .main-content{
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+
+body.page-odborne .toc{
+  position: sticky;
+  top: calc(var(--scroll-offset) - 12px); /* aby sticky nezačínalo pod headerem */
+  z-index: 20;
+}
+
+/* 4) dvě kolony – JEDNA autorita (mobile-first) */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+/* 5) "to top" vždy nad obsahem */
+.to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+}
+
+/* 6) decision box – JEDNA autorita */
+.decision-box{
+  background: rgba(15,23,42,0.04);
+  border: 1px dashed rgba(15,23,42,0.25);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 18px 0;
+}
+
+.decision-box h4{
+  font-size: 14px;
+  margin: 0 0 8px;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  color: rgba(15,23,42,0.86);
+}
+
+.decision-box ul{ margin: 0; padding-left: 18px; }
+.decision-box li{ margin: 6px 0; }
+
+.back-to-top{ display:inline-block; margin-top: 18px; }
