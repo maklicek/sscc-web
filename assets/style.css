@@ -938,9 +938,6 @@ body.page-home .site-logo{
 .site-header{ gap: 18px; }
 .main-nav{ flex-wrap: wrap; justify-content: flex-end; }
 
-.header-left{
-  min-width: 360px; /* aby brand měl prostor */
-}
 .main-nav{
   flex-wrap: wrap;  /* když je málo místa, ať se to zalomí kontrolovaně */
   justify-content: flex-end;
@@ -1115,7 +1112,7 @@ body.page-home .brand-name{ font-size: 20px !important; }
 
 /* 2) NADPIS STRÁNKY výš (menší mezera pod hlavičkou) */
 .page-header{
-  padding-top: 14px !important;      /* bylo ~32 */
+  padding-top: 8px !important;      /* bylo ~32 */
   padding-bottom: 24px !important;
 }
 .page-header h1{
