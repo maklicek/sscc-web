@@ -1138,3 +1138,106 @@ body.page-home .brand-name{ font-size: 20px !important; }
 /* kotvy nelezou pod hlavičku (pokud je sticky) */
 :root{ --scroll-offset: 110px; }
 section[id]{ scroll-margin-top: var(--scroll-offset); }
+/* =========================================================
+   SAFE LOCK (KEEP LAST) — nic nemaž, jen přepiš konflikty
+   - hlavička stabilní (brand vlevo, nav vpravo dole)
+   - page-header výš
+   - kotvy pod sticky header
+========================================================= */
+
+:root{
+  --page-pad: 40px;
+  --page-pad-mobile: 20px;
+  --scroll-offset: 110px;
+}
+
+/* sjednocené boční paddingy (bez zásahu do vnitřních gridů) */
+.section{ padding-left: var(--page-pad) !important; padding-right: var(--page-pad) !important; }
+.page-header{ padding-top: 18px !important; padding-bottom: 28px !important; }
+
+@media (max-width: 900px){
+  .section{ padding-left: var(--page-pad-mobile) !important; padding-right: var(--page-pad-mobile) !important; }
+}
+
+/* kotvy (aby se nadpis neschoval pod sticky header) */
+section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset) !important; }
+
+/* sticky hlavička — jednotně všude */
+.site-header{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 200 !important;
+  background: var(--header-bg) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+/* DESKTOP: grid layout = logo+brand vlevo, nav vpravo dole */
+@media (min-width: 901px){
+  .site-header{
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-rows: auto auto !important;
+    align-items: start !important;
+    gap: 6px 20px !important;
+    padding: 10px var(--page-pad) !important;
+  }
+
+  .header-left{
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    min-width: 0 !important;
+  }
+
+  .site-logo{
+    height: 70px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  .brand-name{
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+  }
+
+  .site-motto{
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    margin-top: 2px !important;
+  }
+
+  .main-nav{
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    justify-self: end !important;
+    align-self: end !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+
+  .main-nav a{
+    padding: 2px 0 !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* MOBIL: klasicky sloupec */
+@media (max-width: 900px){
+  .site-header{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 10px var(--page-pad-mobile) !important;
+  }
+  .site-logo{ height: 64px !important; }
+  .brand-name{ font-size: 18px !important; }
+  .site-motto{ font-size: 13px !important; }
+  .main-nav{ gap: 16px !important; font-size: 15px !important; }
+}
