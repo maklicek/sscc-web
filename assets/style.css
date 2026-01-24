@@ -1241,3 +1241,17 @@ section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset) !important;
   .site-motto{ font-size: 13px !important; }
   .main-nav{ gap: 16px !important; font-size: 15px !important; }
 }
+/* ==== FIX: header layout for page-system ==== */
+body.page-system .site-header{
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+body.page-system .main-nav{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;
+}
