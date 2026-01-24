@@ -1362,3 +1362,37 @@ body.page-system .main-nav{
   .site-logo{ height: 60px; }
   .site-motto{ display: none; } /* na mobilu skryjeme motto kvůli výšce */
 }
+/* ===============================
+   HEADER FINAL (single authority)
+   Dej na ÚPLNÝ konec style.css
+=============================== */
+
+.site-header{
+  display: flex !important;
+  flex-direction: row !important; /* pojistka proti starým grid/flex variantám */
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px;
+
+  padding: 12px var(--page-pad) !important;
+  background: var(--header-bg) !important;
+  border-bottom: 1px solid rgba(15,23,42,0.08) !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06) !important;
+
+  position: sticky !important;
+  top: 0;
+  z-index: 200;
+}
+
+.header-left{
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px;
+  min-width: 0;
+}
+
+.logo-link{ display: inline-flex; }
+
+.site-logo{
+  height: 70px;
+  width: auto;
