@@ -4,16 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SSCC systém – architektura vrstev a uzlů</title>
-
   <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 
-<body class="page-system" id="top">
+<body class="page-system">
+  <a id="top"></a>
 
   <!-- HLAVIČKA – jednotná pro celý web -->
   <header class="site-header">
     <div class="header-left">
-      <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+      <a href="index.html" class="logo-link" aria-label="SSCC – domů">
+        <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+      </a>
 
       <div class="brand-block">
         <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
@@ -23,17 +25,19 @@
       </div>
     </div>
 
-   <nav class="main-nav">
-  <a href="index.html">Úvod</a>
-  <a href="smysl-sscc.html">Smysl SSCC</a>
-  <a href="sscc-system.html" class="active">SSCC systém</a>
-  <a href="technologie.html">Technologie</a>
-  <a href="aplikace.html">Aplikace</a>
-  <a href="data-ai.html">Data &amp; AI řízení</a>
-  <a href="odborne.html">Pro odborníky</a>
-</nav>
+    <nav class="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Úvod</a>
+      <a href="smysl-sscc.html">Smysl SSCC</a>
+      <a href="sscc-system.html" class="active">SSCC systém</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="aplikace.html">Aplikace</a>
+      <a href="data-ai.html">Data &amp; AI řízení</a>
+      <a href="odborne.html">Pro odborníky</a>
+    </nav>
+  </header>
 
   <main>
+
 
     <!-- HERO / ÚVOD -->
     <section class="page-header section">
