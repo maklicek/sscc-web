@@ -804,3 +804,34 @@ header,
   top: 0;
   z-index: 200;
 }
+/* =========================================
+   HEADER – COMPACT MODE FOR INNER PAGES
+========================================= */
+
+body.page-system .site-header,
+body.page-odborne .site-header{
+  padding: 10px 24px;
+}
+
+body.page-system .site-motto,
+body.page-odborne .site-motto{
+  display: none; /* motto jen na úvodu */
+}
+
+body.page-system .brand-name,
+body.page-odborne .brand-name{
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+body.page-system .site-logo,
+body.page-odborne .site-logo{
+  width: 42px;
+  height: auto;
+}
+
+/* oddělení hlavičky od obsahu */
+.site-header{
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: #cfe7db;
+}
