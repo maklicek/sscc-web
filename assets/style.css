@@ -840,3 +840,54 @@ body.page-odborne .site-logo{
   top: 0;
   z-index: 100;
 }
+/* =========================================
+   HEADER: default = COMPACT (inner pages)
+   Homepage can opt-in to expanded header
+========================================= */
+
+.site-header{
+  padding: 10px 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: #cfe7db;
+}
+
+/* motto defaultně skryté */
+.site-motto{ display:none; }
+
+/* kompaktnější typografie brandu */
+.brand-name{
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.site-logo{
+  width: 42px;
+  height: auto;
+}
+
+/* pokud chceš sticky header */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* =========================================
+   EXPANDED HEADER: only on homepage
+   (body.page-home)
+========================================= */
+body.page-home .site-header{
+  padding: 16px 24px;
+}
+
+body.page-home .site-motto{
+  display: block;
+  margin-top: 6px;
+}
+
+body.page-home .brand-name{
+  font-size: 16px;
+}
+body.page-home .site-logo{
+  width: 56px;
+}
