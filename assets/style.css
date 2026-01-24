@@ -747,4 +747,12 @@ body.page-odborne .toc{ position: sticky; z-index: 20; }
 .decision-tree .branch p{
   margin: 8px 0 0;
 }
+.back-to-top{ display:inline-block; margin-top: 18px; }
+
+.to-top{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+}
 
