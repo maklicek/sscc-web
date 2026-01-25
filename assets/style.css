@@ -1476,3 +1476,25 @@ section[id], h2[id], h3[id]{ scroll-margin-top: var(--scroll-offset); }
 main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 
 <link rel="stylesheet" href="assets/style.css?v=5">
+/* SSCC accordion (details/summary) */
+.sscc-accordion{ padding: 10px 0; }
+.sscc-accordion > summary{
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.08);
+}
+.sscc-accordion[open] > summary{ margin-bottom: 10px; }
+.sscc-accordion > summary::-webkit-details-marker{ display:none; }
+
+.accordion-body{ padding: 2px 14px 14px; }
+.media{ margin: 12px 0 0; }
+.media img{
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
