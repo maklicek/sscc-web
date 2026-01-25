@@ -230,6 +230,118 @@
         </div>
       </div>
     </section>
+<!-- PŘÍKLADY UZLŮ – rozbalovací (Variant A: details/summary) -->
+<section class="section section-soft" id="node-examples">
+  <div class="container">
+
+    <h2>Příklady uzlů: co si pod tím představit (konkrétně)</h2>
+
+    <p class="section-lead">
+      Níže jsou typické situace, kde dává uzel SSCC smysl. Text je stručný – detail si rozkliknete.
+      U každého příkladu je naznačeno, <strong>co uzel vyrovnává</strong>, <strong>jaká média se typicky používají</strong>
+      a <strong>jaký je přínos pro lidi a provoz</strong>.
+    </p>
+
+    <div class="callout callout--info">
+      <p><strong>Tip:</strong> Pokud chcete jen rychlý přehled, projděte nadpisy. Pokud chcete „aha“ příklad, rozklikněte.</p>
+    </div>
+
+    <div class="decision-box" style="margin-top:18px;">
+      <details class="sscc-accordion" open>
+        <summary><strong>Město / teplárna:</strong> stabilní teplo a elektřina i při výkyvech OZE</summary>
+        <div class="accordion-body">
+          <p>
+            Typický uzel pro město kombinuje <strong>zdroje elektřiny</strong> (OZE + síť), <strong>teplárenskou infrastrukturu</strong>,
+            <strong>tepelnou akumulaci</strong> a případně <strong>elektrolýzu</strong> jako flexibilní zátěž.
+            V praxi jde o to, aby město nemělo drahé špičky a aby teplo bylo stabilní i při kolísání výroby.
+          </p>
+
+          <ul>
+            <li><strong>Co vyrovnává:</strong> denní cyklus (dny/noci), špičky odběru, cenové špičky.</li>
+            <li><strong>Typická média:</strong> teplo (zásobník), případně H₂/NH₃ jako dlouhodobější rezerva.</li>
+            <li><strong>Výsledek:</strong> stabilnější dodávky, nižší provozní náklady, vyšší odolnost při poruchách.</li>
+          </ul>
+
+          <figure class="media">
+            <img src="assets/img/uzel-mesto.jpg" alt="Příklad uzlu: město / teplárna" loading="lazy">
+            <figcaption class="small-note">Ilustrační obrázek (doporučeno): teplárna / městský energetický uzel.</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sscc-accordion">
+        <summary><strong>Průmyslový areál:</strong> odpadní teplo, stabilní provoz a výroba médií</summary>
+        <div class="accordion-body">
+          <p>
+            Průmysl potřebuje <strong>stabilní energii</strong> a často má k dispozici <strong>odpadní teplo</strong> a CO₂.
+            Uzel SSCC zde funguje jako integrátor: propojuje zdroje, rekuperaci, akumulaci a (podle konfigurace) i
+            <strong>zachytávání CO₂</strong> a <strong>syntézu produktů</strong> (např. NH₃).
+          </p>
+
+          <ul>
+            <li><strong>Co vyrovnává:</strong> výkyvy elektřiny vs. stabilní výrobní potřeby (min–dny).</li>
+            <li><strong>Typická média:</strong> teplo (rekuperace), CO₂ (CCU/CDR), případně NH₃ jako sklad/produkt.</li>
+            <li><strong>Výsledek:</strong> vyšší účinnost, méně ztrát, menší závislost na síti a lepší bilance emisí.</li>
+          </ul>
+
+          <figure class="media">
+            <img src="assets/img/uzel-prumysl.jpg" alt="Příklad uzlu: průmyslový areál" loading="lazy">
+            <figcaption class="small-note">Ilustrační obrázek: průmyslový uzel (rekuperace, média, stabilita).</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sscc-accordion">
+        <summary><strong>Přístav / logistika:</strong> paliva a energie jako služba (NH₃/H₂), stabilní odběry</summary>
+        <div class="accordion-body">
+          <p>
+            U logistických uzlů je zásadní, že energie se často potřebuje převést do <strong>přenositelné formy</strong>.
+            Uzel může vyrábět nebo skladovat média (typicky NH₃/H₂) a plánovat jejich dostupnost pro dopravu,
+            záložní zdroje nebo průmyslové odběratele.
+          </p>
+
+          <ul>
+            <li><strong>Co vyrovnává:</strong> dostupnost „paliva“ v čase (dny–týdny), špičky odběrů a logistické požadavky.</li>
+            <li><strong>Typická média:</strong> NH₃/H₂ (výroba, sklad, distribuce), elektřina pro infrastrukturu.</li>
+            <li><strong>Výsledek:</strong> energetická jistota pro provoz, lepší plánování a snížení rizik výpadků.</li>
+          </ul>
+
+          <figure class="media">
+            <img src="assets/img/uzel-pristav.jpg" alt="Příklad uzlu: přístav / logistika" loading="lazy">
+            <figcaption class="small-note">Ilustrační obrázek: logistický uzel (média, sklad, distribuce).</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details class="sscc-accordion">
+        <summary><strong>Kampus / výzkum:</strong> pilotní linky, demonstrace a škálování</summary>
+        <div class="accordion-body">
+          <p>
+            Výzkumný uzel je vhodný pro <strong>pilotní linky</strong> a ověřování integrace: řízení vrstev,
+            bezpečnostní režimy, měření a modelování. Výhodou je rychlá iterace, sběr dat a ověření provozních politik,
+            které se později přenesou do průmyslových a městských uzlů.
+          </p>
+
+          <ul>
+            <li><strong>Co vyrovnává:</strong> provozní režimy a experimenty (min–dny), validace řízení a bezpečnosti.</li>
+            <li><strong>Typická média:</strong> dle pilotu (H₂/NH₃/CO₂) + datové toky a měření.</li>
+            <li><strong>Výsledek:</strong> rychlé ověření, snížení rizik, přenos know-how do reálných lokalit.</li>
+          </ul>
+
+          <figure class="media">
+            <img src="assets/img/uzel-kampus.jpg" alt="Příklad uzlu: kampus / výzkumné centrum" loading="lazy">
+            <figcaption class="small-note">Ilustrační obrázek: kampus / pilotní integrace a testování.</figcaption>
+          </figure>
+        </div>
+      </details>
+    </div>
+
+    <p class="small-note" style="margin-top:16px;">
+      Navazuje: <a href="#layers">Vrstvy architektury</a> — proč musí být odděleny ochrany, lokální autonomie a plánování.
+    </p>
+
+  </div>
+</section>
 
     <!-- VRSTVY – PRO LIDI -->
     <section class="section" id="layers">
