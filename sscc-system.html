@@ -1,34 +1,42 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SSCC systém – architektura vrstev a uzlů</title>
-
-  <!-- Zachovávám tvůj stylový soubor -->
-  <link rel="stylesheet" href="assets/style.css?v=4" />
+  <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 
-<body class="page-architektura">
-  <a class="skip-link" href="#top">Přejít na obsah</a>
+<body class="page-system">
+  <a id="top"></a>
 
-  <!-- Pokud máš vlastní header/menu, klidně tento blok nahraď svým -->
+  <!-- HLAVIČKA – jednotná pro celý web -->
   <header class="site-header">
-    <div class="container">
-      <div class="header-row">
-        <a class="brand" href="index.html">SSCC</a>
-        <nav class="nav">
-          <a href="smysl-sscc.html">Smysl SSCC</a>
-          <a href="aplikace.html">Aplikace</a>
-          <a href="technologie.html">Technologie</a>
-          <a href="data-ai.html">Data &amp; AI</a>
-          <a href="odborne.html">Pro odborníky</a>
-        </nav>
+    <div class="header-left">
+      <a href="index.html" class="logo-link" aria-label="SSCC – domů">
+        <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
+      </a>
+
+      <div class="brand-block">
+        <div class="brand-name">SolarSpace Carbon Cycle – SSCC</div>
+        <div class="site-motto">
+          Zelenou se naše planeta nestane zákazy ale tím, že škodlivé přeměníme na užitečné.
+        </div>
       </div>
     </div>
+
+    <nav class="main-nav" aria-label="Hlavní navigace">
+      <a href="index.html">Úvod</a>
+      <a href="smysl-sscc.html">Smysl SSCC</a>
+      <a href="sscc-system.html" class="active">SSCC systém</a>
+      <a href="technologie.html">Technologie</a>
+      <a href="aplikace.html">Aplikace</a>
+      <a href="data-ai.html">Data &amp; AI řízení</a>
+      <a href="odborne.html">Pro odborníky</a>
+    </nav>
   </header>
 
-  <main id="top">
+  <main id="main">
 
     <!-- HERO / ÚVOD -->
     <section class="page-header section">
@@ -109,6 +117,7 @@
         </p>
 
         <h3>Co v uzlu lidé skutečně zažívají</h3>
+
         <p>
           Z pohledu obyvatel a firem není uzel souborem technologií, ale místem,
           kde vzniká stabilnější a dostupnější energetické zázemí regionu.
@@ -124,6 +133,7 @@
         </ul>
 
         <h3>Proč jsou uzly místní a modulární</h3>
+
         <p>
           Každý uzel je navržen podle místních podmínek: dostupných zdrojů,
           existující infrastruktury a potřeb regionu. Neexistuje jediný povinný model.
@@ -132,8 +142,16 @@
 
         <p>
           Místo jedné centrální továrny tak vzniká síť propojených lokálních center,
-          která spolu sdílejí data, energii i logistiku a společně tvoří
+          která spolu sdílejí data, energii i logistiku a společně tvoří stabilní
           energeticko-průmyslový ekosystém.
+        </p>
+
+        <h3>Jak uzel zapadá do každodenního života</h3>
+
+        <p>
+          Uzel nenahrazuje běžné služby, ale modernizuje způsob, jakým fungují:
+          vytápění měst, zásobování průmyslu energií, výroba paliv pro dopravu
+          i stabilizace elektrické sítě.
         </p>
 
         <p class="note">
@@ -205,16 +223,11 @@
         <div class="decision-box">
           <h4>Jak chcete pokračovat?</h4>
           <ul>
-            <li>👉 <a href="#layers">Vrstvy architektury</a></li>
-            <li>👉 <a href="aplikace.html">Aplikační scénáře</a></li>
-            <li>👉 <a href="data-ai.html">Data &amp; AI</a></li>
+            <li><a href="#layers">Chci pochopit vrstvy architektury</a></li>
+            <li><a href="aplikace.html">Zajímá mě, kde se to dá použít v praxi</a></li>
+            <li><a href="data-ai.html">Zajímá mě řízení a datová vrstva</a></li>
           </ul>
         </div>
-
-        <p class="small-note">
-          Pokračování: <a href="#layers">Vrstvy architektury</a> ukazují, jak se oddělují ochrany, lokální autonomie,
-          koordinace a plánování, aby systém nebyl křehký a „necykloval se k smrti“.
-        </p>
       </div>
     </section>
 
@@ -238,14 +251,14 @@
         <h3>1. Vrstva zdrojů energie</h3>
         <p>Základ tvoří výroba elektřiny a tepla z místně dostupných zdrojů (solár, geotermál, odpadní teplo, biomasa).</p>
 
-        <h3>2. Vrstva akumulace a flexibility</h3>
+        <h3>2. Vrstva akumulace a vyrovnávání sítě</h3>
         <p>Baterie, tepelné zásobníky a chemická média umožňují překlenout časový nesoulad výroby a spotřeby.</p>
 
-        <h3>3. Vrstva uhlíkového cyklu</h3>
+        <h3>3. Vrstva uhlíkového cyklu (CCU / CDR)</h3>
         <p>Zachytávání, úprava a využití CO₂ tak, aby uhlík obíhal v systému místo úniku do atmosféry.</p>
 
-        <h3>4. Vrstva syntézy produktů</h3>
-        <p>Konverze energie a uhlíku na paliva a produkty (např. NH₃, syntetická paliva, meziprodukty).</p>
+        <h3>4. Vrstva syntézy paliv a chemických produktů</h3>
+        <p>Konverze energie a uhlíku na produkty (např. NH₃, syntetická paliva, meziprodukty).</p>
 
         <h3>5. Digitální a řídicí vrstva</h3>
         <p>Predikce, optimalizace a koordinace režimů v čase i mezi více uzly.</p>
@@ -262,10 +275,35 @@
           Jinak se řízení začne „hádat“ se zabezpečením, vzniká cyklování, zbytečné start/stop a ztráty.
         </p>
 
-        <!-- TODO: vlož sem svůj detailní tech obsah vrstvení (Field/Edge/Coordination/System Intelligence/...) -->
-        <p class="small-note">
-          Detailnější rozpracování může navazovat na <a href="data-ai.html">Data &amp; AI</a> a <a href="odborne.html">Pro odborníky</a>.
-        </p>
+        <!-- Zde ponechávám tvůj tech obsah v kompaktní stabilní formě -->
+        <div class="callout callout--info">
+          <p><strong>Jedna věta:</strong> rychlé věci (ochrany) musí běžet lokálně, pomalé věci (strategie a plán) mohou běžet nad tím –
+          a obě vrstvy musí mít jasné hranice odpovědnosti.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Co si z toho má odnést běžný čtenář</h3>
+            <ul>
+              <li><strong>Bezpečnost je lokální</strong> (zařízení se umí chránit samo).</li>
+              <li><strong>Koordinace je nadřazená</strong> (rozhoduje „kdy a v jakém režimu“).</li>
+              <li><strong>Plánování je dopředu</strong> (pracuje s předpověďmi, zásobami, riziky).</li>
+              <li><strong>Audit a pravidla</strong> zajišťují dohledatelnost rozhodnutí.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="decision-box">
+              <h4>Rychlá legenda (časové škály)</h4>
+              <ul>
+                <li><strong>ms–s:</strong> ochrany, stabilita zařízení, měření a akce</li>
+                <li><strong>min–h:</strong> koordinace toků, režimy uzlu</li>
+                <li><strong>h–dny:</strong> plán (předpovědi, ceny, dostupnost zařízení)</li>
+                <li><strong>týdny–sezóny:</strong> strategie zásob a krizové režimy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <p class="small-note">
           Pokračování: <a href="#flows">Toky a bilance</a>.
@@ -288,20 +326,23 @@
         <ul>
           <li>elektřina ze zdrojů míří do sítě, akumulace nebo do výrobních procesů,</li>
           <li>přebytečná energie se ukládá nebo využívá pro výrobu paliv,</li>
-          <li>odpadní teplo se vrací do vytápění nebo procesů.</li>
+          <li>odpadní teplo se vrací zpět do vytápění nebo technologických procesů,</li>
+          <li>uzel pomáhá vyrovnávat špičky v regionální energetické síti.</li>
         </ul>
 
         <h3>Toky uhlíku</h3>
         <ul>
-          <li>CO₂ se zachytává (průmysl / vzduch), čistí a připravuje pro využití,</li>
-          <li>uhlík se vrací do oběhu v produktech místo úniku do atmosféry.</li>
+          <li>CO₂ se zachytává z průmyslu nebo přímo ze vzduchu,</li>
+          <li>čistí se a připravuje pro chemické využití,</li>
+          <li>uhlík se vrací do oběhu v produktech místo vypouštění do atmosféry.</li>
         </ul>
 
-        <h3>Datové toky</h3>
+        <h3>Datové a řídicí toky</h3>
         <ul>
-          <li>sběr dat v reálném čase,</li>
-          <li>optimalizace režimů a plánování,</li>
-          <li>koordinace uzlů v rámci sítě.</li>
+          <li>senzory sledují stav zařízení, výrobu, spotřebu a emise,</li>
+          <li>řídicí algoritmy optimalizují provoz,</li>
+          <li>predikční modely plánují dopředu,</li>
+          <li>uzly sdílejí data pro koordinaci v rámci sítě.</li>
         </ul>
       </div>
     </section>
@@ -311,7 +352,16 @@
       <div class="container">
         <h2>Toky a bilance: co se v SSCC skutečně řídí</h2>
 
-        <!-- TODO: vlož sem svůj detailní tech obsah toků a bilancí -->
+        <p class="section-lead">
+          SSCC neřídí jen tok elektřiny. Řídí současně <strong>elektrickou energii, teplo a chemická média</strong>,
+          a to v různých časových měřítkách.
+        </p>
+
+        <div class="callout callout--info">
+          <p><strong>Jednoduše:</strong> když je přebytek elektřiny, převede se do tepla nebo chemické energie.
+          Když elektřina chybí, energie se vrací zpět do sítě nebo do procesů.</p>
+        </div>
+
         <p class="small-note">
           Pokračování: <a href="#integration">Integrace</a>.
         </p>
@@ -330,9 +380,25 @@
         </p>
 
         <p>
-          Integrace probíhá na úrovni technické, provozní, datové i institucionální:
-          standardizovaná rozhraní, režimy, bezpečnost, vazby na trhy a odpovědnosti.
+          V systému SSCC probíhá integrace na několika úrovních současně:
+          technické, provozní, datové i institucionální.
         </p>
+
+        <h3>Technická integrace</h3>
+        <ul>
+          <li>společné rozvody elektřiny, tepla a pracovních médií,</li>
+          <li>koordinace provozních režimů zařízení,</li>
+          <li>bezpečnostní systémy a redundance klíčových částí,</li>
+          <li>možnost postupného rozšiřování bez přerušení provozu.</li>
+        </ul>
+
+        <h3>Datová a digitální integrace</h3>
+        <ul>
+          <li>sběr dat ze senzorů v reálném čase,</li>
+          <li>automatizované řízení technologických procesů,</li>
+          <li>predikční modely a optimalizace,</li>
+          <li>propojení více uzlů do širších struktur.</li>
+        </ul>
       </div>
     </section>
 
@@ -341,11 +407,34 @@
       <div class="container">
         <h2>Integrace: SSCC jako nadstavba, ne náhrada</h2>
 
-        <!-- TODO: vlož sem svůj detailní tech obsah integrace (napojení na SCADA/EMS/DCS/BMS, autonomy, protokoly, audit...) -->
-
-        <p class="small-note">
-          Detailní integrační architektura a bezpečnost: <a href="odborne.html">Pro odborníky</a>.
+        <p class="section-lead">
+          SSCC není „nová centrální řídicí místnost“. Je to <strong>koordinační vrstva nad stávající infrastrukturou</strong>,
+          která pomáhá rozhodovat, kdy má který subsystém pracovat v jakém režimu.
         </p>
+
+        <div class="two-col">
+          <div>
+            <h3>Kde se SSCC typicky napojuje</h3>
+            <ul>
+              <li><strong>Energetika</strong> – SCADA, EMS, dispečerské systémy</li>
+              <li><strong>Průmysl</strong> – DCS a výrobní řídicí systémy</li>
+              <li><strong>Budovy/teplo</strong> – BMS, řízení kotelen a výměníků</li>
+              <li><strong>Plánování</strong> – výroba, sklady, dodávky médií</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="decision-box">
+              <h4>Co zůstává vždy lokální</h4>
+              <ul>
+                <li>bezpečnostní ochrany zařízení,</li>
+                <li>havarijní odstavení,</li>
+                <li>základní stabilizační regulace,</li>
+                <li>provoz při výpadku komunikace.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <p class="small-note">
           Pokračování: <a href="#next-steps">Kam dál</a>.
@@ -353,22 +442,21 @@
       </div>
     </section>
 
-    <!-- KAM DÁL – ROADMAPA -->
+    <!-- KAM DÁL – OD KONCEPTU K REÁLNÝM PROJEKTŮM -->
     <section class="section section-highlight" id="next-steps">
       <div class="container">
         <h2>Kam dál: od konceptu k reálným projektům</h2>
 
         <p class="section-lead">
-          SSCC není uzavřený výzkumný koncept. Je navržen jako otevřená platforma,
-          kterou lze postupně převádět do pilotních projektů a následně do širšího praktického nasazení.
+          SSCC je navržen jako otevřená platforma, kterou lze postupně převádět do pilotních projektů
+          a následně do širšího praktického nasazení.
         </p>
 
         <h3>1. Pilotní uzly</h3>
         <ul>
           <li>ověření integrace technologií v reálném provozu,</li>
           <li>sběr provozních dat pro optimalizaci,</li>
-          <li>testování ekonomických a smluvních modelů,</li>
-          <li>referenční projekty pro další regiony.</li>
+          <li>testování ekonomických a smluvních modelů.</li>
         </ul>
 
         <h3>2. Škálování a replikace</h3>
@@ -382,41 +470,45 @@
           <li>koordinace výroby paliv a produktů,</li>
           <li>vyšší odolnost vůči výpadkům.</li>
         </ul>
-
-        <h3>4. Spolupráce a zapojení partnerů</h3>
-        <p>
-          SSCC je otevřený pro města, průmysl, výzkum i investory – podle role a zájmu v dané lokalitě.
-        </p>
       </div>
     </section>
 
-    <!-- MOST / ROZCESTNÍK -->
+    <!-- MOST NA DALŠÍ STRÁNKY -->
     <section class="tech-section" id="navigation-bridge">
       <div class="container">
         <h2>Kam dál — podle toho, co vás zajímá</h2>
 
         <p class="section-lead">
           Pokud už máte základní představu, jak SSCC funguje jako systém uzlů a vrstev,
-          můžete pokračovat podle toho, co je pro vás nejdůležitější: fyzické technologie,
-          řízení provozu, nebo praktické použití v konkrétních situacích.
+          můžete pokračovat podle toho, co je pro vás nejdůležitější:
+          fyzické technologie, řízení provozu, nebo praktické použití v konkrétních situacích.
         </p>
 
         <div class="how-grid">
           <div class="how-item">
             <h3>Chci vědět, z čeho se systém skládá</h3>
-            <p>Technologické moduly: zdroje, elektrolýza, syntéza NH₃, CO₂ cykly, zásobníky tepla, výkonová elektronika.</p>
+            <p>
+              Přehled technologických modulů: obnovitelné zdroje, elektrolýza,
+              syntéza amoniaku, CO₂ cykly, zásobníky tepla a výkonová elektronika.
+            </p>
             <p><a href="technologie.html" class="btn-primary">Technologie SSCC</a></p>
           </div>
 
           <div class="how-item">
             <h3>Zajímá mě, jak se to celé řídí</h3>
-            <p>Datová architektura, predikce, plánování režimů a role AI při koordinaci více uzlů v čase.</p>
+            <p>
+              Datová architektura, predikce, plánování režimů a role AI
+              při koordinaci více uzlů v čase.
+            </p>
             <p><a href="data-ai.html" class="btn-primary">Data &amp; AI řízení</a></p>
           </div>
 
           <div class="how-item">
             <h3>Chci vidět, kde to dává smysl v praxi</h3>
-            <p>Typické scénáře: průmysl, města, energetické uzly, ostrovní provozy a krizová infrastruktura.</p>
+            <p>
+              Typické aplikační scénáře: průmysl, města, energetické uzly,
+              ostrovní provozy a krizová infrastruktura.
+            </p>
             <p><a href="aplikace.html" class="btn-primary">Aplikační scénáře</a></p>
           </div>
         </div>
@@ -434,12 +526,5 @@
   </main>
 
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
-
-  <!-- Pokud máš vlastní footer, klidně tento blok nahraď svým -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="small-note">SSCC.cz — pracovní verze obsahu. Kontakt a spolupráce: doplníme.</p>
-    </div>
-  </footer>
 </body>
 </html>
