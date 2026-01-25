@@ -36,10 +36,10 @@
     </nav>
   </header>
 
-  <main id="main">
+  <main>
 
     <!-- HERO / ÚVOD -->
-    <section class="page-header section">
+    <section class="page-header section" id="intro">
       <div class="container">
         <h1>SSCC systém – architektura vrstev a uzlů</h1>
 
@@ -62,6 +62,7 @@
         </p>
 
         <p>Díky tomu může systém:</p>
+
         <ul>
           <li>využívat přebytky elektřiny místo jejich omezování,</li>
           <li>překlenout hodiny, dny i delší období nízké výroby,</li>
@@ -84,10 +85,9 @@
           Na této stránce:
           <a href="#node">Uzel</a> ·
           <a href="#layers">Vrstvy</a> ·
-          <a href="#flows">Toky</a> ·
-          <a href="#integration">Integrace</a> ·
-          <a href="#next-steps">Kam dál</a> ·
-          <a href="#navigation-bridge">Rozcestník</a>
+          <a href="#flows-intro">Toky</a> ·
+          <a href="#integration-intro">Integrace</a> ·
+          <a href="#next-steps">Kam dál</a>
         </p>
 
         <p class="small-note">
@@ -98,9 +98,11 @@
       </div>
     </section>
 
-    <!-- UZEL – PRO LIDI -->
+
+    <!-- UZEL – LIDSKY / PRO ČTENÁŘE -->
     <section class="section section-soft" id="node">
       <div class="container">
+
         <h2>Uzel – energetické srdce lokality</h2>
 
         <p class="section-lead">
@@ -140,29 +142,17 @@
           Uzel lze budovat postupně a rozšiřovat podle růstu poptávky a možností lokality.
         </p>
 
-        <p>
-          Místo jedné centrální továrny tak vzniká síť propojených lokálních center,
-          která spolu sdílejí data, energii i logistiku a společně tvoří stabilní
-          energeticko-průmyslový ekosystém.
-        </p>
-
-        <h3>Jak uzel zapadá do každodenního života</h3>
-
-        <p>
-          Uzel nenahrazuje běžné služby, ale modernizuje způsob, jakým fungují:
-          vytápění měst, zásobování průmyslu energií, výroba paliv pro dopravu
-          i stabilizace elektrické sítě.
-        </p>
-
         <p class="note">
           Z technického hlediska se každý uzel skládá z několika funkčních vrstev,
           které společně zajišťují výrobu energie, práci s uhlíkem, syntézu paliv
           a digitální řízení provozu.
         </p>
+
       </div>
     </section>
 
-    <!-- UZEL – TECH -->
+
+    <!-- UZEL – TECHNICKY (KONKRÉTNÍ) -->
     <section class="tech-section" id="node-tech">
       <div class="container">
         <h2>Uzel SSCC: místo, kde se energie „překládá“ do zásob a zpět</h2>
@@ -223,133 +213,18 @@
         <div class="decision-box">
           <h4>Jak chcete pokračovat?</h4>
           <ul>
-            <li><a href="#layers">Chci pochopit vrstvy architektury</a></li>
-            <li><a href="aplikace.html">Zajímá mě, kde se to dá použít v praxi</a></li>
-            <li><a href="data-ai.html">Zajímá mě řízení a datová vrstva</a></li>
+            <li>👉 <a href="#layers">Chci pochopit vrstvy architektury</a></li>
+            <li>👉 <a href="aplikace.html">Zajímá mě, kde se to dá použít v praxi</a></li>
+            <li>👉 <a href="data-ai.html">Zajímá mě řízení a datová vrstva</a></li>
           </ul>
         </div>
+
       </div>
     </section>
-    
-<!-- PŘÍKLADY UZLŮ – rozbalovací (Variant A: details/summary) -->
-<section class="section section-soft" id="node-examples">
-  <div class="container">
 
-    <h2>Příklady uzlů: co si pod tím představit (konkrétně)</h2>
 
-    <p class="section-lead">
-      Níže jsou typické situace, kde dává uzel SSCC smysl. Text je stručný – detail si rozkliknete.
-      U každého příkladu je naznačeno, <strong>co uzel vyrovnává</strong>, <strong>jaká média se typicky používají</strong>
-      a <strong>jaký je přínos pro lidi a provoz</strong>.
-    </p>
-
-    <div class="callout callout--info">
-      <p><strong>Tip:</strong> Pokud chcete jen rychlý přehled, projděte nadpisy. Pokud chcete „aha“ příklad, rozklikněte.</p>
-    </div>
-
-    <div class="decision-box" style="margin-top:18px;">
-      <details class="sscc-accordion" open>
-        <summary><strong>Město / teplárna:</strong> stabilní teplo a elektřina i při výkyvech OZE</summary>
-        <div class="accordion-body">
-          <p>
-            Typický uzel pro město kombinuje <strong>zdroje elektřiny</strong> (OZE + síť), <strong>teplárenskou infrastrukturu</strong>,
-            <strong>tepelnou akumulaci</strong> a případně <strong>elektrolýzu</strong> jako flexibilní zátěž.
-            V praxi jde o to, aby město nemělo drahé špičky a aby teplo bylo stabilní i při kolísání výroby.
-          </p>
-
-          <ul>
-            <li><strong>Co vyrovnává:</strong> denní cyklus (dny/noci), špičky odběru, cenové špičky.</li>
-            <li><strong>Typická média:</strong> teplo (zásobník), případně H₂/NH₃ jako dlouhodobější rezerva.</li>
-            <li><strong>Výsledek:</strong> stabilnější dodávky, nižší provozní náklady, vyšší odolnost při poruchách.</li>
-          </ul>
-
-          <figure class="media">
-            <img src="assets/img/uzel-mesto.jpg" alt="Příklad uzlu: město / teplárna" loading="lazy">
-            <figcaption class="small-note">Ilustrační obrázek (doporučeno): teplárna / městský energetický uzel.</figcaption>
-          </figure>
-        </div>
-      </details>
-
-      <details class="sscc-accordion">
-        <summary><strong>Průmyslový areál:</strong> odpadní teplo, stabilní provoz a výroba médií</summary>
-        <div class="accordion-body">
-          <p>
-            Průmysl potřebuje <strong>stabilní energii</strong> a často má k dispozici <strong>odpadní teplo</strong> a CO₂.
-            Uzel SSCC zde funguje jako integrátor: propojuje zdroje, rekuperaci, akumulaci a (podle konfigurace) i
-            <strong>zachytávání CO₂</strong> a <strong>syntézu produktů</strong> (např. NH₃).
-          </p>
-
-          <ul>
-            <li><strong>Co vyrovnává:</strong> výkyvy elektřiny vs. stabilní výrobní potřeby (min–dny).</li>
-            <li><strong>Typická média:</strong> teplo (rekuperace), CO₂ (CCU/CDR), případně NH₃ jako sklad/produkt.</li>
-            <li><strong>Výsledek:</strong> vyšší účinnost, méně ztrát, menší závislost na síti a lepší bilance emisí.</li>
-          </ul>
-
-          <figure class="media">
-            <img src="assets/img/uzel-prumysl.jpg" alt="Příklad uzlu: průmyslový areál" loading="lazy">
-            <figcaption class="small-note">Ilustrační obrázek: průmyslový uzel (rekuperace, média, stabilita).</figcaption>
-          </figure>
-        </div>
-      </details>
-
-      <details class="sscc-accordion">
-        <summary><strong>Přístav / logistika:</strong> paliva a energie jako služba (NH₃/H₂), stabilní odběry</summary>
-        <div class="accordion-body">
-          <p>
-            U logistických uzlů je zásadní, že energie se často potřebuje převést do <strong>přenositelné formy</strong>.
-            Uzel může vyrábět nebo skladovat média (typicky NH₃/H₂) a plánovat jejich dostupnost pro dopravu,
-            záložní zdroje nebo průmyslové odběratele.
-          </p>
-
-          <ul>
-            <li><strong>Co vyrovnává:</strong> dostupnost „paliva“ v čase (dny–týdny), špičky odběrů a logistické požadavky.</li>
-            <li><strong>Typická média:</strong> NH₃/H₂ (výroba, sklad, distribuce), elektřina pro infrastrukturu.</li>
-            <li><strong>Výsledek:</strong> energetická jistota pro provoz, lepší plánování a snížení rizik výpadků.</li>
-          </ul>
-
-          <figure class="media">
-            <img src="assets/img/uzel-pristav.jpg" alt="Příklad uzlu: přístav / logistika" loading="lazy">
-            <figcaption class="small-note">Ilustrační obrázek: logistický uzel (média, sklad, distribuce).</figcaption>
-          </figure>
-        </div>
-      </details>
-
-      <details class="sscc-accordion">
-        <summary><strong>Kampus / výzkum:</strong> pilotní linky, demonstrace a škálování</summary>
-        <div class="accordion-body">
-          <p>
-            Výzkumný uzel je vhodný pro <strong>pilotní linky</strong> a ověřování integrace: řízení vrstev,
-            bezpečnostní režimy, měření a modelování. Výhodou je rychlá iterace, sběr dat a ověření provozních politik,
-            které se později přenesou do průmyslových a městských uzlů.
-          </p>
-
-          <ul>
-            <li><strong>Co vyrovnává:</strong> provozní režimy a experimenty (min–dny), validace řízení a bezpečnosti.</li>
-            <li><strong>Typická média:</strong> dle pilotu (H₂/NH₃/CO₂) + datové toky a měření.</li>
-            <li><strong>Výsledek:</strong> rychlé ověření, snížení rizik, přenos know-how do reálných lokalit.</li>
-          </ul>
-
-          <figure class="media">
-            <img src="assets/img/uzel-kampus.jpg" alt="Příklad uzlu: kampus / výzkumné centrum" loading="lazy">
-            <figcaption class="small-note">Ilustrační obrázek: kampus / pilotní integrace a testování.</figcaption>
-          </figure>
-            </div>
-           <p>
-          Společné pro všechny tyto příklady je to, že se vždy skládají ze stejných funkčních vrstev – liší se jen jejich kombinace a dimenzování.
-              <p>
-        </div>
-      </details>
-    </div>
-
-    <p class="small-note" style="margin-top:16px;">
-      Navazuje: <a href="#layers">Vrstvy architektury</a> — proč musí být odděleny ochrany, lokální autonomie a plánování.
-    </p>
-
-  </div>
-</section>
-
-    <!-- VRSTVY – PRO LIDI -->
-    <section class="section" id="layers">
+    <!-- VRSTVY SYSTÉMU SSCC – POPISNĚ -->
+    <section class="section" id="layers-intro">
       <div class="container">
         <h2>Vrstvy systému SSCC</h2>
 
@@ -366,24 +241,47 @@
         </p>
 
         <h3>1. Vrstva zdrojů energie</h3>
-        <p>Základ tvoří výroba elektřiny a tepla z místně dostupných zdrojů (solár, geotermál, odpadní teplo, biomasa).</p>
+        <ul>
+          <li>solární elektrárny,</li>
+          <li>geotermální zdroje a hlubinné teplo,</li>
+          <li>odpadní teplo z průmyslu,</li>
+          <li>biogenní a další nízkoemisní zdroje.</li>
+        </ul>
 
         <h3>2. Vrstva akumulace a vyrovnávání sítě</h3>
-        <p>Baterie, tepelné zásobníky a chemická média umožňují překlenout časový nesoulad výroby a spotřeby.</p>
+        <ul>
+          <li>bateriová úložiště,</li>
+          <li>tepelná akumulace,</li>
+          <li>chemická akumulace ve formě paliv nebo meziproduktů.</li>
+        </ul>
 
         <h3>3. Vrstva uhlíkového cyklu (CCU / CDR)</h3>
-        <p>Zachytávání, úprava a využití CO₂ tak, aby uhlík obíhal v systému místo úniku do atmosféry.</p>
+        <ul>
+          <li>zachytávání CO₂ z procesů nebo ze vzduchu,</li>
+          <li>čištění a dočasné ukládání CO₂,</li>
+          <li>příprava CO₂ pro chemické využití.</li>
+        </ul>
 
         <h3>4. Vrstva syntézy paliv a chemických produktů</h3>
-        <p>Konverze energie a uhlíku na produkty (např. NH₃, syntetická paliva, meziprodukty).</p>
+        <ul>
+          <li>zelený amoniak (NH₃),</li>
+          <li>syntetická kapalná paliva,</li>
+          <li>chemické meziprodukty pro průmysl.</li>
+        </ul>
 
         <h3>5. Digitální a řídicí vrstva</h3>
-        <p>Predikce, optimalizace a koordinace režimů v čase i mezi více uzly.</p>
+        <ul>
+          <li>optimalizace provozu podle zdrojů,</li>
+          <li>predikce výroby a spotřeby,</li>
+          <li>koordinace více uzlů,</li>
+          <li>integrace s distribučními a přenosovými soustavami.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- VRSTVY – TECH -->
-    <section class="tech-section" id="layers-tech">
+
+    <!-- VRSTVY – TECHNICKY -->
+    <section class="tech-section" id="layers">
       <div class="container">
         <h2>Vrstvy architektury: proč SSCC není „jen soubor technologií“</h2>
 
@@ -392,7 +290,6 @@
           Jinak se řízení začne „hádat“ se zabezpečením, vzniká cyklování, zbytečné start/stop a ztráty.
         </p>
 
-        <!-- Zde ponechávám tvůj tech obsah v kompaktní stabilní formě -->
         <div class="callout callout--info">
           <p><strong>Jedna věta:</strong> rychlé věci (ochrany) musí běžet lokálně, pomalé věci (strategie a plán) mohou běžet nad tím –
           a obě vrstvy musí mít jasné hranice odpovědnosti.</p>
@@ -405,8 +302,13 @@
               <li><strong>Bezpečnost je lokální</strong> (zařízení se umí chránit samo).</li>
               <li><strong>Koordinace je nadřazená</strong> (rozhoduje „kdy a v jakém režimu“).</li>
               <li><strong>Plánování je dopředu</strong> (pracuje s předpověďmi, zásobami, riziky).</li>
-              <li><strong>Audit a pravidla</strong> zajišťují dohledatelnost rozhodnutí.</li>
+              <li><strong>Audit a pravidla</strong> zajišťují dohledatelnost rozhodnutí (pro provoz i regulátora).</li>
             </ul>
+
+            <p class="small-note">
+              Pokud vás zajímá, jak se vrstvy promítají do algoritmů a dat, navazuje stránka
+              <a href="data-ai.html">Data &amp; AI řízení</a>.
+            </p>
           </div>
 
           <div>
@@ -414,7 +316,7 @@
               <h4>Rychlá legenda (časové škály)</h4>
               <ul>
                 <li><strong>ms–s:</strong> ochrany, stabilita zařízení, měření a akce</li>
-                <li><strong>min–h:</strong> koordinace toků, režimy uzlu</li>
+                <li><strong>min–h:</strong> koordinace toků, režimy uzlu, práce se zásobníky</li>
                 <li><strong>h–dny:</strong> plán (předpovědi, ceny, dostupnost zařízení)</li>
                 <li><strong>týdny–sezóny:</strong> strategie zásob a krizové režimy</li>
               </ul>
@@ -422,217 +324,214 @@
           </div>
         </div>
 
-        <p class="small-note">
-          Pokračování: <a href="#flows">Toky a bilance</a>.
-        </p>
+        <h3 style="margin-top: 18px;">Vrstvy SSCC (odpovědnosti)</h3>
+
+        <div class="how-grid">
+          <div class="how-item">
+            <h3>Field</h3>
+            <p>Fyzická zařízení a procesy: zdroje, měniče, úložiště, potrubí, výměníky, výrobní linky.</p>
+            <p class="small-note">Odpovědnost: provozní limity zařízení, fyzická bezpečnost, kvalita měření.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Edge</h3>
+            <p>Lokální autonomie uzlu (PLC/řadiče/gateway). Validuje proveditelnost příkazů, drží bezpečný provoz, umí fallback.</p>
+            <p class="small-note">Odpovědnost: ochrany, guardrails, ostrovní/degradované režimy, buffer dat.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Coordination</h3>
+            <p>Koordinuje subsystémy v uzlu: řeší konflikty mezi elektřinou, teplem a médii, rozpadá plán na cíle.</p>
+            <p class="small-note">Odpovědnost: dispatch, priority, limity, vyrovnání zátěže, přesměrování toků.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>System Intelligence</h3>
+            <p>Predikce, scénáře a optimalizace v delších horizontech. Vytváří politiky a plán s respektem k omezením.</p>
+            <p class="small-note">Odpovědnost: cena/emise/spolehlivost, krizové režimy, kapacitní plánování.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Application &amp; Integration</h3>
+            <p>Rozhraní pro operátory a správu: dashboardy, API, reporting, integrace se SCADA/EMS/DCS/BMS, audit.</p>
+            <p class="small-note">Odpovědnost: integrace, governance, audit, export metrik a rozhodnutí.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Co z toho plyne</h3>
+            <p>SSCC neřídí „ventily“. Definuje režimy, cíle a limity a hlídá bilance v čase. Lokální vrstvy drží bezpečí.</p>
+            <p class="small-note">Pozn.: Proto SSCC škáluje – přidáním uzlů přidáváte kapacitu, ne chaos.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--ok">
+          <p><strong>Praktický přínos vrstvení:</strong> méně poruch, méně zbytečného cyklování, lepší využití OZE a jasná odpovědnost
+          (co řeší zařízení vs. co řeší koordinace a plán).</p>
+        </div>
+
+        <p class="small-note">Pokračování: <a href="#flows-intro">Toky</a> – co přesně se v SSCC „hlídá“.</p>
       </div>
     </section>
 
-    <!-- TOKY – PRO LIDI -->
-    <section class="section section-soft" id="flows">
+
+    <!-- TOKY – ÚVODNĚ / PRO ČTENÁŘE -->
+    <section class="section section-soft" id="flows-intro">
       <div class="container">
-    <!-- TOKY V SYSTÉMU SSCC -->
-<section class="section section-soft" id="flows-intro">
-  <div class="container">
 
-    <h2>Toky v systému SSCC</h2>
+        <h2>Toky v systému SSCC</h2>
 
-    <p class="section-lead">
-      SSCC není „soubor zařízení“. Je to <strong>řízení toků</strong> – energie, tepla, médií a informací – tak,
-      aby systém udržel stabilitu i při kolísání obnovitelných zdrojů.
-    </p>
-
-    <div class="callout callout--ok">
-      <p><strong>Jednou větou:</strong> když je přebytek, uzel ukládá energii do tepla nebo chemických médií; když je deficit,
-      energii řízeně vrací do spotřeby nebo do sítě.</p>
-    </div>
-
-    <p>
-      V praxi se hlídají čtyři propojené „řeky“. Dvě jsou fyzické (elektřina a teplo),
-      jedna je hmotnostní (chemická média) a jedna je řídicí (data).
-      Smysl je jednoduchý: <strong>udržet bilance v čase</strong> – aby se systém „neutrhl“ ani ekonomicky, ani provozně.
-    </p>
-
-    <div class="how-grid">
-      <div class="how-item">
-        <h3>Elektřina</h3>
-        <p>Okamžitý výkon, který musí sedět v sekundách až minutách. Z něj se často napájí konverze (elektrolýza, komprese, čerpadla).</p>
-        <p class="small-note">Co řeší: špičky, přetoky, stabilita sítě, využití přebytků.</p>
-      </div>
-
-      <div class="how-item">
-        <h3>Teplo</h3>
-        <p>Nejlevnější „zásobník“ v hodinách až dnech. Teplo se dá akumulovat a přeposílat mezi teplotními hladinami.</p>
-        <p class="small-note">Co řeší: vytápění, procesní teplo, rekuperace, odpadní teplo.</p>
-      </div>
-
-      <div class="how-item">
-        <h3>Chemická média (H₂ / NH₃ / CO₂)</h3>
-        <p>Ukládání energie do dnů až týdnů a zároveň „produkt“. Umožňuje stabilní odběry i v dlouhých obdobích nízké výroby.</p>
-        <p class="small-note">Co řeší: dlouhé výpadky OZE, sezónní nerovnováhu, paliva pro průmysl/dopravu.</p>
-      </div>
-
-      <div class="how-item">
-        <h3>Data a řízení</h3>
-        <p>Bez dat nemáš plán, bez plánu se vše začne hádat: zařízení cykluje, roste poruchovost a mizí efekt.</p>
-        <p class="small-note">Co řeší: predikce, režimy, koordinace více toků, audit rozhodnutí.</p>
-      </div>
-    </div>
-
-    <div class="callout callout--info" style="margin-top: 20px;">
-      <p><strong>Proč jsou toky důležitější než zařízení:</strong> stejné technologie mohou dávat velmi rozdílný výsledek podle toho,
-      <strong>kam a kdy</strong> se energie a média posílají. SSCC proto stojí na bilancích a režimech, ne na „seznamu strojů“.</p>
-    </div>
-
-    <h3 style="margin-top: 18px;">Konkrétní příklady toků (rozklikni)</h3>
-    <p class="small-note">
-      Text je stručný. Detail je schovaný, aby stránka nezatěžovala běžného čtenáře.
-    </p>
-
-    <div class="decision-box">
-      <details>
-        <summary><strong>1) Přebytek elektřiny v poledne</strong> → teplo + výroba médií</summary>
-        <div style="margin-top: 10px;">
-          <ul>
-            <li>Priorita: využít přebytek bez přetoků do sítě.</li>
-            <li>Akce: část výkonu do <strong>tepelných zásobníků</strong>, část do <strong>elektrolýzy</strong> (H₂) a dle konfigurace do navazující syntézy (NH₃).</li>
-            <li>Efekt pro lidi/provoz: levnější teplo, stabilnější odběry, menší omezování OZE.</li>
-          </ul>
-          <p class="small-note">Technicky: hlídají se rampy měničů, limity teplotních hladin a kapacita zásobníků.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary><strong>2) Večer a ráno (deficit)</strong> → návrat energie ze zásob</summary>
-        <div style="margin-top: 10px;">
-          <ul>
-            <li>Priorita: udržet dodávku pro kritické odběry (teplo, průmysl, služby).</li>
-            <li>Akce: <strong>tepelné zásobníky</strong> pokryjí topení/procesy; elektřina se stabilizuje řízením výkonu a dostupnými zdroji.</li>
-            <li>Efekt: menší špičky v síti, plynulejší provoz, méně start/stop.</li>
-          </ul>
-          <p class="small-note">Technicky: rozlišuje se, co je „elektrická“ vs. „tepelná“ potřeba – aby se zbytečně nepřevádělo.</p>
-        </div>
-      </details>
-
-      <details>
-        <summary><strong>3) Několik dní bez větru/slunce</strong> → chemická energie drží systém</summary>
-        <div style="margin-top: 10px;">
-          <ul>
-            <li>Priorita: překlenout dlouhé období bez drahé nouzové výroby.</li>
-            <li>Akce: řízená spotřeba <strong>chemických médií</strong> (NH₃/H₂ podle konfigurace) a optimalizace režimů uzlů.</li>
-            <li>Efekt: stabilita dodávek, lepší ekonomika, vyšší autonomie regionu.</li>
-          </ul>
-          <p class="small-note">Technicky: hlídají se zásoby (t/den), logistika, bezpečnost, a provozní limity konverzí.</p>
-        </div>
-      </details>
-    </div>
-
-    <p class="small-note" style="margin-top: 14px;">
-      Pokračování: <a href="#flows">Toky a bilance (technicky)</a> ukazují, co se v SSCC skutečně „počítá a hlídá“.
-    </p>
-
-  </div>
-</section>
-
-<section class="tech-section" id="flows">
-  <div class="container">
-    <h2>Toky a bilance: co se v SSCC skutečně řídí</h2>
-
-    <p class="section-lead">
-      SSCC řídí současně <strong>elektrickou energii, teplo a chemická média</strong> – a to v různých časových měřítkách.
-      Stabilita vzniká z jejich kombinace a z jasně nastavených limitů.
-    </p>
-
-    <div class="callout callout--info">
-      <p><strong>Klíč:</strong> rozhoduje se o <strong>režimech</strong> (kdy ukládat, kdy vyrábět média, kdy dodávat),
-      a bilance hlídá, aby byl každý režim proveditelný a bezpečný.</p>
-    </div>
-
-    <div class="two-col">
-      <div>
-        <h3>Jaké bilance se sledují</h3>
-        <ul>
-          <li><strong>Elektrická</strong> – výroba, odběr, přetoky, konverze, měniče, limity připojení.</li>
-          <li><strong>Tepelná</strong> – teplotní hladiny, zásobníky, výměníky, rekuperace, ztráty.</li>
-          <li><strong>Hmotnostní</strong> – H₂/NH₃/CO₂/N₂/voda: zásoby, čistoty, tlaky, průtoky.</li>
-          <li><strong>Logistická</strong> – skladování, plnění, doprava, dostupnost médií v čase.</li>
-        </ul>
-
-        <p class="small-note">
-          Prakticky: uzel má více „stavů zásob“ – baterii, teplo a chemická média.
-          Každý zásobník řeší jiný časový problém.
+        <p class="section-lead">
+          SSCC není „soubor zařízení“. Je to <strong>řízení toků</strong> – energie, tepla, médií a informací – tak,
+          aby systém udržel stabilitu i při kolísání obnovitelných zdrojů.
         </p>
-      </div>
 
-      <div>
-        <div class="decision-box">
-          <h4>Co bilance nesmí porušit</h4>
-          <ul>
-            <li>kapacity zásobníků (objem, tlak, teplota),</li>
-            <li>účinnosti konverzí a ztráty,</li>
-            <li>omezení ramp (jak rychle lze měnit výkon),</li>
-            <li>procesní a bezpečnostní limity zařízení.</li>
-          </ul>
+        <div class="callout callout--ok">
+          <p><strong>Jednou větou:</strong> když je přebytek, uzel ukládá energii do tepla nebo chemických médií; když je deficit,
+          energii řízeně vrací do spotřeby nebo do sítě.</p>
         </div>
+
+        <div class="how-grid">
+          <div class="how-item">
+            <h3>Elektřina</h3>
+            <p>Okamžitý výkon, který musí sedět v sekundách až minutách. Z něj se napájí i konverze (elektrolýza, komprese).</p>
+            <p class="small-note">Co řeší: špičky, přetoky, stabilita sítě, využití přebytků.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Teplo</h3>
+            <p>Nejlevnější „zásobník“ v hodinách až dnech. Teplo se dá akumulovat a přeposílat mezi teplotními hladinami.</p>
+            <p class="small-note">Co řeší: vytápění, procesní teplo, rekuperace, odpadní teplo.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Chemická média (H₂ / NH₃ / CO₂)</h3>
+            <p>Ukládání energie do dnů až týdnů a zároveň „produkt“. Umožňuje stabilní odběry i v dlouhých obdobích nízké výroby.</p>
+            <p class="small-note">Co řeší: dlouhé výpadky OZE, paliva pro průmysl/dopravu, logistiku.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Data a řízení</h3>
+            <p>Bez dat nemáš plán; bez plánu se vše začne hádat: cyklování, poruchovost a ztráta ekonomiky.</p>
+            <p class="small-note">Co řeší: predikce, režimy, koordinace toků, audit rozhodnutí.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 18px;">Konkrétní příklady toků (rozklikni)</h3>
+        <p class="small-note">Detail je schovaný, aby stránka nezatěžovala běžného čtenáře.</p>
+
+        <div class="decision-box">
+          <details>
+            <summary><strong>1) Přebytek elektřiny v poledne</strong> → teplo + výroba médií</summary>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>Akce: část výkonu do <strong>tepelných zásobníků</strong>, část do <strong>elektrolýzy</strong> (H₂) a dle konfigurace do navazující syntézy (NH₃).</li>
+                <li>Efekt: menší přetoky, lepší využití OZE, levnější teplo a stabilnější odběry.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary><strong>2) Večer a ráno (deficit)</strong> → návrat energie ze zásob</summary>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>Akce: tepelné zásobníky pokryjí topení/procesy, elektřina se stabilizuje řízením výkonu a režimy uzlu.</li>
+                <li>Efekt: menší špičky, plynulejší provoz, méně start/stop.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary><strong>3) Několik dní bez větru/slunce</strong> → chemická energie drží systém</summary>
+            <div style="margin-top: 10px;">
+              <ul>
+                <li>Akce: řízená spotřeba chemických médií (NH₃/H₂) a optimalizace režimů uzlů.</li>
+                <li>Efekt: stabilita dodávek, vyšší autonomie regionu, lepší ekonomika.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <p class="small-note" style="margin-top: 14px;">
+          Detailněji: <a href="#flows">Toky a bilance (technicky)</a>.
+        </p>
+
       </div>
-    </div>
+    </section>
 
-    <h3 style="margin-top: 18px;">Časové škály: proč nestačí „jen baterie“</h3>
 
-    <p>
-      Různé problémy vznikají v různých horizontech. SSCC proto kombinuje více forem akumulace
-      a každé dává jasnou roli.
-    </p>
+    <!-- TOKY – TECHNICKY -->
+    <section class="tech-section" id="flows">
+      <div class="container">
+        <h2>Toky a bilance: co se v SSCC skutečně řídí</h2>
 
-    <div class="how-grid">
-      <div class="how-item">
-        <h3>Minuty</h3>
-        <p>Rychlé výkyvy výkonu, stabilita sítě, regulace napětí a frekvence.</p>
-        <p class="small-note">Typicky: měniče, řízení zdrojů, krátkodobé buffery.</p>
+        <p class="section-lead">
+          SSCC řídí současně <strong>elektrickou energii, teplo a chemická média</strong> – a to v různých časových měřítkách.
+          Stabilita vzniká z jejich kombinace a z jasně nastavených limitů.
+        </p>
+
+        <div class="callout callout--info">
+          <p><strong>Klíč:</strong> rozhoduje se o <strong>režimech</strong> (kdy ukládat, kdy vyrábět média, kdy dodávat),
+          a bilance hlídá, aby byl každý režim proveditelný a bezpečný.</p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Jaké bilance se sledují</h3>
+            <ul>
+              <li><strong>Elektrická</strong> – výroba, odběr, přetoky, konverze, limity připojení.</li>
+              <li><strong>Tepelná</strong> – teplotní hladiny, zásobníky, rekuperace, ztráty.</li>
+              <li><strong>Hmotnostní</strong> – H₂/NH₃/CO₂/N₂/voda: zásoby, tlaky, čistoty, průtoky.</li>
+              <li><strong>Logistická</strong> – skladování, plnění, doprava, dostupnost médií v čase.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="decision-box">
+              <h4>Co bilance nesmí porušit</h4>
+              <ul>
+                <li>kapacity zásobníků (objem, tlak, teplota),</li>
+                <li>účinnosti konverzí a ztráty,</li>
+                <li>omezení ramp (jak rychle lze měnit výkon),</li>
+                <li>procesní a bezpečnostní limity zařízení.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 18px;">Časové škály: proč nestačí „jen baterie“</h3>
+
+        <div class="how-grid">
+          <div class="how-item">
+            <h3>Minuty</h3>
+            <p>Rychlé výkyvy výkonu, stabilita sítě, podpůrné služby.</p>
+            <p class="small-note">Typicky: měniče, řízení zdrojů, krátkodobé buffery.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Hodiny</h3>
+            <p>Denní cyklus: přesun energie mezi dnem a nocí, zásobníky tepla.</p>
+            <p class="small-note">Typicky: tepelné zásobníky, režimy zařízení.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Dny až týdny</h3>
+            <p>Dlouhá období nízké výroby: zde rozhodují chemická média.</p>
+            <p class="small-note">Typicky: NH₃/H₂, zásoby, logistika, plánování odběrů.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--ok">
+          <p><strong>Výsledek:</strong> místo jednoho přetíženého úložiště vzniká sada nástrojů,
+          kde každý řeší jiný typ problému v čase.</p>
+        </div>
+
+        <p class="small-note">Pokračování: <a href="#integration-intro">Integrace</a> – jak se SSCC napojuje na existující systémy.</p>
       </div>
-
-      <div class="how-item">
-        <h3>Hodiny</h3>
-        <p>Denní cyklus: přesun energie mezi dnem a nocí, práce se zásobníky tepla.</p>
-        <p class="small-note">Typicky: tepelné zásobníky, flexibilní výroba, režimy zařízení.</p>
-      </div>
-
-      <div class="how-item">
-        <h3>Dny až týdny</h3>
-        <p>Dlouhé období nízké výroby: zde rozhodují chemická média.</p>
-        <p class="small-note">Typicky: NH₃/H₂, zásoby, logistika, plánování odběrů.</p>
-      </div>
-    </div>
-
-    <div class="callout callout--ok">
-      <p><strong>Výsledek:</strong> místo jednoho přetíženého úložiště vzniká sada nástrojů,
-      kde každý řeší jiný typ problému v čase. To je důvod, proč SSCC unese vysokou variabilitu OZE.</p>
-    </div>
-
-    <div class="decision-box">
-      <h4>Dimenzování uzlu se opírá o</h4>
-      <ul>
-        <li>časové řady výroby a spotřeby (profil přebytků/deficitů),</li>
-        <li>omezení sítě a připojení (kapacity, přetoky, podpůrné služby),</li>
-        <li>požadavky na kontinuitu provozu (kritické odběry),</li>
-        <li>krizové režimy a priorizaci (co musí běžet vždy).</li>
-      </ul>
-    </div>
-
-    <p class="small-note">
-      Detailnější bilance, procesní limity a návrh řízení jsou rozebrány v části
-      <a href="odborne.html">Technická architektura pro odborníky</a>.
-    </p>
-
-    <p class="small-note">
-      Pokračování: <a href="#integration">Integrace</a> – jak se SSCC napojuje na existující systémy bez jejich výměny.
-    </p>
-  </div>
-</section>
+    </section>
 
 
-    <!-- INTEGRACE – PRO LIDI -->
-    <section class="section" id="integration">
+    <!-- INTEGRACE – POPISNĚ -->
+    <section class="section" id="integration-intro">
       <div class="container">
         <h2>Integrace systému SSCC</h2>
 
@@ -642,10 +541,7 @@
           Bez integrace by šlo jen o soubor samostatných technologií.
         </p>
 
-        <p>
-          V systému SSCC probíhá integrace na několika úrovních současně:
-          technické, provozní, datové i institucionální.
-        </p>
+        <p>V systému SSCC probíhá integrace na několika úrovních současně: technické, provozní, datové i institucionální.</p>
 
         <h3>Technická integrace</h3>
         <ul>
@@ -655,35 +551,60 @@
           <li>možnost postupného rozšiřování bez přerušení provozu.</li>
         </ul>
 
+        <h3>Provozní integrace</h3>
+        <ul>
+          <li>aktuální poptávka po energii a produktech,</li>
+          <li>dostupnost zdrojů,</li>
+          <li>stav akumulace,</li>
+          <li>požadavky distribuční a přenosové soustavy.</li>
+        </ul>
+
         <h3>Datová a digitální integrace</h3>
         <ul>
           <li>sběr dat ze senzorů v reálném čase,</li>
-          <li>automatizované řízení technologických procesů,</li>
-          <li>predikční modely a optimalizace,</li>
-          <li>propojení více uzlů do širších struktur.</li>
+          <li>automatizované řízení procesů,</li>
+          <li>analytika a predikce,</li>
+          <li>vzdálený dohled a servis.</li>
+        </ul>
+
+        <h3>Institucionální a tržní integrace</h3>
+        <ul>
+          <li>spolupráce veřejného a soukromého sektoru,</li>
+          <li>vlastnictví, odpovědnost, smluvní vztahy,</li>
+          <li>vazby na energetické trhy,</li>
+          <li>bezpečnostní a environmentální standardy.</li>
         </ul>
       </div>
     </section>
 
-    <!-- INTEGRACE – TECH -->
-    <section class="tech-section" id="integration-tech">
+
+    <!-- INTEGRACE – TECHNICKY -->
+    <section class="tech-section" id="integration">
       <div class="container">
         <h2>Integrace: SSCC jako nadstavba, ne náhrada</h2>
 
         <p class="section-lead">
-          SSCC není „nová centrální řídicí místnost“. Je to <strong>koordinační vrstva nad stávající infrastrukturou</strong>,
-          která pomáhá rozhodovat, kdy má který subsystém pracovat v jakém režimu.
+          SSCC není navržen jako „nová centrální řídicí místnost“, která by nahrazovala existující systémy.
+          Naopak: funguje jako <strong>koordinační vrstva nad stávající infrastrukturou</strong>.
         </p>
+
+        <div class="callout callout--info">
+          <p><strong>Jednoduše:</strong> co dnes funguje, zůstává. SSCC se připojuje nad to a pomáhá rozhodovat,
+          kdy má který subsystém pracovat v jakém režimu.</p>
+        </div>
 
         <div class="two-col">
           <div>
             <h3>Kde se SSCC typicky napojuje</h3>
             <ul>
-              <li><strong>Energetika</strong> – SCADA, EMS, dispečerské systémy</li>
-              <li><strong>Průmysl</strong> – DCS a výrobní řídicí systémy</li>
-              <li><strong>Budovy/teplo</strong> – BMS, řízení kotelen a výměníků</li>
-              <li><strong>Plánování</strong> – výroba, sklady, dodávky médií</li>
+              <li><strong>Energetika</strong> – SCADA, EMS, dispečerské systémy sítí.</li>
+              <li><strong>Průmysl</strong> – DCS a výrobní řídicí systémy.</li>
+              <li><strong>Budovy a teplárenství</strong> – BMS, řízení kotelen a výměníků.</li>
+              <li><strong>Logistika</strong> – výrobní plány, skladové hospodářství, dodávky médií.</li>
             </ul>
+            <p class="small-note">
+              SSCC nesahá přímo na ventily a pohony. Posílá cílové režimy a limity, které lokální systémy realizují.
+            </p>
           </div>
 
           <div>
@@ -699,13 +620,67 @@
           </div>
         </div>
 
+        <h3 style="margin-top:18px;">Provoz i bez spojení: autonomie uzlů</h3>
+
+        <div class="how-grid">
+          <div class="how-item">
+            <h3>Normální provoz</h3>
+            <p>Uzel přijímá cíle a limity z koordinační vrstvy a optimalizuje provoz v rámci regionálního systému.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Omezené spojení</h3>
+            <p>Uzel přechází na poslední známý plán a lokální optimalizaci, dokud není komunikace obnovena.</p>
+          </div>
+
+          <div class="how-item">
+            <h3>Ostrovní režim</h3>
+            <p>Prioritou je bezpečnost zařízení a udržení dodávek pro kritické odběry.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--ok">
+          <p><strong>Praktický přínos:</strong> SSCC zvyšuje odolnost systému, místo aby vytvářel nový bod selhání.</p>
+        </div>
+
+        <h3>Technické principy integrace</h3>
+
+        <div class="two-col">
+          <div>
+            <ul>
+              <li>standardní komunikační protokoly (OPC UA, MQTT, REST, IEC 61850 podle domény),</li>
+              <li>oddělení IT a OT sítí,</li>
+              <li>kybernetická bezpečnost podle průmyslových norem,</li>
+              <li>deterministické reakce na poruchové stavy.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="decision-box">
+              <h4>Audit a dohledatelnost</h4>
+              <ul>
+                <li>logování rozhodnutí řídicích politik,</li>
+                <li>verzování modelů a plánovacích algoritmů,</li>
+                <li>zpětné vyhodnocení provozu,</li>
+                <li>podklady pro regulátory a provozní analýzy.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <p class="small-note">
-          Pokračování: <a href="#next-steps">Kam dál</a>.
+          Detailní integrační architektura, datové modely a bezpečnostní schémata jsou rozebrány v části
+          <a href="odborne.html">Pro odborníky</a>.
         </p>
+
+        <p class="small-note">Pokračování: <a href="#next-steps">Kam dál</a> — jak se z konceptu stane projekt.</p>
       </div>
     </section>
 
-    <!-- KAM DÁL – OD KONCEPTU K REÁLNÝM PROJEKTŮM -->
+
+
+
+<!-- OD KONCEPTU K REÁLNÝM PROJEKTŮM -->
     <section class="section section-highlight" id="next-steps">
       <div class="container">
         <h2>Kam dál: od konceptu k reálným projektům</h2>
