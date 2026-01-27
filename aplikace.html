@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 
-<body class="page-aplikace" id="top">
+<body class="page-aplikace">
+...
+<main id="top">
 
   <!-- HLAVIČKA – jednotná pro celý web -->
   <header class="site-header">
@@ -82,129 +84,203 @@
       </div>
     </section>
 
-    <!-- SCÉNÁŘE -->
-    <section class="section" id="scenare">
-      <div class="container">
-        <h2>Scénáře, kde SSCC typicky dává smysl</h2>
+<!-- PRŮMYSL -->
+<section class="section section-soft" id="sc-prumysl">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>Průmyslový areál</h2>
 
         <p class="section-lead">
-          Níže uvedené scénáře se liší, ale mají společný princip: SSCC nepřidává jen „další zdroj“,
-          ale snižuje zranitelnost systému a zlepšuje využití dostupné energie v čase.
+          Energeticky náročná výroba, vysoké špičky spotřeby a citlivost na výpadky.
         </p>
 
-        <div class="app-grid">
+        <h3>Typické problémy</h3>
+        <ul>
+          <li>kolísání cen elektřiny,</li>
+          <li>nedostatek výkonu v síti,</li>
+          <li>nevyužité odpadní teplo,</li>
+          <li>emise CO₂ z procesů.</li>
+        </ul>
 
-          <div class="app-card">
-            <h3>Průmyslové areály a chemické provozy</h3>
-            <p>
-              Provozy s vysokou spotřebou elektřiny a tepla, kde výpadky nebo výkonové špičky
-              znamenají reálné ekonomické ztráty a kde lze část energie převádět do chemických
-              médií nebo využít procesní teplo.
-            </p>
+        <h3>Co řeší SSCC</h3>
+        <ul>
+          <li>převod přebytků do tepla a chemických médií,</li>
+          <li>vyrovnávání špiček pomocí akumulace,</li>
+          <li>zachytávání CO₂ a jeho další využití,</li>
+          <li>stabilní dodávky energie i při omezení sítě.</li>
+        </ul>
 
-            <p><strong>Kdy dává smysl:</strong></p>
-            <ul>
-              <li>kontinuální nebo polo-kontinuální výroba citlivá na výpadky,</li>
-              <li>možnost tepelné integrace (odpadní teplo, stabilní teplotní úrovně),</li>
-              <li>zájem o H₂ / NH₃ jako médium, surovinu nebo dlouhodobou rezervu.</li>
-            </ul>
-
-            <p>
-              <strong>Typické výstupy:</strong>
-              stabilizovaný odběr, snížení špiček, dlouhodobá energetická rezerva, lepší využití tepla.
-            </p>
-          </div>
-
-          <div class="app-card">
-            <h3>Městské a regionální energetické uzly (stabilizace sítě)</h3>
-            <p>
-              SSCC funguje jako stabilizační vrstva pro lokální distribuční soustavy,
-              teplárenské uzly a místa s omezeními sítě. Nejde o náhradu přenosové soustavy,
-              ale o zpevnění kritických bodů a lepší řízení lokální energetické bilance.
-            </p>
-
-            <p><strong>Kdy dává smysl:</strong></p>
-            <ul>
-              <li>přetížené rozvodny nebo vedení, výrazné sezónní špičky,</li>
-              <li>kombinace více zdrojů a více typů spotřeb v jednom uzlu,</li>
-              <li>požadavek na vyšší odolnost a řízený provoz při poruchách.</li>
-            </ul>
-
-            <p>
-              <strong>Typické výstupy:</strong>
-              vyrovnání špiček, delší provoz v omezeném režimu, stabilnější lokální energetická bilance.
-            </p>
-          </div>
-
-          <div class="app-card">
-            <h3>Ostrovní a odlehlé lokality</h3>
-            <p>
-              Lokality bez robustní přenosové soustavy, kde je klíčová stabilita
-              a dlouhodobá energetická rezerva, často s omezenými možnostmi dovozu paliv.
-              SSCC zde slouží jako integrační vrstva mezi lokálními zdroji, akumulací
-              a řízením spotřeby.
-            </p>
-
-            <p><strong>Kdy dává smysl:</strong></p>
-            <ul>
-              <li>nespolehlivé nebo žádné napojení na přenosovou soustavu,</li>
-              <li>vysoké logistické náklady na dovoz paliv,</li>
-              <li>požadavek na provoz v řádu dnů až týdnů bez externích dodávek.</li>
-            </ul>
-
-            <p>
-              <strong>Typické výstupy:</strong>
-              omezení závislosti na dieselových agregátech, stabilnější ostrovní provoz, vyšší provozní autonomie.
-            </p>
-          </div>
-
-          <div class="app-card">
-            <h3>Logistické uzly a přístavy</h3>
-            <p>
-              Místa s koncentrací energeticky náročných operací a potenciální poptávkou
-              po chemických médiích pro průmysl nebo dopravu. SSCC zde může fungovat
-              jako kombinace stabilního energetického zázemí a infrastruktury pro práci
-              s médii tam, kde to dává technický i bezpečnostní smysl.
-            </p>
-
-            <p><strong>Kdy dává smysl:</strong></p>
-            <ul>
-              <li>výrazné výkonové špičky (jeřáby, chlazení, nabíjení, provoz techniky),</li>
-              <li>poptávka po H₂ / NH₃ v rámci areálu nebo blízkého průmyslu,</li>
-              <li>prostorové a bezpečnostní možnosti pro práci s médii.</li>
-            </ul>
-
-            <p>
-              <strong>Typické výstupy:</strong>
-              stabilnější provoz infrastruktury, energetické zázemí pro lokální média, vyrovnání výkonových špiček.
-            </p>
-          </div>
-
-          <div class="app-card">
-            <h3>Agrární a potravinářské provozy</h3>
-            <p>
-              Provozy, kde se potkává energie, teplo a výrazná sezónnost výroby,
-              často s vysokou citlivostí na cenu a dostupnost energie. SSCC zde
-              posiluje stabilitu provozu a umožňuje lepší využití lokálních zdrojů
-              i odpadního tepla.
-            </p>
-
-            <p><strong>Kdy dává smysl:</strong></p>
-            <ul>
-              <li>sezónní špičky spotřeby a citlivost na výkyvy cen,</li>
-              <li>využitelné teplo (zpracování, sušení, chlazení),</li>
-              <li>větší areály, kde se projeví ekonomika měřítka.</li>
-            </ul>
-
-            <p>
-              <strong>Typické výstupy:</strong>
-              stabilnější energetická bilance, lepší využití lokálních zdrojů, snížení provozních rizik.
-            </p>
-          </div>
-
-        </div>
+        <p class="small-note">
+          Výsledek: nižší provozní náklady, vyšší energetická bezpečnost, lepší environmentální bilance.
+        </p>
       </div>
-    </section>
+
+      <div>
+      <img src="assets/img/uzel-prumysl.jpg" alt="Průmyslový energetický uzel" class="responsive-img">
+      </div>
+    </div>
+  </div>
+</section>
+    
+<section class="section section-compact">
+  <div class="container">
+    <p class="small-note">
+      Rychlé skoky:
+      <a href="#sc-prumysl">Průmysl</a> ·
+      <a href="#sc-mesto">Město</a> ·
+      <a href="#sc-pristav">Přístav</a> ·
+      <a href="#sc-krize">Krizová infrastruktura</a>
+    </p>
+  </div>
+</section>
+
+<!-- MĚSTO / TEPLÁRNA -->
+<section class="section" id="sc-mesto">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <img src="assets/img/uzel-mesto.jpg" alt="Městský energetický uzel" class="responsive-img">
+      </div>
+
+      <div>
+        <h2>Město a teplárenská soustava</h2>
+
+        <p class="section-lead">
+          Potřeba stabilního tepla, tlak na dekarbonizaci a rostoucí nároky na flexibilitu sítě.
+        </p>
+
+        <h3>Typické problémy</h3>
+        <ul>
+          <li>závislost na jednom zdroji tepla,</li>
+          <li>omezené možnosti akumulace,</li>
+          <li>sezónní rozdíly spotřeby.</li>
+        </ul>
+
+        <h3>Co řeší SSCC</h3>
+        <ul>
+          <li>kombinaci více zdrojů tepla a elektřiny,</li>
+          <li>velkokapacitní tepelné zásobníky,</li>
+          <li>využití přebytků OZE pro výrobu paliv,</li>
+          <li>záložní režimy při poruchách.</li>
+        </ul>
+
+        <p class="small-note">
+          Výsledek: vyšší odolnost, nižší emise, stabilnější ceny pro obyvatele.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PŘÍSTAV / LOGISTIKA -->
+<section class="section section-soft" id="sc-pristav">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>Přístav a logistický uzel</h2>
+
+        <p class="section-lead">
+          Velké energetické nároky, tlak na bezemisní provoz a potřeba paliv pro dopravu.
+        </p>
+
+        <h3>Typické problémy</h3>
+        <ul>
+          <li>emise z lodní a těžké dopravy,</li>
+          <li>nedostatek infrastruktury pro alternativní paliva,</li>
+          <li>kolísání výkonu v lokální síti.</li>
+        </ul>
+
+        <h3>Co řeší SSCC</h3>
+        <ul>
+          <li>výrobu zeleného vodíku a amoniaku,</li>
+          <li>napojení na průmyslové zdroje CO₂,</li>
+          <li>vyrovnávání energetických špiček,</li>
+          <li>logistiku paliv v rámci regionu.</li>
+        </ul>
+
+        <p class="small-note">
+          Výsledek: infrastruktura pro bezemisní dopravu a nové průmyslové příležitosti.
+        </p>
+      </div>
+
+      <div>
+        <img src="assets/img/uzel-pristav.jpg" alt="Energetický uzel v přístavu" class="responsive-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OSTROVNÍ / KRIZOVÁ INFRASTRUKTURA -->
+<section class="section" id="sc-krize">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <img src="assets/img/uzel-kampus.jpg" alt="Energetický kampus / ostrovní uzel" class="responsive-img">
+      </div>
+
+      <div>
+        <h2>Energetický uzel a krizová infrastruktura</h2>
+
+        <p class="section-lead">
+          Nemocnice, kampusy, datová centra a kritické služby vyžadují nepřerušený provoz.
+        </p>
+
+        <h3>Typické problémy</h3>
+        <ul>
+          <li>závislost na centrální síti,</li>
+          <li>omezené záložní zdroje,</li>
+          <li>rostoucí spotřeba elektřiny a tepla.</li>
+        </ul>
+
+        <h3>Co řeší SSCC</h3>
+        <ul>
+          <li>kombinaci lokálních zdrojů a akumulace,</li>
+          <li>ostrovní a degradované provozní režimy,</li>
+          <li>prioritizaci kritických odběrů,</li>
+          <li>dlouhodobé zásoby energie v chemické formě.</li>
+        </ul>
+
+        <p class="small-note">
+          Výsledek: vysoká odolnost a energetická soběstačnost klíčových služeb.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAVAZUJÍCÍ KROKY -->
+<section class="tech-section" id="application-next">
+  <div class="container">
+    <h2>Jak pokračovat</h2>
+
+    <p class="section-lead">
+      Každý scénář využívá stejné principy SSCC, ale jinou kombinaci technologií a provozních režimů.
+      Další krok je proto vždy technický návrh konkrétní konfigurace uzlu.
+    </p>
+
+    <div class="how-grid">
+      <div class="how-item">
+        <h3>Technologie</h3>
+        <p>Jaké moduly se skládají do uzlu a jak spolupracují.</p>
+        <p><a href="technologie.html" class="btn-primary">Přehled technologií</a></p>
+      </div>
+
+      <div class="how-item">
+        <h3>Řízení a data</h3>
+        <p>Jak funguje predikce, plánování a koordinace uzlů.</p>
+        <p><a href="data-ai.html" class="btn-primary">Data &amp; AI</a></p>
+      </div>
+
+      <div class="how-item">
+        <h3>Architektura</h3>
+        <p>Jak jsou odděleny vrstvy řízení a ochrany.</p>
+    <p><a href="sscc-system.html" class="btn-primary">Architektura systému</a></p>
+
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- POSTUPNÉ NASAZENÍ -->
     <section class="section" id="rust">
