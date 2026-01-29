@@ -1529,3 +1529,26 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .jump-links a:hover{
   transform: translateY(-1px);
 }
+.img-toggle{
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+  box-shadow: 0 10px 25px rgba(2,6,23,0.06);
+}
+
+.img-toggle > summary{
+  cursor: pointer;
+  font-weight: 650;
+  list-style: none;
+}
+
+.img-toggle > summary::-webkit-details-marker{ display:none; }
+
+.img-toggle[open] > summary{
+  margin-bottom: 10px;
+}
+
+.img-toggle img{
+  border-radius: calc(var(--radius-lg) - 6px);
+}
