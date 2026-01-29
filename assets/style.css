@@ -1498,3 +1498,34 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   border-radius: 14px;
   display: block;
 }
+.jump-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border: 1px dashed rgba(15,23,42,.25);
+  border-radius: 12px;
+  background: rgba(255,255,255,.55);
+}
+
+.jump-links .jump-label{
+  font-weight: 700;
+  opacity: .85;
+  margin-right: 6px;
+}
+
+.jump-links a{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,.18);
+  background: rgba(255,255,255,.75);
+  text-decoration: none;
+}
+
+.jump-links a:hover{
+  transform: translateY(-1px);
+}
