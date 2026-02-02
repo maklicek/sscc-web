@@ -1,0 +1,28 @@
+<section class="section">
+  <div class="container">
+    <h2>Proč SSCC řeší to, co baterie neumí</h2>
+
+    <div class="grid-2">
+      <div>
+        <p class="section-lead">
+          Různé technologie ukládání energie se liší především v tom,
+          jak dlouho dokáží energii uchovat bez ztrát a v jakém objemu.
+        </p>
+
+        <ul class="flow-list">
+          <li><strong>Baterie</strong> – výborné pro hodiny až dny, nevhodné pro sezónní ukládání</li>
+          <li><strong>Vodík</strong> – vhodný pro střednědobé ukládání, náročnější skladování</li>
+          <li><strong>SSCC (amoniak)</strong> – ideální pro týdny až měsíce bez samovybíjení</li>
+          <li><strong>Vysoká objemová hustota energie</strong> bez ztrát v čase</li>
+          <li><strong>Možnost využití existující průmyslové infrastruktury</strong></li>
+          <li><strong>Bez nutnosti dovozu fosilních paliv</strong></li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="assets/sscc-srovnani.png" alt="Srovnání baterie, vodíku a SSCC" class="full-img">
+        <p class="caption">Srovnání možností dlouhodobého ukládání energie.</p>
+      </div>
+    </div>
+  </div>
+</section>
