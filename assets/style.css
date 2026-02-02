@@ -1600,3 +1600,21 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   opacity:1 !important;
   visibility:visible !important;
 }
+.img-link{
+  display:block;
+  border-radius: 16px;
+  overflow:hidden;
+}
+
+.img-link img{
+  display:block;
+  width:100%;
+  height:auto;
+  cursor: zoom-in;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.img-link:hover img{
+  transform: scale(1.01);
+  filter: brightness(1.02);
+}
