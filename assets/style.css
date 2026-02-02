@@ -1582,3 +1582,21 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   color:#ffffff !important;
   text-shadow: 0 4px 30px rgba(0,0,0,0.55);
 }
+/* ===== SSCC HARD LAYOUT RESET (diagnostika) ===== */
+
+.section,
+.section > .container,
+.section .container,
+.container{
+  display:block !important;
+  position:relative !important;
+  height:auto !important;
+  min-height:initial !important;
+  overflow:visible !important;
+}
+
+.section *{
+  position:static !important;
+  opacity:1 !important;
+  visibility:visible !important;
+}
