@@ -1552,3 +1552,6 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .img-toggle img{
   border-radius: calc(var(--radius-lg) - 6px);
 }
+.img-stack img{
+  margin-bottom:22px;
+}
