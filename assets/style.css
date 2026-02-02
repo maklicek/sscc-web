@@ -1558,3 +1558,27 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .full-img{display:block;max-width:100%;height:auto}
 .img-stack{margin:24px 0}
 .img-stack img{margin:0 0 22px}
+/* ===== HERO CONTRAST FIX ===== */
+
+.hero{
+  position: relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45); /* tmavý overlay místo světlého */
+  z-index:1;
+}
+
+.hero-inner{
+  position: relative;
+  z-index:2;
+}
+
+.hero-title,
+.hero-subtitle{
+  color:#ffffff !important;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.55);
+}
