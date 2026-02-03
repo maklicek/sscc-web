@@ -1609,3 +1609,17 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .img-link{ pointer-events:auto !important; }
 .img-stack::before,
 .img-stack::after{ pointer-events:none !important; }
+.comparison-table{
+  width:100%;
+  border-collapse: collapse;
+  margin-top:20px;
+}
+.comparison-table th,
+.comparison-table td{
+  border:1px solid #cbd5e1;
+  padding:10px 14px;
+  text-align:left;
+}
+.comparison-table th{
+  background:#e2e8f0;
+}
