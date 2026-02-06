@@ -212,6 +212,10 @@
             <li><a href="#souhrn">Souhrn</a></li>
             <li><a href="#architektura">Architektura (SoS)</a></li>
             <li><a href="#terminologie">Terminologie</a></li>
+            <li><a href="#toky">Toky a bilance</a></li>
+            <li><a href="#sizing">Dimenzování</a></li>
+            <li><a href="#rizika">Rizika &amp; bezpečnost</a></li>
+            <li><a href="#reference">Reference</a></li>
           </ul>
         </details>
 
@@ -340,16 +344,221 @@
           </ul>
         </section>
 
+        <!-- TOKY -->
+        <section class="tech-section" id="toky">
+          <h2>Toky a bilance (hranice systému)</h2>
+
+          <div class="callout">
+            <p><strong>Nejdůležitější rozhodnutí:</strong> kde přesně leží <em>hranice systému</em> (scope). Bez toho se „bilance“ dá vyrobit libovolně.</p>
+            <p><strong>SSCC bilancuje</strong> elektřinu, teplo a hmotnostní toky médií v čase (hodiny–sezóny).</p>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Co musí být v bilanci vždy</h3>
+              <ul>
+                <li><strong>Elektrická bilance:</strong> příkon (elektrolýza, komprese, pomocné), dodávka výkonu, ztráty.</li>
+                <li><strong>Tepelná bilance:</strong> zdroje/spotřeby, rekuperace, zásobníky, teplotní hladiny.</li>
+                <li><strong>Hmotnostní bilance:</strong> H₂, NH₃, CO₂, N₂, voda – včetně čistot a recyklací.</li>
+                <li><strong>Časová bilance:</strong> kdy tok běží, jak dlouho, jaké jsou rampy a minimální provozní body.</li>
+              </ul>
+
+              <div class="decision-box">
+                <h4>KPI pro „odborné“ hodnocení</h4>
+                <ul>
+                  <li><strong>Capacity factor</strong> klíčových uzlů (EL / syntézy / konverze).</li>
+                  <li><strong>Roundtrip účinnost</strong> (elektřina → médium → výkon/teplo).</li>
+                  <li><strong>Ztráty komprese / separace</strong> jako podíl na energii.</li>
+                  <li><strong>Stabilita režimu:</strong> start/stop, rampy, turndown, teplotní šoky.</li>
+                  <li><strong>Scope bilance CO₂</strong> (explicitně uvedené hranice a upstream).</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3>Jak to prezentovat „čistě“</h3>
+              <p>
+                Doporučený výstup je sada 3–4 „standardních“ bilancí:
+                <strong>typický den</strong>, <strong>typický týden</strong>, <strong>sezónní extrém</strong> (zima/bezvětří),
+                a <strong>krizový režim</strong> (odstávka uzlu / výpadek komunikace).
+              </p>
+
+              <table class="tech-table">
+                <tr><th>Tok</th><th>Jednotka</th><th>Co hlídat</th></tr>
+                <tr><td>Elektřina</td><td>MWh / MW</td><td>rampy, tarify, curtailment, pomocné příkony</td></tr>
+                <tr><td>Teplo</td><td>MWh<sub>th</sub> / MW<sub>th</sub></td><td>teplotní úrovně, rekuperace, ztráty rozvodů</td></tr>
+                <tr><td>H₂</td><td>kg/h, t/den</td><td>čistota, tlak, cyklování</td></tr>
+                <tr><td>NH₃</td><td>t/den, t zásoby</td><td>bezpečnost, stabilita syntézy, logistika</td></tr>
+                <tr><td>CO₂</td><td>t/den</td><td>koncentrace, nečistoty, energie na separaci/kompresi</td></tr>
+              </table>
+
+              <p class="mini small-note">
+                Tip: „Bilance“ bez explicitního seznamu ztrát (komprese, separace, recyklace, ohřev/chlazení) je pro odborníky červená vlajka.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- SIZING -->
+        <section class="tech-section" id="sizing">
+          <h2>Dimenzování (praktický výpočetní rámec)</h2>
+
+          <div class="callout callout--info">
+            <p><strong>Princip:</strong> dimenze neurčuje instalovaný výkon OZE, ale <em>profil přebytků/deficitů</em> a cílová služba (výkon/teplo/médium).</p>
+            <p><strong>Cíl:</strong> převést „časové profily“ do MW, t/den a velikostí zásob.</p>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Doporučený postup (bez magie)</h3>
+              <ol>
+                <li><strong>Definuj cílovou službu</strong>: P_cíl (MW), Q_teplo (MWth), nebo produkt (t/den).</li>
+                <li><strong>Najdi deficitní blok</strong>: nejdelší souvislý interval, kdy není energie / je drahá (t_deficit).</li>
+                <li><strong>Navrhni zásobu</strong>: energie / médium, které překlene t_deficit (autonomie).</li>
+                <li><strong>Navrhni nabíjecí okna</strong>: kdy zásoby doplňuješ (t_okno) + omezení ramp.</li>
+                <li><strong>Ověř limity</strong>: síť, teplo, média, bezpečnost, CAPEX/OPEX.</li>
+              </ol>
+
+              <div class="decision-box">
+                <h4>Proměnné (aby šlo počítat v Excelu / modelu)</h4>
+                <ul>
+                  <li>P<sub>cíl</sub> (MW), t<sub>deficit</sub> (h), E<sub>deficit</sub> (MWh)</li>
+                  <li>η<sub>rt</sub> (roundtrip), η<sub>conv</sub> (konverze), ztráty pomocných systémů</li>
+                  <li>P<sub>EL</sub> (MW), turndown, ramp (MW/min), start/stop limity</li>
+                  <li>Zásoby: m<sub>H2</sub>, m<sub>NH3</sub>, m<sub>CO2</sub>, E<sub>heat</sub></li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3>Minimální výpočetní „skelet“</h3>
+              <div class="decision-box">
+                <h4>1) Energie deficitu</h4>
+                <p class="mini"><strong>E<sub>deficit</sub></strong> = P<sub>cíl</sub> × t<sub>deficit</sub></p>
+
+                <h4>2) Potřebná uložená energie</h4>
+                <p class="mini"><strong>E<sub>store</sub></strong> = E<sub>deficit</sub> / η<sub>rt</sub></p>
+
+                <h4>3) Nabíjecí výkon (řádově)</h4>
+                <p class="mini"><strong>P<sub>charge</sub></strong> ≈ E<sub>store</sub> / t<sub>okno</sub> + rezerva(ramp)</p>
+
+                <h4>4) Zásoby médií</h4>
+                <p class="mini">Zásoby převeď přes zvolený nosič (H₂ / NH₃ / teplo) a účinnosti konverzí.</p>
+              </div>
+
+              <p class="small-note">
+                Důležité: v reálném návrhu musí výpočet vždy obsahovat <strong>pomocné příkony</strong> (komprese, separace, chlazení),
+                jinak vyjde „papírový“ sizing, který se v provozu rozpadne.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIZIKA -->
+        <section class="tech-section" id="rizika">
+          <h2>Rizika &amp; bezpečnost (procesní + IT/OT)</h2>
+
+          <div class="callout">
+            <p><strong>SSCC je kritická infrastruktura</strong>: bezpečnost je součást architektury, ne „příloha“.</p>
+            <p><strong>Princip:</strong> ochrany a lokální bezpečnost nikdy nesmí být přepsány optimalizací.</p>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3>Procesní rizika (média)</h3>
+              <ul>
+                <li><strong>H₂:</strong> úniky, výbušnost, detekce, ventilace, tlakové systémy.</li>
+                <li><strong>NH₃:</strong> toxikologie, zónování, havarijní scénáře, školení a režimy.</li>
+                <li><strong>CO₂:</strong> riziko udušení v uzavřených prostorách, tlakové zásobníky, čistoty/nečistoty.</li>
+                <li><strong>Teplo:</strong> teplotní šoky, přetlaky, integrita výměníků, zanášení a koroze.</li>
+              </ul>
+
+              <div class="decision-box">
+                <h4>Bezpečnostní minimální checklist (praktický)</h4>
+                <ul>
+                  <li>detektory (H₂/NH₃/CO₂) + definované akce při překročení prahů,</li>
+                  <li>ventilace + přetlakové odlehčení,</li>
+                  <li>zónování a přístupové režimy (včetně logistiky),</li>
+                  <li>havarijní režimy zařízení (safe state) bez konektivity,</li>
+                  <li>provozní postupy, cvičení a evidence incidentů.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div>
+              <h3>IT/OT a kybernetická bezpečnost</h3>
+              <p>
+                SSCC kombinuje integraci (IT) a řízení (OT). Z hlediska bezpečnosti platí:
+                <strong>oddělit sítě</strong>, <strong>minimalizovat důvěru</strong>, <strong>auditovat rozhodnutí</strong>.
+              </p>
+
+              <ul>
+                <li><strong>Segmentace:</strong> oddělení OT (řízení) od IT (optimalizace/reporting).</li>
+                <li><strong>Fail-safe:</strong> ztráta dat/komunikace → lokální režimy, žádné „nahodilé“ setpointy.</li>
+                <li><strong>Audit:</strong> logování rozhodnutí (kdo/co/kdy/proč), verze modelů a parametrů.</li>
+                <li><strong>Princip nejmenších oprávnění:</strong> jen nezbytné přístupy, šifrování, monitoring.</li>
+              </ul>
+
+              <div class="decision-box">
+                <h4>Rizikové body specifické pro SSCC</h4>
+                <ul>
+                  <li>optimalizace tlačí proces mimo „operational envelope“,</li>
+                  <li>přenos fluktuací OZE do pomalých syntéz (degradace),</li>
+                  <li>chybné datové mapování (tagy/units) → špatná rozhodnutí,</li>
+                  <li>přetížení infrastruktury (síť/teplo) kvůli špatné predikci.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p class="small-note">
+            Vazba: kapitola <a href="#control">Řízení</a> definuje hierarchii, která zajišťuje, že bezpečnostní vrstvy mají vždy prioritu.
+          </p>
+        </section>
+
+        <!-- REFERENCE -->
+        <section class="tech-section" id="reference">
+          <h2>Reference (normy, rámce, zdroje)</h2>
+
+          <div class="callout callout--info">
+            <p><strong>Tahle sekce je záměrně šablona</strong>: doplníme konkrétní normy a zdroje podle toho, jaké technologie v pilotu použiješ (NH₃ / H₂ / CO₂ / geotermie / IT/OT).</p>
+          </div>
+
+          <h3>Doporučená struktura referencí</h3>
+          <ul>
+            <li><strong>Bezpečnost a procesní inženýrství:</strong> zónování, detekce, tlaková zařízení, havarijní plánování.</li>
+            <li><strong>Energetika a sítě:</strong> připojení, ochrany, regulační služby, provozní kódy.</li>
+            <li><strong>IT/OT:</strong> segmentace, audit, kybernetická bezpečnost, řízení přístupů.</li>
+            <li><strong>Výpočty a bilance:</strong> metodiky účinností, scope hranice, LCA rámce.</li>
+          </ul>
+
+          <div class="decision-box">
+            <h4>Seznam ke doplnění (placeholder)</h4>
+            <ul>
+              <li>[Norma / dokument] – název, verze, rok, relevance pro SSCC</li>
+              <li>[Paper / report] – název, autoři, rok, co přebíráme do návrhu</li>
+              <li>[Regulační rámec] – oblast, platnost, požadavky na provoz</li>
+            </ul>
+          </div>
+
+          <p class="mini small-note">
+            Pokud chceš, udělám ti z této sekce „citovatelný“ seznam pro granty (IEEE/APA styl) – ale potřebuji vybrat konkrétní technologický mix pilotu.
+          </p>
+        </section>
+
+        <!-- OZE -->
+        <!-- (zbytek stránky: OZE/geo/H2/NH3/CO2/heat/limits/control/materials/economics/roadmap/navigation-bridge/doc-status) -->
+        <!-- ===================================================== -->
+        <!-- POZOR: ZDE NAVAZUJE TVŮJ STÁVAJÍCÍ OBSAH (NEZKRACUJU) -->
+
         <!-- OZE -->
         <section id="oze" class="tech-section">
           <h2>Obnovitelné zdroje a profil výroby</h2>
-
           <div class="callout">
             <p><strong>Klíčový problém:</strong> variabilita (minuty–sezóny), korelace zdrojů, omezení sítě a ceny.</p>
             <p><strong>Co dimenzovat:</strong> ne instalovaný výkon, ale profil přebytků/deficitů a jejich „shlukování“.</p>
             <p><strong>Vazba na SSCC:</strong> přebytky → H₂/NH₃/CO₂-cyklus; deficity → zpětná dodávka výkonu/tepla.</p>
           </div>
-
           <div class="two-col">
             <div>
               <p>
@@ -357,14 +566,12 @@
                 a sezonní rozdíly. V praxi často nejde o „kolik kW máme“, ale <strong>kdy</strong> a <strong>jak dlouho</strong>
                 vzniká přebytek a zda jej limituje síť, akumulace nebo cena <em>curtailmentu</em>.
               </p>
-
               <h3>Fotovoltaika</h3>
               <p>
                 FV typicky generuje „denní okno“ s výraznou sezónností. V SSCC dává FV smysl hlavně pro napájení elektrolýzy
                 a nízkoteplotních procesů v době přebytků a pro snížení potřeby fosilní špičky. Kritické je sladění výkonu
                 elektrolýzy s reálnou dostupností přebytků, nikoli s instalovaným FV výkonem.
               </p>
-
               <h3>Větrná energie</h3>
               <p>
                 Vítr může být méně korelovaný s denním cyklem, ale přináší delší „větrná okna“ i období bezvětří. Pro SSCC je
@@ -372,7 +579,6 @@
                 <em>mixed-mode</em> (část výkonu stabilně, část následuje OZE).
               </p>
             </div>
-
             <div>
               <h3>Vodní zdroje a PVE</h3>
               <p>
@@ -380,7 +586,6 @@
                 akumulace a více se opřít o chemické nosiče pro týdny až měsíce. PVE často řeší hodiny–dny, zatímco H₂/NH₃ řeší
                 dny–sezóny.
               </p>
-
               <h3>Dopady a „cena“ OZE v území (nezanedbávat)</h3>
               <p>
                 U větrných parků je nutné počítat s lokálními dopady (hluk, stroboskopický efekt, změna proudění v krajině,
@@ -388,7 +593,6 @@
                 a tím i bilanci přebytků pro SSCC. Pro vnitrozemské státy navíc hraje roli dostupnost vhodných lokalit a
                 přenosové kapacity.
               </p>
-
               <h3>Impulzy pro dimenzování SSCC</h3>
               <ul>
                 <li>kolik hodin v roce existuje přebytek nad lokální spotřebu,</li>
@@ -396,7 +600,6 @@
                 <li>cena omezení (curtailment) vs. cena chemické akumulace,</li>
                 <li>omezení přenosové sítě a lokální regulační požadavky.</li>
               </ul>
-
               <div class="decision-box">
                 <h4>Vstupy pro návrh uzlu</h4>
                 <ul>
@@ -406,15 +609,12 @@
                   <li>požadovaná doba autonomního provozu</li>
                 </ul>
               </div>
-
               <p class="mini small-note">
-                Poznámka: Konkrétní číselné parametry (CF, LCOE, limity hluku, atd.) doplníme podle regionu (ČR/EU) a typu projektu,
-                aby to nebyl „generický text pro celý svět“.
+                Poznámka: Konkrétní číselné parametry doplníme podle regionu (ČR/EU) a typu projektu.
               </p>
             </div>
           </div>
         </section>
-
         <!-- GEOTERMIE -->
         <section id="geo" class="tech-section">
           <h2>Geotermie a teplotní úrovně</h2>
