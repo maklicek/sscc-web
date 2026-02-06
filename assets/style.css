@@ -1558,7 +1558,7 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .full-img{display:block;max-width:100%;height:auto}
 .img-stack{margin:24px 0}
 .img-stack img{margin:0 0 22px}
-/* ===== HERO CONTRAST FIX ===== */
+/* ===== HERO CONTRAST FIX ===== */ 
 
 .hero{
   position: relative;
