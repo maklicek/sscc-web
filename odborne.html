@@ -676,7 +676,23 @@
     Pozn.: Pro projektové návrhy je vhodné vždy uvádět „systémovou bilanci“ (scope hranice) – jinak nelze tvrdit CO₂-neutralitu.
   </p>
 </section>
+      
+<section id="architektura" class="section">
+  <div class="container">
+    <h2>Architektura SSCC v kostce</h2>
 
+    <table class="tech-table">
+      <tr><th>Vrstva</th><th>Role</th><th>Typické vstupy</th><th>Typické výstupy</th></tr>
+      <tr><td>Field</td><td>Fyzické procesy</td><td>P, T, průtoky, stav zásob</td><td>energie/teplo/chemické médium</td></tr>
+      <tr><td>Edge</td><td>Lokální řízení</td><td>telemetrie, limity, bezpečnost</td><td>setpointy, alarmy, lokální optimalizace</td></tr>
+      <tr><td>Coordination</td><td>Koordinace uzlu</td><td>predikce OZE, ceny, poptávka</td><td>dispatch, priority, plán výroby</td></tr>
+      <tr><td>System Intelligence</td><td>Modely & optimalizace</td><td>historie, simulace, scénáře</td><td>policy, plány, KPI</td></tr>
+      <tr><td>Integration</td><td>Napojení</td><td>EMS/SCADA/ERP</td><td>reporting, billing, audit</td></tr>
+    </table>
+
+    <p class="caption">Stručný rámec – detail lze rozvést podle konkrétního pilotu.</p>
+  </div>
+</section>
 
 <!-- HEAT -->
 <section id="heat" class="tech-section">
