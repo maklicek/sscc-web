@@ -1623,3 +1623,19 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .comparison-table th{
   background:#e2e8f0;
 }
+.page-toc{
+  display:flex; flex-wrap:wrap; gap:10px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  border-radius: 14px;
+  margin: 14px 0 24px;
+}
+.page-toc a{
+  display:inline-block;
+  padding:8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  text-decoration:none;
+}
+.page-toc a:hover{ background: rgba(255,255,255,.14); }
