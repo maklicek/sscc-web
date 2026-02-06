@@ -615,6 +615,7 @@
             </div>
           </div>
         </section>
+        
         <!-- GEOTERMIE -->
         <section id="geo" class="tech-section">
           <h2>Geotermie a teplotní úrovně</h2>
@@ -721,6 +722,80 @@
             </div>
           </div>
         </section>
+<!-- H2-DRI / OCELOVÉŘSKÝ USE-CASE (CZ) -->
+<section id="hydrogen-dri" class="tech-section">
+  <h2>Přímá redukce železa vodíkem (Hydrogen-DRI) – realisticky pro ČR</h2>
+
+  <div class="callout callout--info">
+    <p><strong>Co to je:</strong> Hydrogen-DRI nahrazuje koks vodíkem. Místo CO₂ vzniká vodní pára. Výsledkem je DRI („železná houba“), která se standardně taví v EAF (elektrické obloukové peci).</p>
+    <p><strong>Proč to řešit:</strong> pro dekarbonizaci oceli je to jedna z hlavních cest – ale ekonomika závisí na ceně elektřiny, vodíku a investicích.</p>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <h3>Princip (stručně a technicky)</h3>
+      <p>
+        Železná ruda ve formě pelet se zpracuje v <strong>šachtové peci</strong>, kde redukčním médiem není koks, ale <strong>horký vodík (H₂)</strong>.
+        Vodík reaguje s kyslíkem v rudě a vzniká železo a vodní pára:
+      </p>
+
+      <div class="decision-box">
+        <p class="mini"><strong>Reakce (zjednodušeně):</strong></p>
+        <p class="mini"><strong>Fe₂O₃ + 3 H₂ → 2 Fe + 3 H₂O</strong></p>
+      </div>
+
+      <p>
+        Produkt redukce je <strong>DRI</strong> (Direct Reduced Iron). V běžné konfiguraci se pak taví v <strong>EAF</strong>.
+      </p>
+
+      <h3>Co je dobré říct férově</h3>
+      <ul>
+        <li><strong>Bez EAF</strong> je „čistý“ H₂-DRI řetězec neúplný (DRI musíš někde roztavit).</li>
+        <li>Ekonomika stojí na <strong>ceně elektřiny v čase</strong> a na tom, jestli umíš řídit flexibilitu (režimy, zásoby, smluvní profily).</li>
+        <li>V ČR je zásadní <strong>síť, tarify, CAPEX</strong> a dostupnost stabilních nízkoemisních MWh.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Co to znamená pro realitu v ČR, když se EAF „nevyplatí“</h3>
+
+      <div class="callout">
+        <p>
+          Pokud velcí výrobci odkládají EAF kvůli ekonomice, není to „konec fyziky“ – je to signál, že <strong>chybí systémové podmínky</strong>:
+          dostupná elektřina, predikovatelné ceny, infrastruktura a řízení flexibility.
+        </p>
+      </div>
+
+      <h4>SSCC pohled: jak snížit riziko a zlepšit návratnost</h4>
+      <ul>
+        <li><strong>Vodík jako flexibilní mezistupeň</strong>: elektrolýza běží, když je elektřina levná / přebytek.</li>
+        <li><strong>NH₃ jako zásoba a logistika</strong>: převod H₂ → NH₃ umožní týdny–měsíce skladování a stabilnější dodávky.</li>
+        <li><strong>Oddělení časových škál</strong>: průmyslový proces chce stabilitu, OZE kolísá – zásoby a řízení dělají „tlumič“.</li>
+        <li><strong>Postupná transformace</strong>: nejdřív hybridní režimy (přídavné palivo / dílčí dekarbonizace), potom plná konfigurace.</li>
+      </ul>
+
+      <div class="decision-box">
+        <h4>Praktická otázka pro projekty</h4>
+        <ul>
+          <li>Jaký je reálný profil ceny elektřiny v čase (hodiny/rok)?</li>
+          <li>Kolik hodin/rok dokáže běžet elektrolýza v ekonomickém okně?</li>
+          <li>Jak velkou zásobu (H₂/NH₃) potřebuješ pro stabilní provoz?</li>
+          <li>Jaké jsou síťové limity, rampy a regulační požadavky?</li>
+        </ul>
+      </div>
+
+      <p class="mini small-note">
+        Pozn.: Pokud EAF teď ekonomicky nevychází, dává smysl ukázat „cestu“: pilotní hybridní režimy + infrastruktura zásob a řízení (SSCC), které posouvají hranici rentability.
+      </p>
+    </div>
+  </div>
+
+  <h3>Příklad: HYBRIT (Švédsko)</h3>
+  <p>
+    Referenční projekt demonstruje řetězec zelený vodík → H₂-DRI → EAF. Slouží jako technologický benchmark,
+    ale ekonomika i regulace se musí vždy přepočítat na podmínky regionu (ceny elektřiny, síť, CAPEX, povolení).
+  </p>
+</section>
 
         <!-- NH3 -->
         <section id="nh3" class="tech-section">
@@ -1270,11 +1345,27 @@
             kapitola <a href="#economics">Ekonomika</a> pak překlápí degradaci do skutečných OPEX.
           </p>
 
-          <p class="mini small-note">
-            Pozn.: Pro projektové návrhy je vhodné uvádět i „kritické komponenty“ s nejistou dostupností (supply chain risk).
-          </p>
-        </section>
-
+       <p class="mini small-note">
+  <strong>Pilotní mix (Ostrava – vysoká pec bez koksu):</strong>
+  Referenční scénář pro tento dokument je průmyslový uzel, kde se volatilní elektrická energie z OZE (typicky FV)
+  převádí přes <strong>elektrolýzu</strong> na H₂ a dále na <strong>NH₃</strong> jako logisticky zvládnutelný nosič energie.
+  NH₃ se uvažuje jako <strong>přídavné palivo / redukční médium</strong> pro stabilizaci tepelné bilance pece při výpadcích OZE
+  a jako „sezónní buffer“. Současně se předpokládá <strong>klasické zachytávání CO₂</strong> na odtahu (post-combustion),
+  přičemž klíčové je explicitně definovat hranice bilance (scope) a energetickou penalizaci separace/komprese.
+  Konkrétní dimenze (MW elektrolýzy, t/den NH₃, t CO₂/den, velikost zásob) se odvozují z reálného profilu provozu pece,
+  lokálních limitů připojení a cen elektřiny v čase.
+</p>
+  
+<div class="callout callout--info">
+  <p><strong>Co se v ostravském scénáři dimenzuje jako první:</strong></p>
+  <ul>
+    <li><strong>profil deficitu</strong> (kolik hodin/dnů musí pec „přežít“ bez levné elektřiny z OZE),</li>
+    <li><strong>zásoba NH₃</strong> pro překlenutí kritických bloků + logistika a bezpečnostní zónování,</li>
+    <li><strong>elektrolýza</strong> podle reálných přebytků (ne podle instalovaného FV),</li>
+    <li><strong>CO₂ capture</strong>: energetická penalizace + tlaková úroveň a napojení na využití/ukládání.</li>
+  </ul>
+</div>
+ </section>
         <!-- ECONOMICS -->
         <section id="economics" class="tech-section">
           <h2>Ekonomika (CAPEX/OPEX)</h2>
