@@ -1642,3 +1642,25 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .tech-table{ width:100%; border-collapse:collapse; margin-top:14px; }
 .tech-table th,.tech-table td{ border:1px solid rgba(255,255,255,.14); padding:10px 12px; text-align:left; }
 .tech-table th{ background: rgba(255,255,255,.08); }
+.section-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.section-nav a{
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: #e5e7eb;
+  transition: background .2s ease;
+}
+
+.section-nav a:hover{
+  background: rgba(255,255,255,0.18);
+}
