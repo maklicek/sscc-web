@@ -474,7 +474,7 @@
           </div>
         </section>
 
-          <!-- ========================= -->
+    <!-- ========================= -->
 <!-- MODEL: výpočty s výsledky -->
 <!-- ========================= -->
 <section class="tech-section" id="model-vypocty">
@@ -525,7 +525,82 @@
           <td>např. topení (nízký výkon), provoz malých zařízení, edukace</td>
         </tr>
         <tr>
-          <td>Odhad úspory CO₂ (pokud
+          <td>Odhad úspory CO₂ (pokud nahrazuje zemní plyn)</td>
+          <td><strong>~0,15–0,30 t CO₂/rok</strong><br><span class="small-note">řádově</span></td>
+          <td>malý přínos v absolutních číslech, ale dobrý „důkaz principu“</td>
+        </tr>
+        <tr>
+          <td>Odhad ETS hodnoty (pouze ilustrace)</td>
+          <td><strong>~12–24 EUR/rok</strong></td>
+          <td>u malého uzlu je ETS efekt logicky malý</td>
+        </tr>
+      </table>
+
+      <div class="callout">
+        <p><strong>Důležité:</strong> tvrzení typu „2 kW PV → 1,5 kg NH₃/den“ je energeticky příliš optimistické. Taková produkce by odpovídala spíš <strong>cca 5–7 kW PV</strong> (podle účinností a lokality).</p>
+      </div>
+
+      <h3>TRL a role v SSCC</h3>
+      <ul>
+        <li><strong>TRL:</strong> typicky 4–6 (prototyp/validace v reálných podmínkách, podle konkrétní technologie)</li>
+        <li><strong>Smysl:</strong> integrační demonstrátor (řízení, bilance, bezpečnost), ne ekonomický „výdělek“ sám o sobě</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="decision-box">
+    <summary><strong>Model B — „aby to bylo vidět“: pilotní uzel (škálování na 1–2 t CO₂/rok)</strong></summary>
+
+    <div style="margin-top: 12px;">
+      <div class="callout callout--info">
+        <p><strong>Co to ukazuje:</strong> jak velký musí být systém, aby přínos byl „manažersky viditelný“ (1–2 t CO₂/rok), a jak se pak projeví ETS.</p>
+      </div>
+
+      <h3>Jak se dostat na 1–2 t CO₂/rok (řádově)</h3>
+      <ul>
+        <li>Pokud nahrazuješ fosilní energii, tak 1–2 t CO₂/rok typicky odpovídá zhruba <strong>5–10 MWh/rok</strong> fosilního tepla/výkonu <em>(záleží na palivu a účinnosti)</em>.</li>
+        <li>To už obvykle znamená <strong>desítky kW</strong> obnovitelného vstupu, nikoliv 2 kW.</li>
+      </ul>
+
+      <div class="decision-box">
+        <h4>ETS ilustrace (při ceně 78,75 EUR/t)</h4>
+        <ul>
+          <li><strong>1 t CO₂/rok</strong> ⇒ ~ <strong>78,75 EUR/rok</strong></li>
+          <li><strong>2 t CO₂/rok</strong> ⇒ ~ <strong>157,50 EUR/rok</strong></li>
+        </ul>
+        <p class="mini small-note">Pozn.: skutečný ekonomický efekt bývá mnohem víc o OPEX/CAPEX, ceně elektřiny, využití (capacity factor) a o tom, co přesně nahrazuješ.</p>
+      </div>
+
+      <h3>Proč je škálování klíčové</h3>
+      <ul>
+        <li>Malý uzel = skvělý pro <strong>pilot, integraci a učení</strong>.</li>
+        <li>Velký uzel = teprve tam se projeví <strong>ekonomika, ETS, dopady na ovzduší</strong> a „vedlejší produkty“ v měřítku.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="decision-box">
+    <summary><strong>Co doplníme pro „Ostrava / železárny“ (blok pro konkrétní příklad)</strong></summary>
+
+    <div style="margin-top: 12px;">
+      <p>
+        Pro ostravský/ocelářský příklad (např. „vysoká pec bez koksu“ / přímá redukce vodíkem) se typicky doplní:
+      </p>
+      <ul>
+        <li>co přesně nahrazujeme (koks / plyn / práškové uhlí / část energetiky procesu),</li>
+        <li>kolik tun produktu/rok a jaká je cílová redukce emisí,</li>
+        <li>zdroj H₂ (elektrolýza z OZE vs. síť),</li>
+        <li>bilance energie a médií (H₂, O₂, voda, teplo),</li>
+        <li>bezpečnostní a provozní limity (zónování, zásoby, rampy),</li>
+        <li>ekonomika: CAPEX/OPEX, cena elektřiny, ETS, dostupnost.</li>
+      </ul>
+      <p class="small-note">
+        Jakmile mi dáš 3–4 základní čísla (aspoň řádově), udělám „fiktivní, ale realistický“ výpočet pro Ostravu jako rozklikávací blok.
+      </p>
+    </div>
+  </details>
+</section>
+
 
           <div class="example-grid">
 
