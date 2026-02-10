@@ -1664,3 +1664,42 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .section-nav a:hover{
   background: rgba(255,255,255,0.18);
 }
+.example-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.example-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.example-card h3{
+  margin: 0 0 8px;
+}
+
+.example-card .kpi{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.example-card details{
+  margin-top: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.example-card summary{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.example-card .details-body{
+  margin-top: 10px;
+}
