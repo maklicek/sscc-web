@@ -62,6 +62,7 @@
       <a href="#oze">Zdrojová část</a>
       <a href="#h2">Konverze &amp; akumulace</a>
       <a href="#model-vypocty">Modelové výpočty</a>
+      <a href="#ostrava">Ostrava (DRI)</a>
       <a href="#rizika">Rizika</a>
       <a href="#how-to-use">Metodika</a>
     </nav>
@@ -600,6 +601,106 @@
             </div>
           </div>
         </section>
+<!-- =========================================
+  MODEL: OSTRAVA – Hydrogen-DRI (názorný příklad)
+  (FIKTIVNÍ / ILUSTRAČNÍ výpočty – ne projektová data)
+========================================= -->
+<section id="ostrava" class="tech-section">
+  <h2>Modelový příklad: Ostravsko – přímá redukce železa vodíkem (Hydrogen-DRI)</h2>
+
+  <div class="callout callout--info">
+    <p><strong>Smysl příkladu:</strong> ukázat, jak se v SSCC skládá průmyslový uzel (OZE → H₂ → proces → bilance) a co z toho plyne pro ekonomiku a ovzduší.</p>
+    <p><strong>Důležité:</strong> níže jsou <strong>ilustrační (fiktivní) řády</strong>. Pro reálný projekt se doplní data lokality, ceny, profily OZE, limity sítě a provozní režimy.</p>
+  </div>
+
+  <details class="accordion" open>
+    <summary><strong>Co je Hydrogen-DRI (stručně)</strong></summary>
+    <div class="details-body">
+      <p>
+        Místo klasické vysoké pece s koksem se používá <strong>šachtová pec</strong>, do které se vhání <strong>horký vodík (H₂)</strong>.
+        Vodík reaguje s kyslíkem v rudě → vzniká <strong>železo (DRI – “železná houba”)</strong> a <strong>vodní pára (H₂O)</strong> místo CO₂.
+        DRI se pak obvykle taví v <strong>elektrické obloukové peci (EAF)</strong>.
+      </p>
+      <p class="mini small-note">
+        Pozn.: V ČR může být brzdou ekonomika EAF / elektřiny. Proto má SSCC smysl i jako “mezistupeň”: stabilizace energie,
+        práce se zásobami médií a řízení režimů tak, aby průmysl dostal predikovatelné vstupy.
+      </p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><strong>Technologický mix uzlu (SSCC pohled)</strong></summary>
+    <div class="details-body">
+      <ul>
+        <li><strong>OZE (primárně FV) + síť:</strong> levná elektřina v čase, omezení ramp a připojení.</li>
+        <li><strong>Elektrolýza:</strong> výroba H₂ v režimu <em>mixed-mode</em> (část stabilně, část následuje OZE).</li>
+        <li><strong>H₂ buffer:</strong> zásobník / tlak / bezpečnostní zónování.</li>
+        <li><strong>Hydrogen-DRI:</strong> šachtová pec, spotřeba H₂ podle požadované produkce DRI.</li>
+        <li><strong>NH₃ (volitelně):</strong> jako logisticky jednodušší nosič energie / přídavné palivo / zásoba (se všemi bezpečnostními pravidly).</li>
+        <li><strong>CO₂ modul:</strong> pokud v regionu existují zdroje CO₂ (průmysl), lze řešit separaci/kompresi a bilanci (scope).</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><strong>Ilustrační bilance (fiktivní čísla – pro představu)</strong></summary>
+    <div class="details-body">
+      <div class="decision-box">
+        <h4>Vstupy (příklad)</h4>
+        <ul>
+          <li><strong>Cíl uzlu:</strong> stabilní dodávka redukčního média (H₂) pro DRI v definovaném časovém okně.</li>
+          <li><strong>Elektřina:</strong> kombinace OZE + síť (důležitá je cena v čase a curtailment).</li>
+          <li><strong>Voda:</strong> pro elektrolýzu + úprava (RO/DI dle technologie).</li>
+          <li><strong>Bezpečnost:</strong> zónování H₂ (a případně NH₃), havarijní režimy, detekce.</li>
+        </ul>
+      </div>
+
+      <div class="decision-box">
+        <h4>Výstupy (příklad)</h4>
+        <ul>
+          <li><strong>H₂:</strong> definovaný průtok / tlak / čistota pro šachtovou pec.</li>
+          <li><strong>DRI:</strong> “železná houba” jako mezistupeň pro další tavbu.</li>
+          <li><strong>Vedlejší:</strong> teplo (procesní), vodní pára / kondenzát (podle režimu).</li>
+        </ul>
+      </div>
+
+      <p class="mini small-note">
+        Tip pro “názorné výsledky”: do projektu se doplní tabulka (ročně) se 3 sloupci:
+        <strong>Úspora CO₂</strong>, <strong>náklad na energii</strong>, <strong>CAPEX/OPEX</strong> – a k tomu citlivost na cenu elektřiny.
+      </p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><strong>Co to přinese rozhodovatelům (jak to komunikovat)</strong></summary>
+    <div class="details-body">
+      <ul>
+        <li><strong>Ovzduší:</strong> přechod od uhlí/koksu k H₂ výrazně mění lokální emise (a charakter znečištění).</li>
+        <li><strong>ETS / compliance:</strong> snazší strategie vůči emisním limitům (ale musí sedět scope hranice).</li>
+        <li><strong>Energetika:</strong> SSCC dává průmyslu “řád a predikovatelnost” – tj. režimy, zásoby, plánování.</li>
+        <li><strong>Rizika:</strong> cena elektřiny, dostupnost výkonu, bezpečnost H₂/NH₃, investiční náročnost.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><strong>Co je potřeba doplnit pro reálný projekt (checklist)</strong></summary>
+    <div class="details-body">
+      <ul>
+        <li>Profil elektřiny: hodinová data (cena, omezení, rezervovaný příkon, rampy).</li>
+        <li>Cíl výroby: kolik DRI / jaký provozní režim / jaká flexibilita.</li>
+        <li>Bezpečnostní rámec: zónování H₂/NH₃, vzdálenosti, havarijní scénáře.</li>
+        <li>Integrace tepla: využitelné teplotní úrovně a stabilizační zásobníky.</li>
+        <li>Ekonomika: CAPEX/OPEX + citlivosti na cenu energie a využití.</li>
+      </ul>
+    </div>
+  </details>
+
+  <p class="mini small-note">
+    Reference inspirace: projekty typu HYBRIT (Švédsko) ukazují směr, ale lokální proveditelnost vždy rozhodne energetika,
+    infrastruktura a ekonomika v čase.
+  </p>
+</section>
 
     <!-- ========================= -->
 <!-- MODEL: výpočty s výsledky -->
