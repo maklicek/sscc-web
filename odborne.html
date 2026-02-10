@@ -419,84 +419,66 @@
           </div>
         </section>
 
-        <!-- SIZING -->
- <!-- ========================= -->
-<!-- MODEL: výpočty s výsledky -->
+   <!-- ========================= -->
+<!-- SIZING -->
 <!-- ========================= -->
-  <!-- KONKRÉTNÍ PILOTNÍ PŘÍKLADY -->
-<section class="tech-section" id="priklady">
-  <div class="container">
+<section class="tech-section" id="sizing">
+  <h2>Dimenzování (praktický výpočetní rámec)</h2>
 
-    <h2>Konkrétní pilotní příklad (modelový výpočet)</h2>
+  <div class="callout callout--info">
+    <p><strong>Princip:</strong> dimenze neurčuje instalovaný výkon OZE, ale <em>profil přebytků/deficitů</em> a cílová služba (výkon/teplo/médium).</p>
+    <p><strong>Cíl:</strong> převést „časové profily“ do MW, t/den a velikostí zásob.</p>
+  </div>
 
-    <p class="section-lead">
-      Níže je uveden <strong>orientační, modelový výpočet</strong> pilotního nasazení SSCC
-      v průmyslovém prostředí. Čísla slouží k vytvoření představy o řádu přínosů
-      (emise, ekonomika, vedlejší efekty), nikoli jako finální projektová specifikace.
-    </p>
+  <div class="two-col">
+    <div>
+      <h3>Doporučený postup (bez magie)</h3>
+      <ol>
+        <li><strong>Definuj cílovou službu</strong>: P_cíl (MW), Q_teplo (MWth), nebo produkt (t/den).</li>
+        <li><strong>Najdi deficitní blok</strong>: nejdelší souvislý interval, kdy není energie / je drahá (t_deficit).</li>
+        <li><strong>Navrhni zásobu</strong>: energie / médium, které překlene t_deficit (autonomie).</li>
+        <li><strong>Navrhni nabíjecí okna</strong>: kdy zásoby doplňuješ (t_okno) + omezení ramp.</li>
+        <li><strong>Ověř limity</strong>: síť, teplo, média, bezpečnost, CAPEX/OPEX.</li>
+      </ol>
 
-    <details open>
-      <summary><strong>🎯 Cíle projektu (Objectives)</strong></summary>
-      <ul>
-        <li><strong>Hlavní cíl:</strong> pilotní systém pro decentralizovanou syntézu <strong>green NH₃</strong>
-          z CO₂ + green H₂, účinnost &gt;80 %, zachyt CO₂ &gt;90 %, <strong>TRL 6</strong>.</li>
-        <li><strong>Sekundární cíle:</strong> validace v reálném provozu (ocelárna / komunita),
-          roadmapa scale-up (10× výkon do 2030), cílové <strong>ROI &lt; 5 let</strong>.</li>
-        <li><strong>Soulad:</strong> UN SDGs 7, 9, 13.</li>
-      </ul>
-    </details>
+      <div class="decision-box">
+        <h4>Proměnné (aby šlo počítat v Excelu / modelu)</h4>
+        <ul>
+          <li>P<sub>cíl</sub> (MW), t<sub>deficit</sub> (h), E<sub>deficit</sub> (MWh)</li>
+          <li>η<sub>rt</sub> (roundtrip), η<sub>conv</sub> (konverze), ztráty pomocných systémů</li>
+          <li>P<sub>EL</sub> (MW), turndown, ramp (MW/min), start/stop limity</li>
+          <li>Zásoby: m<sub>H2</sub>, m<sub>NH3</sub>, m<sub>CO2</sub>, E<sub>heat</sub></li>
+        </ul>
+      </div>
+    </div>
 
-    <details>
-      <summary><strong>🔬 Technický koncept &amp; metodologie</strong></summary>
-      <ul>
-        <li><strong>Energetický vstup:</strong> Solární PV 2 kW (22–23 % účinnost), Li-ion baterie 5 kWh.</li>
-        <li><strong>CCUS:</strong> Zachyt CO₂ (např. MEA / sorbenty), účinnost &gt;90 %, regenerace teplem (100–120 °C).</li>
-        <li><strong>Vodík:</strong> PEM elektrolýza, spotřeba vody ~2,4 kg/den.</li>
-        <li><strong>Dusík:</strong> PSA separace ze vzduchu.</li>
-        <li><strong>NH₃ syntéza:</strong> nízkotlaká Haber-Bosch (&lt;10 bar, 300–400 °C).</li>
-        <li><strong>Celková účinnost:</strong> ~50–60 % (PV → NH₃, včetně ztrát).</li>
-      </ul>
-    </details>
+    <div>
+      <h3>Minimální výpočetní „skelet“</h3>
+      <div class="decision-box">
+        <h4>1) Energie deficitu</h4>
+        <p class="mini"><strong>E<sub>deficit</sub></strong> = P<sub>cíl</sub> × t<sub>deficit</sub></p>
 
-    <details>
-      <summary><strong>📊 Očekávané výsledky (modelový odhad)</strong></summary>
-      <ul>
-        <li><strong>Produkce:</strong> ~1,5 kg NH₃ / den</li>
-        <li><strong>Zachyt CO₂:</strong> &gt;90 % (řádově jednotky tun CO₂ / rok na pilot)</li>
-        <li><strong>Emisní přínos:</strong> snížení 1–2 t CO₂ / rok na jednotku</li>
-        <li><strong>ETS úspory:</strong> ~80–160 € / rok (při ~78,75 €/t CO₂)</li>
-        <li><strong>Vedlejší efekty:</strong> využití odpadního tepla, snížení spotřeby plynu,
-          stabilnější provoz zařízení</li>
-      </ul>
-    </details>
+        <h4>2) Potřebná uložená energie</h4>
+        <p class="mini"><strong>E<sub>store</sub></strong> = E<sub>deficit</sub> / η<sub>rt</sub></p>
 
-    <details>
-      <summary><strong>🏭 Přínos pro průmyslové provozy (orientačně)</strong></summary>
+        <h4>3) Nabíjecí výkon (řádově)</h4>
+        <p class="mini"><strong>P<sub>charge</sub></strong> ≈ E<sub>store</sub> / t<sub>okno</sub> + rezerva(ramp)</p>
 
-      <ul>
-        <li><strong>Ocelárna (Ostravsko):</strong>
-          využití H₂ / NH₃ jako doplňkového paliva, snížení lokálních emisí,
-          částečné nahrazení fosilních vstupů, lepší využití odpadního tepla.</li>
+        <h4>4) Zásoby médií</h4>
+        <p class="mini">Zásoby převeď přes zvolený nosič (H₂ / NH₃ / teplo) a účinnosti konverzí.</p>
+      </div>
 
-        <li><strong>Elektrárna / spalovna:</strong>
-          NH₃ jako nosič H₂ nebo pro SCR (NOₓ), flexibilita provozu,
-          potenciál stovek tisíc € ročně při větších tocích CO₂.</li>
-
-        <li><strong>Region:</strong>
-          udržení know-how, pracovní místa v energetice a chemii,
-          příspěvek k cílům REPowerEU a Green Deal.</li>
-      </ul>
-    </details>
-
-    <p class="mini small-note">
-      Poznámka: Číselné hodnoty jsou <strong>modelové odhady</strong> určené pro ilustraci
-      potenciálu SSCC. Skutečné parametry se budou lišit podle lokality,
-      technologie a regulačního rámce.
-    </p>
-
+      <p class="small-note">
+        Důležité: v reálném návrhu musí výpočet vždy obsahovat <strong>pomocné příkony</strong> (komprese, separace, chlazení),
+        jinak vyjde „papírový“ sizing, který se v provozu rozpadne.
+      </p>
+    </div>
   </div>
 </section>
 
+<!-- ========================= -->
+<!-- MODEL: výpočty s výsledky (JEN JEDNOU) -->
+<!-- ========================= -->
 <section class="tech-section" id="model-vypocty">
   <h2>Modelové výpočty s výsledky (ilustrativní)</h2>
 
@@ -615,70 +597,15 @@
         <li>ekonomika: CAPEX/OPEX, cena elektřiny, ETS, dostupnost.</li>
       </ul>
       <p class="small-note">
-        Jakmile mi dáš 3–4 základní čísla (aspoň řádově), udělám „fiktivní, ale realistický“ výpočet pro Ostravu jako rozklikávací blok.
+        Jakmile doplníš 3–4 čísla (aspoň řádově), uděláme „fiktivní, ale realistický“ výpočet pro Ostravu jako rozklikávací blok.
       </p>
     </div>
   </details>
 </section>
 
-        <section class="tech-section" id="sizing">
-            
-          <h2>Dimenzování (praktický výpočetní rámec)</h2>
-
-          <div class="callout callout--info">
-            <p><strong>Princip:</strong> dimenze neurčuje instalovaný výkon OZE, ale <em>profil přebytků/deficitů</em> a cílová služba (výkon/teplo/médium).</p>
-            <p><strong>Cíl:</strong> převést „časové profily“ do MW, t/den a velikostí zásob.</p>
-          </div>
-
-          <div class="two-col">
-            <div>
-              <h3>Doporučený postup (bez magie)</h3>
-              <ol>
-                <li><strong>Definuj cílovou službu</strong>: P_cíl (MW), Q_teplo (MWth), nebo produkt (t/den).</li>
-                <li><strong>Najdi deficitní blok</strong>: nejdelší souvislý interval, kdy není energie / je drahá (t_deficit).</li>
-                <li><strong>Navrhni zásobu</strong>: energie / médium, které překlene t_deficit (autonomie).</li>
-                <li><strong>Navrhni nabíjecí okna</strong>: kdy zásoby doplňuješ (t_okno) + omezení ramp.</li>
-                <li><strong>Ověř limity</strong>: síť, teplo, média, bezpečnost, CAPEX/OPEX.</li>
-              </ol>
-
-              <div class="decision-box">
-                <h4>Proměnné (aby šlo počítat v Excelu / modelu)</h4>
-                <ul>
-                  <li>P<sub>cíl</sub> (MW), t<sub>deficit</sub> (h), E<sub>deficit</sub> (MWh)</li>
-                  <li>η<sub>rt</sub> (roundtrip), η<sub>conv</sub> (konverze), ztráty pomocných systémů</li>
-                  <li>P<sub>EL</sub> (MW), turndown, ramp (MW/min), start/stop limity</li>
-                  <li>Zásoby: m<sub>H2</sub>, m<sub>NH3</sub>, m<sub>CO2</sub>, E<sub>heat</sub></li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3>Minimální výpočetní „skelet“</h3>
-              <div class="decision-box">
-                <h4>1) Energie deficitu</h4>
-                <p class="mini"><strong>E<sub>deficit</sub></strong> = P<sub>cíl</sub> × t<sub>deficit</sub></p>
-
-                <h4>2) Potřebná uložená energie</h4>
-                <p class="mini"><strong>E<sub>store</sub></strong> = E<sub>deficit</sub> / η<sub>rt</sub></p>
-
-                <h4>3) Nabíjecí výkon (řádově)</h4>
-                <p class="mini"><strong>P<sub>charge</sub></strong> ≈ E<sub>store</sub> / t<sub>okno</sub> + rezerva(ramp)</p>
-
-                <h4>4) Zásoby médií</h4>
-                <p class="mini">Zásoby převeď přes zvolený nosič (H₂ / NH₃ / teplo) a účinnosti konverzí.</p>
-              </div>
-
-              <p class="small-note">
-                Důležité: v reálném návrhu musí výpočet vždy obsahovat <strong>pomocné příkony</strong> (komprese, separace, chlazení),
-                jinak vyjde „papírový“ sizing, který se v provozu rozpadne.
-              </p>
-            </div>
-          </div>
-        </section>
-<!-- =========================================
-  MODEL: OSTRAVA – Hydrogen-DRI (názorný příklad)
-  (FIKTIVNÍ / ILUSTRAČNÍ výpočty – ne projektová data)
-========================================= -->
+<!-- ========================= -->
+<!-- OSTRAVA – Hydrogen-DRI -->
+<!-- ========================= -->
 <section id="ostrava" class="tech-section">
   <h2>Modelový příklad: Ostravsko – přímá redukce železa vodíkem (Hydrogen-DRI)</h2>
 
@@ -717,13 +644,13 @@
   </details>
 
   <details class="accordion">
-    <summary><strong>Ilustrační bilance (fiktivní čísla – pro představu)</strong></summary>
+    <summary><strong>Ilustrační bilance (fiktivní – pro představu)</strong></summary>
     <div class="details-body">
       <div class="decision-box">
         <h4>Vstupy (příklad)</h4>
         <ul>
           <li><strong>Cíl uzlu:</strong> stabilní dodávka redukčního média (H₂) pro DRI v definovaném časovém okně.</li>
-          <li><strong>Elektřina:</strong> kombinace OZE + síť (důležitá je cena v čase a curtailment).</li>
+          <li><strong>Elektřina:</strong> kombinace OZE + síť (rozhoduje cena v čase a curtailment).</li>
           <li><strong>Voda:</strong> pro elektrolýzu + úprava (RO/DI dle technologie).</li>
           <li><strong>Bezpečnost:</strong> zónování H₂ (a případně NH₃), havarijní režimy, detekce.</li>
         </ul>
@@ -739,295 +666,148 @@
       </div>
 
       <p class="mini small-note">
-        Tip pro “názorné výsledky”: do projektu se doplní tabulka (ročně) se 3 sloupci:
-        <strong>Úspora CO₂</strong>, <strong>náklad na energii</strong>, <strong>CAPEX/OPEX</strong> – a k tomu citlivost na cenu elektřiny.
+        Tip pro “názorné výsledky”: doplň tabulku (ročně) se 3 sloupci:
+        <strong>Úspora CO₂</strong>, <strong>náklad na energii</strong>, <strong>CAPEX/OPEX</strong> – + citlivost na cenu elektřiny.
       </p>
     </div>
   </details>
 
-  <details class="accordion">
-    <summary><strong>Co to přinese rozhodovatelům (jak to komunikovat)</strong></summary>
-    <div class="details-body">
-      <ul>
-        <li><strong>Ovzduší:</strong> přechod od uhlí/koksu k H₂ výrazně mění lokální emise (a charakter znečištění).</li>
-        <li><strong>ETS / compliance:</strong> snazší strategie vůči emisním limitům (ale musí sedět scope hranice).</li>
-        <li><strong>Energetika:</strong> SSCC dává průmyslu “řád a predikovatelnost” – tj. režimy, zásoby, plánování.</li>
-        <li><strong>Rizika:</strong> cena elektřiny, dostupnost výkonu, bezpečnost H₂/NH₃, investiční náročnost.</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="accordion">
-    <summary><strong>Co je potřeba doplnit pro reálný projekt (checklist)</strong></summary>
-    <div class="details-body">
-      <ul>
-        <li>Profil elektřiny: hodinová data (cena, omezení, rezervovaný příkon, rampy).</li>
-        <li>Cíl výroby: kolik DRI / jaký provozní režim / jaká flexibilita.</li>
-        <li>Bezpečnostní rámec: zónování H₂/NH₃, vzdálenosti, havarijní scénáře.</li>
-        <li>Integrace tepla: využitelné teplotní úrovně a stabilizační zásobníky.</li>
-        <li>Ekonomika: CAPEX/OPEX + citlivosti na cenu energie a využití.</li>
-      </ul>
-    </div>
-  </details>
-
   <p class="mini small-note">
-    Reference inspirace: projekty typu HYBRIT (Švédsko) ukazují směr, ale lokální proveditelnost vždy rozhodne energetika,
+    Reference inspirace: projekty typu HYBRIT ukazují směr, ale lokální proveditelnost vždy rozhodne energetika,
     infrastruktura a ekonomika v čase.
   </p>
 </section>
 
-    <!-- ========================= -->
-<!-- MODEL: výpočty s výsledky -->
 <!-- ========================= -->
-<section class="tech-section" id="model-vypocty">
-  <h2>Modelové výpočty s výsledky (ilustrativní)</h2>
-<div class="callout callout--info">
-  <p><strong>Poznámka:</strong> Následující výpočty jsou <em>ilustrativní model</em> pro rychlou představu o řádech (CAPEX/OPEX, ETS, bilance). Pro konkrétní projekt se dosadí lokální data (profil elektřiny, cena, limity sítě, účinnosti, bezpečnostní zónování).</p>
-</div>
+<!-- PŘÍKLADY NASAZENÍ (KARTY) -->
+<!-- ========================= -->
+<section class="tech-section" id="priklady">
+  <div class="container">
+    <h2>Příklady nasazení (průmyslové uzly)</h2>
 
-  <p class="small-note">
-    Tyto příklady jsou <strong>ilustrativní</strong> (order-of-magnitude), aby si kdokoliv udělal představu o přínosu.
-    Skutečná čísla vždy závisí na lokalitě, profilu výroby, technologii a „hranici systému“ (scope).
-  </p>
+    <div class="example-grid">
 
-  <details class="decision-box" open>
-    <summary><strong>Model A — mikro-uzel: 2 kW PV → H₂ → NH₃ (rozklikni)</strong></summary>
+      <!-- TŽ / Ostrava – “pec bez koksu / vodík jako redukční médium” -->
+      <article class="example-card" id="priklad-ostrava">
+        <h3>Ostravsko / hutní uzel – “bez koksu” (H₂-DRI / H₂+NH₃ mix)</h3>
+        <p class="mini small-note">Cíl: udržet výrobu železa/oceli s minimalizací uhlíku. Koncept: OZE → elektrolýza → H₂ (přímo) + NH₃ (buffer/logistika) + zachytávání CO₂ tam, kde ještě vzniká.</p>
 
-    <div style="margin-top: 12px;">
-      <div class="callout callout--info">
-        <p><strong>Co to ukazuje:</strong> jaké výstupy lze čekat z opravdu malého zdroje (2 kW PV) a proč je důležité počítat energetickou bilanci.</p>
-        <p><strong>Interpretace:</strong> je to demonstrátor / edukace / malý lokální uzel, ne „průmyslová výroba“.</p>
-      </div>
-
-      <h3>Vstupy (předpoklady)</h3>
-      <ul>
-        <li><strong>PV výkon:</strong> 2 kW<sub>p</sub></li>
-        <li><strong>Roční využití (ČR):</strong> ~ 11–13 % kapacitního faktoru (typicky)</li>
-        <li><strong>Roční výroba elektřiny:</strong> ~ 1 900–2 300 kWh/rok ⇒ ~ 5,2–6,3 kWh/den (průměr)</li>
-        <li><strong>Účinnost „PV → NH₃“ (včetně ztrát):</strong> ~ 40–60 % (ilustrativně)</li>
-        <li><strong>Výhřevnost NH₃ (LHV):</strong> ~ 5,17 kWh/kg</li>
-        <li><strong>EU ETS cena (zadáno):</strong> 78,75 EUR/t CO₂</li>
-      </ul>
-
-      <h3>Výpočet (zjednodušený)</h3>
-      <div class="decision-box">
-        <p class="mini"><strong>1) Denní energie z PV:</strong> 5,2–6,3 kWh/den</p>
-        <p class="mini"><strong>2) Energie uložená v NH₃:</strong> (5,2–6,3) × (0,40–0,60) = <strong>2,1–3,8 kWh/den</strong></p>
-        <p class="mini"><strong>3) Produkce NH₃:</strong> (2,1–3,8) / 5,17 = <strong>0,4–0,7 kg NH₃/den</strong></p>
-      </div>
-
-      <h3>Výsledky (co si z toho odnést)</h3>
-      <table class="tech-table">
-        <tr><th>Metodika</th><th>Výsledek</th><th>Co to znamená prakticky</th></tr>
-        <tr>
-          <td>Produkce NH₃</td>
-          <td><strong>~0,4–0,7 kg/den</strong><br><span class="small-note">~150–260 kg/rok</span></td>
-          <td>demonstrátor, malý lokální zásobník energie / médium pro testování</td>
-        </tr>
-        <tr>
-          <td>Energetická služba (v NH₃)</td>
-          <td><strong>~2,1–3,8 kWh/den</strong><br><span class="small-note">~770–1 390 kWh/rok</span></td>
-          <td>např. topení (nízký výkon), provoz malých zařízení, edukace</td>
-        </tr>
-        <tr>
-          <td>Odhad úspory CO₂ (pokud nahrazuje zemní plyn)</td>
-          <td><strong>~0,15–0,30 t CO₂/rok</strong><br><span class="small-note">řádově</span></td>
-          <td>malý přínos v absolutních číslech, ale dobrý „důkaz principu“</td>
-        </tr>
-        <tr>
-          <td>Odhad ETS hodnoty (pouze ilustrace)</td>
-          <td><strong>~12–24 EUR/rok</strong></td>
-          <td>u malého uzlu je ETS efekt logicky malý</td>
-        </tr>
-      </table>
-
-      <div class="callout">
-        <p><strong>Důležité:</strong> tvrzení typu „2 kW PV → 1,5 kg NH₃/den“ je energeticky příliš optimistické. Taková produkce by odpovídala spíš <strong>cca 5–7 kW PV</strong> (podle účinností a lokality).</p>
-      </div>
-
-      <h3>TRL a role v SSCC</h3>
-      <ul>
-        <li><strong>TRL:</strong> typicky 4–6 (prototyp/validace v reálných podmínkách, podle konkrétní technologie)</li>
-        <li><strong>Smysl:</strong> integrační demonstrátor (řízení, bilance, bezpečnost), ne ekonomický „výdělek“ sám o sobě</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="decision-box">
-    <summary><strong>Model B — „aby to bylo vidět“: pilotní uzel (škálování na 1–2 t CO₂/rok)</strong></summary>
-
-    <div style="margin-top: 12px;">
-      <div class="callout callout--info">
-        <p><strong>Co to ukazuje:</strong> jak velký musí být systém, aby přínos byl „manažersky viditelný“ (1–2 t CO₂/rok), a jak se pak projeví ETS.</p>
-      </div>
-
-      <h3>Jak se dostat na 1–2 t CO₂/rok (řádově)</h3>
-      <ul>
-        <li>Pokud nahrazuješ fosilní energii, tak 1–2 t CO₂/rok typicky odpovídá zhruba <strong>5–10 MWh/rok</strong> fosilního tepla/výkonu <em>(záleží na palivu a účinnosti)</em>.</li>
-        <li>To už obvykle znamená <strong>desítky kW</strong> obnovitelného vstupu, nikoliv 2 kW.</li>
-      </ul>
-
-      <div class="decision-box">
-        <h4>ETS ilustrace (při ceně 78,75 EUR/t)</h4>
-        <ul>
-          <li><strong>1 t CO₂/rok</strong> ⇒ ~ <strong>78,75 EUR/rok</strong></li>
-          <li><strong>2 t CO₂/rok</strong> ⇒ ~ <strong>157,50 EUR/rok</strong></li>
+        <ul class="kpi">
+          <li><strong>Role SSCC:</strong> stabilizace energie + zásoby H₂/NH₃</li>
+          <li><strong>Vstupy:</strong> levné hodiny elektřiny + voda + N₂ + CO₂ zdroj</li>
+          <li><strong>Výstupy:</strong> H₂ / NH₃ + teplo + snížení CO₂</li>
+          <li><strong>Řádově:</strong> „desítky až stovky MW“ dle cíle</li>
         </ul>
-        <p class="mini small-note">Pozn.: skutečný ekonomický efekt bývá mnohem víc o OPEX/CAPEX, ceně elektřiny, využití (capacity factor) a o tom, co přesně nahrazuješ.</p>
-      </div>
 
-      <h3>Proč je škálování klíčové</h3>
-      <ul>
-        <li>Malý uzel = skvělý pro <strong>pilot, integraci a učení</strong>.</li>
-        <li>Velký uzel = teprve tam se projeví <strong>ekonomika, ETS, dopady na ovzduší</strong> a „vedlejší produkty“ v měřítku.</li>
-      </ul>
+        <details>
+          <summary>Fiktivní výpočet (jak k řádům velikosti dojít)</summary>
+          <div class="details-body">
+            <p><strong>1) Definuj službu:</strong> kolik t/rok DRI nebo jaký podíl výkonu pece nahradíš H₂/NH₃.</p>
+            <p><strong>2) Energie deficitu:</strong> E_deficit = P_cíl × t_deficit (např. několik dní bez levné elektřiny).</p>
+            <p><strong>3) Buffer:</strong> H₂ pro rychlé režimy, NH₃ pro dny–týdny (logistika/bezpečnost).</p>
+            <p class="small-note"><strong>Důležité:</strong> u hutí rozhoduje integrační limit: síť + bezpečnost + teplo + dostupnost médií. Čistě “energetická” kalkulace nestačí.</p>
+          </div>
+        </details>
+      </article>
+
+      <!-- Počerady -->
+      <article class="example-card" id="priklad-pocerady">
+        <h3>Elektrárna Počerady – přechod z uhlí na “energetický uzel” (H₂/NH₃/CO₂)</h3>
+        <p class="mini small-note">Cíl: využít infrastrukturu (připojení, areál, provozní know-how) pro nové role: flexibilní výkon, teplo, logistika médií, případně CCU.</p>
+
+        <ul class="kpi">
+          <li><strong>Role SSCC:</strong> dispatching + zásoby + integrace do sítě</li>
+          <li><strong>Silná stránka:</strong> síťová infrastruktura a velký areál</li>
+          <li><strong>Možné režimy:</strong> NH₃ jako palivo / cracking → H₂</li>
+          <li><strong>Rizika:</strong> NOₓ, bezpečnost NH₃, ekonomika paliva</li>
+        </ul>
+
+        <details>
+          <summary>Fiktivní baseline pro majitele (co uvidí na první dobrou)</summary>
+          <div class="details-body">
+            <ul>
+              <li>kolik hodin v roce umíš vyrábět (capacity factor) při daných cenách elektřiny/paliva</li>
+              <li>kolik stojí zásoba na X dnů (NH₃ tanky + bezpečnost)</li>
+              <li>jaký výkon můžeš nabídnout síti a s jakými rampami</li>
+            </ul>
+            <p class="small-note">Tady se dá hezky ukázat přidaná hodnota SSCC: “nejde o jednu technologii, ale o orchestraci režimů”.</p>
+          </div>
+        </details>
+      </article>
+
+      <!-- Spalovna -->
+      <article class="example-card" id="priklad-spalovna">
+        <h3>Spalovna / ZEVO – uzel tepla + CO₂ (využití tepla, CCU, stabilní provoz)</h3>
+        <p class="mini small-note">Cíl: maximalizovat využití tepla a zároveň využít stabilní CO₂ tok pro CCU / mineralizaci / syntézy dle dostupné energie.</p>
+
+        <ul class="kpi">
+          <li><strong>Role SSCC:</strong> teplotní integrace + bilance CO₂</li>
+          <li><strong>Silná stránka:</strong> kontinuální provoz (baseload)</li>
+          <li><strong>Výstupy:</strong> teplo + potenciálně CO₂ jako surovina</li>
+          <li><strong>Rizika:</strong> čistoty spalin, energie separace, legislativa</li>
+        </ul>
+
+        <details>
+          <summary>Co je “rychlý výpočet” pro orientaci</summary>
+          <div class="details-body">
+            <p>U ZEVO často vychází nejlíp začít od <strong>tepla</strong> (MWth, teplotní hladiny, odběr v čase) a teprve potom řešit chemii.</p>
+          </div>
+        </details>
+      </article>
+
+      <!-- Velký průmyslový podnik -->
+      <article class="example-card" id="priklad-prumysl">
+        <h3>Velký průmyslový podnik – flexibilita, peak shaving, H₂/NH₃ jako služba</h3>
+        <p class="mini small-note">Cíl: snížit OPEX a riziko výpadků: řízení spotřeby, akumulace (krátká i dlouhá), a možnost přechodu na nízkouhlíkové palivo.</p>
+
+        <ul class="kpi">
+          <li><strong>Role SSCC:</strong> optimalizace režimů + predikce cen</li>
+          <li><strong>Typické KPI:</strong> špičky, rampy, disponibilita, cena energie</li>
+          <li><strong>Možné výstupy:</strong> stabilnější výroba + snížení emisí</li>
+          <li><strong>Rizika:</strong> integrace do provozu (IT/OT), bezpečnost</li>
+        </ul>
+
+        <details>
+          <summary>Jak z toho udělat fiktivní příklad bez sporu o čísla</summary>
+          <div class="details-body">
+            <ul>
+              <li>dej jen řády: „jednotky MW / desítky MW“</li>
+              <li>ukaž vzorec (P×t) + účinnosti + zásoby</li>
+              <li>vypiš, co musí dodat podnik (data)</li>
+            </ul>
+          </div>
+        </details>
+      </article>
+
+      <!-- Metan z dolů -->
+      <article class="example-card" id="priklad-metan">
+        <h3>Ostravsko – metan z dolů jako lokální zdroj energie / H₂</h3>
+        <p class="mini small-note">
+          Koncept: využít důlní metan (CMM/VAM) jako lokální zdroj pro teplo, elektřinu nebo jako vstup do konverzí (v závislosti na technologii a čistotě).
+          SSCC zde funguje jako rámec pro bilanci emisí, integraci tepla a řízení provozních režimů.
+        </p>
+
+        <ul class="kpi">
+          <li><strong>Role SSCC:</strong> lokální stabilní zdroj + tepelné vazby</li>
+          <li><strong>Výhoda:</strong> využití existujícího “upstream” toku</li>
+          <li><strong>Rizika:</strong> proměnlivost, čistota, povolení, měření emisí</li>
+        </ul>
+
+        <details>
+          <summary>Co je potřeba dodat z reality (aby šly dělat výpočty)</summary>
+          <div class="details-body">
+            <ul>
+              <li>průtok a koncentrace CH₄ v čase (hodinová/denní data)</li>
+              <li>dostupnost napojení a teplotní odběry</li>
+              <li>požadovaná bilance emisí (hranice systému)</li>
+            </ul>
+          </div>
+        </details>
+      </article>
+
     </div>
-  </details>
-
-  <details class="decision-box">
-    <summary><strong>Co doplníme pro „Ostrava / železárny“ (blok pro konkrétní příklad)</strong></summary>
-
-    <div style="margin-top: 12px;">
-      <p>
-        Pro ostravský/ocelářský příklad (např. „vysoká pec bez koksu“ / přímá redukce vodíkem) se typicky doplní:
-      </p>
-      <ul>
-        <li>co přesně nahrazujeme (koks / plyn / práškové uhlí / část energetiky procesu),</li>
-        <li>kolik tun produktu/rok a jaká je cílová redukce emisí,</li>
-        <li>zdroj H₂ (elektrolýza z OZE vs. síť),</li>
-        <li>bilance energie a médií (H₂, O₂, voda, teplo),</li>
-        <li>bezpečnostní a provozní limity (zónování, zásoby, rampy),</li>
-        <li>ekonomika: CAPEX/OPEX, cena elektřiny, ETS, dostupnost.</li>
-      </ul>
-      <p class="small-note">
-        Jakmile mi dáš 3–4 základní čísla (aspoň řádově), udělám „fiktivní, ale realistický“ výpočet pro Ostravu jako rozklikávací blok.
-      </p>
-    </div>
-  </details>
-</section>
-
-          <div class="example-grid">
-
-    <!-- TŽ / Ostrava – “pec bez koksu / vodík jako redukční médium” -->
-    <article class="example-card" id="priklad-ostrava">
-      <h3>Ostravsko / hutní uzel – “bez koksu” (H₂-DRI / H₂+NH₃ mix)</h3>
-      <p class="mini small-note">Cíl: udržet výrobu železa/oceli s minimalizací uhlíku. Koncept: OZE → elektrolýza → H₂ (přímo) + NH₃ (buffer/logistika) + zachytávání CO₂ tam, kde ještě vzniká.</p>
-
-      <ul class="kpi">
-        <li><strong>Role SSCC:</strong> stabilizace energie + zásoby H₂/NH₃</li>
-        <li><strong>Vstupy:</strong> levné hodiny elektřiny + voda + N₂ + CO₂ zdroj</li>
-        <li><strong>Výstupy:</strong> H₂ / NH₃ + teplo + snížení CO₂</li>
-        <li><strong>Řádově:</strong> „desítky až stovky MW“ dle cíle</li>
-      </ul>
-
-      <details>
-        <summary>Fiktivní výpočet (jak k řádům velikosti dojít)</summary>
-        <div class="details-body">
-          <p><strong>1) Definuj službu:</strong> kolik t/rok DRI nebo jaký podíl výkonu pece nahradíš H₂/NH₃.</p>
-          <p><strong>2) Energie deficitu:</strong> E_deficit = P_cíl × t_deficit (např. několik dní bez levné elektřiny).</p>
-          <p><strong>3) Buffer:</strong> H₂ pro rychlé režimy, NH₃ pro dny–týdny (logistika/bezpečnost).</p>
-          <p class="small-note"><strong>Důležité:</strong> u hutí rozhoduje integrační limit: síť + bezpečnost + teplo + dostupnost médií. Čistě “energetická” kalkulace nestačí.</p>
-        </div>
-      </details>
-    </article>
-
-    <!-- Počerady -->
-    <article class="example-card" id="priklad-pocerady">
-      <h3>Elektrárna Počerady – přechod z uhlí na “energetický uzel” (H₂/NH₃/CO₂)</h3>
-      <p class="mini small-note">Cíl: využít infrastrukturu (připojení, areál, provozní know-how) pro nové role: flexibilní výkon, teplo, logistika médií, případně CCU.</p>
-
-      <ul class="kpi">
-        <li><strong>Role SSCC:</strong> dispatching + zásoby + integrace do sítě</li>
-        <li><strong>Silná stránka:</strong> síťová infrastruktura a velký areál</li>
-        <li><strong>Možné režimy:</strong> NH₃ jako palivo / cracking → H₂</li>
-        <li><strong>Rizika:</strong> NOₓ, bezpečnost NH₃, ekonomika paliva</li>
-      </ul>
-
-      <details>
-        <summary>Fiktivní baseline pro majitele (co uvidí na první dobrou)</summary>
-        <div class="details-body">
-          <ul>
-            <li>kolik hodin v roce umíš vyrábět (capacity factor) při daných cenách elektřiny/paliva</li>
-            <li>kolik stojí zásoba na X dnů (NH₃ tanky + bezpečnost)</li>
-            <li>jaký výkon můžeš nabídnout síti a s jakými rampami</li>
-          </ul>
-          <p class="small-note">Tady se dá hezky ukázat přidaná hodnota SSCC: “nejde o jednu technologii, ale o orchestraci režimů”.</p>
-        </div>
-      </details>
-    </article>
-
-    <!-- Spalovna -->
-    <article class="example-card" id="priklad-spalovna">
-      <h3>Spalovna / ZEVO – uzel tepla + CO₂ (využití tepla, CCU, stabilní provoz)</h3>
-      <p class="mini small-note">Cíl: maximalizovat využití tepla a zároveň využít stabilní CO₂ tok pro CCU / mineralizaci / syntézy dle dostupné energie.</p>
-
-      <ul class="kpi">
-        <li><strong>Role SSCC:</strong> teplotní integrace + bilance CO₂</li>
-        <li><strong>Silná stránka:</strong> kontinuální provoz (baseload)</li>
-        <li><strong>Výstupy:</strong> teplo + potenciálně CO₂ jako surovina</li>
-        <li><strong>Rizika:</strong> čistoty spalin, energie separace, legislativa</li>
-      </ul>
-
-      <details>
-        <summary>Co je “rychlý výpočet” pro orientaci</summary>
-        <div class="details-body">
-          <p>U ZEVO často vychází nejlíp začít od <strong>tepla</strong> (MWth, teplotní hladiny, odběr v čase) a teprve potom řešit chemii.</p>
-        </div>
-      </details>
-    </article>
-
-    <!-- Velký průmyslový podnik -->
-    <article class="example-card" id="priklad-prumysl">
-      <h3>Velký průmyslový podnik – flexibilita, peak shaving, H₂/NH₃ jako služba</h3>
-      <p class="mini small-note">Cíl: snížit OPEX a riziko výpadků: řízení spotřeby, akumulace (krátká i dlouhá), a možnost přechodu na nízkouhlíkové palivo.</p>
-
-      <ul class="kpi">
-        <li><strong>Role SSCC:</strong> optimalizace režimů + predikce cen</li>
-        <li><strong>Typické KPI:</strong> špičky, rampy, disponibilita, cena energie</li>
-        <li><strong>Možné výstupy:</strong> stabilnější výroba + snížení emisí</li>
-        <li><strong>Rizika:</strong> integrace do provozu (IT/OT), bezpečnost</li>
-      </ul>
-
-      <details>
-        <summary>Jak z toho udělat fiktivní příklad bez sporu o čísla</summary>
-        <div class="details-body">
-          <ul>
-            <li>dej jen řády: „jednotky MW / desítky MW“</li>
-            <li>ukaž vzorec (P×t) + účinnosti + zásoby</li>
-            <li>vypiš, co musí dodat podnik (data)</li>
-          </ul>
-        </div>
-      </details>
-    </article>
-    
-<article class="example-card" id="priklad-metan">
-  <h3>Ostravsko – metan z dolů jako lokální zdroj energie / H₂</h3>
-  <p class="mini small-note">
-    Koncept: využít důlní metan (CMM/VAM) jako lokální zdroj pro teplo, elektřinu nebo jako vstup do konverzí (v závislosti na technologii a čistotě).
-    SSCC zde funguje jako rámec pro bilanci emisí, integraci tepla a řízení provozních režimů.
-  </p>
-
-  <ul class="kpi">
-    <li><strong>Role SSCC:</strong> lokální stabilní zdroj + tepelné vazby</li>
-    <li><strong>Výhoda:</strong> využití existujícího “upstream” toku</li>
-    <li><strong>Rizika:</strong> proměnlivost, čistota, povolení, měření emisí</li>
-  </ul>
-
-  <details>
-    <summary>Co je potřeba dodat z reality (aby šly dělat výpočty)</summary>
-    <div class="details-body">
-      <ul>
-        <li>průtok a koncentrace CH₄ v čase (hodinová/denní data)</li>
-        <li>dostupnost napojení a teplotní odběry</li>
-        <li>požadovaná bilance emisí (hranice systému)</li>
-      </ul>
-    </div>
-  </details>
-</article>
-
   </div>
 </section>
-
 
         <!-- RIZIKA -->
         <section class="tech-section" id="rizika">
