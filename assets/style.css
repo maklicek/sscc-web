@@ -1764,3 +1764,36 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .section .container > .small-note {
   max-width: 760px;
 }
+/* ================================
+   POD HERO: RYCHLÁ ORIENTACE
+   ================================ */
+
+.page-subnav-section{
+  background: rgba(255,255,255,0.55);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.page-subnav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 0;
+  font-size: 0.95rem;
+}
+
+.page-subnav .subnav-label{
+  font-weight: 600;
+  color: #475569; /* klidná šedá */
+  margin-right: 6px;
+}
+
+.page-subnav a{
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-subnav a:hover{
+  text-decoration: underline;
+}
