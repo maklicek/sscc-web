@@ -2051,3 +2051,13 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .hero.hero-home .section-lead{
   margin: 0 0 16px !important;
 }
+.hero.hero-home{ min-height: 54vh !important; }
+/* HERO text – vysoký kontrast */
+.hero.hero-home h1,
+.hero.hero-home .section-lead{
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.55);
+}
+.hero.hero-home .section-lead{
+  color: rgba(255,255,255,0.90) !important;
+}
