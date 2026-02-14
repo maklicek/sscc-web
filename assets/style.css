@@ -1992,3 +1992,25 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 @media (max-width: 768px){
   .hero-home{ min-height: 70vh !important; }
 }
+/* =========================
+   HERO text – čitelnost
+   ========================= */
+.hero-home h1,
+.hero-home .section-lead{
+  color: rgba(255,255,255,0.96) !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+}
+
+.hero-home .section-lead{
+  color: rgba(255,255,255,0.90) !important;
+  max-width: 860px;
+}
+
+/* volitelné: jemná "mlha" jen pod odstavcem (není to panel) */
+.hero-home .section-lead{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(2px);
+}
