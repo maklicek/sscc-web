@@ -1903,3 +1903,9 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-subnav-section + .section{
   padding-top: calc(var(--space-6) + 6px);
 }
+.hero::before{
+  background: linear-gradient(
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.45)
+  );
+}
