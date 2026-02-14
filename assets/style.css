@@ -1909,3 +1909,15 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
     rgba(0,0,0,0.45)
   );
 }
+.hero{
+  min-height: 65vh;
+}
+
+@media (max-width: 768px){
+  .hero{
+    min-height: 70vh;
+  }
+}
+.hero-content{
+  padding-top: clamp(80px, 12vh, 140px);
+}
