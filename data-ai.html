@@ -113,81 +113,82 @@
     </section>
 
     <!-- VRSTVY ŘÍZENÍ (stručný rámec) -->
-    <section class="section" id="control-layers">
-      <div class="container">
-        <h2>Vrstvy řízení a odpovědnosti</h2>
+    <!-- DATA & AI ŘÍZENÍ SYSTÉMU -->
+<section class="section section-compact" id="data-ai">
+  <div class="container">
 
-        <p class="section-lead">
-          Řízení SSCC je hierarchické: rychlé ochrany a bezpečnostní funkce zůstávají lokálně,
-          zatímco nadřazené vrstvy koordinují tok energie a médií v čase. Cílem je oddělit časové škály
-          a zabránit tomu, aby fluktuace elektřiny destabilizovala pomalé procesy (syntéza, teplo, zásoby).
-        </p>
+    <h2>Data & AI řízení systému</h2>
 
-        <div class="how-grid">
+    <p class="section-lead">
+      SSCC není jen soubor technologií.  
+      Je to energetický systém, který se <strong>rozhoduje v čase</strong>.
+    </p>
 
-          <div class="how-item">
-            <h3>Field (technologie)</h3>
-            <p>
-              Fyzické procesy a zařízení: zdroje, úložiště, konverze, sítě, výrobní linky, budovy.
-              Zde probíhá měření a akce v řádu ms–s (senzory, akční členy).
-            </p>
-            <p class="small-note">
-              Odpovědnost: fyzická bezpečnost, provozní limity zařízení, kvalita měření.
-            </p>
-          </div>
+    <p>
+      Systém průběžně vyhodnocuje výrobu, spotřebu, počasí, ceny energie a stav
+      chemických i tepelných úložišť. Na základě těchto dat rozhoduje,
+      <strong>kdy energii dodávat, ukládat nebo přeměňovat</strong>.
+    </p>
 
-          <div class="how-item">
-            <h3>Edge (lokální autonomie)</h3>
-            <p>
-              Lokální řídicí vrstva (PLC/řadiče/gateway) provádí rychlé zásahy, validaci proveditelnosti
-              a udržuje bezpečný provoz i při výpadku konektivity. Zajišťuje časové značky, filtraci a buffer.
-            </p>
-            <p class="small-note">
-              Odpovědnost: ochrany, ostrovní režim, lokální guardrails, fallback podle posledního plánu.
-            </p>
-          </div>
+    <!-- CO SYSTÉM SLEDUJE -->
+    <div class="data-grid">
 
-          <div class="how-item">
-            <h3>Coordination (koordinace uzlů)</h3>
-            <p>
-              Agreguje data z více lokalit a subsystémů, řeší konflikty mezi spotřebou/výrobou,
-              přesměrování toků a rozpad plánů na lokální cíle. Typicky rozhoduje v minutách až hodinách.
-            </p>
-            <p class="small-note">
-              Odpovědnost: dispatch mezi uzly, limity a priority, vyrovnávání zátěže.
-            </p>
-          </div>
-
-          <div class="how-item">
-            <h3>System Intelligence (plánování a strategie)</h3>
-            <p>
-              Predikce, scénáře a optimalizace v delších horizontech. Vytváří politiky řízení a provozní plány
-              (cena/emise/spolehlivost/bezpečnost), které se překládají do konkrétních cílů pro Coordination/Edge.
-            </p>
-            <p class="small-note">
-              Odpovědnost: více-kriteriální optimalizace, krizové režimy, SLA, kapacitní plánování.
-            </p>
-          </div>
-
-          <div class="how-item">
-            <h3>Application &amp; Integration (rozhraní)</h3>
-            <p>
-              API, dashboardy, reporting, napojení na operátory, podniky a veřejnou správu.
-              Zajišťuje auditní stopu a řízení přístupů (kdo vidí co, kdo smí měnit politiky a limity).
-            </p>
-            <p class="small-note">
-              Odpovědnost: integrace, governance, audit, export dat a provozních metrik.
-            </p>
-          </div>
-
-        </div>
-
-        <p class="small-note">
-          Pozn.: Detailní architekturu a vazby mezi vrstvami popisuje stránka „SSCC systém“. Zde uvádíme pouze
-          rámec odpovědností, aby bylo jasné, co v SSCC dělá datová/řídicí vrstva a co zůstává na úrovni zařízení.
+      <div class="data-card">
+        <h3>📡 Výroba a spotřeba</h3>
+        <p>
+          Okamžitý výkon obnovitelných zdrojů, geotermální základ a aktuální odběr v síti.
+          Systém ví, kolik energie je k dispozici právě teď.
         </p>
       </div>
-    </section>
+
+      <div class="data-card">
+        <h3>🌦️ Předpověď počasí</h3>
+        <p>
+          Slunce, vítr a teplota na hodiny a dny dopředu.
+          Rozhodování není reaktivní, ale <strong>prediktivní</strong>.
+        </p>
+      </div>
+
+      <div class="data-card">
+        <h3>💰 Ceny a omezení sítě</h3>
+        <p>
+          Tržní ceny elektřiny, přetížení sítě a regulační signály.
+          Energie se dodává tam a tehdy, kde má nejvyšší hodnotu.
+        </p>
+      </div>
+
+      <div class="data-card">
+        <h3>🧪 Stav úložišť</h3>
+        <p>
+          Vodík, amoniak a teplo – jejich kapacita a dostupnost v čase.
+          Nejen „kolik“, ale hlavně <strong>na jak dlouho</strong>.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- KLÍČOVÁ MYŠLENKA -->
+    <div class="callout callout--info">
+      <strong>Klíčový rozdíl oproti běžné energetice:</strong><br>
+      SSCC nevyrovnává výkyvy zpětně, ale plánuje tok energie dopředu.
+    </div>
+
+    <!-- ROLE AI -->
+    <p>
+      AI v systému SSCC nenahrazuje provozovatele ani regulátory.
+      Slouží jako <strong>rozhodovací nástroj</strong>, který navrhuje optimální
+      scénáře na základě dat, predikcí a jasně definovaných pravidel.
+    </p>
+
+    <!-- NAVAZUJÍCÍ KROK -->
+    <p class="section-next">
+      Jak se tato rozhodnutí promítají do reálného provozu systému?
+    </p>
+    <a href="#tok-energie" class="btn-secondary">Podívat se na tok energie</a>
+
+  </div>
+</section>
+
 
     <!-- AI A POKROČILÉ ŘÍZENÍ -->
     <section class="section" id="ai-control">
