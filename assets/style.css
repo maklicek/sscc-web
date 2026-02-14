@@ -1727,3 +1727,29 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-toc .toc-inline a:hover{
   background: rgba(255,255,255,0.9);
 }
+/* =========================================
+   PATCH: odlehčení prvního calloutu (Smysl SSCC)
+   ========================================= */
+
+.page-smysl .page-header .callout:first-of-type{
+  background: rgba(255,255,255,0.45);
+  border-left: 4px solid var(--primary-400);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+
+  padding: 14px 18px;
+  margin-top: 16px;
+}
+
+.page-smysl .page-header .callout:first-of-type p{
+  margin-bottom: 6px;
+}
+
+.page-smysl .page-header .callout:first-of-type ul{
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.page-smysl .page-header .callout:first-of-type li{
+  margin: 4px 0;
+}
