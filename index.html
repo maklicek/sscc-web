@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SSCC – Integrovaná energetická infrastruktura</title>
+  <title>SSCC – Stabilní energie bez ohledu na počasí</title>
 
   <link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 
-  <!-- HLAVIČKA – jednotná pro celý web -->
+<body class="page-home" id="top">
+
+  <!-- HLAVIČKA – jen hlavní stránky (bez kotev) -->
   <header class="site-header">
     <div class="header-left">
       <img src="assets/img/logo-sscc.png" alt="SSCC logo" class="site-logo">
@@ -29,394 +31,196 @@
       <a href="aplikace.html">Aplikace</a>
       <a href="data-ai.html">Data &amp; AI řízení</a>
       <a href="odborne.html">Pro odborníky</a>
-      <a href="#jak">Jak funguje</a>
-<a href="#baterie">Srovnání</a>
-<a href="#tok">Tok energie</a>
-<a href="#kontakt">Kontakt</a>
-
     </nav>
   </header>
 
   <main>
 
-    <!-- HERO – horní obrázek s textem -->
-    <section class="hero" style="background-image:url('assets/img/uzel-mesto.jpg');">
-      <div class="hero-inner">
-        <h1 class="hero-title">Energie, která se přizpůsobuje. Ne kolísá.</h1>
+    <!-- HERO – one-pager vstup -->
+    <section class="hero hero-tech" style="
+      background:
+        linear-gradient(180deg, rgba(15,23,42,0.55), rgba(15,23,42,0.60)),
+        url('assets/img/uzel-mesto.jpg') center/cover no-repeat;
+      ">
+      <div class="container" style="padding-top: 68px; padding-bottom: 58px;">
+        <h1 style="color: #fff; max-width: 980px;">
+          Stabilní energie. Bez ohledu na počasí.
+        </h1>
 
-        <p class="hero-subtitle">
-          SSCC integruje obnovitelné zdroje, geotermální teplo a chemické nosiče energie
-          do jednoho řídicího celku. Cílem je poskytovat stabilní výkon i v době,
-          kdy výroba z OZE kolísá.
-        </p>
-      </div>
-    </section>
-
-    <!-- ÚVODNÍ TEXT POD HERO -->
-    <section class="section intro-section">
-      <div class="container">
-        <h2>Nový typ energetického systému</h2>
-
-        <p>
-          SSCC (Smart Synthetic Carbon Cycle) představuje technologickou platformu, která propojuje
-          obnovitelné zdroje, geotermální teplo a chemická úložiště energie v jeden integrovaný celek.
-          Na rozdíl od tradičních systémů, které pouze vyrovnávají výkon, SSCC řídí toky energie i hmoty
-          v reálném čase a vytváří stabilní, predikovatelný a dlouhodobě uložitelný energetický výkon.
-        </p>
-
-        <p>
-          Kombinace vysokokapacitních chemických médií (NH₃, H₂, CO₂-cyklus), tepelné integrace a
-          datově řízeného provozu umožňuje překonat omezení bateriových úložišť a zajistit výkon
-          v horizontu hodin, dnů i měsíců. SSCC tak tvoří nový základ pro stabilní, nízkoemisní
-          a lokálně řízenou energetiku.
+        <p class="section-lead" style="color: rgba(255,255,255,0.92); max-width: 880px;">
+          SSCC je energetická infrastruktura, která propojuje obnovitelné zdroje, geotermii a chemická úložiště
+          do jednoho řízeného systému.
         </p>
 
         <p style="margin-top: 18px;">
-          <a href="sscc-system.html" class="btn-primary">Jak celý systém funguje</a>
+          <a href="#jak-funguje" class="btn-primary">Jak to funguje?</a>
         </p>
+
+        <!-- KOTVY – až POD hero (ne v hlavičce) -->
+        <nav class="page-subnav" aria-label="Rychlá navigace po stránce" style="margin-top: 22px;">
+          <a href="#jak-funguje">Jak funguje</a>
+          <a href="#pilire">Tři pilíře</a>
+          <a href="#data-ai">Data &amp; AI</a>
+          <a href="#srovnani">Srovnání</a>
+          <a href="#tok-energie">Tok energie</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
       </div>
     </section>
 
-    <!-- BENEFITY -->
-    <section class="section benefits-section">
+    <!-- PROBLÉM vs. ŘEŠENÍ -->
+    <section class="section" id="jak-funguje">
       <div class="container">
-        <h2>Co SSCC přináší</h2>
+        <h2>Problém vs. řešení</h2>
 
         <p class="section-lead">
-          Energetická infrastruktura nové generace musí být stabilní, škálovatelná a technologicky neutrální.
-          SSCC tyto požadavky splňuje díky propojení více zdrojů energie a chemické akumulace.
+          Nejde jen o „více energie“, ale o <strong>dostupnost energie v čase</strong> a schopnost zvládat omezení sítí,
+          přebytky i deficitní období bez chaosu.
         </p>
 
-        <div class="benefits-grid">
-          <div class="benefit-box">
-            <h3>Stabilní výkon bez ohledu na podmínky</h3>
+        <div class="how-grid">
+          <div class="how-item">
+            <h3>Energetika dnes</h3>
             <p>
-              Kombinace obnovitelných zdrojů, geotermálního tepla a chemických médií eliminuje kolísání výroby.
-              SSCC poskytuje stálý výkon i během dlouhých období nízké produkce z OZE.
+              Variabilní výroba z OZE, přetoky, omezení sítí a krátkodobá akumulace vedou k nestabilnímu a těžko predikovatelnému provozu.
+              Baterie pomáhají v hodinách, ale na týdny a měsíce jsou drahé a systémově omezené.
             </p>
           </div>
 
-          <div class="benefit-box">
-            <h3>Dlouhodobé ukládání energie</h3>
+          <div class="how-item">
+            <h3>SSCC</h3>
             <p>
-              Amoniak, vodík a uzavřený CO₂-cyklus umožňují skladovat energii ve škále týdnů až měsíců.
-              To výrazně přesahuje možnosti bateriových systémů.
-            </p>
-          </div>
-
-          <div class="benefit-box">
-            <h3>Modulární a škálovatelná architektura</h3>
-            <p>
-              SSCC lze nasazovat postupně: od jednoho energetického uzlu až po kompletní městské nebo
-              průmyslové infrastruktury propojené do robustní sítě.
-            </p>
-          </div>
-
-          <div class="benefit-box">
-            <h3>Energetická a surovinová nezávislost</h3>
-            <p>
-              Lokální výroba a ukládání energie snižují závislost na dovozech paliv a zvyšují odolnost
-              regionů vůči cenovým i geopolitickým šokům.
+              Stabilní základ, práce s časem, sezónní akumulace a prediktivní řízení umožňují vyrovnávat výrobu a spotřebu
+              bez extrémních nároků na baterie. SSCC propojuje elektřinu, teplo a chemická média do jednoho provozního celku.
             </p>
           </div>
         </div>
+
+        <p class="small-note">
+          SSCC není jedna technologie. Je to architektura integrace: zdroje → konverze → akumulace → dodávka, řízená datovou vrstvou.
+        </p>
       </div>
     </section>
-    
-   <!-- JAK SSCC FUNGUJE -->
-    <section id="jak" class="section">
-<section class="section">
-  <div class="container">
 
-    <p class="section-lead">
-      SSCC integruje tři hlavní procesní oblasti: energetické vstupy, chemickou přeměnu a ukládání
-      a finální dodávku výkonu. Tyto procesy jsou řízeny datovým modelem, který optimalizuje tok energie
-      i hmoty v reálném čase.
-    </p>
-
-   <div class="how-item">
-  <h3>Krok 1 — Energetické vstupy</h3>
-  <p>
-    Systém kombinuje více zdrojů energie: solární a větrné elektrárny,
-    geotermální teplo a recirkulovaný CO₂, který slouží jako pracovní médium
-    i chemická surovina. Tyto vstupy poskytují energii pro elektrolýzu,
-    tepelné procesy a syntézu chemických nosičů.
-  </p>
-</div>
-
-<div class="how-item">
-  <h3>Krok 2 — Přeměna a ukládání energie</h3>
-  <p>
-    Přebytečná elektřina je využita k výrobě vodíku, který je následně
-    přeměněn na amoniak a další stabilní chemická média. Tato forma
-    ukládání má vysokou energetickou hustotu a umožňuje skladování
-    energie v řádu týdnů až měsíců bez významných ztrát.
-  </p>
-</div>
-
-<div class="how-item">
-  <h3>Krok 3 — Dodávka výkonu</h3>
-  <p>
-    Uložená energie v chemických médiích se zpětně převádí na elektřinu,
-    teplo nebo průmyslové vstupy. Díky tomu lze stabilizovat výkon v obdobích,
-    kdy výroba z obnovitelných zdrojů klesá, a zajistit plynulý provoz
-    lokálních i regionálních sítí.
-  </p>
-</div>
-
-<!-- PROČ SSCC ŘEŠÍ TO, CO BATERIE NEUMÍ --> 
-    <section id="baterie" class="section">
-<section class="section">
-  <div class="container">
-
-    <h2>Proč SSCC řeší to, co baterie neumí</h2>
-
-    <div class="grid-2">
-      <div>
-        <p class="section-lead">
-          Různé technologie ukládání energie se liší především v tom,
-          jak dlouho dokáží energii uchovat bez ztrát a v jakém objemu.
-        </p>
-
-        <ul class="flow-list">
-          <li><strong>Baterie</strong> – výborné pro hodiny až dny, nevhodné pro sezónní ukládání</li>
-          <li><strong>Vodík</strong> – vhodný pro střednědobé ukládání, náročnější skladování</li>
-          <li><strong>SSCC (amoniak)</strong> – ideální pro týdny až měsíce bez samovybíjení</li>
-          <li><strong>Vysoká objemová hustota energie</strong> bez ztrát v čase</li>
-          <li><strong>Možnost využití existující průmyslové infrastruktury</strong></li>
-          <li><strong>Bez nutnosti dovozu fosilních paliv</strong></li>
-        </ul>
-      </div>
-
-      <div>
-        <a href="assets/img/sscc-srovnani.png" target="_blank" rel="noopener" class="img-link">
-          <img src="assets/img/sscc-srovnani.png" alt="Srovnání baterie, vodíku a SSCC" class="full-img">
-        </a>
-        <p class="caption">Srovnání možností dlouhodobého ukládání energie.</p>
-      </div>
-    </div>
-
-    <div class="img-stack">
-      <a href="assets/img/sscc-srovnani-2.png" target="_blank" rel="noopener" class="img-link">
-        <img src="assets/img/sscc-srovnani-2.png" alt="Srovnání SSCC – obrázek 2" class="full-img">
-      </a>
-      <a href="assets/img/sscc-srovnani-3.png" target="_blank" rel="noopener" class="img-link">
-        <img src="assets/img/sscc-srovnani-3.png" alt="Srovnání SSCC – obrázek 3" class="full-img">
-      </a>
-    </div>
-
-  </div>
-</section>
-    
-<!-- SROVNÁNÍ PARAMETRŮ ULOŽENÍ ENERGIE -->
-<section class="section">
-  <div class="container">
-    <h2>Srovnání parametrů ukládání energie</h2>
-
-    <table class="comparison-table">
-      <tr>
-        <th>Technologie</th>
-        <th>Doba ukládání</th>
-        <th>Energetická hustota</th>
-        <th>Vhodné pro</th>
-      </tr>
-      <tr>
-        <td>Li-ion baterie</td>
-        <td>Hodiny až dny</td>
-        <td>~0,25 kWh / litr</td>
-        <td>Krátkodobá stabilizace sítě</td>
-      </tr>
-      <tr>
-        <td>Vodík (H₂)</td>
-        <td>Dny až týdny</td>
-        <td>~2,8 kWh / litr (stlačený)</td>
-        <td>Střednědobé ukládání</td>
-      </tr>
-      <tr>
-        <td>Amoniak (NH₃)</td>
-        <td>Týdny až měsíce</td>
-        <td>~3,3 kWh / litr</td>
-        <td>Dlouhodobé a sezónní ukládání</td>
-      </tr>
-    </table>
-
-    <p class="caption">
-      Orientační hodnoty pro ilustraci rozdílů mezi technologiemi ukládání energie.
-    </p>
-  </div>
-</section>
-
-
-<!-- DETAIL TOKU (tři obrázky) -->
-     <section id="tok" class="section alt-bg">
-<section class="section">
-  <div class="container">
-    <div class="img-stack">
-      <a href="assets/img/sscc-tok-1.png" target="_blank" rel="noopener" class="img-link">
-        <img src="assets/img/sscc-tok-1.png" alt="Tok SSCC – obrázek 1" class="full-img">
-      </a>
-      <a href="assets/img/sscc-tok-2.png" target="_blank" rel="noopener" class="img-link">
-        <img src="assets/img/sscc-tok-2.png" alt="Tok SSCC – obrázek 2" class="full-img">
-      </a>
-      <a href="assets/img/sscc-tok-3.png" target="_blank" rel="noopener" class="img-link">
-        <img src="assets/img/sscc-tok-3.png" alt="Tok SSCC – obrázek 3" class="full-img">
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section alt-bg">
-  <div class="container">
-    <h2>Tok energie a hmoty v systému SSCC</h2>
-
-    <div class="grid-2">
-      <div>
-        <ol class="flow-list">
-          <li><strong>Zdroje energie:</strong> solární, větrná energie a geotermie</li>
-          <li><strong>Elektrolýza vody:</strong> výroba vodíku (H₂)</li>
-          <li><strong>Práce s CO₂:</strong> zachycení a opětovné využití v cyklu</li>
-          <li><strong>Syntéza amoniaku (NH₃):</strong> stabilní nosič energie</li>
-          <li><strong>Dlouhodobé skladování:</strong> týdny až měsíce bez ztrát</li>
-          <li><strong>Zpětná konverze:</strong> elektřina, teplo nebo průmyslové využití</li>
-        </ol>
-
-        <p class="section-lead">
-          SSCC převádí nestabilní výrobu z obnovitelných zdrojů na stabilní,
-          řiditelný energetický výstup.
-        </p>
-      </div>
-
-      <div>
-        <a href="assets/img/sscc-tok.png" target="_blank" rel="noopener" class="img-link">
-          <img src="assets/img/sscc-tok.png" alt="Tok energie v SSCC" class="full-img">
-        </a>
-        <p class="caption">Princip převodu přebytků energie do dlouhodobě skladovatelné formy.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-    
-<!-- FAQ -->
-<section class="section">
-  <div class="container">
-    <h2>Časté otázky</h2>
-
-    <div class="faq-item">
-      <h3>Proč amoniak místo samotného vodíku?</h3>
-      <p>
-        Amoniak má vyšší objemovou hustotu energie, je stabilnější při skladování
-        a využívá existující průmyslovou infrastrukturu pro manipulaci a přepravu.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Je systém bezpečný?</h3>
-      <p>
-        Práce s amoniakem i vodíkem je dnes běžnou součástí chemického průmyslu.
-        SSCC využívá existující bezpečnostní standardy a know-how.
-      </p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Proč je důležitá geotermie?</h3>
-      <p>
-        Geotermální zdroj poskytuje stabilní teplo nezávislé na počasí, což výrazně
-        zvyšuje účinnost syntézy a stabilitu celého systému.
-      </p>
-    </div>
-  </div>
-</section>
-
-    <!-- PROČ NA TOM ZÁLEŽÍ -->
-    <section class="section">
+    <!-- TŘI PILÍŘE STABILITY -->
+    <section class="section section-compact" id="pilire">
       <div class="container">
-        <h2>Proč na tom záleží</h2>
-
-        <p class="section-lead">
-          Stabilita, nezávislost a nízké emise jsou základním předpokladem pro fungování moderní společnosti.
-          Rostoucí podíl OZE vyžaduje nové nástroje pro řízení výkonu a ukládání energie v dlouhých časových horizontech.
-        </p>
+        <h2>Tři pilíře stability</h2>
 
         <div class="benefits-grid">
           <div class="benefit-box">
-            <h3>Bezpečná a stabilní energetika</h3>
+            <h3>Země — geotermální základ</h3>
             <p>
-              SSCC eliminuje kolísání obnovitelných zdrojů a poskytuje stabilní výkon díky propojení
-              chemických médií, tepelné integrace a datového řízení.
+              Stabilní, nepřerušovaný zdroj energie, který tvoří základ výkonu systému a zvyšuje předvídatelnost provozu.
             </p>
           </div>
 
           <div class="benefit-box">
-            <h3>Ekonomická předvídatelnost</h3>
+            <h3>Vzduch / Slunce — obnovitelné zdroje</h3>
             <p>
-              Stabilní cena energie umožňuje dlouhodobé plánování a zvyšuje konkurenceschopnost podniků.
+              Levná, ale proměnlivá energie, maximálně využitá v časech dostupnosti. SSCC umí přebytky smysluplně uložit.
             </p>
           </div>
 
           <div class="benefit-box">
-            <h3>Čistší průmysl</h3>
+            <h3>Molekuly — chemická úložiště</h3>
             <p>
-              Uzavřené uhlíkové cykly, vodík a syntetická média umožňují výrazné snížení emisí v těžkém průmyslu.
-            </p>
-          </div>
-
-          <div class="benefit-box">
-            <h3>Odolnost vůči krizím</h3>
-            <p>
-              Schopnost dlouhodobého ukládání energie chrání regiony před dlouhými výpadky výroby,
-              extrémní zimou nebo nedostatkem surovin.
+              Vodík a amoniak jako nosiče energie pro dny, týdny i měsíce. Ne „baterie na hodiny“, ale rezerva v čase.
             </p>
           </div>
         </div>
+
+        <p class="small-note">
+          Tento model je záměrně jednoduchý: dává intuitivní mapu systému, aniž by se ztrácela technická pravdivost.
+        </p>
       </div>
     </section>
-       
-    <!-- SPOLUPRÁCE / KONTAKT -->
-       <section id="kontakt" class="section alt-bg">
-<section class="section alt-bg">
-  <div class="container">
-    <h2>Spolupráce a kontakt</h2>
 
-    <p class="section-lead">
-      SSCC je otevřený koncept určený k diskuzi, ověřování a pilotnímu nasazení.
-      Hledám partnery pro technickou diskuzi, simulace, pilotní projekty
-      i kritickou zpětnou vazbu.
-    </p>
-
-    <ul class="flow-list">
-      <li><strong>E-mail:</strong> <a href="mailto:info@sscc.space">info@sscc.space</a></li>
-      <li><strong>Web:</strong> <a href="https://sscc.space">sscc.space</a></li>
-      <li><strong>LinkedIn:</strong> linkedin.com/in/martin-klíč-95a122278 </li>
-    </ul>
-
-    <p>
-      Pokud vás téma dlouhodobého ukládání energie, vodíku, amoniaku nebo geotermie zajímá,
-      napište. I kritika je vítána.
-    </p>
-  </div>
-</section>
-
-
-    <!-- ZÁVĚREČNÁ CTA -->
-    <section class="cta-section">
+    <!-- DATA & AI -->
+    <section class="section section-compact" id="data-ai">
       <div class="container">
-        <h2>SSCC jako platforma pro stabilní energetiku</h2>
+        <h2>Data &amp; AI řízení</h2>
+
+        <p class="section-lead">
+          SSCC není řízeno statickými pravidly. Je to rozhodování v čase.
+        </p>
 
         <p>
-          SSCC není jen jeden projekt, ale škálovatelná platforma – od jednotlivých energetických uzlů
-          až po komplexní regionální infrastruktury. Lze ji integrovat do stávajících provozů i plánovat
-          jako základ nových průmyslových zón.
+          Systém v reálném čase vyhodnocuje předpověď počasí, ceny energií, stav zásobníků a omezení sítí
+          a podle toho volí výrobu, akumulaci a dodávku energie.
+        </p>
+
+        <div class="callout">
+          <p><strong>Klíčová myšlenka:</strong> SSCC nevyrovnává výkon zpětně — rozhoduje dopředu.</p>
+        </div>
+
+        <p class="small-note">
+          Detaily architektury řízení, vrstvy a integrace najdeš na stránce <a href="data-ai.html">Data &amp; AI řízení</a>.
         </p>
       </div>
-   
     </section>
+
+    <!-- SROVNÁNÍ -->
+    <section class="section section-compact" id="srovnani">
+      <div class="container">
+        <h2>Srovnání v praxi</h2>
+
+        <p>
+          V čem je rozdíl oproti běžným modelům „OZE + baterie“? SSCC pracuje s více časovými škálami a kombinuje nástroje,
+          které se doplňují místo toho, aby si konkurovaly.
+        </p>
+
+        <p style="margin-top: 14px;">
+          <img src="assets/img/sscc-srovnani-1.png" alt="Srovnání přístupu SSCC" style="width: 100%; height: auto; border-radius: 14px;">
+        </p>
+
+        <p class="small-note">
+          Pokud chceš, můžeme sem dát i „srovnání 2/3“ nebo odkázat na samostatnou stránku s detaily.
+        </p>
+      </div>
+    </section>
+
+    <!-- TOK ENERGIE -->
+    <section class="section section-compact" id="tok-energie">
+      <div class="container">
+        <h2>Tok energie a hmoty</h2>
+
+        <p>
+          SSCC propojuje elektřinu, teplo a chemická média do jednoho orchestracečního rámce: zdroje → konverze → zásobníky → dodávka.
+          Cílem je stabilní výkon v různých režimech – od běžného dne až po omezení a incidenty.
+        </p>
+
+        <p style="margin-top: 14px;">
+          <img src="assets/img/sscc-tok-1.png" alt="Tok energie a hmoty v SSCC" style="width: 100%; height: auto; border-radius: 14px;">
+        </p>
+
+        <p style="margin-top: 18px;">
+          <a href="sscc-system.html" class="btn-primary">Architektura systému SSCC</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="cta-section" id="kontakt">
+      <div class="container">
+        <h2>Chcete posoudit přínos SSCC pro váš region nebo provoz?</h2>
+        <p>
+          Stačí základní informace o spotřebě, dostupných zdrojích, omezeních sítě a požadavcích na odolnost.
+          Navrhneme, v jakém měřítku a v jaké konfiguraci může SSCC dávat největší smysl.
+        </p>
+
+        <p style="margin-top: 16px;">
+          <a class="btn-primary" href="mailto:info@sscc.space">Napsat zprávu</a>
+        </p>
+
+        <p class="small-note" style="margin-top: 10px;">
+          Preferuješ formální cestu? Přesuneme kontakt na samostatnou stránku „Kontakt“ a sem dáme jen odkaz.
+        </p>
+      </div>
+    </section>
+
   </main>
+
   <a class="to-top" href="#top" aria-label="Nahoru">↑</a>
-         
-  <script data-goatcounter="https://sscc.goatcounter.com/count"
-        asynchronní src="//gc.zgo.at/count.js"></script>
-</body>
-      
 </body>
 </html>
