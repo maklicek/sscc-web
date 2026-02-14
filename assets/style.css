@@ -2036,3 +2036,18 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
     padding-bottom: 30px !important;
   }
 }
+/* HERO – finální kompaktnější vnitřek */
+.hero.hero-home .hero-inner{
+  padding-top: clamp(46px, 6vh, 80px) !important;
+  padding-bottom: 28px !important;
+}
+
+/* stáhni marginy headline a lead (optická výška) */
+.hero.hero-home h1{
+  margin: 0 0 10px !important;
+  line-height: 1.05;
+}
+
+.hero.hero-home .section-lead{
+  margin: 0 0 16px !important;
+}
