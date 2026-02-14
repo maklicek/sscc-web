@@ -1753,3 +1753,14 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-smysl .page-header .callout:first-of-type li{
   margin: 4px 0;
 }
+/* =========================================
+   PATCH: čitelnost textu (max šířka řádku)
+   ========================================= */
+
+.section .container > p,
+.section .container > ul,
+.section .container > ol,
+.section .container > .section-lead,
+.section .container > .small-note {
+  max-width: 760px;
+}
