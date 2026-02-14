@@ -2014,3 +2014,25 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   background: rgba(0,0,0,0.18);
   backdrop-filter: blur(2px);
 }
+/* =========================
+   HERO výška – vynucení
+   ========================= */
+.hero.hero-home{
+  min-height: 58vh !important;   /* zkus 58vh (je to svižné) */
+  height: auto !important;
+}
+
+/* obsah uvnitř nesmí roztahovat hero zbytečně */
+.hero.hero-home .hero-inner{
+  padding-top: clamp(54px, 7vh, 92px) !important;
+  padding-bottom: 34px !important;
+}
+
+/* mobil: o trochu vyšší */
+@media (max-width: 768px){
+  .hero.hero-home{ min-height: 66vh !important; }
+  .hero.hero-home .hero-inner{
+    padding-top: 74px !important;
+    padding-bottom: 30px !important;
+  }
+}
