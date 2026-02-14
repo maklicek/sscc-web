@@ -1797,3 +1797,52 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-subnav a:hover{
   text-decoration: underline;
 }
+/* ======================================
+   PATCH: subnav NIKDY nesmí překrývat obsah
+   ====================================== */
+
+.page-subnav-section{
+  position: relative !important;
+  z-index: 1 !important;
+  margin: 0 !important;
+}
+
+.page-subnav{
+  position: static !important;
+  z-index: auto !important;
+}
+
+/* Viditelný, ale ne "panel přes stránku" */
+.page-subnav-section{
+  background: rgba(255,255,255,0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.page-subnav{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+
+.page-subnav .subnav-label{
+  font-weight: 600;
+  color: #334155;
+  margin-right: 6px;
+}
+
+.page-subnav a{
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-700);
+  background: rgba(59,130,246,0.08);
+  text-decoration: none;
+}
+
+.page-subnav a:hover{
+  background: rgba(59,130,246,0.18);
+}
