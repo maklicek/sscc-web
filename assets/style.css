@@ -1976,7 +1976,7 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   inset:0;
   background: linear-gradient(
     rgba(0,0,0,var(--hero-overlay-a,0.26)),
-    rgba(0,0,0,var(--hero-overlay-b,0.36))
+    rgba(0,0,0,var(--hero-overlay-b,0.36)) 
   );
   z-index: 0; /* důležité */
 }
