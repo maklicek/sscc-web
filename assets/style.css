@@ -1890,3 +1890,16 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-subnav a:hover{
   background: rgba(59,130,246,0.20);
 }
+/* Jemnější napojení subnav na obsah */
+.page-subnav-section{
+  background: rgba(255,255,255,0.70) !important;
+}
+
+.page-subnav{
+  padding: 12px 0 !important;
+}
+
+/* ať se první sekce pod tím nezboří moc dolů */
+.page-subnav-section + .section{
+  padding-top: calc(var(--space-6) + 6px);
+}
