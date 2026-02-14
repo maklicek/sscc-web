@@ -2073,3 +2073,32 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
   border-radius: 14px;
   padding: 10px 14px;
 }
+/* Tři pilíře stability */
+.pillars-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.pillar-card{
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+}
+
+.pillar-icon{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.pillar-card h3{
+  margin-top: 0;
+}
+
+@media (max-width: 900px){
+  .pillars-grid{
+    grid-template-columns: 1fr;
+  }
+}
