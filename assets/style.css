@@ -2016,7 +2016,7 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 }
 /* =========================
    HERO výška – vynucení
-   ========================= */
+   ========================= */ 
 .hero.hero-home{
   min-height: 58vh !important;   /* zkus 58vh (je to svižné) */
   height: auto !important;
