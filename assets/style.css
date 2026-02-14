@@ -2102,3 +2102,14 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
     grid-template-columns: 1fr;
   }
 }
+/* Kontakt */
+.contact-box{
+  margin-top: 28px;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: #f8fafc;
+  box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+}
+.contact-box a{
+  font-weight: 600;
+}
