@@ -1960,3 +1960,35 @@ main{ padding-top: 10px; } /* jen jemně, aby se to nedusilo pod headerem */
 .page-subnav-section + .section{
   padding-top: 42px;
 }
+/* ===== HERO HOME – finální, jeden overlay ===== */
+.hero-home{
+  min-height: 65vh !important;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* overlay vrstva */
+.hero-home::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    rgba(0,0,0,var(--hero-overlay-a,0.26)),
+    rgba(0,0,0,var(--hero-overlay-b,0.36))
+  );
+  z-index: 0; /* důležité */
+}
+
+/* obsah musí být nad overlay */
+.hero-home .hero-inner{
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(64px, 10vh, 120px);
+  padding-bottom: 48px;
+}
+
+@media (max-width: 768px){
+  .hero-home{ min-height: 70vh !important; }
+}
