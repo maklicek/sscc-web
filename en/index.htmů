@@ -1,0 +1,73 @@
+SSCC – SolarSpace Carbon Cycle
+Integrated energy infrastructure for long-term stability
+What is SSCC
+SSCC is an integrated energy infrastructure concept designed for systems with a high share of variable renewable energy.
+It connects:
+•	renewable electricity,
+•	stable thermal sources,
+•	chemical energy carriers,
+•	and predictive control
+into a single, coordinated system.
+The goal is not to maximize instantaneous efficiency,
+but to ensure energy availability over time under real physical and grid constraints.
+________________________________________
+The problem SSCC addresses
+Modern energy systems face three structural challenges:
+•	Temporal mismatch between generation and demand
+(energy is produced when it is not needed, and missing when it is)
+•	Grid limitations
+(curtailment, congestion, and reduced operational flexibility)
+•	Lack of long-term storage
+(batteries work in hours, not days or weeks)
+SSCC addresses these challenges at the system level, not by adding isolated components.
+________________________________________
+How SSCC works (high level)
+SSCC operates across multiple time scales:
+•	Seconds to hours
+Fast stabilization and protection (typically supported by BESS)
+•	Hours to days
+Thermal storage and load balancing
+•	Days to weeks (or longer)
+Chemical energy carriers (e.g. hydrogen, ammonia) as long-term reserves
+Energy is converted, stored, and released based on predicted conditions,
+not only on instantaneous availability.
+________________________________________
+BESS and SSCC – complementary roles
+Battery energy storage systems (BESS) and SSCC are not competing solutions.
+•	BESS provides fast response and short-term stability
+•	SSCC provides long-term availability and resilience
+Combined, they form a layered system where:
+•	batteries handle speed,
+•	SSCC handles time,
+•	and control logic coordinates both.
+________________________________________
+Operational scenarios
+Renewable surplus
+Excess energy is absorbed, converted, and stored instead of curtailed.
+Long-term deficit
+Stored thermal and chemical energy maintains continuity of supply.
+Grid outage or crisis mode
+The system enters a degraded but controlled operating state, preserving critical functions and buying time for recovery.
+________________________________________
+Design philosophy
+SSCC is based on a few explicit principles:
+•	systems must be stable, not perfect
+•	decisions must be predictable and explainable
+•	long-term resilience is more important than short-term optimization
+SSCC is not a universal solution,
+but a systemic framework for regions, industry, and critical infrastructure.
+________________________________________
+For experts
+Detailed technical documentation, system architecture, and operational logic
+are currently available in Czech.
+If you are interested in:
+•	system design,
+•	integration scenarios,
+•	or technical discussion,
+you are welcome to get in touch.
+________________________________________
+Contact
+Looking for partners, reviewers, and critical minds.
+If you see a limitation, an assumption worth challenging, or a potential improvement, let’s discuss it.
+________________________________________
+
