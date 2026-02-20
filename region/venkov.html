@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralizovaný venkov jako SSCC uzel | SSCC</title>
+  <meta name="description" content="Decentralizovaný venkov jako flexibilní uzel SSCC. Lokální zdroje, teplo, bioplyn, akumulace a stabilizace periferie bez iluzí soběstačnosti.">
+</head>
 
+<body class="page-region page-venkov">
+
+<main id="top">
+
+  <!-- ===================================== -->
+  <!-- VENKOV : ÚVOD -->
+  <!-- ===================================== -->
+  <section class="section page-header">
+    <div class="container">
+      <h1>Decentralizovaný venkov jako SSCC uzel</h1>
+
+      <p class="section-lead">
+        Venkov není „malá Praha“ a není ani „malá elektrárna“. Je to specifický typ uzlu:
+        rozptýlená spotřeba, lokálně dostupné zdroje, silná role tepla a omezená přenosová kapacita
+        v některých oblastech. V architektuře SSCC je venkov především <strong>flexibilní stabilizační vrstvou</strong>,
+        která odlehčuje síti a zvyšuje odolnost celku.
+      </p>
+
+      <p>
+        Cílem venkova není absolutní soběstačnost, ale efektivní využití lokálních zdrojů,
+        chytrá práce s teplem a akumulací a schopnost fungovat i při omezeních v síti.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================== -->
+  <!-- PROČ JE VENKOV DŮLEŽITÝ -->
+  <!-- ===================================== -->
+  <section class="section">
+    <div class="container">
+      <h2>Proč má venkov v systému vlastní roli</h2>
+
+      <p>
+        Venkovské oblasti mohou do energetiky přinést to, co ve městech často chybí:
+        prostor, možnost lokální akumulace, dostupnost biomasy a větší volnost pro
+        kombinaci technologií. Přínos však není primárně v maximální výrobě elektřiny,
+        ale ve schopnosti <strong>vyrovnávat tok energie</strong> a zvyšovat systémovou robustnost.
+      </p>
+
+      <ul>
+        <li>rozptýlené zdroje s nízkým dopadem jednotlivého výpadku</li>
+        <li>vysoký podíl tepla ve spotřebě domácností a komunální infrastruktury</li>
+        <li>možnost místních zásobníků (teplo, plyn, voda) a řízení spotřeby</li>
+        <li>potenciál pro lokální ostrovní prvky (kritické služby)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================================== -->
+  <!-- ZDROJE NA VENKOVĚ -->
+  <!-- ===================================== -->
+  <section class="section section-soft">
+    <div class="container">
+      <h2>Lokální zdroje: užitečné, ale s limity</h2>
+
+      <p>
+        Venkovské zdroje mají zpravidla podpůrný charakter. Jejich přínos je vysoký,
+        pokud jsou integrovány do správné architektury a doplněny akumulací.
+      </p>
+
+      <ul>
+        <li><strong>solární energie</strong>: střechy, obecní objekty, brownfieldy; sezónní nerovnoměrnost</li>
+        <li><strong>vítr</strong>: lokálně dle podmínek; variabilní výkon</li>
+        <li><strong>bioplyn / biomasa</strong>: stabilnější tok, vhodný pro teplo a kogeneraci</li>
+        <li><strong>malá voda</strong>: lokálně, limitovaně; spíše doplněk</li>
+      </ul>
+
+      <p>
+        Bez akumulace a řízení se venkovské OZE mohou stát problémem pro síť.
+        Se SSCC architekturou se naopak stávají aktivním prvkem stability.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================================== -->
+  <!-- TEPELNÁ LOGIKA -->
+  <!-- ===================================== -->
+  <section class="section">
+    <div class="container">
+      <h2>Teplo jako hlavní páka</h2>
+
+      <p>
+        Venkov má jednu velkou výhodu: značná část energetické potřeby je v teple,
+        které lze vyrábět i ukládat levněji než elektřinu. SSCC proto staví venkovský uzel
+        na jednoduché logice: <strong>elektřinu používat tam, kde je nezbytná, a teplo řešit systémově</strong>.
+      </p>
+
+      <ul>
+        <li>lokální zdroje tepla (kogenerace, biomasa, tepelná čerpadla)</li>
+        <li>zásobníky tepla (denní/týdenní), v některých případech i sezónní</li>
+        <li>využití přebytků elektřiny pro výrobu tepla (konverze)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================================== -->
+  <!-- SSCC ŘÍZENÍ -->
+  <!-- ===================================== -->
+  <section class="section section-accent">
+    <div class="container">
+      <h2>SSCC na venkově: mikro-uzly a řízení toku</h2>
+
+      <p>
+        Venkovský uzel se v SSCC typicky skládá z menších mikro-uzlů (obce, podniky, farmy),
+        které jsou řízeny podle společných pravidel. Smyslem není centralizace, ale koordinace:
+        kdy vyrábět, kdy ukládat, kdy spotřebovávat a kdy energii posílat do sítě.
+      </p>
+
+      <ul>
+        <li><strong>flexibilita</strong>: řízení spotřeby (např. ohřev, akumulace, provoz technologií)</li>
+        <li><strong>lokální stabilita</strong>: odlehčení distribuční sítě v kritických časech</li>
+        <li><strong>odolnost</strong>: vybrané prvky mohou fungovat omezeně i při poruchách</li>
+        <li><strong>ekonomika</strong>: maximalizace užitku z místní energie, ne maximalizace instalovaného výkonu</li>
+      </ul>
+
+      <!-- MÍSTO PRO DIAGRAM -->
+     <figure class="diagram">
+  <img src="assets/diagrams/venkov.svg" alt="SSCC – Venkov: tokový diagram" loading="lazy">
+  <figcaption>Tokový model uzlu: vstupy → konverze → akumulace → spotřeba, řízeno SSCC.</figcaption>
+</figure>
+    </div>
+  </section>
+
+  <!-- ===================================== -->
+  <!-- PŘÍNOSY -->
+  <!-- ===================================== -->
+  <section class="section">
+    <div class="container">
+      <h2>Co tento přístup přináší</h2>
+
+      <ul>
+        <li>nižší náklady na teplo díky akumulaci a konverzi</li>
+        <li>lepší využití lokálních zdrojů bez destabilizace sítě</li>
+        <li>vyšší odolnost periferií při přetížení soustavy</li>
+        <li>praktický přínos pro obce: teplo, spolehlivost, lokální investice</li>
+      </ul>
+
+      <p>
+        Decentralizovaný venkov tak v SSCC architektuře není okraj systému,
+        ale jeho stabilizační vrstva – tichá, rozptýlená a účinná.
+      </p>
+
+      <p>
+        <a href="regions.html">← Zpět na přehled regionů</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>
